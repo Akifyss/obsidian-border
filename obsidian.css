@@ -411,8 +411,8 @@ input.prompt-input:focus-visible {
 
 
 /*view-header*/
-.workspace-leaf-content[data-type="markdown"] .view-header,
-.workspace-leaf-content[data-type="empty"] .view-header {
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header,
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
     border-bottom: none;
     background-color: var(--background-primary) !important;
     position: absolute;
@@ -427,22 +427,22 @@ input.prompt-input:focus-visible {
     opacity: 0.4;
 }
 
-.workspace-leaf-content[data-type="markdown"] .view-header:hover,
-.workspace-leaf-content[data-type="empty"] .view-header:hover {
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header:hover,
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header:hover {
     opacity: 1;
     transition: opacity 200ms;
 }
 
 
-.workspace-leaf-content[data-type="markdown"] .view-header-title,
-.workspace-leaf-content[data-type="empty"] .view-header-title,
-.workspace-leaf-content[data-type="markdown"] .view-header-title-container,
-.workspace-leaf-content[data-type="empty"] .view-header-title-container {
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title,
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title,
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title-container {
     display: none;
 }
 
-.workspace-leaf-content[data-type="empty"] .view-actions,
-.workspace-leaf-content[data-type="markdown"] .view-actions {
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-actions,
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-actions {
     display: flex;
 }
 
@@ -453,18 +453,18 @@ input.prompt-input:focus-visible {
 
 /*Compatible with view-header*/
 
-.document-search-container {
+body:not(.is-mobile) .document-search-container {
     padding: 12px 0;
     margin: 0px;
 }
 
-.graph-controls.is-close {
+body:not(.is-mobile) .graph-controls.is-close {
     width: fit-content;
     position: absolute;
     left: 12px;
 }
 
-.graph-controls {
+body:not(.is-mobile) .graph-controls {
     position: absolute;
     left: 12px;
 }
