@@ -572,3 +572,8 @@ body.is-focused .workspace-tabs.mod-top {
     border: none;
     background-color: var(--background-primary);
 }
+
+/*toolbar*/
+.mobile-toolbar {
+    box-shadow: inset 0px 1px var(--background-modifier-border);
+}
