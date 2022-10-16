@@ -424,7 +424,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
     padding: 0 6px;
     height: 36px;
     gap: 0px;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header:hover,
