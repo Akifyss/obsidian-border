@@ -562,8 +562,13 @@ body.is-focused .workspace-tabs.mod-top {
 }
 
 
-/* auto fades status bar items */
+/*status bar*/
 .status-bar:not(:hover) .status-bar-item {
     opacity: 0.4;
     transition: opacity .25s ease-in-out;
+}
+
+.status-bar {
+    border: none;
+    background-color: var(--background-primary);
 }
