@@ -521,16 +521,16 @@ body:not(.is-mobile) .graph-controls {
 
 
 
-/* ui color change*/
+/* tab etc color change*/
 .workspace-tab-header-container {
     background-color: var(--background-primary);
 }
 
-body:not(.is-translucent) .mod-left-split .mod-top .workspace-tab-header-container {
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container {
     background-color: var(--background-secondary);
 }
 
-body:not(.is-translucent) .sidebar-toggle-button.mod-left {
+body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     background-color: var(--background-secondary);
 }
 
@@ -560,6 +560,7 @@ body.is-focused .sidebar-toggle-button,
 body.is-focused .workspace-tabs.mod-top {
     --tab-container-background: var(--background-primary);
 }
+
 
 /* auto fades status bar items */
 .status-bar:not(:hover) .status-bar-item {
