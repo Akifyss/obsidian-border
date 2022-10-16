@@ -54,6 +54,47 @@ body {
     --h6-weight: 575;
 }
 
+body {
+    /* Color mappings ------------------------ */
+    /* Accent HSL values */
+    --accent-h: 254;
+    --accent-s: 80%;
+    --accent-l: 68%;
+    /* Backgrounds */
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
+    --background-secondary: var(--color-base-20);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
+    --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
+    --background-modifier-border: var(--color-base-30);
+    --background-modifier-border-hover: var(--color-base-35);
+    --background-modifier-border-focus: var(--color-base-40);
+    --background-modifier-error-rgb: var(--color-red-rgb);
+    --background-modifier-error: var(--color-red);
+    --background-modifier-error-hover: var(--color-red);
+    --background-modifier-success-rgb: var(--color-green-rgb);
+    --background-modifier-success: var(--color-green);
+    --background-modifier-message: rgba(0, 0, 0, 0.9);
+    /* Inputs */
+    --background-modifier-form-field: var(--color-base-00);
+    /* Text */
+    --text-normal: var(--color-base-100);
+    --text-muted: var(--color-base-70);
+    --text-faint: var(--color-base-50);
+    --text-on-accent: white;
+    --text-error: var(--color-red);
+    --text-success: var(--color-green);
+    --text-selection: hsla(var(--color-accent-hsl), 0.2);
+    --text-accent: var(--color-accent);
+    --text-accent-hover: var(--color-accent-2);
+    --interactive-normal: var(--color-base-00);
+    --interactive-hover: var(--color-base-10);
+    --interactive-accent-hsl: var(--color-accent-hsl);
+    --interactive-accent: var(--color-accent-1);
+    --interactive-accent-hover: var(--color-accent-2);
+}
+
+
 .theme-light {
     color-scheme: light;
     --highlight-mix-blend-mode: darken;
