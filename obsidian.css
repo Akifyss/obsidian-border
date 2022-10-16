@@ -54,6 +54,47 @@ body {
     --h6-weight: 575;
 }
 
+body {
+    /* Color mappings ------------------------ */
+    /* Accent HSL values */
+    --accent-h: 254;
+    --accent-s: 80%;
+    --accent-l: 68%;
+    /* Backgrounds */
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
+    --background-secondary: var(--color-base-20);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
+    --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
+    --background-modifier-border: var(--color-base-30);
+    --background-modifier-border-hover: var(--color-base-35);
+    --background-modifier-border-focus: var(--color-base-40);
+    --background-modifier-error-rgb: var(--color-red-rgb);
+    --background-modifier-error: var(--color-red);
+    --background-modifier-error-hover: var(--color-red);
+    --background-modifier-success-rgb: var(--color-green-rgb);
+    --background-modifier-success: var(--color-green);
+    --background-modifier-message: rgba(0, 0, 0, 0.9);
+    /* Inputs */
+    --background-modifier-form-field: var(--color-base-00);
+    /* Text */
+    --text-normal: var(--color-base-100);
+    --text-muted: var(--color-base-70);
+    --text-faint: var(--color-base-50);
+    --text-on-accent: white;
+    --text-error: var(--color-red);
+    --text-success: var(--color-green);
+    --text-selection: hsla(var(--color-accent-hsl), 0.2);
+    --text-accent: var(--color-accent);
+    --text-accent-hover: var(--color-accent-2);
+    --interactive-normal: var(--color-base-00);
+    --interactive-hover: var(--color-base-10);
+    --interactive-accent-hsl: var(--color-accent-hsl);
+    --interactive-accent: var(--color-accent-1);
+    --interactive-accent-hover: var(--color-accent-2);
+}
+
+
 .theme-light {
     color-scheme: light;
     --highlight-mix-blend-mode: darken;
@@ -423,16 +464,13 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
     border-radius: var(--radius-m);
     padding: 0 6px;
     height: 36px;
-    gap: 0px;
+}
+
+
+.view-header:not(:hover) .view-actions {
     opacity: 0.4;
+    transition: opacity .25s ease-in-out;
 }
-
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header:hover,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header:hover {
-    opacity: 1;
-    transition: opacity 200ms;
-}
-
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title,
 body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title,
@@ -483,16 +521,16 @@ body:not(.is-mobile) .graph-controls {
 
 
 
-/* ui color change*/
+/* tab etc color change*/
 .workspace-tab-header-container {
     background-color: var(--background-primary);
 }
 
-body:not(.is-translucent) .mod-left-split .mod-top .workspace-tab-header-container {
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container {
     background-color: var(--background-secondary);
 }
 
-body:not(.is-translucent) .sidebar-toggle-button.mod-left {
+body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     background-color: var(--background-secondary);
 }
 
@@ -521,4 +559,11 @@ body:not(.is-translucent) .sidebar-toggle-button.mod-left {
 body.is-focused .sidebar-toggle-button,
 body.is-focused .workspace-tabs.mod-top {
     --tab-container-background: var(--background-primary);
+}
+
+
+/* auto fades status bar items */
+.status-bar:not(:hover) .status-bar-item {
+    opacity: 0.4;
+    transition: opacity .25s ease-in-out;
 }
