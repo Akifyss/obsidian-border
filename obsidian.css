@@ -577,3 +577,8 @@ body.is-focused .workspace-tabs.mod-top {
 .mobile-toolbar {
     box-shadow: inset 0px 1px var(--background-modifier-border);
 }
+
+/*CJK_vertical_spine. */
+.workspace-tab-header-inner-title {
+    text-orientation: mixed;
+}
