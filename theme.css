@@ -467,7 +467,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
 }
 
 
-.view-header:not(:hover) .view-actions {
+body:not(.is-mobile) .view-header:not(:hover) .view-actions {
     opacity: 0.4;
     transition: opacity .25s ease-in-out;
 }
