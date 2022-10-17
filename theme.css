@@ -210,7 +210,86 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
+.is-mobile {
+    --ribbon-width: 58px;
+    --view-header-height: 50px;
+    --mobile-toolbar-height: 40px;
+    --caret-color: var(--text-accent);
+    --font-ui-smaller: calc(var(--font-text-size) * 0.8);
+    --font-ui-small: calc(var(--font-text-size) * 0.937);
+    --font-ui-medium: var(--font-text-size);
+    --font-ui-large: calc(var(--font-text-size) * 1.2);
+    --icon-s: 18px;
+    --icon-m: 20px;
+    --icon-l: 24px;
+    --icon-l-stroke-width: 1.8px;
+    --icon-opacity: 1;
+    --input-height: 40px;
+    --input-shadow: none;
+    --input-shadow-hover: none;
+    --input-font-weight: var(--font-medium);
+    --input-border-width: 0px;
+    --interactive-normal: var(--background-secondary);
+    --mobile-sidebar-width: 340px;
+    --mobile-sidebar-max-width: 500px;
+    --nav-item-padding: var(--size-2-3) var(--size-4-2);
+    --nav-item-color: var(--text-normal);
+    --search-clear-button-size: 16px;
+    --search-icon-size: 20px;
+    --settings-home-background: var(--background-secondary);
+    --slider-thumb-border-width: 0px;
+    --slider-thumb-height: 24px;
+    --slider-thumb-width: 24px;
+    --slider-thumb-y: -9px;
+    --slider-track-height: 6px;
+    --swatch-shadow: none;
+    --swatch-height: 40px;
+    --swatch-width: 40px;
+    --swatch-radius: 40px;
+    --toggle-width: 48px;
+    --toggle-radius: 26px;
+    --toggle-thumb-radius: 26px;
+    --toggle-thumb-height: 26px;
+    --toggle-thumb-width: 26px;
+    --file-margins: var(--size-4-2) var(--size-4-5);
+    --background-modifier-cover: rgba(0, 0, 0, 0.25);
+    --background-modifier-form-field: var(--background-secondary);
+    --keyboard-background: var(--background-primary);
+    --checkbox-size: 17px;
+}
 
+.is-mobile.theme-dark {
+    --color-base-00: #000;
+    --color-base-10: #111;
+    --color-base-20: #1e1e1e;
+    --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
+    --modal-background: var(--background-secondary);
+    --search-result-background: var(--background-secondary);
+    --background-modifier-form-field: var(--background-modifier-border);
+    --background-modifier-cover: rgba(0, 0, 0, 0.5);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
+    --settings-home-background: var(--background-primary);
+}
+
+.is-tablet {
+    --nav-item-padding: var(--size-2-3) var(--size-4-3);
+    --tab-font-size: var(--font-ui-smaller);
+}
+
+.is-tablet.theme-dark {
+    --titlebar-background: var(--background-primary);
+    --titlebar-background-focused: var(--background-primary);
+    --interactive-normal: var(--background-modifier-border);
+}
+
+.is-phone {
+    --border-width: 0.5pt;
+    --divider-width: 0.5pt;
+    --tab-outline-width: 0.5pt;
+    --modal-header-height: 44px;
+    --modal-community-sidebar-width: 100%;
+    --nav-item-size: var(--font-ui-medium);
+}
 
 /* scrollbar */
 body:not(.native-scrollbars) ::-webkit-scrollbar {
