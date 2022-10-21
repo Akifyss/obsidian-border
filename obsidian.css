@@ -57,9 +57,9 @@ body {
 body {
     /* Color mappings ------------------------ */
     /* Accent HSL values */
-    --accent-h: 254;
-    --accent-s: 80%;
-    --accent-l: 68%;
+    --accent-h: 165;
+    --accent-s: 65%;
+    --accent-l: 45%;
     /* Backgrounds */
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
@@ -639,6 +639,49 @@ body.is-focused .sidebar-toggle-button,
 body.is-focused .workspace-tabs.mod-top {
     --tab-container-background: var(--background-primary);
 }
+
+/* tab etc color change*/
+/*color-accent version*/
+/*
+.workspace-tab-header-container {
+    background-color: var(--color-accent);
+}
+
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container {
+    background-color: var(--color-accent);
+}
+
+body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
+    background-color: var(--color-accent);
+}
+
+.workspace-ribbon.mod-left.is-collapsed .sidebar-toggle-button.mod-left {
+    background-color: var(--color-accent);
+}
+
+.mod-right-split .view-content,
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-primary);
+}
+
+.sidebar-toggle-button,
+.workspace-tabs.mod-top {
+    --tab-container-background: var(--background-primary);
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+    background-color: var(--color-accent);
+}
+
+.titlebar-button {
+    background-color: var(--color-accent);
+}
+
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    --tab-container-background: var(--color-accent);
+}
+*/
 
 
 /*status bar*/
