@@ -770,7 +770,8 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 }
 
 
-/*winstyle buttons*/
+/*window buttons*/
+
 body.is-hidden-frameless .titlebar .titlebar-button-container {
     background-color: transparent !important;
 }
@@ -977,7 +978,6 @@ body.is-translucent .workspace-ribbon::after {
     background-color: transparent;
     padding: 0 16px 0 0;
 }
-
 
 /*toolbar*/
 .mobile-toolbar {
@@ -1423,7 +1423,7 @@ svg.open-vault {
 }*/
 
 
-/*----------editor----------*/
+/*----------编辑器----------*/
 /*header colorful line effect*/
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-1 {
@@ -1644,3 +1644,4 @@ ul>li.task-list-item.is-checked *,
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) span {
     color: var(--text-faint);
 }
+
