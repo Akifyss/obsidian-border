@@ -736,11 +736,12 @@ body:not(.is-translucent) .workspace {
 
 .nav-header {
     box-shadow: 0px 1px 0px var(--divider-color);
+    padding: var(--size-2-3);
 }
 
 .mod-left-split .workspace-leaf-content,
 .mod-right-split .workspace-leaf-content {
-    gap: 8px;
+    gap: var(--size-2-3);
 }
 
 
