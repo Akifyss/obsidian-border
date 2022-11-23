@@ -1025,6 +1025,24 @@ body.is-translucent .workspace-ribbon::after {
 
 
 /* ====== 文件管理器 ====== */
+.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    box-shadow: var(--input-shadow);
+    border-radius: var(--button-radius);
+    width: 100px;
+    padding: var(--size-2-3);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
+    content: "New note";
+    font-size: var(--font-ui-small);
+    margin-left: auto;
+}
 
 .nav-folder-collapse-indicator {
     display: none;
@@ -1263,22 +1281,7 @@ svg.sidebar-left {
 }
 
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
-    background-color: var(--interactive-accent);
-    color: var(--text-on-accent);
-    box-shadow: var(--input-shadow);
-    border-radius: var(--button-radius);
-}
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
-    background-color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
-    content: "New note";
-    font-size: var(--font-ui-small);
-    margin-left: 6px;
-}
 
 .workspace-leaf-content .nav-header .nav-buttons-container .clickable-icon.nav-action-button:not(:first-of-type) {
     padding: 6px;
@@ -1324,7 +1327,7 @@ svg.sidebar-left {
     --icon-color: var(--text-muted-accent);
 }
 
-.workspace .mod-root .workspace-tab-header-inner-icon svg{
+.workspace .mod-root .workspace-tab-header-inner-icon svg {
     width: 16px;
     height: 16px;
 }
