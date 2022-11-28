@@ -1,3 +1,3 @@
-# obsidian-leaf
+# obsidian-border
 
 A theme for obsidian.md
