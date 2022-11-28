@@ -449,8 +449,7 @@ body:not(.is-translucent) .titlebar-text {
 }
 
 .workspace-tabs.mod-top .workspace-tab-header-container {
-    background-color: var(--background-secondary);
-    background-color: var(--background-secondary-accent);
+    background-color: transparent;
 }
 
 .workspace-tab-header-container {
@@ -468,8 +467,7 @@ body:not(.is-translucent) .titlebar-text {
 }
 
 body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container {
-    background-color: var(--background-secondary);
-    background-color: var(--background-secondary-accent);
+    background-color: transparent;
 }
 
 body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
@@ -485,7 +483,7 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
 
 .sidebar-toggle-button,
 .workspace-tabs.mod-top {
-    --tab-container-background: var(--background-secondary);
+    --tab-container-background: transparent;
 }
 
 .is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
@@ -593,27 +591,26 @@ body.is-focused .workspace-ribbon.mod-left {
 /*---------*/
 body:not(.is-mobile) .workspace::before {
     content: " ";
-    width: calc(100% - 45px - 15px);
-    height: calc(100% - 45px - 23px);
-    border-radius: 12px;
+    width: calc(100% - 44px - 16px);
+    height: calc(100% - 44px - 24px);
+    border-radius: 11px;
     background-color: var(--background-primary);
-    border: 1px solid var(--divider-color);
-    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.3);
+    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4);
     position: absolute;
-    bottom: 23px;
-    right: 15px;
+    bottom: 24px;
+    right: 16px;
     z-index: 5;
 }
 
 body.is-popout-window:not(.is-mobile) .workspace::before {
-    width: calc(100% - 17px - 15px);
-    height: calc(100% - 45px - 15px);
-    bottom: 15px;
-    right: 15px;
+    width: calc(100% - 16px - 16px);
+    height: calc(100% - 44px - 16px);
+    bottom: 16px;
+    right: 16px;
 }
 
 body:not(.is-mobile).theme-dark .workspace::before {
-    box-shadow: none;
+    box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
 .workspace-ribbon {
@@ -1438,6 +1435,29 @@ ul>li.task-list-item.is-checked *,
 }
 
 
+body.link-icon:not(.link-click-to-edit-in-live-preview) :is(:is(.markdown-source-view, .markdown-preview-view) a.external-link, .cm-link:not(.cm-hmd-footnote) .cm-underline)::before {
+    content: "";
+    display: inline-block;
+    transform: translateY(var(--size-2-1));
+    width: calc(var(--font-text-size) - var(--size-4-1));
+    height: calc(var(--font-text-size) - var(--size-4-1));
+    margin-left: var(--size-2-1);
+    margin-right: var(--size-2-1);
+    background-color: var(--link-external-color);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>');
+}
+
+body.link-icon :is(:is(.markdown-source-view, .markdown-preview-view) a.internal-link, .cm-hmd-internal-link .cm-underline)::before {
+    content: "";
+    display: inline-block;
+    transform: translateY(var(--size-2-1));
+    width: calc(var(--font-text-size) - var(--size-2-1));
+    height: calc(var(--font-text-size) - var(--size-2-1));
+    background-color: var(--link-color);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
+}
+
+
 /* ====== 图标 ====== */
 .workspace-tab-header-inner-icon {
     display: flex;
@@ -1512,8 +1532,6 @@ svg.sidebar-left {
     width: 20px;
     height: 20px;
 }
-
-
 
 
 .workspace-leaf-content .nav-header .nav-buttons-container .clickable-icon.nav-action-button:not(:first-of-type) {
