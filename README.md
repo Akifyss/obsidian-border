@@ -1,3 +1,3 @@
 # obsidian-border
 
-A theme for obsidian.md
+A theme for obsidian.md, developed on Windows.
