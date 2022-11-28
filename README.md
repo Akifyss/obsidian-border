@@ -1,5 +1,7 @@
 # obsidian-border
 
-A theme for obsidian.md, developed on Windows.
+A theme for obsidian.md, built on Windows.
 
-Border\cover.png
+## Screenshot
+
+![screenshot](cover.png)
