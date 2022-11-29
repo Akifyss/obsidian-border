@@ -1324,8 +1324,8 @@ ul>li.task-list-item.is-checked *,
 .workspace-tab-header-tab-list .clickable-icon svg,
 .nav-header .clickable-icon svg,
 .clickable-icon.side-dock-ribbon-action svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 20px;
+    height: 20px;
 }
 
 
