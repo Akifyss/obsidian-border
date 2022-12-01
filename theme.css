@@ -96,6 +96,22 @@ body {
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
+    /* Links */
+    --link-color: var(--text-accent);
+    --link-color-hover: var(--text-accent-hover);
+    --link-decoration: underline;
+    --link-decoration-hover: underline;
+    --link-decoration-thickness: auto;
+    --link-external-color: var(--color-blue);
+    --link-external-color-hover: var(--color-blue-alt);
+    --link-external-decoration: underline;
+    --link-external-decoration-hover: underline;
+    --link-external-filter: none;
+    --link-unresolved-color: var(--text-accent);
+    --link-unresolved-opacity: 0.7;
+    --link-unresolved-filter: none;
+    --link-unresolved-decoration-style: solid;
+    --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
 }
 
 
@@ -112,6 +128,7 @@ body {
     --color-yellow: #BD8E37;
     --color-cyan: #2db7b5;
     --color-blue: #086DDD;
+    --color-blue-alt: #398ae4;
     --color-purple: #876be0;
     --color-pink: #C32B74;
     --color-base-00: #ffffff;
@@ -179,6 +196,7 @@ body {
     --color-yellow: #E0DE71;
     --color-cyan: #53DFDD;
     --color-blue: #027aff;
+    --color-blue-alt: #3595ff;
     --color-purple: #a882ff;
     --color-pink: #FA99CD;
     --color-base-00: #1e1e1e;
@@ -1259,7 +1277,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
 
 /* ====== 编辑器区块效果 ====== */
 body .markdown-source-view .cm-scroller .cm-line.cm-active {
-    background-color: var(--background-modifier-hover);
+    background-color: rgba(var(--mono-rgb-100), 0.05);
     border-radius: var(--radius-s);
 }
 
@@ -1280,7 +1298,6 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 /* ====== 加粗文本样式 ====== */
 strong,
 .cm-strong {
-    font-weight: var(--bold-weight);
     color: var(--color-red);
 }
 
@@ -1291,6 +1308,8 @@ ul>li.task-list-item.is-checked *,
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) span {
     color: var(--text-faint);
 }
+
+
 
 
 /* ====== 图标 ====== */
