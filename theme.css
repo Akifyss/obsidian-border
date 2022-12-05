@@ -581,15 +581,6 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     cursor: var(--cursor);
 }
 
-.nav-header {
-    box-shadow: 0px 1px 0px var(--divider-color);
-    padding: var(--size-2-3);
-}
-
-.mod-left-split .workspace-leaf-content,
-.mod-right-split .workspace-leaf-content {
-    gap: var(--size-2-3);
-}
 
 .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-primary);
@@ -601,6 +592,30 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
 
 .theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-hover);
+}
+
+.nav-header {
+    /*box-shadow: 0px 1px 0px var(--divider-color);*/
+    padding: var(--size-2-3);
+}
+
+.mod-left-split .workspace-leaf-content,
+.mod-right-split .workspace-leaf-content {
+    gap: var(--size-2-1);
+}
+
+
+/*divider effect*/
+body:not(.is-mobile) .mod-left-split .backlink-pane,
+body:not(.is-mobile) .mod-left-split .item-list,
+body:not(.is-mobile) .mod-left-split .nav-files-container,
+body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body:not(.is-mobile) .mod-left-split .tag-container,
+body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+    background: linear-gradient(var(--background-primary-accent) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
 }
 
 
