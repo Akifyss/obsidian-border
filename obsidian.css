@@ -861,7 +861,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-actions {
 
 body:not(.is-mobile) .canvas-controls {
     right: var(--size-2-3);
-    top: calc(var(--size-2-3) + var(--header-height));
+    top: calc(var(--size-4-2) + var(--header-height));
 }
 
 body:not(.is-mobile) .document-search-container {
