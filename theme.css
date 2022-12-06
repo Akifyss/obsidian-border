@@ -817,7 +817,8 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 /* ====== view-header====== */
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header,
+body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header {
     border-bottom: none;
     background-color: var(--background-primary) !important;
     position: absolute;
@@ -831,7 +832,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header {
 }
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header .view-header-nav-buttons::before,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header .view-header-nav-buttons::before {
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header .view-header-nav-buttons::before,
+body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header .view-header-nav-buttons::before {
     content: " ";
     width: 1px;
     height: 16px;
@@ -842,17 +844,25 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header .vi
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title,
 body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title,
+body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header-title,
 body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title-container {
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title-container,
+body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header-title-container {
     display: none;
 }
 
 body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-actions,
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-actions {
+body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-actions,
+body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-actions {
     display: flex;
 }
 
 /*Compatible with view-header*/
+
+body:not(.is-mobile) .canvas-controls {
+    right: var(--size-2-3);
+    top: calc(var(--size-2-3) + var(--header-height));
+}
 
 body:not(.is-mobile) .document-search-container {
     padding: 12px 0;
