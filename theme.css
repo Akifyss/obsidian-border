@@ -59,9 +59,9 @@ body {
 body {
     /* Color mappings ------------------------ */
     /* Accent HSL values */
-    --accent-h: 165;
-    --accent-s: 30%;
-    --accent-l: 50%;
+    --accent-h: 232;
+    --accent-s: 80%;
+    --accent-l: 64%;
     /* Backgrounds */
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
@@ -1359,6 +1359,18 @@ body {
     --bold-color: var(--color-red);
 }
 
+/* Italic */
+body {
+    --italic-color: var(--color-orange);
+}
+
+/*inline code*/
+.markdown-rendered code,
+.cm-s-obsidian span.cm-inline-code {
+    --code-normal: var(--color-pink);
+}
+
+
 /* ======划线文本样式 ====== */
 del,
 .cm-strikethrough,
@@ -1375,7 +1387,7 @@ body {
     --checkbox-marker-color: var(--background-primary);
     --checkbox-color: var(--color-green);
     --checkbox-color-hover: var(--color-green-alt);
-    --checkbox-border-color: var(--color-accent-muted);
+    --checkbox-border-color: var(--text-faint);
     --checkbox-border-color-hover: var(--text-muted);
     --checklist-done-decoration: line-through;
     --checklist-done-color: var(--text-muted);
