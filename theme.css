@@ -166,12 +166,14 @@ body {
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-        0 2px 3px 0 rgba(0, 0, 0, .05),
+        inset 0 2px 0 rgb(255 255 255 / 20%),
+        0 2px 3px 0 rgba(0, 0, 0, .02),
         0 1px 1.5px 0 rgba(0, 0, 0, .03),
         0 1px 2px 0 rgba(0, 0, 0, .04),
         0 0 0 0 transparent;
     --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-        0 2px 3px 0 rgba(0, 0, 0, .1),
+        inset 0 2px 0 rgb(255 255 255 / 20%),
+        0 2px 3px 0 rgba(0, 0, 0, .05),
         0 1px 1.5px 0 rgba(0, 0, 0, .03),
         0 1px 2px 0 rgba(0, 0, 0, .04),
         0 0 0 0 transparent;
@@ -236,11 +238,13 @@ body {
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
     --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+        inset 0 1px 0 rgb(255 255 255 / 5%),
         0 2px 4px 0 rgba(0, 0, 0, .15),
         0 1px 1.5px 0 rgba(0, 0, 0, .1),
         0 1px 2px 0 rgba(0, 0, 0, .2),
         0 0 0 0 transparent;
     --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+        inset 0 1px 0 rgb(255 255 255 / 5%),
         0 2px 3px 0 rgba(0, 0, 0, .3),
         0 1px 1.5px 0 rgba(0, 0, 0, .2),
         0 1px 2px 0 rgba(0, 0, 0, .4),
@@ -1347,9 +1351,11 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 }
 
 /* ====== 加粗文本样式 ====== */
-strong,
-.cm-strong {
-    color: var(--color-red);
+
+
+body {
+    --bold-weight: var(--font-semibold);
+    --bold-color: var(--color-red);
 }
 
 /* ======划线文本样式 ====== */
@@ -1360,7 +1366,7 @@ ul>li.task-list-item.is-checked *,
     color: var(--text-faint);
 }
 
-/* ====== 复选框 checkboxes ====== */
+/* ======checkboxes ====== */
 body {
     /* Checkboxes */
     --checkbox-radius: var(--radius-l);
@@ -1396,6 +1402,15 @@ input[type=checkbox]:checked:after {
 
 input[type=checkbox]:hover {
     box-shadow: 0px 0px 0px 3px var(--tag-background-hover);
+}
+
+/*toggle switch*/
+.checkbox-container.is-enabled {
+    background-color: var(--color-green);
+}
+
+.checkbox-container:after {
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.1);
 }
 
 /* ====== 复选框 Blockquotes ====== */
