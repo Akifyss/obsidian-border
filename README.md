@@ -2,9 +2,11 @@
 
 A theme for obsidian.md, built on Windows.
 
-+ Try a different accent color in Setting - Appearance.
-+ Try translucent mode in Setting - Appearance.
-
 ## Screenshot
 
-![screenshot](cover-large.png)
+![screenshot](screenshot-1.png)
+
+![screenshot](screenshot-2.png)
+
+Customize accent color and turn on translucent window in Setting-Appearance:
+![screenshot](screenshot-3.png)
