@@ -1109,7 +1109,7 @@ input.prompt-input:hover,
 input.prompt-input:focus,
 input.prompt-input:focus-visible {
     border: none;
-    border-bottom: 1px solid var(--background-secondary);
+    border-bottom: 2px solid var(--color-accent);
     box-shadow: none;
 }
 
@@ -1410,7 +1410,7 @@ input[type=checkbox]:hover {
 }
 
 .checkbox-container:after {
-    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 7px rgba(0, 0, 0, 0.08);
 }
 
 /* ====== 复选框 Blockquotes ====== */
