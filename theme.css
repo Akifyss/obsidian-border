@@ -580,34 +580,44 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
 
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
-    padding: 0px;
-    margin-top: 6px;
-    margin-left: 6px;
-    padding-right: 6px;
+    padding: 6px;
+    margin: 0px;
     gap: 2px;
-    height: 32px;
+    height: 44px;
     display: flex;
     align-items: center;
     border-radius: 6px;
+    overflow-y: visible;
 }
 
-.workspace-tab-header.is-active .workspace-tab-header-inner {
+.workspace-tab-header.is-active.mod-active {
+    overflow: visible;
+}
+
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-primary);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
     border-radius: 6px;
+}
+
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: inset 0 0 0 1px var(--divider-color);
 }
 
 .workspace-tab-header {
     cursor: var(--cursor);
 }
 
-
 .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-primary);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
     border-radius: 6px;
     color: var(--text-normal);
     --icon-color: var(--text-normal);
+}
+
+.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: inset 0 0 0 1px var(--divider-color);
 }
 
 .theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -1083,6 +1093,16 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="file-explorer"] .nav-hea
 */
 }
 
+.workspace-leaf-content .nav-file-icon svg {
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M12 15.5H4A1.5 1.5 0 0 1 2.5 14V2A1.5 1.5 0 0 1 4 .5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V14a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M9.5.5v3a1 1 0 0 0 1 1h3'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+
+}
+
+.nav-file-tag {
+    background-color: var(--tag-background);
+    color: var(--tag-color);
+}
 
 /* Tooltips */
 .tooltip .tooltip-arrow {
@@ -1100,6 +1120,14 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="file-explorer"] .nav-hea
 .tooltip.mod-left .tooltip-arrow {
     display: none;
 }
+
+/*
+.tooltip {
+    background-color: var(--workspace-background-translucent);
+    color: var(--color-accent-muted);
+    backdrop-filter: blur(36px);
+    box-shadow: 0 0 0 1px var(--divider-color);
+}*/
 
 /*input focus effect*/
 textarea:focus,
@@ -1155,6 +1183,14 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
 /*====== 模态 设置 ======*/
 .vertical-tab-header {
     background-color: var(--background-primary-accent);
+}
+
+.vertical-tab-header-group-title {
+    color: var(--text-accent);
+}
+
+.settings-search-container.vertical-tab-header-group {
+    padding-top: 2px;
 }
 
 /* ====== 编辑器 ====== */
@@ -1473,6 +1509,10 @@ body.theme-dark .markdown-rendered thead tr {
 }
 
 /* ====== 图标 ====== */
+body {
+    --icon-stroke: var(--icon-s-stroke-width);
+}
+
 .workspace-tab-header-inner-icon {
     display: flex;
     align-items: center;
@@ -1667,4 +1707,28 @@ svg.pane-layout,
 .side-dock-ribbon-action svg.sheets-in-box {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><g><path d="M20.92,7.61c-.05-.12-.12-.23-.22-.32L15.71,2.29c-.09-.09-.2-.17-.32-.22-.12-.05-.25-.08-.38-.08H8c-.8,0-1.55,.31-2.12,.88s-.88,1.32-.88,2.12v5c0,.55,.45,1,1,1s1-.45,1-1V5c0-.26,.11-.52,.29-.71s.44-.29,.71-.29h6v3c0,.53,.21,1.04,.59,1.41s.88,.59,1.41,.59h3v10c0,.26-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29h-4c-.55,0-1,.45-1,1s.45,1,1,1h4c.8,0,1.56-.31,2.12-.88,.57-.57,.88-1.32,.88-2.12V8c0-.13-.03-.26-.08-.38Zm-4.92-2.2l1.59,1.59h-1.59v-1.59Z"/><path d="M8,12c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5-2.24-5-5-5Zm2.82,4h-1.82v-1.82c.85,.3,1.51,.97,1.82,1.82Zm-2.82,4c-1.65,0-3-1.35-3-3,0-1.3,.84-2.4,2-2.82v2.82c0,.55,.45,1,1,1h2.82c-.41,1.16-1.51,2-2.82,2Z"/></g></svg>');
+}
+
+
+
+/* ====== MOBILE ====== */
+.workspace-drawer.mod-left,
+.workspace-drawer.mod-left .workspace-drawer-inner,
+.workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container,
+.workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
+    background-color: var(--background-primary-accent);
+}
+
+.side-dock-ribbon.mod-left.workspace-drawer-ribbon {
+    --icon-color: var(--color-accent-muted)
+}
+
+.is-tablet.theme-dark .community-item,
+.is-tablet.theme-dark .vertical-tab-content {
+    background-color: var(--background-primary);
+}
+
+.is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background-color: var(--background-modifier-hover);
+    box-shadow: none;
 }
