@@ -1,3 +1,16 @@
+/* @settings
+
+name: Border
+id: Border
+settings:
+    - 
+        id: line-active-hightlight
+        title: hightlight active line
+        title.zh: 高亮当前行
+        type: class-toggle
+        default: true
+*/
+
 body {
     /*
       List of variables is placed in body rather than :root so 
@@ -1331,8 +1344,8 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
 }
 
 
-/* ====== 编辑器区块效果 ====== */
-body .markdown-source-view .cm-scroller .cm-line.cm-active {
+/* ====== 当前行高亮 ====== */
+body.line-active-hightlight .markdown-source-view .cm-scroller .cm-line.cm-active {
     background-color: rgba(var(--mono-rgb-100), 0.05);
     border-radius: var(--radius-s);
 }
@@ -1426,22 +1439,38 @@ input[type=checkbox]:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
 }
 
-/* ====== 复选框 Blockquotes ====== */
+/* ======Blockquotes ====== */
 body {
     /* Blockquotes */
     --blockquote-border-thickness: 3px;
     --blockquote-border-color: var(--interactive-accent);
     --blockquote-font-style: normal;
     --blockquote-color: inherit;
-    --blockquote-background-color: var(--background-primary-alt);
+    --blockquote-background-color: transparent;
 }
 
 body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 .markdown-rendered blockquote {
     border-top-right-radius: var(--radius-s);
     border-bottom-right-radius: var(--radius-s);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
+.theme-dark .markdown-rendered blockquote {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* ======table ====== */
+.markdown-rendered thead tr {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body.theme-dark .markdown-rendered thead tr {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
 
 /* ====== 图标 ====== */
 .workspace-tab-header-inner-icon {
