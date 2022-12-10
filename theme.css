@@ -1129,7 +1129,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="file-explorer"] .nav-hea
     box-shadow: 0 0 0 1px var(--divider-color);
 }*/
 
-/*input focus effect*/
+/*input*/
 textarea:focus,
 input[type='text']:focus,
 input[type='search']:focus,
@@ -1154,6 +1154,40 @@ input.prompt-input:focus-visible {
     border-bottom: 2px solid var(--color-accent);
     box-shadow: none;
 }
+
+/*color and blur*/
+.prompt,
+.menu,
+.suggestion-container.mod-search-suggestion {
+    background-color: rgba(246, 246, 246, 0.8);
+    backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
+}
+
+.theme-dark .prompt,
+.theme-dark .menu,
+.theme-dark .suggestion-container.mod-search-suggestion {
+    background-color: var(--workspace-background-translucent);
+    backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
+}
+
+.suggestion-container.mod-search-suggestion .suggestion {
+    background-color: transparent;
+}
+
+input.prompt-input {
+    background-color: transparent !important;
+}
+
+.theme-dark textarea,
+.theme-dark input[type='text'],
+.theme-dark input[type='search'],
+.theme-dark input[type='email'],
+.theme-dark input[type='password'],
+.theme-dark input[type='number'] {
+    background: var(--background-secondary-accent);
+}
+
+
 
 /* scrollbar autohide*/
 body:not(.native-scrollbars) ::-webkit-scrollbar {
