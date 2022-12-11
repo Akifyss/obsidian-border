@@ -1247,13 +1247,14 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-height: 480px;
+    max-height: 100%;
 }
 
 .empty-state-title {
     display: none;
 }
 
+.is-mobile .empty-state-action-list,
 .empty-state-action-list {
     margin-top: 0px;
 }
