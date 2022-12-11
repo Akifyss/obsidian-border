@@ -1165,6 +1165,7 @@ input.prompt-input:focus-visible {
     backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
 }
 
+.theme-dark.is-mobile .prompt,
 .theme-dark .prompt,
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
@@ -1259,6 +1260,15 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     margin-top: 0px;
 }
 
+.is-mobile .empty-state-action {
+    background-color: rgba(246, 246, 246, 0.8);
+    margin: 12px 0;
+    padding: 6px 24px;
+}
+
+.theme-dark.is-mobile .empty-state-action {
+    background-color: var(--workspace-background-translucent);
+}
 
 /* ====== 编辑器 ====== */
 
@@ -1552,27 +1562,67 @@ body {
     --blockquote-background-color: transparent;
 }
 
+
+body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote {
+    padding-inline-start: 20px !important;
+}
+
 body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 .markdown-rendered blockquote {
-    border-top-right-radius: var(--radius-s);
-    border-bottom-right-radius: var(--radius-s);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    border-radius: var(--radius-s);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 .theme-dark .markdown-rendered blockquote {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before {
+    left: 4px;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before,
+.markdown-source-view.mod-cm6 .cm-blockquote-border::before {
+    content: "";
+    height: calc(100% - 8px);
+    width: var(--blockquote-border-thickness);
+    border-left: none;
+    background-color: var(--blockquote-border-color);
+    border-radius: 24px;
+    color: transparent;
+    position: absolute;
+    top: 4px;
+}
+
+.markdown-preview-view blockquote {
+    position: relative;
+}
+
+.markdown-preview-view blockquote::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    height: calc(100% - 8px);
+    width: var(--blockquote-border-thickness);
+    background-color: var(--blockquote-border-color);
+    border-radius: 24px;
+}
+
+.markdown-rendered blockquote {
+    border-left: none;
 }
 
 /* ======table ====== */
 .markdown-rendered thead tr {
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 body.theme-dark .markdown-rendered thead tr {
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* ====== 图标 ====== */
@@ -1798,4 +1848,8 @@ svg.pane-layout,
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-hover);
     box-shadow: none;
+}
+
+.is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
+    background-color: var(--background-secondary-accent);
 }
