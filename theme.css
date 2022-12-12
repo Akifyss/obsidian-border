@@ -16,7 +16,7 @@ settings:
     - 
         id: floating-tab-title-bar-disable
         title: disable floating tab title bar
-        title.zh: 禁用悬浮的标签标题栏
+        title.zh: 禁用悬浮的tab标题栏
         type: class-toggle
 */
 
@@ -185,6 +185,7 @@ body {
             calc(100% - (100% - var(--accent-l)) / 8), 0.8);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
+    --background-modifier-form-field: var(--background-primary);
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
@@ -243,7 +244,6 @@ body {
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)));
-    --background-modifier-form-field: var(--color-base-25);
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5));
     --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 8), calc(var(--accent-l) / 6));
     --background-secondary-alt: var(--color-base-30);
@@ -257,6 +257,7 @@ body {
     --interactive-hover: var(--color-base-35);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
+    --background-modifier-form-field: var(--background-secondary-accent);
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
@@ -323,7 +324,7 @@ body {
     --toggle-thumb-width: 26px;
     --file-margins: var(--size-4-2) var(--size-4-5);
     --background-modifier-cover: rgba(0, 0, 0, 0.25);
-    --background-modifier-form-field: var(--background-secondary);
+    --background-modifier-form-field: var(--background-primary);
     --keyboard-background: var(--background-primary);
     --checkbox-size: 17px;
 }
@@ -335,7 +336,7 @@ body {
     --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
     --modal-background: var(--background-secondary);
     --search-result-background: var(--background-secondary);
-    --background-modifier-form-field: var(--background-modifier-border);
+    --background-modifier-form-field: var(--background-secondary-accent);
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
     --settings-home-background: var(--background-primary);
@@ -1200,14 +1201,6 @@ input.prompt-input {
     background-color: transparent !important;
 }
 
-.theme-dark textarea,
-.theme-dark input[type='text'],
-.theme-dark input[type='search'],
-.theme-dark input[type='email'],
-.theme-dark input[type='password'],
-.theme-dark input[type='number'] {
-    background: var(--background-secondary-accent);
-}
 
 .theme-dark .modal-sidebar {
     background: var(--background-primary-accent);
@@ -1309,6 +1302,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-red);
 }
 
+.markdown-rendered h1::before,
 .markdown-preview-view h1::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1340,6 +1334,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-orange);
 }
 
+.markdown-rendered h2::before,
 .markdown-preview-view h2::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1371,6 +1366,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-yellow);
 }
 
+.markdown-rendered h3::before,
 .markdown-preview-view h3::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1401,6 +1397,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-green);
 }
 
+.markdown-rendered h4::before,
 .markdown-preview-view h4::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1431,6 +1428,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-blue);
 }
 
+.markdown-rendered h5::before,
 .markdown-preview-view h5::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1461,7 +1459,7 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
     background-color: var(--color-purple);
 }
 
-
+.markdown-rendered h6::before,
 .markdown-preview-view h6::before {
     flex-shrink: 0;
     flex-grow: 0;
@@ -1614,10 +1612,12 @@ body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
     top: 4px;
 }
 
+.markdown-rendered blockquote,
 .markdown-preview-view blockquote {
     position: relative;
 }
 
+.markdown-rendered blockquote::before,
 .markdown-preview-view blockquote::before {
     content: "";
     position: absolute;
