@@ -785,6 +785,11 @@ body.mod-windows .titlebar .titlebar-button.mod-close:focus {
     background-color: var(--background-modifier-error) !important;
 }
 
+body.mod-windows .titlebar .titlebar-button.mod-close:hover::after,
+body.mod-windows .titlebar .titlebar-button.mod-close:focus::after {
+    background-color: var(--text-on-accent) !important;
+}
+
 body.mod-windows .titlebar .titlebar-button.mod-close:hover,
 body.mod-windows .titlebar .titlebar-button.mod-close:focus {
     color: var(--text-on-accent) !important;
@@ -818,7 +823,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 .titlebar-button-container.mod-right .titlebar-button::after {
     content: '';
-    background-color: currentColor;
+    background-color: var(--color-accent-muted);
     width: 16px;
     height: 16px;
     margin: auto;
