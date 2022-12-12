@@ -5,7 +5,7 @@ id: Border
 settings:
     - 
         id: line-active-disable
-        title: disable active line hightlight
+        title: Disable active line hightlight
         title.zh: 禁用当前行高亮
         type: class-toggle
     - 
@@ -15,7 +15,7 @@ settings:
         type: class-toggle
     - 
         id: floating-tab-title-bar-disable
-        title: disable floating tab title bar
+        title: Disable floating tab title bar
         title.zh: 禁用悬浮的tab标题栏
         type: class-toggle
     - 
