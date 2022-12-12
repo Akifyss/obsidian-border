@@ -1917,6 +1917,6 @@ body.is-mobile {
 }
 
 body.is-mobile.theme-dark {
-    --interactive-normal: rgba(246, 246, 246, 0.1);
-    --interactive-hover: rgba(246, 246, 246, 0.15);
+    --interactive-normal: rgba(246, 246, 246, 0.08);
+    --interactive-hover: rgba(246, 246, 246, 0.12);
 }
