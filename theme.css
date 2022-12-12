@@ -13,6 +13,11 @@ settings:
         title: disable bigger "New note" button
         title.zh: 禁用更大的“New note”按钮
         type: class-toggle
+    - 
+        id: floating-tab-title-bar-disable
+        title: disable floating tab title bar
+        title.zh: 禁用悬浮的标签标题栏
+        type: class-toggle
 */
 
 body {
@@ -572,6 +577,11 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
     padding: 0px 3px 2px 6px;
 }
 
+.workspace .mod-root .workspace-tab-header-inner::after {
+    background-color: var(--color-accent-muted);
+    opacity: 0.3;
+}
+
 .mod-root .workspace-tab-header-inner {
     padding: 0 6px 0 8px
 }
@@ -855,9 +865,9 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 
 /* ====== view-header====== */
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header,
-body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="empty"] .view-header,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header {
     border-bottom: none;
     background-color: var(--background-primary) !important;
     position: absolute;
@@ -870,9 +880,9 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header {
     height: 36px;
 }
 
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header .view-header-nav-buttons::before,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header .view-header-nav-buttons::before,
-body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header .view-header-nav-buttons::before {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header .view-header-nav-buttons::before,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="empty"] .view-header .view-header-nav-buttons::before,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header .view-header-nav-buttons::before {
     content: " ";
     width: 1px;
     height: 16px;
@@ -881,40 +891,40 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header .v
     left: 68px;
 }
 
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title,
-body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header-title,
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-header-title-container {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header-title,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="empty"] .view-header-title,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header-title,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header-title-container,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="empty"] .view-header-title-container,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header-title-container {
     display: none;
 }
 
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"] .view-actions,
-body:not(.is-mobile) .workspace-leaf-content[data-type="markdown"] .view-actions,
-body:not(.is-mobile) .workspace-leaf-content[data-type="canvas"] .view-actions {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="empty"] .view-actions,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-actions,
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-actions {
     display: flex;
 }
 
 /*Compatible with view-header*/
 
-body:not(.is-mobile) .canvas-controls {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .canvas-controls {
     right: var(--size-2-3);
     top: calc(var(--size-4-2) + var(--header-height));
 }
 
-body:not(.is-mobile) .document-search-container {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .document-search-container {
     padding: 12px 0;
     margin: 0px;
 }
 
-body:not(.is-mobile) .graph-controls.is-close {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .graph-controls.is-close {
     width: fit-content;
     position: absolute;
     left: 12px;
 }
 
-body:not(.is-mobile) .graph-controls {
+body:not(.is-mobile):not(.floating-tab-title-bar-disable) .graph-controls {
     position: absolute;
     left: 12px;
 }
@@ -1861,4 +1871,12 @@ svg.pane-layout,
 
 .is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
     background-color: var(--background-secondary-accent);
+}
+
+.mobile-navbar {
+    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1);
+}
+
+.theme-dark .mobile-navbar {
+    box-shadow: 0px -1px 0px var(--divider-color);
 }
