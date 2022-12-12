@@ -1253,14 +1253,14 @@ body:not(.native-scrollbars) :hover::-webkit-scrollbar-thumb {
 
 /*off scrollbar space occupancy, from @subframe7536 */
 
-body.scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
+body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
     overflow-y: overlay !important;
 }
 
-body.scrollbar-space-occupation-off .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container,
-body.scrollbar-space-occupation-off mjx-container,
-body.scrollbar-space-occupation-off .markdown-embed-content .markdown-rendered,
-body.scrollbar-space-occupation-off pre code {
+body:not(.is-mobile).scrollbar-space-occupation-off .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container,
+body:not(.is-mobile).scrollbar-space-occupation-off mjx-container,
+body:not(.is-mobile).scrollbar-space-occupation-off .markdown-embed-content .markdown-rendered,
+body:not(.is-mobile).scrollbar-space-occupation-off pre code {
     overflow-x: overlay !important;
 }
 
@@ -1917,6 +1917,6 @@ body.is-mobile {
 }
 
 body.is-mobile.theme-dark {
-    --interactive-normal: rgba(246, 246, 246, 0.08);
-    --interactive-hover: rgba(246, 246, 246, 0.12);
+    --interactive-normal: rgba(246, 246, 246, 0.05);
+    --interactive-hover: rgba(246, 246, 246, 0.1);
 }
