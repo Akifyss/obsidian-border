@@ -1306,14 +1306,11 @@ body.scrollbar-space-occupation-off pre code {
 }
 
 .is-mobile .empty-state-action {
-    background-color: rgba(246, 246, 246, 0.8);
+    background-color: var(--interactive-normal);
     margin: 12px 0;
     padding: 6px 24px;
 }
 
-.theme-dark.is-mobile .empty-state-action {
-    background-color: var(--workspace-background-translucent);
-}
 
 /* ====== 编辑器 ====== */
 
