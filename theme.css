@@ -1226,6 +1226,29 @@ input.prompt-input {
     background: var(--background-primary-accent);
 }
 
+/*====== 动效 ======*/
+.menu,
+.prompt,
+.modal,
+.suggestion-container.mod-search-suggestion {
+    animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
+}
+
+
+@keyframes scale-up {
+    0% {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* scrollbar autohide*/
 body:not(.native-scrollbars) ::-webkit-scrollbar {
     background-color: transparent !important;
@@ -1320,7 +1343,6 @@ body:not(.is-mobile).scrollbar-space-occupation-off pre code {
     flex-direction: column;
     gap: 8px;
     padding-left: 0px;
-    margin-top: 24px
 }
 
 .search-empty-state::before {
