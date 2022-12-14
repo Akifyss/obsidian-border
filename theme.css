@@ -104,7 +104,7 @@ body {
     --background-modifier-error-hover: var(--color-red);
     --background-modifier-success-rgb: var(--color-green-rgb);
     --background-modifier-success: var(--color-green);
-    --background-modifier-message: rgba(0, 0, 0, 0.9);
+    --background-modifier-message: rgba(0, 0, 0, 0.8);
     /* Inputs */
     --background-modifier-form-field: var(--color-base-00);
     /* Status bar */
@@ -1229,7 +1229,8 @@ input.prompt-input {
 /*====== 动效 ======*/
 body:not(.is-mobile) .menu,
 body:not(.is-mobile) .prompt,
-body:not(.is-mobile) .suggestion-container.mod-search-suggestion {
+body:not(.is-mobile) .modal:not(.mod-settings),
+body:not(.is-mobile) .suggestion-container {
     -webkit-animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
@@ -1260,6 +1261,10 @@ body:not(.is-mobile) .suggestion-container.mod-search-suggestion {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+body:not(.is-mobile) .modal.mod-settings {
+    animation: 0.2s fadeIn both;
 }
 
 /* scrollbar autohide*/
