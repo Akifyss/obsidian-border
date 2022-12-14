@@ -1227,13 +1227,26 @@ input.prompt-input {
 }
 
 /*====== 动效 ======*/
-.menu,
-.prompt,
-.modal,
-.suggestion-container.mod-search-suggestion {
+body:not(.is-mobile) .menu,
+body:not(.is-mobile) .prompt,
+body:not(.is-mobile) .suggestion-container.mod-search-suggestion {
+    -webkit-animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
 
+@-webkit-keyframes scale-up {
+    0% {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 @keyframes scale-up {
     0% {
