@@ -1227,10 +1227,10 @@ input.prompt-input {
 }
 
 /*====== 动效 ======*/
-body:not(.is-mobile) .menu,
-body:not(.is-mobile) .prompt,
-body:not(.is-mobile) .modal:not(.mod-settings),
-body:not(.is-mobile) .suggestion-container {
+body:not(.is-phone) .menu,
+body:not(.is-phone) .prompt,
+body:not(.is-phone) .modal:not(.mod-settings),
+body:not(.is-phone) .suggestion-container {
     -webkit-animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
@@ -1263,7 +1263,7 @@ body:not(.is-mobile) .suggestion-container {
     }
 }
 
-body:not(.is-mobile) .modal.mod-settings {
+body:not(.is-phone) .modal.mod-settings {
     animation: 0.2s fadeIn both;
 }
 
