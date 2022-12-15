@@ -167,7 +167,7 @@ body {
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
     --color-base-10: #fafafa;
-    --color-base-20: #f6f6f6;
+    --color-base-20: #F2F2F2;
     --color-base-25: #e3e3e3;
     --color-base-30: #e0e0e0;
     --color-base-35: #d4d4d4;
@@ -195,7 +195,7 @@ body {
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 8), 0.8);
     --interactive-normal: var(--background-secondary);
-    --interactive-hover: #ededed;
+    --interactive-hover: #EBEBEB;
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
     --background-modifier-form-field: transparent;
@@ -203,10 +203,10 @@ body {
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
         inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .05);
+        0 2px 3px 0 rgba(0, 0, 0, .025);
     --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
         inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .08);
+        0 2px 3px 0 rgba(0, 0, 0, .05);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
         0px 3.4px 6.7px rgba(0, 0, 0, .042),
         0px 15px 30px rgba(0, 0, 0, .07);
@@ -309,6 +309,7 @@ body {
     --input-font-weight: var(--font-medium);
     --input-border-width: 0px;
     --interactive-normal: var(--background-secondary);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.05);
     --mobile-sidebar-width: 340px;
     --mobile-sidebar-max-width: 500px;
     --nav-item-padding: var(--size-2-3) var(--size-4-2);
@@ -346,7 +347,7 @@ body {
     --search-result-background: var(--background-secondary-accent);
     --background-modifier-form-field: var(--background-secondary-accent);
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
-    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.1);
     --settings-home-background: var(--background-primary);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
@@ -385,7 +386,7 @@ body:not(.is-mobile) .horizontal-main-container {
     margin-bottom: 24px;
 }
 
-body.is-popout-window .horizontal-main-container {
+body:not(.is-mobile).is-popout-window .horizontal-main-container {
     margin-bottom: 16px;
 }
 
@@ -397,37 +398,37 @@ body:not(.is-mobile) .workspace {
     margin-right: 16px;
 }
 
-body.is-popout-window .workspace {
+body:not(.is-mobile).is-popout-window .workspace {
     margin-right: 16px;
     margin-left: 16px;
 }
 
-body.is-popout-window .workspace-tabs.mod-top.mod-top-left-space>.workspace-tab-container {
+body:not(.is-mobile).is-popout-window .workspace-tabs.mod-top.mod-top-left-space>.workspace-tab-container {
     border-top-left-radius: 12px !important;
 }
 
 
-.mod-top-right-space .workspace-tab-container {
+body:not(.is-mobile) .mod-top-right-space .workspace-tab-container {
     border-top-right-radius: 12px;
     overflow: hidden;
 }
 
-.workspace-split.mod-left-split {
+body:not(.is-mobile) .workspace-split.mod-left-split {
     border-bottom-left-radius: 12px;
     overflow: hidden;
 }
 
-.workspace-split.mod-right-split {
+body:not(.is-mobile) .workspace-split.mod-right-split {
     border-bottom-right-radius: 12px;
     overflow: hidden;
 }
 
-.workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
+body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
     border-bottom-left-radius: 12px;
     overflow: hidden;
 }
 
-.workspace:not(.is-right-sidedock-open) .workspace-split.mod-root {
+body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root {
     border-bottom-right-radius: 12px;
     overflow: hidden;
 }
@@ -446,7 +447,7 @@ body:not(.is-mobile) .workspace::before {
     z-index: 5;
 }
 
-body.is-popout-window:not(.is-mobile) .workspace::before {
+body:not(.is-mobile).is-popout-window .workspace::before {
     width: calc(100% - 16px - 16px);
     height: calc(100% - 44px - 16px);
     bottom: 16px;
@@ -473,7 +474,7 @@ body:not(.is-translucent):not(.is-mobile) .workspace {
 }
 
 
-.mod-top-left-space .workspace-tab-container {
+body:not(.is-mobile) .mod-top-left-space .workspace-tab-container {
     border-top-left-radius: 12px;
 }
 
@@ -1195,10 +1196,10 @@ body:not(.is-mobile) input.prompt-input:focus-visible {
     box-shadow: none;
 }
 
-input.prompt-input,
-input.prompt-input:hover,
-input.prompt-input:focus,
-input.prompt-input:focus-visible {
+body:not(.is-phone) input.prompt-input,
+body:not(.is-phone) input.prompt-input:hover,
+body:not(.is-phone) input.prompt-input:focus,
+body:not(.is-phone) input.prompt-input:focus-visible {
     border-bottom: 2px solid var(--color-accent) !important;
 }
 
@@ -2004,7 +2005,13 @@ svg.pane-layout,
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-hover);
     box-shadow: inset 0 0 0 1px var(--divider-color);
+    /*box-shadow: inset 0 0 0 1px transparent;*/
 }
+
+/*
+.is-mobile.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: inset 0 0 0 1px transparent;
+}*/
 
 .is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
     background-color: var(--background-secondary-accent);
@@ -2016,4 +2023,8 @@ svg.pane-layout,
 
 .theme-dark .mobile-navbar {
     box-shadow: 0px -1px 0px var(--divider-color);
+}
+
+.is-tablet .workspace-tab-container {
+    border-top: 1px solid var(--divider-color);
 }
