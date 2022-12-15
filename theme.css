@@ -1354,7 +1354,7 @@ body:not(.is-mobile).scrollbar-space-occupation-off pre code {
     padding-top: 2px;
 }
 
-body:not(.setting-item-title-icon-remove) .vertical-tab-header-group .vertical-tab-header-group-title {
+body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-group .vertical-tab-header-group-title {
     display: flex;
     align-items: center;
 }
