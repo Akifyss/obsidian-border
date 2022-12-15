@@ -185,7 +185,7 @@ body {
     --color-accent-muted: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --divider-color: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
     --background-primary-accent: hsl(var(--accent-h),
-            calc((var(--accent-s) - 12%) / 2),
+            calc((var(--accent-s) - 12%) / 3),
             calc(100% - (100% - var(--accent-l)) / 12));
     --background-secondary-alt: var(--color-base-05);
     --background-secondary-accent: hsl(calc(var(--accent-h) - 18),
@@ -194,30 +194,25 @@ body {
     --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 8), 0.8);
+    --interactive-normal: var(--background-secondary);
+    --interactive-hover: #ededed;
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
-    --background-modifier-form-field: var(--background-primary);
+    --background-modifier-form-field: transparent;
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
         inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .02),
-        0 1px 1.5px 0 rgba(0, 0, 0, .03),
-        0 1px 2px 0 rgba(0, 0, 0, .04),
-        0 0 0 0 transparent;
+        0 2px 3px 0 rgba(0, 0, 0, .05);
     --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
         inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .05),
-        0 1px 1.5px 0 rgba(0, 0, 0, .03),
-        0 1px 2px 0 rgba(0, 0, 0, .04),
-        0 0 0 0 transparent;
+        0 2px 3px 0 rgba(0, 0, 0, .08);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
         0px 3.4px 6.7px rgba(0, 0, 0, .042),
         0px 15px 30px rgba(0, 0, 0, .07);
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
         0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
         0px 30px 90px rgba(0, 0, 0, 0.2);
-
 }
 
 .theme-dark {
@@ -353,6 +348,12 @@ body {
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
     --settings-home-background: var(--background-primary);
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 3));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 2.4));
 }
 
 .is-tablet {
@@ -650,7 +651,7 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
 }
 
 .theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
+    background-color: var(--background-modifier-hover);
 }
 
 .nav-header {
@@ -770,10 +771,6 @@ body.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-top {
 body.is-translucent .mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-hover);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
-}
-
-body.is-translucent.theme-dark .mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
 }
 
 
@@ -1206,6 +1203,7 @@ input.prompt-input:focus-visible {
 }
 
 /*color and blur*/
+.popover,
 .prompt,
 .menu,
 .suggestion-container.mod-search-suggestion {
@@ -1214,6 +1212,7 @@ input.prompt-input:focus-visible {
 }
 
 .theme-dark.is-mobile .prompt,
+.theme-dark .popover,
 .theme-dark .prompt,
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
@@ -1255,6 +1254,7 @@ input.prompt-input {
 
 
 /*====== 动效 ======*/
+body:not(.is-phone) .popover,
 body:not(.is-phone) .menu,
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(.mod-settings),
@@ -2000,7 +2000,7 @@ svg.pane-layout,
 }
 
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
+    background-color: var(--background-modifier-hover);
     box-shadow: inset 0 0 0 1px var(--divider-color);
 }
 
