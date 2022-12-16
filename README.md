@@ -2,13 +2,24 @@
 
 A theme for obsidian.md, built on Windows.
 
-## Screenshot
+![screenshot](cover-lg.png)
 
-![screenshot](screenshot-1.png)
+## Feature
 
-![screenshot](screenshot-2.png)
++ Light and dark theme
++ Customize UI color with accent color setting
++ Translucent window (best used with dark mode)
++ Mobile support
++ Added some icons, illustrations and motion effects
++ Use style settings plugin to turn on/off some features
 
-![screenshot](screenshot-3.png)
+## Screenshots
+
+![screenshot](img\screenshot-1.png)
+
+![screenshot](img\screenshot-2.png)
+
+![screenshot](img\screenshot-3.png)
 
 Customize accent color and turn on translucent window in Setting-Appearance:
-![screenshot](screenshot-4.png)
+![screenshot](img\screenshot-4.png)
