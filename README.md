@@ -15,11 +15,11 @@ A theme for obsidian.md, built on Windows.
 
 ## Screenshots
 
-![screenshot](img\screenshot-1.png)
+![screenshot](screenshot-1.png)
 
-![screenshot](img\screenshot-2.png)
+![screenshot](screenshot-2.png)
 
-![screenshot](img\screenshot-3.png)
+![screenshot](screenshot-3.png)
 
 Customize accent color and turn on translucent window in Setting-Appearance:
-![screenshot](img\screenshot-4.png)
+![screenshot](screenshot-4.png)
