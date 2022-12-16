@@ -338,7 +338,7 @@ body {
     --toggle-thumb-width: 26px;
     --file-margins: var(--size-4-2) var(--size-4-5);
     --background-modifier-cover: rgba(0, 0, 0, 0.25);
-    --background-modifier-form-field: var(--background-primary);
+    --background-modifier-form-field: var(--background-modifier-hover);
     --keyboard-background: var(--background-primary);
     --checkbox-size: 17px;
 }
@@ -350,9 +350,9 @@ body {
     --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
     --modal-background: var(--background-secondary);
     --search-result-background: var(--background-secondary-accent);
-    --background-modifier-form-field: var(--background-secondary-accent);
+    --background-modifier-form-field: var(--background-modifier-hover);
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
-    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.1);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.08);
     --settings-home-background: var(--background-primary);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
@@ -934,16 +934,6 @@ body:not(.is-mobile):not(.floating-tab-title-bar-disable) .document-search-conta
     margin: 0px;
 }
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .graph-controls.is-close {
-    width: fit-content;
-    position: absolute;
-    left: 12px;
-}
-
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .graph-controls {
-    position: absolute;
-    left: 12px;
-}
 
 /*nav-buttons left align*/
 .nav-buttons-container {
@@ -1207,6 +1197,12 @@ body:not(.is-phone) input.prompt-input:focus-visible {
 }
 
 /*color and blur*/
+.modal.mod-canvas-help,
+.graph-controls,
+.graph-controls.is-close,
+.canvas-controls button,
+.canvas-card-menu,
+.suggestion-container,
 .popover,
 .prompt,
 .menu,
@@ -1216,8 +1212,14 @@ body:not(.is-phone) input.prompt-input:focus-visible {
     -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
 }
 
-.theme-dark.is-mobile .prompt,
+.theme-dark .modal.mod-canvas-help,
+.theme-dark .graph-controls,
+.theme-dark .graph-controls.is-close,
+.theme-dark .canvas-controls button,
+.theme-dark .canvas-card-menu,
+.theme-dark .suggestion-container,
 .theme-dark .popover,
+.theme-dark.is-mobile .prompt,
 .theme-dark .prompt,
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
@@ -1225,6 +1227,12 @@ body:not(.is-phone) input.prompt-input:focus-visible {
     backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
     -webkit-backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
 }
+
+.canvas-controls-group {
+    background-color: transparent;
+    border: 1px solid var(--divider-color);
+}
+
 
 .suggestion-container.mod-search-suggestion .suggestion {
     background-color: transparent;
@@ -1260,6 +1268,7 @@ input.prompt-input {
 
 
 /*====== 动效 ======*/
+.graph-controls:not(.is-close),
 body:not(.is-phone) .popover,
 body:not(.is-phone) .menu,
 body:not(.is-phone) .prompt,
@@ -1300,6 +1309,53 @@ body:not(.is-phone) .suggestion-container {
 body:not(.is-phone) .modal.mod-settings {
     animation: 0.2s fadeIn both;
 }
+
+/* canvas */
+body {
+    --canvas-dot-pattern: var(--color-base-30);
+}
+
+
+/* graph*/
+.graph-controls.is-close {
+    border: 1px solid var(--divider-color);
+    padding: 0px;
+    border-radius: var(--radius-s);
+}
+
+.graph-controls-button.mod-open,
+.graph-controls-button.mod-animate {
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+    --icon-color: var(--text-normal);
+}
+
+.graph-controls-button.mod-open {
+    height: 33px;
+}
+
+.graph-controls-button.mod-open svg,
+.graph-controls-button.mod-animate svg {
+    --icon-size: var(--icon-s);
+    opacity: var(--icon-opacity);
+}
+
+.graph-controls-button.mod-open:hover,
+.graph-controls-button.mod-animate:hover {
+    opacity: 1;
+    color: var(--icon-color);
+    background-color: unset;
+}
+
+.graph-controls-button.mod-open {
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.graph-controls-button.mod-animate {
+    margin-top: 0px;
+}
+
 
 /* scrollbar autohide*/
 body:not(.native-scrollbars) ::-webkit-scrollbar {
@@ -1676,11 +1732,6 @@ body {
     --italic-color: var(--color-orange);
 }
 
-/*inline code*/
-.markdown-rendered code,
-.cm-s-obsidian span.cm-inline-code {
-    --code-normal: var(--color-pink);
-}
 
 
 /* ======划线文本样式 ====== */
@@ -1800,6 +1851,37 @@ body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 
 .markdown-rendered blockquote {
     border-left: none;
+}
+
+/*inline code*/
+.markdown-rendered code,
+.cm-s-obsidian span.cm-inline-code {
+    --code-normal: var(--color-pink);
+}
+
+/*code*/
+
+body {
+    --code-background: var(--background-primary-alt);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    border-top: 1px dashed var(--divider-color);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-bottom: 1px dashed var(--divider-color);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+    border-left: 1px dashed var(--divider-color);
+    border-right: 1px dashed var(--divider-color);
+}
+
+
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+    border: 1px dashed var(--divider-color);
 }
 
 /* ======table ====== */

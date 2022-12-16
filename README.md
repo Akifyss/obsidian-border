@@ -7,7 +7,7 @@ A theme for obsidian.md, built on Windows.
 ## Feature
 
 + Light and dark theme
-+ Customize UI color with accent color setting
++ Customize UI color via accent color setting
 + Translucent window (best used with dark mode)
 + Mobile support
 + Added some icons, illustrations and motion effects
