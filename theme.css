@@ -2280,6 +2280,6 @@ svg.pane-layout,
     border-top: 1px solid var(--divider-color);
 }
 
-.is-tablet .workspace-drawer-inner .side-dock-ribbon.mod-left.workspace-drawer-ribbon {
-    box-shadow: inset -1px 0px 0px var(--divider-color);
+.is-tablet .workspace-drawer-ribbon {
+    border-right: 1px solid var(--divider-color);
 }
