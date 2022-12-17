@@ -1478,8 +1478,9 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
 .is-mobile .empty-state-action {
     margin: 12px 0;
-    padding: 6px 24px;
+    padding: 4px 24px;
 }
+
 
 
 /*======搜索 空状态 ======*/
@@ -1516,8 +1517,12 @@ body.theme-dark button.mod-cta {
 }
 
 /* ======embedded-backlinks====== */
-.embedded-backlinks .nav-header~.search-input-container {
+body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
     margin: 15px 0 0 0;
+}
+
+.is-mobile .embedded-backlinks .nav-header~.search-input-container {
+    margin: 10px 0 0 0;
 }
 
 /* ====== 编辑器 ====== */
@@ -2280,6 +2285,12 @@ svg.pane-layout,
     border-top: 1px solid var(--divider-color);
 }
 
-.is-tablet .workspace-drawer-ribbon {
-    border-right: 1px solid var(--divider-color);
+
+.is-tablet .workspace-drawer-header,
+.is-tablet .workspace-drawer-tab-container{
+    box-shadow: -1px 0px 0px var(--divider-color)
+}
+
+.is-mobile.theme-light .mk-flow-bar button {
+    background-color: var(--background-modifier-form-field);
 }
