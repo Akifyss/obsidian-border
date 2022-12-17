@@ -1255,6 +1255,13 @@ input.prompt-input {
     --background-modifier-border: var(--divider-color);
 }
 
+.theme-dark .community-item.is-selected,
+.theme-dark .community-item.is-selected:hover {
+    border-color: var(--interactive-accent);
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
 .theme-dark .modal-sidebar {
     background-color: var(--background-primary-accent);
 }
@@ -1274,7 +1281,7 @@ input.prompt-input {
 /*====== 动效 ======*/
 .graph-controls:not(.is-close),
 body:not(.is-phone) .popover,
-body:not(.is-phone) .menu,
+body:not(.is-phone) .menu:not(.mk-style-menu),
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(.mod-settings),
 body:not(.is-phone) .suggestion-container {
@@ -2258,7 +2265,6 @@ svg.pane-layout,
     --icon-color: var(--color-accent-muted)
 }
 
-.is-tablet.theme-dark .community-item,
 .is-tablet.theme-dark .vertical-tab-content {
     background-color: var(--background-primary);
 }
