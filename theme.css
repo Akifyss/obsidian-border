@@ -2286,10 +2286,10 @@ svg.pane-layout,
 }
 
 
-.is-tablet .workspace-drawer-header,
-.is-tablet .workspace-drawer-tab-container{
-    box-shadow: -1px 0px 0px var(--divider-color)
+.is-mobile .mk-flow-bar {
+    border-top: thin solid transparent;
 }
+
 
 .is-mobile.theme-light .mk-flow-bar button {
     background-color: var(--background-modifier-form-field);
