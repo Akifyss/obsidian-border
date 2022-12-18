@@ -1335,6 +1335,10 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
     width: 6px;
 }
 
+body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar {
+    width: 3px;
+}
+
 body:not(.native-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb {
     background-color: transparent !important;
 }
@@ -1355,6 +1359,13 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: var(--radius-l);
+    border: 2px solid transparent;
+    border-width: 0px 0px 0px 0px;
+}
+
+body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
     -webkit-border-radius: var(--radius-l);
     border: 2px solid transparent;
     border-width: 0px 0px 0px 0px;
