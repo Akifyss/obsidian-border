@@ -1194,6 +1194,10 @@ input.prompt-input {
     --background-modifier-border: var(--divider-color);
 }
 
+.theme-dark.is-phone .community-modal-search-results-wrapper {
+    background-color: var(--background-secondary-accent);
+}
+
 .theme-dark .community-item.is-selected,
 .theme-dark .community-item.is-selected:hover {
     border-color: var(--interactive-accent);
@@ -1263,6 +1267,13 @@ body:not(.is-phone) .modal.mod-settings {
 /* canvas 白板 */
 body {
     --canvas-dot-pattern: var(--color-base-30);
+}
+
+.canvas-menu {
+    --icon-color: var(--text-muted);
+    --icon-color-hover: var(--text-muted);
+    --icon-color-active: var(--text-accent);
+    --icon-color-focused: var(--text-normal);
 }
 
 
@@ -1931,6 +1942,13 @@ input[type=checkbox]:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
 }
 
+/* ====== Callout ====== */
+body {
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.25;
+}
+
+
 /* ======Blockquotes ====== */
 body {
     /* Blockquotes */
@@ -2041,15 +2059,12 @@ pre[class*="language-"] {
 }
 
 /* ======table ====== */
-.markdown-rendered thead tr {
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+body {
+    --table-row-background-hover: var(--background-primary-alt);
+    --table-header-weight: var(--font-semibold);
+    --table-header-color: var(--color-accent-muted);
 }
 
-body.theme-dark .markdown-rendered thead tr {
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
 
 /* ====== 图标 ====== */
 body {
@@ -2277,7 +2292,7 @@ svg.pane-layout,
 }
 
 .side-dock-ribbon.mod-left.workspace-drawer-ribbon {
-    --icon-color: var(--color-accent-muted)
+    --icon-color: var(--color-accent-muted);
 }
 
 .is-tablet.theme-dark .vertical-tab-content {
