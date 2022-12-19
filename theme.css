@@ -659,6 +659,11 @@ body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .
 }
 
 /* ====== stack mod Correction===== */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+    width: 22px;
+    height: 22px;
+}
+
 body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
     background-color: var(--background-primary) !important;
 }
@@ -1107,13 +1112,13 @@ input[type='number'] {
     border: var(--input-border-width) solid var(--divider-color);
 }
 
-body:not(.is-mobile) textarea:focus,
+body:not(.is-mobile) textarea:not(.kanban-plugin__item-input):focus,
 body:not(.is-mobile) input[type='text']:focus,
 body:not(.is-mobile) input[type='search']:focus,
 body:not(.is-mobile) input[type='email']:focus,
 body:not(.is-mobile) input[type='password']:focus,
 body:not(.is-mobile) input[type='number']:focus,
-body:not(.is-mobile) textarea:focus-visible,
+body:not(.is-mobile) textarea:not(.kanban-plugin__item-input):focus-visible,
 body:not(.is-mobile) input[type='text']:focus-visible,
 body:not(.is-mobile) input[type='search']:focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
@@ -1333,12 +1338,21 @@ body {
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
 }
 
 body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
 }
 
+.mobile-toolbar-options-container::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar-track,
+body:not(.native-scrollbars) ::-webkit-scrollbar-track-piece,
 body:not(.native-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb {
     background-color: transparent !important;
 }
@@ -1355,7 +1369,7 @@ body:not(.native-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active {
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0px;
     border: 2px solid transparent;
-    border-width: 0px 0px 0px 3px;
+    border-width: 3px 0px 0px 3px;
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
@@ -1375,22 +1389,40 @@ body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
 
+body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar {
+    width: 16px;
+    height: 16px
+}
+
+body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: var(--radius-l);
+    border: 6px solid transparent;
+}
+
+body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: var(--radius-l);
+    border: 4px solid transparent;
+}
+
 /*off scrollbar space occupancy, from @subframe7536 */
 
 body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
     overflow-y: overlay !important;
 }
 
+body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div) {
+    overflow-y: overlay !important;
+}
+
+/*
 body:not(.is-mobile).scrollbar-space-occupation-off .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container,
 body:not(.is-mobile).scrollbar-space-occupation-off mjx-container,
 body:not(.is-mobile).scrollbar-space-occupation-off .markdown-embed-content .markdown-rendered,
 body:not(.is-mobile).scrollbar-space-occupation-off pre code {
     overflow-x: overlay !important;
 }
+*/
 
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div) {
-    overflow-y: overlay !important;
-}
 
 /*====== 模态 设置 ======*/
 .vertical-tab-header {
