@@ -1658,7 +1658,7 @@ body {
 }
 
 
-:is(h1, .HyperMD-header-1)::after {
+:is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1708,7 +1708,7 @@ body {
 
 
 
-:is(h2, .HyperMD-header-2)::after {
+:is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1757,7 +1757,7 @@ body {
     background-color: var(--color-yellow);
 }
 
-:is(h3, .HyperMD-header-3)::after {
+:is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1806,7 +1806,7 @@ body {
 }
 
 
-:is(h4, .HyperMD-header-4)::after {
+:is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1856,7 +1856,7 @@ body {
 }
 
 
-:is(h5, .HyperMD-header-5)::after {
+:is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1905,7 +1905,7 @@ body {
 }
 
 
-:is(h6, .HyperMD-header-6)::after {
+:is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
