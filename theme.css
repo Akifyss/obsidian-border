@@ -6,23 +6,23 @@ settings:
     - 
         id: line-active-disable
         title: Disable active line hightlight
-        title.zh: 禁用当前行高亮
+        title.zh: 禁用 当前行高亮
         type: class-toggle
     - 
         id: CTA-BTN-disable
         title: disable bigger "New note" button
-        title.zh: 禁用更大的“New note”按钮
+        title.zh: 禁用 更大的“New note”按钮
         type: class-toggle
     - 
         id: floating-tab-title-bar-disable
         title: Disable floating tab title bar
-        title.zh: 禁用悬浮的tab标题栏
+        title.zh: 禁用 悬浮的tab标题栏
         type: class-toggle
     - 
         id: scrollbar-space-occupation-off
         title: Eliminate the space occupied by scrollbar
         description: from @subframe7536
-        title.zh: 取消滚动条的空间占用
+        title.zh: 取消 滚动条的空间占用
         type: class-toggle
     - 
         id: scrollbar-hide
@@ -32,7 +32,12 @@ settings:
     - 
         id: setting-item-title-icon-remove
         title: Remove setting item title icon
-        title.zh: 移除设置项标题图标
+        title.zh: 移除 设置项标题图标
+        type: class-toggle
+    - 
+        id: left-sidebar-background-primary
+        title: Make the left sidebar background color consistent with the editor
+        title.zh: 左侧栏背景颜色与编辑器保持一致
         type: class-toggle
 */
 
@@ -110,21 +115,30 @@ body {
 
 .theme-light {
     color-scheme: light;
+    --text-normal: hsl(var(--accent-h), 12%, 12%);
+    --text-muted: hsl(var(--accent-h), 9%, 36%);
+    --text-faint: hsl(var(--accent-h), 6%, 64%);
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
-    --color-red-rgb: 228, 55, 75;
-    --color-red: #E4374B;
-    --color-green-rgb: 12, 181, 79;
-    --color-green: #0cb54f;
-    --color-green-alt: #3dc472;
-    --color-orange: #d96c00;
-    --color-yellow: #BD8E37;
-    --color-cyan: #2db7b5;
-    --color-blue: #086DDD;
-    --color-blue-alt: #398ae4;
-    --color-purple: #876be0;
-    --color-pink: #C32B74;
+    --color-red-rgb: 254, 121, 104;
+    --color-red: #fe7968;
+    --color-green-rgb: 120, 186, 126;
+    --color-green: #78BA7E;
+    --color-green-alt: #93c898;
+    --color-orange-rgb: 243, 156, 18;
+    --color-orange: #f39c12;
+    --color-yellow-rgb: 229, 199, 0;
+    --color-yellow: #e5c700;
+    --color-cyan-rgb: 54, 215, 183;
+    --color-cyan: #36d7b7;
+    --color-blue-rgb: 3, 138, 255;
+    --color-blue: #038aff;
+    --color-blue-alt: #35a1ff;
+    --color-purple-rgb: 148, 85, 236;
+    --color-purple: #9455ec;
+    --color-pink-rgb: 242, 63, 165;
+    --color-pink: #f23fa5;
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
     --color-base-10: #fafafa;
@@ -178,21 +192,30 @@ body {
 
 .theme-dark {
     color-scheme: dark;
+    --text-normal: hsl(var(--accent-h), 24%, 84%);
+    --text-muted: hsl(var(--accent-h), 18%, 72%);
+    --text-faint: hsl(var(--accent-h), 12%, 40%);
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
-    --color-red-rgb: 251, 70, 76;
-    --color-red: #fb464c;
-    --color-green-rgb: 68, 207, 110;
-    --color-green: #44CF6E;
-    --color-green-alt: #69d98b;
-    --color-orange: #E9973F;
-    --color-yellow: #E0DE71;
-    --color-cyan: #53DFDD;
-    --color-blue: #027aff;
-    --color-blue-alt: #3595ff;
-    --color-purple: #a882ff;
-    --color-pink: #FA99CD;
+    --color-red-rgb: 255, 138, 120;
+    --color-red: #ff8a78;
+    --color-green-rgb: 135, 211, 124;
+    --color-green: #87d37c;
+    --color-green-alt: #9fdc96;
+    --color-orange-rgb: 250, 190, 88;
+    --color-orange: #fabe58;
+    --color-yellow-rgb: 255, 236, 139;
+    --color-yellow: #ffec8b;
+    --color-cyan-rgb: 134, 226, 213;
+    --color-cyan: #86e2d5;
+    --color-blue-rgb: 137, 196, 244;
+    --color-blue: #89c4f4;
+    --color-blue-alt: #a1d0f6;
+    --color-purple-rgb: 198, 158, 255;
+    --color-purple: #c69eff;
+    --color-pink-rgb: 242, 182, 193;
+    --color-pink: #f2b6c1;
     --color-base-00: #1e1e1e;
     --color-base-10: #242424;
     --color-base-20: #262626;
@@ -497,6 +520,29 @@ body:not(.is-mobile) .workspace-ribbon {
     background-color: var(--background-primary-accent);
 }
 
+body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf-content,
+body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
+body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
+    background-color: var(--background-primary);
+}
+
+
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .backlink-pane,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .item-list,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .nav-files-container,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .tag-container,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+    background: linear-gradient(var(--background-primary) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
+}
+
+body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--divider-color);
+}
+
 body:not(.is-mobile) .workspace-split.mod-horizontal.mod-left-split,
 body:not(.is-mobile) .workspace-split.mod-vertical.mod-root,
 body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
@@ -606,6 +652,12 @@ body:not(.is-mobile).theme-light .mod-right-split .workspace-tabs:not(.mod-top) 
     border-radius: 6px;
     color: var(--text-normal);
     --icon-color: var(--text-normal);
+    --icon-color-hover: var(--text-normal);
+    --icon-color-active: var(--text-normal);
+    --icon-color-focused: var(--text-normal);
+    --icon-opacity: 1;
+    --icon-opacity-hover: 1;
+    --icon-opacity-active: 1;
 }
 
 body:not(.is-mobile).theme-light .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -1154,6 +1206,9 @@ body:not(.is-phone) input.prompt-input:focus-visible {
     border-bottom: 2px solid var(--color-accent) !important;
 }
 
+.kanban-plugin__grow-wrap>textarea {
+    --background-modifier-form-field: transparent;
+}
 
 
 /*color and blur*/
@@ -1956,6 +2011,19 @@ body {
     --italic-color: var(--color-orange);
 }
 
+/* list */
+body {
+    --list-indent: 2em;
+    --list-spacing: 0.075em;
+    --list-marker-color: var(--text-faint);
+    --list-marker-color-hover: var(--text-muted);
+    --list-marker-color-collapsed: var(--text-accent);
+    --list-bullet-border: none;
+    --list-bullet-radius: 50%;
+    --list-bullet-size: 0.3em;
+    --list-bullet-transform: none;
+    --list-numbered-style: decimal;
+}
 
 
 /* ======划线文本样式 ====== */
@@ -2001,7 +2069,7 @@ input[type=checkbox]:checked:after {
 }
 
 input[type=checkbox]:hover {
-    box-shadow: 0px 0px 0px 3px var(--tag-background-hover);
+    box-shadow: 0px 0px 0px 3px rgba(var(--color-green-rgb), 0.25);
 }
 
 /*toggle switch*/
@@ -2131,6 +2199,7 @@ pre[class*="language-"] {
 
 /* ======table ====== */
 body {
+    --table-header-background: var(--background-primary-alt);
     --table-row-background-hover: var(--background-primary-alt);
     --table-header-weight: var(--font-semibold);
     --table-header-color: var(--color-accent-muted);
