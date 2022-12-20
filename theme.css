@@ -2490,6 +2490,7 @@ svg.pane-layout,
 body.card-layout-open.is-tablet .workspace {
     gap: 16px;
     padding: 16px;
+    padding-bottom: 20px;
 }
 
 body.card-layout-open.is-tablet .app-container {
@@ -2517,6 +2518,7 @@ body.card-layout-open.is-tablet .workspace-drawer {
     border-radius: 12px !important;
     overflow: hidden;
     margin: 16px;
+    margin-bottom: 20px;
 }
 
 body.card-layout-open.is-tablet .workspace-drawer.mod-left.is-pinned,
