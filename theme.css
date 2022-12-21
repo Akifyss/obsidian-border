@@ -2530,6 +2530,7 @@ body.card-layout-open.is-tablet .workspace {
     gap: 16px;
     padding: 16px;
     padding-bottom: 24px;
+    padding-top: 8px;
 }
 
 body.card-layout-open.is-tablet .workspace-drawer {
@@ -2538,6 +2539,7 @@ body.card-layout-open.is-tablet .workspace-drawer {
     overflow: hidden;
     margin: 16px;
     margin-bottom: 24px;
+    margin-top: 8px;
 }
 
 body.card-layout-open.is-tablet .workspace-split.mod-root {
