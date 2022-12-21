@@ -28,7 +28,7 @@ settings:
     - 
         id: floating-tab-title-bar-disable
         title: Disable floating tab title bar
-        title.zh: 禁用 悬浮的tab标题栏
+        title.zh: 禁用 悬浮的标签页标题栏
         type: class-toggle
     - 
         id: Scrollbar
@@ -982,7 +982,7 @@ body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-conten
 
 /*Compatible with view-header*/
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .canvas-controls {
+body.show-view-header:not(.is-mobile):not(.floating-tab-title-bar-disable) .canvas-controls {
     right: var(--size-2-3);
     top: calc(var(--size-4-2) + var(--header-height));
 }
@@ -2531,6 +2531,10 @@ body.card-layout-open.is-tablet .workspace {
     padding: 16px;
     padding-bottom: 24px;
     padding-top: 8px;
+}
+
+body.card-layout-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
+    padding-bottom: 8px;
 }
 
 body.card-layout-open.is-tablet .workspace-drawer {
