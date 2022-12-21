@@ -4,9 +4,16 @@ name: Border
 id: Border
 settings:
     - 
-        id: line-active-disable
-        title: Disable active line hightlight
-        title.zh: 禁用 当前行高亮
+        id: Interface
+        title: Interface
+        title.zh: 界面
+        type: heading
+        collapsed: true
+        level: 2
+    - 
+        id: left-sidebar-background-primary
+        title: Make the left sidebar background color consistent with the editor
+        title.zh: 左侧栏背景颜色与编辑器保持一致
         type: class-toggle
     - 
         id: CTA-BTN-disable
@@ -14,10 +21,22 @@ settings:
         title.zh: 禁用 更大的“New note”按钮
         type: class-toggle
     - 
+        id: setting-item-title-icon-remove
+        title: Remove setting item title icon
+        title.zh: 移除 设置项标题图标
+        type: class-toggle
+    - 
         id: floating-tab-title-bar-disable
         title: Disable floating tab title bar
         title.zh: 禁用 悬浮的tab标题栏
         type: class-toggle
+    - 
+        id: Scrollbar
+        title: Scrollbar
+        title.zh: 滚动条
+        type: heading
+        collapsed: true
+        level: 3
     - 
         id: scrollbar-space-occupation-off
         title: Eliminate the space occupied by scrollbar
@@ -30,15 +49,24 @@ settings:
         title.zh: 隐藏滚动条
         type: class-toggle
     - 
-        id: setting-item-title-icon-remove
-        title: Remove setting item title icon
-        title.zh: 移除 设置项标题图标
+        id: Editor
+        title: Editor
+        title.zh: 编辑器
+        type: heading
+        collapsed: true
+        level: 2
+    - 
+        id: line-active-disable
+        title: Disable active line hightlight
+        title.zh: 禁用 当前行高亮
         type: class-toggle
     - 
-        id: left-sidebar-background-primary
-        title: Make the left sidebar background color consistent with the editor
-        title.zh: 左侧栏背景颜色与编辑器保持一致
-        type: class-toggle
+        id: Mobile
+        title: Mobile
+        title.zh: 移动端
+        type: heading
+        collapsed: true
+        level: 2
     - 
         id: card-layout-open
         title: Open card layout (pad only)
@@ -2490,7 +2518,7 @@ svg.pane-layout,
 body.card-layout-open.is-tablet .workspace {
     gap: 16px;
     padding: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 }
 
 body.card-layout-open.is-tablet .app-container {
@@ -2518,7 +2546,7 @@ body.card-layout-open.is-tablet .workspace-drawer {
     border-radius: 12px !important;
     overflow: hidden;
     margin: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 body.card-layout-open.is-tablet .workspace-drawer.mod-left.is-pinned,
@@ -2544,4 +2572,8 @@ body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
     background-color: var(--background-primary);
+}
+
+body.card-layout-open.is-tablet {
+    background-color: var(--background-secondary-accent);
 }
