@@ -2514,6 +2514,17 @@ svg.pane-layout,
 
 
 /* tablet card layout */
+body.card-layout-open.is-tablet {
+    --titlebar-background: var(--background-secondary-accent);
+    --titlebar-background-focused: var(--background-secondary-accent);
+}
+
+body.card-layout-open.is-tablet,
+body.card-layout-open.is-tablet .app-container,
+body.card-layout-open.is-tablet .workspace,
+body.card-layout-open.is-tablet .horizontal-main-container {
+    background-color: var(--background-secondary-accent) !important;
+}
 
 body.card-layout-open.is-tablet .workspace {
     gap: 16px;
@@ -2521,13 +2532,12 @@ body.card-layout-open.is-tablet .workspace {
     padding-bottom: 24px;
 }
 
-body.card-layout-open.is-tablet .app-container {
-    background-color: var(--background-secondary-accent);
-}
-
-body.card-layout-open.is-tablet .workspace,
-body.card-layout-open.is-tablet .horizontal-main-container {
-    background-color: transparent;
+body.card-layout-open.is-tablet .workspace-drawer {
+    background-color: var(--background-primary);
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin: 16px;
+    margin-bottom: 24px;
 }
 
 body.card-layout-open.is-tablet .workspace-split.mod-root {
@@ -2541,13 +2551,6 @@ body.card-layout-open.is-tablet.theme-dark .workspace-split.mod-root {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
-body.card-layout-open.is-tablet .workspace-drawer {
-    background-color: var(--background-primary);
-    border-radius: 12px !important;
-    overflow: hidden;
-    margin: 16px;
-    margin-bottom: 24px;
-}
 
 body.card-layout-open.is-tablet .workspace-drawer.mod-left.is-pinned,
 body.card-layout-open.is-tablet .workspace-drawer.mod-right.is-pinned {
@@ -2572,8 +2575,4 @@ body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
     background-color: var(--background-primary);
-}
-
-body.card-layout-open.is-tablet {
-    background-color: var(--background-secondary-accent);
 }
