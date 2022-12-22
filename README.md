@@ -14,7 +14,7 @@ Accent color setting will affect UI elements.
 
 ### Use [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to turn on/off some features
 
-+ ribbon menu auto hide
++ ribbon menu(& status bar) auto hide
 ![screenshot](img/screenshot.gif)
 + card layout (pad only)
 ![screenshot](img/iPad.png)
