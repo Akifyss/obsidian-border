@@ -8,13 +8,16 @@ A theme for obsidian.md, built on Windows.
 
 ### Customize UI color
 
-Accent color setting will affect UI elements.
+Your accent color setting will affect UI elements.
 ![screenshot](img/screenshot-1.png)
 ![screenshot](img/screenshot-2.png)
 
-### Use [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to turn on/off some features
+### Auto hide
 
-+ ribbon menu(& status bar) auto hide
+Ribbon menu & status bar can be autohidden (use [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to turn on this feature)
 ![screenshot](img/screenshot.gif)
-+ card layout (pad only)
+
+### Mobile support
+
+Card layout (pad only)(need [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin)
 ![screenshot](img/iPad.png)
