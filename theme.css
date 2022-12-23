@@ -820,6 +820,15 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
     height: calc(var(--divider-vertical-height) - 4px);
 }
 
+/*autohide transition*/
+body:not(.is-mobile) .workspace::before {
+    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
+    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
+}
+
 /*tab autohide*/
 
 body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -940,12 +949,12 @@ body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .workspace::befo
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
     margin-bottom: 16px;
-    transition: all 275ms 725ms var(--anim-motion-swing);
+    transition: margin 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
     margin-bottom: 24px;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: margin 275ms var(--anim-motion-swing);
 }
 
 /*status bar & tab autohide*/
@@ -961,14 +970,7 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .wo
     height: calc(100% - 24px - 16px);
 }
 
-/*autohide transition*/
-.workspace::before {
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
-}
 
-body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
-}
 
 /* ====== 半透明模式===== */
 .is-translucent.theme-dark {
