@@ -39,7 +39,7 @@ settings:
     - 
         id: CTA-BTN-disable
         title: Disable bigger "New note" button
-        title.zh: 禁用 更大的“New note”按钮
+        title.zh: 禁用 更大的“New Note”按钮
         type: class-toggle
     - 
         id: setting-item-title-icon-remove
@@ -1164,7 +1164,6 @@ body:not(.is-mobile):not(.floating-tab-title-bar-disable) .document-search-conta
 }
 
 
-
 /*nav-buttons left align*/
 .nav-buttons-container {
     display: flex;
@@ -1191,7 +1190,7 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
 }
 
 body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
-    content: "New note";
+    content: "New Note";
     font-size: var(--font-ui-small);
     margin-left: auto;
 }
