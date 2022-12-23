@@ -862,12 +862,10 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
 
 body:not(.is-mobile).tab-autohide .workspace::before {
     top: 16px;
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace::before {
     top: 44px;
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container,
@@ -912,12 +910,10 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace::before {
     width: calc(100% - 16px - 16px);
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hover) .workspace::before {
     width: calc(100% - 44px - 16px);
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
 }
 
 /*status bar autohide*/
@@ -936,12 +932,10 @@ body:not(.is-mobile).status-bar-autohide .status-bar:hover {
 
 body:not(.is-mobile).status-bar-autohide .workspace::before {
     height: calc(100% - 44px - 16px);
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .workspace::before {
     height: calc(100% - 44px - 24px);
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
@@ -957,16 +951,22 @@ body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main
 /*status bar & tab autohide*/
 body:not(.is-mobile).tab-autohide.status-bar-autohide .workspace::before {
     height: calc(100% - 16px - 16px);
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace::before {
     height: calc(100% - 44px - 16px);
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace::before {
     height: calc(100% - 24px - 16px);
+}
+
+/*autohide transition*/
+.workspace::before {
+    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
     transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
 }
 
