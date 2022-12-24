@@ -47,10 +47,19 @@ settings:
         title.zh: 移除 设置项标题图标
         type: class-toggle
     - 
-        id: floating-tab-title-bar-disable
-        title: Disable floating tab title bar
-        title.zh: 禁用 悬浮的标签页标题栏
-        type: class-toggle
+        id: tab-title-bar
+        title: tab title bar config
+        title.zh: 标签页标题栏
+        type: class-select
+        allowEmpty: false
+        default: tab-title-bar-autohide
+        options:
+            -   label: fixed(obsidian default)
+                value: tab-title-bar-fixed
+            -   label: autohide
+                value: tab-title-bar-autohide
+            -   label: float
+                value: tab-title-bar-float
     - 
         id: Scrollbar
         title: Scrollbar
@@ -1124,10 +1133,63 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     --icon-color-focused: var(--text-normal);
 }
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header {
-    border-bottom: none;
+/*view-header auto hide*/
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
+    position: absolute;
+}
+
+body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after,
+body:not(.is-mobile) .view-header>* {
+    background: transparent;
+}
+
+body:not(.is-mobile) .view-header {
+    padding: 0 var(--size-4-2);
+    width: 100%;
+    background-color: transparent !important;
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-nav-buttons,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-action {
+    opacity: 0;
+    transition: opacity 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header:hover>*,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header:hover .view-actions .view-action {
+    opacity: 1;
+    transition: opacity 275ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
+    opacity: 1;
+}
+
+
+/*view-header fixed*/
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
+    position: static;
+}
+
+body:not(.is-mobile).tab-title-bar-fixed .view-header {
+    padding: 0 var(--size-4-2);
     background-color: var(--background-primary) !important;
+}
+
+
+
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container,
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-action {
+    opacity: 1;
+    transition: none;
+}
+
+/*view-header float*/
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
+    border-bottom: none;
+    background-color: var(--background-primary);
     position: absolute;
     top: 6px;
     right: 6px;
@@ -1136,10 +1198,16 @@ body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-conten
     border-radius: var(--radius-m);
     padding: 0 6px;
     height: 36px;
+    width: fit-content;
 }
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header .view-header-nav-buttons::before,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header .view-header-nav-buttons::before {
+body:not(.is-mobile).tab-title-bar-float .view-header {
+    padding: 0 var(--size-4-2);
+    background-color: var(--background-primary) !important;
+}
+
+
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header .view-header-nav-buttons::before {
     content: " ";
     width: 1px;
     height: 16px;
@@ -1148,24 +1216,39 @@ body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-conten
     left: 68px;
 }
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header-title,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header-title,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-header-title-container,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-header-title-container {
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container {
     display: none;
 }
 
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="markdown"] .view-actions,
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .workspace-leaf-content[data-type="canvas"] .view-actions {
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-actions {
     display: flex;
+}
+
+body:not(.is-mobile).tab-title-bar-float .view-header-title-container,
+body:not(.is-mobile).tab-title-bar-float .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-float .view-action {
+    opacity: 0;
+    transition: none;
+}
+
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-header-title-container,
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-action {
+    opacity: 1;
+    transition: none;
 }
 
 /*Compatible with view-header*/
 
-body.show-view-header:not(.is-mobile):not(.floating-tab-title-bar-disable) .canvas-controls {
+body.show-view-header:not(.is-mobile) .canvas-controls {
     right: var(--size-2-3);
     top: calc(var(--size-4-2) + var(--header-height));
+}
+
+body.show-view-header:not(.is-mobile).tab-title-bar-fixed .canvas-controls {
+    right: var(--size-2-3);
+    top: calc(var(--size-4-2));
 }
 
 body:not(.is-mobile):not(.floating-tab-title-bar-disable) .document-search-container {
@@ -1385,13 +1468,13 @@ input[type='number'] {
     border: var(--input-border-width) solid var(--divider-color);
 }
 
-body:not(.is-mobile) textarea:not(.kanban-plugin__item-input):focus,
+body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
 body:not(.is-mobile) input[type='text']:focus,
 body:not(.is-mobile) input[type='search']:focus,
 body:not(.is-mobile) input[type='email']:focus,
 body:not(.is-mobile) input[type='password']:focus,
 body:not(.is-mobile) input[type='number']:focus,
-body:not(.is-mobile) textarea:not(.kanban-plugin__item-input):focus-visible,
+body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
 body:not(.is-mobile) input[type='text']:focus-visible,
 body:not(.is-mobile) input[type='search']:focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
@@ -1420,6 +1503,7 @@ body:not(.is-phone) input.prompt-input:focus-visible {
     border-bottom: 2px solid var(--color-accent) !important;
 }
 
+.kanban-plugin__lane-input>textarea,
 .kanban-plugin__grow-wrap>textarea {
     --background-modifier-form-field: transparent;
 }
