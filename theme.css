@@ -1149,20 +1149,24 @@ body:not(.is-mobile) .view-header {
     background-color: transparent !important;
 }
 
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-nav-buttons,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-action {
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header-title-container,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header-nav-buttons,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-action {
     opacity: 0;
     transition: opacity 275ms 725ms var(--anim-motion-swing);
 }
 
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header:hover>*,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header:hover .view-actions .view-action {
+body:not(.is-mobile):has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
+    opacity: 1 !important;
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover>*,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover .view-actions .view-action {
     opacity: 1;
     transition: opacity 275ms var(--anim-motion-swing);
 }
 
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
     opacity: 1;
 }
 
