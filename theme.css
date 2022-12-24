@@ -472,23 +472,31 @@ body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mo
     overflow: hidden;
 }
 
+body:not(.is-mobile) .workspace {
+    position: relative;
+    overflow: visible;
+}
+
+body:not(.is-mobile) .horizontal-main-container {
+    overflow: visible;
+}
 
 body:not(.is-mobile) .workspace::before {
     content: " ";
-    width: calc(100% - 44px - 16px);
-    height: calc(100% - 44px - 24px);
+    width: calc(100% - 44px);
+    height: calc(100% - 44px);
     border-radius: 11px;
     background-color: var(--background-primary);
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
     position: absolute;
-    top: 44px;
-    right: 16px;
+    bottom: 0px;
+    right: 0px;
     z-index: 5;
 }
 
 body:not(.is-mobile).is-popout-window .workspace::before {
-    width: calc(100% - 16px - 16px);
-    height: calc(100% - 44px - 16px);
+    width: calc(100%) !important;
+    height: calc(100% - 44px);
 }
 
 body:not(.is-mobile).theme-dark .workspace::before {
@@ -822,11 +830,11 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 /*autohide transition*/
 body:not(.is-mobile) .workspace::before {
-    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing), top 275ms 725ms var(--anim-motion-swing);
+    transition: width 275ms 725ms var(--anim-motion-swing), height 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing), top 275ms var(--anim-motion-swing);
+    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing);
 }
 
 /*tab autohide*/
@@ -836,6 +844,12 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-lea
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) + 24px);
     transition: height 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+    transition: height 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -852,6 +866,12 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right
     transition: height 275ms 725ms var(--anim-motion-swing);
 }
 
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+    transition: height 275ms var(--anim-motion-swing);
+}
+
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
@@ -859,9 +879,15 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-ta
     transition: height 275ms var(--anim-motion-swing);
 }
 
+/*---*/
+
 body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
     gap: 0px;
     transition: gap 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
+    transition: gap 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top {
@@ -870,11 +896,11 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
 }
 
 body:not(.is-mobile).tab-autohide .workspace::before {
-    top: 16px;
+    height: calc(100% - 16px);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace::before {
-    top: 44px;
+    height: calc(100% - 44px);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container,
@@ -882,6 +908,11 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
     transition: all 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .titlebar-button-container,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mod-top .workspace-tab-header-container {
+    transition: all 275ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
@@ -894,6 +925,30 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
     height: 44px;
     opacity: 1;
     transition: all 275ms var(--anim-motion-swing);
+}
+
+/*status bar autohide*/
+body:not(.is-mobile).status-bar-autohide .status-bar {
+    width: 100%;
+    opacity: 0;
+    height: 16px;
+    transition: all 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).status-bar-autohide .status-bar:hover {
+    opacity: 1;
+    height: 24px;
+    transition: all 275ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
+    margin-bottom: 16px;
+    transition: margin 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
+    margin-bottom: 24px;
+    transition: margin 275ms var(--anim-motion-swing);
 }
 
 /*ribbon autohide*/
@@ -918,59 +973,12 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace::before {
-    width: calc(100% - 16px - 16px);
+    width: calc(100% - 16px);
 }
 
 body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hover) .workspace::before {
-    width: calc(100% - 44px - 16px);
+    width: calc(100% - 44px);
 }
-
-/*status bar autohide*/
-body:not(.is-mobile).status-bar-autohide .status-bar {
-    width: 100%;
-    opacity: 0;
-    height: 16px;
-    transition: all 275ms 725ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).status-bar-autohide .status-bar:hover {
-    opacity: 1;
-    height: 24px;
-    transition: all 275ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).status-bar-autohide .workspace::before {
-    height: calc(100% - 44px - 16px);
-}
-
-body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .workspace::before {
-    height: calc(100% - 44px - 24px);
-}
-
-body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
-    margin-bottom: 16px;
-    transition: margin 275ms 725ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
-    margin-bottom: 24px;
-    transition: margin 275ms var(--anim-motion-swing);
-}
-
-/*status bar & tab autohide*/
-body:not(.is-mobile).tab-autohide.status-bar-autohide .workspace::before {
-    height: calc(100% - 16px - 16px);
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace::before {
-    height: calc(100% - 44px - 16px);
-}
-
-body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace::before {
-    height: calc(100% - 24px - 16px);
-}
-
-
 
 /* ====== 半透明模式===== */
 .is-translucent.theme-dark {
