@@ -299,9 +299,9 @@ body {
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)));
     --divider-color: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
-    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5));
-    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 4));
-    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 8), calc(var(--accent-l) / 6));
+    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(var(--accent-l) / 5));
+    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(var(--accent-l) / 4));
+    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 6), calc(var(--accent-l) / 6));
     --background-secondary: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
             calc(var(--accent-l) / 4));
