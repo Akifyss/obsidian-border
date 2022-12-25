@@ -232,7 +232,7 @@ body {
             calc(100% - (100% - var(--accent-l)) / 8));
     --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 8), 0.8);
+            calc(100% - (100% - var(--accent-l)) / 8), 0.9);
     --interactive-normal: var(--background-secondary);
     --interactive-hover: #EBEBEB;
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -1176,7 +1176,7 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type
 }
 
 body:not(.is-mobile).theme-dark .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
-    background-color:hsla(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5),1)!important;
+    background-color: hsla(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5), 1) !important;
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
