@@ -1136,6 +1136,9 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 /*view-header auto hide*/
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
     position: absolute;
+    height: 32px;
+    border-bottom: none;
+    padding-top: 8px;
 }
 
 body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after,
@@ -1147,6 +1150,7 @@ body:not(.is-mobile) .view-header {
     padding: 0 var(--size-4-2);
     width: 100%;
     background-color: transparent !important;
+    transition: background-color 275ms 725ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header-title-container,
@@ -1156,7 +1160,7 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type
     transition: opacity 275ms 725ms var(--anim-motion-swing);
 }
 
-body:not(.is-mobile):has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
+body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
     opacity: 1 !important;
 }
 
@@ -1164,6 +1168,15 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover .view-actions .view-action {
     opacity: 1;
     transition: opacity 275ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
+    background-color: rgba(255, 255, 255, 1) !important;
+    transition: background-color 275ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).theme-dark .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
+    background-color:hsla(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5),1)!important;
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
