@@ -11,30 +11,35 @@ settings:
         collapsed: true
         level: 2
     - 
-        id: left-sidebar-background-primary
-        title: Make the left sidebar background color consistent with the editor
-        title.zh: 左侧栏背景颜色与编辑器保持一致
-        type: class-toggle
-    - 
         id: tab-autohide
         title: Auto hide top tab bar
-        description: Mouse hover to call up
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
         title.zh: 自动隐藏 顶部tab栏
-        description.zh: 鼠标悬停来唤出
+        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
         type: class-toggle
     - 
         id: Ribbon-autohide
         title: Auto hide left ribbon menu
-        description: Mouse hover to call up
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
         title.zh: 自动隐藏 左侧功能区菜单
-        description.zh: 鼠标悬停来唤出
+        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
         type: class-toggle
     - 
         id: status-bar-autohide
         title: Auto hide bottom status bar
-        description: Mouse hover to call up
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
         title.zh: 自动隐藏 底部状态栏
-        description.zh: 鼠标悬停来唤出
+        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
+        type: class-toggle
+    - 
+        id: accent-color-saturation-reduce
+        title: Reduce the saturation of the accent color in dark mode
+        title.zh: 降低暗色模式下强调色的饱和度
+        type: class-toggle
+    - 
+        id: left-sidebar-background-primary
+        title: Make the left sidebar background color consistent with the editor
+        title.zh: 左侧栏背景颜色与编辑器保持一致
         type: class-toggle
     - 
         id: CTA-BTN-disable
@@ -336,6 +341,16 @@ body {
         0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
+
+.theme-dark.accent-color-saturation-reduce {
+    --color-accent-hsl: var(--accent-h),
+        calc(var(--accent-s)*0.8),
+        var(--accent-l);
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), var(--accent-l));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) - 3.8%));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) + 3.8%));
+}
+
 
 .is-mobile {
     --ribbon-width: 58px;
@@ -1173,13 +1188,10 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
-    background-color: rgba(255, 255, 255, 1) !important;
+    background-color: var(--background-primary) !important;
     transition: background-color 275ms var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).theme-dark .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
-    background-color: hsla(var(--accent-h), calc(var(--accent-s) / 7), calc(var(--accent-l) / 5), 1) !important;
-}
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
     opacity: 1;
@@ -2496,6 +2508,20 @@ body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 
 body {
     --code-background: var(--background-primary-alt);
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+    border-radius: 0px;
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg  {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg  {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
