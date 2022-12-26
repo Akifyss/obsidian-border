@@ -57,7 +57,7 @@ settings:
         title.zh: 标签页标题栏
         type: class-select
         allowEmpty: false
-        default: tab-title-bar-autohide
+        default: tab-title-bar-float-autohide
         options:
             -   label: fixed(obsidian default)
                 value: tab-title-bar-fixed
@@ -65,6 +65,8 @@ settings:
                 value: tab-title-bar-autohide
             -   label: float
                 value: tab-title-bar-float
+            -   label: float + autohide
+                value: tab-title-bar-float-autohide
     - 
         id: Scrollbar
         title: Scrollbar
@@ -1150,95 +1152,32 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     --icon-color-focused: var(--text-normal);
 }
 
-/*view-header auto hide*/
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
-    position: absolute;
-    height: 32px;
+/*view-header float + autohide*/
+
+/*float*/
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
     border-bottom: none;
-    padding-top: 8px;
-}
-
-body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after,
-body:not(.is-mobile) .view-header>* {
-    background: transparent;
-}
-
-body:not(.is-mobile) .view-header {
-    padding: 0 var(--size-4-2);
-    width: 100%;
-    background-color: transparent !important;
-    transition: background-color 275ms 725ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header-nav-buttons,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-action {
-    opacity: 0;
-    transition: opacity 275ms 725ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
-    opacity: 1 !important;
-}
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover>*,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover .view-actions .view-action {
-    opacity: 1;
-    transition: opacity 275ms var(--anim-motion-swing);
-}
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header:hover {
-    background-color: var(--background-primary) !important;
-    transition: background-color 275ms var(--anim-motion-swing);
-}
-
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]) .view-header .view-actions .clickable-icon.view-action:last-of-type {
-    opacity: 1;
-}
-
-
-/*view-header fixed*/
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
-    position: static;
-}
-
-body:not(.is-mobile).tab-title-bar-fixed .view-header {
-    padding: 0 var(--size-4-2);
-    background-color: var(--background-primary) !important;
-}
-
-
-
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-action {
-    opacity: 1;
-    transition: none;
-}
-
-/*view-header float*/
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header {
-    border-bottom: none;
-    background-color: var(--background-primary);
+    background-color: transparent;
     position: absolute;
     top: 6px;
     right: 6px;
     z-index: var(--layer-cover);
-    border: 1px solid var(--divider-color);
+    border: 1px solid transparent !important;
     border-radius: var(--radius-m);
     padding: 0 6px;
     height: 36px;
     width: fit-content;
+    transition: all 275ms 725ms var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-title-bar-float .view-header {
-    padding: 0 var(--size-4-2);
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
     background-color: var(--background-primary) !important;
+    border: 1px solid var(--divider-color) !important;
+    transition: all 275ms var(--anim-motion-swing);
 }
 
-
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header .view-header-nav-buttons::before {
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
     content: " ";
     width: 1px;
     height: 16px;
@@ -1247,27 +1186,113 @@ body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="
     left: 68px;
 }
 
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-header-title-container {
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
     display: none;
 }
 
+/*autohide*/
 
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"]) .view-actions {
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
+    opacity: 0;
+    transition: opacity 275ms 725ms var(--anim-motion-swing), background-color 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
+    opacity: 1 !important;
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover>*,
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover .view-actions .view-action {
+    opacity: 1;
+    transition: opacity 275ms var(--anim-motion-swing), background-color 275ms var(--anim-motion-swing);
+    ;
+}
+
+body:not(.is-mobile) .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-actions .clickable-icon.view-action:last-of-type {
+    opacity: 1;
+}
+
+/*view-header float*/
+
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
+    background-color: var(--background-primary);
+    z-index: var(--layer-cover);
+    border: 1px solid var(--divider-color) !important;
+    transition: none;
+}
+
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
+    opacity: 1;
+    transition: none;
+}
+
+
+/*view-header fixed*/
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
     display: flex;
 }
 
-body:not(.is-mobile).tab-title-bar-float .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-float .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-float .view-action {
-    opacity: 0;
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
+    background-color: var(--background-primary);
+    position: relative;
+    top: 0px;
+    right: 0px;
+    z-index: var(--layer-cover);
+    border: none !important;
+    border-radius: var(--radius-m);
+    height: var(--header-height);
+    padding: 0 var(--size-4-3);
+    width: 100%;
     transition: none;
 }
 
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content .view-action {
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
+    display: none;
+}
+
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
     opacity: 1;
     transition: none;
+}
+
+/*view-header auto hide*/
+body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
+    display: flex;
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: var(--layer-cover);
+    border: none !important;
+    border-radius: var(--radius-m);
+    height: var(--header-height);
+    padding: 0 var(--size-4-3);
+    width: 100%;
+    transition: none;
+    transition: background-color 275ms 725ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
+    background-color: var(--background-primary);
+    transition: background-color 275ms var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
+    display: none;
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .markdown-preview-view,
+body:not(.is-mobile).tab-title-bar-autohide .view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
+    padding-top: var(--header-height);
 }
 
 /*Compatible with view-header*/
@@ -1282,7 +1307,7 @@ body.show-view-header:not(.is-mobile).tab-title-bar-fixed .canvas-controls {
     top: calc(var(--size-4-2));
 }
 
-body:not(.is-mobile):not(.floating-tab-title-bar-disable) .document-search-container {
+body:not(.is-mobile) .document-search-container {
     padding: 12px 0;
     margin: 0px;
 }
@@ -1661,8 +1686,9 @@ body:not(.is-phone) .suggestion-container {
     }
 }
 
-body:not(.is-phone) .modal.mod-settings {
-    animation: 0.2s fadeIn both;
+body:not(.is-phone) .modal.mod-settings,
+body:not(.is-phone) .modal.mod-community-modal {
+    animation: var(--anim-duration-fast) fadeIn both;
 }
 
 /* canvas 白板 */
