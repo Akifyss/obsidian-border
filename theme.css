@@ -37,6 +37,11 @@ settings:
         title.zh: 降低暗色模式下强调色的饱和度
         type: class-toggle
     - 
+        id: theme-dark-background-darker
+        title: Darker background in dark mode
+        title.zh: 暗色模式下更深的背景
+        type: class-toggle
+    - 
         id: left-sidebar-background-primary
         title: Make the left sidebar background color consistent with the editor
         title.zh: 左侧栏背景颜色与编辑器保持一致
@@ -320,27 +325,27 @@ body {
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)));
     --divider-color: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
-    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
-    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 4));
-    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
+    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(1.25*var(--accent-l) / 5));
+    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(1.25*var(--accent-l) / 4));
+    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 6));
     --background-secondary: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4));
+            calc(1.25*var(--accent-l) / 4));
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 3.6));
+            calc(1.25*var(--accent-l) / 3.6));
     --background-secondary-accent: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4));
+            calc(1.25*var(--accent-l) / 4));
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4), 0.6);
+            calc(1.25*var(--accent-l) / 4), 0.6);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
+            calc(1.25*var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 2.4));
+            calc(1.25*var(--accent-l) / 2.4));
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
     --background-modifier-form-field: var(--background-secondary-accent);
@@ -365,6 +370,30 @@ body {
     --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), var(--accent-l));
     --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) - 3.8%));
     --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) + 3.8%));
+}
+
+.theme-dark.theme-dark-background-darker {
+    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
+    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 4));
+    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
+    --background-secondary: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 6),
+            calc(var(--accent-l) / 4));
+    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 6),
+            calc(var(--accent-l) / 3.6));
+    --background-secondary-accent: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 6),
+            calc(var(--accent-l) / 4));
+    --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 6),
+            calc(var(--accent-l) / 4), 0.6);
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 3));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 2.4));
 }
 
 
@@ -430,6 +459,15 @@ body {
     --settings-home-background: var(--background-primary);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
+            1.25*calc(var(--accent-l) / 3));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            1.25*calc(var(--accent-l) / 2.4));
+}
+
+.is-mobile.theme-dark.theme-dark-background-darker {
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
@@ -444,6 +482,12 @@ body {
 .is-tablet.theme-dark {
     --titlebar-background: var(--background-primary);
     --titlebar-background-focused: var(--background-primary);
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            1.25*calc(var(--accent-l) / 3));
+}
+
+.is-tablet.theme-dark.theme-dark-background-darker {
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3));
@@ -469,9 +513,8 @@ body:not(.is-mobile).is-popout-window .horizontal-main-container {
     margin-bottom: 16px;
 }
 
-.app-container,
-body:not(.is-translucent):not(.is-mobile) .workspace {
-    background-color: var(--background-secondary-accent) !important;
+.app-container {
+    background-color: var(--background-secondary-accent);
 }
 
 body:not(.is-mobile) .workspace {
@@ -544,9 +587,7 @@ body:not(.is-mobile).is-popout-window .workspace::before {
 }
 
 body:not(.is-mobile).theme-dark .workspace::before {
-    box-shadow: 0px 0px 0px 1px var(--divider-color)
-        /*, 0px 0px 8px hsla(var(--accent-h), 18%, 6%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 6%, 0.2)*/
-    ;
+    box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
 .workspace-tabs.mod-top .workspace-tab-header-container,
@@ -563,7 +604,7 @@ body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-ta
     border-bottom: 1px solid transparent;
 }
 
-
+.workspace-split.mod-root .view-content,
 .workspace-tab-header-container,
 .mod-right-split .view-content,
 .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
@@ -571,16 +612,12 @@ body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-ta
 }
 
 
-
+body:not(.is-mobile) .workspace,
 .workspace-ribbon.mod-left:before,
 body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     background-color: transparent;
 }
 
-
-.workspace-split.mod-root .view-content {
-    background-color: var(--background-primary);
-}
 
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
@@ -631,7 +668,6 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
 
 .workspace-tabs {
     gap: 4px;
-    background-color: var(--background-primary);
 }
 
 
@@ -639,6 +675,7 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
     border-top: 1px solid var(--divider-color);
 }
 
+.workspace-tabs,
 .workspace-leaf-content {
     background-color: var(--background-primary);
 }
@@ -1007,42 +1044,40 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
     --divider-color: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
 }
 
-body.is-translucent .workspace-split.mod-horizontal.mod-left-split,
-body.is-translucent.is-hidden-frameless .titlebar,
-body.is-translucent .titlebar-button {
+.is-translucent .workspace-ribbon::after,
+.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-top,
+.is-translucent .workspace-split.mod-horizontal.mod-left-split,
+.is-translucent.is-hidden-frameless .titlebar,
+.is-translucent .titlebar-button {
     background-color: transparent !important;
 }
 
-body.is-translucent .titlebar-button:hover {
+.is-translucent:not(.is-fullscreen) .app-container {
+    background-color: var(--workspace-background-translucent) !important;
+}
+
+.is-translucent .titlebar-button:hover {
     background-color: var(--background-modifier-hover) !important;
 }
 
 
-body.is-translucent:not(.is-fullscreen) .workspace-tabs {
+.is-translucent:not(.is-fullscreen) .workspace-tabs {
     background-color: var(--background-primary) !important;
 }
 
-body.is-translucent:not(.is-fullscreen) .workspace-tabs.mod-top {
-    background-color: transparent !important;
-}
-
-body.is-translucent .mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+.is-translucent .mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-hover);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
 }
 
 
-body.is-translucent .workspace .mod-root .workspace-tab-header-inner::after {
+.is-translucent .workspace .mod-root .workspace-tab-header-inner::after {
     background-color: var(--divider-color);
 }
 
-body.is-translucent .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
+.is-translucent .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
 .is-translucent .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
     background-color: var(--background-primary-accent) !important;
-}
-
-body.is-translucent .workspace-ribbon::after {
-    background: transparent;
 }
 
 
@@ -1706,7 +1741,7 @@ body.canvas-card-menu-left .canvas-card-menu {
 
 body.canvas-card-menu-right .canvas-card-menu {
     right: var(--size-4-4);
-    left:  unset;
+    left: unset;
     transform: translatex(0%);
 }
 
