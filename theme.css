@@ -32,21 +32,6 @@ settings:
         description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
         type: class-toggle
     - 
-        id: accent-color-saturation-reduce
-        title: Reduce the saturation of the accent color in dark mode
-        title.zh: 降低暗色模式下强调色的饱和度
-        type: class-toggle
-    - 
-        id: theme-dark-background-darker
-        title: Darker background in dark mode
-        title.zh: 暗色模式下更深的背景
-        type: class-toggle
-    - 
-        id: left-sidebar-background-primary
-        title: Make the left sidebar background color consistent with the editor
-        title.zh: 左侧栏背景颜色与编辑器保持一致
-        type: class-toggle
-    - 
         id: CTA-BTN-disable
         title: Disable bigger "New note" button
         title.zh: 禁用 更大的“New Note”按钮
@@ -103,6 +88,28 @@ settings:
         id: scrollbar-hide
         title: Hide scrollbar
         title.zh: 隐藏滚动条
+        type: class-toggle
+    - 
+        id: Color
+        title: Color
+        title.zh: 色彩
+        type: heading
+        collapsed: true
+        level: 2
+    - 
+        id: left-sidebar-background-primary
+        title: Make the left sidebar background color consistent with the editor
+        title.zh: 左侧栏背景颜色与编辑器保持一致
+        type: class-toggle
+    - 
+        id: accent-color-same
+        title: Keep the accent color in dark mode the same as in light mode
+        title.zh: 将暗色模式下的强调色与浅色模式保持一致
+        type: class-toggle
+    - 
+        id: theme-dark-background-darker
+        title: Darker background in dark mode
+        title.zh: 暗色模式下更深的背景
         type: class-toggle
     - 
         id: Editor
@@ -250,8 +257,8 @@ body {
     --color-accent-muted: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --divider-color: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
     --background-primary-accent: hsl(var(--accent-h),
-            calc((var(--accent-s) - 12%) / 3),
-            calc(100% - (100% - var(--accent-l)) / 12));
+            calc((var(--accent-s) - 12%) / 6),
+            calc(100% - (100% - var(--accent-l)) / 16));
     --background-secondary-alt: var(--color-base-05);
     --background-secondary-accent: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
@@ -363,13 +370,13 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
-.theme-dark.accent-color-saturation-reduce {
+.theme-dark:not(.accent-color-same) {
     --color-accent-hsl: var(--accent-h),
         calc(var(--accent-s)*0.8),
-        var(--accent-l);
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), var(--accent-l));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) - 3.8%));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) + 3.8%));
+        calc(var(--accent-l) * 1.125);
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
 }
 
 .theme-dark.theme-dark-background-darker {
@@ -459,10 +466,10 @@ body {
     --settings-home-background: var(--background-primary);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            1.25*calc(var(--accent-l) / 3));
+            calc(1.25*var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            1.25*calc(var(--accent-l) / 2.4));
+            calc(1.25*var(--accent-l) / 2.4));
 }
 
 .is-mobile.theme-dark.theme-dark-background-darker {
@@ -484,7 +491,7 @@ body {
     --titlebar-background-focused: var(--background-primary);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            1.25*calc(var(--accent-l) / 3));
+            calc(1.25*var(--accent-l) / 3));
 }
 
 .is-tablet.theme-dark.theme-dark-background-darker {
