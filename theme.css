@@ -108,8 +108,8 @@ settings:
         type: class-toggle
     - 
         id: theme-dark-background-darker
-        title: Darker background in dark mode
-        title.zh: 暗色模式下更深的背景
+        title: Darker background color in dark mode
+        title.zh: 加深暗色模式下的背景颜色
         type: class-toggle
     - 
         id: Editor
@@ -637,12 +637,14 @@ body:not(.is-mobile) .workspace-ribbon {
     z-index: 0;
 }
 
+.workspace-split.mod-left-split .workspace-leaf,
 .workspace-split.mod-left-split .workspace-leaf-content,
 .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
 .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
     background-color: var(--background-primary-accent);
 }
 
+body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf,
 body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf-content,
 body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
 body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
@@ -900,7 +902,7 @@ body:not(.is-mobile) .workspace::before {
 }
 
 body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
-    transition: width 275ms var(--anim-motion-swing), height 275ms var(--anim-motion-swing);
+    transition: width 275ms 125ms var(--anim-motion-swing), height 275ms 125ms var(--anim-motion-swing);
 }
 
 /*tab autohide*/
@@ -915,14 +917,14 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-le
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height 275ms var(--anim-motion-swing);
+    transition: height 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
-    transition: height 275ms var(--anim-motion-swing);
+    transition: height 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -935,14 +937,14 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height 275ms var(--anim-motion-swing);
+    transition: height 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
-    transition: height 275ms var(--anim-motion-swing);
+    transition: height 275ms 125ms var(--anim-motion-swing);
 }
 
 /*---*/
@@ -953,12 +955,12 @@ body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
-    transition: gap 275ms var(--anim-motion-swing);
+    transition: gap 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top {
     gap: 4px;
-    transition: gap 275ms var(--anim-motion-swing);
+    transition: gap 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide .workspace::before {
@@ -978,19 +980,19 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .titlebar-button-container,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mod-top .workspace-tab-header-container {
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 /*status bar autohide*/
@@ -1004,7 +1006,7 @@ body:not(.is-mobile).status-bar-autohide .status-bar {
 body:not(.is-mobile).status-bar-autohide .status-bar:hover {
     opacity: 1;
     height: 24px;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
@@ -1014,7 +1016,7 @@ body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
     margin-bottom: 24px;
-    transition: margin 275ms var(--anim-motion-swing);
+    transition: margin 275ms 125ms var(--anim-motion-swing);
 }
 
 /*ribbon autohide*/
@@ -1025,7 +1027,7 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover {
     --ribbon-width: 44px;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left>* {
@@ -1035,7 +1037,7 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
     opacity: 1;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace::before {
@@ -1210,7 +1212,7 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type=
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
     background-color: var(--background-primary) !important;
     border: 1px solid var(--divider-color) !important;
-    transition: all 275ms var(--anim-motion-swing);
+    transition: all 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
@@ -1242,7 +1244,7 @@ body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover>*,
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover .view-actions .view-action {
     opacity: 1;
-    transition: opacity 275ms var(--anim-motion-swing), background-color 275ms var(--anim-motion-swing);
+    transition: opacity 275ms 125ms var(--anim-motion-swing), background-color 275ms 125ms var(--anim-motion-swing);
     ;
 }
 
@@ -1319,7 +1321,7 @@ body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-typ
 
 body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
     background-color: var(--background-primary);
-    transition: background-color 275ms var(--anim-motion-swing);
+    transition: background-color 275ms 125ms var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
@@ -1725,7 +1727,75 @@ body:not(.is-phone) .suggestion-container {
 
 body:not(.is-phone) .modal.mod-settings,
 body:not(.is-phone) .modal.mod-community-modal {
+    -webkit-animation: var(--anim-duration-fast) fadeIn both;
     animation: var(--anim-duration-fast) fadeIn both;
+}
+
+/*from https://github.com/hydescarf/Obsidian-Theme-Mado-Miniflow */
+
+.workspace-split .workspace-tabs:not(.mod-stacked) .workspace-leaf-content:not(:has(.surfing-settings-icon)) .view-content,
+.workspace-leaf-content:not(:has(.view-content)) {
+    -webkit-animation: slide-up var(--anim-duration-fast) forwards;
+    animation: slide-up var(--anim-duration-fast) forwards;
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+
+    45% {
+        opacity: 0.5;
+    }
+
+    65% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+
+    45% {
+        opacity: 0.5;
+    }
+
+    65% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 /* canvas 白板 */
@@ -1750,6 +1820,10 @@ body.canvas-card-menu-right .canvas-card-menu {
     right: var(--size-4-4);
     left: unset;
     transform: translatex(0%);
+}
+
+.canvas-controls button {
+    border-bottom: 1px solid var(--divider-color);
 }
 
 /* graph*/
@@ -1785,7 +1859,7 @@ body.canvas-card-menu-right .canvas-card-menu {
 }
 
 .graph-controls-button.mod-open {
-    border-bottom: 1px solid var(--background-modifier-border);
+    border-bottom: 1px solid var(--divider-color);
 }
 
 .graph-controls-button.mod-animate {
