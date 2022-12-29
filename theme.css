@@ -108,8 +108,8 @@ settings:
         type: class-toggle
     - 
         id: theme-dark-background-darker
-        title: Darker background color in dark mode
-        title.zh: 加深暗色模式下的背景颜色
+        title: Darker dark mode
+        title.zh: 更暗的暗色模式
         type: class-toggle
     - 
         id: Editor
@@ -261,6 +261,7 @@ body {
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --divider-color: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
+    --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
     --background-primary-accent: hsl(var(--accent-h),
             calc((var(--accent-s) - 12%) / 6),
             calc(100% - (100% - var(--accent-l)) / 16));
@@ -335,23 +336,24 @@ body {
     --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
-    --color-accent-muted: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)));
-    --divider-color: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
-    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(1.25*var(--accent-l) / 5));
-    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(1.25*var(--accent-l) / 4));
-    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 6));
+    --color-accent-muted: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
+    --divider-color: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)), 0.2);
+    --background-modifier-border: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
+    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.5));
+    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
+    --background-primary-accent: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
     --background-secondary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(1.25*var(--accent-l) / 4));
-    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
+            calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6));
+    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 5.4),
+            calc(1.25*var(--accent-l) / 3));
     --background-secondary-accent: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(1.25*var(--accent-l) / 4));
+            calc(var(--accent-s) / 5.4),
+            calc(1.25*var(--accent-l) / 3.6));
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(1.25*var(--accent-l) / 4), 0.6);
+            calc(var(--accent-s) / 5.4),
+            calc(1.25*var(--accent-l) / 3.6), 0.6);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 3));
@@ -813,17 +815,18 @@ body:not(.is-mobile).theme-light .mod-root .workspace-tabs:not(.mod-top) .worksp
 }
 
 /* ====== status bar====== */
-body:not(.is-mobile) .status-bar {
+.status-bar {
     border: none;
     background-color: transparent;
     padding: 0 16px 0 0;
+    width: calc(100% - 44px);
 }
 
-body:not(.is-mobile) .status-bar-item.mod-clickable:hover {
+.status-bar-item.mod-clickable:hover {
     color: var(--color-accent-muted);
 }
 
-body:not(.is-mobile) .status-bar-item {
+.status-bar-item {
     height: 24px;
 }
 
@@ -907,7 +910,7 @@ body:not(.is-mobile) .workspace::before {
 }
 
 body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
-    transition: width var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing), height var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: width var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /*tab autohide*/
@@ -922,14 +925,14 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-le
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -942,14 +945,14 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /*---*/
@@ -960,12 +963,12 @@ body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
-    transition: gap var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top {
     gap: 4px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide .workspace::before {
@@ -985,24 +988,23 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .titlebar-button-container,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mod-top .workspace-tab-header-container {
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /*status bar autohide*/
 body:not(.is-mobile).status-bar-autohide .status-bar {
-    width: 100%;
     opacity: 0;
     height: 16px;
     transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
@@ -1011,7 +1013,7 @@ body:not(.is-mobile).status-bar-autohide .status-bar {
 body:not(.is-mobile).status-bar-autohide .status-bar:hover {
     opacity: 1;
     height: 24px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
@@ -1021,7 +1023,7 @@ body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
     margin-bottom: 24px;
-    transition: margin var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: margin var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /*ribbon autohide*/
@@ -1032,7 +1034,7 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover {
     --ribbon-width: 44px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left>* {
@@ -1042,7 +1044,7 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace::before {
@@ -1217,7 +1219,7 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type=
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
     background-color: var(--background-primary) !important;
     border: 1px solid var(--divider-color) !important;
-    transition: all var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
@@ -1249,7 +1251,7 @@ body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover>*,
 body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover .view-actions .view-action {
     opacity: 1;
-    transition: opacity var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing), background-color var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), background-color var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
     ;
 }
 
@@ -1326,7 +1328,7 @@ body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-typ
 
 body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
     background-color: var(--background-primary);
-    transition: background-color var(--anim-duration-fast) var(--anim-duration-fast) var(--anim-motion-swing);
+    transition: background-color var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
@@ -1541,7 +1543,6 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     height: 16px;
     background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M12 15.5H4A1.5 1.5 0 0 1 2.5 14V2A1.5 1.5 0 0 1 4 .5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V14a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M9.5.5v3a1 1 0 0 0 1 1h3'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-
 }
 
 .nav-file-tag {
@@ -2539,7 +2540,7 @@ body {
 }
 
 input[type=checkbox] {
-    transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow var(--anim-duration-moderate) var(--anim-motion-swing);
     cursor: pointer;
 }
 
