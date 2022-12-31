@@ -119,15 +119,538 @@ settings:
         collapsed: true
         level: 2
     - 
+        id: Active line
+        title: Active line
+        title.zh: 行高亮
+        type: heading
+        collapsed: true
+        level: 3
+    - 
         id: line-active-disable
         title: Disable active line hightlight
-        title.zh: 禁用 当前行高亮
+        title.zh: 禁用行高亮
         type: class-toggle
     - 
+        id: line-active-bg-color
+        title: Active line background color
+        title.zh: 行高亮背景颜色
+        type: class-select
+        allowEmpty: false
+        default: line-active-bg-color-default
+        options:
+            -   label: default
+                value: line-active-bg-color-default
+            -   label: adapt to accent color
+                value: line-active-bg-color-accent
+            -   label:  customize
+                value: line-active-bg-color-customize
+    -
+		id: line-active-customize
+		title: Customize Active line background color
+        title.zh: 自定义行高亮背景颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: Headings
+        title: Headings
+        title.zh: 标题
+        type: heading
+        collapsed: true
+        level: 3
+    - 
         id: inline-title-divider-remove
-        title: Remove divideer under the inline title
+        title: Remove divider under the inline title
         title.zh: 移除页内标题下的分隔线
         type: class-toggle
+    - 
+		id: level-1-headings
+		title: Level 1 Headings
+        title.zh: 一级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h1-divider-off
+		title: Remove H1 divider
+		title.zh: 移除H1分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h1-font
+		title: H1 font
+        title.zh: H1 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h1-size
+		title: H1 font size
+        title.zh: H1 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.5em
+	- 
+        id: h1-weight
+        title: H1 font weight
+        title.zh: H1 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 700
+    - 
+        id: h1-color-select
+        title: H1 text color
+        title.zh: H1 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h1-color-default
+        options:
+            -   label: Default
+                value: h1-color-default
+            -   label: Designated color
+                value: h1-color-designated
+            -   label: Customized color
+                value: h1-color-customized
+	- 
+		id: h1-color
+		title: Customize H1 text color
+        title.zh: 自定义 H1 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: level-2-headings
+		title: Level 2 Headings
+        title.zh: 二级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h2-divider-off
+		title: Remove H2 divider
+		title.zh: 移除H2分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h2-font
+		title: H2 font
+        title.zh: H2 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h2-size
+		title: H2 font size
+        title.zh: H2 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.425em
+	- 
+        id: h2-weight
+        title: H2 font weight
+        title.zh: H2 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 675
+    - 
+        id: h2-color-select
+        title: H2 text color
+        title.zh: H2 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h2-color-default
+        options:
+            -   label: Default
+                value: h2-color-default
+            -   label: Designated color
+                value: h2-color-designated
+            -   label: Customized color
+                value: h2-color-customized
+	- 
+		id: h2-color
+		title: Customize H2 text color
+        title.zh: 自定义 H2 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: level-3-headings
+		title: Level 3 Headings
+        title.zh: 三级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h3-divider-off
+		title: Remove H3 divider
+		title.zh: 移除H3分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h3-font
+		title: H3 font
+        title.zh: H3 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h3-size
+		title: H3 font size
+        title.zh: H3 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.35em
+	- 
+        id: h3-weight
+        title: H3 font weight
+        title.zh: H3 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 650
+    - 
+        id: h3-color-select
+        title: H3 text color
+        title.zh: H3 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h3-color-default
+        options:
+            -   label: Default
+                value: h3-color-default
+            -   label: Designated color
+                value: h3-color-designated
+            -   label: Customized color
+                value: h3-color-customized
+	- 
+		id: h3-color
+		title: Customize H3 text color
+        title.zh: 自定义 H3 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: level-4-headings
+		title: Level 4 Headings
+        title.zh: 四级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h4-divider-off
+		title: Remove H4 divider
+		title.zh: 移除H4分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h4-font
+		title: H4 font
+        title.zh: H4 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h4-size
+		title: H4 font size
+        title.zh: H4 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.275em
+	- 
+        id: h4-weight
+        title: H4 font weight
+        title.zh: H4 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 625
+    - 
+        id: h4-color-select
+        title: H4 text color
+        title.zh: H4 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h4-color-default
+        options:
+            -   label: Default
+                value: h4-color-default
+            -   label: Designated color
+                value: h4-color-designated
+            -   label: Customized color
+                value: h4-color-customized
+	- 
+		id: h4-color
+		title: Customize H4 text color
+        title.zh: 自定义 H4 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: level-5-headings
+		title: Level 5 Headings
+        title.zh: 五级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h5-divider-off
+		title: Remove H5 divider
+		title.zh: 移除H5分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h5-font
+		title: H5 font
+        title.zh: H5 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h5-size
+		title: H5 font size
+        title.zh: H5 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.2em
+	- 
+        id: h5-weight
+        title: H5 font weight
+        title.zh: H5 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 600
+    - 
+        id: h5-color-select
+        title: H5 text color
+        title.zh: H5 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h5-color-default
+        options:
+            -   label: Default
+                value: h5-color-default
+            -   label: Designated color
+                value: h5-color-designated
+            -   label: Customized color
+                value: h5-color-customized
+	- 
+		id: h5-color
+		title: Customize H5 text color
+        title.zh: 自定义 H5 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: level-6-headings
+		title: Level 6 Headings
+        title.zh: 六级标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
+		id: h6-divider-off
+		title: Remove H6 divider
+		title.zh: 移除H6分隔线
+		type: class-toggle
+		default: false
+	- 
+		id: h6-font
+		title: H6 font
+        title.zh: H6 字体
+		type: variable-text
+		default: ''
+	- 
+		id: h6-size
+		title: H6 font size
+        title.zh: H6 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.125em
+	- 
+        id: h6-weight
+        title: H6 font weight
+        title.zh: H6 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 575
+    - 
+        id: h6-color-select
+        title: H6 text color
+        title.zh: H6 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: h6-color-default
+        options:
+            -   label: Default
+                value: h6-color-default
+            -   label: Designated color
+                value: h6-color-designated
+            -   label: Customized color
+                value: h6-color-customized
+	- 
+		id: h6-color
+		title: Customize H6 text color
+        title.zh: 自定义 H6 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: Text
+        title: Text
+        title.zh: 文本
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: bold-color
+		title: Bold text color
+        title.zh: 粗体颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: italic-color
+		title: Italic text color
+        title.zh: 斜体颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: inline-code-normal
+		title: inline code text color
+        title.zh: 内联代码颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: Links
+        title: links
+        title.zh: 链接
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: links-internal
+		title: Internal links
+        title.zh: 内部链接
+		type: heading
+		level: 4
+		collapsed: true
+	- 
+		id: link-color
+		title: Internal link color
+        title.zh: 内部链接颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-color-hover
+		title: Internal link color (hover)
+        title.zh: 内部链接颜色（鼠标悬停时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-unresolved-color
+		title: Unresolved link color
+        title.zh: 未创建链接颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-unresolved-decoration-color
+		title: Unresolved link underline color
+        title.zh: 未创建链接下划线颜色
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: link-unresolved-opacity
+		title: Unresolved link opacity
+        title.zh: 未创建链接透明度
+		type: variable-number-slider
+		default: 0.7
+		min: 0.25
+		max: 1
+		step: 0.05
+    - 
+		id: links-external
+		title: External links
+        title.zh: 外部链接
+		type: heading
+		level: 4
+		collapsed: true
+	- 
+		id: link-external-color
+		title: External link color
+        title.zh: 外部链接颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-external-color-hover
+		title: External link color (hover)
+        title.zh: 外部链接颜色（鼠标悬停时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: Tags
+        title: tags
+        title.zh: 标签
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: tag-color
+		title: Tag text color
+        title.zh: 标签文本颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: tag-background
+		title: Tag background color
+        title.zh: 标签背景颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: tag-background-hover
+		title: Tag background color (hover)
+        title.zh: 标签背景颜色（鼠标悬停时）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
         id: Mobile
         title: Mobile
@@ -142,6 +665,26 @@ settings:
         type: class-toggle
 
 */
+
+/*hide style setting option*/
+body.line-active-disable .setting-item[data-id=line-active-bg-color],
+body.line-active-disable .setting-item[data-id=line-active-customize],
+body.line-active-bg-color-default .setting-item[data-id=line-active-customize],
+body.line-active-bg-color-accent .setting-item[data-id=line-active-customize],
+body.h1-color-default .setting-item[data-id=h1-color],
+body.h1-color-designated .setting-item[data-id=h1-color],
+body.h2-color-default .setting-item[data-id=h2-color],
+body.h2-color-designated .setting-item[data-id=h2-color],
+body.h3-color-default .setting-item[data-id=h3-color],
+body.h3-color-designated .setting-item[data-id=h3-color],
+body.h4-color-default .setting-item[data-id=h4-color],
+body.h4-color-designated .setting-item[data-id=h4-color],
+body.h5-color-default .setting-item[data-id=h5-color],
+body.h5-color-designated .setting-item[data-id=h5-color],
+body.h6-color-default .setting-item[data-id=h6-color],
+body.h6-color-designated .setting-item[data-id=h6-color] {
+    display: none;
+}
 
 body {
     /*
@@ -192,22 +735,6 @@ body {
     --interactive-accent-hsl: var(--color-accent-hsl);
     --interactive-accent: var(--color-accent-1);
     --interactive-accent-hover: var(--color-accent-2);
-    /* Links */
-    --link-color: var(--text-accent);
-    --link-color-hover: var(--text-accent-hover);
-    --link-decoration: underline;
-    --link-decoration-hover: underline;
-    --link-decoration-thickness: auto;
-    --link-external-color: var(--color-blue);
-    --link-external-color-hover: var(--color-blue-alt);
-    --link-external-decoration: underline;
-    --link-external-decoration-hover: underline;
-    --link-external-filter: none;
-    --link-unresolved-color: var(--text-accent);
-    --link-unresolved-opacity: 0.7;
-    --link-unresolved-filter: none;
-    --link-unresolved-decoration-style: solid;
-    --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
     /* Prompts - e.g. quick switcher, command palette */
     --prompt-border-color: var(--divider-color);
     /* Modals - e.g. settings, community themes, community plugins */
@@ -1212,6 +1739,7 @@ body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type=
     padding: 0 6px;
     height: 36px;
     width: fit-content;
+    gap: 9px;
     transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
@@ -1546,8 +2074,9 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
 }
 
 .nav-file-tag {
-    background-color: var(--tag-background);
-    color: var(--tag-color);
+    background-color: hsla(var(--interactive-accent-hsl), 0.1);
+    color: var(--text-accent);
+    ;
 }
 
 
@@ -2170,6 +2699,14 @@ body {
     --h6-weight: 575;
 }
 
+.h1-color-default {
+    --h1-color: var(--text-normal) !important;
+}
+
+.h1-color-designated {
+    --h1-color: var(--color-red) !important;
+}
+
 .is-live-preview .HyperMD-header .cm-header.cm-header-1 {
     padding-left: 6px;
 }
@@ -2208,7 +2745,7 @@ body {
 }
 
 
-:is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
+body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2217,6 +2754,14 @@ body {
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
     background-image: linear-gradient(to left, var(--color-red) 30%, transparent 70%);
+}
+
+.h2-color-default {
+    --h2-color: var(--text-normal) !important;
+}
+
+.h2-color-designated {
+    --h2-color: var(--color-orange) !important;
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-2 {
@@ -2257,8 +2802,7 @@ body {
 }
 
 
-
-:is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
+body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2267,6 +2811,14 @@ body {
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
     background-image: linear-gradient(to left, var(--color-orange) 30%, transparent 70%);
+}
+
+.h3-color-default {
+    --h3-color: var(--text-normal) !important;
+}
+
+.h3-color-designated {
+    --h3-color: var(--color-yellow) !important;
 }
 
 
@@ -2307,7 +2859,7 @@ body {
     background-color: var(--color-yellow);
 }
 
-:is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
+body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2316,6 +2868,14 @@ body {
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
     background-image: linear-gradient(to left, var(--color-yellow) 30%, transparent 70%);
+}
+
+.h4-color-default {
+    --h4-color: var(--text-normal) !important;
+}
+
+.h4-color-designated {
+    --h4-color: var(--color-green) !important;
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-4 {
@@ -2356,7 +2916,7 @@ body {
 }
 
 
-:is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
+body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2365,6 +2925,14 @@ body {
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
     background-image: linear-gradient(to left, var(--color-green) 30%, transparent 70%);
+}
+
+.h5-color-default {
+    --h5-color: var(--text-normal) !important;
+}
+
+.h5-color-designated {
+    --h5-color: var(--color-blue) !important;
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-5 {
@@ -2406,7 +2974,7 @@ body {
 }
 
 
-:is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
+body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2415,6 +2983,14 @@ body {
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
     background-image: linear-gradient(to left, var(--color-blue) 30%, transparent 70%);
+}
+
+.h6-color-default {
+    --h6-color: var(--text-normal) !important;
+}
+
+.h6-color-designated {
+    --h6-color: var(--color-purple) !important;
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-6 {
@@ -2455,7 +3031,7 @@ body {
 }
 
 
-:is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
+body:not(.h6-divider-off) :is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -2467,12 +3043,70 @@ body {
 }
 
 /* ====== link====== */
+body {
+    /* Links */
+    --link-color: var(--text-accent);
+    --link-color-hover: var(--text-accent-hover);
+    --link-decoration: underline;
+    --link-decoration-hover: underline;
+    --link-decoration-thickness: auto;
+    --link-external-color: var(--color-blue);
+    --link-external-color-hover: var(--color-blue-alt);
+    --link-external-decoration: underline;
+    --link-external-decoration-hover: underline;
+    --link-external-filter: none;
+    --link-unresolved-color: var(--text-accent);
+    --link-unresolved-opacity: 0.7;
+    --link-unresolved-filter: none;
+    --link-unresolved-decoration-style: solid;
+    --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
+}
+
+/* ====== tag====== */
+body {
+    /* Tags */
+    --tag-size: var(--font-smaller);
+    --tag-color: var(--text-accent);
+    --tag-color-hover: var(--text-accent);
+    --tag-decoration: none;
+    --tag-decoration-hover: none;
+    --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
+    --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.2);
+    --tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
+    --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
+    --tag-border-width: 0px;
+    --tag-padding-x: 0.65em;
+    --tag-padding-y: 0.25em;
+    --tag-radius: 2em;
+}
+
+
+
+
 
 
 /* ====== 当前行高亮 ====== */
+.theme-dark {
+    --line-active-bg: rgba(255, 255, 255, 0.04);
+    --line-active-customize: rgba(255, 255, 255, 0.04);
+}
+
+.theme-light {
+    --line-active-bg: rgba(0, 0, 0, 0.035);
+    --line-active-customize: rgba(0, 0, 0, 0.035);
+}
+
 body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active {
-    background-color: rgba(var(--mono-rgb-100), 0.05);
+    background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
+}
+
+body:not(.line-active-disable).line-active-bg-color-accent .markdown-source-view .cm-scroller .cm-line.cm-active {
+    --line-active-bg: hsla(var(--interactive-accent-hsl), 0.08);
+}
+
+body:not(.line-active-disable).line-active-bg-color-customize .markdown-source-view .cm-scroller .cm-line.cm-active {
+    --line-active-bg: var(--line-active-customize);
 }
 
 body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
@@ -2686,9 +3320,13 @@ body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 }
 
 /*inline code*/
+body {
+    --inline-code-normal: var(--color-pink);
+}
+
 .markdown-rendered code,
 .cm-s-obsidian span.cm-inline-code {
-    --code-normal: var(--color-pink);
+    color: var(--inline-code-normal)
 }
 
 /*code*/
