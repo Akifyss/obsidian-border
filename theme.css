@@ -42,21 +42,22 @@ settings:
         title.zh: 移除 设置项标题图标
         type: class-toggle
     - 
+        id: colorful-folder
+        title: colorful folder icon
+        title.zh: 多彩文件夹图标
+        type: class-toggle
+    - 
         id: tab-title-bar
         title: tab title bar config
         title.zh: 标签页标题栏
         type: class-select
         allowEmpty: false
-        default: tab-title-bar-float-autohide
+        default: tab-title-bar-autohide
         options:
             -   label: fixed(obsidian default)
                 value: tab-title-bar-fixed
             -   label: autohide
                 value: tab-title-bar-autohide
-            -   label: float
-                value: tab-title-bar-float
-            -   label: float + autohide
-                value: tab-title-bar-float-autohide
     - 
         id: canvas-card-menu
         title: canvas card menu position
@@ -1064,6 +1065,8 @@ body:not(.is-mobile).is-popout-window .horizontal-main-container {
 
 body:not(.is-mobile) .workspace {
     margin-right: 16px;
+    position: relative;
+    overflow: visible;
 }
 
 body:not(.is-mobile).is-popout-window .workspace {
@@ -1072,10 +1075,9 @@ body:not(.is-mobile).is-popout-window .workspace {
 }
 
 body:not(.is-mobile) .mod-top-left-space .workspace-tab-container,
-body:not(.is-mobile).is-popout-window .workspace-tabs.mod-top.mod-top-left-space>.workspace-tab-container {
+body.is-popout-window .workspace-tabs.mod-top-left-space>.workspace-tab-container {
     border-top-left-radius: 12px !important;
 }
-
 
 body:not(.is-mobile) .mod-top-right-space .workspace-tab-container {
     border-top-right-radius: 12px;
@@ -1101,12 +1103,6 @@ body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod
 .workspace-window .mod-top-left-space .workspace-tab-container,
 .workspace-window .mod-top-left-space .workspace-tab-container .workspace-leaf-content {
     border-top-left-radius: 0px !important;
-}
-
-
-body:not(.is-mobile) .workspace {
-    position: relative;
-    overflow: visible;
 }
 
 body:not(.is-mobile) .horizontal-main-container {
@@ -1172,7 +1168,6 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
 
 body:not(.is-mobile) .workspace-ribbon {
     padding: 6px 4px 0px;
-    z-index: 0;
 }
 
 .workspace-split.mod-left-split .workspace-leaf,
@@ -1182,6 +1177,8 @@ body:not(.is-mobile) .workspace-ribbon {
     background-color: var(--background-primary-accent);
 }
 
+.workspace-tabs,
+.workspace-leaf-content,
 body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf,
 body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf-content,
 body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
@@ -1189,18 +1186,6 @@ body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-
     background-color: var(--background-primary);
 }
 
-
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .backlink-pane,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .item-list,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .nav-files-container,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .tag-container,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
-    background: linear-gradient(var(--background-primary) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
 
 body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--divider-color);
@@ -1212,19 +1197,12 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-right-split {
     z-index: var(--layer-cover);
 }
 
-
 .workspace-tabs {
     gap: 4px;
 }
 
-
 .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: 1px solid var(--divider-color);
-}
-
-.workspace-tabs,
-.workspace-leaf-content {
-    background-color: var(--background-primary);
 }
 
 .is-focused .workspace-tab-header,
@@ -1387,6 +1365,17 @@ body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .
     background-attachment: local, scroll;
 }
 
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .backlink-pane,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .item-list,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .nav-files-container,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .tag-container,
+body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+    background: linear-gradient(var(--background-primary) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
+}
 
 /* ====== stack mod Correction===== */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
@@ -1720,17 +1709,6 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 }
 
 
-/* ====== mobile toolbar====== */
-.mobile-toolbar {
-    box-shadow: inset 0px 1px var(--divider-color);
-}
-
-/* ====== CJK_vertical_spine.====== */
-
-.workspace-tab-header-inner-title {
-    text-orientation: mixed;
-}
-
 
 /* ====== view-header====== */
 .view-header {
@@ -1740,176 +1718,57 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     --icon-color-focused: var(--text-normal);
 }
 
-/*view-header float + autohide*/
-
-/*float*/
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
-    border-bottom: none;
-    background-color: transparent;
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    z-index: var(--layer-cover);
-    border: 1px solid transparent !important;
-    border-radius: var(--radius-m);
-    padding: 0 6px;
-    height: 36px;
-    width: fit-content;
-    gap: 9px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
-    background-color: var(--background-primary) !important;
-    border: 1px solid var(--divider-color) !important;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
+body:not(.is-mobile) .view-header::after {
+    width: 100%;
     content: " ";
-    width: 1px;
-    height: 16px;
-    background-color: var(--divider-color);
+    background-color: transparent;
+    height: var(--header-height);
     position: absolute;
-    left: 68px;
+    z-index: -9;
+    top: 0;
 }
 
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
-    display: none;
+body:not(.is-mobile) .mod-root .workspace-leaf .view-header {
+    height: 0;
+    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-/*autohide*/
+body:not(.is-mobile) .mod-root .workspace-leaf .view-header:focus-within,
+body:not(.is-mobile) .mod-root .workspace-leaf .view-header:hover,
+body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
+    height: var(--header-height);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
 
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
+body:not(.is-mobile) .view-actions,
+body:not(.is-mobile) .view-header-nav-buttons,
+body:not(.is-mobile) .view-header-title-container {
     opacity: 0;
-    transition: opacity var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing), background-color var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: opacity var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile) .workspace-leaf-content:has(.mod-wb-bookmark-bar) :is(.view-header-title-container, .view-header-nav-buttons, .view-action) {
-    opacity: 1 !important;
-}
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover>*,
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover .view-actions .view-action {
+body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-actions,
+body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-header-nav-buttons,
+body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-header-title-container,
+body:not(.is-mobile) .view-header:focus-within .view-actions,
+body:not(.is-mobile) .view-header:focus-within .view-header-nav-buttons,
+body:not(.is-mobile) .view-header:focus-within .view-header-title-container,
+body:not(.is-mobile) .view-header:hover .view-actions,
+body:not(.is-mobile) .view-header:hover .view-header-nav-buttons,
+body:not(.is-mobile) .view-header:hover .view-header-title-container {
     opacity: 1;
-    transition: opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), background-color var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-    ;
+    transition: opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
-
-body:not(.is-mobile) .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-actions .clickable-icon.view-action:last-of-type {
-    opacity: 1;
-}
-
-/*view-header float*/
-
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
-    background-color: var(--background-primary);
-    z-index: var(--layer-cover);
-    border: 1px solid var(--divider-color) !important;
-    transition: none;
-}
-
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-float .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
-    opacity: 1;
-    transition: none;
-}
-
 
 /*view-header fixed*/
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
-    display: flex;
-}
-
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
-    background-color: var(--background-primary);
-    position: relative;
-    top: 0px;
-    right: 0px;
-    z-index: var(--layer-cover);
-    border: none !important;
-    border-radius: var(--radius-m);
+body:not(.is-mobile).tab-title-bar-fixed .mod-root .workspace-leaf .view-header {
     height: var(--header-height);
-    padding: 0 var(--size-4-3);
-    width: 100%;
-    transition: none;
 }
 
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
-    display: none;
-}
-
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-fixed .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-action {
+body:not(.is-mobile).tab-title-bar-fixed .view-actions,
+body:not(.is-mobile).tab-title-bar-fixed .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-fixed .view-header-title-container {
     opacity: 1;
-    transition: none;
-}
-
-/*view-header auto hide*/
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header-title-container {
-    display: flex;
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header {
-    background-color: transparent;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: var(--layer-cover);
-    border: none !important;
-    border-radius: var(--radius-m);
-    height: var(--header-height);
-    padding: 0 var(--size-4-3);
-    width: 100%;
-    transition: none;
-    transition: background-color var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header:hover {
-    background-color: var(--background-primary);
-    transition: background-color var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .workspace-leaf-content:is([data-type="graph"], [data-type="canvas"], [data-type="markdown"], [data-type="empty"]:not(:has(.surfing-settings-icon))) .view-header .view-header-nav-buttons::before {
-    display: none;
-}
-
-body:not(.is-mobile).tab-title-bar-autohide .markdown-preview-view,
-body:not(.is-mobile).tab-title-bar-autohide .view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
-    padding-top: var(--header-height);
-}
-
-/*Compatible with view-header*/
-
-body.show-view-header:not(.is-mobile) .canvas-controls {
-    right: var(--size-2-3);
-    top: calc(var(--size-4-2) + var(--header-height));
-}
-
-body.show-view-header:not(.is-mobile) .graph-controls {
-    right: var(--size-2-3);
-    top: calc(var(--size-4-3) + var(--header-height));
-}
-
-body.show-view-header:not(.is-mobile).tab-title-bar-fixed .canvas-controls {
-    right: var(--size-2-3);
-    top: calc(var(--size-4-2));
-}
-
-body.show-view-header:not(.is-mobile).tab-title-bar-fixed .graph-controls {
-    right: var(--size-2-3);
-    top: calc(var(--size-4-3));
-}
-
-
-body:not(.is-mobile) .document-search-container {
-    padding: 12px 0;
-    margin: 0px;
 }
 
 
@@ -2087,6 +1946,48 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
 .nav-file-tag {
     background-color: hsla(var(--interactive-accent-hsl), 0.1);
     color: var(--text-accent);
+}
+
+/*colorful folder*/
+
+.nav-folder-children>.nav-folder:nth-child(8n+2) {
+    --colorful-folder-color: var(--color-red);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+3) {
+    --colorful-folder-color: var(--color-green);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+4) {
+    --colorful-folder-color: var(--color-orange);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+5) {
+    --colorful-folder-color: var(--color-yellow);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+6) {
+    --colorful-folder-color: var(--color-cyan);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+7) {
+    --colorful-folder-color: var(--color-blue);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+8) {
+    --colorful-folder-color: var(--color-purple);
+}
+
+.nav-folder-children>.nav-folder:nth-child(8n+9) {
+    --colorful-folder-color: var(--color-pink);
+}
+
+.colorful-folder .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before {
+    background-color: var(--colorful-folder-color);
+}
+
+.colorful-folder .nav-folder.mod-root>.nav-folder-title .nav-folder-title-content::before {
+    background-color: var(--color-accent);
 }
 
 
@@ -2582,7 +2483,13 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     padding: 4px 24px;
 }
 
-
+.surfing-settings-icon {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 20px;
+    margin-top: var(--size-4-4);
+}
 
 /*======搜索 空状态 ======*/
 .search-empty-state {
@@ -3052,7 +2959,7 @@ body:not(.h6-divider-off) :is(.markdown-rendered h6, .markdown-preview-view h6, 
     background-image: linear-gradient(to left, var(--color-purple) 30%, transparent 70%);
 }
 
-/* ====== link====== */
+/* ====== link ====== */
 body {
     /* Links */
     --link-color: var(--text-accent);
@@ -3671,6 +3578,11 @@ svg.pane-layout,
 
 .is-mobile.theme-light .mk-flow-bar button {
     background-color: var(--background-modifier-form-field);
+}
+
+/* ====== mobile toolbar====== */
+.mobile-toolbar {
+    box-shadow: inset 0px 1px var(--divider-color);
 }
 
 
