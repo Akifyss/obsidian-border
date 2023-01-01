@@ -1722,22 +1722,25 @@ body:not(.is-mobile) .view-header::after {
     width: 100%;
     content: " ";
     background-color: transparent;
-    height: var(--header-height);
+    height: var(--size-4-4);
     position: absolute;
     z-index: -9;
-    top: 0;
+    top: 1px;
+    right: 0;
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header {
     height: 0;
-    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    margin-top: -1px;
+    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing), margin var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header:focus-within,
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header:hover,
 body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
     height: var(--header-height);
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    margin-top: 0px;
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), margin var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .view-actions,
@@ -1762,6 +1765,7 @@ body:not(.is-mobile) .view-header:hover .view-header-title-container {
 
 /*view-header fixed*/
 body:not(.is-mobile).tab-title-bar-fixed .mod-root .workspace-leaf .view-header {
+    margin-top: 0px;
     height: var(--header-height);
 }
 
@@ -2265,6 +2269,11 @@ body.canvas-card-menu-right .canvas-card-menu {
 }
 
 /* graph*/
+.graph-controls {
+    right: var(--size-4-2);
+    top: var(--size-4-2);
+}
+
 .graph-controls.is-close {
     border: 1px solid var(--divider-color);
     padding: 0px;
@@ -2489,6 +2498,10 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     position: absolute;
     right: 20px;
     margin-top: var(--size-4-4);
+}
+
+input.wb-search-bar {
+    --background-modifier-form-field: transparent;
 }
 
 /*======搜索 空状态 ======*/
