@@ -162,10 +162,61 @@ settings:
         collapsed: true
         level: 3
     - 
+		id: Inline-title
+		title: Inline Title
+        title.zh: 页内标题
+		type: heading
+		level: 4
+		collapsed: true
+    - 
         id: inline-title-divider-remove
-        title: Remove divider under the inline title
-        title.zh: 移除页内标题下的分隔线
+        title: Remove inline title divider
+        title.zh: 移除页内标题分隔线
         type: class-toggle
+    - 
+		id: inline-title-font
+		title: inline title font
+        title.zh: 页内标题 字体
+		type: variable-text
+		default: ''
+	- 
+		id: inline-title-size
+		title: inline title size
+        title.zh: 页内标题 字体大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS 字体大小值
+		type: variable-text
+		default: 1.5em
+	- 
+        id: inline-title-weight
+        title: inline title weight
+        title.zh: 页内标题 字重
+        description: Accepts a value from 100 to 900
+        description.zh: 接受 100-900 的值
+        type: variable-number
+        default: 700
+    - 
+        id: inline-title-color-select
+        title: inline title text color
+        title.zh: 页内标题 文本颜色
+        type: class-select
+        allowEmpty: false
+        default: inline-title-color-default
+        options:
+            -   label: Default
+                value: inline-title-color-default
+            -   label: Designated color
+                value: inline-title-color-designated
+            -   label: Customized color
+                value: inline-title-color-customized
+	- 
+		id: inline-title-color
+		title: Customize inline title text color
+        title.zh: 自定义 页内标题 文本颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
 		id: level-1-headings
 		title: Level 1 Headings
@@ -672,6 +723,8 @@ body.line-active-disable .setting-item[data-id=line-active-bg-color],
 body.line-active-disable .setting-item[data-id=line-active-customize],
 body.line-active-bg-color-default .setting-item[data-id=line-active-customize],
 body.line-active-bg-color-accent .setting-item[data-id=line-active-customize],
+body.inline-title-color-default .setting-item[data-id=inline-title-color],
+body.inline-title-color-designated .setting-item[data-id=inline-title-color],
 body.h1-color-default .setting-item[data-id=h1-color],
 body.h1-color-designated .setting-item[data-id=h1-color],
 body.h2-color-default .setting-item[data-id=h2-color],
@@ -2573,6 +2626,26 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 /* ====== 编辑器 ====== */
 
 /* ====== 标题样式 ====== */
+body {
+    /* Inline title */
+    --inline-title-color: var(--h1-color);
+    --inline-title-font: var(--h1-font);
+    --inline-title-line-height: var(--h1-line-height);
+    --inline-title-size: var(--h1-size);
+    --inline-title-style: var(--h1-style);
+    --inline-title-variant: var(--h1-variant);
+    --inline-title-weight: var(--h1-weight);
+}
+
+.inline-title-color-default {
+    --inline-title-color: var(--text-normal) !important;
+}
+
+.inline-title-color-designated {
+    --inline-title-color: var(--color-accent) !important;
+}
+
+
 body:not(.inline-title-divider-remove) .inline-title {
     border-bottom: 1px solid var(--divider-color);
     margin-bottom: var(--size-4-3);
