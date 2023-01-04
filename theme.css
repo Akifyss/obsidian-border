@@ -1183,6 +1183,15 @@ body {
             calc(var(--accent-l) / 2.4));
 }
 
+.is-mobile.theme-dark.theme-dark-background-black {
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 4));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 3));
+}
+
 .is-tablet {
     --nav-item-padding: var(--size-2-3) var(--size-4-3);
     --tab-font-size: var(--font-ui-smaller);
@@ -2770,6 +2779,12 @@ body {
     --h4-color: inherit;
     --h5-color: inherit;
     --h6-color: inherit;
+    --h1-indicator-color: var(--color-red);
+    --h2-indicator-color: var(--color-orange);
+    --h3-indicator-color: var(--color-yellow);
+    --h4-indicator-color: var(--color-green);
+    --h5-indicator-color: var(--color-blue);
+    --h6-indicator-color: var(--color-purple);
     --h1-font: inherit;
     --h2-font: inherit;
     --h3-font: inherit;
@@ -2810,10 +2825,16 @@ body {
 
 .h1-color-default {
     --h1-color: var(--text-normal) !important;
+    --h1-indicator-color: var(--color-red) !important;
 }
 
 .h1-color-designated {
     --h1-color: var(--color-red) !important;
+    --h1-indicator-color: var(--h1-color);
+}
+
+.h1-color-customized {
+    --h1-indicator-color: var(--h1-color);
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-1 {
@@ -2830,7 +2851,7 @@ body {
     width: 3px;
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-red);
+    background-color: var(--h1-indicator-color);
 }
 
 .markdown-rendered h1,
@@ -2850,7 +2871,7 @@ body {
     height: calc(1.2em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-red);
+    background-color: var(--h1-indicator-color);
 }
 
 
@@ -2862,15 +2883,42 @@ body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-red) 30%, transparent 70%);
+    background-image: linear-gradient(to left, var(--h1-indicator-color) 30%, transparent 70%);
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0.2em);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
+}
+
+
+body:not(.collapse-icon-restore) .markdown-rendered h1 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h1 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0px);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h1 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h1-indicator-color);
+    color: var(--h1-indicator-color);
 }
 
 .h2-color-default {
     --h2-color: var(--text-normal) !important;
+    --h2-indicator-color: var(--color-orange) !important;
 }
 
 .h2-color-designated {
     --h2-color: var(--color-orange) !important;
+    --h2-indicator-color: var(--h2-color);
+}
+
+.h2-color-customized {
+    --h2-indicator-color: var(--h2-color);
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-2 {
@@ -2887,7 +2935,7 @@ body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, 
     width: 3px;
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-orange);
+    background-color: var(--h2-indicator-color);
 }
 
 .markdown-rendered h2,
@@ -2907,7 +2955,7 @@ body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, 
     height: calc(1.2em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-orange);
+    background-color: var(--h2-indicator-color);
 }
 
 
@@ -2919,17 +2967,44 @@ body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-orange) 30%, transparent 70%);
+    background-image: linear-gradient(to left, var(--h2-indicator-color) 30%, transparent 70%);
+}
+
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0.2em);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
+}
+
+
+body:not(.collapse-icon-restore) .markdown-rendered h2 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h2 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0px);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h2 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h2-indicator-color);
+    color: var(--h2-indicator-color);
 }
 
 .h3-color-default {
     --h3-color: var(--text-normal) !important;
+    --h3-indicator-color: var(--color-yellow) !important;
 }
 
 .h3-color-designated {
     --h3-color: var(--color-yellow) !important;
+    --h3-indicator-color: var(--h3-color);
 }
 
+.h3-color-customized {
+    --h3-indicator-color: var(--h3-color);
+}
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-3 {
     padding-left: 6px;
@@ -2945,7 +3020,7 @@ body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, 
     width: 3px;
     height: calc(1.3em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-yellow);
+    background-color: var(--h3-indicator-color);
 }
 
 .markdown-rendered h3,
@@ -2965,7 +3040,7 @@ body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, 
     height: calc(1.3em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-yellow);
+    background-color: var(--h3-indicator-color);
 }
 
 body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
@@ -2976,15 +3051,42 @@ body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-yellow) 30%, transparent 70%);
+    background-image: linear-gradient(to left, var(--h3-indicator-color) 30%, transparent 70%);
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0.2em);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
+}
+
+
+body:not(.collapse-icon-restore) .markdown-rendered h3 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h3 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0px);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h3 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h3-indicator-color);
+    color: var(--h3-indicator-color);
 }
 
 .h4-color-default {
     --h4-color: var(--text-normal) !important;
+    --h4-indicator-color: var(--color-green) !important;
 }
 
 .h4-color-designated {
     --h4-color: var(--color-green) !important;
+    --h4-indicator-color: var(--h4-color);
+}
+
+.h4-color-customized {
+    --h4-indicator-color: var(--h4-color);
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-4 {
@@ -3001,7 +3103,7 @@ body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, 
     width: 3px;
     height: calc(1.4em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-green);
+    background-color: var(--h4-indicator-color);
 }
 
 .markdown-rendered h4,
@@ -3021,7 +3123,7 @@ body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, 
     height: calc(1.4em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-green);
+    background-color: var(--h4-indicator-color);
 }
 
 
@@ -3033,15 +3135,42 @@ body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-green) 30%, transparent 70%);
+    background-image: linear-gradient(to left, var(--h4-indicator-color) 30%, transparent 70%);
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0.2em);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
+}
+
+
+body:not(.collapse-icon-restore) .markdown-rendered h4 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h4 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0px);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h4 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h4-indicator-color);
+    color: var(--h4-indicator-color);
 }
 
 .h5-color-default {
     --h5-color: var(--text-normal) !important;
+    --h5-indicator-color: var(--color-blue) !important;
 }
 
 .h5-color-designated {
     --h5-color: var(--color-blue) !important;
+    --h5-indicator-color: var(--h5-color);
+}
+
+.h5-color-customized {
+    --h5-indicator-color: var(--h5-color);
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-5 {
@@ -3058,7 +3187,7 @@ body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, 
     width: 3px;
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-blue);
+    background-color: var(--h5-indicator-color);
 }
 
 
@@ -3079,7 +3208,7 @@ body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, 
     height: calc(1.5em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-blue);
+    background-color: var(--h5-indicator-color);
 }
 
 
@@ -3091,15 +3220,43 @@ body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-blue) 30%, transparent 70%);
+    background-image: linear-gradient(to left, var(--h5-indicator-color) 30%, transparent 70%);
 }
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0.2em);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
+}
+
+
+body:not(.collapse-icon-restore) .markdown-rendered h5 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h5 .collapse-indicator.collapse-icon svg {
+    transform: translateX(0px);
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
+}
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h5 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h5-indicator-color);
+    color: var(--h5-indicator-color);
+}
+
 
 .h6-color-default {
     --h6-color: var(--text-normal) !important;
+    --h6-indicator-color: var(--color-purple) !important;
 }
 
 .h6-color-designated {
     --h6-color: var(--color-purple) !important;
+    --h6-indicator-color: var(--h6-color);
+}
+
+.h6-color-customized {
+    --h6-indicator-color: var(--h6-color);
 }
 
 .is-live-preview .HyperMD-header .cm-header.cm-header-6 {
@@ -3116,7 +3273,7 @@ body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, 
     width: 3px;
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
-    background-color: var(--color-purple);
+    background-color: var(--h6-indicator-color);
 }
 
 .markdown-rendered h6,
@@ -3136,7 +3293,7 @@ body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, 
     height: calc(1.5em - 8px);
     top: 4px;
     border-radius: var(--radius-m);
-    background-color: var(--color-purple);
+    background-color: var(--h6-indicator-color);
 }
 
 
@@ -3148,81 +3305,10 @@ body:not(.h6-divider-off) :is(.markdown-rendered h6, .markdown-preview-view h6, 
     right: 0px;
     opacity: 0.5;
     bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
-    background-image: linear-gradient(to left, var(--color-purple) 30%, transparent 70%);
-}
-
-/*----*/
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
+    background-image: linear-gradient(to left, var(--h6-indicator-color) 30%, transparent 70%);
 }
 
 
-body:not(.collapse-icon-restore) .markdown-rendered h1 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h1 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
-}
-
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h2 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h2 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h3 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h3 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
-
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h4 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h4 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h5 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h5 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .collapse-indicator.collapse-icon svg {
     transform: translateX(0.2em);
@@ -3237,6 +3323,14 @@ body:not(.collapse-icon-restore) .markdown-preview-view h6 .collapse-indicator.c
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v.57h-1.11v-.57h-2.22v2.29h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v2.29c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Zm0,4.57v2.29h2.22v-2.29h-2.22Z"/></svg>')
 }
+
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-rendered h6 .is-collapsed .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) .markdown-preview-view h6 .is-collapsed .collapse-indicator.collapse-icon svg {
+    background-color: var(--h6-indicator-color);
+    color: var(--h6-indicator-color);
+}
+
 
 
 /* ====== link ====== */

@@ -26,3 +26,5 @@ Elements on **Border** (top tab bar, ribbon menu and status bar) can be autohidd
 Card layout (pad only)(need [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin)
 
 ![screenshot](img/iPad.png)
+
+## Credits
