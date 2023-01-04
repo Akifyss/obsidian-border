@@ -98,6 +98,32 @@ settings:
         collapsed: true
         level: 2
     - 
+        id: theme-light-background
+        title: Light mode background
+        title.zh: 亮色模式背景
+        type: class-select
+        allowEmpty: false
+        default: theme-light-background-default
+        options:
+            -   label: default
+                value: theme-light-background-default
+            -   label: adapt to accent color
+                value: theme-light-background-adapt
+    - 
+        id: theme-dark-background
+        title: Dark mode background
+        title.zh: 暗色模式背景
+        type: class-select
+        allowEmpty: false
+        default: theme-dark-background-default
+        options:
+            -   label: default
+                value: theme-dark-background-default
+            -   label: darker
+                value: theme-dark-background-darker
+            -   label: pure black
+                value: theme-dark-background-black
+    - 
         id: left-sidebar-background-primary
         title: Make the left sidebar background color consistent with the editor
         title.zh: 左侧栏背景颜色与编辑器保持一致
@@ -106,11 +132,6 @@ settings:
         id: accent-color-restore
         title: Restore accent color in dark mode
         title.zh: 还原暗色模式下的强调色
-        type: class-toggle
-    - 
-        id: theme-dark-background-darker
-        title: Darker dark mode
-        title.zh: 更暗的暗色模式
         type: class-toggle
     - 
         id: Editor
@@ -728,6 +749,24 @@ settings:
         title: Open card layout (pad only)
         title.zh: 开启卡片式布局（平板端）
         type: class-toggle
+    - 
+        id: Plugin
+        title: Plugin
+        title.zh: 插件
+        type: heading
+        collapsed: true
+        level: 2
+    - 
+        id: DB Folder
+        title: DB Folder
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: DB-table-full-width-off
+        title: Cancel full width table
+        title.zh: 取消全宽表格
+        type: class-toggle
 
 */
 
@@ -769,9 +808,6 @@ body {
     --accent-s: 80%;
     --accent-l: 64%;
     /* Backgrounds */
-    --background-primary: var(--color-base-00);
-    --background-primary-alt: var(--color-base-10);
-    --background-secondary: var(--color-base-20);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-border: var(--color-base-30);
@@ -838,6 +874,7 @@ body {
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
     --color-base-10: #fafafa;
+    --color-base-15: #f7f7f7;
     --color-base-20: #f4f4f4;
     --color-base-25: #e3e3e3;
     --color-base-30: #e0e0e0;
@@ -854,11 +891,14 @@ body {
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
-    --divider-color: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
+    --divider-color: var(--background-modifier-border);
     --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
     --background-primary-accent: hsl(var(--accent-h),
             calc((var(--accent-s) - 12%) / 6),
             calc(100% - (100% - var(--accent-l)) / 16));
+    --background-secondary: var(--color-base-15);
     --background-secondary-alt: var(--color-base-05);
     --background-secondary-accent: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
@@ -866,7 +906,8 @@ body {
     --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 8), 0.9);
-    --interactive-normal: var(--background-secondary);
+    --blur-container: rgba(246, 246, 246, 0.8);
+    --interactive-normal: var(--color-base-20);
     --interactive-hover: #EBEBEB;
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
@@ -887,6 +928,37 @@ body {
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
         0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
         0px 30px 90px rgba(0, 0, 0, 0.2);
+}
+
+.theme-light.theme-light-background-adapt {
+    --color-accent-muted: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
+    --background-primary: hsl(calc(var(--accent-h)),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 12));
+    --background-primary-alt: hsl(calc(var(--accent-h)),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 8));
+    --background-primary-accent: hsl(var(--accent-h),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 7.2));
+    --background-secondary: hsl(calc(var(--accent-h) - 18),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 6));
+    --background-secondary-alt: hsl(calc(var(--accent-h) - 18),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 5));
+    --background-secondary-accent: hsl(calc(var(--accent-h) - 18),
+            calc(var(--accent-s) - 4%),
+            calc(100% - (100% - var(--accent-l)) / 4));
+    --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
+            calc(var(--accent-s) - 4%),
+            calc(100% - (100% - var(--accent-l)) / 4), 0.9);
+    --interactive-normal: hsl(calc(var(--accent-h)),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 4.8));
+    --interactive-hover: hsl(calc(var(--accent-h)),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 3.6));
 }
 
 .theme-dark {
@@ -917,6 +989,7 @@ body {
     --color-pink: #f2b6c1;
     --color-base-00: #1e1e1e;
     --color-base-10: #242424;
+    --color-base-15: #252525;
     --color-base-20: #262626;
     --color-base-25: #2a2a2a;
     --color-base-30: #363636;
@@ -933,7 +1006,7 @@ body {
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-muted: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
-    --divider-color: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)), 0.2);
+    --divider-color: var(--background-modifier-border);
     --background-modifier-border: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
@@ -950,6 +1023,7 @@ body {
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6), 0.6);
+    --blur-container: var(--workspace-background-translucent);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 3));
@@ -1006,6 +1080,29 @@ body {
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 2.4));
+}
+
+
+.theme-dark.theme-dark-background-black {
+    --background-primary: black;
+    --background-primary-alt: var(--color-base-00);
+    --background-primary-accent: black;
+    --background-secondary: black;
+    --background-secondary-alt: black;
+    --background-secondary-accent: black;
+    --workspace-background-translucent: rgba(0, 0, 0, 0.6);
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 4));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(var(--accent-l) / 3));
+    --background-table-rows: var(--color-base-00);
+    --line-active-bg: rgba(255, 255, 255, 0.08);
+    --line-active-customize: rgba(255, 255, 255, 0.08);
+    --background-modifier-border: var(--color-base-35);
+    --divider-color: var(--background-modifier-border);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
 }
 
 
@@ -1283,6 +1380,7 @@ body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split
     padding-top: 6px;
 }
 
+.sidebar-toggle-button,
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
 .mod-left-split .workspace-tab-header.is-active,
@@ -2116,7 +2214,7 @@ body:not(.is-phone) input.prompt-input:focus-visible {
 .prompt,
 .menu,
 .suggestion-container.mod-search-suggestion {
-    background-color: rgba(246, 246, 246, 0.8);
+    background-color: var(--blur-container);
     backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
     -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
 }
@@ -2132,7 +2230,7 @@ body:not(.is-phone) input.prompt-input:focus-visible {
 .theme-dark .prompt,
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
-    background-color: var(--workspace-background-translucent);
+    background-color: var(--blur-container);
     backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
     -webkit-backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
 }
@@ -2226,6 +2324,8 @@ body:not(.is-phone) .suggestion-container {
     }
 }
 
+body:not(.is-phone) .modal.kanban-plugin__board-settings-modal,
+body:not(.is-phone) .modal.database-settings-modal,
 body:not(.is-phone) .modal.mod-settings,
 body:not(.is-phone) .modal.mod-community-modal {
     -webkit-animation: var(--anim-duration-fast) fadeIn both;
@@ -3834,4 +3934,10 @@ body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
 body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
     background-color: var(--background-primary);
+}
+
+
+/*plugin support*/
+body:not(.DB-table-full-width-off) .database-plugin__table {
+    width: 100% !important;
 }
