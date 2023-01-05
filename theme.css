@@ -4182,3 +4182,8 @@ body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .works
 body:not(.DB-table-full-width-off) .database-plugin__table {
     width: 100% !important;
 }
+
+:is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
+    padding-left: var(--size-4-1);
+    margin-left: var(--size-4-3);
+}
