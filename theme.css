@@ -2350,6 +2350,11 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     margin-bottom: var(--size-2-2);
 }
 
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
+    line-height: 20px;
+}
+
 .nav-file-title {
     position: relative;
 }
