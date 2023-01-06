@@ -12,9 +12,9 @@ settings:
         level: 2
     - 
         id: tab-autohide
-        title: Auto hide top tab bar
+        title: Auto hide tab bar
         description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
-        title.zh: 自动隐藏 顶部tab栏
+        title.zh: 自动隐藏 tab栏
         description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
         type: class-toggle
     - 
@@ -30,6 +30,11 @@ settings:
         description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
         title.zh: 自动隐藏 底部状态栏
         description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
+        type: class-toggle
+    - 
+        id: card-layout-open
+        title: Open card layout
+        title.zh: 开启卡片式布局
         type: class-toggle
     - 
         id: CTA-BTN-disable
@@ -105,20 +110,20 @@ settings:
         level: 2
     - 
         id: theme-light-background
-        title: Light mode background
-        title.zh: 亮色模式背景
+        title: Light mode background style
+        title.zh: 亮色模式背景风格
         type: class-select
         allowEmpty: false
         default: theme-light-background-default
         options:
             -   label: default
                 value: theme-light-background-default
-            -   label: adapt to accent color
+            -   label: more colorful
                 value: theme-light-background-adapt
     - 
         id: theme-dark-background
-        title: Dark mode background
-        title.zh: 暗色模式背景
+        title: Dark mode background style
+        title.zh: 暗色模式背景风格
         type: class-select
         allowEmpty: false
         default: theme-dark-background-default
@@ -129,11 +134,6 @@ settings:
                 value: theme-dark-background-darker
             -   label: pure black
                 value: theme-dark-background-black
-    - 
-        id: left-sidebar-background-primary
-        title: Make the left sidebar background color consistent with the editor
-        title.zh: 左侧栏背景颜色与编辑器保持一致
-        type: class-toggle
     - 
         id: accent-color-restore
         title: Restore accent color in dark mode
@@ -146,7 +146,76 @@ settings:
         type: heading
         collapsed: true
         level: 3
-    -
+    - 
+        id: mod-left-split-background
+        title: Left sidebar background color
+        title.zh: 左侧栏背景色
+        type: class-select
+        allowEmpty: false
+        default: mod-left-split-background-secondary
+        options:
+            -   label: background-primary
+                value: mod-left-split-background-primary
+            -   label: background-secondary (default)
+                value: mod-left-split-background-secondary
+            -   label: customize
+                value: mod-left-split-background-customize
+    - 
+		id: background-mod-left-split
+		title: Customize left sidebar background color
+        title.zh: 自定义 左侧栏 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: mod-right-split-background
+        title: Right sidebar background color
+        title.zh: 右侧栏背景色
+        type: class-select
+        allowEmpty: false
+        default: mod-right-split-background-primary
+        options:
+            -   label: background-primary (default)
+                value: mod-right-split-background-primary
+            -   label: background-secondary
+                value: mod-right-split-background-secondary
+            -   label: customize
+                value: mod-right-split-background-customize
+    - 
+		id: background-mod-right-split
+		title: Customize right sidebar background color
+        title.zh: 自定义 右侧栏 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: mod-root-split-background
+        title: Middle bar background color
+        title.zh: 中间栏背景色
+        type: class-select
+        allowEmpty: false
+        default: mod-root-split-background-primary
+        options:
+            -   label: background-primary (default)
+                value: mod-root-split-background-primary
+            -   label: background-secondary
+                value: mod-root-split-background-secondary
+            -   label: customize
+                value: mod-root-split-background-customize
+    - 
+		id: background-mod-root-split
+		title: Customize middle sidebar background color
+        title.zh: 自定义 中间栏 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
 		id: background-border
 		title: Customize BORDER background color
         title.zh: 自定义 BORDER 背景色
@@ -157,7 +226,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    -
+    - 
 		id: on-border
 		title: Customize text & icon color on BORDER
         title.zh: 自定义 BORDER 上的文字和图标颜色
@@ -199,7 +268,7 @@ settings:
                 value: line-active-bg-color-accent
             -   label:  customize
                 value: line-active-bg-color-customize
-    -
+    - 
 		id: line-active-customize
 		title: Customize Active line background color
         title.zh: 自定义行高亮背景颜色
@@ -778,7 +847,7 @@ settings:
         collapsed: true
         level: 2
     - 
-        id: card-layout-open
+        id: card-layout-pad-open
         title: Open card layout (pad only)
         title.zh: 开启卡片式布局（平板端）
         type: class-toggle
@@ -821,7 +890,13 @@ body.h4-color-designated .setting-item[data-id=h4-color],
 body.h5-color-default .setting-item[data-id=h5-color],
 body.h5-color-designated .setting-item[data-id=h5-color],
 body.h6-color-default .setting-item[data-id=h6-color],
-body.h6-color-designated .setting-item[data-id=h6-color] {
+body.h6-color-designated .setting-item[data-id=h6-color],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-split],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-split],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-split],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-split],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-split],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-split] {
     display: none;
 }
 
@@ -875,9 +950,12 @@ body {
     --prompt-border-color: var(--divider-color);
     /* Modals - e.g. settings, community themes, community plugins */
     --modal-border-color: var(--divider-color);
-    /* APP Border - e.g. top tab, ribbon menu , status bar*/
+    /* Color customize */
     --on-border: var(--color-accent-3);
     --background-border: var(--background-tertiary);
+    --background-mod-left-split: var(--background-secondary);
+    --background-mod-right-split: var(--background-primary);
+    --background-mod-root-split: var(--background-primary);
 }
 
 
@@ -1255,17 +1333,124 @@ body {
 
 
 /*----------workspace----------*/
-/* ====== BORDER ===== */
+/* ====== background ===== */
+
+.app-container {
+    background-color: var(--background-border);
+}
+
+body.mod-left-split-background-secondary {
+    --background-mod-left-split: var(--background-secondary) !important;
+}
+
+body.mod-left-split-background-primary {
+    --background-mod-left-split: var(--background-primary) !important;
+}
+
+body.mod-right-split-background-primary {
+    --background-mod-right-split: var(--background-primary) !important;
+}
+
+body.mod-right-split-background-secondary {
+    --background-mod-right-split: var(--background-secondary) !important;
+}
+
+body.mod-root-split-background-primary {
+    --background-mod-root-split: var(--background-primary) !important;
+}
+
+body.mod-root-split-background-secondary {
+    --background-mod-root-split: var(--background-secondary) !important;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .view-header,
+body:not(.is-mobile) .workspace-split.mod-left-split .view-content,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf-content,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top),
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-left-split);
+}
+
+body:not(.is-mobile) .workspace-split.mod-right-split .view-header,
+body:not(.is-mobile) .workspace-split.mod-right-split .view-content,
+body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf,
+body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf-content,
+body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top),
+body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-right-split);
+}
+
+body:not(.is-mobile) .workspace-split.mod-root .view-header,
+body:not(.is-mobile) .workspace-split.mod-root .view-content,
+body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf,
+body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf-content,
+body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top),
+body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-root-split);
+}
+
+.sidebar-toggle-button,
+.mod-left-split .workspace-tab-header.has-active-menu,
+.mod-right-split .workspace-tab-header.has-active-menu,
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active,
+.workspace-tabs.mod-top .workspace-tab-header-container,
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container,
+.workspace>.workspace-split,
+.workspace-tabs.mod-top {
+    background-color: transparent !important;
+}
+
+body:not(.is-mobile) .workspace,
+.workspace-ribbon.mod-left:before,
+body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
+    background-color: transparent;
+}
+
+.workspace-ribbon,
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right: none;
+    background-color: transparent;
+}
+
+.workspace-tab-header.is-active {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, var(--background-mod-left-split));
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, var(--background-mod-left-split), transparent);
+}
+
+body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, var(--background-mod-right-split));
+}
+
+body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, var(--background-mod-right-split), transparent);
+}
+
+
+body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, var(--background-mod-root-split));
+}
+
+body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, var(--background-mod-root-split), transparent);
+}
+
+/* ====== Layout ===== */
 body:not(.is-mobile) .horizontal-main-container {
     margin-bottom: 24px;
 }
 
 body:not(.is-mobile).is-popout-window .horizontal-main-container {
     margin-bottom: 16px;
-}
-
-.app-container {
-    background-color: var(--background-border);
 }
 
 body:not(.is-mobile) .workspace {
@@ -1335,61 +1520,15 @@ body:not(.is-mobile).theme-dark .workspace::before {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
-.workspace-tabs.mod-top .workspace-tab-header-container,
-body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container,
-.workspace>.workspace-split,
-.workspace-tabs.mod-top {
-    background-color: transparent !important;
-}
-
-
 .workspace-tab-header-container,
 .workspace-tabs.mod-top .workspace-tab-header-container,
 .workspace-ribbon.mod-left:before {
     border-bottom: 1px solid transparent;
 }
 
-.workspace-split.mod-root .view-content,
-.workspace-tab-header-container,
-.mod-right-split .view-content,
-.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background-color: var(--background-primary);
-}
-
-
-body:not(.is-mobile) .workspace,
-.workspace-ribbon.mod-left:before,
-body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
-    background-color: transparent;
-}
-
-
-.workspace-ribbon,
-.workspace-ribbon.mod-left.is-collapsed {
-    border-right: none;
-    background-color: transparent;
-}
-
 body:not(.is-mobile) .workspace-ribbon {
     padding: 6px 4px 0px;
 }
-
-.workspace-split.mod-left-split .workspace-leaf,
-.workspace-split.mod-left-split .workspace-leaf-content,
-.workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
-.workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
-    background-color: var(--background-secondary);
-}
-
-.workspace-tabs,
-.workspace-leaf-content,
-body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf,
-body.left-sidebar-background-primary .workspace-split.mod-left-split .workspace-leaf-content,
-body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
-body.left-sidebar-background-primary .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
-    background-color: var(--background-primary);
-}
-
 
 body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--divider-color);
@@ -1413,21 +1552,9 @@ body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split
     display: none;
 }
 
-.workspace-tab-header.is-active {
-    background-color: transparent;
-    box-shadow: none;
-}
 
 .sidebar-toggle-button {
     padding-top: 6px;
-}
-
-.sidebar-toggle-button,
-.mod-left-split .workspace-tab-header.has-active-menu,
-.mod-right-split .workspace-tab-header.has-active-menu,
-.mod-left-split .workspace-tab-header.is-active,
-.mod-right-split .workspace-tab-header.is-active {
-    background-color: transparent !important;
 }
 
 .workspace-tab-header-inner {
@@ -1558,19 +1685,7 @@ body:not(.is-mobile) .mod-left-split .nav-files-container,
 body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
 body:not(.is-mobile) .mod-left-split .tag-container,
 body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
-    background: linear-gradient(var(--background-secondary) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
-
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .backlink-pane,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .item-list,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .nav-files-container,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .tag-container,
-body.left-sidebar-background-primary:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
-    background: linear-gradient(var(--background-primary) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background: linear-gradient(var(--background-mod-left-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
     background-repeat: no-repeat;
     background-size: 100% 40px, 91% 1px;
     background-attachment: local, scroll;
@@ -1808,11 +1923,7 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
 }
 
 
-.is-translucent:not(.is-fullscreen) .workspace-tabs {
-    background-color: var(--background-primary) !important;
-}
-
-.is-translucent .mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+.is-translucent .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-modifier-active-hover);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
 }
@@ -1822,11 +1933,103 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
     background-color: var(--divider-color);
 }
 
-.is-translucent .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs,
-.is-translucent .workspace-split.mod-left-split>.workspace-tabs.mod-top~.workspace-tabs .workspace-tab-header-container {
-    background-color: var(--background-secondary) !important;
+body:not(.card-layout-open).is-translucent .workspace-split.mod-right-split .workspace-tabs:not(.mod-top),
+body:not(.card-layout-open).is-translucent .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-right-split) !important;
 }
 
+body:not(.card-layout-open).is-translucent .workspace-split.mod-left-split .workspace-tabs:not(.mod-top),
+body:not(.card-layout-open).is-translucent .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-left-split) !important;
+}
+
+body:not(.card-layout-open).is-translucent .workspace-split.mod-root .workspace-tabs:not(.mod-top),
+body:not(.card-layout-open).is-translucent .workspace-split.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+    background-color: var(--background-mod-root-split) !important;
+}
+
+
+/*card-layout*/
+body:not(.is-mobile).card-layout-open .workspace::before {
+    display: none;
+}
+
+body:not(.is-mobile).card-layout-open .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+    margin-right: 16px;
+}
+
+body:not(.is-mobile).card-layout-open .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+    margin-left: 16px;
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tab-container {
+    border-radius: 12px !important;
+    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+}
+
+body:not(.is-mobile).theme-dark.card-layout-open .workspace-tab-container {
+    box-shadow: 0px 0px 0px 1px var(--divider-color);
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tabs,
+body:not(.is-mobile).card-layout-open .workspace-split {
+    overflow: visible !important;
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tabs,
+body:not(.is-mobile).card-layout-open .workspace-tab-header-container {
+    background-color: transparent !important;
+}
+
+body:not(.is-mobile).card-layout-open .workspace-leaf-resize-handle {
+    border-color: transparent;
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    border-top: unset;
+}
+
+body:not(.is-mobile):not(.is-translucent).theme-light.card-layout-open .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2) !important;
+}
+
+body:not(.is-mobile).is-translucent.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background-color: var(--background-modifier-active-hover);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tab-header {
+    color: var(--on-border) !important;
+}
+
+body:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
+    --icon-color: var(--on-border);
+    --icon-color-hover: var(--on-border);
+}
+
+/*autohide card-layout*/
+
+body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tabs {
+    gap: 0px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
+    gap: 4px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tab-header-container {
+    height: 16px;
+    opacity: 0;
+    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tab-header-container:hover {
+    height: 40px;
+    opacity: 1;
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
 
 /* ====== titlebar ===== */
 body:not(.is-translucent) .titlebar-text {
@@ -2209,11 +2412,6 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     vertical-align: -5px;
     background-color: var(--color-accent);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3crect width='8' height='1' x='6' y='13' fill='black' rx='.5'/%3e%3crect width='8' height='1' x='6' y='15' fill='black' rx='.5'/%3e%3cpath fill='black' d='M6.952 12c.2 0 .28-.04.28-.176 0-.168-.28-.392-.28-.648l.44-.92h2.232l.44.92c0 .256-.28.48-.28.648 0 .136.072.176.28.176h1.608c.2 0 .28-.04.28-.176 0-.168-.304-.4-.416-.648 0 0-1.96-4.008-2.096-4.52 0 0-.096-.24-.432-.24-.336 0-.424.216-.424.216-.144.528-2.168 4.544-2.168 4.544-.12.248-.416.48-.416.648 0 .136.072.176.272.176h.68Zm2.456-2.2h-1.8l.896-1.912.904 1.912Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-}
-
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
-    line-height: 20px;
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .is-unsupported>.nav-file-title-content::before {
@@ -2690,6 +2888,7 @@ body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
     border-width: 0px 0px 0px 0px;
 }
 
+body:not(.native-scrollbars) .workspace-leaf-content[data-type="surfing-view"] ::-webkit-scrollbar,
 body:not(.native-scrollbars) .workspace-leaf-content[data-type="graph"] ::-webkit-scrollbar,
 body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
@@ -4108,30 +4307,30 @@ svg.pane-layout,
 
 
 /* tablet card layout */
-body.card-layout-open.is-tablet {
+body.card-layout-pad-open.is-tablet {
     --titlebar-background: var(--background-border);
     --titlebar-background-focused: var(--background-border);
 }
 
-body.card-layout-open.is-tablet,
-body.card-layout-open.is-tablet .app-container,
-body.card-layout-open.is-tablet .workspace,
-body.card-layout-open.is-tablet .horizontal-main-container {
+body.card-layout-pad-open.is-tablet,
+body.card-layout-pad-open.is-tablet .app-container,
+body.card-layout-pad-open.is-tablet .workspace,
+body.card-layout-pad-open.is-tablet .horizontal-main-container {
     background-color: var(--background-border) !important;
 }
 
-body.card-layout-open.is-tablet .workspace {
+body.card-layout-pad-open.is-tablet .workspace {
     gap: 16px;
     padding: 16px;
     padding-bottom: 24px;
     padding-top: 8px;
 }
 
-body.card-layout-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
+body.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
     padding-bottom: 8px;
 }
 
-body.card-layout-open.is-tablet .workspace-drawer {
+body.card-layout-pad-open.is-tablet .workspace-drawer {
     background-color: var(--background-primary);
     border-radius: 12px !important;
     overflow: hidden !important;
@@ -4140,20 +4339,20 @@ body.card-layout-open.is-tablet .workspace-drawer {
     margin-top: 8px;
 }
 
-body.card-layout-open.is-tablet .workspace-split.mod-root {
+body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
     border-radius: 12px;
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
 }
 
-body.card-layout-open.is-tablet.theme-dark .workspace-split.mod-root {
+body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
 
-body.card-layout-open.is-tablet .workspace-drawer.mod-left.is-pinned,
-body.card-layout-open.is-tablet .workspace-drawer.mod-right.is-pinned {
+body.card-layout-pad-open.is-tablet .workspace-drawer.mod-left.is-pinned,
+body.card-layout-pad-open.is-tablet .workspace-drawer.mod-right.is-pinned {
     border-right: none;
     border-left: none;
     border-radius: 12px !important;
@@ -4161,29 +4360,47 @@ body.card-layout-open.is-tablet .workspace-drawer.mod-right.is-pinned {
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
 }
 
-body.card-layout-open.is-tablet.theme-dark .workspace-drawer.mod-left.is-pinned,
-body.card-layout-open.is-tablet.theme-dark .workspace-drawer.mod-right.is-pinned {
+body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.mod-left.is-pinned,
+body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.mod-right.is-pinned {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
-body.card-layout-open.is-tablet .workspace-drawer-inner {
+body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
     padding-top: 8px;
 }
 
-body.card-layout-open.is-tablet .workspace-drawer,
-body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner,
-body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
-body.card-layout-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
+body.card-layout-pad-open.is-tablet .workspace-drawer,
+body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner,
+body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
+body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
     background-color: var(--background-primary);
 }
 
 
 /*plugin support*/
+
+/*DB folder*/
 body:not(.DB-table-full-width-off) .database-plugin__table {
     width: 100% !important;
 }
 
+/*style settings*/
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
     padding-left: var(--size-4-1);
     margin-left: var(--size-4-3);
+}
+
+/*calendar*/
+.day.svelte-q3wqg9:active .filled.svelte-1widvzq,
+.active.svelte-q3wqg9 .filled.svelte-1widvzq,
+.active.today.svelte-q3wqg9 .filled.svelte-1widvzq {
+    fill: var(--text-on-accent);
+}
+
+.today.svelte-q3wqg9 {
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+}
+
+.reset-button.svelte-1vwr9dd.svelte-1vwr9dd {
+    line-height: 16px;
 }
