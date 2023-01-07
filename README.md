@@ -21,9 +21,10 @@ Your accent color setting will affect UI elements.
 ![screenshot](img/screenshot-1.png)
 ![screenshot](img/screenshot-2.png)
 
-### Mobile support
+### Card layout
 
-Card layout (pad only)(need [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin)
+Open in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+![screenshot](img/card.png)
 
 ![screenshot](img/iPad.png)
 
