@@ -869,6 +869,17 @@ settings:
         title: Cancel full width table
         title.zh: 取消全宽表格
         type: class-toggle
+    - 
+        id: Surfing
+        title: Surfing
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: Surfing-bookmark-bar-hide
+        title: Hide bookmark bar when browsing web
+        title.zh: 浏览网页时隐藏书签栏
+        type: class-toggle
 
 */
 
@@ -4256,11 +4267,28 @@ svg.pane-layout,
 
 
 /* ====== MOBILE ====== */
+.workspace-drawer-ribbon.mod-left,
+.workspace-drawer.mod-left .view-header,
+.workspace-drawer.mod-left .view-content,
 .workspace-drawer.mod-left,
 .workspace-drawer.mod-left .workspace-drawer-inner,
 .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container,
 .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
-    background-color: var(--background-secondary);
+    background-color: var(--background-mod-left-split);
+}
+
+.workspace-drawer.mod-right .view-header,
+.workspace-drawer.mod-right .view-content,
+.workspace-drawer.mod-right,
+.workspace-drawer.mod-right .workspace-drawer-inner,
+.workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container,
+.workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
+    background-color: var(--background-mod-right-split);
+}
+
+.workspace-split.mod-root .view-header,
+.workspace-split.mod-root .view-content {
+    background-color: var(--background-mod-root-split);
 }
 
 .is-tablet.theme-dark .vertical-tab-content {
@@ -4370,13 +4398,10 @@ body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
     padding-top: 8px;
 }
 
-body.card-layout-pad-open.is-tablet .workspace-drawer,
-body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner,
-body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container,
-body.card-layout-pad-open.is-tablet .workspace-drawer .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
-    background-color: var(--background-primary);
-}
-
+/*
+body.card-layout-pad-open{
+    --background-mod-left-split:var(--background-primary)!important;;
+}*/
 
 /*plugin support*/
 
@@ -4404,4 +4429,14 @@ body:not(.DB-table-full-width-off) .database-plugin__table {
 
 .reset-button.svelte-1vwr9dd.svelte-1vwr9dd {
     line-height: 16px;
+}
+
+/*surfing*/
+
+body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"] .wb-bookmark-bar {
+    display: none;
+}
+
+body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"] .wb-view-content:has(.wb-bookmark-bar) .wb-frame {
+    height: calc(100%);
 }
