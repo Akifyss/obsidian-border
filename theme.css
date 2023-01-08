@@ -4,9 +4,9 @@ name: Border
 id: Border
 settings:
     - 
-        id: Interface
-        title: Interface
-        title.zh: 界面
+        id: Components
+        title: Components
+        title.zh: 组件
         type: heading
         collapsed: true
         level: 2
@@ -102,9 +102,9 @@ settings:
         title.zh: 隐藏滚动条
         type: class-toggle
     - 
-        id: Color
-        title: Color
-        title.zh: 色彩
+        id: Appearance
+        title: Appearance
+        title.zh: 外观
         type: heading
         collapsed: true
         level: 2
@@ -128,6 +128,8 @@ settings:
         allowEmpty: false
         default: theme-dark-background-default
         options:
+            -   label: brighter
+                value: theme-dark-background-brighter
             -   label: default
                 value: theme-dark-background-default
             -   label: darker
@@ -207,6 +209,15 @@ settings:
             -   label: customize
                 value: mod-root-split-background-customize
     - 
+		id: background-mod-root-split
+		title: Customize middle sidebar background color
+        title.zh: 自定义 中间栏 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: file-icon-color-select
         title: file and folder icon color in explorer
         title.zh: 文件管理器前置图标色
@@ -224,15 +235,6 @@ settings:
 		id: file-icon-color
 		title: Customize file and folder icon color in explorer
         title.zh: 自定义 文件管理器前置图标色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-		id: background-mod-root-split
-		title: Customize middle sidebar background color
-        title.zh: 自定义 中间栏 背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -258,6 +260,29 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+    - 
+        id: Shadow-customize
+        title: customize shadow
+        title.zh: 自定义阴影
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-shadow-light
+        title: Custom card shadow in light mode
+        title.zh: 自定义 亮色模式下的卡片阴影
+        description: Input your box-shadow value here
+        description.zh: 在这里输入你的 box-shadow 值
+        type: variable-text
+        default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
+    - 
+        id: card-shadow-dark
+        title: Custom card shadow in dark mode
+        title.zh: 自定义 暗色模式下的卡片阴影
+        description: Input your box-shadow value here
+        description.zh: 在这里输入你的 box-shadow 值
+        type: variable-text
+        default: 0px 0px 0px 1px var(--divider-color)
     - 
         id: Editor
         title: Editor
@@ -1108,6 +1133,7 @@ body {
     --interactive-hover: hsl(calc(var(--accent-h)),
             calc(var(--accent-s) / 2),
             calc(100% - (100% - var(--accent-l)) / 3.6));
+    --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
 }
 
 .theme-dark {
@@ -1228,6 +1254,28 @@ body {
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 2.4));
+}
+
+
+.theme-dark.theme-dark-background-brighter {
+    --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 3.5));
+    --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 3.1));
+    --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 4));
+    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 4.2),
+            calc(1.25*var(--accent-l) / 3.7));
+    --background-tertiary: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 4.8),
+            calc(1.25*var(--accent-l) / 3));
+    --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 4.8),
+            calc(1.25*var(--accent-l) / 3), 0.6);
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 5.6),
+            calc(1.25*var(--accent-l) / 2.4));
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 5.6),
+            calc(1.25*var(--accent-l) / 2));
 }
 
 
@@ -1535,16 +1583,26 @@ body:not(.is-mobile) .horizontal-main-container {
     overflow: visible;
 }
 
+body {
+    --card-shadow-light: var(0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
+    --card-shadow-dark: var(0px 0px 0px 1px var(--divider-color));
+}
+
+
 body:not(.is-mobile) .workspace::before {
     content: " ";
     width: calc(100% - 44px);
     height: calc(100% - 44px);
     border-radius: 11px;
     background-color: var(--background-primary);
-    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
     position: absolute;
     bottom: 0px;
     right: 0px;
+}
+
+body:not(.is-mobile).theme-dark .workspace::before {
+    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
 }
 
 body:not(.is-mobile).is-popout-window .workspace::before {
@@ -1552,9 +1610,6 @@ body:not(.is-mobile).is-popout-window .workspace::before {
     height: calc(100% - 44px);
 }
 
-body:not(.is-mobile).theme-dark .workspace::before {
-    box-shadow: 0px 0px 0px 1px var(--divider-color);
-}
 
 .workspace-tab-header-container,
 .workspace-tabs.mod-top .workspace-tab-header-container,
@@ -2000,11 +2055,11 @@ body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
 
 body:not(.is-mobile).card-layout-open .workspace-tab-container {
     border-radius: 12px !important;
-    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
 body:not(.is-mobile).theme-dark.card-layout-open .workspace-tab-container {
-    box-shadow: 0px 0px 0px 1px var(--divider-color);
+    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
 }
 
 body:not(.is-mobile).card-layout-open .workspace-tabs,
@@ -2705,11 +2760,11 @@ input.prompt-input {
 
 /*====== 动效 ======*/
 .graph-controls:not(.is-close),
-body:not(.is-phone) .popover,
+body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
 body:not(.is-phone) .menu:not(.mk-style-menu),
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(.mod-settings),
-body:not(.is-phone) .suggestion-container {
+body:not(.is-phone) .suggestion-container:not(.svelte-1xg3ic1) {
     -webkit-animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
@@ -2843,6 +2898,11 @@ body.canvas-card-menu-right .canvas-card-menu {
 
 .canvas-controls button {
     border-bottom: 1px solid var(--divider-color);
+}
+
+/*search*/
+.nav-header~.search-input-container {
+    width: calc(100% - var(--size-4-6));
 }
 
 /* graph*/
