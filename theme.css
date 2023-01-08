@@ -33,8 +33,8 @@ settings:
         type: class-toggle
     - 
         id: card-layout-open
-        title: Open card layout
-        title.zh: 开启卡片式布局
+        title: Enable card layout
+        title.zh: 启用 卡片式布局
         type: class-toggle
     - 
         id: CTA-BTN-disable
@@ -196,7 +196,7 @@ settings:
 		default-dark: '#'
     - 
         id: mod-root-split-background-select
-        title: Middle bar background color
+        title: Middle space background color
         title.zh: 中间栏背景色
         type: class-select
         allowEmpty: false
@@ -914,8 +914,8 @@ settings:
         level: 3
     - 
         id: DB-table-full-width-off
-        title: Cancel full width table
-        title.zh: 取消全宽表格
+        title: Disable full width table
+        title.zh: 关闭 全宽表格
         type: class-toggle
     - 
         id: Surfing
