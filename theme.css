@@ -932,8 +932,8 @@ settings:
         type: class-toggle
     - 
         id: DB-table-bg-color-unify
-        title: Unify table background color
-        title.zh: 统一表格背景色
+        title: Unify background color
+        title.zh: 统一背景颜色
         type: class-toggle
     - 
         id: Surfing
@@ -2786,7 +2786,7 @@ body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
 body:not(.is-phone) .menu:not(.mk-style-menu),
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(.mod-settings),
-body:not(.is-phone) .suggestion-container:not(.svelte-1xg3ic1) {
+body:not(.is-phone) .suggestion-container.mod-search-suggestion {
     -webkit-animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
@@ -4545,6 +4545,7 @@ body.card-layout-pad-open{
 
 body.is-phone.drawer-phone-full-width .workspace-drawer {
     width: 100vw;
+    border-radius: 0px;
 }
 
 /*plugin support*/
@@ -4554,8 +4555,14 @@ body:not(.DB-table-full-width-off) .database-plugin__table {
     width: 100% !important;
 }
 
-body.DB-table-bg-color-unify .database-plugin__row-shadow {
-    background-color: transparent;
+body.DB-table-bg-color-unify .database-plugin__container {
+    --background-secondary: var(--background-primary);
+}
+
+body.DB-table-bg-color-unify .database-plugin__th:hover,
+body.DB-table-bg-color-unify .data-input:hover {
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.025);
+    --background-secondary: var(--background-modifier-hover);
 }
 
 /*style settings*/
