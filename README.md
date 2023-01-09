@@ -23,7 +23,7 @@ Your accent color setting will affect UI elements.
 
 ### Card layout
 
-Open in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 ![screenshot](img/card.png)
 
 ![screenshot](img/iPad.png)

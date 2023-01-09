@@ -142,6 +142,14 @@ settings:
         title.zh: 还原暗色模式下的强调色
         type: class-toggle
     - 
+        id: card-border-radius
+        title: Custom card border radius
+        title.zh: 自定义 卡片的圆角大小
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
+        type: variable-text
+        default: 12px
+    - 
         id: Color-customize
         title: customize color
         title.zh: 自定义颜色
@@ -896,8 +904,13 @@ settings:
         level: 2
     - 
         id: card-layout-pad-open
-        title: Open card layout (pad only)
+        title: Enable card layout (pad only)
         title.zh: 开启卡片式布局（平板端）
+        type: class-toggle
+    - 
+        id: drawer-phone-full-width
+        title: Side drawer full screen (phone only)
+        title.zh: 侧边抽屉全屏（手机端）
         type: class-toggle
     - 
         id: Plugin
@@ -916,6 +929,11 @@ settings:
         id: DB-table-full-width-off
         title: Disable full width table
         title.zh: 关闭 全宽表格
+        type: class-toggle
+    - 
+        id: DB-table-bg-color-unify
+        title: Unify table background color
+        title.zh: 统一表格背景色
         type: class-toggle
     - 
         id: Surfing
@@ -1550,27 +1568,27 @@ body:not(.is-mobile).is-popout-window .workspace {
 
 body:not(.is-mobile) .mod-top-left-space .workspace-tab-container,
 body.is-popout-window .workspace-tabs.mod-top-left-space>.workspace-tab-container {
-    border-top-left-radius: 12px !important;
+    border-top-left-radius: var(--card-border-radius, 12px) !important;
 }
 
 body:not(.is-mobile) .mod-top-right-space .workspace-tab-container {
-    border-top-right-radius: 12px;
+    border-top-right-radius: var(--card-border-radius, 12px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split {
-    border-bottom-left-radius: 12px;
+    border-bottom-left-radius: var(--card-border-radius, 12px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root,
 body:not(.is-mobile) .workspace-split.mod-right-split {
-    border-bottom-right-radius: 12px;
+    border-bottom-right-radius: var(--card-border-radius, 12px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
-    border-bottom-left-radius: 12px;
+    border-bottom-left-radius: var(--card-border-radius, 12px);
     overflow: hidden;
 }
 
@@ -1584,8 +1602,10 @@ body:not(.is-mobile) .horizontal-main-container {
 }
 
 body {
-    --card-shadow-light: var(0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
-    --card-shadow-dark: var(0px 0px 0px 1px var(--divider-color));
+    --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    --card-shadow-dark: 0px 0px 0px 1px var(--divider-color);
+    --card-border-radius: 12px;
+    --card-shadow-border-radius: calc(var(--card-border-radius) - 1px);
 }
 
 
@@ -1593,7 +1613,7 @@ body:not(.is-mobile) .workspace::before {
     content: " ";
     width: calc(100% - 44px);
     height: calc(100% - 44px);
-    border-radius: 11px;
+    border-radius: var(--card-shadow-border-radius, 11px);
     background-color: var(--background-primary);
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
     position: absolute;
@@ -1799,7 +1819,7 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     border-left: 1px solid var(--divider-color);
-    border-top-left-radius: 12px;
+    border-top-left-radius: var(--card-border-radius, 12px);
     background-color: var(--background-primary);
     box-shadow: var(--tab-stacked-shadow);
 }
@@ -2054,7 +2074,7 @@ body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
 }
 
 body:not(.is-mobile).card-layout-open .workspace-tab-container {
-    border-radius: 12px !important;
+    border-radius: var(--card-border-radius, 12px) !important;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
@@ -4174,6 +4194,12 @@ body {
     width: 32px;
 }
 
+.mod-left-split .workspace-tab-header .workspace-tab-header-inner,
+.mod-right-split .workspace-tab-header .workspace-tab-header-inner {
+    width: fit-content;
+    gap: 4px;
+}
+
 .workspace-tab-header-inner-icon svg,
 .workspace-tab-header-inner-icon,
 .sidebar-toggle-button svg,
@@ -4292,6 +4318,7 @@ svg.pane-layout,
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M19,3H5c-1.1,0-2,.9-2,2v14c0,1.1,.9,2,2,2h14c1.1,0,2-.9,2-2V5c0-1.1-.9-2-2-2Zm0,2v4H5V5h14ZM5,11H13v8H5V11Zm10,8V11h4v8h-4Z"/></svg>')
 }
 
+.workspace-tab-header-container svg.lucide-git-fork,
 .side-dock-ribbon-action svg.lucide-git-fork {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M18.5,3c-1.65,0-3,1.35-3,3,0,.5,.14,.97,.35,1.39l-1.12,1.3c-.66-.45-1.44-.69-2.24-.69-.74,0-1.43,.22-2.02,.57l-1.41-1.41c.28-.51,.43-1.07,.43-1.65,0-1.93-1.57-3.5-3.5-3.5s-3.5,1.57-3.5,3.5,1.57,3.5,3.5,3.5c.6,0,1.16-.17,1.65-.43l1.41,1.41c-.37,.61-.56,1.31-.57,2.02,0,1,.38,1.9,.98,2.6l-1.69,1.69,.02,.03c-.41-.21-.86-.32-1.32-.32-1.65,0-3,1.35-3,3s1.35,3,3,3,3-1.35,3-3c0-.48-.12-.92-.32-1.32l.02,.03,1.95-1.95c.42,.15,.87,.25,1.34,.25,2.21,0,4-1.79,4-4,0-.62-.15-1.23-.44-1.78l1.25-1.46c.36,.16,.76,.25,1.19,.25,1.65,0,3-1.35,3-3s-1.35-3-3-3h0ZM6.5,20c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29s.52,.11,.71,.29c.19,.19,.29,.44,.29,.71s-.11,.52-.29,.71c-.19,.19-.44,.29-.71,.29ZM4.5,5.5c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5-.67,1.5-1.5,1.5-1.5-.67-1.5-1.5ZM12.5,14c-1.1,0-2-.9-2-2s.9-2,2-2,2,.9,2,2-.9,2-2,2Zm6-7c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29s.52,.11,.71,.29c.19,.19,.29,.44,.29,.71s-.11,.52-.29,.71c-.19,.19-.44,.29-.71,.29Z"/></svg>');
@@ -4469,7 +4496,7 @@ body.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspa
 
 body.card-layout-pad-open.is-tablet .workspace-drawer {
     background-color: var(--background-primary);
-    border-radius: 12px !important;
+    border-radius: var(--card-border-radius, 12px) !important;
     overflow: hidden !important;
     margin: 16px;
     margin-bottom: 24px;
@@ -4477,7 +4504,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer {
 }
 
 body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
-    border-radius: 12px;
+    border-radius: var(--card-border-radius, 12px);
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
@@ -4492,7 +4519,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer.mod-left.is-pinned,
 body.card-layout-pad-open.is-tablet .workspace-drawer.mod-right.is-pinned {
     border-right: none;
     border-left: none;
-    border-radius: 12px !important;
+    border-radius: var(--card-border-radius, 12px) !important;
     margin: 0px;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
 }
@@ -4508,14 +4535,25 @@ body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
 
 /*
 body.card-layout-pad-open{
-    --background-mod-left-split:var(--background-primary)!important;;
+    --background-mod-left-split:var(--background-primary)!important;
 }*/
+
+
+/* drawer-phone-full-width */
+
+body.is-phone.drawer-phone-full-width .workspace-drawer {
+    width: 100vw;
+}
 
 /*plugin support*/
 
 /*DB folder*/
 body:not(.DB-table-full-width-off) .database-plugin__table {
     width: 100% !important;
+}
+
+body.DB-table-bg-color-unify .database-plugin__row-shadow {
+    background-color: transparent;
 }
 
 /*style settings*/
