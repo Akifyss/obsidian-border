@@ -249,6 +249,15 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+		id: canvas-background
+		title: Customize canvas background color
+        title.zh: 自定义 canvas 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
 		id: background-border
 		title: Customize BORDER background color
         title.zh: 自定义 BORDER 背景色
@@ -2897,6 +2906,7 @@ body:not(.is-phone) .modal.mod-community-modal {
 /* canvas 白板 */
 body {
     --canvas-dot-pattern: var(--color-base-30);
+    --canvas-background: transparent;
 }
 
 .canvas-menu {
@@ -2920,6 +2930,10 @@ body.canvas-card-menu-right .canvas-card-menu {
 
 .canvas-controls button {
     border-bottom: 1px solid var(--divider-color);
+}
+
+.canvas-wrapper {
+    background-color: var(--canvas-background);
 }
 
 /*search*/
@@ -4555,14 +4569,20 @@ body:not(.DB-table-full-width-off) .database-plugin__table {
     width: 100% !important;
 }
 
-body.DB-table-bg-color-unify .database-plugin__container {
-    --background-secondary: var(--background-primary);
+body.DB-table-bg-color-unify .database-plugin__navbar,
+body.DB-table-bg-color-unify .database-plugin__table {
+    --background-primary: transparent;
+    --background-secondary: transparent;
 }
 
 body.DB-table-bg-color-unify .database-plugin__th:hover,
 body.DB-table-bg-color-unify .data-input:hover {
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.025);
     --background-secondary: var(--background-modifier-hover);
+}
+
+.database-plugin__pagination-button:hover {
+    background-color: var(--interactive-hover);
 }
 
 /*style settings*/
@@ -4602,4 +4622,15 @@ body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"]
 
 body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"] .wb-view-content:has(.wb-bookmark-bar) .wb-frame {
     height: calc(100%);
+}
+
+
+/*make.md*/
+.mk-blink-preview {
+    border-color: var(--background-modifier-border);
+}
+
+.mk-blink-modal .mk-options-menu__search input {
+    border-bottom: 2px solid var(--color-accent);
+
 }
