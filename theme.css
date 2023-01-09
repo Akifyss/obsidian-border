@@ -148,7 +148,7 @@ settings:
         description: Input your border-radius value here
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
-        default: 12px
+        default: 8px
     - 
         id: Color-customize
         title: customize color
@@ -1577,27 +1577,27 @@ body:not(.is-mobile).is-popout-window .workspace {
 
 body:not(.is-mobile) .mod-top-left-space .workspace-tab-container,
 body.is-popout-window .workspace-tabs.mod-top-left-space>.workspace-tab-container {
-    border-top-left-radius: var(--card-border-radius, 12px) !important;
+    border-top-left-radius: var(--card-border-radius, 8px) !important;
 }
 
 body:not(.is-mobile) .mod-top-right-space .workspace-tab-container {
-    border-top-right-radius: var(--card-border-radius, 12px);
+    border-top-right-radius: var(--card-border-radius, 8px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split {
-    border-bottom-left-radius: var(--card-border-radius, 12px);
+    border-bottom-left-radius: var(--card-border-radius, 8px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root,
 body:not(.is-mobile) .workspace-split.mod-right-split {
-    border-bottom-right-radius: var(--card-border-radius, 12px);
+    border-bottom-right-radius: var(--card-border-radius, 8px);
     overflow: hidden;
 }
 
 body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
-    border-bottom-left-radius: var(--card-border-radius, 12px);
+    border-bottom-left-radius: var(--card-border-radius, 8px);
     overflow: hidden;
 }
 
@@ -1613,7 +1613,7 @@ body:not(.is-mobile) .horizontal-main-container {
 body {
     --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
     --card-shadow-dark: 0px 0px 0px 1px var(--divider-color);
-    --card-border-radius: 12px;
+    --card-border-radius: 8px;
     --card-shadow-border-radius: calc(var(--card-border-radius) - 1px);
 }
 
@@ -1622,8 +1622,8 @@ body:not(.is-mobile) .workspace::before {
     content: " ";
     width: calc(100% - 44px);
     height: calc(100% - 44px);
-    border-radius: var(--card-shadow-border-radius, 11px);
-    background-color: var(--background-primary);
+    border-radius: var(--card-shadow-border-radius, 7px);
+    background-color: transparent;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
     position: absolute;
     bottom: 0px;
@@ -1828,7 +1828,7 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     border-left: 1px solid var(--divider-color);
-    border-top-left-radius: var(--card-border-radius, 12px);
+    border-top-left-radius: var(--card-border-radius, 8px);
     background-color: var(--background-primary);
     box-shadow: var(--tab-stacked-shadow);
 }
@@ -2083,7 +2083,7 @@ body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
 }
 
 body:not(.is-mobile).card-layout-open .workspace-tab-container {
-    border-radius: var(--card-border-radius, 12px) !important;
+    border-radius: var(--card-border-radius, 8px) !important;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
@@ -3898,6 +3898,10 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
     border-radius: var(--radius-s);
 }
 
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:has(.mk-floweditor-container) {
+    background-color: transparent;
+}
+
 body:not(.line-active-disable).line-active-bg-color-accent .markdown-source-view .cm-scroller .cm-line.cm-active {
     --line-active-bg: hsla(var(--interactive-accent-hsl), 0.08);
 }
@@ -4512,7 +4516,7 @@ body.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspa
 
 body.card-layout-pad-open.is-tablet .workspace-drawer {
     background-color: var(--background-primary);
-    border-radius: var(--card-border-radius, 12px) !important;
+    border-radius: var(--card-border-radius, 8px) !important;
     overflow: hidden !important;
     margin: 16px;
     margin-bottom: 24px;
@@ -4520,7 +4524,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer {
 }
 
 body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
-    border-radius: var(--card-border-radius, 12px);
+    border-radius: var(--card-border-radius, 8px);
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
@@ -4531,17 +4535,15 @@ body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
 }
 
 
-body.card-layout-pad-open.is-tablet .workspace-drawer.mod-left.is-pinned,
-body.card-layout-pad-open.is-tablet .workspace-drawer.mod-right.is-pinned {
+body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-right: none;
     border-left: none;
-    border-radius: var(--card-border-radius, 12px) !important;
+    border-radius: var(--card-border-radius, 8px) !important;
     margin: 0px;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
 }
 
-body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.mod-left.is-pinned,
-body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.mod-right.is-pinned {
+body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
 }
 
