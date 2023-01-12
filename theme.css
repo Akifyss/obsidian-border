@@ -109,9 +109,9 @@ settings:
         collapsed: true
         level: 2
     - 
-        id: theme-light-background-style-select
-        title: Light mode background style
-        title.zh: 亮色模式背景风格
+        id: theme-light-style-select
+        title: Light mode style
+        title.zh: 亮色模式风格
         type: class-select
         allowEmpty: false
         default: theme-light-background-default
@@ -121,9 +121,9 @@ settings:
             -   label: colored
                 value: theme-light-background-adapt
     - 
-        id: theme-dark-background-style-select
-        title: Dark mode background style
-        title.zh: 暗色模式背景风格
+        id: theme-dark-style-select
+        title: Dark mode style
+        title.zh: 暗色模式风格
         type: class-select
         allowEmpty: false
         default: theme-dark-background-default
@@ -142,17 +142,9 @@ settings:
         title.zh: 还原暗色模式下的强调色
         type: class-toggle
     - 
-        id: card-border-radius
-        title: Custom card border radius
-        title.zh: 自定义 卡片的圆角大小
-        description: Input your border-radius value here
-        description.zh: 在这里输入你的 border-radius 值
-        type: variable-text
-        default: 8px
-    - 
-        id: Color-customize
-        title: customize color
-        title.zh: 自定义颜色
+        id: Background
+        title: Background
+        title.zh: 背景
         type: heading
         collapsed: true
         level: 3
@@ -168,6 +160,8 @@ settings:
                 value: mod-left-split-background-primary
             -   label: background-secondary (default)
                 value: mod-left-split-background-secondary
+            -   label: transparent (card layout only)
+                value: mod-left-split-background-transparent
             -   label: customize
                 value: mod-left-split-background-customize
     - 
@@ -191,6 +185,8 @@ settings:
                 value: mod-right-split-background-primary
             -   label: background-secondary
                 value: mod-right-split-background-secondary
+            -   label: transparent (card layout only)
+                value: mod-right-split-background-transparent
             -   label: customize
                 value: mod-right-split-background-customize
     - 
@@ -226,6 +222,119 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: background-underlying-select
+        title: underlying background
+        title.zh: 底层背景
+        type: class-select
+        allowEmpty: false
+        default: background-underlying-defalut
+        options:
+            -   label: defalut
+                value: background-underlying-defalut
+            -   label: customize background color
+                value: background-underlying-Color
+            -   label: customize CSS background
+                value: background-underlying-CSS
+    - 
+		id: background-underlying
+		title: Customize underlying background color
+        title.zh: 自定义底层背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: background-underlying-CSS-light
+        title: Customize underlying background (light mode)
+        title.zh: 自定义底层背景（亮色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: radial-gradient(100% 100% at 13% 50%, rgb(90, 109, 237) 0%, rgb(224, 218, 247) 100%), linear-gradient(6deg, rgb(235, 242, 252) 0%, rgb(90, 109, 237) 5%, rgb(166, 126, 241) 7%, rgb(224, 218, 247) 11%, rgb(90, 109, 237) 16%), radial-gradient(100% 100% at 60% 71%, rgb(224, 218, 247) 0%, rgb(219, 244, 255) 100%), linear-gradient(97deg, rgb(90, 109, 237) 0%, rgb(90, 109, 237) 23%, rgb(90, 109, 237) 53%), linear-gradient(351deg, rgb(235, 242, 252) 0%, rgb(219, 244, 255) 1%, rgb(235, 242, 252) 6%, rgb(224, 218, 247) 10%, rgb(166, 126, 241) 13%, rgb(235, 242, 252) 29%), radial-gradient(100% 100% at 10% 32%, rgb(90, 109, 237) 0%, rgb(219, 244, 255) 100%), radial-gradient(100% 100% at 35% 63%, rgb(224, 218, 247) 0%, rgb(224, 218, 247) 100%);
+    - 
+        id: background-underlying-CSS-blend-mode-light
+        title: Customize underlying background blend mode (light mode)
+        title.zh: 自定义底层背景混合模式（亮色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: overlay, color-burn;
+    - 
+        id: background-underlying-CSS-dark
+        title: Customize underlying background (dark mode)
+        title.zh: 自定义底层背景（暗色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
+    - 
+        id: background-underlying-CSS-blend-mode-dark
+        title: Customize underlying background blend mode (dark mode)
+        title.zh: 自定义底层背景混合模式（暗色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: soft-light, luminosity, hue, luminosity, hard-light;
+    - 
+        id: Card
+        title: Card
+        title.zh: 卡片
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-border-radius
+        title: Custom card border radius
+        title.zh: 自定义 卡片的圆角大小
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
+        type: variable-text
+        default: 8px
+    - 
+        id: card-shadow-light
+        title: Custom card shadow in light mode
+        title.zh: 自定义 亮色模式下的卡片阴影
+        description: Input your box-shadow value here
+        description.zh: 在这里输入你的 box-shadow 值
+        type: variable-text
+        default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
+    - 
+        id: card-shadow-dark
+        title: Custom card shadow in dark mode
+        title.zh: 自定义 暗色模式下的卡片阴影
+        description: Input your box-shadow value here
+        description.zh: 在这里输入你的 box-shadow 值
+        type: variable-text
+        default: 0px 0px 0px 1px var(--divider-color)
+    - 
+        id: Color-customize
+        title: customize color
+        title.zh: 自定义颜色
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: canvas-background
+		title: Customize canvas background color
+        title.zh: 自定义 canvas 背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: on-border
+		title: Customize the color of elements displayed directly on the underlying layer
+        title.zh: 自定义 直接显示在底层上的元素颜色
+        description: Includes top tab bar, ribbon menu and status bar
+        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: file-icon-color-select
         title: file and folder icon color in explorer
         title.zh: 文件管理器前置图标色
@@ -248,58 +357,6 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
-		id: canvas-background
-		title: Customize canvas background color
-        title.zh: 自定义 canvas 背景色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-		id: background-border
-		title: Customize BORDER background color
-        title.zh: 自定义 BORDER 背景色
-        description: Adjust or customize the background color of the app's outer border(Including top tab bar, ribbon menu and status bar)
-        description.zh: 调整或自定义app外边框（包括顶部标签栏、功能区菜单和状态栏）的背景颜色。
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-		id: on-border
-		title: Customize text & icon color on BORDER
-        title.zh: 自定义 BORDER 上的文字和图标颜色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: Shadow-customize
-        title: customize shadow
-        title.zh: 自定义阴影
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: card-shadow-light
-        title: Custom card shadow in light mode
-        title.zh: 自定义 亮色模式下的卡片阴影
-        description: Input your box-shadow value here
-        description.zh: 在这里输入你的 box-shadow 值
-        type: variable-text
-        default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
-    - 
-        id: card-shadow-dark
-        title: Custom card shadow in dark mode
-        title.zh: 自定义 暗色模式下的卡片阴影
-        description: Input your box-shadow value here
-        description.zh: 在这里输入你的 box-shadow 值
-        type: variable-text
-        default: 0px 0px 0px 1px var(--divider-color)
     - 
         id: Editor
         title: Editor
@@ -979,12 +1036,24 @@ body.h6-color-default .setting-item[data-id=h6-color],
 body.h6-color-designated .setting-item[data-id=h6-color],
 body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-split],
 body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-split],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-split],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-split],
 body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-split],
 body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-split],
 body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-split],
 body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-split],
 body.file-icon-color-accent .setting-item[data-id=file-icon-color],
-body.file-icon-color-currentColor .setting-item[data-id=file-icon-color] {
+body.file-icon-color-currentColor .setting-item[data-id=file-icon-color],
+body.background-underlying-defalut .setting-item[data-id=background-underlying],
+body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-light],
+body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-dark],
+body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-light],
+body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-dark],
+body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-blend-mode-light],
+body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
+body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-light],
+body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
+body.background-underlying-CSS .setting-item[data-id=background-underlying] {
     display: none;
 }
 
@@ -1040,7 +1109,7 @@ body {
     --modal-border-color: var(--divider-color);
     /* Color customize */
     --on-border: var(--color-accent-3);
-    --background-border: var(--background-tertiary);
+    --background-underlying: var(--background-tertiary);
     --background-mod-left-split: var(--background-secondary);
     --background-mod-right-split: var(--background-primary);
     --background-mod-root-split: var(--background-primary);
@@ -1235,7 +1304,8 @@ body {
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
-    --background-modifier-form-field: var(--background-tertiary);
+    /*--background-modifier-form-field: var(--background-tertiary);*/
+    --background-modifier-form-field: transparent;
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
@@ -1445,9 +1515,29 @@ body {
 
 /*----------workspace----------*/
 /* ====== background ===== */
+body {
+    --background-underlying-CSS-light: radial-gradient(100% 100% at 13% 50%, rgb(90, 109, 237) 0%, rgb(224, 218, 247) 100%), linear-gradient(6deg, rgb(235, 242, 252) 0%, rgb(90, 109, 237) 5%, rgb(166, 126, 241) 7%, rgb(224, 218, 247) 11%, rgb(90, 109, 237) 16%), radial-gradient(100% 100% at 60% 71%, rgb(224, 218, 247) 0%, rgb(219, 244, 255) 100%), linear-gradient(97deg, rgb(90, 109, 237) 0%, rgb(90, 109, 237) 23%, rgb(90, 109, 237) 53%), linear-gradient(351deg, rgb(235, 242, 252) 0%, rgb(219, 244, 255) 1%, rgb(235, 242, 252) 6%, rgb(224, 218, 247) 10%, rgb(166, 126, 241) 13%, rgb(235, 242, 252) 29%), radial-gradient(100% 100% at 10% 32%, rgb(90, 109, 237) 0%, rgb(219, 244, 255) 100%), radial-gradient(100% 100% at 35% 63%, rgb(224, 218, 247) 0%, rgb(224, 218, 247) 100%);
+    --background-underlying-CSS-dark: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
+    --background-underlying-CSS-blend-mode-light: overlay, color-burn;
+    --background-underlying-CSS-blend-mode-dark: soft-light, luminosity, hue, luminosity, hard-light;
+}
 
-.app-container {
-    background-color: var(--background-border);
+body.background-underlying-defalut {
+    --background-underlying: var(--background-tertiary) !important;
+}
+
+body:not(.is-mobile) .app-container {
+    background-color: var(--background-underlying);
+}
+
+body:not(.is-mobile).background-underlying-CSS .app-container {
+    background: var(--background-underlying-CSS-light, --background-underlying);
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-light);
+}
+
+body:not(.is-mobile).theme-dark.background-underlying-CSS .app-container {
+    background: var(--background-underlying-CSS-dark, --background-underlying);
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-dark);
 }
 
 body.mod-left-split-background-secondary {
@@ -1458,12 +1548,30 @@ body.mod-left-split-background-primary {
     --background-mod-left-split: var(--background-primary) !important;
 }
 
+body.mod-left-split-background-transparent.card-layout-open {
+    --background-mod-left-split: transparent !important;
+}
+
+body:not(.is-mobile).card-layout-open.mod-left-split-background-transparent .mod-left-split .workspace-tab-container {
+    --card-shadow-light: transparent;
+    --card-shadow-dark: transparent;
+}
+
 body.mod-right-split-background-primary {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
 body.mod-right-split-background-secondary {
     --background-mod-right-split: var(--background-secondary) !important;
+}
+
+body.mod-right-split-background-transparent.card-layout-open {
+    --background-mod-right-split: transparent !important;
+}
+
+body:not(.is-mobile).card-layout-open.mod-right-split-background-transparent .mod-right-split .workspace-tab-container {
+    --card-shadow-light: transparent;
+    --card-shadow-dark: transparent;
 }
 
 body.mod-root-split-background-primary {
@@ -2153,7 +2261,7 @@ body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tab-header-contain
 
 /* ====== titlebar ===== */
 body:not(.is-translucent) .titlebar-text {
-    background-color: var(--background-border);
+    background-color: var(--background-underlying);
     opacity: 1;
 }
 
@@ -3067,7 +3175,7 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 
 /*off scrollbar space occupancy, from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536  */
 
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
+body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view:not(.checklist-plugin-main), .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
     overflow-y: overlay !important;
 }
 
@@ -3393,7 +3501,7 @@ body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, 
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
 }
@@ -3478,7 +3586,7 @@ body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, 
 
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
 }
@@ -3561,7 +3669,7 @@ body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, 
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
 }
@@ -3645,7 +3753,7 @@ body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, 
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
 }
@@ -3730,7 +3838,7 @@ body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, 
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
 }
@@ -3817,7 +3925,7 @@ body:not(.h6-divider-off) :is(.markdown-rendered h6, .markdown-preview-view h6, 
 
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0.2em);
+    transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v.57h-1.11v-.57h-2.22v2.29h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v2.29c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Zm0,4.57v2.29h2.22v-2.29h-2.22Z"/></svg>')
 }
@@ -4492,15 +4600,15 @@ svg.pane-layout,
 
 /* tablet card layout */
 body.card-layout-pad-open.is-tablet {
-    --titlebar-background: var(--background-border);
-    --titlebar-background-focused: var(--background-border);
+    --titlebar-background: var(--background-underlying);
+    --titlebar-background-focused: var(--background-underlying);
 }
 
 body.card-layout-pad-open.is-tablet,
 body.card-layout-pad-open.is-tablet .app-container,
 body.card-layout-pad-open.is-tablet .workspace,
 body.card-layout-pad-open.is-tablet .horizontal-main-container {
-    background-color: var(--background-border) !important;
+    background-color: var(--background-underlying) !important;
 }
 
 body.card-layout-pad-open.is-tablet .workspace {
@@ -4627,12 +4735,58 @@ body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"]
 }
 
 
-/*make.md*/
+/* make.md */
 .mk-blink-preview {
     border-color: var(--background-modifier-border);
 }
 
 .mk-blink-modal .mk-options-menu__search input {
     border-bottom: 2px solid var(--color-accent);
+}
 
+/* checklist */
+.workspace .view-content .checklist-plugin-main {
+    padding: 16px 12px 0px;
+}
+
+.compact.svelte-sx5ktw>.content.svelte-sx5ktw {
+    --checklist-contentPadding--compact: 4px 2px;
+}
+
+li.svelte-sx5ktw.svelte-sx5ktw {
+    --checklist-listItemMargin: 0 0 8px;
+}
+
+svg.settings.button.svelte-9fjno5 {
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}.c{fill-rule:evenodd;}</style></defs><rect class="b" width="24" height="24"/><path d="M2,12c0-.86,.11-1.7,.32-2.5,.55,.03,1.1-.1,1.59-.36,.49-.26,.89-.66,1.17-1.14,.28-.48,.42-1.03,.4-1.58-.01-.55-.18-1.09-.48-1.56,1.21-1.19,2.7-2.05,4.34-2.51,.25,.49,.63,.91,1.11,1.2,.47,.29,1.01,.44,1.57,.44s1.1-.15,1.57-.44c.47-.29,.85-.7,1.11-1.2,1.63,.45,3.13,1.32,4.33,2.51-.3,.46-.47,1-.48,1.56-.01,.55,.12,1.1,.4,1.58,.28,.48,.68,.87,1.17,1.14,.49,.26,1.04,.39,1.59,.36,.42,1.64,.42,3.36,0,5.01-.55-.03-1.1,.09-1.59,.36-.49,.26-.89,.66-1.17,1.14-.28,.48-.42,1.03-.4,1.58,.01,.55,.18,1.09,.48,1.56-1.21,1.19-2.7,2.05-4.33,2.51-.25-.49-.63-.91-1.11-1.2-.47-.29-1.01-.44-1.57-.44s-1.1,.15-1.57,.44c-.47,.29-.85,.7-1.11,1.2-1.63-.45-3.13-1.32-4.34-2.51,.3-.46,.47-1,.48-1.56,.01-.55-.12-1.1-.4-1.58-.28-.48-.68-.87-1.17-1.14-.49-.26-1.04-.39-1.59-.36-.21-.82-.32-1.66-.32-2.5Zm4.8,3c.63,1.09,.81,2.35,.56,3.52,.41,.29,.84,.54,1.3,.75,.92-.82,2.1-1.27,3.34-1.27,1.26,0,2.44,.47,3.34,1.27,.45-.21,.89-.46,1.3-.75-.25-1.2-.05-2.46,.56-3.52,.61-1.07,1.6-1.87,2.77-2.25,.05-.5,.05-1,0-1.5-1.17-.38-2.16-1.18-2.77-2.25-.62-1.07-.82-2.32-.56-3.52-.41-.29-.84-.54-1.3-.75-.92,.82-2.1,1.27-3.33,1.27-1.23,0-2.42-.45-3.34-1.27-.45,.21-.89,.46-1.3,.75,.25,1.2,.05,2.46-.56,3.52-.61,1.07-1.6,1.87-2.77,2.25-.05,.5-.05,1,0,1.5,1.17,.38,2.16,1.18,2.77,2.25Z"/><path class="c" d="M12,14c1.1,0,2-.9,2-2s-.9-2-2-2-2,.9-2,2,.9,2,2,2Zm0,2c2.21,0,4-1.79,4-4s-1.79-4-4-4-4,1.79-4,4,1.79,4,4,4Z"/></svg>')
+}
+
+.checkbox.svelte-1wagsqu {
+    --checklist-checkboxSize: var(--checkbox-size);
+    --checklist-checkboxBorder: 1px solid var(--text-muted);
+    --checklist-checkboxCheckedSize: 10px;
+}
+
+.checked.svelte-1wagsqu {
+    top: calc(calc(var(--checklist-checkboxSize) - var(--checklist-checkboxCheckedSize) - 2) / 2) !important;
+    left: calc(calc(var(--checklist-checkboxSize) - var(--checklist-checkboxCheckedSize) - 2) / 2) !important;
+}
+
+.checklist-plugin-main .title {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.search.svelte-rdace4.svelte-rdace4 {
+    box-shadow: 0 0 0 1px var(--background-modifier-border);
+}
+
+.count.svelte-1tzpg3c {
+    --checklist-countBackground: transparent;
+    --checklist-countPadding: 0px
+}
+
+.svg.svelte-9fjno5 {
+    --checklist-iconSize: 20px
 }
