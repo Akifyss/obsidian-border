@@ -32,11 +32,6 @@ settings:
         description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
         type: class-toggle
     - 
-        id: card-layout-open
-        title: Enable card layout
-        title.zh: 启用 卡片式布局
-        type: class-toggle
-    - 
         id: CTA-BTN-disable
         title: Disable bigger "New note" button
         title.zh: 禁用 更大的“New Note”按钮
@@ -108,6 +103,11 @@ settings:
         type: heading
         collapsed: true
         level: 2
+    - 
+        id: card-layout-open
+        title: Enable card layout
+        title.zh: 启用 卡片式布局
+        type: class-toggle
     - 
         id: theme-light-style-select
         title: Light mode style
@@ -309,7 +309,7 @@ settings:
         default: 0px 0px 0px 1px var(--divider-color)
     - 
         id: Color-customize
-        title: customize color
+        title: Customize color
         title.zh: 自定义颜色
         type: heading
         collapsed: true
