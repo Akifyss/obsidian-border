@@ -4204,7 +4204,7 @@ body {
     --italic-color: var(--color-orange);
 }
 
-/* list */
+/* Lists */
 body {
     --list-indent: 2em;
     --list-spacing: 0.075em;
@@ -4264,6 +4264,37 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.Hy
     background-color: var(--list-marker-color);
 }
 
+li.is-collapsed .list-bullet:after,
+.is-collapsed~.cm-formatting-list .list-bullet:after {
+    background-color: var(--list-marker-color-collapsed) !important;
+}
+
+ol>li.is-collapsed::marker,
+ul>li.is-collapsed::marker,
+.cm-s-obsidian .is-collapsed~.cm-formatting-list {
+    color: var(--list-marker-color-collapsed) !important;
+}
+
+@media (hover: hover) {
+
+    .list-collapse-indicator:hover~.list-bullet:after,
+    .cm-fold-indicator:hover~.list-bullet:after,
+    .list-collapse-indicator:hover~.cm-formatting-list .list-bullet:after,
+    .cm-fold-indicator:hover~.cm-formatting-list .list-bullet:after {
+        background-color: var(--list-marker-color-hover) !important;
+    }
+
+    li.is-collapsed .list-collapse-indicator:hover~.list-bullet:after,
+    li.is-collapsed .cm-fold-indicator:hover~.list-bullet:after,
+    .list-collapse-indicator:hover.is-collapsed~.list-bullet:after,
+    .cm-fold-indicator:hover.is-collapsed~.list-bullet:after,
+    li.is-collapsed .list-collapse-indicator:hover~.cm-formatting-list .list-bullet:after,
+    li.is-collapsed .cm-fold-indicator:hover~.cm-formatting-list .list-bullet:after,
+    .list-collapse-indicator:hover.is-collapsed~.cm-formatting-list .list-bullet:after,
+    .cm-fold-indicator:hover.is-collapsed~.cm-formatting-list .list-bullet:after {
+        background-color: var(--list-marker-color-collapsed) !important;
+    }
+}
 
 /* ======划线文本样式 ====== */
 del,
