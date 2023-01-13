@@ -13,23 +13,23 @@ settings:
     - 
         id: tab-autohide
         title: Auto hide tab bar
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
         title.zh: 自动隐藏 tab栏
-        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
+        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
         type: class-toggle
     - 
         id: Ribbon-autohide
         title: Auto hide left ribbon menu
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
         title.zh: 自动隐藏 左侧功能区菜单
-        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
+        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
         type: class-toggle
     - 
         id: status-bar-autohide
         title: Auto hide bottom status bar
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later)
+        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
         title.zh: 自动隐藏 底部状态栏
-        description.zh: 鼠标悬停来唤出（需要obsidian 1.1.9 或之后的版本）
+        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
         type: class-toggle
     - 
         id: CTA-BTN-disable
@@ -229,7 +229,7 @@ settings:
         allowEmpty: false
         default: background-underlying-defalut
         options:
-            -   label: defalut
+            -   label: adapt to accent color(defalut)
                 value: background-underlying-defalut
             -   label: customize background color
                 value: background-underlying-Color
@@ -810,6 +810,43 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: Paragraph
+        title: Paragraph
+        title.zh: 段落
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: text-align-justify
+		title: Justify paragraph text
+		title.zh: 段落两端对齐
+		type: class-toggle
+		default: false
+	- 
+        id: line-height-customize
+        title: Paragraph line height
+        title.zh: 段落行高
+        type: variable-number
+        default: 1.5
+	- 
+		id: file-line-width-customize
+		title: Paragraph line width （Need to turn on “Readable line length”）
+        title.zh:  段落行宽（需开启“缩减栏宽”）
+		type: variable-text
+		default: 700px
+    - 
+		id: paragraph-spacing
+		title: Paragraph spacing (Reading mode)
+        title.zh:  段落间距（阅读模式）
+		type: variable-text
+		default: 1em
+    - 
+		id: paragraph-spacing-editing
+		title: Paragraph spacing (editing mode)
+        title.zh:  段落间距（编辑模式）
+		type: variable-text
+		default: 0em
+    - 
         id: Text
         title: Text
         title.zh: 文本
@@ -928,6 +965,61 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: Lists
+        title: Lists
+        title.zh: 列表
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: list-indent
+		title: list indent
+        title.zh:  列表缩进
+		type: variable-text
+		default: 2em
+    - 
+		id: list-spacing
+		title: list indent
+        title.zh:  列表间距
+		type: variable-text
+		default: 0.075em
+    - 
+		id: list-bullet-size
+		title: list marker size
+        title.zh: 列表标记大小
+		type: variable-text
+		default: 0.3em
+	- 
+		id: list-marker-color
+		title: list marker color
+        title.zh: 列表标记颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: list-marker-color-hover
+		title: list marker color (hover)
+        title.zh: 列表标记颜色（鼠标悬停时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: list-marker-color-collapsed
+		title: list marker color (collapsed)
+        title.zh: 列表标记颜色（折叠时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: ul-marker-restore
+		title: Restore default style of unordered list
+        title.zh: 恢复无序列表的默认样式
+		type: class-toggle
+		default: false
+    - 
         id: Tags
         title: Tags
         title.zh: 标签
@@ -1011,6 +1103,17 @@ settings:
         id: Surfing-bookmark-bar-hide
         title: Hide bookmark bar when browsing web
         title.zh: 浏览网页时隐藏书签栏
+        type: class-toggle
+    - 
+        id: Checklist
+        title: Checklist
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: colorful-checkbox
+        title: colorful checkbox
+        title.zh: 多彩选框
         type: class-toggle
 
 */
@@ -3353,6 +3456,69 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* ====== 编辑器 ====== */
+/* paragraph spacing */
+body {
+    --paragraph-spacing: 1em;
+    --paragraph-spacing-editing: 0em;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view blockquote,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ol,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view p,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul {
+    margin-block-start: var(--paragraph-spacing);
+    margin-block-end: var(--paragraph-spacing);
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ol ol,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ol ul,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ol,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em
+}
+
+.markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-codeblock) {
+    margin: 0 0 var(--paragraph-spacing-editing) !important;
+}
+
+/* line-width */
+body {
+    --file-line-width: 700px;
+    --file-line-width-customize: var(--file-line-width);
+}
+
+.document-search,
+.document-replace,
+.release-notes-view .is-readable-line-width,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-source-view.is-readable-line-width .CodeMirror {
+    max-width: var(--file-line-width-customize);
+}
+
+
+/* line-height */
+body {
+    --line-height-normal: 1.5;
+    --line-height-tight: 1.3;
+    --line-height-customize: var(--line-height-normal);
+}
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller {
+    line-height: var(--line-height-customize);
+}
+
+/* justify text */
+body.text-align-justify .markdown-source-view.mod-cm6 .cm-line,
+body.text-align-justify .markdown-preview-view p {
+    text-align: justify;
+    text-justify: auto;
+}
+
 
 /* ====== 标题样式 ====== */
 body {
@@ -3987,9 +4153,6 @@ body {
 
 
 
-
-
-
 /* ====== 当前行高亮 ====== */
 .theme-dark {
     --line-active-bg: rgba(255, 255, 255, 0.04);
@@ -4023,10 +4186,6 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
     padding-right: var(--size-4-1);
 }
 
-.markdown-rendered p {
-    margin: var(--size-4-1) 0;
-}
-
 /* ====== 光标颜色 ====== */
 :is(.markdown-source-view.mod-cm6 .cm-content, .mod-cm6 .cm-line, .fancy-cursor input.prompt-input) {
     caret-color: var(--text-accent);
@@ -4055,8 +4214,54 @@ body {
     --list-bullet-border: none;
     --list-bullet-radius: 50%;
     --list-bullet-size: 0.3em;
+    --list-bullet-size-alt: calc(var(--list-bullet-size) / 2);
     --list-bullet-transform: none;
     --list-numbered-style: decimal;
+}
+
+/* all */
+body:not(.ul-marker-restore) .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-rendered .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .list-bullet::after {
+    --list-bullet-radius: 50%;
+    --list-bullet-border: calc(var(--list-bullet-size) / 2) solid var(--list-marker-color);
+    width: var(--list-bullet-size-alt);
+    height: var(--list-bullet-size-alt);
+    background-color: transparent;
+}
+
+/* level 1 */
+body:not(.ul-marker-restore) .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
+    --list-bullet-radius: 50%;
+    --list-bullet-border: none;
+    width: var(--list-bullet-size);
+    height: var(--list-bullet-size);
+    background-color: var(--list-marker-color);
+}
+
+/* level 2 */
+body:not(.ul-marker-restore) .has-list-bullet .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent~span.cm-formatting .list-bullet::after {
+    --list-bullet-radius: 0;
+    --list-bullet-border: none;
+    width: var(--list-bullet-size);
+    height: var(--list-bullet-size);
+    background-color: var(--list-marker-color);
+}
+
+/* level 3 */
+body:not(.ul-marker-restore) .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent~span.cm-formatting .list-bullet::after {
+    --list-bullet-radius: 0;
+    --list-bullet-transform: rotate(45deg);
+    --list-bullet-border: none;
+    width: var(--list-bullet-size);
+    height: var(--list-bullet-size);
+    background-color: var(--list-marker-color);
 }
 
 
@@ -4754,7 +4959,9 @@ body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"]
 }
 
 li.svelte-sx5ktw.svelte-sx5ktw {
-    --checklist-listItemMargin: 0 0 8px;
+    --checklist-listItemMargin: 0 0 4px;
+    --checklist-listItemBackground: transparent;
+    --checklist-listItemBackground--hover: var(--background-modifier-hover);
 }
 
 svg.settings.button.svelte-9fjno5 {
@@ -4764,8 +4971,41 @@ svg.settings.button.svelte-9fjno5 {
 
 .checkbox.svelte-1wagsqu {
     --checklist-checkboxSize: var(--checkbox-size);
-    --checklist-checkboxBorder: 1px solid var(--text-muted);
-    --checklist-checkboxCheckedSize: 10px;
+    --checklist-checkboxBorder: 2px solid var(--text-muted);
+    --checklist-checkboxCheckedSize: 8px;
+    --checklist-listItemBorderRadius: var(--radius-s);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+1) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-red);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+2) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-green);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+3) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-orange);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+4) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-yellow);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+5) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-cyan);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+6) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-blue);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+7) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-purple);
+}
+
+body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+8) .checkbox.svelte-1wagsqu {
+    --checklist-checkboxBorder: 2px solid var(--color-pink);
 }
 
 .checked.svelte-1wagsqu {
@@ -4789,4 +5029,9 @@ svg.settings.button.svelte-9fjno5 {
 
 .svg.svelte-9fjno5 {
     --checklist-iconSize: 20px
+}
+
+.search.svelte-rdace4.svelte-rdace4 {
+    --checklist-searchBackground: transparent;
+    --checklist-listItemBorderRadius: var(--input-radius);
 }
