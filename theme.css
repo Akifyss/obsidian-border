@@ -210,6 +210,8 @@ settings:
                 value: mod-root-split-background-primary
             -   label: background-secondary
                 value: mod-root-split-background-secondary
+            -   label: transparent (card layout only)
+                value: mod-root-split-background-transparent
             -   label: customize
                 value: mod-root-split-background-customize
     - 
@@ -1141,6 +1143,7 @@ body.mod-left-split-background-primary .setting-item[data-id=background-mod-left
 body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-split],
 body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-split],
 body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-split],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-split],
 body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-split],
 body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-split],
 body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-split],
@@ -1685,13 +1688,22 @@ body.mod-root-split-background-secondary {
     --background-mod-root-split: var(--background-secondary) !important;
 }
 
+body.mod-root-split-background-transparent.card-layout-open {
+    --background-mod-root-split: transparent !important;
+}
+
+body:not(.is-mobile).card-layout-open.mod-root-split-background-transparent .mod-root .workspace-tab-container {
+    --card-shadow-light: transparent;
+    --card-shadow-dark: transparent;
+}
+
 body:not(.is-mobile) .workspace-split.mod-left-split .view-header,
 body:not(.is-mobile) .workspace-split.mod-left-split .view-content,
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf,
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf-content,
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top),
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background-color: var(--background-mod-left-split);
+    background: var(--background-mod-left-split);
 }
 
 body:not(.is-mobile) .workspace-split.mod-right-split .view-header,
@@ -1700,7 +1712,7 @@ body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf,
 body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf-content,
 body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top),
 body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background-color: var(--background-mod-right-split);
+    background: var(--background-mod-right-split);
 }
 
 body:not(.is-mobile) .workspace-split.mod-root .view-header,
@@ -1709,7 +1721,7 @@ body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf,
 body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf-content,
 body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top),
 body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-    background-color: var(--background-mod-root-split);
+    background: var(--background-mod-root-split);
 }
 
 .sidebar-toggle-button,
@@ -3478,8 +3490,14 @@ body {
     margin-block-end: 0em
 }
 
+/*
 .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-codeblock) {
     margin: 0 0 var(--paragraph-spacing-editing) !important;
+}*/
+
+.markdown-source-view :is(.cm-line + .cm-line) {
+    padding-top: calc(var(--paragraph-spacing-editing) / 2);
+    padding-bottom: calc(var(--paragraph-spacing-editing) / 2);
 }
 
 /* line-width */
