@@ -150,8 +150,8 @@ settings:
         level: 3
     - 
         id: mod-left-split-background-select
-        title: Left sidebar background color
-        title.zh: 左侧栏背景色
+        title: Left sidebar background
+        title.zh: 左侧栏背景
         type: class-select
         allowEmpty: false
         default: mod-left-split-background-secondary
@@ -162,8 +162,10 @@ settings:
                 value: mod-left-split-background-secondary
             -   label: transparent (card layout only)
                 value: mod-left-split-background-transparent
-            -   label: customize
+            -   label: customize color
                 value: mod-left-split-background-customize
+            -   label: customize CSS
+                value: mod-left-split-background-CSS
     - 
 		id: background-mod-left-split
 		title: Customize left sidebar background color
@@ -174,9 +176,57 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: background-mod-left-CSS-light
+        title: Left sidebar background (light mode)
+        title.zh: 左侧栏background（亮色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(255, 255, 255, 0.5);
+    - 
+        id: background-mod-left-CSS-blend-mode-light
+        title: Left sidebar background-blend-mode (light mode)
+        title.zh: 左侧栏background-blend-mode（亮色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-left-CSS-backdrop-filter-light
+        title: Left sidebar backdrop-filter (light mode)
+        title.zh: 左侧栏backdrop-filter（亮色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: background-mod-left-CSS-dark
+        title: Left sidebar background (dark mode)
+        title.zh: 左侧栏background（暗色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-left-CSS-blend-mode-dark
+        title: Left sidebar background-blend-mode (dark mode)
+        title.zh: 左侧栏background-blend-mode（暗色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-left-CSS-backdrop-filter-dark
+        title: Left sidebar backdrop-filter (dark mode)
+        title.zh: 左侧栏backdrop-filter（暗色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
         id: mod-right-split-background-select
-        title: Right sidebar background color
-        title.zh: 右侧栏背景色
+        title: Right sidebar background
+        title.zh: 右侧栏背景
         type: class-select
         allowEmpty: false
         default: mod-right-split-background-primary
@@ -187,8 +237,10 @@ settings:
                 value: mod-right-split-background-secondary
             -   label: transparent (card layout only)
                 value: mod-right-split-background-transparent
-            -   label: customize
+            -   label: customize color
                 value: mod-right-split-background-customize
+            -   label: customize CSS
+                value: mod-right-split-background-CSS
     - 
 		id: background-mod-right-split
 		title: Customize right sidebar background color
@@ -199,9 +251,57 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: background-mod-right-CSS-light
+        title: Right sidebar background (light mode)
+        title.zh: 右侧栏background（亮色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(255, 255, 255, 0.5);
+    - 
+        id: background-mod-right-CSS-blend-mode-light
+        title: Right sidebar background-blend-mode (light mode)
+        title.zh: 右侧栏background-blend-mode（亮色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-right-CSS-backdrop-filter-light
+        title: Right sidebar backdrop-filter (light mode)
+        title.zh: 右侧栏backdrop-filter（亮色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: background-mod-right-CSS-dark
+        title: Right sidebar background (dark mode)
+        title.zh: 右侧栏background（暗色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-right-CSS-blend-mode-dark
+        title: Right sidebar background-blend-mode (dark mode)
+        title.zh: 右侧栏background-blend-mode（暗色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-right-CSS-backdrop-filter-dark
+        title: Right sidebar backdrop-filter (dark mode)
+        title.zh: 右侧栏backdrop-filter（暗色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
         id: mod-root-split-background-select
-        title: Middle space background color
-        title.zh: 中间栏背景色
+        title: Middle space background
+        title.zh: 中间栏背景
         type: class-select
         allowEmpty: false
         default: mod-root-split-background-primary
@@ -212,17 +312,67 @@ settings:
                 value: mod-root-split-background-secondary
             -   label: transparent (card layout only)
                 value: mod-root-split-background-transparent
-            -   label: customize
+            -   label: customize color
                 value: mod-root-split-background-customize
+            -   label: customize CSS
+                value: mod-root-split-background-CSS
     - 
 		id: background-mod-root-split
-		title: Customize middle sidebar background color
+		title: Customize middle space background color
         title.zh: 自定义 中间栏 背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+    - 
+        id: background-mod-root-CSS-light
+        title: middle space background (light mode)
+        title.zh: 中间栏background（亮色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(255, 255, 255, 0.5);
+    - 
+        id: background-mod-root-CSS-blend-mode-light
+        title: middle space background-blend-mode (light mode)
+        title.zh: 中间栏background-blend-mode（亮色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-root-CSS-backdrop-filter-light
+        title: middle space backdrop-filter (light mode)
+        title.zh: 中间栏backdrop-filter（亮色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: background-mod-root-CSS-dark
+        title: middle space background (dark mode)
+        title.zh: 中间栏background（暗色模式）
+        description: Input CSS background value
+        description.zh: 输入 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-root-CSS-blend-mode-dark
+        title: middle space background-blend-mode (dark mode)
+        title.zh: 中间栏background-blend-mode（暗色模式）
+        description: Input CSS background-blend-mode value
+        description.zh: 输入 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-root-CSS-backdrop-filter-dark
+        title: middle space backdrop-filter (dark mode)
+        title.zh: 中间栏backdrop-filter（暗色模式）
+        description: Input CSS backdrop-filter value
+        description.zh: 输入 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
     - 
         id: background-underlying-select
         title: underlying background
@@ -233,14 +383,14 @@ settings:
         options:
             -   label: adapt to accent color(defalut)
                 value: background-underlying-defalut
-            -   label: customize background color
+            -   label: customize color
                 value: background-underlying-Color
-            -   label: customize CSS background
+            -   label: customize CSS
                 value: background-underlying-CSS
     - 
 		id: background-underlying
 		title: Customize underlying background color
-        title.zh: 自定义底层背景色
+        title.zh: 自定义 底层背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -248,32 +398,32 @@ settings:
 		default-dark: '#'
     - 
         id: background-underlying-CSS-light
-        title: Customize underlying background (light mode)
-        title.zh: 自定义底层背景（亮色模式）
+        title: underlying background (light mode)
+        title.zh: 底层background（亮色模式）
         description: Input CSS background value
         description.zh: 输入 CSS background 值
         type: variable-text
         default: radial-gradient(100% 100% at 13% 50%, rgb(90, 109, 237) 0%, rgb(224, 218, 247) 100%), linear-gradient(6deg, rgb(235, 242, 252) 0%, rgb(90, 109, 237) 5%, rgb(166, 126, 241) 7%, rgb(224, 218, 247) 11%, rgb(90, 109, 237) 16%), radial-gradient(100% 100% at 60% 71%, rgb(224, 218, 247) 0%, rgb(219, 244, 255) 100%), linear-gradient(97deg, rgb(90, 109, 237) 0%, rgb(90, 109, 237) 23%, rgb(90, 109, 237) 53%), linear-gradient(351deg, rgb(235, 242, 252) 0%, rgb(219, 244, 255) 1%, rgb(235, 242, 252) 6%, rgb(224, 218, 247) 10%, rgb(166, 126, 241) 13%, rgb(235, 242, 252) 29%), radial-gradient(100% 100% at 10% 32%, rgb(90, 109, 237) 0%, rgb(219, 244, 255) 100%), radial-gradient(100% 100% at 35% 63%, rgb(224, 218, 247) 0%, rgb(224, 218, 247) 100%);
     - 
         id: background-underlying-CSS-blend-mode-light
-        title: Customize underlying background blend mode (light mode)
-        title.zh: 自定义底层背景混合模式（亮色模式）
+        title: underlying background-blend-mode (light mode)
+        title.zh: 底层background-blend-mode（亮色模式）
         description: Input CSS background-blend-mode value
         description.zh: 输入 CSS background-blend-mode 值
         type: variable-text
         default: overlay, color-burn;
     - 
         id: background-underlying-CSS-dark
-        title: Customize underlying background (dark mode)
-        title.zh: 自定义底层背景（暗色模式）
+        title: underlying background (dark mode)
+        title.zh: 底层background（暗色模式）
         description: Input CSS background value
         description.zh: 输入 CSS background 值
         type: variable-text
         default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
     - 
         id: background-underlying-CSS-blend-mode-dark
-        title: Customize underlying background blend mode (dark mode)
-        title.zh: 自定义底层背景混合模式（暗色模式）
+        title: underlying background-blend-mode (dark mode)
+        title.zh: 底层background-blend-mode（暗色模式）
         description: Input CSS background-blend-mode value
         description.zh: 输入 CSS background-blend-mode 值
         type: variable-text
@@ -1159,7 +1309,82 @@ body.background-underlying-defalut .setting-item[data-id=background-underlying-C
 body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
 body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-light],
 body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
-body.background-underlying-CSS .setting-item[data-id=background-underlying] {
+body.background-underlying-CSS .setting-item[data-id=background-underlying],
+body.mod-root-split-background-CSS .setting-item[data-id=background-mod-root-split],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-left-split-background-CSS .setting-item[data-id=background-mod-left-split],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-right-split-background-CSS .setting-item[data-id=background-mod-right-split],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark] {
     display: none;
 }
 
@@ -1697,40 +1922,118 @@ body:not(.is-mobile).card-layout-open.mod-root-split-background-transparent .mod
     --card-shadow-dark: transparent;
 }
 
-body:not(.is-mobile) .workspace-split.mod-left-split .view-header,
-body:not(.is-mobile) .workspace-split.mod-left-split .view-content,
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf,
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf-content,
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top),
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+body {
+    --background-mod-root-CSS-light: rgba(255, 255, 255, 0.5);
+    --background-mod-root-CSS-dark: rgba(0, 0, 0, 0.5);
+    --background-mod-root-CSS-blend-mode-light: normal;
+    --background-mod-root-CSS-blend-mode-dark: normal;
+    --background-mod-root-CSS-backdrop-filter-light: blur(32px);
+    --background-mod-root-CSS-backdrop-filter-dark: blur(32px);
+    --background-mod-left-CSS-light: rgba(255, 255, 255, 0.5);
+    --background-mod-left-CSS-dark: rgba(0, 0, 0, 0.5);
+    --background-mod-left-CSS-blend-mode-light: normal;
+    --background-mod-left-CSS-blend-mode-dark: normal;
+    --background-mod-left-CSS-backdrop-filter-light: blur(32px);
+    --background-mod-left-CSS-backdrop-filter-dark: blur(32px);
+    --background-mod-right-CSS-light: rgba(255, 255, 255, 0.5);
+    --background-mod-right-CSS-dark: rgba(0, 0, 0, 0.5);
+    --background-mod-right-CSS-blend-mode-light: normal;
+    --background-mod-right-CSS-blend-mode-dark: normal;
+    --background-mod-right-CSS-backdrop-filter-light: blur(32px);
+    --background-mod-right-CSS-backdrop-filter-dark: blur(32px);
+}
+
+/*mod-left*/
+
+body:not(.is-mobile).card-layout-open .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-split);
 }
 
-body:not(.is-mobile) .workspace-split.mod-right-split .view-header,
-body:not(.is-mobile) .workspace-split.mod-right-split .view-content,
-body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf,
-body:not(.is-mobile) .workspace-split.mod-right-split .workspace-leaf-content,
-body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top),
-body:not(.is-mobile) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+body:not(.is-mobile).card-layout-open.mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-left-CSS-light);
+    background-blend-mode: var(--background-mod-left-CSS-blend-mode-light);
+    backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
+    -webkit-backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
+}
+
+body:not(.is-mobile).theme-dark.card-layout-open.mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-left-CSS-dark);
+    background-blend-mode: var(--background-mod-left-CSS-blend-mode-dark);
+    backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-dark);
+    -webkit-backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-dark);
+}
+
+
+/*mod-right*/
+
+body:not(.is-mobile).card-layout-open .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-split);
 }
 
-body:not(.is-mobile) .workspace-split.mod-root .view-header,
-body:not(.is-mobile) .workspace-split.mod-root .view-content,
-body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf,
-body:not(.is-mobile) .workspace-split.mod-root .workspace-leaf-content,
-body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top),
-body:not(.is-mobile) .workspace-split.mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+body:not(.is-mobile).card-layout-open.mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-right-CSS-light);
+    background-blend-mode: var(--background-mod-right-CSS-blend-mode-light);
+    backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
+    -webkit-backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
+}
+
+body:not(.is-mobile).theme-dark.card-layout-open.mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-right-CSS-dark);
+    background-blend-mode: var(--background-mod-right-CSS-blend-mode-dark);
+    backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-dark);
+    -webkit-backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-dark);
+}
+
+/*mod-root*/
+
+body:not(.is-mobile).card-layout-open .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-split);
 }
 
+body:not(.is-mobile).card-layout-open.mod-root-split-background-CSS .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-root-CSS-light);
+    background-blend-mode: var(--background-mod-root-CSS-blend-mode-light);
+    backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
+    -webkit-backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
+}
+
+body:not(.is-mobile).theme-dark.card-layout-open.mod-root-split-background-CSS .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+    background: var(--background-mod-root-CSS-dark);
+    background-blend-mode: var(--background-mod-root-CSS-blend-mode-dark);
+    backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-dark);
+    -webkit-backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-dark);
+}
+
+
+body:not(.is-mobile) .workspace-leaf,
+body:not(.is-mobile) .workspace-leaf-content,
+body:not(.is-mobile) .view-header,
+body:not(.is-mobile) .view-content,
 .sidebar-toggle-button,
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active,
 .workspace-tabs.mod-top .workspace-tab-header-container,
-body:not(.is-translucent):not(.is-mobile) .mod-left-split .mod-top .workspace-tab-header-container,
+body:not(.is-translucent):not(.is-mobile) .workspace-tab-header-container,
 .workspace>.workspace-split,
 .workspace-tabs.mod-top {
     background-color: transparent !important;
@@ -1753,12 +2056,21 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     box-shadow: none;
 }
 
+/*view-header gradient*/
 body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
     background: linear-gradient(to right, transparent, var(--background-mod-left-split));
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
     background: linear-gradient(to right, var(--background-mod-left-split), transparent);
+}
+
+body:not(.is-mobile).mod-left-split-background-CSS .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, transparent);
+}
+
+body:not(.is-mobile).mod-left-split-background-CSS .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, transparent, transparent);
 }
 
 body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
@@ -1769,6 +2081,13 @@ body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-contain
     background: linear-gradient(to right, var(--background-mod-right-split), transparent);
 }
 
+body:not(.is-mobile).mod-right-split-background-CSS .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, transparent);
+}
+
+body:not(.is-mobile).mod-right-split-background-CSS .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, transparent, transparent);
+}
 
 body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
     background: linear-gradient(to right, transparent, var(--background-mod-root-split));
@@ -1776,6 +2095,39 @@ body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(
 
 body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before {
     background: linear-gradient(to right, var(--background-mod-root-split), transparent);
+}
+
+body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
+    background: linear-gradient(to right, transparent, transparent);
+}
+
+body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, transparent, transparent);
+}
+
+/*divider effect*/
+body:not(.is-mobile) .mod-left-split .backlink-pane,
+body:not(.is-mobile) .mod-left-split .item-list,
+body:not(.is-mobile) .mod-left-split .nav-files-container,
+body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
+body:not(.is-mobile) .mod-left-split .tag-container,
+body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+    background: linear-gradient(var(--background-mod-left-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
+}
+
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .backlink-pane,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .item-list,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .nav-files-container,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .outgoing-link-pane,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .tag-container,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
 }
 
 /* ====== Layout ===== */
@@ -2017,18 +2369,7 @@ body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-he
 }
 
 
-/*divider effect*/
-body:not(.is-mobile) .mod-left-split .backlink-pane,
-body:not(.is-mobile) .mod-left-split .item-list,
-body:not(.is-mobile) .mod-left-split .nav-files-container,
-body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body:not(.is-mobile) .mod-left-split .tag-container,
-body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
-    background: linear-gradient(var(--background-mod-left-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
+
 
 /* ====== stack mod Correction===== */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
@@ -2288,7 +2629,7 @@ body:not(.card-layout-open).is-translucent .workspace-split.mod-root .workspace-
 }
 
 
-/*card-layout*/
+/* card layout */
 body:not(.is-mobile).card-layout-open .workspace::before {
     display: none;
 }
