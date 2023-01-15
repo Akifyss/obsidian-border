@@ -186,48 +186,48 @@ settings:
         id: background-mod-left-CSS-light
         title: Left sidebar background (light mode)
         title.zh: 左侧栏background（亮色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-left-CSS-blend-mode-light
         title: Left sidebar background-blend-mode (light mode)
         title.zh: 左侧栏background-blend-mode（亮色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-left-CSS-backdrop-filter-light
         title: Left sidebar backdrop-filter (light mode)
         title.zh: 左侧栏backdrop-filter（亮色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: background-mod-left-CSS-dark
         title: Left sidebar background (dark mode)
         title.zh: 左侧栏background（暗色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-left-CSS-blend-mode-dark
         title: Left sidebar background-blend-mode (dark mode)
         title.zh: 左侧栏background-blend-mode（暗色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-left-CSS-backdrop-filter-dark
         title: Left sidebar backdrop-filter (dark mode)
         title.zh: 左侧栏backdrop-filter（暗色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
@@ -268,48 +268,48 @@ settings:
         id: background-mod-right-CSS-light
         title: Right sidebar background (light mode)
         title.zh: 右侧栏background（亮色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-right-CSS-blend-mode-light
         title: Right sidebar background-blend-mode (light mode)
         title.zh: 右侧栏background-blend-mode（亮色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-right-CSS-backdrop-filter-light
         title: Right sidebar backdrop-filter (light mode)
         title.zh: 右侧栏backdrop-filter（亮色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: background-mod-right-CSS-dark
         title: Right sidebar background (dark mode)
         title.zh: 右侧栏background（暗色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-right-CSS-blend-mode-dark
         title: Right sidebar background-blend-mode (dark mode)
         title.zh: 右侧栏background-blend-mode（暗色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-right-CSS-backdrop-filter-dark
         title: Right sidebar backdrop-filter (dark mode)
         title.zh: 右侧栏backdrop-filter（暗色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
@@ -350,48 +350,48 @@ settings:
         id: background-mod-root-CSS-light
         title: middle space background (light mode)
         title.zh: 中间栏background（亮色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-root-CSS-blend-mode-light
         title: middle space background-blend-mode (light mode)
         title.zh: 中间栏background-blend-mode（亮色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-root-CSS-backdrop-filter-light
         title: middle space backdrop-filter (light mode)
         title.zh: 中间栏backdrop-filter（亮色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: background-mod-root-CSS-dark
         title: middle space background (dark mode)
         title.zh: 中间栏background（暗色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-root-CSS-blend-mode-dark
         title: middle space background-blend-mode (dark mode)
         title.zh: 中间栏background-blend-mode（暗色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-root-CSS-backdrop-filter-dark
         title: middle space backdrop-filter (dark mode)
         title.zh: 中间栏backdrop-filter（暗色模式）
-        description: Input CSS backdrop-filter value
-        description.zh: 输入 CSS backdrop-filter 值
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
@@ -428,32 +428,32 @@ settings:
         id: background-underlying-CSS-light
         title: underlying background (light mode)
         title.zh: 底层background（亮色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: radial-gradient(100% 100% at 13% 50%, rgb(90, 109, 237) 0%, rgb(224, 218, 247) 100%), linear-gradient(6deg, rgb(235, 242, 252) 0%, rgb(90, 109, 237) 5%, rgb(166, 126, 241) 7%, rgb(224, 218, 247) 11%, rgb(90, 109, 237) 16%), radial-gradient(100% 100% at 60% 71%, rgb(224, 218, 247) 0%, rgb(219, 244, 255) 100%), linear-gradient(97deg, rgb(90, 109, 237) 0%, rgb(90, 109, 237) 23%, rgb(90, 109, 237) 53%), linear-gradient(351deg, rgb(235, 242, 252) 0%, rgb(219, 244, 255) 1%, rgb(235, 242, 252) 6%, rgb(224, 218, 247) 10%, rgb(166, 126, 241) 13%, rgb(235, 242, 252) 29%), radial-gradient(100% 100% at 10% 32%, rgb(90, 109, 237) 0%, rgb(219, 244, 255) 100%), radial-gradient(100% 100% at 35% 63%, rgb(224, 218, 247) 0%, rgb(224, 218, 247) 100%);
     - 
         id: background-underlying-CSS-blend-mode-light
         title: underlying background-blend-mode (light mode)
         title.zh: 底层background-blend-mode（亮色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: overlay, color-burn;
     - 
         id: background-underlying-CSS-dark
         title: underlying background (dark mode)
         title.zh: 底层background（暗色模式）
-        description: Input CSS background value
-        description.zh: 输入 CSS background 值
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
     - 
         id: background-underlying-CSS-blend-mode-dark
         title: underlying background-blend-mode (dark mode)
         title.zh: 底层background-blend-mode（暗色模式）
-        description: Input CSS background-blend-mode value
-        description.zh: 输入 CSS background-blend-mode 值
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: soft-light, luminosity, hue, luminosity, hard-light;
     - 
@@ -487,6 +487,54 @@ settings:
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
         default: 0px 0px 0px 1px var(--divider-color)
+    - 
+        id: Tabs
+        title: Tabs
+        title.zh: Tabs
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: color-tab-header
+		title: activated Tab header color
+        title.zh: 已激活Tab的标题颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: background-tab-header-light
+        title: activated Tab header background(light mode)
+        title.zh: 已激活Tab的标题背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: var(--background-primary)
+    - 
+        id: shadow-tab-header-light
+        title: activated Tab header shadow(light mode)
+        title.zh: 已激活Tab的标题阴影（亮色模式）
+        description: Input any CSS box-shadow value
+        description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2)
+    - 
+        id: background-tab-header-dark
+        title: activated Tab header background(dark mode)
+        title.zh: 已激活Tab的标题背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: var(--background-modifier-active-hover)
+    - 
+        id: shadow-tab-header-dark
+        title: activated Tab header shadow(dark mode)
+        title.zh: 已激活Tab的标题阴影（暗色模式）
+        description: Input any CSS box-shadow value
+        description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: inset 0 0 0 1px var(--divider-color)
     - 
         id: Color-customize
         title: Customize color
@@ -2152,6 +2200,64 @@ body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .vi
     background: linear-gradient(to right, transparent, transparent);
 }
 
+/* tab */
+body {
+    --color-tab-header: var(--text-normal);
+    --background-tab-header-light: var(--background-primary);
+    --shadow-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
+    --shadow-tab-header-light-alt: var(--shadow-tab-header-light), 0 0 0 1px var(--divider-color);
+    --background-tab-header-dark: var(--background-modifier-active-hover);
+    --shadow-tab-header-dark: inset 0 0 0 1px var(--divider-color);
+}
+
+.theme-dark .workspace-tab-header-inner {
+    --background-modifier-active-hover: hsla(var(--accent-h),
+            calc(var(--accent-s) * 0.64),
+            calc(var(--accent-l) * 1.125), 0.15);
+}
+
+.theme-light .workspace-tab-header-inner {
+    --background-modifier-active-hover: hsla(var(--accent-h),
+            calc(var(--accent-s)),
+            calc(var(--accent-l) * 0.15), 0.075);
+}
+
+
+.workspace-tab-header.is-active :is(.workspace-tab-header-inner-icon, .workspace-tab-header-inner-title) {
+    color: var(--color-tab-header) !important;
+}
+
+body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background: var(--background-tab-header-light);
+    box-shadow: var(--shadow-tab-header-light);
+    border-radius: 6px;
+}
+
+body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: var(--shadow-tab-header-light-alt);
+}
+
+body:not(.is-mobile).theme-light:not(.is-translucent).card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: var(--shadow-tab-header-light) !important;
+}
+
+body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+    box-shadow: var(--shadow-tab-header-dark);
+    background: var(--background-tab-header-dark);
+}
+
+/*---*/
+body:not(.is-mobile).is-translucent .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner,
+body:not(.is-mobile).is-translucent.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background: var(--background-modifier-active-hover);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
+}
+
+.is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
+    background: var(--background-modifier-active-hover);
+    box-shadow: inset 0 0 0 1px var(--divider-color);
+}
+
 /*divider effect*/
 body:not(.is-mobile) .mod-left-split .backlink-pane,
 body:not(.is-mobile) .mod-left-split .item-list,
@@ -2239,7 +2345,6 @@ body {
     --card-shadow-border-radius: calc(var(--card-border-radius) - 1px);
 }
 
-
 body:not(.is-mobile) .workspace::before {
     content: " ";
     width: calc(100% - 44px);
@@ -2272,9 +2377,6 @@ body:not(.is-mobile) .workspace-ribbon {
     padding: 6px 4px 0px;
 }
 
-body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--divider-color);
-}
 
 .workspace-tabs {
     gap: 4px;
@@ -2283,7 +2385,6 @@ body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split
 .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: 1px solid var(--divider-color);
 }
-
 
 .workspace-tabs.mod-top .workspace-tab-header {
     color: var(--on-border) !important;
@@ -2337,54 +2438,8 @@ body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split
     overflow-y: visible;
 }
 
-
-.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-primary);
-    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
-    border-radius: 6px;
-}
-
 .workspace-tab-header {
     cursor: var(--cursor);
-}
-
-.mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-primary);
-    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
-    border-radius: 6px;
-    color: var(--text-normal);
-    --icon-color: var(--text-normal);
-    --icon-color-hover: var(--text-normal);
-    --icon-color-active: var(--text-normal);
-    --icon-color-focused: var(--text-normal);
-    --icon-opacity: 1;
-    --icon-opacity-hover: 1;
-    --icon-opacity-active: 1;
-}
-
-body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--divider-color);
-}
-
-.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: inset 0 0 0 1px var(--divider-color);
-}
-
-.theme-dark .workspace-tab-header-inner {
-    --background-modifier-active-hover: hsla(var(--accent-h),
-            calc(var(--accent-s) * 0.64),
-            calc(var(--accent-l) * 1.125), 0.15);
-}
-
-.theme-light .workspace-tab-header-inner {
-    --background-modifier-active-hover: hsla(var(--accent-h),
-            calc(var(--accent-s)),
-            calc(var(--accent-l) * 0.15), 0.075);
-}
-
-.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: inset 0 0 0 1px var(--divider-color);
-    background-color: var(--background-modifier-active-hover);
 }
 
 .nav-header {
@@ -2647,10 +2702,6 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
 }
 
 
-.is-translucent .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
-}
 
 
 .is-translucent .workspace .mod-root .workspace-tab-header-inner::after {
@@ -2718,14 +2769,7 @@ body:not(.is-mobile).card-layout-open .workspace-tabs:not(.mod-top) .workspace-t
     border-top: unset;
 }
 
-body:not(.is-mobile):not(.is-translucent).theme-light.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2) !important;
-}
 
-body:not(.is-mobile).is-translucent.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
-}
 
 body:not(.is-mobile).card-layout-open .workspace-tab-header {
     color: var(--on-border) !important;
@@ -5204,10 +5248,6 @@ body.is-mobile .workspace-split.mod-root .view-content {
     background-color: var(--background-primary);
 }
 
-.is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background-color: var(--background-modifier-active-hover);
-    box-shadow: inset 0 0 0 1px var(--divider-color);
-}
 
 .is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
     background-color: var(--background-tertiary);
