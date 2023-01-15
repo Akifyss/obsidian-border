@@ -987,17 +987,23 @@ settings:
 		type: variable-text
 		default: 700px
     - 
+		id: paragraph-spacing-editing
+		title: Paragraph spacing (editing mode)
+        title.zh:  段落间距（编辑模式）
+		type: variable-text
+		default: 0em
+    - 
 		id: paragraph-spacing
 		title: Paragraph spacing (Reading mode)
         title.zh:  段落间距（阅读模式）
 		type: variable-text
 		default: 1em
     - 
-		id: paragraph-spacing-editing
-		title: Paragraph spacing (editing mode)
-        title.zh:  段落间距（编辑模式）
-		type: variable-text
-		default: 0em
+		id: paragraph-spacing-br
+		title: Paragraph spacing also takes effect after a line break (Reading mode)
+		title.zh: 段间距也会对换行后的内容生效（阅读模式）
+		type: class-toggle
+		default: false
     - 
         id: Text
         title: Text
@@ -3829,6 +3835,12 @@ body {
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ul {
     margin-block-start: 0em;
     margin-block-end: 0em
+}
+
+body.paragraph-spacing-br :is(.markdown-preview-view, .markdown-rendered) p>br {
+    content: " ";
+    margin-top: var(--paragraph-spacing);
+    display: block;
 }
 
 /*
