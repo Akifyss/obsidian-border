@@ -149,6 +149,13 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: mod-left-split-background-header
+        title: Left sidebar background
+        title.zh: 左侧栏背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
         id: mod-left-split-background-select
         title: Left sidebar background
         title.zh: 左侧栏背景
@@ -223,6 +230,13 @@ settings:
         description.zh: 输入 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
+    - 
+        id: mod-right-split-background-header
+        title: Right sidebar background
+        title.zh: 右侧栏背景
+        type: heading
+        collapsed: ture
+        level: 4
     - 
         id: mod-right-split-background-select
         title: Right sidebar background
@@ -299,6 +313,13 @@ settings:
         type: variable-text
         default: blur(32px);
     - 
+        id: mod-root-split-background-header
+        title: Middle space background
+        title.zh: 中间栏背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
         id: mod-root-split-background-select
         title: Middle space background
         title.zh: 中间栏背景
@@ -373,6 +394,13 @@ settings:
         description.zh: 输入 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
+    - 
+        id: underlying-background-header
+        title: underlying background
+        title.zh: 底层背景
+        type: heading
+        collapsed: ture
+        level: 4
     - 
         id: background-underlying-select
         title: underlying background
@@ -1001,7 +1029,7 @@ settings:
     - 
 		id: paragraph-spacing-br
 		title: Paragraph spacing also takes effect after a line break (Reading mode)
-		title.zh: 段间距也会对换行后的内容生效（阅读模式）
+		title.zh: 段间距也对换行后的内容生效（阅读模式）
 		type: class-toggle
 		default: false
     - 
@@ -1889,6 +1917,10 @@ body.mod-left-split-background-transparent.card-layout-open {
     --background-mod-left-split: transparent !important;
 }
 
+body.mod-left-split-background-transparent:not(.card-layout-open) {
+    --background-mod-left-split: var(--background-secondary) !important;
+}
+
 body:not(.is-mobile).card-layout-open.mod-left-split-background-transparent .mod-left-split .workspace-tab-container {
     --card-shadow-light: transparent;
     --card-shadow-dark: transparent;
@@ -1904,6 +1936,10 @@ body.mod-right-split-background-secondary {
 
 body.mod-right-split-background-transparent.card-layout-open {
     --background-mod-right-split: transparent !important;
+}
+
+body.mod-right-split-background-transparent:not(.card-layout-open) {
+    --background-mod-right-split: var(--background-primary) !important;
 }
 
 body:not(.is-mobile).card-layout-open.mod-right-split-background-transparent .mod-right-split .workspace-tab-container {
@@ -1923,7 +1959,15 @@ body.mod-root-split-background-transparent.card-layout-open {
     --background-mod-root-split: transparent !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-root-split-background-transparent .mod-root .workspace-tab-container {
+body.mod-root-split-background-transparent:not(.card-layout-open) {
+    --background-mod-root-split: var(--background-primary) !important;
+}
+
+body:is(.mod-root-split-background-transparent, .mod-root-split-background-CSS) .mod-stacked {
+    --background-mod-root-split: var(--background-primary) !important;
+}
+
+body:not(.is-mobile).card-layout-open.mod-root-split-background-transparent .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
     --card-shadow-light: transparent;
     --card-shadow-dark: transparent;
 }
@@ -1950,7 +1994,6 @@ body {
 }
 
 /*mod-left*/
-
 body:not(.is-mobile).card-layout-open .workspace-split.mod-left-split .workspace-tab-container,
 body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
 body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
@@ -1977,7 +2020,6 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background
 
 
 /*mod-right*/
-
 body:not(.is-mobile).card-layout-open .workspace-split.mod-right-split .workspace-tab-container,
 body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
 body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
@@ -2029,15 +2071,13 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background
 }
 
 
-body:not(.is-mobile) .workspace-leaf,
-body:not(.is-mobile) .workspace-leaf-content,
-body:not(.is-mobile) .view-header,
-body:not(.is-mobile) .view-content,
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-header,
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content,
 .sidebar-toggle-button,
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
-.mod-left-split .workspace-tab-header.is-active,
-.mod-right-split .workspace-tab-header.is-active,
 .workspace-tabs.mod-top .workspace-tab-header-container,
 body:not(.is-translucent):not(.is-mobile) .workspace-tab-header-container,
 .workspace>.workspace-split,
@@ -2057,9 +2097,10 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
     background-color: transparent;
 }
 
-.workspace-tab-header.is-active {
-    background-color: transparent;
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+    background-color: transparent !important;
     box-shadow: none;
+    overflow: visible;
 }
 
 /*view-header gradient*/
@@ -2296,9 +2337,6 @@ body.left-sidebar-background-primary:not(.is-mobile).theme-light .mod-left-split
     overflow-y: visible;
 }
 
-.workspace-tab-header.is-active.mod-active {
-    overflow: visible;
-}
 
 .theme-light .workspace-tab-header.is-active .workspace-tab-header-inner {
     background-color: var(--background-primary);
@@ -2375,9 +2413,11 @@ body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-he
 }
 
 
-
-
 /* ====== stack mod Correction===== */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container :is(.workspace-tab-header, .workspace-tab-header-inner, .view-header, .view-content) {
+    background-color: var(--background-mod-root-split);
+}
+
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
     width: 22px;
     height: 22px;
@@ -2392,14 +2432,12 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
-    background-color: var(--background-primary);
     box-shadow: none;
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     border-left: 1px solid var(--divider-color);
     border-top-left-radius: var(--card-border-radius, 8px);
-    background-color: var(--background-primary);
     box-shadow: var(--tab-stacked-shadow);
 }
 
@@ -2654,6 +2692,7 @@ body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
 
 body:not(.is-mobile).card-layout-open .workspace-tab-container {
     border-radius: var(--card-border-radius, 8px) !important;
+    overflow: hidden !important;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
@@ -2679,7 +2718,7 @@ body:not(.is-mobile).card-layout-open .workspace-tabs:not(.mod-top) .workspace-t
     border-top: unset;
 }
 
-body:not(.is-mobile):not(.is-translucent).theme-light.card-layout-open .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:not(.is-mobile):not(.is-translucent).theme-light.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2) !important;
 }
 
@@ -5156,8 +5195,8 @@ svg.pane-layout,
     background-color: var(--background-mod-right-split);
 }
 
-.workspace-split.mod-root .view-header,
-.workspace-split.mod-root .view-content {
+body.is-mobile .workspace-split.mod-root .view-header,
+body.is-mobile .workspace-split.mod-root .view-content {
     background-color: var(--background-mod-root-split);
 }
 
