@@ -3643,14 +3643,14 @@ body.canvas-card-menu-right .canvas-card-menu {
 /* scrollbar 滚动条*/
 body {
     /* Scrollbars */
-    --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.2);
+    --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.15);
     --scrollbar-bg: rgba(var(--mono-rgb-100), 0);
     --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.15);
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
 }
 
 body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar {
@@ -3679,9 +3679,9 @@ body:not(.native-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0px;
+    -webkit-border-radius: var(--radius-l);
     border: 2px solid transparent;
-    border-width: 3px 0px 0px 3px;
+    border-width: 0px 3px 0px 3px;
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
