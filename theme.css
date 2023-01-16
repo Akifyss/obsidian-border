@@ -619,7 +619,7 @@ settings:
             -   label:  customize
                 value: line-active-bg-color-customize
     - 
-		id: line-active-customize
+		id: line-active-bg-customize
 		title: Customize Active line background color
         title.zh: 自定义行高亮背景颜色
 		type: variable-themed-color
@@ -1120,6 +1120,30 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: text-normal
+		title: text-normal color
+        title.zh: text-normal 颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-muted
+		title: text-muted color
+        title.zh: text-muted 颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-faint
+		title: text-faint color
+        title.zh: text-faint 颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: Links
         title: Links
         title.zh: 链接
@@ -1354,9 +1378,9 @@ settings:
 
 /*hide style setting option*/
 body.line-active-disable .setting-item[data-id=line-active-bg-color],
-body.line-active-disable .setting-item[data-id=line-active-customize],
-body.line-active-bg-color-default .setting-item[data-id=line-active-customize],
-body.line-active-bg-color-accent .setting-item[data-id=line-active-customize],
+body.line-active-disable .setting-item[data-id=line-active-bg-customize],
+body.line-active-bg-color-default .setting-item[data-id=line-active-bg-customize],
+body.line-active-bg-color-accent .setting-item[data-id=line-active-bg-customize],
 body.inline-title-color-default .setting-item[data-id=inline-title-color],
 body.inline-title-color-designated .setting-item[data-id=inline-title-color],
 body.h1-color-default .setting-item[data-id=h1-color],
@@ -1592,7 +1616,7 @@ body {
     --blur-container: rgba(246, 246, 246, 0.8);
     --interactive-normal: var(--color-base-20);
     --interactive-hover: #EBEBEB;
-    --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.2);
+    --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
@@ -1804,7 +1828,7 @@ body {
             calc(var(--accent-l) / 3));
     --background-table-rows: var(--color-base-00);
     --line-active-bg: rgba(255, 255, 255, 0.08);
-    --line-active-customize: rgba(255, 255, 255, 0.08);
+    --line-active-bg-customize: rgba(255, 255, 255, 0.08);
     --background-modifier-border: var(--color-base-35);
     --divider-color: var(--background-modifier-border);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
@@ -2225,6 +2249,7 @@ body {
 
 .workspace-tab-header.is-active :is(.workspace-tab-header-inner-icon, .workspace-tab-header-inner-title) {
     color: var(--color-tab-header) !important;
+    --icon-opacity: 1;
 }
 
 body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -2386,7 +2411,7 @@ body:not(.is-mobile) .workspace-ribbon {
     border-top: 1px solid var(--divider-color);
 }
 
-.workspace-tabs.mod-top .workspace-tab-header {
+.workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
     color: var(--on-border) !important;
 }
 
@@ -3105,6 +3130,8 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     font-size: var(--font-ui-small);
     margin-left: auto;
 }
+
+/* --- */
 
 .nav-folder-collapse-indicator {
     display: none;
@@ -4610,12 +4637,12 @@ body {
 /* ====== 当前行高亮 ====== */
 .theme-dark {
     --line-active-bg: rgba(255, 255, 255, 0.04);
-    --line-active-customize: rgba(255, 255, 255, 0.04);
+    --line-active-bg-customize: rgba(255, 255, 255, 0.04);
 }
 
 .theme-light {
     --line-active-bg: rgba(0, 0, 0, 0.035);
-    --line-active-customize: rgba(0, 0, 0, 0.035);
+    --line-active-bg-customize: rgba(0, 0, 0, 0.035);
 }
 
 body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active {
@@ -4632,7 +4659,7 @@ body:not(.line-active-disable).line-active-bg-color-accent .markdown-source-view
 }
 
 body:not(.line-active-disable).line-active-bg-color-customize .markdown-source-view .cm-scroller .cm-line.cm-active {
-    --line-active-bg: var(--line-active-customize);
+    --line-active-bg: var(--line-active-bg-customize);
 }
 
 body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
