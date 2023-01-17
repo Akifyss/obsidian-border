@@ -3253,6 +3253,10 @@ body.Active-states-accent .nav-file-title.is-active .nav-file-title-content::bef
     --file-icon-color: var(--text-on-accent) !important;
 }
 
+body.Active-states-accent .nav-file-title.is-active .mk-file-icon svg {
+    color: var(--text-on-accent) !important;
+}
+
 body.Active-states-accent .nav-file-title:not(.recent-files-title):before {
     display: none;
 }
@@ -3279,6 +3283,10 @@ body.Active-states-customize {
 
 body.Active-states-customize.color-to-file .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-active-states) !important;
+}
+
+body.Active-states-customize.color-to-file .nav-file-title.is-active .mk-file-icon svg {
+    color: var(--color-active-states) !important;
 }
 
 
@@ -5253,10 +5261,6 @@ body {
     height: 16px;
 }
 
-.is-mobile .mk-tree-wrapper .mk-file-icon svg,
-.mk-tree-wrapper svg {
-    color: currentColor;
-}
 
 /* ====== 图标替换 ====== */
 
