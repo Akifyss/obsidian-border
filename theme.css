@@ -536,6 +536,82 @@ settings:
         type: variable-text
         default: inset 0 0 0 1px var(--divider-color)
     - 
+        id: Active-states
+        title: Active states
+        title.zh: 激活状态
+        description: Active status of the file list
+        description.zh: 文件列表的激活状态
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: indicator-remove
+        title: Remove indicator
+        title.zh: 去除指示器
+        type: class-toggle
+    - 
+        id: Active-states-select
+        title: Active states style
+        title.zh: 激活态 风格
+        type: class-select
+        allowEmpty: false
+        default: Active-states-default
+        options:
+            -   label: default
+                value: Active-states-default
+            -   label: Accent color
+                value: Active-states-accent
+            -   label: Consistent with tab style
+                value: Active-states-tab-style
+            -   label: customize
+                value: Active-states-customize
+    - 
+		id: color-active-states
+		title: customize active states color
+        title.zh: 自定义激活态的颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: color-to-file
+        title: Apply custom color to file icons
+        title.zh: 将自定义颜色应用于前置图标
+        type: class-toggle
+    - 
+        id: background-active-states-light
+        title: active states background(light mode)
+        title.zh: 激活态 背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: rgba(0, 0, 0, 0.05)
+    - 
+        id: shadow-active-states-light
+        title: active states shadow(light mode)
+        title.zh: 激活态 阴影（亮色模式）
+        description: Input any CSS box-shadow value
+        description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
+    - 
+        id: background-active-states-dark
+        title: active states background(dark mode)
+        title.zh: 激活态 背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: rgba(255, 255, 255, 0.075)
+    - 
+        id: shadow-active-states-dark
+        title: active states shadow(dark mode)
+        title.zh: 激活态 阴影（暗色模式）
+        description: Input any CSS box-shadow value
+        description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: inset 0 0 0 1px rgba(255, 255, 255, 0.15)
+    - 
         id: Color-customize
         title: Customize color
         title.zh: 自定义颜色
@@ -1490,7 +1566,25 @@ body.mod-right-split-background-customize .setting-item[data-id=background-mod-r
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-dark],
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark] {
+body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.Active-states-default .setting-item[data-id=color-active-states],
+body.Active-states-default .setting-item[data-id=color-to-file],
+body.Active-states-default .setting-item[data-id=background-active-states-light],
+body.Active-states-default .setting-item[data-id=shadow-active-states-light],
+body.Active-states-default .setting-item[data-id=background-active-states-dark],
+body.Active-states-default .setting-item[data-id=shadow-active-states-dark],
+body.Active-states-accent .setting-item[data-id=color-active-states],
+body.Active-states-accent .setting-item[data-id=color-to-file],
+body.Active-states-accent .setting-item[data-id=background-active-states-light],
+body.Active-states-accent .setting-item[data-id=shadow-active-states-light],
+body.Active-states-accent .setting-item[data-id=background-active-states-dark],
+body.Active-states-accent .setting-item[data-id=shadow-active-states-dark],
+body.Active-states-tab-style .setting-item[data-id=color-active-states],
+body.Active-states-tab-style .setting-item[data-id=color-to-file],
+body.Active-states-tab-style .setting-item[data-id=background-active-states-light],
+body.Active-states-tab-style .setting-item[data-id=shadow-active-states-light],
+body.Active-states-tab-style .setting-item[data-id=background-active-states-dark],
+body.Active-states-tab-style .setting-item[data-id=shadow-active-states-dark] {
     display: none;
 }
 
@@ -2245,7 +2339,6 @@ body {
             calc(var(--accent-s)),
             calc(var(--accent-l) * 0.15), 0.075);
 }
-
 
 .workspace-tab-header.is-active :is(.workspace-tab-header-inner-icon, .workspace-tab-header-inner-title) {
     color: var(--color-tab-header) !important;
@@ -3131,6 +3224,84 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     margin-left: auto;
 }
 
+/* active states */
+body {
+    --color-active-states: var(--nav-item-color-active);
+    --background-active-states-light: var(--nav-item-background-active);
+    --shadow-active-states-light: none;
+    --background-active-states-dark: var(--nav-item-background-active);
+    --shadow-active-states-dark: none;
+}
+
+body.Active-states-default {
+    --color-active-states: var(--nav-item-color-active) !important;
+    --background-active-states-light: var(--nav-item-background-active) !important;
+    --shadow-active-states-light: none !important;
+    --background-active-states-dark: var(--nav-item-background-active) !important;
+    --shadow-active-states-dark: none !important;
+}
+
+body.Active-states-accent {
+    --color-active-states: var(--text-on-accent) !important;
+    --background-active-states-light: var(--color-accent) !important;
+    --shadow-active-states-light: none !important;
+    --background-active-states-dark: var(--color-accent) !important;
+    --shadow-active-states-dark: none !important;
+}
+
+body.Active-states-accent .nav-file-title.is-active .nav-file-title-content::before {
+    --file-icon-color: var(--text-on-accent) !important;
+}
+
+body.Active-states-accent .nav-file-title:not(.recent-files-title):before {
+    display: none;
+}
+
+body.Active-states-tab-style {
+    --color-active-states: var(--color-tab-header) !important;
+    --background-active-states-light: var(--background-tab-header-light) !important;
+    --shadow-active-states-light: var(--shadow-tab-header-light) !important;
+    --background-active-states-dark: var(--background-tab-header-dark) !important;
+    --shadow-active-states-dark: var(--shadow-tab-header-dark) !important;
+}
+
+body.Active-states-tab-style.mod-right-split-background-primary .mod-right-split,
+body.Active-states-tab-style.mod-left-split-background-primary .mod-left-split {
+    --shadow-active-states-light: var(--shadow-tab-header-light-alt) !important;
+}
+
+body.Active-states-customize {
+    --background-active-states-light: rgba(0, 0, 0, 0.05);
+    --shadow-active-states-light: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    --background-active-states-dark: rgba(255, 255, 255, 0.075);
+    --shadow-active-states-dark: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+body.Active-states-customize.color-to-file .nav-file-title.is-active .nav-file-title-content::before {
+    --file-icon-color: var(--color-active-states) !important;
+}
+
+
+.mk-tree-item.nav-file-title.is-active.is-selected,
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+    color: var(--color-active-states);
+    background: var(--background-active-states-light) !important;
+    box-shadow: var(--shadow-active-states-light);
+}
+
+body.theme-dark .mk-tree-item.nav-file-title.is-active.is-selected,
+body.theme-dark:not(.is-grabbing) .nav-file-title.is-active:hover,
+body.theme-dark:not(.is-grabbing) .nav-folder-title.is-active:hover,
+body.theme-dark .nav-file-title.is-active,
+body.theme-dark .nav-folder-title.is-active {
+    background: var(--background-active-states-dark) !important;
+    box-shadow: var(--shadow-active-states-dark);
+}
+
+
 /* --- */
 
 .nav-folder-collapse-indicator {
@@ -3164,7 +3335,7 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     position: relative;
 }
 
-.nav-file-title:not(.recent-files-title):before {
+body:not(.indicator-remove) .nav-file-title:not(.recent-files-title):before {
     content: "";
     position: absolute;
     left: 4px;
@@ -3177,7 +3348,7 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     transition: all 0.25s cubic-bezier(1, .1, .36, 1.22);
 }
 
-.nav-file-title:not(.recent-files-title).is-active::before {
+body:not(.indicator-remove) .nav-file-title:not(.recent-files-title).is-active::before {
     height: 60%;
     transform: translateY(-50%);
 }
