@@ -779,9 +779,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h1-divider-off
-		title: Remove H1 divider
-		title.zh: 移除H1分隔线
+		id: h1-divider-on
+		title: Enable H1 divider
+		title.zh: 启用H1分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -836,9 +836,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h2-divider-off
-		title: Remove H2 divider
-		title.zh: 移除H2分隔线
+		id: h2-divider-on
+		title: Enable H2 divider
+		title.zh: 启用H2分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -893,9 +893,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h3-divider-off
-		title: Remove H3 divider
-		title.zh: 移除H3分隔线
+		id: h3-divider-on
+		title: Enable H3 divider
+		title.zh: 启用H3分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -950,9 +950,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h4-divider-off
-		title: Remove H4 divider
-		title.zh: 移除H4分隔线
+		id: h4-divider-on
+		title: Enable H4 divider
+		title.zh: 启用H4分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -1007,9 +1007,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h5-divider-off
-		title: Remove H5 divider
-		title.zh: 移除H5分隔线
+		id: h5-divider-on
+		title: Enable H5 divider
+		title.zh: 启用H5分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -1064,9 +1064,9 @@ settings:
 		level: 4
 		collapsed: true
     - 
-		id: h6-divider-off
-		title: Remove H6 divider
-		title.zh: 移除H6分隔线
+		id: h6-divider-on
+		title: Enable H6 divider
+		title.zh: 启用H6分隔线
 		type: class-toggle
 		default: false
 	- 
@@ -4315,7 +4315,7 @@ body {
 }
 
 
-body:not(.h1-divider-off) :is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
+body.h1-divider-on :is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -4399,7 +4399,7 @@ body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collap
 }
 
 
-body:not(.h2-divider-off) :is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
+body.h2-divider-on :is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -4483,7 +4483,7 @@ body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collap
     background-color: var(--h3-indicator-color);
 }
 
-body:not(.h3-divider-off) :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
+body.h3-divider-on :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -4567,7 +4567,7 @@ body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collap
 }
 
 
-body:not(.h4-divider-off) :is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
+body.h4-divider-on :is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -4652,7 +4652,7 @@ body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collap
 }
 
 
-body:not(.h5-divider-off) :is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
+body.h5-divider-on :is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -4737,7 +4737,7 @@ body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collap
 }
 
 
-body:not(.h6-divider-off) :is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
+body.h6-divider-on :is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
