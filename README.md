@@ -8,25 +8,28 @@ A theme for obsidian.md, built on Windows.
 
 ### Auto hide
 
-Elements on **Border** (top tab bar, ribbon menu and status bar) can be autohidden (This feature needs [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin to turn on)
-
 ![screenshot](img/screenshot.gif)
-
-**Note**: This feature requires [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher
-
-### Customize UI color
-
-Your accent color setting will affect UI elements.
-
-![screenshot](img/screenshot-1.png)
-![screenshot](img/screenshot-2.png)
+Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+(This feature requires [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher)
 
 ### Card layout
 
-Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 ![screenshot](img/card.png)
+Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-![screenshot](img/iPad.png)
+### Highly customizable
+
+![screenshot](img/screenshot-1.png)
+Customise your own UI style with [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin:
+
++ pink style
+![screenshot](img/pink.png)
++ Paper-like
+![screenshot](img/paper.png)
++ Translucent window
+![screenshot](img/Translucent.png)
++ Glassmorphism
+![screenshot](img/Glass.png)
 
 ## Credits
 
