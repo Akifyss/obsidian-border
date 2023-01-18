@@ -20,7 +20,7 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 ### Highly customizable
 
 ![screenshot](img/screenshot-1.png)
-Customise your own UI style with [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin:
+Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some examples:
 
 + pink style
 ![screenshot](img/pink.png)
