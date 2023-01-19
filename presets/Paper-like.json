@@ -1,0 +1,9 @@
+{
+  "Border@@card-layout-open": true,
+  "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
+  "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
+  "Border@@mod-root-split-background-select": "mod-root-split-background-transparent",
+  "Border@@background-underlying-select": "background-underlying-CSS",
+  "Border@@background-underlying-CSS-light": "url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
+  "Border@@background-underlying-CSS-blend-mode-light": "normal"
+}
