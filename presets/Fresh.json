@@ -1,0 +1,11 @@
+{
+  "Border@@card-layout-open": true,
+  "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
+  "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
+  "Border@@mod-root-split-background-select": "mod-root-split-background-primary",
+  "Border@@background-underlying-select": "background-underlying-CSS",
+  "Border@@background-underlying-CSS-light": "linear-gradient(27deg, rgb(255, 255, 255) 0%, rgb(232, 255, 101) 8%, rgb(232, 255, 101) 17%, rgb(255, 255, 255) 23%), linear-gradient(27deg, rgb(186, 247, 124) 0%, rgb(186, 247, 124) 9%, rgb(232, 255, 101) 19%, rgb(236, 237, 213) 22%, rgb(232, 255, 101) 22%, rgb(236, 237, 213) 38%), linear-gradient(27deg, rgb(232, 255, 101) 0%, rgb(142, 230, 150) 7%, rgb(255, 255, 255) 19%, rgb(236, 237, 213) 23%, rgb(255, 255, 255) 33%, rgb(232, 255, 101) 49%), linear-gradient(27deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 8%, rgb(236, 237, 213) 24%), radial-gradient(100% 100% at 71% 67%, rgb(232, 255, 101) 0%, rgb(236, 237, 213) 100%)",
+  "Border@@background-underlying-CSS-blend-mode-light": "soft-light, normal, multiply, difference, overlay",
+  "Border@@indicator-remove": true,
+  "Border@@Active-states-file-explorer-select": "activated-file-tab-style"
+}

@@ -1,0 +1,10 @@
+{
+  "Border@@card-layout-open": true,
+  "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
+  "Border@@mod-right-split-background-select": "mod-right-split-background-CSS",
+  "Border@@mod-root-split-background-select": "mod-root-split-background-CSS",
+  "Border@@background-underlying-select": "background-underlying-CSS",
+  "Border@@background-underlying-CSS-dark": "linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%)",
+  "Border@@background-underlying-CSS-blend-mode-dark": "screen, overlay, hard-light, normal",
+  "Border@@Active-states-file-explorer-select": "activated-file-tab-style"
+}

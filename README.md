@@ -20,16 +20,23 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 ### Highly customizable
 
 ![screenshot](img/screenshot-1.png)
-Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some examples:
+Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some presets:
 
-+ pink style
-![screenshot](img/pink.png)
+(Usage: Copy code from link and paste it into style settings.)
+
++ [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
+![screenshot](img/Fresh.png)
+(Extra step: Set accent color to #66af1d)
+
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
-(Copy code from link and paste it into style settings; Set accent color to #d1852e)
 ![screenshot](img/paper.png)
-+ Translucent window
+(Extra step: Set accent color to #d1852e)
+
++ [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
 ![screenshot](img/Translucent.png)
-+ Glassmorphism
+(Extra step: Enable "translucent window" in Setting-Appearance)
+
++ [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glass.png)
 
 ## Credits
