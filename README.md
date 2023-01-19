@@ -24,7 +24,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 + pink style
 ![screenshot](img/pink.png)
-+ Paper-like
++ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
+(Copy code from link and paste it into style settings; Set accent color to #d1852e)
 ![screenshot](img/paper.png)
 + Translucent window
 ![screenshot](img/Translucent.png)
