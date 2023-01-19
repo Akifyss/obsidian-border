@@ -9,12 +9,14 @@ A theme for obsidian.md, built on Windows.
 ### Auto hide
 
 ![screenshot](img/screenshot.gif)
+
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 (This feature requires [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher)
 
 ### Card layout
 
 ![screenshot](img/card.png)
+
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
 ### Highly customizable
