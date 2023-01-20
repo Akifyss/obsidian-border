@@ -22,6 +22,9 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 ### Highly customizable
 
 ![screenshot](img/screenshot-1.png)
+
+---
+
 Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some presets:
 
 (Usage: Copy code from link and paste it into style settings.)
@@ -43,5 +46,5 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ## Credits
 
-+ [@subframe7536](https://github.com/subframe7536)'s [Maple theme](https://github.com/subframe7536/obsidian-theme-maple), for the beautiful outline style.
++ [@subframe7536](https://github.com/subframe7536)'s [Maple theme](https://github.com/subframe7536/obsidian-theme-maple), for the beautiful outline style and other awesome components.
 + [@kepano](https://github.com/kepano)'s [Minimal](https://github.com/kepano/obsidian-minimal), for the auto-hide tab title bar.
