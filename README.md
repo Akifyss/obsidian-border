@@ -4,12 +4,6 @@ A theme for obsidian.md, built on Windows.
 
 ![screenshot](cover-lg.png)
 
-<details>
-<summary><h2>Installation</h2></summary>
-Go to Settings-Appearance-Manage and search for Border in the Themes Market.
-
-</details>
-
 ## Feature
 
 ### Auto hide
