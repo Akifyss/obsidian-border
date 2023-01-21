@@ -27,7 +27,7 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 
 Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some presets:
 
-(Usage: Copy code from link and paste it into style settings.)
+(Usage: Copy code from link, paste it into style settings and restart obsidian.)
 
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
 ![screenshot](img/Fresh.png)
