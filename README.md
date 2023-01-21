@@ -4,6 +4,12 @@ A theme for obsidian.md, built on Windows.
 
 ![screenshot](cover-lg.png)
 
+<details>
+<summary><h2>Installation</h2></summary>
+Go to Settings-Appearance-Manage and search for Border in the Themes Market.
+
+</details>
+
 ## Feature
 
 ### Auto hide
@@ -31,11 +37,9 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
 ![screenshot](img/Fresh.png)
-(Extra step: Set accent color to #66af1d)
 
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
 ![screenshot](img/paper.png)
-(Extra step: Set accent color to #d1852e)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
 ![screenshot](img/Translucent.png)
@@ -43,6 +47,13 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glass.png)
+
+<details>
+<summary><h4>More presets</h4></summary>
+<ul>
+<li>WIP...</li>
+</ul>
+</details>
 
 ## Credits
 

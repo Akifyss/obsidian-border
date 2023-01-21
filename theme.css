@@ -220,6 +220,87 @@ settings:
             -   label: pure black
                 value: theme-dark-background-black
     - 
+        id: Accent-color
+        title: Accent color
+        title.zh: 强调色
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: accent-color-restore
+        title: Restore accent color in dark mode
+        title.zh: 还原暗色模式下的强调色
+        type: class-toggle
+    - 
+        id: accent-color-custom
+        title: Custom accent color
+        title.zh: 自定义主题色
+        description: Set accent color for the light and dark modes separately
+        description.zh: 分开来设置亮色模式与暗色模式的强调色
+        type: class-toggle
+    - 
+        id: accent-color-light
+        title: Accent color (light mode)
+        title.zh: 强调色（亮色模式）
+        type: heading
+        collapsed: true
+        level: 4
+    - 
+        id: accent-h-light
+        title: Hue
+        title.zh: 色调
+        description: Input a value of 0 - 360
+        description.zh: 输入0 - 360的值
+        type: variable-number
+        default: 232
+    - 
+        id: accent-s-light
+        title: Saturation
+        title.zh: 饱和度
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 80%
+    - 
+        id: accent-l-light
+        title: Lightness
+        title.zh: 亮度
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 64%
+    - 
+        id: accent-color-dark
+        title: Accent color (dark mode)
+        title.zh: 强调色（暗色模式）
+        type: heading
+        collapsed: true
+        level: 4
+    - 
+        id: accent-h-dark
+        title: Hue
+        title.zh: 色调
+        description: Input a value of 0 - 360
+        description.zh: 输入0 - 360的值
+        type: variable-number
+        default: 232
+    - 
+        id: accent-s-dark
+        title: Saturation
+        title.zh: 饱和度
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 80%
+    - 
+        id: accent-l-dark
+        title: Lightness
+        title.zh: 亮度
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 64%
+    - 
         id: Background
         title: Background
         title.zh: 背景
@@ -480,6 +561,17 @@ settings:
         collapsed: ture
         level: 4
     - 
+		id: on-border
+		title: Customize the color of elements displayed directly on the underlying layer
+        title.zh: 自定义 直接显示在底层背景上的元素颜色
+        description: Includes top tab bar, ribbon menu and status bar
+        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: background-underlying-select
         title: underlying background
         title.zh: 底层背景
@@ -589,6 +681,14 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: border-radius-activated-tab-header
+        title: activated Tab header border radius
+        title.zh: 已激活Tab的圆角大小
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: 6px
+    - 
         id: background-activated-tab-header-light
         title: activated Tab header background(light mode)
         title.zh: 已激活Tab的标题背景（亮色模式）
@@ -647,7 +747,7 @@ settings:
             -   label: Consistent with tab style
                 value: activated-file-tab-style
             -   label: customize
-                value: activated-file-tab-style
+                value: activated-file-customize
     - 
 		id: color-activated-file
 		title: Activated file color
@@ -662,6 +762,14 @@ settings:
         title: Apply custom color to file icons
         title.zh: 将自定义颜色应用于文件前置图标
         type: class-toggle
+    - 
+        id: border-radius-activated-file
+        title: Activated file border radius
+        title.zh: 已激活文件的圆角大小
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: 4px
     - 
         id: background-activated-file-light
         title: Activated file background(light mode)
@@ -694,29 +802,6 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(255, 255, 255, 0.15)
-    - 
-        id: Miscellaneous
-        title: Miscellaneous
-        title.zh: 杂项
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: accent-color-restore
-        title: Restore accent color in dark mode
-        title.zh: 还原暗色模式下的强调色
-        type: class-toggle
-    - 
-		id: on-border
-		title: Customize the color of elements displayed directly on the underlying layer
-        title.zh: 自定义 直接显示在底层背景上的元素颜色
-        description: Includes top tab bar, ribbon menu and status bar
-        description.zh: 包括顶部标签栏、功能区菜单和状态栏
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
     - 
         id: Editor
         title: Editor
@@ -1624,23 +1709,34 @@ body.mod-right-split-background-customize .setting-item[data-id=background-mod-r
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
 body.activated-file-default .setting-item[data-id=color-activated-file],
+body.activated-file-default .setting-item[data-id=border-radius-activated-file],
 body.activated-file-default .setting-item[data-id=color-to-file],
 body.activated-file-default .setting-item[data-id=background-activated-file-light],
 body.activated-file-default .setting-item[data-id=shadow-activated-file-light],
 body.activated-file-default .setting-item[data-id=background-activated-file-dark],
 body.activated-file-default .setting-item[data-id=shadow-activated-file-dark],
 body.activated-file-accent .setting-item[data-id=color-activated-file],
+body.activated-file-accent .setting-item[data-id=border-radius-activated-file],
 body.activated-file-accent .setting-item[data-id=color-to-file],
 body.activated-file-accent .setting-item[data-id=background-activated-file-light],
 body.activated-file-accent .setting-item[data-id=shadow-activated-file-light],
 body.activated-file-accent .setting-item[data-id=background-activated-file-dark],
 body.activated-file-accent .setting-item[data-id=shadow-activated-file-dark],
 body.activated-file-tab-style .setting-item[data-id=color-activated-file],
+body.activated-file-tab-style .setting-item[data-id=border-radius-activated-file],
 body.activated-file-tab-style .setting-item[data-id=color-to-file],
 body.activated-file-tab-style .setting-item[data-id=background-activated-file-light],
 body.activated-file-tab-style .setting-item[data-id=shadow-activated-file-light],
 body.activated-file-tab-style .setting-item[data-id=background-activated-file-dark],
-body.activated-file-tab-style .setting-item[data-id=shadow-activated-file-dark] {
+body.activated-file-tab-style .setting-item[data-id=shadow-activated-file-dark],
+body:not(.accent-color-custom) .setting-item[data-id=accent-color-light],
+body:not(.accent-color-custom) .setting-item[data-id=accent-h-light],
+body:not(.accent-color-custom) .setting-item[data-id=accent-s-light],
+body:not(.accent-color-custom) .setting-item[data-id=accent-l-light],
+body:not(.accent-color-custom) .setting-item[data-id=accent-color-dark],
+body:not(.accent-color-custom) .setting-item[data-id=accent-h-dark],
+body:not(.accent-color-custom) .setting-item[data-id=accent-s-dark],
+body:not(.accent-color-custom) .setting-item[data-id=accent-l-dark] {
     display: none;
 }
 
@@ -1702,6 +1798,39 @@ body {
     --background-mod-root-split: var(--background-primary);
 }
 
+/* color accent custom*/
+.theme-light {
+    --accent-h-light: 232;
+    --accent-s-light: 80%;
+    --accent-l-light: 64%;
+}
+
+.theme-dark {
+    --accent-h-dark: 232;
+    --accent-s-dark: 80%;
+    --accent-l-dark: 64%;
+}
+
+.theme-light.accent-color-custom {
+    --accent-h: var(--accent-h-light) !important;
+    --accent-s: var(--accent-s-light) !important;
+    --accent-l: var(--accent-l-light) !important;
+}
+
+.theme-dark.accent-color-custom {
+    --accent-h: var(--accent-h-dark) !important;
+    --accent-s: var(--accent-s-dark) !important;
+    --accent-l: var(--accent-l-dark) !important;
+}
+
+.theme-dark:not(.accent-color-restore) {
+    --color-accent-hsl: var(--accent-h),
+        calc(var(--accent-s)*0.8),
+        calc(var(--accent-l) * 1.125);
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
+}
 
 .theme-light {
     color-scheme: light;
@@ -1907,14 +2036,6 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
-.theme-dark:not(.accent-color-restore) {
-    --color-accent-hsl: var(--accent-h),
-        calc(var(--accent-s)*0.8),
-        calc(var(--accent-l) * 1.125);
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
-}
 
 .theme-dark.theme-dark-background-darker {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
@@ -2098,6 +2219,7 @@ body {
     --modal-community-sidebar-width: 100%;
     --nav-item-size: var(--font-ui-medium);
 }
+
 
 
 /*----------workspace----------*/
@@ -2376,6 +2498,7 @@ body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .vi
 
 /* tab */
 body {
+    --border-radius-activated-tab-header: 6px;
     --color-activated-tab-header: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
     --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
@@ -2401,10 +2524,14 @@ body {
     --icon-opacity: 1;
 }
 
+body:not(.is-mobile) .workspace-tab-header .workspace-tab-header-inner {
+    border-radius: var(--border-radius-activated-tab-header);
+}
+
 body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background: var(--background-activated-tab-header-light);
     box-shadow: var(--shadow-activated-tab-header-light);
-    border-radius: 6px;
+    border-radius: var(--border-radius-activated-tab-header);
 }
 
 body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -3282,6 +3409,7 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
 
 /* active states */
 body {
+    --border-radius-activated-file: var(--radius-s);
     --color-activated-file: var(--nav-item-color-active);
     --background-activated-file-light: var(--nav-item-background-active);
     --shadow-activated-file-light: none;
@@ -3290,6 +3418,7 @@ body {
 }
 
 body.activated-file-default {
+    --border-radius-activated-file: var(--radius-s) !important;
     --color-activated-file: var(--nav-item-color-active) !important;
     --background-activated-file-light: var(--nav-item-background-active) !important;
     --shadow-activated-file-light: none !important;
@@ -3298,6 +3427,7 @@ body.activated-file-default {
 }
 
 body.activated-file-accent {
+    --border-radius-activated-file: var(--radius-s) !important;
     --color-activated-file: var(--text-on-accent) !important;
     --background-activated-file-light: var(--color-accent) !important;
     --shadow-activated-file-light: none !important;
@@ -3318,6 +3448,7 @@ body.activated-file-accent .nav-file-title:not(.recent-files-title):before {
 }
 
 body.activated-file-tab-style {
+    --border-radius-activated-file: var(--border-radius-activated-tab-header) !important;
     --color-activated-file: var(--color-activated-tab-header) !important;
     --background-activated-file-light: var(--background-activated-tab-header-light) !important;
     --shadow-activated-file-light: var(--shadow-activated-tab-header-light) !important;
@@ -3330,18 +3461,20 @@ body.activated-file-tab-style.mod-left-split-background-primary .mod-left-split 
     --shadow-activated-file-light: var(--shadow-activated-tab-header-light-alt) !important;
 }
 
-body.activated-file-tab-style {
+body.activated-file-customize {
+    --border-radius-activated-file: 4px;
+    --color-activated-file: var(--nav-item-color-active);
     --background-activated-file-light: rgba(0, 0, 0, 0.05);
     --shadow-activated-file-light: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     --background-activated-file-dark: rgba(255, 255, 255, 0.075);
     --shadow-activated-file-dark: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-body.activated-file-tab-style.color-to-file .nav-file-title.is-active .nav-file-title-content::before {
+body.activated-file-customize.color-to-file .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file) !important;
 }
 
-body.activated-file-tab-style.color-to-file .nav-file-title.is-active .mk-file-icon svg {
+body.activated-file-customize.color-to-file .nav-file-title.is-active .mk-file-icon svg {
     color: var(--color-activated-file) !important;
 }
 
@@ -3351,6 +3484,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
+    border-radius: var(--border-radius-activated-file);
     color: var(--color-activated-file);
     background: var(--background-activated-file-light) !important;
     box-shadow: var(--shadow-activated-file-light);
@@ -3379,24 +3513,18 @@ body.theme-dark .nav-folder-title.is-active {
 .nav-file-title,
 .nav-folder-title {
     padding-left: var(--size-4-2);
+    margin-bottom: var(--size-2-2);
+    position: relative;
+    border-radius: var(--border-radius-activated-file);
 }
 
 .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
     padding-left: var(--size-4-2);
 }
 
-.nav-file-title,
-.nav-folder-title {
-    margin-bottom: var(--size-2-2);
-}
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content,
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
     line-height: 20px;
-}
-
-.nav-file-title {
-    position: relative;
 }
 
 body:not(.indicator-remove) .nav-file-title:not(.recent-files-title):before {
