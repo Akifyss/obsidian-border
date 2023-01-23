@@ -32,8 +32,8 @@ settings:
         description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
         type: class-toggle
     - 
-        id: file-explore
-        title: File explore
+        id: file-explorer
+        title: File explorer
         title.zh: 文件列表
         type: heading
         collapsed: true
