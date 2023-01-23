@@ -44,6 +44,16 @@ settings:
         title.zh: 禁用 更大的“New Note”按钮
         type: class-toggle
     - 
+        id: file-names-untrim
+        title: Untrim file names
+        title.zh: 不修剪文件名
+        type: class-toggle
+    - 
+        id: folder-font-bold
+        title: Bold folder font
+        title.zh: 加粗文件夹字体
+        type: class-toggle
+    - 
         id: colorful-folder
         title: Enable colorful folder icon
         title.zh: 启用 多彩文件夹图标
@@ -1528,6 +1538,31 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+    - 
+        id: Table
+        title: Table
+        title.zh: 表格
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: full-width-table-off
+        title: Turn off full width table
+        title.zh: 关闭全宽表格
+        type: class-toggle
+    - 
+        id: Image
+        title: Image
+        title.zh: 图片
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: zoom-off
+        title: Disable Image zoom
+        title.zh: 关闭图像缩放
+        description: from https://github.com/kepano/obsidian-minimal, author:@kepano
+        type: class-toggle
     - 
         id: Mobile
         title: Mobile
@@ -3518,6 +3553,19 @@ body.theme-dark .nav-folder-title.is-active {
     border-radius: var(--border-radius-activated-file);
 }
 
+body.file-names-untrim .nav-file-title-content,
+body.file-names-untrim .nav-folder-title-content {
+    white-space: normal;
+}
+
+
+body.folder-font-bold .nav-folder-title {
+    --nav-item-weight-hover: bold;
+    --nav-item-weight-active: bold;
+    --vault-name-font-weight: bold;
+    --nav-item-weight: bold;
+}
+
 .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
     padding-left: var(--size-4-2);
 }
@@ -5375,11 +5423,82 @@ pre[class*="language-"] {
 /* ======table ====== */
 body {
     --table-header-background: var(--background-tertiary);
+    --table-header-background-hover: var(--background-tertiary);
     --table-row-background-hover: var(--background-primary-alt);
     --table-header-weight: var(--font-semibold);
     --table-header-color: var(--color-accent-3);
 }
 
+body:not(.full-width-table-off) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
+    width: 100% !important;
+}
+
+/* ===== image ====== */
+/* image zoom */
+/* from https://github.com/kepano/obsidian-minimal, author:@kepano */
+
+body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
+    max-width: 100%;
+    cursor: zoom-in
+}
+
+body:not(.zoom-off) .view-content img:active {
+    cursor: zoom-out
+}
+
+body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
+    background-color: var(--background-primary);
+    padding: 10px
+}
+
+body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active,
+body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
+    aspect-ratio: unset;
+    cursor: zoom-out;
+    display: block;
+    z-index: 200;
+    position: fixed;
+    max-height: calc(100% + 1px);
+    max-width: 100%;
+    height: calc(100% + 1px);
+    width: 100%;
+    object-fit: contain;
+    margin: -.5px auto 0 !important;
+    text-align: center;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active:after {
+    background-color: var(--background-primary);
+    opacity: .9;
+    content: " ";
+    height: calc(100% + 1px);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 1px;
+    z-index: 0
+}
+
+body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active img {
+    aspect-ratio: unset;
+    top: 50%;
+    z-index: 99;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    max-height: 95vh;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 1
+}
 
 /* ====== 图标 ====== */
 body {
