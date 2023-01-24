@@ -96,7 +96,7 @@ settings:
         type: class-toggle
     - 
         id: tab-title-bar
-        title: tab title bar
+        title: Tab title bar
         title.zh: 标签页标题栏
         type: heading
         collapsed: true
@@ -160,8 +160,8 @@ settings:
             -   label: right
                 value: canvas-card-menu-right
     - 
-        id: setting-modal
-        title: setting modal
+        id: Setting-modal
+        title: Setting modal
         title.zh: 设置界面
         type: heading
         collapsed: true
@@ -644,25 +644,33 @@ settings:
         collapsed: true
         level: 3
     - 
-        id: card-border-radius
-        title: Custom card border radius
-        title.zh: 自定义 卡片的圆角大小
+        id: card-border-radius-light
+        title: Custom card border radius (light mode)
+        title.zh: 自定义 卡片的圆角大小（亮色模式）
         description: Input your border-radius value here
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: 8px
     - 
         id: card-shadow-light
-        title: Custom card shadow in light mode
-        title.zh: 自定义 亮色模式下的卡片阴影
+        title: Custom card shadow (light mode)
+        title.zh: 自定义 卡片阴影（亮色模式）
         description: Input your box-shadow value here
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
         default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
     - 
+        id: card-border-radius-dark
+        title: Custom card border radius (dark mode)
+        title.zh: 自定义 卡片的圆角大小（暗色模式）
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
+        type: variable-text
+        default: 8px
+    - 
         id: card-shadow-dark
-        title: Custom card shadow in dark mode
-        title.zh: 自定义 暗色模式下的卡片阴影
+        title: Custom card shadow (dark mode)
+        title.zh: 自定义 卡片阴影（暗色模式）
         description: Input your box-shadow value here
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
@@ -691,9 +699,9 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
-        id: border-radius-activated-tab-header
-        title: activated Tab header border radius
-        title.zh: 已激活Tab的圆角大小
+        id: border-radius-activated-tab-header-light
+        title: activated Tab header border radius(light mode)
+        title.zh: 已激活Tab的圆角大小（亮色模式）
         description: Input any CSS border-radius value
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
@@ -714,6 +722,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2)
+    - 
+        id: border-radius-activated-tab-header-dark
+        title: activated Tab header border radius(dark mode)
+        title.zh: 已激活Tab的圆角大小（暗色模式）
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: 6px
     - 
         id: background-activated-tab-header-dark
         title: activated Tab header background(dark mode)
@@ -773,9 +789,9 @@ settings:
         title.zh: 将自定义颜色应用于文件前置图标
         type: class-toggle
     - 
-        id: border-radius-activated-file
-        title: Activated file border radius
-        title.zh: 已激活文件的圆角大小
+        id: border-radius-activated-file-light
+        title: Activated file border radius(light mode)
+        title.zh: 已激活文件的圆角大小（亮色模式）
         description: Input any CSS border-radius value
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
@@ -796,6 +812,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
+    - 
+        id: border-radius-activated-file-dark
+        title: Activated file border radius(dark mode)
+        title.zh: 已激活文件的圆角大小（暗色模式）
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: 4px
     - 
         id: background-activated-file-dark
         title: Activated file background(dark mode)
@@ -1744,21 +1768,24 @@ body.mod-right-split-background-customize .setting-item[data-id=background-mod-r
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
 body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
 body.activated-file-default .setting-item[data-id=color-activated-file],
-body.activated-file-default .setting-item[data-id=border-radius-activated-file],
+body.activated-file-default .setting-item[data-id=border-radius-activated-file-light],
+body.activated-file-default .setting-item[data-id=border-radius-activated-file-dark],
 body.activated-file-default .setting-item[data-id=color-to-file],
 body.activated-file-default .setting-item[data-id=background-activated-file-light],
 body.activated-file-default .setting-item[data-id=shadow-activated-file-light],
 body.activated-file-default .setting-item[data-id=background-activated-file-dark],
 body.activated-file-default .setting-item[data-id=shadow-activated-file-dark],
 body.activated-file-accent .setting-item[data-id=color-activated-file],
-body.activated-file-accent .setting-item[data-id=border-radius-activated-file],
+body.activated-file-accent .setting-item[data-id=border-radius-activated-file-light],
+body.activated-file-accent .setting-item[data-id=border-radius-activated-file-dark],
 body.activated-file-accent .setting-item[data-id=color-to-file],
 body.activated-file-accent .setting-item[data-id=background-activated-file-light],
 body.activated-file-accent .setting-item[data-id=shadow-activated-file-light],
 body.activated-file-accent .setting-item[data-id=background-activated-file-dark],
 body.activated-file-accent .setting-item[data-id=shadow-activated-file-dark],
 body.activated-file-tab-style .setting-item[data-id=color-activated-file],
-body.activated-file-tab-style .setting-item[data-id=border-radius-activated-file],
+body.activated-file-tab-style .setting-item[data-id=border-radius-activated-file-light],
+body.activated-file-tab-style .setting-item[data-id=border-radius-activated-file-dark],
 body.activated-file-tab-style .setting-item[data-id=color-to-file],
 body.activated-file-tab-style .setting-item[data-id=background-activated-file-light],
 body.activated-file-tab-style .setting-item[data-id=shadow-activated-file-light],
@@ -2533,7 +2560,8 @@ body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .vi
 
 /* tab */
 body {
-    --border-radius-activated-tab-header: 6px;
+    --border-radius-activated-tab-header-light: 6px;
+    --border-radius-activated-tab-header-dark: 6px;
     --color-activated-tab-header: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
     --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
@@ -2560,13 +2588,21 @@ body {
 }
 
 body:not(.is-mobile) .workspace-tab-header .workspace-tab-header-inner {
-    border-radius: var(--border-radius-activated-tab-header);
+    border-radius: var(--border-radius-activated-tab-header-light);
+}
+
+body:not(.is-mobile).theme-dark .workspace-tab-header .workspace-tab-header-inner {
+    border-radius: var(--border-radius-activated-tab-header-dark);
 }
 
 body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background: var(--background-activated-tab-header-light);
     box-shadow: var(--shadow-activated-tab-header-light);
-    border-radius: var(--border-radius-activated-tab-header);
+    border-radius: var(--border-radius-activated-tab-header-light);
+}
+
+body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+    border-radius: var(--border-radius-activated-tab-header-dark);
 }
 
 body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -2641,28 +2677,50 @@ body:not(.is-mobile).is-popout-window .workspace {
 
 body:not(.is-mobile) .mod-top-left-space .workspace-tab-container,
 body.is-popout-window .workspace-tabs.mod-top-left-space>.workspace-tab-container {
-    border-top-left-radius: var(--card-border-radius, 8px) !important;
+    border-top-left-radius: var(--card-border-radius-light, 8px) !important;
+}
+
+body:not(.is-mobile).theme-dark .mod-top-left-space .workspace-tab-container,
+body.is-popout-window.theme-dark .workspace-tabs.mod-top-left-space>.workspace-tab-container {
+    border-top-left-radius: var(--card-border-radius-dark, 8px) !important;
 }
 
 body:not(.is-mobile) .mod-top-right-space .workspace-tab-container {
-    border-top-right-radius: var(--card-border-radius, 8px);
+    border-top-right-radius: var(--card-border-radius-light, 8px);
     overflow: hidden;
 }
 
+body:not(.is-mobile).theme-dark .mod-top-right-space .workspace-tab-container {
+    border-top-right-radius: var(--card-border-radius-dark, 8px);
+}
+
 body:not(.is-mobile) .workspace-split.mod-left-split {
-    border-bottom-left-radius: var(--card-border-radius, 8px);
+    border-bottom-left-radius: var(--card-border-radius-light, 8px);
     overflow: hidden;
+}
+
+body:not(.is-mobile).theme-dark .workspace-split.mod-left-split {
+    border-bottom-left-radius: var(--card-border-radius-dark, 8px);
 }
 
 body:not(.is-mobile) .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root,
 body:not(.is-mobile) .workspace-split.mod-right-split {
-    border-bottom-right-radius: var(--card-border-radius, 8px);
+    border-bottom-right-radius: var(--card-border-radius-light, 8px);
     overflow: hidden;
 }
 
+body:not(.is-mobile).theme-dark .workspace:not(.is-right-sidedock-open) .workspace-split.mod-root,
+body:not(.is-mobile).theme-dark .workspace-split.mod-right-split {
+    border-bottom-right-radius: var(--card-border-radius-dark, 8px);
+}
+
 body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
-    border-bottom-left-radius: var(--card-border-radius, 8px);
+    border-bottom-left-radius: var(--card-border-radius-light, 8px);
     overflow: hidden;
+}
+
+body:not(.is-mobile).theme-dark .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
+    border-bottom-left-radius: var(--card-border-radius-dark, 8px);
 }
 
 .workspace-window .mod-top-left-space .workspace-tab-container,
@@ -2677,15 +2735,17 @@ body:not(.is-mobile) .horizontal-main-container {
 body {
     --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
     --card-shadow-dark: 0px 0px 0px 1px var(--divider-color);
-    --card-border-radius: 8px;
-    --card-shadow-border-radius: calc(var(--card-border-radius) - 1px);
+    --card-border-radius-light: 8px;
+    --card-border-radius-dark: 8px;
+    --card-shadow-border-radius-light: calc(var(--card-border-radius-light) - 1px);
+    --card-shadow-border-radius-dark: calc(var(--card-border-radius-dark) - 1px);
 }
 
 body:not(.is-mobile) .workspace::before {
     content: " ";
     width: calc(100% - 44px);
     height: calc(100% - 44px);
-    border-radius: var(--card-shadow-border-radius, 7px);
+    border-radius: var(--card-shadow-border-radius-light, 7px);
     background-color: transparent;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
     position: absolute;
@@ -2694,6 +2754,7 @@ body:not(.is-mobile) .workspace::before {
 }
 
 body:not(.is-mobile).theme-dark .workspace::before {
+    border-radius: var(--card-shadow-border-radius-dark, 7px);
     box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
 }
 
@@ -2745,7 +2806,7 @@ body:not(.is-mobile) .workspace-ribbon {
 }
 
 .workspace .mod-root .workspace-tab-header:first-child {
-    padding: 0px 3px 2px 6px;
+    padding: 0px 3px 2px 0px;
 }
 
 .workspace .mod-root .workspace-tab-header-inner::after {
@@ -2758,8 +2819,8 @@ body:not(.is-mobile) .workspace-ribbon {
 
 .mod-root .workspace-tab-header-container-inner {
     margin: 0px;
-    padding: 6px 8px 0 0;
-    height: var(--header-height);
+    padding: 6px 8px 4px 6px;
+    height: calc(var(--header-height) + 4px);
 }
 
 .mod-left-split .workspace-tab-header-container-inner,
@@ -2828,8 +2889,12 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     border-left: 1px solid var(--divider-color);
-    border-top-left-radius: var(--card-border-radius, 8px);
+    border-top-left-radius: var(--card-border-radius-light, 8px);
     box-shadow: var(--tab-stacked-shadow);
+}
+
+.theme-dark .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+    border-top-left-radius: var(--card-border-radius-dark, 8px);
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:first-of-type .workspace-tab-header-inner {
@@ -3078,12 +3143,13 @@ body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
 }
 
 body:not(.is-mobile).card-layout-open .workspace-tab-container {
-    border-radius: var(--card-border-radius, 8px) !important;
+    border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
 body:not(.is-mobile).theme-dark.card-layout-open .workspace-tab-container {
+    border-radius: var(--card-border-radius-dark, 8px) !important;
     box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
 }
 
@@ -3444,7 +3510,8 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
 
 /* active states */
 body {
-    --border-radius-activated-file: var(--radius-s);
+    --border-radius-activated-file-light: var(--radius-s);
+    --border-radius-activated-file-dark: var(--radius-s);
     --color-activated-file: var(--nav-item-color-active);
     --background-activated-file-light: var(--nav-item-background-active);
     --shadow-activated-file-light: none;
@@ -3453,7 +3520,8 @@ body {
 }
 
 body.activated-file-default {
-    --border-radius-activated-file: var(--radius-s) !important;
+    --border-radius-activated-file-light: var(--radius-s) !important;
+    --border-radius-activated-file-dark: var(--radius-s) !important;
     --color-activated-file: var(--nav-item-color-active) !important;
     --background-activated-file-light: var(--nav-item-background-active) !important;
     --shadow-activated-file-light: none !important;
@@ -3462,7 +3530,8 @@ body.activated-file-default {
 }
 
 body.activated-file-accent {
-    --border-radius-activated-file: var(--radius-s) !important;
+    --border-radius-activated-file-light: var(--radius-s) !important;
+    --border-radius-activated-file-dark: var(--radius-s) !important;
     --color-activated-file: var(--text-on-accent) !important;
     --background-activated-file-light: var(--color-accent) !important;
     --shadow-activated-file-light: none !important;
@@ -3483,7 +3552,8 @@ body.activated-file-accent .nav-file-title:not(.recent-files-title):before {
 }
 
 body.activated-file-tab-style {
-    --border-radius-activated-file: var(--border-radius-activated-tab-header) !important;
+    --border-radius-activated-file-light: var(--border-radius-activated-tab-header-light) !important;
+    --border-radius-activated-file-dark: var(--border-radius-activated-tab-header-dark) !important;
     --color-activated-file: var(--color-activated-tab-header) !important;
     --background-activated-file-light: var(--background-activated-tab-header-light) !important;
     --shadow-activated-file-light: var(--shadow-activated-tab-header-light) !important;
@@ -3497,7 +3567,8 @@ body.activated-file-tab-style.mod-left-split-background-primary .mod-left-split 
 }
 
 body.activated-file-customize {
-    --border-radius-activated-file: 4px;
+    --border-radius-activated-file-light: 4px;
+    --border-radius-activated-file-dark: 4px;
     --color-activated-file: var(--nav-item-color-active);
     --background-activated-file-light: rgba(0, 0, 0, 0.05);
     --shadow-activated-file-light: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -3519,7 +3590,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
-    border-radius: var(--border-radius-activated-file);
+    border-radius: var(--border-radius-activated-file-light);
     color: var(--color-activated-file);
     background: var(--background-activated-file-light) !important;
     box-shadow: var(--shadow-activated-file-light);
@@ -3530,6 +3601,7 @@ body.theme-dark:not(.is-grabbing) .nav-file-title.is-active:hover,
 body.theme-dark:not(.is-grabbing) .nav-folder-title.is-active:hover,
 body.theme-dark .nav-file-title.is-active,
 body.theme-dark .nav-folder-title.is-active {
+    border-radius: var(--border-radius-activated-file-dark);
     background: var(--background-activated-file-dark) !important;
     box-shadow: var(--shadow-activated-file-dark);
 }
@@ -3550,7 +3622,12 @@ body.theme-dark .nav-folder-title.is-active {
     padding-left: var(--size-4-2);
     margin-bottom: var(--size-2-2);
     position: relative;
-    border-radius: var(--border-radius-activated-file);
+    border-radius: var(--border-radius-activated-file-light);
+}
+
+.theme-dark .nav-file-title,
+.theme-dark .nav-folder-title {
+    border-radius: var(--border-radius-activated-file-dark);
 }
 
 body.file-names-untrim .nav-file-title-content,
@@ -5822,15 +5899,19 @@ body.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspa
 
 body.card-layout-pad-open.is-tablet .workspace-drawer {
     background-color: var(--background-primary);
-    border-radius: var(--card-border-radius, 8px) !important;
+    border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     margin: 16px;
     margin-bottom: 24px;
     margin-top: 8px;
 }
 
+body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer {
+    border-radius: var(--card-border-radius-dark, 8px) !important;
+}
+
 body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
-    border-radius: var(--card-border-radius, 8px);
+    border-radius: var(--card-border-radius-light, 8px);
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
@@ -5838,19 +5919,21 @@ body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
+    border-radius: var(--card-border-radius-dark, 8px);
 }
 
 
 body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-right: none;
     border-left: none;
-    border-radius: var(--card-border-radius, 8px) !important;
+    border-radius: var(--card-border-radius-light, 8px) !important;
     margin: 0px;
     box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
     box-shadow: 0px 0px 0px 1px var(--divider-color);
+    border-radius: var(--card-border-radius-dark, 8px) !important;
 }
 
 body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
