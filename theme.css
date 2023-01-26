@@ -3630,8 +3630,8 @@ body.theme-dark .nav-folder-title.is-active {
     border-radius: var(--border-radius-activated-file-dark);
 }
 
-body.file-names-untrim .nav-file-title-content,
-body.file-names-untrim .nav-folder-title-content {
+body.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content,
+body.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content {
     white-space: normal;
 }
 
@@ -5508,6 +5508,16 @@ body {
 
 body:not(.full-width-table-off) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
     width: 100% !important;
+}
+
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):hover {
+    overflow: hidden;
+    resize: both !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content>.el-table[contenteditable=false] {
+    overflow: auto;
 }
 
 /* ===== image ====== */
