@@ -1,0 +1,28 @@
+/* @settings
+
+name: table width adjust
+id: table-width-adjust
+settings:
+    - 
+        id: table-width
+        title: Adjust table width
+        title.zh: 调节表格宽度
+        type: variable-text
+        default: 700px
+
+*/
+
+body {
+    --table-width: 700px
+}
+
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-content>.el-table[contenteditable=false] {
+    contain: unset !important;
+}
+
+body:not(.is-mobile) .markdown-source-view.mod-cm6.is-live-preview .el-table,
+body:not(.is-mobile):not(.full-width-table-off) .markdown-rendered .el-table table,
+body:not(.is-mobile).full-width-table-off .markdown-rendered .el-table table {
+    width: var(--table-width) !important;
+    margin-left: calc((var(--table-width) - 100%) / -2) !important;
+}
