@@ -1951,9 +1951,9 @@ body {
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 8));
-    --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 8), 0.9);
+    --workspace-background-translucent: hsla(calc(var(--accent-h)),
+            calc((var(--accent-s) - 12%) / 6),
+            calc(100% - (100% - var(--accent-l)) / 36), 0.9);
     --blur-container: rgba(246, 246, 246, 0.8);
     --interactive-normal: var(--color-base-20);
     --interactive-hover: #EBEBEB;
@@ -2609,7 +2609,7 @@ body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-he
     box-shadow: var(--shadow-activated-tab-header-light-alt);
 }
 
-body:not(.is-mobile).theme-light:not(.is-translucent).card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:not(.is-mobile).theme-light.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: var(--shadow-activated-tab-header-light) !important;
 }
 
@@ -2619,41 +2619,70 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
 }
 
 /*---*/
-body:not(.is-mobile).is-translucent .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner,
-body:not(.is-mobile).is-translucent.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background: var(--background-modifier-active-hover);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), inset 0 0 0 1px var(--divider-color);
-}
-
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
     background: var(--background-modifier-active-hover);
     box-shadow: inset 0 0 0 1px var(--divider-color);
 }
 
 /*divider effect*/
-body:not(.is-mobile) .mod-left-split .backlink-pane,
 body:not(.is-mobile) .mod-left-split .item-list,
 body:not(.is-mobile) .mod-left-split .nav-files-container,
-body:not(.is-mobile) .mod-left-split .outgoing-link-pane,
-body:not(.is-mobile) .mod-left-split .tag-container,
-body:not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
+body:not(.is-mobile) .mod-left-split .tag-container {
     background: linear-gradient(var(--background-mod-left-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
     background-repeat: no-repeat;
     background-size: 100% 40px, 91% 1px;
     background-attachment: local, scroll;
 }
 
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .backlink-pane,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .item-list,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .nav-files-container,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .outgoing-link-pane,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .tag-container,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container {
-    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
+body:not(.is-mobile) .mod-right-split .item-list,
+body:not(.is-mobile) .mod-right-split .nav-files-container,
+body:not(.is-mobile) .mod-right-split .tag-container {
+    background: linear-gradient(var(--background-mod-right-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
     background-repeat: no-repeat;
     background-size: 100% 40px, 91% 1px;
     background-attachment: local, scroll;
 }
+
+
+body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .item-list,
+body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .nav-files-container,
+body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .tag-container,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .item-list,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .nav-files-container,
+body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .tag-container {
+    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
+}
+
+
+body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .item-list,
+body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .nav-files-container,
+body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .tag-container,
+body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .item-list,
+body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .nav-files-container,
+body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .tag-container {
+    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 91% 1px;
+    background-attachment: local, scroll;
+}
+
+/* --- */
+
+body.mod-left-split-background-transparent.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+body.mod-right-split-background-transparent.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
 
 /* ====== Layout ===== */
 body:not(.is-mobile) .horizontal-main-container {
@@ -2846,6 +2875,14 @@ body:not(.is-mobile) .workspace-ribbon {
 .mod-left-split .workspace-leaf-content,
 .mod-right-split .workspace-leaf-content {
     gap: var(--size-2-1);
+}
+
+.workspace-leaf-content[data-type="starred"] .item-list {
+    padding-top: 12px;
+}
+
+.nav-header~.search-input-container {
+    width: calc(100% - var(--size-4-6));
 }
 
 /* ====== status bar====== */
@@ -4111,10 +4148,7 @@ body.canvas-card-menu-right .canvas-card-menu {
     background-color: var(--canvas-background);
 }
 
-/*search*/
-.nav-header~.search-input-container {
-    width: calc(100% - var(--size-4-6));
-}
+
 
 /* graph*/
 .graph-controls {
@@ -5994,6 +6028,21 @@ body.DB-table-bg-color-unify .data-input:hover {
 
 .setting-item+.setting-item-heading {
     margin-top: 0;
+}
+
+.themed-color-wrapper>div+div {
+    margin-top: 0px;
+}
+
+.themed-color-wrapper>div {
+    box-shadow: 0px 0px 0px 1px var(--divider-color);
+}
+
+.themed-color-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .style-settings-container {

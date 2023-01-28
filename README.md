@@ -2,7 +2,7 @@
 
 A clean and highly customisable theme for obsidian.md.
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square)](https://github.com/Akifyss/obsidian-border/stargazers) [![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square)](https://github.com/Akifyss/obsidian-border/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square)](https://github.com/Akifyss/obsidian-border/issues?q=is%3Aissue+is%3Aclosed) [![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square)](https://github.com/Akifyss/obsidian-border)
+![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square) ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square)
 
 ![screenshot](cover-lg.png)
 
