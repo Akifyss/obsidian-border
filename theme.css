@@ -1570,10 +1570,31 @@ settings:
         collapsed: true
         level: 3
     - 
-        id: full-width-table-off
-        title: Turn off full width table
-        title.zh: 关闭全宽表格
-        type: class-toggle
+        id: table-width-select
+        title: Table width
+        title.zh: 表格宽度
+        type: class-select
+        allowEmpty: false
+        default: table-width-default
+        options:
+            -   label: Consistent with line width (Default)
+                value: table-width-default
+            -   label: Obsidian default
+                value: table-width-obsidian-default
+            -   label: Customize table width
+                value: table-width-customized
+    - 
+        id: table-width
+        title: customize table width
+        title.zh: 自定义表格宽度
+        description: () percent of the editor panel width
+        description.zh: 编辑器面板宽度的百分之（）
+        type: variable-number-slider
+        default: 88
+        min: 10
+        max: 100
+        step: 1
+        format: cqw
     - 
         id: Image
         title: Image
@@ -1798,7 +1819,9 @@ body:not(.accent-color-custom) .setting-item[data-id=accent-l-light],
 body:not(.accent-color-custom) .setting-item[data-id=accent-color-dark],
 body:not(.accent-color-custom) .setting-item[data-id=accent-h-dark],
 body:not(.accent-color-custom) .setting-item[data-id=accent-s-dark],
-body:not(.accent-color-custom) .setting-item[data-id=accent-l-dark] {
+body:not(.accent-color-custom) .setting-item[data-id=accent-l-dark],
+body.table-width-default .setting-item[data-id=table-width],
+body.table-width-obsidian-default .setting-item[data-id=table-width] {
     display: none;
 }
 
@@ -5538,10 +5561,7 @@ body {
     --table-row-background-hover: var(--background-primary-alt);
     --table-header-weight: var(--font-semibold);
     --table-header-color: var(--color-accent-3);
-}
-
-body:not(.full-width-table-off) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
-    width: 100% !important;
+    --table-width: 88cqw;
 }
 
 :is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,
@@ -5550,8 +5570,18 @@ body:not(.full-width-table-off) :is(.markdown-rendered, .markdown-source-view.mo
     resize: both !important;
 }
 
-.markdown-source-view.mod-cm6 .cm-content>.el-table[contenteditable=false] {
+body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
+    width: 100% !important;
+}
+
+body.table-width-customized :is(.markdown-source-view, .markdown-reading-view) {
+    container-type: inline-size;
+}
+
+body.table-width-customized :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) .el-table {
     overflow: auto;
+    width: var(--table-width) !important;
+    margin-left: calc((var(--table-width) - 100%) / -2) !important;
 }
 
 /* ===== image ====== */
