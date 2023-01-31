@@ -5518,11 +5518,6 @@ body {
     --blockquote-background-color: transparent;
 }
 
-
-body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote {
-    padding-inline-start: 20px !important;
-}
-
 body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 .markdown-rendered blockquote {
     border-radius: var(--radius-s);
