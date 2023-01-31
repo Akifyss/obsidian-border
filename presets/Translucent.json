@@ -3,7 +3,7 @@
   "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
   "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
   "Border@@mod-root-split-background-select": "mod-root-split-background-CSS",
-  "Border@@background-mod-root-CSS-dark": "rgba(0,0,0,0.3)",
+  "Border@@background-mod-root-CSS-dark": "rgba(0,0,0,0.25)",
   "Border@@background-underlying-select": "background-underlying-defalut",
   "Border@@Active-states-file-explorer-select": "activated-file-tab-style"
 }

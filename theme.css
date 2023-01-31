@@ -13,23 +13,23 @@ settings:
     - 
         id: tab-autohide
         title: Auto hide tab bar
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
+        description: Mouse hover to call up.(It may be necessary to manually reinstall Obsidian to get perfect effect)
         title.zh: 自动隐藏 tab栏
-        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
+        description.zh: 鼠标悬停来唤出（可能需要重新手动安装Obsidian来获得完美效果）
         type: class-toggle
     - 
         id: Ribbon-autohide
         title: Auto hide left ribbon menu
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
+        description: Mouse hover to call up.(It may be necessary to manually reinstall Obsidian to get perfect effect)
         title.zh: 自动隐藏 左侧功能区菜单
-        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
+        description.zh: 鼠标悬停来唤出（可能需要重新手动安装Obsidian来获得完美效果）
         type: class-toggle
     - 
         id: status-bar-autohide
         title: Auto hide bottom status bar
-        description: Mouse hover to call up.(Requires Obsidian installer version 1.1.9 or later, may need to be reinstalled to take effect)
+        description: Mouse hover to call up.(It may be necessary to manually reinstall Obsidian to get perfect effect)
         title.zh: 自动隐藏 底部状态栏
-        description.zh: 鼠标悬停来唤出（需要obsidian installer 1.1.9 或之后的版本，可能需要重新安装来生效）
+        description.zh: 鼠标悬停来唤出（可能需要重新手动安装Obsidian来获得完美效果）
         type: class-toggle
     - 
         id: file-explorer
@@ -52,6 +52,11 @@ settings:
         id: folder-font-bold
         title: Bold folder font
         title.zh: 加粗文件夹字体
+        type: class-toggle
+    - 
+        id: file-icon-remove
+        title: remove file and folder icon
+        title.zh: 移除文件和文件夹图标
         type: class-toggle
     - 
         id: colorful-folder
@@ -636,6 +641,103 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: soft-light, luminosity, hue, luminosity, hard-light;
+    - 
+        id: Global-background-header
+        title: Global background
+        title.zh: 全局背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+		id: background-primary
+		title: Customize background-primary
+        title.zh: 自定义 background-primary
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-primary-alt
+		title: Customize background-primary-alt
+        title.zh: 自定义 background-primary-alt
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-secondary
+		title: Customize background-secondary
+        title.zh: 自定义 background-secondary
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-secondary-alt
+		title: Customize background-secondary-alt
+        title.zh: 自定义 background-secondary-alt
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-tertiary
+		title: Customize background-tertiary
+        title.zh: 自定义 background-tertiary
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-hover
+		title: Customize background-modifier-hover
+        title.zh: 自定义 background-modifier-hover
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-active-hover
+		title: Customize background-modifier-active-hover
+        title.zh: 自定义 background-modifier-active-hover
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border
+		title: Customize background-modifier-border
+        title.zh: 自定义 background-modifier-border
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border-hover
+		title: Customize background-modifier-border-hover
+        title.zh: 自定义 background-modifier-border-hover
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border-focus
+		title: Customize background-modifier-border-focus
+        title.zh: 自定义 background-modifier-border-focus
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
         id: Card
         title: Card
@@ -1821,7 +1923,9 @@ body:not(.accent-color-custom) .setting-item[data-id=accent-h-dark],
 body:not(.accent-color-custom) .setting-item[data-id=accent-s-dark],
 body:not(.accent-color-custom) .setting-item[data-id=accent-l-dark],
 body.table-width-default .setting-item[data-id=table-width],
-body.table-width-obsidian-default .setting-item[data-id=table-width] {
+body.table-width-obsidian-default .setting-item[data-id=table-width],
+body.file-icon-remove .setting-item[data-id=colorful-folder],
+body.file-icon-remove .setting-item[data-id=file-icon-color-select] {
     display: none;
 }
 
@@ -1976,7 +2080,7 @@ body {
             calc(100% - (100% - var(--accent-l)) / 8));
     --workspace-background-translucent: hsla(calc(var(--accent-h)),
             calc((var(--accent-s) - 12%) / 6),
-            calc(100% - (100% - var(--accent-l)) / 36), 0.9);
+            calc(100% - (100% - var(--accent-l)) / 36), 0.8);
     --blur-container: rgba(246, 246, 246, 0.8);
     --interactive-normal: var(--color-base-20);
     --interactive-hover: #EBEBEB;
@@ -3142,8 +3246,8 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
 }
 
 /* ====== 半透明模式===== */
-.is-translucent.theme-dark {
-    --divider-color: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
+.is-translucent:not(.is-fullscreen) {
+    --divider-color: var(--background-modifier-border);
 }
 
 .is-translucent .workspace-ribbon::after,
@@ -3161,9 +3265,6 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
 .is-translucent .titlebar-button:hover {
     background-color: var(--background-modifier-hover) !important;
 }
-
-
-
 
 .is-translucent .workspace .mod-root .workspace-tab-header-inner::after {
     background-color: var(--divider-color);
@@ -3743,6 +3844,15 @@ body.file-icon-color-currentColor {
     --file-icon-color: currentColor !important;
 }
 
+body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before,
+body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
+    display: none;
+}
+
+body.file-icon-remove .nav-folder-collapse-indicator {
+    display: unset;
+}
+
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before {
     margin-right: 4px;
     position: relative;
@@ -3992,7 +4102,6 @@ input.prompt-input {
 
 .theme-dark .community-item {
     background-color: var(--background-tertiary);
-    --background-modifier-border: var(--divider-color);
 }
 
 .theme-dark.is-phone .community-modal-search-results-wrapper {
