@@ -40,8 +40,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 ![screenshot](img/paper.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
+(**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
-(Extra step: Enable "translucent window" in Setting-Appearance)
 
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glass.png)
