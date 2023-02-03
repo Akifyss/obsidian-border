@@ -53,6 +53,12 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 </ul>
 </details>
 
+### Miscellaneous
+
+#### Alternate Checkboxes
+
+![screenshot](img/Checkboxes.png)
+
 ## Credits
 
 + [@subframe7536](https://github.com/subframe7536)'s [Maple theme](https://github.com/subframe7536/obsidian-theme-maple), for the beautiful outline style and other awesome components.([buy subframe7536 a coffee](https://www.buymeacoffee.com/subframe753))
