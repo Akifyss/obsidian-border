@@ -1,9 +1,9 @@
 {
   "Border@@card-layout-open": true,
   "Border@@accent-color-custom": true,
-  "Border@@accent-h-light": 90,
-  "Border@@accent-s-light": "72%",
-  "Border@@accent-l-light": "40%",
+  "Border@@accent-h-light": 83,
+  "Border@@accent-s-light": "46%",
+  "Border@@accent-l-light": "52%",
   "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
   "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
   "Border@@mod-root-split-background-select": "mod-root-split-background-primary",

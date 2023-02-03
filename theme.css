@@ -2954,6 +2954,14 @@ body:not(.is-mobile) .workspace-ribbon {
     padding-top: 6px;
 }
 
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+    padding-right: 16px;
+}
+
+body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod-right {
+    margin-right: -8px;
+}
+
 .workspace-tab-header-inner {
     border-radius: 6px;
 }
@@ -3247,6 +3255,10 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
     width: calc(100% - 44px);
 }
 
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos {
+    --frame-left-space: calc(80px - 16px);
+}
+
 /* ====== 半透明模式===== */
 .is-translucent:not(.is-fullscreen) {
     --divider-color: var(--background-modifier-border);
@@ -3379,7 +3391,7 @@ body.is-hidden-frameless .titlebar .titlebar-button-container {
     background-color: transparent !important;
 }
 
-.titlebar .titlebar-button-container {
+.titlebar .titlebar-button-container.mod-right {
     margin-right: 16px;
 }
 
@@ -5472,22 +5484,31 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked:after {
-    content: "";
-    top: -1px;
-    left: -1px;
-    position: absolute;
-    width: var(--checkbox-size);
-    height: var(--checkbox-size);
-    display: block;
-    background-color: var(--checkbox-marker-color);
-    -webkit-mask-position: 52% 52%;
-    -webkit-mask-size: 65%;
-    -webkit-mask-repeat: no-repeat;
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M15.53 2.41a1.5 1.5 0 0 1 .06 2.12l-8.5 9a1.501 1.501 0 0 1-2.15.03l-4.5-4.5a1.5 1.5 0 0 1 2.12-2.12l3.41 3.408 7.44-7.878a1.5 1.5 0 0 1 2.12-.06Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 input[type=checkbox]:hover {
     box-shadow: 0px 0px 0px 3px rgba(var(--color-green-rgb), 0.25);
+}
+
+input[data-task="!"]:checked,
+li[data-task="!"]>input:checked,
+li[data-task="!"]>p>input:checked {
+    --checkbox-marker-color: transparent;
+    border: none;
+    border-radius: 0;
+    background-image: none;
+    background-color: currentColor;
+    -webkit-mask-size: var(--checkbox-icon);
+    -webkit-mask-position: 50% 50%
+}
+
+input[data-task="!"]:checked,
+li[data-task="!"]>input:checked,
+li[data-task="!"]>p>input:checked {
+    --checkbox-color-hover: var(--color-orange);
+    color: var(--color-orange);
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM6.243 4.11a1.816 1.816 0 0 0-.028.79l.749 3.99a1.054 1.054 0 0 0 2.072 0l.749-3.99a1.816 1.816 0 0 0-3.542-.79Zm2.685 8.755a1.312 1.312 0 1 0-1.856-1.856 1.312 1.312 0 0 0 1.856 1.856Z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
 
 /*toggle switch*/
@@ -5834,12 +5855,13 @@ body {
 
 
 /* ====== 图标替换 ====== */
-
+.mod-macos svg.sidebar-right,
 svg.sidebar-right {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_å±‚_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="24" height="24"/><path d="M14,20c.55,0,1-.45,1-1V5c0-.55-.45-1-1-1s-1,.45-1,1v14c0,.55,.45,1,1,1Z"/><path d="M17,15h1c.55,0,1-.45,1-1s-.45-1-1-1h-1c-.55,0-1,.45-1,1s.45,1,1,1Zm0-4h1c.55,0,1-.45,1-1s-.45-1-1-1h-1c-.55,0-1,.45-1,1s.45,1,1,1Z"/><path d="M4,20H20c1.1,0,2-.9,2-2V6c0-1.1-.9-2-2-2H4c-1.1,0-2,.9-2,2v12c0,1.1,.9,2,2,2ZM20,6v12H4V6H20Z"/></svg>')
 }
 
+.mod-macos svg.sidebar-left,
 svg.sidebar-left {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M10,20c-.55,0-1-.45-1-1V5c0-.55,.45-1,1-1s1,.45,1,1v14c0,.55-.45,1-1,1Z"/><path d="M7,15h-1c-.55,0-1-.45-1-1s.45-1,1-1h1c.55,0,1,.45,1,1s-.45,1-1,1Zm0-4h-1c-.55,0-1-.45-1-1s.45-1,1-1h1c.55,0,1,.45,1,1s-.45,1-1,1Z"/><path d="M20,20H4c-1.1,0-2-.9-2-2V6c0-1.1,.9-2,2-2H20c1.1,0,2,.9,2,2v12c0,1.1-.9,2-2,2ZM4,6v12H20V6H4Z"/></svg>')
