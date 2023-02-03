@@ -3255,8 +3255,30 @@ body:not(.is-mobile).Ribbon-autohide:has(.workspace-ribbon.side-dock-ribbon:hove
     width: calc(100% - 44px);
 }
 
+/*---*/
+
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos {
     --frame-left-space: calc(80px - 16px);
+}
+
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.workspace-ribbon.side-dock-ribbon:hover) {
+    --frame-left-space: calc(80px - 44px);
+}
+
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    transition: padding-left var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
+    transition: width var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.workspace-ribbon.side-dock-ribbon:hover).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    transition: padding-left var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.workspace-ribbon.side-dock-ribbon:hover).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
+    transition: width var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /* ====== 半透明模式===== */
@@ -5491,6 +5513,9 @@ input[type=checkbox]:hover {
     box-shadow: 0px 0px 0px 3px rgba(var(--color-green-rgb), 0.25);
 }
 
+input[data-task="?"]:checked,
+li[data-task="?"]>input:checked,
+li[data-task="?"]>p>input:checked,
 input[data-task="!"]:checked,
 li[data-task="!"]>input:checked,
 li[data-task="!"]>p>input:checked {
@@ -5510,6 +5535,15 @@ li[data-task="!"]>p>input:checked {
     color: var(--color-orange);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM6.243 4.11a1.816 1.816 0 0 0-.028.79l.749 3.99a1.054 1.054 0 0 0 2.072 0l.749-3.99a1.816 1.816 0 0 0-3.542-.79Zm2.685 8.755a1.312 1.312 0 1 0-1.856-1.856 1.312 1.312 0 0 0 1.856 1.856Z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
+
+input[data-task="?"]:checked,
+li[data-task="?"]>input:checked,
+li[data-task="?"]>p>input:checked {
+    --checkbox-color-hover: var(--color-yellow);
+    color: var(--color-yellow);
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16ZM4.84 3.66c-.32.48-.093 1.14.44 1.367.407.166.893.046 1.127-.334.313-.486.82-.893 1.6-.893 1.72 0 2.06 1.607 1.453 2.467-.255.365-.592.675-.933.99-.425.391-.855.789-1.14 1.303a2.712 2.712 0 0 0-.307 1.027c-.067.58.407 1.08.987 1.08.493 0 .893-.38.953-.867.04-.3.1-.447.2-.627.2-.368.484-.643.814-.962.35-.34.754-.73 1.166-1.338.72-1.066.447-2.5-.02-3.266C10.633 2.713 9.56 2 7.993 2c-1.426 0-2.506.7-3.153 1.66ZM8 14.667c.733 0 1.333-.6 1.333-1.334C9.333 12.6 8.733 12 8 12s-1.333.6-1.333 1.333c0 .734.6 1.334 1.333 1.334Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+
 
 /*toggle switch*/
 .checkbox-container.is-enabled {
