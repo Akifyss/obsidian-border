@@ -570,7 +570,7 @@ settings:
         default: blur(32px);
     - 
         id: underlying-background-header
-        title: underlying background
+        title: Underlying background
         title.zh: 底层背景
         type: heading
         collapsed: ture
@@ -4174,7 +4174,7 @@ input.prompt-input {
 /*====== 动效 ======*/
 .graph-controls:not(.is-close),
 body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
-body:not(.is-phone) .menu:not(.mk-style-menu),
+body:not(.is-phone) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(.mod-settings),
 body:not(.is-phone) .suggestion-container {
@@ -5621,7 +5621,7 @@ li[data-task="/"]>input:checked,
 li[data-task="/"]>p>input:checked {
     --checkbox-color-hover: var(--color-yellow);
     color: var(--color-yellow);
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='7' stroke='black' stroke-width='2'/%3e%3cpath fill='black' d='M8 0a8 8 0 0 1 5.657 13.657L8 8V0Z'/%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' fill-rule='evenodd' d='M13.657 13.657A8 8 0 1 1 2.343 2.343a8 8 0 0 1 11.314 11.314Zm-1.414-1.414A6 6 0 1 1 8 2v6l4.243 4.243Z' clip-rule='evenodd'/%3e%3c/svg%3e");
 }
 
 input[data-task="I"]:checked,
@@ -5709,7 +5709,7 @@ li[data-task="u"]>input:checked,
 li[data-task="u"]>p>input:checked {
     --checkbox-color-hover: var(--color-green);
     color: var(--color-green);
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-rule='evenodd' d='M10 5a1 1 0 0 1 0-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-2 0V6.414l-4.293 4.293a1 1 0 0 1-1.414 0L6 8.414l-4.293 4.293a1 1 0 0 1-1.414-1.414l5-5a1 1 0 0 1 1.414 0L9 8.586 12.586 5H10Z' clip-rule='evenodd'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,5c-.27,0-.52-.11-.71-.29-.19-.19-.29-.44-.29-.71s.11-.52,.29-.71c.19-.19,.44-.29,.71-.29h5c.27,0,.52,.11,.71,.29,.19,.19,.29,.44,.29,.71v5c0,.27-.11,.52-.29,.71-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29c-.19-.19-.29-.44-.29-.71v-2.59l-4.29,4.29c-.19,.19-.44,.29-.71,.29s-.52-.11-.71-.29l-2.29-2.29L1.71,12.71c-.19,.18-.44,.28-.7,.28-.26,0-.51-.11-.7-.29S.01,12.26,.01,12c0-.26,.1-.51,.28-.7L5.29,6.29c.19-.19,.44-.29,.71-.29s.52,.11,.71,.29l2.29,2.29,3.59-3.59h-2.59Z"/></svg>')
 }
 
 input[data-task="d"]:checked,
@@ -5717,7 +5717,7 @@ li[data-task="d"]>input:checked,
 li[data-task="d"]>p>input:checked {
     --checkbox-color-hover: var(--color-red);
     color: var(--color-red);
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-rule='evenodd' d='M10 11a1 1 0 0 0 0 2h5a1 1 0 0 0 1-1V7a1 1 0 0 0-2 0v2.586L9.707 5.293a1 1 0 0 0-1.414 0L6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0L9 7.414 12.586 11H10Z' clip-rule='evenodd'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_å±‚_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><rect class="cls-1" width="16" height="16"/><path class="cls-2" d="M10,11c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29h5c.27,0,.52-.11,.71-.29,.19-.19,.29-.44,.29-.71V7c0-.27-.11-.52-.29-.71-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29c-.19,.19-.29,.44-.29,.71v2.59l-4.29-4.29c-.19-.19-.44-.29-.71-.29s-.52,.11-.71,.29l-2.29,2.29L1.71,3.29c-.19-.18-.44-.28-.7-.28-.26,0-.51,.11-.7,.29S.01,3.74,.01,4c0,.26,.1,.51,.28,.7l5,5c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29l2.29-2.29,3.59,3.59h-2.59Z"/></svg>')
 }
 
 input[data-task=">"]:checked,
@@ -5725,7 +5725,7 @@ li[data-task=">"]>input:checked,
 li[data-task=">"]>p>input:checked {
     --checkbox-color-hover: var(--color-pink);
     color: var(--color-pink);
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='black' d='M1.724 1.053a.5.5 0 0 0-.714.545l1.403 4.85a.5.5 0 0 0 .397.354l5.69.953c.268.053.268.437 0 .49l-5.69.953a.5.5 0 0 0-.397.354l-1.403 4.85a.5.5 0 0 0 .714.545l13-6.5a.5.5 0 0 0 0-.894l-13-6.5Z'/%3e%3c/svg%3e");
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M1.72,1.05c-.08-.04-.18-.06-.27-.05-.09,0-.18,.04-.26,.1-.07,.06-.13,.13-.16,.22-.03,.09-.04,.18-.02,.27l1.4,4.85c.03,.09,.08,.17,.15,.23,.07,.06,.16,.1,.25,.12l5.69,.95c.27,.05,.27,.44,0,.49l-5.69,.95c-.09,.02-.18,.06-.25,.12s-.12,.14-.15,.23l-1.4,4.85c-.02,.09-.01,.19,.02,.27,.03,.09,.09,.16,.16,.22,.07,.06,.16,.09,.26,.1,.09,0,.19,0,.27-.05l13-6.5c.08-.04,.15-.11,.2-.18,.05-.08,.07-.17,.07-.26s-.03-.18-.07-.26c-.05-.08-.12-.14-.2-.18L1.72,1.05Z"/></svg>')
 }
 
 input[data-task="<"]:checked,
@@ -6408,6 +6408,11 @@ body.DB-table-bg-color-unify .data-input:hover {
 }
 
 /*style settings*/
+
+body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-content {
+    padding: 12px !important;
+}
+
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
     padding-left: var(--size-4-4);
     margin-left: var(--size-4-3);

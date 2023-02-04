@@ -49,7 +49,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 <details>
 <summary><h5>More presets</h5></summary>
 <ul>
-<li>WIP...</li>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a></li>
+<img src="img/Mint.png">
 </ul>
 </details>
 
