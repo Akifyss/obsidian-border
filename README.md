@@ -33,23 +33,23 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 (**Presets Usage**: Copy code from link, paste it into style settings and restart obsidian.)
 
-+ [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
++ [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json) (Light Mode)
 ![screenshot](img/Fresh.png)
 
-+ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
++ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json) (Light Mode)
 ![screenshot](img/paper.png)
 
-+ [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
++ [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) (Dark Mode)
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
 
-+ [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
++ [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json) (Dark Mode)
 ![screenshot](img/Glass.png)
 
 <details>
 <summary><h5>More presets</h5></summary>
 <ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a></li>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Dark Mode)</li>
 <img src="img/Mint.png">
 </ul>
 </details>
