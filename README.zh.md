@@ -49,9 +49,9 @@
 ![screenshot](img/Glass.png)
 
 <details>
-<summary><h5>更多预设</h5></summary>
+<summary><h4>更多预设</h4></summary>
 <ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （暗色模式）</li>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
 <img src="img/Mint.png">
 </ul>
 </details>

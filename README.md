@@ -49,7 +49,7 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 ![screenshot](img/Glass.png)
 
 <details>
-<summary><h5>More presets</h5></summary>
+<summary><h4>More presets</h4></summary>
 <ul>
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Dark Mode)</li>
 <img src="img/Mint.png">
