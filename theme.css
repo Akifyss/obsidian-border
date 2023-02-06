@@ -330,32 +330,42 @@ settings:
         collapsed: ture
         level: 4
     - 
-        id: mod-left-split-background-select
+        id: mod-left-split-background-header-light
+        title: light mode
+        title.zh: 亮色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-left-split-background-select-light
         title: Left sidebar background
         title.zh: 左侧栏背景
         type: class-select
         allowEmpty: false
-        default: mod-left-split-background-secondary
+        default: mod-left-split-background-secondary-light
         options:
             -   label: background-primary
-                value: mod-left-split-background-primary
+                value: mod-left-split-background-primary-light
             -   label: background-secondary (default)
-                value: mod-left-split-background-secondary
+                value: mod-left-split-background-secondary-light
             -   label: transparent (card layout only)
-                value: mod-left-split-background-transparent
+                value: mod-left-split-background-transparent-light
             -   label: customize color
-                value: mod-left-split-background-customize
+                value: mod-left-split-background-customize-light
             -   label: customize CSS
-                value: mod-left-split-background-CSS
+                value: mod-left-split-background-CSS-light
     - 
-		id: background-mod-left-split
+		id: background-mod-left-split-light
 		title: Customize left sidebar background color
         title.zh: 自定义 左侧栏 背景色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-left-CSS-light
         title: Left sidebar background (light mode)
@@ -380,6 +390,43 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
+    - 
+        id: mod-left-split-background-header-dark
+        title: dark mode
+        title.zh: 暗色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-left-split-background-select-dark
+        title: Left sidebar background
+        title.zh: 左侧栏背景
+        type: class-select
+        allowEmpty: false
+        default: mod-left-split-background-secondary-dark
+        options:
+            -   label: background-primary
+                value: mod-left-split-background-primary-dark
+            -   label: background-secondary (default)
+                value: mod-left-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-left-split-background-transparent-dark
+            -   label: customize color
+                value: mod-left-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-left-split-background-CSS-dark
+    - 
+		id: background-mod-left-split-dark
+		title: Customize left sidebar background color
+        title.zh: 自定义 左侧栏 背景色
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-left-CSS-dark
         title: Left sidebar background (dark mode)
@@ -412,32 +459,42 @@ settings:
         collapsed: ture
         level: 4
     - 
-        id: mod-right-split-background-select
+        id: mod-right-split-background-header-light
+        title: light mode
+        title.zh: 亮色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-right-split-background-select-light
         title: Right sidebar background
         title.zh: 右侧栏背景
         type: class-select
         allowEmpty: false
-        default: mod-right-split-background-primary
+        default: mod-right-split-background-primary-light
         options:
             -   label: background-primary (default)
-                value: mod-right-split-background-primary
+                value: mod-right-split-background-primary-light
             -   label: background-secondary
-                value: mod-right-split-background-secondary
+                value: mod-right-split-background-secondary-light
             -   label: transparent (card layout only)
-                value: mod-right-split-background-transparent
+                value: mod-right-split-background-transparent-light
             -   label: customize color
-                value: mod-right-split-background-customize
+                value: mod-right-split-background-customize-light
             -   label: customize CSS
-                value: mod-right-split-background-CSS
+                value: mod-right-split-background-CSS-light
     - 
-		id: background-mod-right-split
+		id: background-mod-right-split-light
 		title: Customize right sidebar background color
         title.zh: 自定义 右侧栏 背景色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-right-CSS-light
         title: Right sidebar background (light mode)
@@ -462,6 +519,43 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
+    - 
+        id: mod-right-split-background-header-dark
+        title: dark mode
+        title.zh: 暗色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-right-split-background-select-dark
+        title: Right sidebar background
+        title.zh: 右侧栏背景
+        type: class-select
+        allowEmpty: false
+        default: mod-right-split-background-primary-dark
+        options:
+            -   label: background-primary (default)
+                value: mod-right-split-background-primary-dark
+            -   label: background-secondary
+                value: mod-right-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-right-split-background-transparent-dark
+            -   label: customize color
+                value: mod-right-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-right-split-background-CSS-dark
+    - 
+		id: background-mod-right-split-dark
+		title: Customize right sidebar background color
+        title.zh: 自定义 右侧栏 背景色
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-right-CSS-dark
         title: Right sidebar background (dark mode)
@@ -494,32 +588,42 @@ settings:
         collapsed: ture
         level: 4
     - 
-        id: mod-root-split-background-select
+        id: mod-root-split-background-header-light
+        title: light mode
+        title.zh: 亮色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-root-split-background-select-light
         title: Middle space background
         title.zh: 中间栏背景
         type: class-select
         allowEmpty: false
-        default: mod-root-split-background-primary
+        default: mod-root-split-background-primary-light
         options:
             -   label: background-primary (default)
-                value: mod-root-split-background-primary
+                value: mod-root-split-background-primary-light
             -   label: background-secondary
-                value: mod-root-split-background-secondary
+                value: mod-root-split-background-secondary-light
             -   label: transparent (card layout only)
-                value: mod-root-split-background-transparent
+                value: mod-root-split-background-transparent-light
             -   label: customize color
-                value: mod-root-split-background-customize
+                value: mod-root-split-background-customize-light
             -   label: customize CSS
-                value: mod-root-split-background-CSS
+                value: mod-root-split-background-CSS-light
     - 
-		id: background-mod-root-split
+		id: background-mod-root-split-light
 		title: Customize middle space background color
         title.zh: 自定义 中间栏 背景色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-root-CSS-light
         title: middle space background (light mode)
@@ -544,6 +648,43 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
+    - 
+        id: mod-root-split-background-header-dark
+        title: dark mode
+        title.zh: 暗色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+        id: mod-root-split-background-select-dark
+        title: Middle space background
+        title.zh: 中间栏背景
+        type: class-select
+        allowEmpty: false
+        default: mod-root-split-background-primary-dark
+        options:
+            -   label: background-primary (default)
+                value: mod-root-split-background-primary-dark
+            -   label: background-secondary
+                value: mod-root-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-root-split-background-transparent-dark
+            -   label: customize color
+                value: mod-root-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-root-split-background-CSS-dark
+    - 
+		id: background-mod-root-split-dark
+		title: Customize middle space background color
+        title.zh: 自定义 中间栏 背景色
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-mod-root-CSS-dark
         title: middle space background (dark mode)
@@ -576,39 +717,52 @@ settings:
         collapsed: ture
         level: 4
     - 
-		id: on-border
+        id: underlying-background-header-light
+        title: light mode
+        title.zh: 亮色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+		id: on-border-light
 		title: Customize the color of elements displayed directly on the underlying layer
         title.zh: 自定义 直接显示在底层背景上的元素颜色
         description: Includes top tab bar, ribbon menu and status bar
         description.zh: 包括顶部标签栏、功能区菜单和状态栏
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
-        id: background-underlying-select
+        id: background-underlying-select-light
         title: underlying background
         title.zh: 底层背景
         type: class-select
         allowEmpty: false
-        default: background-underlying-defalut
+        default: background-underlying-defalut-light
         options:
             -   label: adapt to accent color(defalut)
-                value: background-underlying-defalut
+                value: background-underlying-defalut-light
             -   label: customize color
-                value: background-underlying-Color
+                value: background-underlying-Color-light
             -   label: customize CSS
-                value: background-underlying-CSS
+                value: background-underlying-CSS-light
     - 
-		id: background-underlying
+		id: background-underlying-light
 		title: Customize underlying background color
         title.zh: 自定义 底层背景色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-underlying-CSS-light
         title: underlying background (light mode)
@@ -625,6 +779,53 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: overlay, color-burn;
+    - 
+        id: underlying-background-header-dark
+        title: dark mode
+        title.zh: 暗色模式
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+		id: on-border-dark
+		title: Customize the color of elements displayed directly on the underlying layer
+        title.zh: 自定义 直接显示在底层背景上的元素颜色
+        description: Includes top tab bar, ribbon menu and status bar
+        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-underlying-select-dark
+        title: underlying background
+        title.zh: 底层背景
+        type: class-select
+        allowEmpty: false
+        default: background-underlying-defalut-dark
+        options:
+            -   label: adapt to accent color(defalut)
+                value: background-underlying-defalut-dark
+            -   label: customize color
+                value: background-underlying-Color-dark
+            -   label: customize CSS
+                value: background-underlying-CSS-dark
+    - 
+		id: background-underlying-dark
+		title: Customize underlying background color
+        title.zh: 自定义 底层背景色
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
     - 
         id: background-underlying-CSS-dark
         title: underlying background (dark mode)
@@ -746,6 +947,13 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: Card-light
+        title: light mode
+        title.zh: 亮色模式
+        type: heading
+        collapsed: true
+        level: 4
+    - 
         id: card-border-radius-light
         title: Custom card border radius (light mode)
         title.zh: 自定义 卡片的圆角大小（亮色模式）
@@ -761,6 +969,13 @@ settings:
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
         default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
+    - 
+        id: Card-dark
+        title: dark mode
+        title.zh: 暗色模式
+        type: heading
+        collapsed: true
+        level: 4
     - 
         id: card-border-radius-dark
         title: Custom card border radius (dark mode)
@@ -1888,102 +2103,116 @@ body.h5-color-default .setting-item[data-id=h5-color],
 body.h5-color-designated .setting-item[data-id=h5-color],
 body.h6-color-default .setting-item[data-id=h6-color],
 body.h6-color-designated .setting-item[data-id=h6-color],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-split],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-split],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-split],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-split],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-split],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-split],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-split],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-split],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-split],
 body.file-icon-color-accent .setting-item[data-id=file-icon-color],
 body.file-icon-color-currentColor .setting-item[data-id=file-icon-color],
-body.background-underlying-defalut .setting-item[data-id=background-underlying],
-body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-light],
-body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-dark],
-body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-light],
-body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-dark],
-body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-blend-mode-light],
-body.background-underlying-defalut .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
-body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-light],
-body.background-underlying-Color .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
-body.background-underlying-CSS .setting-item[data-id=background-underlying],
-body.mod-root-split-background-CSS .setting-item[data-id=background-mod-root-split],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-light],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-dark],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
-body.mod-root-split-background-primary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-light],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-dark],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
-body.mod-root-split-background-secondary .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-light],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-dark],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
-body.mod-root-split-background-transparent .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-light],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-dark],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
-body.mod-root-split-background-customize .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
-body.mod-left-split-background-CSS .setting-item[data-id=background-mod-left-split],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-light],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-dark],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
-body.mod-left-split-background-primary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-light],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-dark],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
-body.mod-left-split-background-secondary .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-light],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-dark],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
-body.mod-left-split-background-transparent .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-light],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-dark],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
-body.mod-left-split-background-customize .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
-body.mod-right-split-background-CSS .setting-item[data-id=background-mod-right-split],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-light],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-dark],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
-body.mod-right-split-background-primary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-light],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-dark],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
-body.mod-right-split-background-secondary .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-light],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-dark],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
-body.mod-right-split-background-transparent .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-light],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-dark],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
-body.mod-right-split-background-customize .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.background-underlying-defalut-light .setting-item[data-id=background-underlying-light],
+body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-light],
+body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-blend-mode-light],
+body.background-underlying-Color-light .setting-item[data-id=background-underlying-CSS-light],
+body.background-underlying-Color-light .setting-item[data-id=background-underlying-CSS-blend-mode-light],
+body.background-underlying-CSS-light .setting-item[data-id=background-underlying-light],
+body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-dark],
+body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-CSS-dark],
+body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
+body.background-underlying-Color-dark .setting-item[data-id=background-underlying-CSS-dark],
+body.background-underlying-Color-dark .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
+body.background-underlying-CSS-dark .setting-item[data-id=background-underlying-dark],
+body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-split-light],
+body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-secondary-light .setting-item[data-id=background-mod-root-split-light],
+body.mod-root-split-background-secondary-light .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-secondary-light .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-secondary-light .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-transparent-light .setting-item[data-id=background-mod-root-split-light],
+body.mod-root-split-background-transparent-light .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-transparent-light .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-transparent-light .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-CSS-light .setting-item[data-id=background-mod-root-split-light],
+body.mod-root-split-background-customize-light .setting-item[data-id=background-mod-root-CSS-light],
+body.mod-root-split-background-customize-light .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
+body.mod-root-split-background-customize-light .setting-item[data-id=background-mod-root-CSS-backdrop-filter-light],
+body.mod-root-split-background-primary-dark .setting-item[data-id=background-mod-root-split-dark],
+body.mod-root-split-background-primary-dark .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-primary-dark .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-primary-dark .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-secondary-dark .setting-item[data-id=background-mod-root-split-dark],
+body.mod-root-split-background-secondary-dark .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-secondary-dark .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-secondary-dark .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-transparent-dark .setting-item[data-id=background-mod-root-split-dark],
+body.mod-root-split-background-transparent-dark .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-transparent-dark .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-transparent-dark .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-root-split-background-CSS-dark .setting-item[data-id=background-mod-root-split-dark],
+body.mod-root-split-background-customize-dark .setting-item[data-id=background-mod-root-CSS-dark],
+body.mod-root-split-background-customize-dark .setting-item[data-id=background-mod-root-CSS-blend-mode-dark],
+body.mod-root-split-background-customize-dark .setting-item[data-id=background-mod-root-CSS-backdrop-filter-dark],
+body.mod-left-split-background-primary-light .setting-item[data-id=background-mod-left-split-light],
+body.mod-left-split-background-primary-light .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-primary-light .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-primary-light .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-secondary-light .setting-item[data-id=background-mod-left-split-light],
+body.mod-left-split-background-secondary-light .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-secondary-light .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-secondary-light .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-transparent-light .setting-item[data-id=background-mod-left-split-light],
+body.mod-left-split-background-transparent-light .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-transparent-light .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-transparent-light .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-CSS-light .setting-item[data-id=background-mod-left-split-light],
+body.mod-left-split-background-customize-light .setting-item[data-id=background-mod-left-CSS-light],
+body.mod-left-split-background-customize-light .setting-item[data-id=background-mod-left-CSS-blend-mode-light],
+body.mod-left-split-background-customize-light .setting-item[data-id=background-mod-left-CSS-backdrop-filter-light],
+body.mod-left-split-background-primary-dark .setting-item[data-id=background-mod-left-split-dark],
+body.mod-left-split-background-primary-dark .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-primary-dark .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-primary-dark .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-secondary-dark .setting-item[data-id=background-mod-left-split-dark],
+body.mod-left-split-background-secondary-dark .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-secondary-dark .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-secondary-dark .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-transparent-dark .setting-item[data-id=background-mod-left-split-dark],
+body.mod-left-split-background-transparent-dark .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-transparent-dark .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-transparent-dark .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-left-split-background-CSS-dark .setting-item[data-id=background-mod-left-split-dark],
+body.mod-left-split-background-customize-dark .setting-item[data-id=background-mod-left-CSS-dark],
+body.mod-left-split-background-customize-dark .setting-item[data-id=background-mod-left-CSS-blend-mode-dark],
+body.mod-left-split-background-customize-dark .setting-item[data-id=background-mod-left-CSS-backdrop-filter-dark],
+body.mod-right-split-background-primary-light .setting-item[data-id=background-mod-right-split-light],
+body.mod-right-split-background-primary-light .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-primary-light .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-primary-light .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-secondary-light .setting-item[data-id=background-mod-right-split-light],
+body.mod-right-split-background-secondary-light .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-secondary-light .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-secondary-light .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-transparent-light .setting-item[data-id=background-mod-right-split-light],
+body.mod-right-split-background-transparent-light .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-transparent-light .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-transparent-light .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-CSS-light .setting-item[data-id=background-mod-right-split-light],
+body.mod-right-split-background-customize-light .setting-item[data-id=background-mod-right-CSS-light],
+body.mod-right-split-background-customize-light .setting-item[data-id=background-mod-right-CSS-blend-mode-light],
+body.mod-right-split-background-customize-light .setting-item[data-id=background-mod-right-CSS-backdrop-filter-light],
+body.mod-right-split-background-primary-dark .setting-item[data-id=background-mod-right-split-dark],
+body.mod-right-split-background-primary-dark .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-primary-dark .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-primary-dark .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-secondary-dark .setting-item[data-id=background-mod-right-split-dark],
+body.mod-right-split-background-secondary-dark .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-secondary-dark .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-secondary-dark .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-transparent-dark .setting-item[data-id=background-mod-right-split-dark],
+body.mod-right-split-background-transparent-dark .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-transparent-dark .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-transparent-dark .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
+body.mod-right-split-background-CSS-dark .setting-item[data-id=background-mod-right-split-dark],
+body.mod-right-split-background-customize-dark .setting-item[data-id=background-mod-right-CSS-dark],
+body.mod-right-split-background-customize-dark .setting-item[data-id=background-mod-right-CSS-blend-mode-dark],
+body.mod-right-split-background-customize-dark .setting-item[data-id=background-mod-right-CSS-backdrop-filter-dark],
 body.activated-file-default-light .setting-item[data-id=color-activated-file-light],
 body.activated-file-default-light .setting-item[data-id=border-radius-activated-file-light],
 body.activated-file-default-light .setting-item[data-id=color-to-file-icon-light],
@@ -2058,8 +2287,6 @@ body {
     --background-modifier-message: rgba(0, 0, 0, 0.8);
     /* Inputs */
     --background-modifier-form-field: var(--color-base-00);
-    /* Status bar */
-    --status-bar-text-color: var(--on-border);
     /* Text */
     --text-normal: var(--color-base-100);
     --text-muted: var(--color-base-70);
@@ -2079,15 +2306,35 @@ body {
     --prompt-border-color: var(--divider-color);
     /* Modals - e.g. settings, community themes, community plugins */
     --modal-border-color: var(--divider-color);
-    /* Color customize */
-    --on-border: var(--color-accent-3);
+}
+
+/* background customize*/
+body {
+    --on-border-light: var(--color-accent-3);
+    --on-border-dark: var(--color-accent-3);
+    --background-underlying-light: var(--background-tertiary);
+    --background-underlying-dark: var(--background-tertiary);
     --background-underlying: var(--background-tertiary);
+    --background-mod-left-split-light: var(--background-secondary);
+    --background-mod-left-split-dark: var(--background-secondary);
     --background-mod-left-split: var(--background-secondary);
+    --background-mod-right-split-light: var(--background-primary);
+    --background-mod-right-split-dark: var(--background-primary);
     --background-mod-right-split: var(--background-primary);
+    --background-mod-root-split-light: var(--background-primary);
+    --background-mod-root-split-dark: var(--background-primary);
     --background-mod-root-split: var(--background-primary);
 }
 
-/* color accent custom*/
+.theme-light {
+    --status-bar-text-color: var(--on-border-light);
+}
+
+.theme-dark {
+    --status-bar-text-color: var(--on-border-dark);
+}
+
+/* color accent customize*/
 .theme-light {
     --accent-h-light: 232;
     --accent-s-light: 80%;
@@ -2520,90 +2767,192 @@ body {
     --background-underlying-CSS-blend-mode-dark: soft-light, luminosity, hue, luminosity, hard-light;
 }
 
-body.background-underlying-defalut {
+body.background-underlying-defalut-light.theme-light {
     --background-underlying: var(--background-tertiary) !important;
+}
+
+body.background-underlying-defalut-dark.theme-dark {
+    --background-underlying: var(--background-tertiary) !important;
+}
+
+body.background-underlying-Color-light.theme-light {
+    --background-underlying: var(--background-underlying-light) !important;
+}
+
+body.background-underlying-Color-dark.theme-dark {
+    --background-underlying: var(--background-underlying-dark) !important;
 }
 
 body:not(.is-mobile) .app-container {
     background-color: var(--background-underlying);
 }
 
-body:not(.is-mobile).background-underlying-CSS .app-container {
-    background: var(--background-underlying-CSS-light, --background-underlying);
-    background-blend-mode: var(--background-underlying-CSS-blend-mode-light);
+body.theme-light:not(.is-mobile).background-underlying-CSS-light .app-container {
+    background: var(--background-underlying-CSS-light, --background-underlying) !important;
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-light) !important;
 }
 
-body:not(.is-mobile).theme-dark.background-underlying-CSS .app-container {
-    background: var(--background-underlying-CSS-dark, --background-underlying);
-    background-blend-mode: var(--background-underlying-CSS-blend-mode-dark);
+body.theme-dark:not(.is-mobile).background-underlying-CSS-dark .app-container {
+    background: var(--background-underlying-CSS-dark, --background-underlying) !important;
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
 }
 
-body.mod-left-split-background-secondary {
+/*mod-left*/
+
+body.theme-light.mod-left-split-background-secondary-light {
     --background-mod-left-split: var(--background-secondary) !important;
 }
 
-body.mod-left-split-background-primary {
+body.theme-dark.mod-left-split-background-secondary-dark {
+    --background-mod-left-split: var(--background-secondary) !important;
+}
+
+body.theme-light.mod-left-split-background-primary-light {
     --background-mod-left-split: var(--background-primary) !important;
 }
 
-body.mod-left-split-background-transparent.card-layout-open {
+body.theme-dark.mod-left-split-background-primary-dark {
+    --background-mod-left-split: var(--background-primary) !important;
+}
+
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open {
     --background-mod-left-split: transparent !important;
 }
 
-body.mod-left-split-background-transparent:not(.card-layout-open) {
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open {
+    --background-mod-left-split: transparent !important;
+}
+
+body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open) {
     --background-mod-left-split: var(--background-secondary) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-left-split-background-transparent .mod-left-split .workspace-tab-container {
+body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open) {
+    --background-mod-left-split: var(--background-secondary) !important;
+}
+
+body.theme-light:not(.is-mobile).card-layout-open.mod-left-split-background-transparent-light .mod-left-split .workspace-tab-container {
     --card-shadow-light: transparent;
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open.mod-left-split-background-transparent-dark .mod-left-split .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
 
-body.mod-right-split-background-primary {
+body.theme-light.mod-left-split-background-customize-light {
+    --background-mod-left-split: var(--background-mod-left-split-light) !important;
+}
+
+body.theme-dark.mod-left-split-background-customize-dark {
+    --background-mod-left-split: var(--background-mod-left-split-dark) !important;
+}
+
+/*mod-right*/
+
+body.theme-light.mod-right-split-background-primary-light {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
-body.mod-right-split-background-secondary {
+body.theme-dark.mod-right-split-background-primary-dark {
+    --background-mod-right-split: var(--background-primary) !important;
+}
+
+body.theme-light.mod-right-split-background-secondary-light {
     --background-mod-right-split: var(--background-secondary) !important;
 }
 
-body.mod-right-split-background-transparent.card-layout-open {
+body.theme-dark.mod-right-split-background-secondary-dark {
+    --background-mod-right-split: var(--background-secondary) !important;
+}
+
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open {
     --background-mod-right-split: transparent !important;
 }
 
-body.mod-right-split-background-transparent:not(.card-layout-open) {
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open {
+    --background-mod-right-split: transparent !important;
+}
+
+body.theme-light.mod-right-split-background-transparent-light:not(.card-layout-open) {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-right-split-background-transparent .mod-right-split .workspace-tab-container {
+body.theme-dark.mod-right-split-background-transparent-dark:not(.card-layout-open) {
+    --background-mod-right-split: var(--background-primary) !important;
+}
+
+body.theme-light:not(.is-mobile).card-layout-open.mod-right-split-background-transparent-light .mod-right-split .workspace-tab-container {
     --card-shadow-light: transparent;
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open.mod-right-split-background-transparent-dark .mod-right-split .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
 
-body.mod-root-split-background-primary {
+body.theme-light.mod-right-split-background-customize-light {
+    --background-mod-right-split: var(--background-mod-right-split-light) !important;
+}
+
+body.theme-dark.mod-right-split-background-customize-dark {
+    --background-mod-right-split: var(--background-mod-right-split-dark) !important;
+}
+
+/*mod-root*/
+
+body.theme-light.mod-root-split-background-primary-light {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body.mod-root-split-background-secondary {
+body.theme-dark.mod-root-split-background-primary-dark {
+    --background-mod-root-split: var(--background-primary) !important;
+}
+
+body.theme-light.mod-root-split-background-secondary-light {
     --background-mod-root-split: var(--background-secondary) !important;
 }
 
-body.mod-root-split-background-transparent.card-layout-open {
+body.theme-dark.mod-root-split-background-secondary-dark {
+    --background-mod-root-split: var(--background-secondary) !important;
+}
+
+body.theme-light.mod-root-split-background-transparent-light.card-layout-open {
     --background-mod-root-split: transparent !important;
 }
 
-body.mod-root-split-background-transparent:not(.card-layout-open) {
+body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open {
+    --background-mod-root-split: transparent !important;
+}
+
+body.theme-light.mod-root-split-background-transparent-light:not(.card-layout-open) {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body:is(.mod-root-split-background-transparent, .mod-root-split-background-CSS) .mod-stacked {
+body.theme-dark.mod-root-split-background-transparent-dark:not(.card-layout-open) {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-root-split-background-transparent .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
+body.theme-light:is(.mod-root-split-background-transparent-light, .mod-root-split-background-CSS-light) .mod-stacked,
+body.theme-dark:is(.mod-root-split-background-transparent-dark, .mod-root-split-background-CSS-dark) .mod-stacked {
+    --background-mod-root-split: var(--background-primary) !important;
+}
+
+body.theme-light:not(.is-mobile).card-layout-open.mod-root-split-background-transparent-light .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
     --card-shadow-light: transparent;
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open.mod-root-split-background-transparent-dark .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
+
+body.theme-light.mod-root-split-background-customize-light {
+    --background-mod-root-split: var(--background-mod-root-split-light) !important;
+}
+
+body.theme-dark.mod-root-split-background-customize-dark {
+    --background-mod-root-split: var(--background-mod-root-split-dark) !important;
+}
+
+/*---*/
 
 body {
     --background-mod-root-CSS-light: rgba(255, 255, 255, 0.5);
@@ -2633,18 +2982,18 @@ body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .wor
     background: var(--background-mod-left-split) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open.mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-CSS-light) !important;
     background-blend-mode: var(--background-mod-left-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open.mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-CSS-dark) !important;
     background-blend-mode: var(--background-mod-left-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-dark);
@@ -2659,18 +3008,18 @@ body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .wo
     background: var(--background-mod-right-split) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open.mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-CSS-light) !important;
     background-blend-mode: var(--background-mod-right-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open.mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-CSS-dark) !important;
     background-blend-mode: var(--background-mod-right-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-dark);
@@ -2685,18 +3034,18 @@ body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-root .workspace
     background: var(--background-mod-root-split) !important;
 }
 
-body:not(.is-mobile).card-layout-open.mod-root-split-background-CSS .workspace-split.mod-root .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open.mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-CSS-light) !important;
     background-blend-mode: var(--background-mod-root-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-root-split-background-CSS .workspace-split.mod-root .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open.mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-CSS-dark) !important;
     background-blend-mode: var(--background-mod-root-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-dark);
@@ -2736,20 +3085,23 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
 }
 
 /*view-header gradient*/
+body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before,
+body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after,
+body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before,
+body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after,
+body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after,
+body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before,
+body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after,
+body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
+    background: linear-gradient(to right, transparent, transparent);
+}
+
 body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
     background: linear-gradient(to right, transparent, var(--background-mod-left-split));
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
     background: linear-gradient(to right, var(--background-mod-left-split), transparent);
-}
-
-body:not(.is-mobile).mod-left-split-background-CSS .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, transparent);
-}
-
-body:not(.is-mobile).mod-left-split-background-CSS .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, transparent, transparent);
 }
 
 body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
@@ -2760,13 +3112,6 @@ body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-contain
     background: linear-gradient(to right, var(--background-mod-right-split), transparent);
 }
 
-body:not(.is-mobile).mod-right-split-background-CSS .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, transparent);
-}
-
-body:not(.is-mobile).mod-right-split-background-CSS .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, transparent, transparent);
-}
 
 body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
     background: linear-gradient(to right, transparent, var(--background-mod-root-split));
@@ -2776,13 +3121,13 @@ body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(
     background: linear-gradient(to right, var(--background-mod-root-split), transparent);
 }
 
-body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
+body.theme-light:not(.is-mobile).mod-root-split-background-CSS-light .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before,
+body.theme-light:not(.is-mobile).mod-root-split-background-CSS-light .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after,
+body.theme-dark:not(.is-mobile).mod-root-split-background-CSS-dark .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before,
+body.theme-dark:not(.is-mobile).mod-root-split-background-CSS-dark .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
     background: linear-gradient(to right, transparent, transparent);
 }
 
-body:not(.is-mobile).mod-root-split-background-CSS .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, transparent, transparent);
-}
 
 /* tab */
 body {
@@ -2811,6 +3156,7 @@ body {
 
 body .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
     --icon-opacity: 1;
+    --icon-color: var(--text-normal);
 }
 
 body.theme-light.color-to-tab-icon-light .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -2884,12 +3230,18 @@ body:not(.is-mobile) .mod-right-split .tag-container {
 }
 
 
-body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .item-list,
-body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .nav-files-container,
-body:not(.is-mobile).mod-left-split-background-transparent .mod-left-split .tag-container,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .item-list,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .nav-files-container,
-body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .tag-container {
+body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .item-list,
+body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .nav-files-container,
+body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .tag-container,
+body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .item-list,
+body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .nav-files-container,
+body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .tag-container,
+body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .item-list,
+body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .nav-files-container,
+body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .tag-container,
+body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .item-list,
+body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .nav-files-container,
+body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .tag-container {
     background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
     background-repeat: no-repeat;
     background-size: 100% 40px, 91% 1px;
@@ -2897,12 +3249,18 @@ body:not(.is-mobile).mod-left-split-background-CSS .mod-left-split .tag-containe
 }
 
 
-body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .item-list,
-body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .nav-files-container,
-body:not(.is-mobile).mod-right-split-background-transparent .mod-right-split .tag-container,
-body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .item-list,
-body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .nav-files-container,
-body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .tag-container {
+body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .item-list,
+body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .nav-files-container,
+body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .tag-container,
+body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .item-list,
+body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .nav-files-container,
+body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .tag-container,
+body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .item-list,
+body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .nav-files-container,
+body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .tag-container,
+body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .item-list,
+body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .nav-files-container,
+body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .tag-container {
     background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
     background-repeat: no-repeat;
     background-size: 100% 40px, 91% 1px;
@@ -2911,13 +3269,10 @@ body:not(.is-mobile).mod-right-split-background-CSS .mod-right-split .tag-contai
 
 /* --- */
 
-body.mod-left-split-background-transparent.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    box-shadow: inset 0px 1px 0px var(--divider-color);
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
-}
-
-body.mod-right-split-background-transparent.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
     box-shadow: inset 0px 1px 0px var(--divider-color);
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
@@ -3053,8 +3408,12 @@ body:not(.is-mobile) .workspace-ribbon {
     border-top: 1px solid var(--divider-color);
 }
 
-.workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
-    color: var(--on-border) !important;
+.theme-light .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
+    color: var(--on-border-light) !important;
+}
+
+.theme-dark .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
+    color: var(--on-border-dark) !important;
 }
 
 .workspace-tab-header::before,
@@ -3143,9 +3502,14 @@ body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod
     min-height: 16px;
 }
 
-.status-bar-item.mod-clickable:hover {
-    color: var(--on-border);
+.theme-light .status-bar-item.mod-clickable:hover {
+    color: var(--on-border-light);
 }
+
+.theme-dark .status-bar-item.mod-clickable:hover {
+    color: var(--on-border-dark);
+}
+
 
 .status-bar-item {
     height: 24px;
@@ -3477,13 +3841,22 @@ body:not(.is-mobile).card-layout-open .workspace-tabs:not(.mod-top) .workspace-t
 
 
 
-body:not(.is-mobile).card-layout-open .workspace-tab-header {
-    color: var(--on-border) !important;
+body.theme-light:not(.is-mobile).card-layout-open .workspace-tab-header {
+    color: var(--on-border-light) !important;
 }
 
-body:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
-    --icon-color: var(--on-border);
-    --icon-color-hover: var(--on-border);
+body.theme-dark:not(.is-mobile).card-layout-open .workspace-tab-header {
+    color: var(--on-border-dark) !important;
+}
+
+body.theme-light:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
+    --icon-color: var(--on-border-light);
+    --icon-color-hover: var(--on-border-light);
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
+    --icon-color: var(--on-border-dark);
+    --icon-color-hover: var(--on-border-dark);
 }
 
 /*autohide card-layout*/
@@ -3565,13 +3938,25 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     display: none;
 }
 
-.titlebar-button.mod-logo {
-    color: var(--on-border);
+.theme-light .titlebar-button.mod-logo {
+    color: var(--on-border-light);
 }
 
-.titlebar-button-container.mod-right .titlebar-button::after {
+.theme-dark .titlebar-button.mod-logo {
+    color: var(--on-border-dark);
+}
+
+.theme-light .titlebar-button-container.mod-right .titlebar-button::after {
     content: '';
-    background-color: var(--on-border);
+    background-color: var(--on-border-light);
+    width: 16px;
+    height: 16px;
+    margin: auto;
+}
+
+.theme-dark .titlebar-button-container.mod-right .titlebar-button::after {
+    content: '';
+    background-color: var(--on-border-dark);
     width: 16px;
     height: 16px;
     margin: auto;
@@ -3903,8 +4288,8 @@ body.activated-file-tab-style-dark.theme-dark {
     --shadow-activated-file-dark: var(--shadow-activated-tab-header-dark) !important;
 }
 
-body.activated-file-tab-style-light.theme-light.mod-right-split-background-primary .mod-right-split,
-body.activated-file-tab-style-light.theme-light.mod-left-split-background-primary .mod-left-split {
+body.activated-file-tab-style-light.theme-light.mod-right-split-background-primary-light .mod-right-split,
+body.activated-file-tab-style-light.theme-light.mod-left-split-background-primary-light .mod-left-split {
     --shadow-activated-file-light: var(--shadow-activated-tab-header-light-alt) !important;
 }
 
@@ -6253,13 +6638,19 @@ body {
     gap: var(--size-2-2);
 }
 
-.workspace-ribbon,
-.workspace-tabs.mod-top .workspace-tab-header-container,
-.status-bar {
-    --icon-color: var(--on-border);
-    --icon-color-hover: var(--on-border);
+.theme-light .workspace-ribbon,
+.theme-light .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-light .status-bar {
+    --icon-color: var(--on-border-light);
+    --icon-color-hover: var(--on-border-light);
 }
 
+.theme-dark .workspace-ribbon,
+.theme-dark .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-dark .status-bar {
+    --icon-color: var(--on-border-dark);
+    --icon-color-hover: var(--on-border-dark);
+}
 
 .workspace .mod-root .workspace-tab-header-inner-icon svg {
     width: 16px;

@@ -4,10 +4,10 @@
   "Border@@accent-h-light": 32,
   "Border@@accent-s-light": "64%",
   "Border@@accent-l-light": "50%",
-  "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
-  "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
-  "Border@@mod-root-split-background-select": "mod-root-split-background-transparent",
-  "Border@@background-underlying-select": "background-underlying-CSS",
+  "Border@@mod-left-split-background-select-light": "mod-left-split-background-transparent-light",
+  "Border@@mod-right-split-background-select-light": "mod-right-split-background-transparent-light",
+  "Border@@mod-root-split-background-select-light": "mod-root-split-background-transparent-light",
+  "Border@@background-underlying-select-light": "background-underlying-CSS-light",
   "Border@@background-underlying-CSS-light": "url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
   "Border@@background-underlying-CSS-blend-mode-light": "normal"
 }

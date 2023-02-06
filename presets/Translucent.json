@@ -1,9 +1,9 @@
 {
   "Border@@card-layout-open": true,
-  "Border@@mod-left-split-background-select": "mod-left-split-background-transparent",
-  "Border@@mod-right-split-background-select": "mod-right-split-background-transparent",
-  "Border@@mod-root-split-background-select": "mod-root-split-background-CSS",
+  "Border@@mod-left-split-background-select-dark": "mod-left-split-background-transparent-dark",
+  "Border@@mod-right-split-background-select-dark": "mod-right-split-background-transparent-dark",
+  "Border@@mod-root-split-background-select-dark": "mod-root-split-background-CSS-dark",
   "Border@@background-mod-root-CSS-dark": "rgba(0,0,0,0.25)",
-  "Border@@background-underlying-select": "background-underlying-defalut",
+  "Border@@background-underlying-select-dark": "background-underlying-defalut-dark",
   "Border@@Active-states-file-explorer-select-dark": "activated-file-tab-style-dark"
 }
