@@ -48,14 +48,7 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json) (Dark Mode)
 ![screenshot](img/Glass.png)
 
-<details>
-<summary><h4>More presets</h4></summary>
-<ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Dark Mode)</li>
-<img src="img/Mint.png">
-<li>WIP...</li>
-</ul>
-</details>
+#### [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 ### Miscellaneous
 

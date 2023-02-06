@@ -48,14 +48,7 @@
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json) （暗色模式）
 ![screenshot](img/Glass.png)
 
-<details>
-<summary><h4>更多预设</h4></summary>
-<ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
-<img src="img/Mint.png">
-<li>设计中...</li>
-</ul>
-</details>
+#### [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 ### 杂项
 
