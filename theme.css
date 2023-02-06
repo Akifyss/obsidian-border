@@ -2081,7 +2081,22 @@ settings:
         title: colorful checkbox
         title.zh: 多彩选框
         type: class-toggle
-
+    - 
+        id: Preset
+        title: Preset
+        title.zh: 预设
+        description: Visit the link below for presets, click on "Import" in the top right corner and restart obsidian.
+        description.zh: 访问下面的链接获取预设，点击右上角“Import”导入预设，重启obsidian来生效
+        type: heading
+        collapsed: false
+        level: 2
+    - 
+        id: Preset-link
+        description: https://github.com/Akifyss/obsidian-border#presets
+        description.zh: https://github.com/Akifyss/obsidian-border/blob/main/README.zh.md#%E9%A2%84%E8%AE%BE
+        type: heading
+        collapsed: false
+        level: 2
 */
 
 /*hide style setting option*/
@@ -7043,6 +7058,39 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 .setting-item.style-settings-heading[data-id=Plugin] .style-settings-collapse-indicator::after {
     content: "\1F9E9";
     margin-left: var(--size-4-2);
+}
+
+.setting-item.style-settings-heading[data-id=Preset] .style-settings-collapse-indicator::after {
+    content: "\1F308";
+    margin-left: var(--size-4-2);
+}
+
+
+.style-settings-heading[data-id=Preset] {
+    pointer-events: none;
+    cursor: text;
+    margin-bottom: 0;
+}
+
+.setting-item.style-settings-heading[data-id=Preset-link] {
+    padding: unset;
+    margin-bottom: 0;
+    cursor: default;
+    border-bottom: unset;
+}
+
+.setting-item.style-settings-heading[data-id=Preset-link] .setting-item-description {
+    padding: 0;
+    color: var(--interactive-accent);
+    cursor: text;
+    user-select: all;
+}
+
+.setting-item.style-settings-heading[data-id=Preset-link]+.style-settings-container,
+.setting-item.style-settings-heading[data-id=Preset-link] .setting-item-name,
+.setting-item.style-settings-heading[data-id=Preset-link] .setting-item-control,
+.setting-item.style-settings-heading[data-id=Preset-link] .style-settings-collapse-indicator {
+    display: none;
 }
 
 /*calendar*/
