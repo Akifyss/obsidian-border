@@ -24,6 +24,9 @@
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
 
++ [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
+![screenshot](img/Lightup.png)
+
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glassmorphism.png)
 

@@ -60,6 +60,8 @@
 <img src="img/Paper-like.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> （暗色模式）</li>
 <img src="img/Glassmorphism.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> （暗色模式）</li>
+<img src="img/Lightup.png">
 <li>WIP...</li>
 </ul>
 </details>
