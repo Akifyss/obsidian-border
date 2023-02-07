@@ -203,8 +203,8 @@ settings:
         level: 2
     - 
         id: card-layout-open-light
-        title: Enable card layout
-        title.zh: 启用 卡片式布局
+        title: Enable card layout(light mode)
+        title.zh: 启用 卡片式布局（亮色模式）
         type: class-toggle
     - 
         id: theme-light-style-select
@@ -762,8 +762,8 @@ settings:
         level: 2
     - 
         id: card-layout-open-dark
-        title: Enable card layout
-        title.zh: 启用 卡片式布局
+        title: Enable card layout(dark mode)
+        title.zh: 启用 卡片式布局（暗色模式）
         type: class-toggle
     - 
         id: theme-dark-style-select
@@ -3693,6 +3693,51 @@ body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titleb
 
 /*tab autohide*/
 
+body:not(.is-mobile).tab-autohide .workspace-tabs {
+    gap: 0px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
+    gap: 4px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
+    height: 16px;
+    opacity: 0;
+    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
+    height: 40px;
+    opacity: 1;
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    border-top: 1px solid transparent;
+    transition: border-top var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container {
+    border-top: 1px solid var(--divider-color);
+    transition: border-top var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    border-top: 1px solid transparent;
+    transition: border-top var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container {
+    border-top: 1px solid var(--divider-color);
+    transition: border-top var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+
+/*tab autohide mod-top*/
+
 body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
@@ -3932,7 +3977,7 @@ body:not(.is-mobile).card-layout-open-light.theme-light .workspace-leaf-resize-h
 }
 
 body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: unset;
+    border-top: 1px solid transparent;
 }
 
 body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tab-header {
@@ -3983,7 +4028,7 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-leaf-resize-han
 }
 
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: unset;
+    border-top: 1px solid transparent;
 }
 
 body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tab-header {
@@ -3995,53 +4040,6 @@ body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace
     --icon-color-hover: var(--on-border-dark);
 }
 
-/*autohide card-layout light*/
-
-body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tabs {
-    gap: 0px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
-    gap: 4px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tab-header-container {
-    height: 16px;
-    opacity: 0;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tab-header-container:hover {
-    height: 40px;
-    opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
-
-/*autohide card-layout dark*/
-
-body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tabs {
-    gap: 0px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
-    gap: 4px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tab-header-container {
-    height: 16px;
-    opacity: 0;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
-}
-
-body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tab-header-container:hover {
-    height: 40px;
-    opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
 
 /* ====== titlebar ===== */
 body:not(.is-translucent) .titlebar-text {
