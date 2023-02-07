@@ -66,9 +66,13 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ### Miscellaneous
 
-#### Alternate Checkboxes
+#### Alternate checkboxes
 
 ![screenshot](img/Checkboxes.png)
+
+#### Colorful folder icon
+
+![screenshot](img/colorful-icon.png)
 
 ## Credits
 

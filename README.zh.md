@@ -69,3 +69,7 @@
 #### 备用复选框
 
 ![screenshot](img/Checkboxes.png)
+
+#### 多彩文件夹图标
+
+![screenshot](img/colorful-icon.png)
