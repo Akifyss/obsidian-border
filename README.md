@@ -50,6 +50,17 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 #### [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
+<details>
+<summary></summary>
+<ul>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Light Mode)</li>
+<img src="img/Mint.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json">Boundary</a> (Light Mode)</li>
+<img src="img/Boundary.png">
+<li>WIP...</li>
+</ul>
+</details>
+
 ### Miscellaneous
 
 #### Alternate Checkboxes

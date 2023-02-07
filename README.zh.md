@@ -50,6 +50,17 @@
 
 #### [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
+<details>
+<summary></summary>
+<ul>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
+<img src="img/Mint.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json">Boundary</a> （亮色模式）</li>
+<img src="img/Boundary.png">
+<li>WIP...</li>
+</ul>
+</details>
+
 ### 杂项
 
 #### 备用复选框

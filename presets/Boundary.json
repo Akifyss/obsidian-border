@@ -1,6 +1,6 @@
 {
-  "Border@@card-layout-open": false,
-  "Border@@accent-color-custom": true,
+  "Border@@card-layout-open-light": false,
+  "Border@@accent-color-custom-light": true,
   "Border@@accent-s-light": "0%",
   "Border@@accent-l-light": "0%",
   "Border@@background-underlying-select-light": "background-underlying-CSS-light",

@@ -195,14 +195,14 @@ settings:
         title.zh: 隐藏滚动条
         type: class-toggle
     - 
-        id: Appearance
-        title: Appearance
-        title.zh: 外观
+        id: Appearance-light
+        title: Appearance(light mode)
+        title.zh: 外观（亮色模式）
         type: heading
         collapsed: true
         level: 2
     - 
-        id: card-layout-open
+        id: card-layout-open-light
         title: Enable card layout
         title.zh: 启用 卡片式布局
         type: class-toggle
@@ -219,127 +219,61 @@ settings:
             -   label: colored
                 value: theme-light-background-adapt
     - 
-        id: theme-dark-style-select
-        title: Dark mode style
-        title.zh: 暗色模式风格
-        type: class-select
-        allowEmpty: false
-        default: theme-dark-background-default
-        options:
-            -   label: brighter
-                value: theme-dark-background-brighter
-            -   label: default
-                value: theme-dark-background-default
-            -   label: darker
-                value: theme-dark-background-darker
-            -   label: pure black
-                value: theme-dark-background-black
-    - 
-        id: Accent-color
+        id: Accent-color-light
         title: Accent color
         title.zh: 强调色
         type: heading
         collapsed: true
         level: 3
     - 
-        id: accent-color-restore
-        title: Restore accent color in dark mode
-        title.zh: 还原暗色模式下的强调色
-        type: class-toggle
-    - 
-        id: accent-color-custom
-        title: Custom accent color
-        title.zh: 自定义主题色
+        id: accent-color-custom-light
+        title: Custom accent color(light mode)
+        title.zh: 自定义主题色（亮色模式）
         description: Set accent color for the light and dark modes separately
         description.zh: 分开来设置亮色模式与暗色模式的强调色
         type: class-toggle
     - 
-        id: accent-color-light
-        title: Accent color (light mode)
-        title.zh: 强调色（亮色模式）
-        type: heading
-        collapsed: true
-        level: 4
-    - 
         id: accent-h-light
-        title: Hue
-        title.zh: 色调
+        title: Hue(light mode)
+        title.zh: 色调（亮色模式）
         description: Input a value of 0 - 360
         description.zh: 输入0 - 360的值
         type: variable-number
         default: 232
     - 
         id: accent-s-light
-        title: Saturation
-        title.zh: 饱和度
+        title: Saturation(light mode)
+        title.zh: 饱和度（亮色模式）
         description: Input a value of 0% - 100%
         description.zh: 输入0% - 100%的值
         type: variable-text
         default: 80%
     - 
         id: accent-l-light
-        title: Lightness
-        title.zh: 亮度
+        title: Lightness(light mode)
+        title.zh: 亮度（亮色模式）
         description: Input a value of 0% - 100%
         description.zh: 输入0% - 100%的值
         type: variable-text
         default: 64%
     - 
-        id: accent-color-dark
-        title: Accent color (dark mode)
-        title.zh: 强调色（暗色模式）
-        type: heading
-        collapsed: true
-        level: 4
-    - 
-        id: accent-h-dark
-        title: Hue
-        title.zh: 色调
-        description: Input a value of 0 - 360
-        description.zh: 输入0 - 360的值
-        type: variable-number
-        default: 232
-    - 
-        id: accent-s-dark
-        title: Saturation
-        title.zh: 饱和度
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 80%
-    - 
-        id: accent-l-dark
-        title: Lightness
-        title.zh: 亮度
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 64%
-    - 
-        id: Background
+        id: Background-light
         title: Background
         title.zh: 背景
         type: heading
         collapsed: true
         level: 3
     - 
-        id: mod-left-split-background-header
+        id: mod-left-split-background-header-light
         title: Left sidebar background
         title.zh: 左侧栏背景
         type: heading
         collapsed: ture
         level: 4
     - 
-        id: mod-left-split-background-header-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
         id: mod-left-split-background-select-light
-        title: Left sidebar background
-        title.zh: 左侧栏背景
+        title: Left sidebar background(light mode)
+        title.zh: 左侧栏背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-left-split-background-secondary-light
@@ -356,8 +290,8 @@ settings:
                 value: mod-left-split-background-CSS-light
     - 
 		id: background-mod-left-split-light
-		title: Customize left sidebar background color
-        title.zh: 自定义 左侧栏 背景色
+		title: Customize left sidebar background color (light mode)
+        title.zh: 自定义 左侧栏 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -391,84 +325,16 @@ settings:
         type: variable-text
         default: blur(32px);
     - 
-        id: mod-left-split-background-header-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
-        id: mod-left-split-background-select-dark
-        title: Left sidebar background
-        title.zh: 左侧栏背景
-        type: class-select
-        allowEmpty: false
-        default: mod-left-split-background-secondary-dark
-        options:
-            -   label: background-primary
-                value: mod-left-split-background-primary-dark
-            -   label: background-secondary (default)
-                value: mod-left-split-background-secondary-dark
-            -   label: transparent (card layout only)
-                value: mod-left-split-background-transparent-dark
-            -   label: customize color
-                value: mod-left-split-background-customize-dark
-            -   label: customize CSS
-                value: mod-left-split-background-CSS-dark
-    - 
-		id: background-mod-left-split-dark
-		title: Customize left sidebar background color
-        title.zh: 自定义 左侧栏 背景色
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: background-mod-left-CSS-dark
-        title: Left sidebar background (dark mode)
-        title.zh: 左侧栏background（暗色模式）
-        description: Input any CSS background value
-        description.zh: 输入任意 CSS background 值
-        type: variable-text
-        default: rgba(0,0,0,0.5);
-    - 
-        id: background-mod-left-CSS-blend-mode-dark
-        title: Left sidebar background-blend-mode (dark mode)
-        title.zh: 左侧栏background-blend-mode（暗色模式）
-        description: Input any CSS background-blend-mode value
-        description.zh: 输入任意 CSS background-blend-mode 值
-        type: variable-text
-        default: normal;
-    - 
-        id: background-mod-left-CSS-backdrop-filter-dark
-        title: Left sidebar backdrop-filter (dark mode)
-        title.zh: 左侧栏backdrop-filter（暗色模式）
-        description: Input any CSS backdrop-filter value
-        description.zh: 输入任意 CSS backdrop-filter 值
-        type: variable-text
-        default: blur(32px);
-    - 
-        id: mod-right-split-background-header
+        id: mod-right-split-background-header-light
         title: Right sidebar background
         title.zh: 右侧栏背景
         type: heading
         collapsed: ture
         level: 4
     - 
-        id: mod-right-split-background-header-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
         id: mod-right-split-background-select-light
-        title: Right sidebar background
-        title.zh: 右侧栏背景
+        title: Right sidebar background (light mode)
+        title.zh: 右侧栏背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-right-split-background-primary-light
@@ -485,8 +351,8 @@ settings:
                 value: mod-right-split-background-CSS-light
     - 
 		id: background-mod-right-split-light
-		title: Customize right sidebar background color
-        title.zh: 自定义 右侧栏 背景色
+		title: Customize right sidebar background color(light mode)
+        title.zh: 自定义 右侧栏 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -520,84 +386,16 @@ settings:
         type: variable-text
         default: blur(32px);
     - 
-        id: mod-right-split-background-header-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
-        id: mod-right-split-background-select-dark
-        title: Right sidebar background
-        title.zh: 右侧栏背景
-        type: class-select
-        allowEmpty: false
-        default: mod-right-split-background-primary-dark
-        options:
-            -   label: background-primary (default)
-                value: mod-right-split-background-primary-dark
-            -   label: background-secondary
-                value: mod-right-split-background-secondary-dark
-            -   label: transparent (card layout only)
-                value: mod-right-split-background-transparent-dark
-            -   label: customize color
-                value: mod-right-split-background-customize-dark
-            -   label: customize CSS
-                value: mod-right-split-background-CSS-dark
-    - 
-		id: background-mod-right-split-dark
-		title: Customize right sidebar background color
-        title.zh: 自定义 右侧栏 背景色
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: background-mod-right-CSS-dark
-        title: Right sidebar background (dark mode)
-        title.zh: 右侧栏background（暗色模式）
-        description: Input any CSS background value
-        description.zh: 输入任意 CSS background 值
-        type: variable-text
-        default: rgba(0,0,0,0.5);
-    - 
-        id: background-mod-right-CSS-blend-mode-dark
-        title: Right sidebar background-blend-mode (dark mode)
-        title.zh: 右侧栏background-blend-mode（暗色模式）
-        description: Input any CSS background-blend-mode value
-        description.zh: 输入任意 CSS background-blend-mode 值
-        type: variable-text
-        default: normal;
-    - 
-        id: background-mod-right-CSS-backdrop-filter-dark
-        title: Right sidebar backdrop-filter (dark mode)
-        title.zh: 右侧栏backdrop-filter（暗色模式）
-        description: Input any CSS backdrop-filter value
-        description.zh: 输入任意 CSS backdrop-filter 值
-        type: variable-text
-        default: blur(32px);
-    - 
-        id: mod-root-split-background-header
+        id: mod-root-split-background-header-light
         title: Middle space background
         title.zh: 中间栏背景
         type: heading
         collapsed: ture
         level: 4
     - 
-        id: mod-root-split-background-header-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
         id: mod-root-split-background-select-light
-        title: Middle space background
-        title.zh: 中间栏背景
+        title: Middle space background (light mode)
+        title.zh: 中间栏背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-root-split-background-primary-light
@@ -614,8 +412,8 @@ settings:
                 value: mod-root-split-background-CSS-light
     - 
 		id: background-mod-root-split-light
-		title: Customize middle space background color
-        title.zh: 自定义 中间栏 背景色
+		title: Customize middle space background color(light mode)
+        title.zh: 自定义 中间栏 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -649,84 +447,16 @@ settings:
         type: variable-text
         default: blur(32px);
     - 
-        id: mod-root-split-background-header-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
-        id: mod-root-split-background-select-dark
-        title: Middle space background
-        title.zh: 中间栏背景
-        type: class-select
-        allowEmpty: false
-        default: mod-root-split-background-primary-dark
-        options:
-            -   label: background-primary (default)
-                value: mod-root-split-background-primary-dark
-            -   label: background-secondary
-                value: mod-root-split-background-secondary-dark
-            -   label: transparent (card layout only)
-                value: mod-root-split-background-transparent-dark
-            -   label: customize color
-                value: mod-root-split-background-customize-dark
-            -   label: customize CSS
-                value: mod-root-split-background-CSS-dark
-    - 
-		id: background-mod-root-split-dark
-		title: Customize middle space background color
-        title.zh: 自定义 中间栏 背景色
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: background-mod-root-CSS-dark
-        title: middle space background (dark mode)
-        title.zh: 中间栏background（暗色模式）
-        description: Input any CSS background value
-        description.zh: 输入任意 CSS background 值
-        type: variable-text
-        default: rgba(0,0,0,0.5);
-    - 
-        id: background-mod-root-CSS-blend-mode-dark
-        title: middle space background-blend-mode (dark mode)
-        title.zh: 中间栏background-blend-mode（暗色模式）
-        description: Input any CSS background-blend-mode value
-        description.zh: 输入任意 CSS background-blend-mode 值
-        type: variable-text
-        default: normal;
-    - 
-        id: background-mod-root-CSS-backdrop-filter-dark
-        title: middle space backdrop-filter (dark mode)
-        title.zh: 中间栏backdrop-filter（暗色模式）
-        description: Input any CSS backdrop-filter value
-        description.zh: 输入任意 CSS backdrop-filter 值
-        type: variable-text
-        default: blur(32px);
-    - 
-        id: underlying-background-header
+        id: underlying-background-header-light
         title: Underlying background
         title.zh: 底层背景
         type: heading
         collapsed: ture
         level: 4
     - 
-        id: underlying-background-header-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
 		id: on-border-light
-		title: Customize the color of elements displayed directly on the underlying layer
-        title.zh: 自定义 直接显示在底层背景上的元素颜色
+		title: Customize the color of elements displayed directly on the underlying layer(light mode)
+        title.zh: 自定义 直接显示在底层背景上的元素颜色（亮色模式）
         description: Includes top tab bar, ribbon menu and status bar
         description.zh: 包括顶部标签栏、功能区菜单和状态栏
 		type: variable-color
@@ -739,8 +469,8 @@ settings:
         default: '#'
     - 
         id: background-underlying-select-light
-        title: underlying background
-        title.zh: 底层背景
+        title: underlying background(light mode)
+        title.zh: 底层背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: background-underlying-defalut-light
@@ -753,8 +483,8 @@ settings:
                 value: background-underlying-CSS-light
     - 
 		id: background-underlying-light
-		title: Customize underlying background color
-        title.zh: 自定义 底层背景色
+		title: Customize underlying background color(light mode)
+        title.zh: 自定义 底层背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -780,70 +510,7 @@ settings:
         type: variable-text
         default: overlay, color-burn;
     - 
-        id: underlying-background-header-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
-		id: on-border-dark
-		title: Customize the color of elements displayed directly on the underlying layer
-        title.zh: 自定义 直接显示在底层背景上的元素颜色
-        description: Includes top tab bar, ribbon menu and status bar
-        description.zh: 包括顶部标签栏、功能区菜单和状态栏
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: background-underlying-select-dark
-        title: underlying background
-        title.zh: 底层背景
-        type: class-select
-        allowEmpty: false
-        default: background-underlying-defalut-dark
-        options:
-            -   label: adapt to accent color(defalut)
-                value: background-underlying-defalut-dark
-            -   label: customize color
-                value: background-underlying-Color-dark
-            -   label: customize CSS
-                value: background-underlying-CSS-dark
-    - 
-		id: background-underlying-dark
-		title: Customize underlying background color
-        title.zh: 自定义 底层背景色
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: background-underlying-CSS-dark
-        title: underlying background (dark mode)
-        title.zh: 底层background（暗色模式）
-        description: Input any CSS background value
-        description.zh: 输入任意 CSS background 值
-        type: variable-text
-        default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
-    - 
-        id: background-underlying-CSS-blend-mode-dark
-        title: underlying background-blend-mode (dark mode)
-        title.zh: 底层background-blend-mode（暗色模式）
-        description: Input any CSS background-blend-mode value
-        description.zh: 输入任意 CSS background-blend-mode 值
-        type: variable-text
-        default: soft-light, luminosity, hue, luminosity, hard-light;
-    - 
-        id: Global-background-header
+        id: Global-background-header-light
         title: Global background
         title.zh: 全局背景
         type: heading
@@ -851,8 +518,8 @@ settings:
         level: 4
     - 
 		id: background-primary
-		title: Customize background-primary
-        title.zh: 自定义 background-primary
+		title: Customize background-primary(light mode)
+        title.zh: 自定义 background-primary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -860,8 +527,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-primary-alt
-		title: Customize background-primary-alt
-        title.zh: 自定义 background-primary-alt
+		title: Customize background-primary-alt(light mode)
+        title.zh: 自定义 background-primary-alt（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -869,8 +536,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary
-		title: Customize background-secondary
-        title.zh: 自定义 background-secondary
+		title: Customize background-secondary(light mode)
+        title.zh: 自定义 background-secondary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -878,8 +545,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary-alt
-		title: Customize background-secondary-alt
-        title.zh: 自定义 background-secondary-alt
+		title: Customize background-secondary-alt(light mode)
+        title.zh: 自定义 background-secondary-alt（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -887,8 +554,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-tertiary
-		title: Customize background-tertiary
-        title.zh: 自定义 background-tertiary
+		title: Customize background-tertiary(light mode)
+        title.zh: 自定义 background-tertiary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -896,8 +563,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-hover
-		title: Customize background-modifier-hover
-        title.zh: 自定义 background-modifier-hover
+		title: Customize background-modifier-hover(light mode)
+        title.zh: 自定义 background-modifier-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -905,8 +572,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-active-hover
-		title: Customize background-modifier-active-hover
-        title.zh: 自定义 background-modifier-active-hover
+		title: Customize background-modifier-active-hover(light mode)
+        title.zh: 自定义 background-modifier-active-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -914,8 +581,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border
-		title: Customize background-modifier-border
-        title.zh: 自定义 background-modifier-border
+		title: Customize background-modifier-border(light mode)
+        title.zh: 自定义 background-modifier-border（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -923,8 +590,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-hover
-		title: Customize background-modifier-border-hover
-        title.zh: 自定义 background-modifier-border-hover
+		title: Customize background-modifier-border-hover(light mode)
+        title.zh: 自定义 background-modifier-border-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -932,27 +599,20 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-focus
-		title: Customize background-modifier-border-focus
-        title.zh: 自定义 background-modifier-border-focus
+		title: Customize background-modifier-border-focus(light mode)
+        title.zh: 自定义 background-modifier-border-focus（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
     - 
-        id: Card
+        id: Card-light
         title: Card
         title.zh: 卡片
         type: heading
         collapsed: true
         level: 3
-    - 
-        id: Card-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 4
     - 
         id: card-border-radius-light
         title: Custom card border radius (light mode)
@@ -970,49 +630,19 @@ settings:
         type: variable-text
         default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
     - 
-        id: Card-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 4
-    - 
-        id: card-border-radius-dark
-        title: Custom card border radius (dark mode)
-        title.zh: 自定义 卡片的圆角大小（暗色模式）
-        description: Input your border-radius value here
-        description.zh: 在这里输入你的 border-radius 值
-        type: variable-text
-        default: 8px
-    - 
-        id: card-shadow-dark
-        title: Custom card shadow (dark mode)
-        title.zh: 自定义 卡片阴影（暗色模式）
-        description: Input your box-shadow value here
-        description.zh: 在这里输入你的 box-shadow 值
-        type: variable-text
-        default: 0px 0px 0px 1px var(--divider-color)
-    - 
-        id: Active-states
+        id: Active-states-light
         title: Active states
         title.zh: 激活状态
         type: heading
         collapsed: true
         level: 3
     - 
-        id: Active-states-Tabs
+        id: Active-states-Tabs-light
         title: Active states(Tabs)
         title.zh: 激活状态（Tabs）
         type: heading
         collapsed: true
         level: 4
-    - 
-        id: Active-states-Tabs-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
     - 
 		id: color-activated-tab-header-light
 		title: activated Tab header color(light mode)
@@ -1055,67 +685,12 @@ settings:
         type: variable-text
         default: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2)
     - 
-        id: Active-states-Tabs-dark
-        title: dark mode
-        title.zh: 暗色模式
-        type: heading
-        collapsed: true
-        level: 5
-    - 
-		id: color-activated-tab-header-dark
-		title: activated Tab header color(dark mode)
-        title.zh: 已激活Tab的标头颜色（暗色模式）
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: color-to-tab-icon-dark
-        title: Apply custom color to tab icons(dark mode)
-        title.zh: 将自定义颜色应用于tab前置图标（暗色模式）
-        type: class-toggle
-    - 
-        id: border-radius-activated-tab-header-dark
-        title: activated Tab header border radius(dark mode)
-        title.zh: 已激活Tab的标头圆角大小（暗色模式）
-        description: Input any CSS border-radius value
-        description.zh: 输入任意 CSS border-radius 值
-        type: variable-text
-        default: 6px
-    - 
-        id: background-activated-tab-header-dark
-        title: activated Tab header background(dark mode)
-        title.zh: 已激活Tab的标头背景（暗色模式）
-        description: Input any CSS background value
-        description.zh: 输入任意 CSS background 值
-        type: variable-text
-        default: var(--background-modifier-active-hover)
-    - 
-        id: shadow-activated-tab-header-dark
-        title: activated Tab header shadow(dark mode)
-        title.zh: 已激活Tab的标头阴影（暗色模式）
-        description: Input any CSS box-shadow value
-        description.zh: 输入任意 CSS box-shadow 值
-        type: variable-text
-        default: inset 0 0 0 1px var(--divider-color)
-    - 
-        id: Active-states-file-explorer
+        id: Active-states-file-explorer-light
         title: Active states(file explorer)
         title.zh: 激活状态（文件列表）
         type: heading
         collapsed: true
         level: 4
-    - 
-        id: Active-states-file-explorer-light
-        title: light mode
-        title.zh: 亮色模式
-        type: heading
-        collapsed: true
-        level: 5
     - 
         id: indicator-remove-light
         title: Remove indicator(light mode)
@@ -1179,12 +754,511 @@ settings:
         type: variable-text
         default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
     - 
-        id: Active-states-file-explorer-dark
-        title: dark mode
-        title.zh: 暗色模式
+        id: Appearance-dark
+        title: Appearance(dark mode)
+        title.zh: 外观（暗色模式）
         type: heading
         collapsed: true
-        level: 5
+        level: 2
+    - 
+        id: card-layout-open-dark
+        title: Enable card layout
+        title.zh: 启用 卡片式布局
+        type: class-toggle
+    - 
+        id: theme-dark-style-select
+        title: Dark mode style
+        title.zh: 暗色模式风格
+        type: class-select
+        allowEmpty: false
+        default: theme-dark-background-default
+        options:
+            -   label: brighter
+                value: theme-dark-background-brighter
+            -   label: default
+                value: theme-dark-background-default
+            -   label: darker
+                value: theme-dark-background-darker
+            -   label: pure black
+                value: theme-dark-background-black
+    - 
+        id: Accent-color-dark
+        title: Accent color
+        title.zh: 强调色
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: accent-color-restore
+        title: Restore accent color in dark mode
+        title.zh: 还原暗色模式下的强调色
+        type: class-toggle
+    - 
+        id: accent-color-custom-dark
+        title: Custom accent color(dark mode)
+        title.zh: 自定义主题色（暗色模式）
+        description: Set accent color for the light and dark modes separately
+        description.zh: 分开来设置亮色模式与暗色模式的强调色
+        type: class-toggle
+    - 
+        id: accent-h-dark
+        title: Hue(dark mode)
+        title.zh: 色调（暗色模式）
+        description: Input a value of 0 - 360
+        description.zh: 输入0 - 360的值
+        type: variable-number
+        default: 232
+    - 
+        id: accent-s-dark
+        title: Saturation(dark mode)
+        title.zh: 饱和度（暗色模式）
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 80%
+    - 
+        id: accent-l-dark
+        title: Lightness(dark mode)
+        title.zh: 亮度（暗色模式）
+        description: Input a value of 0% - 100%
+        description.zh: 输入0% - 100%的值
+        type: variable-text
+        default: 64%
+    - 
+        id: Background-dark
+        title: Background
+        title.zh: 背景
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: mod-left-split-background-header-dark
+        title: Left sidebar background
+        title.zh: 左侧栏背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: mod-left-split-background-select-dark
+        title: Left sidebar background(dark mode)
+        title.zh: 左侧栏背景（暗色模式）
+        type: class-select
+        allowEmpty: false
+        default: mod-left-split-background-secondary-dark
+        options:
+            -   label: background-primary
+                value: mod-left-split-background-primary-dark
+            -   label: background-secondary (default)
+                value: mod-left-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-left-split-background-transparent-dark
+            -   label: customize color
+                value: mod-left-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-left-split-background-CSS-dark
+    - 
+		id: background-mod-left-split-dark
+		title: Customize left sidebar background color (dark mode)
+        title.zh: 自定义 左侧栏 背景色（暗色模式）
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-mod-left-CSS-dark
+        title: Left sidebar background (dark mode)
+        title.zh: 左侧栏background（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-left-CSS-blend-mode-dark
+        title: Left sidebar background-blend-mode (dark mode)
+        title.zh: 左侧栏background-blend-mode（暗色模式）
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-left-CSS-backdrop-filter-dark
+        title: Left sidebar backdrop-filter (dark mode)
+        title.zh: 左侧栏backdrop-filter（暗色模式）
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: mod-right-split-background-header-dark
+        title: Right sidebar background
+        title.zh: 右侧栏背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: mod-right-split-background-select-dark
+        title: Right sidebar background(dark mode)
+        title.zh: 右侧栏背景（暗色模式）
+        type: class-select
+        allowEmpty: false
+        default: mod-right-split-background-primary-dark
+        options:
+            -   label: background-primary (default)
+                value: mod-right-split-background-primary-dark
+            -   label: background-secondary
+                value: mod-right-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-right-split-background-transparent-dark
+            -   label: customize color
+                value: mod-right-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-right-split-background-CSS-dark
+    - 
+		id: background-mod-right-split-dark
+		title: Customize right sidebar background color(dark mode)
+        title.zh: 自定义 右侧栏 背景色（暗色模式）
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-mod-right-CSS-dark
+        title: Right sidebar background (dark mode)
+        title.zh: 右侧栏background（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-right-CSS-blend-mode-dark
+        title: Right sidebar background-blend-mode (dark mode)
+        title.zh: 右侧栏background-blend-mode（暗色模式）
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-right-CSS-backdrop-filter-dark
+        title: Right sidebar backdrop-filter (dark mode)
+        title.zh: 右侧栏backdrop-filter（暗色模式）
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: mod-root-split-background-header-dark
+        title: Middle space background
+        title.zh: 中间栏背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: mod-root-split-background-select-dark
+        title: Middle space background (dark mode)
+        title.zh: 中间栏背景（暗色模式）
+        type: class-select
+        allowEmpty: false
+        default: mod-root-split-background-primary-dark
+        options:
+            -   label: background-primary (default)
+                value: mod-root-split-background-primary-dark
+            -   label: background-secondary
+                value: mod-root-split-background-secondary-dark
+            -   label: transparent (card layout only)
+                value: mod-root-split-background-transparent-dark
+            -   label: customize color
+                value: mod-root-split-background-customize-dark
+            -   label: customize CSS
+                value: mod-root-split-background-CSS-dark
+    - 
+		id: background-mod-root-split-dark
+		title: Customize middle space background color (dark mode)
+        title.zh: 自定义 中间栏 背景色（暗色模式）
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-mod-root-CSS-dark
+        title: middle space background (dark mode)
+        title.zh: 中间栏background（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: rgba(0,0,0,0.5);
+    - 
+        id: background-mod-root-CSS-blend-mode-dark
+        title: middle space background-blend-mode (dark mode)
+        title.zh: 中间栏background-blend-mode（暗色模式）
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
+        type: variable-text
+        default: normal;
+    - 
+        id: background-mod-root-CSS-backdrop-filter-dark
+        title: middle space backdrop-filter (dark mode)
+        title.zh: 中间栏backdrop-filter（暗色模式）
+        description: Input any CSS backdrop-filter value
+        description.zh: 输入任意 CSS backdrop-filter 值
+        type: variable-text
+        default: blur(32px);
+    - 
+        id: underlying-background-header-dark
+        title: Underlying background
+        title.zh: 底层背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+		id: on-border-dark
+		title: Customize the color of elements displayed directly on the underlying layer(dark mode)
+        title.zh: 自定义 直接显示在底层背景上的元素颜色（暗色模式）
+        description: Includes top tab bar, ribbon menu and status bar
+        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-underlying-select-dark
+        title: underlying background(dark mode)
+        title.zh: 底层背景（暗色模式）
+        type: class-select
+        allowEmpty: false
+        default: background-underlying-defalut-dark
+        options:
+            -   label: adapt to accent color(defalut)
+                value: background-underlying-defalut-dark
+            -   label: customize color
+                value: background-underlying-Color-dark
+            -   label: customize CSS
+                value: background-underlying-CSS-dark
+    - 
+		id: background-underlying-dark
+		title: Customize underlying background color(dark mode)
+        title.zh: 自定义 底层背景色（暗色模式）
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: background-underlying-CSS-dark
+        title: underlying background (dark mode)
+        title.zh: 底层background（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
+    - 
+        id: background-underlying-CSS-blend-mode-dark
+        title: underlying background-blend-mode (dark mode)
+        title.zh: 底层background-blend-mode（暗色模式）
+        description: Input any CSS background-blend-mode value
+        description.zh: 输入任意 CSS background-blend-mode 值
+        type: variable-text
+        default: soft-light, luminosity, hue, luminosity, hard-light;
+    - 
+        id: Global-background-header-dark
+        title: Global background
+        title.zh: 全局背景
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+		id: background-primary
+		title: Customize background-primary(dark mode)
+        title.zh: 自定义 background-primary（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-primary-alt
+		title: Customize background-primary-alt(dark mode)
+        title.zh: 自定义 background-primary-alt（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-secondary
+		title: Customize background-secondary(dark mode)
+        title.zh: 自定义 background-secondary（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-secondary-alt
+		title: Customize background-secondary-alt(dark mode)
+        title.zh: 自定义 background-secondary-alt（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-tertiary
+		title: Customize background-tertiary(dark mode)
+        title.zh: 自定义 background-tertiary（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-hover
+		title: Customize background-modifier-hover(dark mode)
+        title.zh: 自定义 background-modifier-hover（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-active-hover
+		title: Customize background-modifier-active-hover(dark mode)
+        title.zh: 自定义 background-modifier-active-hover（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border
+		title: Customize background-modifier-border(dark mode)
+        title.zh: 自定义 background-modifier-border（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border-hover
+		title: Customize background-modifier-border-hover(dark mode)
+        title.zh: 自定义 background-modifier-border-hover（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: background-modifier-border-focus
+		title: Customize background-modifier-border-focus(dark mode)
+        title.zh: 自定义 background-modifier-border-focus（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: Card-dark
+        title: Card
+        title.zh: 卡片
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-border-radius-dark
+        title: Custom card border radius (dark mode)
+        title.zh: 自定义 卡片的圆角大小（暗色模式）
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
+        type: variable-text
+        default: 8px
+    - 
+        id: card-shadow-dark
+        title: Custom card shadow (dark mode)
+        title.zh: 自定义 卡片阴影（暗色模式）
+        description: Input your box-shadow value here
+        description.zh: 在这里输入你的 box-shadow 值
+        type: variable-text
+        default: 0px 0px 0px 1px var(--divider-color)
+    - 
+        id: Active-states-dark
+        title: Active states
+        title.zh: 激活状态
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: Active-states-Tabs-dark
+        title: Active states(Tabs)
+        title.zh: 激活状态（Tabs）
+        type: heading
+        collapsed: true
+        level: 4
+    - 
+		id: color-activated-tab-header-dark
+		title: activated Tab header color(dark mode)
+        title.zh: 已激活Tab的标头颜色（暗色模式）
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: color-to-tab-icon-dark
+        title: Apply custom color to tab icons(dark mode)
+        title.zh: 将自定义颜色应用于tab前置图标（暗色模式）
+        type: class-toggle
+    - 
+        id: border-radius-activated-tab-header-dark
+        title: activated Tab header border radius(dark mode)
+        title.zh: 已激活Tab的标头圆角大小（暗色模式）
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: 6px
+    - 
+        id: background-activated-tab-header-dark
+        title: activated Tab header background(dark mode)
+        title.zh: 已激活Tab的标头背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: var(--background-modifier-active-hover)
+    - 
+        id: shadow-activated-tab-header-dark
+        title: activated Tab header shadow(dark mode)
+        title.zh: 已激活Tab的标头阴影（暗色模式）
+        description: Input any CSS box-shadow value
+        description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: inset 0 0 0 1px var(--divider-color)
+    - 
+        id: Active-states-file-explorer-dark
+        title: Active states(file explorer)
+        title.zh: 激活状态（文件列表）
+        type: heading
+        collapsed: true
+        level: 4
     - 
         id: indicator-remove-dark
         title: Remove indicator(dark mode)
@@ -2257,14 +2331,14 @@ body.activated-file-tab-style-dark .setting-item[data-id=border-radius-activated
 body.activated-file-tab-style-dark .setting-item[data-id=color-to-file-icon-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=background-activated-file-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-dark],
-body:not(.accent-color-custom) .setting-item[data-id=accent-color-light],
-body:not(.accent-color-custom) .setting-item[data-id=accent-h-light],
-body:not(.accent-color-custom) .setting-item[data-id=accent-s-light],
-body:not(.accent-color-custom) .setting-item[data-id=accent-l-light],
-body:not(.accent-color-custom) .setting-item[data-id=accent-color-dark],
-body:not(.accent-color-custom) .setting-item[data-id=accent-h-dark],
-body:not(.accent-color-custom) .setting-item[data-id=accent-s-dark],
-body:not(.accent-color-custom) .setting-item[data-id=accent-l-dark],
+body:not(.accent-color-custom-light) .setting-item[data-id=accent-color-light],
+body:not(.accent-color-custom-light) .setting-item[data-id=accent-h-light],
+body:not(.accent-color-custom-light) .setting-item[data-id=accent-s-light],
+body:not(.accent-color-custom-light) .setting-item[data-id=accent-l-light],
+body:not(.accent-color-custom-dark) .setting-item[data-id=accent-color-dark],
+body:not(.accent-color-custom-dark) .setting-item[data-id=accent-h-dark],
+body:not(.accent-color-custom-dark) .setting-item[data-id=accent-s-dark],
+body:not(.accent-color-custom-dark) .setting-item[data-id=accent-l-dark],
 body.table-width-default .setting-item[data-id=table-width],
 body.table-width-obsidian-default .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item[data-id=colorful-folder],
@@ -2361,13 +2435,13 @@ body {
     --accent-l-dark: 64%;
 }
 
-.theme-light.accent-color-custom {
+.theme-light.accent-color-custom-light {
     --accent-h: var(--accent-h-light) !important;
     --accent-s: var(--accent-s-light) !important;
     --accent-l: var(--accent-l-light) !important;
 }
 
-.theme-dark.accent-color-custom {
+.theme-dark.accent-color-custom-dark {
     --accent-h: var(--accent-h-dark) !important;
     --accent-s: var(--accent-s-dark) !important;
     --accent-l: var(--accent-l-dark) !important;
@@ -2429,6 +2503,8 @@ body {
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
     --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
+    --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.25);
+    --background-modifier-border-focus: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.3);
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
     --background-secondary: hsl(var(--accent-h),
@@ -2544,6 +2620,8 @@ body {
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-3: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
+    --background-modifier-border-hover: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25);
+    --background-modifier-border-focus: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.3);
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
@@ -2650,8 +2728,9 @@ body {
     --background-table-rows: var(--color-base-00);
     --line-active-bg: rgba(255, 255, 255, 0.08);
     --line-active-bg-customize: rgba(255, 255, 255, 0.08);
-    --background-modifier-border: var(--color-base-35);
-    --divider-color: var(--background-modifier-border);
+    --background-modifier-border: var(--color-base-30);
+    --background-modifier-border-hover: var(--color-base-35);
+    --background-modifier-border-focus: var(--color-base-40);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
 }
 
@@ -2829,27 +2908,27 @@ body.theme-dark.mod-left-split-background-primary-dark {
     --background-mod-left-split: var(--background-primary) !important;
 }
 
-body.theme-light.mod-left-split-background-transparent-light.card-layout-open {
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light {
     --background-mod-left-split: transparent !important;
 }
 
-body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open {
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-left-split: transparent !important;
 }
 
-body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open) {
+body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open-light) {
     --background-mod-left-split: var(--background-secondary) !important;
 }
 
-body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open) {
+body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open-dark) {
     --background-mod-left-split: var(--background-secondary) !important;
 }
 
-body.theme-light:not(.is-mobile).card-layout-open.mod-left-split-background-transparent-light .mod-left-split .workspace-tab-container {
+body.theme-light:not(.is-mobile).card-layout-open-light.mod-left-split-background-transparent-light .mod-left-split .workspace-tab-container {
     --card-shadow-light: transparent;
 }
 
-body.theme-dark:not(.is-mobile).card-layout-open.mod-left-split-background-transparent-dark .mod-left-split .workspace-tab-container {
+body.theme-dark:not(.is-mobile).card-layout-open-dark.mod-left-split-background-transparent-dark .mod-left-split .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
 
@@ -2879,27 +2958,27 @@ body.theme-dark.mod-right-split-background-secondary-dark {
     --background-mod-right-split: var(--background-secondary) !important;
 }
 
-body.theme-light.mod-right-split-background-transparent-light.card-layout-open {
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light {
     --background-mod-right-split: transparent !important;
 }
 
-body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open {
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-right-split: transparent !important;
 }
 
-body.theme-light.mod-right-split-background-transparent-light:not(.card-layout-open) {
+body.theme-light.mod-right-split-background-transparent-light:not(.card-layout-open-light) {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
-body.theme-dark.mod-right-split-background-transparent-dark:not(.card-layout-open) {
+body.theme-dark.mod-right-split-background-transparent-dark:not(.card-layout-open-dark) {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
-body.theme-light:not(.is-mobile).card-layout-open.mod-right-split-background-transparent-light .mod-right-split .workspace-tab-container {
+body.theme-light:not(.is-mobile).card-layout-open-light.mod-right-split-background-transparent-light .mod-right-split .workspace-tab-container {
     --card-shadow-light: transparent;
 }
 
-body.theme-dark:not(.is-mobile).card-layout-open.mod-right-split-background-transparent-dark .mod-right-split .workspace-tab-container {
+body.theme-dark:not(.is-mobile).card-layout-open-dark.mod-right-split-background-transparent-dark .mod-right-split .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
 
@@ -2929,19 +3008,19 @@ body.theme-dark.mod-root-split-background-secondary-dark {
     --background-mod-root-split: var(--background-secondary) !important;
 }
 
-body.theme-light.mod-root-split-background-transparent-light.card-layout-open {
+body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light {
     --background-mod-root-split: transparent !important;
 }
 
-body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open {
+body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-root-split: transparent !important;
 }
 
-body.theme-light.mod-root-split-background-transparent-light:not(.card-layout-open) {
+body.theme-light.mod-root-split-background-transparent-light:not(.card-layout-open-light) {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body.theme-dark.mod-root-split-background-transparent-dark:not(.card-layout-open) {
+body.theme-dark.mod-root-split-background-transparent-dark:not(.card-layout-open-dark) {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
@@ -2950,11 +3029,11 @@ body.theme-dark:is(.mod-root-split-background-transparent-dark, .mod-root-split-
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body.theme-light:not(.is-mobile).card-layout-open.mod-root-split-background-transparent-light .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
+body.theme-light:not(.is-mobile).card-layout-open-light.mod-root-split-background-transparent-light .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
     --card-shadow-light: transparent;
 }
 
-body.theme-dark:not(.is-mobile).card-layout-open.mod-root-split-background-transparent-dark .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
+body.theme-dark:not(.is-mobile).card-layout-open-dark.mod-root-split-background-transparent-dark .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
     --card-shadow-dark: transparent;
 }
 
@@ -2990,24 +3069,27 @@ body {
 }
 
 /*mod-left*/
-body:not(.is-mobile).card-layout-open .workspace-split.mod-left-split .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-left-split .workspace-tabs:not(.mod-top),
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-split) !important;
 }
 
-body:not(.is-mobile).theme-light.card-layout-open.mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open-light.mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-left-split-background-CSS-light .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-CSS-light) !important;
     background-blend-mode: var(--background-mod-left-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open-dark.mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-left-CSS-dark) !important;
     background-blend-mode: var(--background-mod-left-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-left-CSS-backdrop-filter-dark);
@@ -3016,24 +3098,27 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-left-split-background
 
 
 /*mod-right*/
-body:not(.is-mobile).card-layout-open .workspace-split.mod-right-split .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-right-split .workspace-tabs:not(.mod-top),
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-split) !important;
 }
 
-body:not(.is-mobile).theme-light.card-layout-open.mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open-light.mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-right-split-background-CSS-light .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-CSS-light) !important;
     background-blend-mode: var(--background-mod-right-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open-dark.mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-right-CSS-dark) !important;
     background-blend-mode: var(--background-mod-right-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-right-CSS-backdrop-filter-dark);
@@ -3041,25 +3126,27 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-right-split-backgroun
 }
 
 /*mod-root*/
-
-body:not(.is-mobile).card-layout-open .workspace-split.mod-root .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile):not(.card-layout-open) .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile):not(.card-layout-open-light).theme-light .workspace-split.mod-root .workspace-tabs:not(.mod-top),
+body:not(.is-mobile):not(.card-layout-open-dark).theme-dark .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-split) !important;
 }
 
-body:not(.is-mobile).theme-light.card-layout-open.mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-light:not(.card-layout-open).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-light.card-layout-open-light.mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-light:not(.card-layout-open-light).mod-root-split-background-CSS-light .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-CSS-light) !important;
     background-blend-mode: var(--background-mod-root-CSS-blend-mode-light);
     backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
     -webkit-backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-light);
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open.mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-mobile).theme-dark:not(.card-layout-open).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
+body:not(.is-mobile).theme-dark.card-layout-open-dark.mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-background-CSS-dark .workspace-split.mod-root .workspace-tabs:not(.mod-top) {
     background: var(--background-mod-root-CSS-dark) !important;
     background-blend-mode: var(--background-mod-root-CSS-blend-mode-dark);
     backdrop-filter: var(--background-mod-root-CSS-backdrop-filter-dark);
@@ -3209,7 +3296,7 @@ body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-he
     box-shadow: var(--shadow-activated-tab-header-light-alt);
 }
 
-body:not(.is-mobile).theme-light.card-layout-open .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:not(.is-mobile).theme-light.card-layout-open-light .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: var(--shadow-activated-tab-header-light) !important;
 }
 
@@ -3283,10 +3370,10 @@ body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-s
 
 /* --- */
 
-body.theme-light.mod-left-split-background-transparent-light.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-light.mod-right-split-background-transparent-light.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
     box-shadow: inset 0px 1px 0px var(--divider-color);
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
@@ -3807,91 +3894,150 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.works
 }
 
 
-/* card layout */
-body:not(.is-mobile).card-layout-open .workspace::before {
+/* card layout light*/
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace::before {
     display: none;
 }
 
-body:not(.is-mobile).card-layout-open .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
     margin-right: 16px;
 }
 
-body:not(.is-mobile).card-layout-open .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
     margin-left: 16px;
 }
 
-body:not(.is-mobile).card-layout-open .workspace-split.mod-vertical {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split.mod-vertical {
     gap: 16px
 }
 
-body:not(.is-mobile).card-layout-open .workspace-tab-container {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tab-container {
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
 }
 
-body:not(.is-mobile).theme-dark.card-layout-open .workspace-tab-container {
-    border-radius: var(--card-border-radius-dark, 8px) !important;
-    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
-}
-
-body:not(.is-mobile).card-layout-open .workspace-tabs,
-body:not(.is-mobile).card-layout-open .workspace-split {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs,
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split {
     overflow: visible !important;
 }
 
-body:not(.is-mobile).card-layout-open .workspace-tabs,
-body:not(.is-mobile).card-layout-open .workspace-tab-header-container {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs,
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tab-header-container {
     background-color: transparent !important;
 }
 
-body:not(.is-mobile).card-layout-open .workspace-leaf-resize-handle {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-leaf-resize-handle {
     border-color: transparent;
 }
 
-body:not(.is-mobile).card-layout-open .workspace-tabs:not(.mod-top) .workspace-tab-container {
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: unset;
 }
 
-
-
-body.theme-light:not(.is-mobile).card-layout-open .workspace-tab-header {
+body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tab-header {
     color: var(--on-border-light) !important;
 }
 
-body.theme-dark:not(.is-mobile).card-layout-open .workspace-tab-header {
-    color: var(--on-border-dark) !important;
-}
-
-body.theme-light:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
+body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
     --icon-color: var(--on-border-light);
     --icon-color-hover: var(--on-border-light);
 }
 
-body.theme-dark:not(.is-mobile).card-layout-open .workspace-tabs .workspace-tab-header-container {
+
+/* card layout dark*/
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace::before {
+    display: none;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+    margin-right: 16px;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+    margin-left: 16px;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split.mod-vertical {
+    gap: 16px
+}
+
+body:not(.is-mobile).theme-dark.card-layout-open-dark .workspace-tab-container {
+    border-radius: var(--card-border-radius-dark, 8px) !important;
+    overflow: hidden !important;
+    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split {
+    overflow: visible !important;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tab-header-container {
+    background-color: transparent !important;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-leaf-resize-handle {
+    border-color: transparent;
+}
+
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
+    border-top: unset;
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tab-header {
+    color: var(--on-border-dark) !important;
+}
+
+body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
     --icon-color: var(--on-border-dark);
     --icon-color-hover: var(--on-border-dark);
 }
 
-/*autohide card-layout*/
+/*autohide card-layout light*/
 
-body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tabs {
+body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tabs {
     gap: 0px;
     transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide.card-layout-open:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
+body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
     gap: 4px;
     transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tab-header-container {
+body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
     transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide.card-layout-open .workspace-tab-header-container:hover {
+body:not(.is-mobile).tab-autohide.card-layout-open-light.theme-light .workspace-tab-header-container:hover {
+    height: 40px;
+    opacity: 1;
+    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+/*autohide card-layout dark*/
+
+body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tabs {
+    gap: 0px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark:has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
+    gap: 4px;
+    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tab-header-container {
+    height: 16px;
+    opacity: 0;
+    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide.card-layout-open-dark.theme-dark .workspace-tab-header-container:hover {
     height: 40px;
     opacity: 1;
     transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
@@ -7039,8 +7185,18 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-left: var(--size-4-2);
 }
 
-.setting-item.style-settings-heading[data-id=Appearance] .style-settings-collapse-indicator::after {
-    content: "\1F3A8";
+.setting-item.style-settings-heading[data-id=Appearance-light] .style-settings-collapse-indicator::after {
+    content: "\1F31E";
+    margin-left: var(--size-4-2);
+}
+
+.setting-item.style-settings-heading[data-id=Appearance-light] .style-settings-collapse-indicator .style-settings-collapse-indicator::after {
+    content: "\1F31E";
+    margin-left: var(--size-4-2);
+}
+
+.setting-item.style-settings-heading[data-id=Appearance-dark] .style-settings-collapse-indicator::after {
+    content: "\1F31A";
     margin-left: var(--size-4-2);
 }
 
@@ -7085,6 +7241,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     user-select: all;
 }
 
+.setting-item.style-settings-heading[data-id=Global-background-header-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
+.setting-item.style-settings-heading[data-id=Global-background-header-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light,
 .setting-item.style-settings-heading[data-id=Preset-link]+.style-settings-container,
 .setting-item.style-settings-heading[data-id=Preset-link] .setting-item-name,
 .setting-item.style-settings-heading[data-id=Preset-link] .setting-item-control,

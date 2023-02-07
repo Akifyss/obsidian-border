@@ -1,6 +1,6 @@
 {
-  "Border@@card-layout-open": true,
-  "Border@@accent-color-custom": true,
+  "Border@@card-layout-open-light": true,
+  "Border@@accent-color-custom-light": true,
   "Border@@accent-h-light": 32,
   "Border@@accent-s-light": "64%",
   "Border@@accent-l-light": "50%",
