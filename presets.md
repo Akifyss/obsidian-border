@@ -10,12 +10,12 @@
 ![screenshot](img/Fresh.png)
 
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
-![screenshot](img/paper.png)
+![screenshot](img/Paper-like.png)
 
-+ [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
++ [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json)
 ![screenshot](img/Boundary.png)
 
-+ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
++ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
 ![screenshot](img/Mint.png)
 
 ## Dark Mode
@@ -25,6 +25,9 @@
 ![screenshot](img/Translucent.png)
 
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
-![screenshot](img/Glass.png)
+![screenshot](img/Glassmorphism.png)
+
++ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json)
+![screenshot](img/Sunset.png)
 
 Updating...

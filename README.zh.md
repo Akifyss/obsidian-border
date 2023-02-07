@@ -38,25 +38,28 @@
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json) （亮色模式）
 ![screenshot](img/Fresh.png)
 
-+ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json) （亮色模式）
-![screenshot](img/paper.png)
++ [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json) （亮色模式）
+![screenshot](img/Boundary.png)
+
++ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json) （亮色模式）
+![screenshot](img/Mint.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) （暗色模式）
 (**额外步骤**: 在“设置-外观”中启用半透明效果)
 ![screenshot](img/Translucent.png)
 
-+ [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json) （暗色模式）
-![screenshot](img/Glass.png)
++ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) （暗色模式）
+![screenshot](img/Sunset.png)
 
 #### [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 <details>
 <summary></summary>
 <ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
-<img src="img/Mint.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json">Boundary</a> （亮色模式）</li>
-<img src="img/Boundary.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json">Paper-like</a> （亮色模式）</li>
+<img src="img/Paper-like.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> （暗色模式）</li>
+<img src="img/Glassmorphism.png">
 <li>WIP...</li>
 </ul>
 </details>
