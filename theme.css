@@ -1,15 +1,8 @@
 /* @settings
 
-name: Border
-id: Border
+name: Components
+id: Components
 settings:
-    - 
-        id: Components
-        title: Components
-        title.zh: 组件
-        type: heading
-        collapsed: true
-        level: 2
     - 
         id: tab-autohide
         title: Auto hide tab bar
@@ -194,13 +187,13 @@ settings:
         title: Hide scrollbar
         title.zh: 隐藏滚动条
         type: class-toggle
-    - 
-        id: Appearance-light
-        title: Appearance(light mode)
-        title.zh: 外观（亮色模式）
-        type: heading
-        collapsed: true
-        level: 2
+*/
+
+/* @settings
+
+name: Appearance (light mode)
+id: Appearance-light
+settings:
     - 
         id: card-layout-open-light
         title: Enable card layout(light mode)
@@ -753,13 +746,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
-    - 
-        id: Appearance-dark
-        title: Appearance(dark mode)
-        title.zh: 外观（暗色模式）
-        type: heading
-        collapsed: true
-        level: 2
+
+*/
+
+/* @settings
+
+name: Appearance (dark mode)
+id: Appearance-dark
+settings:
     - 
         id: card-layout-open-dark
         title: Enable card layout(dark mode)
@@ -1321,13 +1315,13 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(255, 255, 255, 0.15)
-    - 
-        id: Editor
-        title: Editor
-        title.zh: 编辑器
-        type: heading
-        collapsed: true
-        level: 2
+*/
+
+/* @settings
+
+name: Editor
+id: Editor
+settings:
     - 
         id: Active line
         title: Active line
@@ -2093,13 +2087,14 @@ settings:
         title.zh: 关闭图像缩放
         description: from https://github.com/kepano/obsidian-minimal, author:@kepano
         type: class-toggle
-    - 
-        id: Mobile
-        title: Mobile
-        title.zh: 移动端
-        type: heading
-        collapsed: true
-        level: 2
+
+*/
+
+/* @settings
+
+name: Mobile
+id: Mobile
+settings:
     - 
         id: card-layout-pad-open
         title: Enable card layout (pad only)
@@ -2110,13 +2105,14 @@ settings:
         title: Side drawer full screen (phone only)
         title.zh: 侧边抽屉全屏（手机端）
         type: class-toggle
-    - 
-        id: Plugin
-        title: Plugin
-        title.zh: 插件
-        type: heading
-        collapsed: true
-        level: 2
+
+*/
+
+/* @settings
+
+name: Plugin
+id: Plugin
+settings:
     - 
         id: DB Folder
         title: DB Folder
@@ -2155,16 +2151,19 @@ settings:
         title: colorful checkbox
         title.zh: 多彩选框
         type: class-toggle
-    - 
-        id: Extras
-        title: Extras
-        type: heading
-        collapsed: false
-        level: 2
+
+
+*/
+
+/* @settings
+
+name: Extras
+id: Extras
+settings:
     - 
         id: Extras-info
         description: "🎨 appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
-        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 和[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
+        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
         type: info-text
         markdown: true
 */
@@ -7147,9 +7146,22 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     padding: 12px !important;
 }
 
-:is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
-    padding-left: var(--size-4-4);
-    margin-left: var(--size-4-3);
+.style-settings-container {
+    padding-left: var(--size-4-8);
+    margin-left: var(--size-4-1);
+    border-left: 1px solid var(--background-modifier-border);
+}
+
+.style-settings-heading {
+    margin-bottom: 12px;
+}
+
+.style-settings-heading[data-level="0"] {
+    margin-bottom: 12px;
+}
+
+.style-settings-heading.is-collapsed[data-level="0"] {
+    margin-bottom: 0;
 }
 
 .setting-item+.setting-item-heading {
@@ -7215,16 +7227,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-left: var(--size-4-2);
 }
 
-.style-settings-heading[data-id=Extras] {
-    margin-bottom: 12px;
-}
-
 .setting-item.style-settings-heading[data-id=Global-background-header-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
-.setting-item.style-settings-heading[data-id=Global-background-header-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light,
-.setting-item.style-settings-heading[data-id=Extras-info]+.style-settings-container,
-.setting-item.style-settings-heading[data-id=Extras-info] .setting-item-name,
-.setting-item.style-settings-heading[data-id=Extras-info] .setting-item-control,
-.setting-item.style-settings-heading[data-id=Extras-info] .style-settings-collapse-indicator {
+.setting-item.style-settings-heading[data-id=Global-background-header-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light {
     display: none;
 }
 
