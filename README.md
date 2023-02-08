@@ -1,10 +1,8 @@
 # obsidian-border
 
-[中文](https://github.com/Akifyss/obsidian-border/blob/main/README.zh.md)
-
 A clean and highly customisable theme for obsidian, recommended for use with [style settings](https://github.com/mgmeyers/obsidian-style-settings).
 
-![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square) ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square) ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square) [![Chinese documents](https://img.shields.io/badge/Doc-%E4%B8%AD%E6%96%87-brightgreen?style=flat-square)](https://github.com/Akifyss/obsidian-border/blob/main/README.zh.md)
 
 ![screenshot](cover-lg.png)
 

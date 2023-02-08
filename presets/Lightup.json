@@ -17,9 +17,5 @@
   "Border@@background-underlying-select-dark": "background-underlying-CSS-dark",
   "Border@@background-underlying-CSS-dark": "url(\"https://github.com/Akifyss/obsidian-border/blob/main/img/Lightup-bg.png?raw=true\") bottom/cover no-repeat fixed",
   "Border@@background-underlying-CSS-blend-mode-dark": "none",
-  "Border@@background-primary@@light": "#FFFFFF",
-  "Border@@background-secondary@@light": "#FFFFFF",
-  "Border@@background-modifier-border@@light": "#000000",
-  "Border@@background-modifier-border-hover@@light": "#000000",
   "Border@@Active-states-file-explorer-select-dark": "activated-file-tab-style-dark"
 }

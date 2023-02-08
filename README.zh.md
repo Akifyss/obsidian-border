@@ -1,7 +1,5 @@
 # obsidian-border
 
-[English](https://github.com/Akifyss/obsidian-border/blob/main/README.md)
-
 一个干净且高度可定制的obsidian主题, 推荐与[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件一起使用.
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square) ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square)
