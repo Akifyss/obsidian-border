@@ -12,5 +12,9 @@
   "Appearance-light@@background-mod-root-split-light": "#E0E5EC",
   "Appearance-light@@background-underlying-select-light": "background-underlying-Color-light",
   "Appearance-light@@background-underlying-light": "#E0E5EC",
-  "Appearance-light@@card-shadow-light": "inset -4px -4px 6px 0 rgba(255,255,255,.5), inset 4px 4px 6px 0 rgba(116, 125, 136, .3)"
+  "Appearance-light@@card-shadow-light": "inset -4px -4px 6px 0 rgba(255,255,255,.5), inset 4px 4px 6px 0 rgba(116, 125, 136, .3)",
+  "Appearance-light@@background-activated-tab-header-light": "#E0E5EC",
+  "Appearance-light@@shadow-activated-tab-header-light": "inset -4px -4px 6px 0 rgba(255,255,255,.5), inset 4px 4px 6px 0 rgba(116, 125, 136, .3)",
+  "Appearance-light@@indicator-remove-light": true,
+  "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-tab-style-light"
 }
