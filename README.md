@@ -60,6 +60,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 <img src="img/Glassmorphism.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> (Dark Mode)</li>
 <img src="img/Lightup.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json">Neumorphism</a> (Light Mode)</li>
+<img src="img/Neumorphism.png">
 <li>WIP...</li>
 </ul>
 </details>

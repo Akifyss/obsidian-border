@@ -60,6 +60,8 @@
 <img src="img/Glassmorphism.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> （暗色模式）</li>
 <img src="img/Lightup.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json">Neumorphism</a> （亮色模式）</li>
+<img src="img/Neumorphism.png">
 <li>WIP...</li>
 </ul>
 </details>
