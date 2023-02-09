@@ -195,6 +195,12 @@ name: Appearance (light mode)
 id: Appearance-light
 settings:
     - 
+        id: Presets-info-light
+        description: "🎨 [Appearance presets (light mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode)"
+        description.zh: "🎨 [外观预设 （亮色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) "
+        type: info-text
+        markdown: true
+    - 
         id: card-layout-open-light
         title: Enable card layout(light mode)
         title.zh: 启用 卡片式布局（亮色模式）
@@ -808,6 +814,12 @@ settings:
 name: Appearance (dark mode)
 id: Appearance-dark
 settings:
+    - 
+        id: Presets-info-dark
+        description: "🎨 [Appearance presets (dark mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode)"
+        description.zh: "🎨 [外观预设 （暗色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) "
+        type: info-text
+        markdown: true
     - 
         id: card-layout-open-dark
         title: Enable card layout(dark mode)
@@ -3271,47 +3283,9 @@ body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
 }
 
 /*view-header gradient*/
-body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before,
-body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after,
-body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before,
-body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after,
-body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after,
-body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before,
-body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after,
-body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, transparent, transparent);
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, var(--background-mod-left-split));
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, var(--background-mod-left-split), transparent);
-}
-
-body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, var(--background-mod-right-split));
-}
-
-body:not(.is-mobile) .workspace-split.mod-right-split .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, var(--background-mod-right-split), transparent);
-}
-
-
-body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, var(--background-mod-root-split));
-}
-
-body:not(.is-mobile) .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before {
-    background: linear-gradient(to right, var(--background-mod-root-split), transparent);
-}
-
-body.theme-light:not(.is-mobile).mod-root-split-background-CSS-light .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before,
-body.theme-light:not(.is-mobile).mod-root-split-background-CSS-light .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after,
-body.theme-dark:not(.is-mobile).mod-root-split-background-CSS-dark .workspace-split.mod-root .view-header-title-container:not(.mod-at-start):before,
-body.theme-dark:not(.is-mobile).mod-root-split-background-CSS-dark .workspace-split.mod-root .view-header-title-container:not(.mod-at-end):after {
-    background: linear-gradient(to right, transparent, transparent);
+body:not(.is-mobile) .view-header-title-container:not(.mod-at-start):before,
+body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after {
+    background: transparent;
 }
 
 
@@ -3397,63 +3371,6 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
 }
 
 /*divider effect*/
-body:not(.is-mobile) .mod-left-split .item-list,
-body:not(.is-mobile) .mod-left-split .nav-files-container,
-body:not(.is-mobile) .mod-left-split .tag-container {
-    background: linear-gradient(var(--background-mod-left-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
-
-body:not(.is-mobile) .mod-right-split .item-list,
-body:not(.is-mobile) .mod-right-split .nav-files-container,
-body:not(.is-mobile) .mod-right-split .tag-container {
-    background: linear-gradient(var(--background-mod-right-split) 10%, transparent) center top, linear-gradient(var(--divider-color) 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
-
-
-body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .item-list,
-body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .nav-files-container,
-body.theme-light:not(.is-mobile).mod-left-split-background-transparent-light .mod-left-split .tag-container,
-body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .item-list,
-body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .nav-files-container,
-body.theme-dark:not(.is-mobile).mod-left-split-background-transparent-dark .mod-left-split .tag-container,
-body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .item-list,
-body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .nav-files-container,
-body.theme-light:not(.is-mobile).mod-left-split-background-CSS-light .mod-left-split .tag-container,
-body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .item-list,
-body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .nav-files-container,
-body.theme-dark:not(.is-mobile).mod-left-split-background-CSS-dark .mod-left-split .tag-container {
-    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
-
-
-body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .item-list,
-body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .nav-files-container,
-body.theme-light:not(.is-mobile).mod-right-split-background-transparent-light .mod-right-split .tag-container,
-body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .item-list,
-body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .nav-files-container,
-body.theme-dark:not(.is-mobile).mod-right-split-background-transparent-dark .mod-right-split .tag-container,
-body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .item-list,
-body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .nav-files-container,
-body.theme-light:not(.is-mobile).mod-right-split-background-CSS-light .mod-right-split .tag-container,
-body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .item-list,
-body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .nav-files-container,
-body.theme-dark:not(.is-mobile).mod-right-split-background-CSS-dark .mod-right-split .tag-container {
-    background: linear-gradient(transparent 10%, transparent) center top, linear-gradient(transparent 100%, transparent) center top;
-    background-repeat: no-repeat;
-    background-size: 100% 40px, 91% 1px;
-    background-attachment: local, scroll;
-}
-
-/* --- */
 
 body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
 body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,

@@ -1,8 +1,8 @@
 # Presets
 
-**Usage**: Copy code from link, paste it into style settings and restart obsidian.
+**Usage**: Copy code from link, paste it into style settings and restart obsidian.(Before importing, it is recommended to reset the Appearance settings to the default)
 
-**用法**: 复制链接中的代码, 粘贴进style settings中，然后重启obsidian。
+**用法**: 复制链接中的代码, 粘贴进style settings中，然后重启obsidian。（导入前，推荐先将Appearance配置重置至默认）
 
 ![screenshot](img/Usage.png)
 
