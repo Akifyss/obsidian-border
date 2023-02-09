@@ -19,5 +19,10 @@
   "Appearance-light@@background-activated-tab-header-light": "black",
   "Appearance-light@@shadow-activated-tab-header-light": "none",
   "Appearance-light@@indicator-remove-light": true,
-  "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-tab-style-light"
+  "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-tab-style-light",
+  "Appearance-light@@input-radius-light": 3,
+  "Appearance-light@@input-shadow-light": "inset 0 0 0 1px black",
+  "Appearance-light@@input-shadow-hover-light": "inset 0 0 0 1px black",
+  "Appearance-light@@interactive-normal-light": "white",
+  "Appearance-light@@interactive-hover-light": "WhiteSmoke"
 }

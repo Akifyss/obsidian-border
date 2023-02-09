@@ -4,6 +4,8 @@
 
 **用法**: 复制链接中的代码, 粘贴进style settings中，然后重启obsidian。
 
+![screenshot](img/Usage.png)
+
 ## Light Mode
 
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)

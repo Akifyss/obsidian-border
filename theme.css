@@ -746,7 +746,61 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
-
+    - 
+        id: UI-Controls-light
+        title: UI Controls
+        title.zh: UI 控件
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: input-radius-light
+        title: input-radius(light mode)
+        title.zh: input-radius（亮色模式）
+        description: border radius of buttons, input, etc.
+        description.zh: 按钮，输入框等的圆角大小
+        type: variable-number
+        default: 5
+        format: px
+    - 
+        id: input-shadow-light
+        title: input-shadow(light mode)
+        title.zh: input-shadow（亮色模式）
+        description: shadow of button,dropdown, etc.
+        description.zh: 按钮，下拉菜单等的阴影
+        type: variable-text
+        default: inset 0 0 0 1px rgba(0, 0, 0, 0.12),inset 0 2px 0 rgb(255 255 255 / 20%),0 2px 3px 0 rgba(0, 0, 0, .025)
+    - 
+        id: input-shadow-hover-light
+        title: input-shadow-hover(light mode)
+        title.zh: input-shadow-hover（亮色模式）
+        description: shadow of button,dropdown, etc.(mouse hovering)
+        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
+        type: variable-text
+        default: inset 0 0 0 1px rgba(0, 0, 0, 0.17),inset 0 2px 0 rgb(255 255 255 / 20%),0 2px 3px 0 rgba(0, 0, 0, .05)
+    - 
+        id: interactive-normal-light
+        title: interactive-normal(light mode)
+        title.zh: interactive-normal（亮色模式）
+        description: background color of button,dropdown, etc.
+        description.zh: 按钮，下拉菜单等的背景色
+        type: variable-text
+        default: var(--color-base-15)
+    - 
+        id: interactive-hover-light
+        title: interactive-hover(light mode)
+        title.zh: interactive-hover（亮色模式）
+        description: background color of button,dropdown, etc.(mouse hovering)
+        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
+        type: variable-text
+        default: var(--color-base-20)
+    - 
+        id: forced-modification-light
+        title: Enable forced modification
+        title.zh: 启用强制修改
+        description: Avoid some modifications not taking effect
+        description.zh: 避免某些修改不能生效
+        type: class-toggle
 */
 
 /* @settings
@@ -1315,6 +1369,61 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: inset 0 0 0 1px rgba(255, 255, 255, 0.15)
+    - 
+        id: UI-Controls-dark
+        title: UI Controls
+        title.zh: UI 控件
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: input-radius-dark
+        title: input-radius(dark mode)
+        title.zh: input-radius（暗色模式）
+        description: border radius of button, input, etc.
+        description.zh: 按钮，输入框等的圆角大小
+        type: variable-number
+        default: 5
+        format: px
+    - 
+        id: input-shadow-dark
+        title: input-shadow(dark mode)
+        title.zh: input-shadow（暗色模式）
+        description: shadow of button,dropdown, etc.
+        description.zh: 按钮，下拉菜单等的阴影
+        type: variable-text
+        default: inset 0px 0px 0px 1px var(--background-modifier-border)
+    - 
+        id: input-shadow-hover-dark
+        title: input-shadow-hover(dark mode)
+        title.zh: input-shadow-hover（暗色模式）
+        description: shadow of button,dropdown, etc.(mouse hovering)
+        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
+        type: variable-text
+        default: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25)
+    - 
+        id: interactive-normal-dark
+        title: interactive-normal(dark mode)
+        title.zh: interactive-normal（暗色模式）
+        description: background color of button,dropdown, etc.
+        description.zh: 按钮，下拉菜单等的背景色
+        type: variable-text
+        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 3))
+    - 
+        id: interactive-hover-dark
+        title: interactive-hover(dark mode)
+        title.zh: interactive-hover（暗色模式）
+        description: background color of button,dropdown, etc.(mouse hovering)
+        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
+        type: variable-text
+        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 2.4))
+    - 
+        id: forced-modification-dark
+        title: Enable forced modification
+        title.zh: 启用强制修改
+        description: Avoid some modifications not taking effect
+        description.zh: 避免某些修改不能生效
+        type: class-toggle
 */
 
 /* @settings
@@ -2162,7 +2271,7 @@ id: Extras
 settings:
     - 
         id: Extras-info
-        description: "🎨 appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
+        description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 Submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
         description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
         type: info-text
         markdown: true
@@ -2482,7 +2591,7 @@ body {
     --color-base-05: #fcfcfc;
     --color-base-10: #fafafa;
     --color-base-15: #f7f7f7;
-    --color-base-20: #f4f4f4;
+    --color-base-20: #F0F0F0;
     --color-base-25: #e3e3e3;
     --color-base-30: #e0e0e0;
     --color-base-35: #d4d4d4;
@@ -2515,8 +2624,6 @@ body {
             calc((var(--accent-s) - 12%) / 6),
             calc(100% - (100% - var(--accent-l)) / 36), 0.8);
     --blur-container: rgba(246, 246, 246, 0.8);
-    --interactive-normal: var(--color-base-20);
-    --interactive-hover: #EBEBEB;
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -2524,12 +2631,6 @@ body {
     --background-modifier-form-field: transparent;
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-    --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-        inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .025);
-    --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-        inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .05);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
         0px 3.4px 6.7px rgba(0, 0, 0, .042),
         0px 15px 30px rgba(0, 0, 0, .07);
@@ -2561,12 +2662,8 @@ body {
     --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 4), 0.9);
-    --interactive-normal: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 4.8));
-    --interactive-hover: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 3.6));
+    --interactive-normal: var(--color-base-00);
+    --interactive-hover: var(--color-base-15);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
 }
 
@@ -2634,12 +2731,6 @@ body {
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6), 0.6);
     --blur-container: var(--workspace-background-translucent);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 3));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 2.4));
     --background-modifier-hover: hsla(var(--accent-h), 12%, 40%, 0.25);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -2650,8 +2741,6 @@ body {
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
     --search-result-background: var(--background-tertiary);
-    --input-shadow: inset 0px 0px 0px 1px var(--divider-color);
-    --input-shadow-hover: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121),
         0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
         0px 15px 30px rgba(0, 0, 0, 0.3);
@@ -5337,21 +5426,79 @@ input.wb-search-bar {
 
 
 
-/* ====== 下拉 ====== */
+/* ====== .dropdown 下拉 ====== */
 
 select,
 .dropdown {
     cursor: pointer;
 }
 
-/* ====== 按钮 ====== */
+/* ====== 按钮 button====== */
 
 body {
     /* Buttons */
     --button-radius: var(--input-radius);
 }
 
-body.theme-dark button.mod-cta {
+
+.theme-light {
+    --interactive-normal: var(--interactive-normal-light);
+    --interactive-hover: var(--interactive-hover-light);
+
+    --interactive-normal-light: var(--color-base-15);
+    --interactive-hover-light: var(--color-base-20);
+
+    --input-radius: var(--input-radius-light);
+    --input-shadow: var(--input-shadow-light);
+    --input-shadow-hover: var(--input-shadow-hover-light);
+
+    --input-radius-light: 5px;
+    --input-shadow-light: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+        inset 0 2px 0 rgb(255 255 255 / 20%),
+        0 2px 3px 0 rgba(0, 0, 0, .025);
+    --input-shadow-hover-light: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
+        inset 0 2px 0 rgb(255 255 255 / 20%),
+        0 2px 3px 0 rgba(0, 0, 0, .05);
+}
+
+.theme-dark {
+    --interactive-normal: var(--interactive-normal-dark);
+    --interactive-hover: var(--interactive-hover-dark);
+
+    --interactive-normal-dark: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(1.25*var(--accent-l) / 3));
+    --interactive-hover-dark: hsl(calc(var(--accent-h) + 8),
+            calc(var(--accent-s) / 7),
+            calc(1.25*var(--accent-l) / 2.4));
+
+    --input-radius: var(--input-radius-dark);
+    --input-shadow: var(--input-shadow-dark);
+    --input-shadow-hover: var(--input-shadow-hover-dark);
+
+    --input-radius-dark: 5px;
+    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border);
+    --input-shadow-hover-dark: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25);
+}
+
+.theme-light.forced-modification-light {
+    --interactive-normal: var(--interactive-normal-light) !important;
+    --interactive-hover: var(--interactive-hover-light) !important;
+    --input-radius: var(--input-radius-light) !important;
+    --input-shadow: var(--input-shadow-light) !important;
+    --input-shadow-hover: var(--input-shadow-hover-light) !important;
+}
+
+.theme-dark.forced-modification-dark {
+    --interactive-normal: var(--interactive-normal-dark) !important;
+    --interactive-hover: var(--interactive-hover-dark) !important;
+    --input-radius: var(--input-radius-dark) !important;
+    --input-shadow: var(--input-shadow-dark) !important;
+    --input-shadow-hover: var(--input-shadow-hover-dark) !important;
+}
+
+.theme-light.is-mobile,
+.theme-dark.is-mobile {
     --input-shadow: none;
     --input-shadow-hover: none;
 }
@@ -7352,4 +7499,8 @@ body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+8) .checkbox.
 .search.svelte-rdace4.svelte-rdace4 {
     --checklist-searchBackground: transparent;
     --checklist-listItemBorderRadius: var(--input-radius);
+}
+
+.toggle.svelte-sx5ktw.svelte-sx5ktw:hover {
+    opacity: 1 !important;
 }
