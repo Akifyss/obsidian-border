@@ -657,7 +657,7 @@ settings:
     - 
         id: color-to-tab-icon-light
         title: Apply custom color to tab icons(light mode)
-        title.zh: 将自定义颜色应用于tab前置图标（亮色模式）
+        title.zh: 将自定义颜色应用于tab图标（亮色模式）
         type: class-toggle
     - 
         id: border-radius-activated-tab-header-light
@@ -1286,7 +1286,7 @@ settings:
     - 
         id: color-to-tab-icon-dark
         title: Apply custom color to tab icons(dark mode)
-        title.zh: 将自定义颜色应用于tab前置图标（暗色模式）
+        title.zh: 将自定义颜色应用于tab图标（暗色模式）
         type: class-toggle
     - 
         id: border-radius-activated-tab-header-dark
@@ -2283,8 +2283,8 @@ id: Extras
 settings:
     - 
         id: Extras-info
-        description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 Submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
-        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
+        description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 Submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github <br> <br> ⭐ [Star](https://github.com/Akifyss/obsidian-border)this theme on Github"
+        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions) <br> <br> ⭐ 在Github上 [Star](https://github.com/Akifyss/obsidian-border)这个主题"
         type: info-text
         markdown: true
 */
@@ -3319,14 +3319,14 @@ body .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
     --icon-color: var(--text-normal);
 }
 
-body.theme-light.color-to-tab-icon-light .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.theme-light.color-to-tab-icon-light .mod-root .workspace-tab-header.is-active svg,
 body.theme-light :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 body.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title {
     color: var(--color-activated-tab-header-light) !important;
     --icon-opacity: 1;
 }
 
-body.theme-dark.color-to-tab-icon-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.theme-dark.color-to-tab-icon-dark .mod-root .workspace-tab-header.is-active svg,
 body.theme-dark :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 body.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title {
     color: var(--color-activated-tab-header-dark) !important;
@@ -4909,8 +4909,8 @@ input.prompt-input {
 body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
 body:not(.is-phone) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
 body:not(.is-phone) .prompt,
-body:not(.is-phone) .modal:not(.mod-settings),
-body:not(.is-phone) .suggestion-container {
+body:not(.is-phone) .modal:not(:has(.checkbox-container)),
+body:not(.is-phone) .suggestion-container:not([data-popper-placement="bottom-start"]) {
     -webkit-animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
     animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
 }
@@ -4943,8 +4943,7 @@ body:not(.is-phone) .suggestion-container {
     }
 }
 
-body:not(.is-phone) .modal.kanban-plugin__board-settings-modal,
-body:not(.is-phone) .modal.database-settings-modal,
+body:not(.is-phone) .modal:has(.checkbox-container),
 body:not(.is-phone) .modal.mod-settings,
 body:not(.is-phone) .modal.mod-community-modal {
     -webkit-animation: var(--anim-duration-fast) fadeIn both;

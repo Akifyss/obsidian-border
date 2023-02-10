@@ -39,8 +39,8 @@
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json) （亮色模式）
 ![screenshot](img/Boundary.png)
 
-+ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json) （亮色模式）
-![screenshot](img/Mint.png)
++ [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json) （亮色模式）
+![screenshot](img/Neumorphism.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) （暗色模式）
 (**额外步骤**: 在“设置-外观”中启用半透明效果)
@@ -60,8 +60,8 @@
 <img src="img/Glassmorphism.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> （暗色模式）</li>
 <img src="img/Lightup.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json">Neumorphism</a> （亮色模式）</li>
-<img src="img/Neumorphism.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
+<img src="img/Mint.png">
 <li>WIP...</li>
 </ul>
 </details>

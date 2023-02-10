@@ -39,8 +39,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json) (Light Mode)
 ![screenshot](img/Boundary.png)
 
-+ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json) (Light Mode)
-![screenshot](img/Mint.png)
++ [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json) (Light Mode)
+![screenshot](img/Neumorphism.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) (Dark Mode)
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
@@ -60,8 +60,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 <img src="img/Glassmorphism.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> (Dark Mode)</li>
 <img src="img/Lightup.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json">Neumorphism</a> (Light Mode)</li>
-<img src="img/Neumorphism.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Light Mode)</li>
+<img src="img/Mint.png">
 <li>WIP...</li>
 </ul>
 </details>
