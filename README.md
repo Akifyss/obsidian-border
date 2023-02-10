@@ -54,6 +54,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 <details>
 <summary></summary>
 <ul>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json">Side</a> (Light Mode)</li>
+<img src="img/Side.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json">Paper-like</a> (Light Mode)</li>
 <img src="img/Paper-like.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> (Dark Mode)</li>

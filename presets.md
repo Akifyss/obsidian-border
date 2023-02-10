@@ -23,6 +23,9 @@
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json)
 ![screenshot](img/Neumorphism.png)
 
++ [Side](https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json)
+![screenshot](img/Side.png)
+
 ## Dark Mode
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)

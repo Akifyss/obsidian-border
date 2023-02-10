@@ -3370,17 +3370,6 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
     box-shadow: inset 0 0 0 1px var(--divider-color);
 }
 
-/*divider effect*/
-
-body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
-body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    box-shadow: inset 0px 1px 0px var(--divider-color);
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
-}
-
 
 /* ====== Layout ===== */
 body.is-frameless:not(.is-hidden-frameless).is-fullscreen {
@@ -3507,8 +3496,24 @@ body:not(.is-mobile) .workspace-ribbon {
     gap: 4px;
 }
 
-.workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: 1px solid var(--divider-color);
+.workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+}
+
+body.theme-light.card-layout-open-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.card-layout-open-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px transparent;
+}
+
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
 }
 
 .theme-light .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
@@ -3717,24 +3722,24 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
     transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: 1px solid transparent;
-    transition: border-top var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px transparent;
+    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container {
-    border-top: 1px solid var(--divider-color);
-    transition: border-top var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: 1px solid transparent;
-    transition: border-top var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px transparent;
+    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container {
-    border-top: 1px solid var(--divider-color);
-    transition: border-top var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
+    box-shadow: inset 0px 1px 0px var(--divider-color);
+    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 
@@ -3979,7 +3984,7 @@ body:not(.is-mobile).card-layout-open-light.theme-light .workspace-leaf-resize-h
 }
 
 body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: 1px solid transparent;
+    border-top: unset;
 }
 
 body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tab-header {
@@ -4030,7 +4035,7 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-leaf-resize-han
 }
 
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
-    border-top: 1px solid transparent;
+    border-top: unset;
 }
 
 body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tab-header {
@@ -7043,27 +7048,21 @@ svg.pane-layout,
 .workspace-drawer.mod-left .workspace-drawer-inner,
 .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container,
 .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
-    background-color: var(--background-mod-left-split);
+    background-color: var(--background-secondary);
 }
 
+.is-tablet.theme-dark .vertical-tab-content,
+.is-tablet .workspace-tab-header-container,
+.is-mobile .workspace-split.mod-root .view-header,
+.is-mobile .workspace-split.mod-root .view-content,
 .workspace-drawer.mod-right .view-header,
 .workspace-drawer.mod-right .view-content,
 .workspace-drawer.mod-right,
 .workspace-drawer.mod-right .workspace-drawer-inner,
 .workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container,
 .workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
-    background-color: var(--background-mod-right-split);
-}
-
-body.is-mobile .workspace-split.mod-root .view-header,
-body.is-mobile .workspace-split.mod-root .view-content {
-    background-color: var(--background-mod-root-split);
-}
-
-.is-tablet.theme-dark .vertical-tab-content {
     background-color: var(--background-primary);
 }
-
 
 .is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item {
     background-color: var(--background-tertiary);
@@ -7080,7 +7079,6 @@ body.is-mobile .workspace-split.mod-root .view-content {
 .is-tablet .workspace-tab-container {
     border-top: 1px solid var(--divider-color);
 }
-
 
 .is-tablet .workspace-drawer-ribbon {
     border-right: 1px solid var(--divider-color);
@@ -7149,7 +7147,6 @@ body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
     border-radius: var(--card-border-radius-dark, 8px);
 }
 
-
 body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-right: none;
     border-left: none;
@@ -7166,11 +7163,6 @@ body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
 body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
     padding-top: 8px;
 }
-
-/*
-body.card-layout-pad-open{
-    --background-mod-left-split:var(--background-primary)!important;
-}*/
 
 
 /* drawer-phone-full-width */

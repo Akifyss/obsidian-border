@@ -54,6 +54,8 @@
 <details>
 <summary></summary>
 <ul>
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json">Side</a> （亮色模式）</li>
+<img src="img/Side.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json">Paper-like</a> （亮色模式）</li>
 <img src="img/Paper-like.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> （暗色模式）</li>

@@ -1,0 +1,15 @@
+{
+  "Appearance-light@@card-layout-open-light": true,
+  "Appearance-light@@accent-color-custom-light": true,
+  "Appearance-light@@accent-s-light": "0%",
+  "Appearance-light@@accent-l-light": "50%",
+  "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-customize-light",
+  "Appearance-light@@background-mod-left-split-light": "#FFFFFF",
+  "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-customize-light",
+  "Appearance-light@@background-mod-right-split-light": "#FFFFFF",
+  "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-transparent-light",
+  "Appearance-light@@on-border-light": "#666666",
+  "Appearance-light@@background-underlying-select-light": "background-underlying-Color-light",
+  "Appearance-light@@background-underlying-light": "#FBFBFB",
+  "Appearance-light@@card-shadow-light": "0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1), inset  0 0 0 1px #e2e2e2"
+}
