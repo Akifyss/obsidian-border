@@ -187,6 +187,40 @@ settings:
         title: Hide scrollbar
         title.zh: 隐藏滚动条
         type: class-toggle
+    - 
+        id: anim-duration
+        title: Animation duration
+        title.zh: 动效时长
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: anim-duration-info
+        description: "Border usually uses 'fast/moderate' value as animation duration and 'superfast/slow' as animation delay time."
+        description.zh: "Border一般将'fast/moderate'值用作动画的持续时间，'superfast/slow'值用作动画的延迟时间"
+        type: info-text
+        markdown: true
+    - 
+        id: anim-duration-superfast
+        title: anim-duration-superfast
+        type: variable-text
+        default: 75ms
+    - 
+        id: anim-duration-fast
+        title: anim-duration-fast
+        type: variable-text
+        default: 150ms
+    - 
+        id: anim-duration-moderate
+        title: anim-duration-moderate
+        type: variable-text
+        default: 300ms
+    - 
+        id: anim-duration-slow
+        title: anim-duration-slow
+        type: variable-text
+        default: 600ms
+
 */
 
 /* @settings
@@ -760,6 +794,13 @@ settings:
         collapsed: ture
         level: 3
     - 
+        id: forced-modification-light
+        title: Enable forced modification
+        title.zh: 启用强制修改
+        description: Avoid some modifications not taking effect
+        description.zh: 避免某些修改不能生效
+        type: class-toggle
+    - 
         id: input-radius-light
         title: input-radius(light mode)
         title.zh: input-radius（亮色模式）
@@ -780,7 +821,7 @@ settings:
         id: input-shadow-hover-light
         title: input-shadow-hover(light mode)
         title.zh: input-shadow-hover（亮色模式）
-        description: shadow of button,dropdown, etc.(mouse hovering)
+        description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
         default: inset 0 0 0 1px rgba(0, 0, 0, 0.17),inset 0 2px 0 rgb(255 255 255 / 20%),0 2px 3px 0 rgba(0, 0, 0, .05)
@@ -796,17 +837,83 @@ settings:
         id: interactive-hover-light
         title: interactive-hover(light mode)
         title.zh: interactive-hover（亮色模式）
-        description: background color of button,dropdown, etc.(mouse hovering)
+        description: background color of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
         type: variable-text
         default: var(--color-base-20)
     - 
-        id: forced-modification-light
-        title: Enable forced modification
-        title.zh: 启用强制修改
-        description: Avoid some modifications not taking effect
-        description.zh: 避免某些修改不能生效
-        type: class-toggle
+        id: toggle-light
+        title: toggle switch
+        title.zh: 滑动开关
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: toggle-thumb-color-light
+        title: toggle-thumb-color(light mode)
+        title.zh: toggle-thumb-color（亮色模式）
+        description: background color of toggle thumb
+        description.zh: 开关滑块的背景色
+        type: variable-text
+        default: white
+    - 
+        id: toggle-thumb-enabled-color-light
+        title: toggle-thumb-enabled-color(light mode)
+        title.zh: toggle-thumb-enabled-color（亮色模式）
+        description: background color of toggle thumb(enabled)
+        description.zh: 开关滑块的背景色（开启时）
+        type: variable-text
+        default: var(--background-primary)
+    - 
+        id: toggle-thumb-shadow-light
+        title: toggle-thumb-shadow(light mode)
+        title.zh: toggle-thumb-shadow（亮色模式）
+        description: shadow of toggle thumb
+        description.zh: 开关滑块的阴影
+        type: variable-text
+        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+    - 
+        id: toggle-thumb-enabled-shadow-light
+        title: toggle-thumb-enabled-shadow(light mode)
+        title.zh: toggle-thumb-enabled-shadow（亮色模式）
+        description: background shadow of toggle thumb(enabled)
+        description.zh: 开关滑块的阴影（开启时）
+        type: variable-text
+        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+
+    - 
+        id: toggle-track-color-light
+        title: toggle-track-color(light mode)
+        title.zh: toggle-track-color（亮色模式）
+        description: background color of toggle track
+        description.zh: 开关滑轨的背景色
+        type: variable-text
+        default: var(--background-modifier-border-hover)
+    - 
+        id: toggle-track-enabled-color-light
+        title: toggle-track-enabled-color(light mode)
+        title.zh: toggle-track-enabled-color（亮色模式）
+        description: background color of toggle track(enabled)
+        description.zh: 开关滑轨的背景色（开启时）
+        type: variable-text
+        default: var(--interactive-accent)
+    - 
+        id: toggle-track-shadow-light
+        title: toggle-track-shadow(light mode)
+        title.zh: toggle-track-shadow（亮色模式）
+        description: shadow of toggle track
+        description.zh: 开关滑轨的阴影
+        type: variable-text
+        default: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21)
+    - 
+        id: toggle-track-hovered-shadow-light
+        title: toggle-track-hovered-shadow(light mode)
+        title.zh: toggle-track-hovered-shadow（亮色模式）
+        description: background shadow of toggle track(hovered)
+        description.zh: 开关滑轨的阴影（鼠标悬停时）
+        type: variable-text
+        default: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28)
+
 */
 
 /* @settings
@@ -1389,6 +1496,13 @@ settings:
         collapsed: ture
         level: 3
     - 
+        id: forced-modification-dark
+        title: Enable forced modification
+        title.zh: 启用强制修改
+        description: Avoid some modifications not taking effect
+        description.zh: 避免某些修改不能生效
+        type: class-toggle
+    - 
         id: input-radius-dark
         title: input-radius(dark mode)
         title.zh: input-radius（暗色模式）
@@ -1409,7 +1523,7 @@ settings:
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
         title.zh: input-shadow-hover（暗色模式）
-        description: shadow of button,dropdown, etc.(mouse hovering)
+        description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
         default: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25)
@@ -1425,17 +1539,83 @@ settings:
         id: interactive-hover-dark
         title: interactive-hover(dark mode)
         title.zh: interactive-hover（暗色模式）
-        description: background color of button,dropdown, etc.(mouse hovering)
+        description: background color of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
         type: variable-text
         default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 2.4))
     - 
-        id: forced-modification-dark
-        title: Enable forced modification
-        title.zh: 启用强制修改
-        description: Avoid some modifications not taking effect
-        description.zh: 避免某些修改不能生效
-        type: class-toggle
+        id: toggle-dark
+        title: toggle switch
+        title.zh: 滑动开关
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: toggle-thumb-color-dark
+        title: toggle-thumb-color(dark mode)
+        title.zh: toggle-thumb-color（暗色模式）
+        description: background color of toggle thumb
+        description.zh: 开关滑块的背景色
+        type: variable-text
+        default: white
+    - 
+        id: toggle-thumb-enabled-color-dark
+        title: toggle-thumb-enabled-color(dark mode)
+        title.zh: toggle-thumb-enabled-color（暗色模式）
+        description: background color of toggle thumb(enabled)
+        description.zh: 开关滑块的背景色（开启时）
+        type: variable-text
+        default: var(--background-primary)
+    - 
+        id: toggle-thumb-shadow-dark
+        title: toggle-thumb-shadow(dark mode)
+        title.zh: toggle-thumb-shadow（暗色模式）
+        description: shadow of toggle thumb
+        description.zh: 开关滑块的阴影
+        type: variable-text
+        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+    - 
+        id: toggle-thumb-enabled-shadow-dark
+        title: toggle-thumb-enabled-shadow(dark mode)
+        title.zh: toggle-thumb-enabled-shadow（暗色模式）
+        description: background shadow of toggle thumb(enabled)
+        description.zh: 开关滑块的阴影（开启时）
+        type: variable-text
+        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+
+    - 
+        id: toggle-track-color-dark
+        title: toggle-track-color(dark mode)
+        title.zh: toggle-track-color（暗色模式）
+        description: background color of toggle track
+        description.zh: 开关滑轨的背景色
+        type: variable-text
+        default: var(--background-modifier-border-hover)
+    - 
+        id: toggle-track-enabled-color-dark
+        title: toggle-track-enabled-color(dark mode)
+        title.zh: toggle-track-enabled-color（暗色模式）
+        description: background color of toggle track(enabled)
+        description.zh: 开关滑轨的背景色（开启时）
+        type: variable-text
+        default: var(--interactive-accent)
+    - 
+        id: toggle-track-shadow-dark
+        title: toggle-track-shadow(dark mode)
+        title.zh: toggle-track-shadow（暗色模式）
+        description: shadow of toggle track
+        description.zh: 开关滑轨的阴影
+        type: variable-text
+        default: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21)
+    - 
+        id: toggle-track-hovered-shadow-dark
+        title: toggle-track-hovered-shadow(dark mode)
+        title.zh: toggle-track-hovered-shadow（暗色模式）
+        description: background shadow of toggle track(hovered)
+        description.zh: 开关滑轨的阴影（鼠标悬停时）
+        type: variable-text
+        default: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28)
+
 */
 
 /* @settings
@@ -2641,6 +2821,7 @@ body {
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
     --background-modifier-form-field: transparent;
+    --search-result-background: transparent;
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
@@ -2747,12 +2928,11 @@ body {
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
-    /*--background-modifier-form-field: var(--background-tertiary);*/
     --background-modifier-form-field: transparent;
+    --search-result-background: transparent;
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
-    --search-result-background: var(--background-tertiary);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121),
         0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
         0px 15px 30px rgba(0, 0, 0, 0.3);
@@ -2879,6 +3059,7 @@ body {
     --background-modifier-form-field: var(--background-modifier-hover);
     --keyboard-background: var(--background-primary);
     --checkbox-size: 17px;
+    --search-result-background: var(--background-primary);
 }
 
 .is-mobile.theme-dark {
@@ -3691,7 +3872,7 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 /*autohide transition*/
 body:not(.is-mobile) .workspace::before {
-    transition: width var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing), height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: width var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .workspace-ribbon.side-dock-ribbon:hover, .status-bar:hover) .workspace::before {
@@ -3702,7 +3883,7 @@ body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titleb
 
 body:not(.is-mobile).tab-autohide .workspace-tabs {
     gap: 0px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: gap var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
@@ -3713,7 +3894,7 @@ body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .w
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
@@ -3724,7 +3905,7 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
@@ -3734,7 +3915,7 @@ body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
@@ -3749,7 +3930,7 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical.mod-root>*>.work
 body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) + 24px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -3769,7 +3950,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-verti
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 16px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
@@ -3789,7 +3970,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-ta
 
 body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
     gap: 0px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: gap var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
@@ -3813,7 +3994,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container
 body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
@@ -3829,7 +4010,7 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
 }
 
 body:not(.is-mobile).tab-autohide.mod-macos .mod-top-left-space .workspace-tab-header-container {
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing) !important;
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing) !important;
 }
 
 body:not(.is-mobile).tab-autohide.mod-macos:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top-left-space .workspace-tab-header-container {
@@ -3846,7 +4027,7 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mo
 body:not(.is-mobile).status-bar-autohide .status-bar {
     opacity: 0;
     height: 16px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .status-bar:hover {
@@ -3857,7 +4038,7 @@ body:not(.is-mobile).status-bar-autohide .status-bar:hover {
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
     padding-bottom: 16px;
-    transition: padding var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: padding var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
@@ -3868,7 +4049,7 @@ body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main
 /*ribbon autohide*/
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left {
     --ribbon-width: 16px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover {
@@ -3878,7 +4059,7 @@ body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left>* {
     opacity: 0;
-    transition: all var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
@@ -3905,11 +4086,11 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.works
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    transition: padding-left var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: padding-left var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
-    transition: width var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: width var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.workspace-ribbon.side-dock-ribbon:hover).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
@@ -4163,7 +4344,7 @@ body:not(.is-mobile) .view-header::after {
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header {
     height: 0;
     margin-top: -1px;
-    transition: height var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing), margin var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), margin var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header:focus-within,
@@ -4178,7 +4359,7 @@ body:not(.is-mobile) .view-actions,
 body:not(.is-mobile) .view-header-nav-buttons,
 body:not(.is-mobile) .view-header-title-container {
     opacity: 0;
-    transition: opacity var(--anim-duration-fast) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-actions,
@@ -4879,9 +5060,6 @@ input.prompt-input {
     background-color: transparent !important;
 }
 
-.theme-dark .search-result-file-matches {
-    --background-modifier-border: var(--background-modifier-border);
-}
 
 .theme-dark .community-item {
     background-color: var(--background-tertiary);
@@ -4910,20 +5088,28 @@ input.prompt-input {
 
 
 /*====== 动效 ======*/
+body {
+    /* Animations */
+    --anim-duration-superfast: 75ms;
+    --anim-duration-fast: 150ms;
+    --anim-duration-moderate: 300ms;
+    --anim-duration-slow: 600ms;
+}
+
 .graph-controls:not(.is-close),
 body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
 body:not(.is-phone) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
 body:not(.is-phone) .prompt,
 body:not(.is-phone) .modal:not(:has(.checkbox-container)),
 body:not(.is-phone) .suggestion-container:not([data-popper-placement="bottom-start"]) {
-    -webkit-animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
-    animation: scale-up 200ms cubic-bezier(0.175, 0.885, 0.320, 1.125) both;
+    -webkit-animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
+    animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
 
 @-webkit-keyframes scale-up {
     0% {
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
         opacity: 0;
     }
 
@@ -4936,8 +5122,8 @@ body:not(.is-phone) .suggestion-container:not([data-popper-placement="bottom-sta
 
 @keyframes scale-up {
     0% {
-        -webkit-transform: scale(0.7);
-        transform: scale(0.7);
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
         opacity: 0;
     }
 
@@ -5345,7 +5531,7 @@ input.wb-search-bar {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' viewBox='0 0 160 160'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath fill-opacity='.25' d='M38.66 123.48C27.16 112.55 20 97.11 20 80c0-5.18.66-10.2 1.89-15l16.77 58.48Zm70.35 9.05C100.41 137.29 90.52 140 80 140c-10.52 0-20.47-2.73-29.08-7.52l19.24-5.51c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91l17.97 5.15.81.74Zm29.04-67.75-16.88 58.86C132.76 112.71 140 97.2 140 80c0-5.26-.68-10.36-1.95-15.22Zm-15.41-26.99-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-8.94-4.95-29.78 8.54C47.68 27.06 63.02 20 80 20c16.98 0 31.77 6.8 42.64 17.79Z'/%3e%3cpath fill-opacity='.05' d='m70.31 52.88-.98 3.41-38.26 10.97-.83-2.89 40.07-11.49ZM58.37 78.15a28.777 28.777 0 0 0-3.3 4.07l-18.21 5.22-.83-2.88 22.34-6.41Zm-7.78 14.72c-.21 1.06-.37 2.15-.47 3.25l-9.96 2.86-.82-2.88 11.25-3.23Zm.24-43.76-23.07 6.61-.83-2.88L50 46.22l.83 2.89Zm4.9 67.25-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c.51.91 1.09 1.79 1.71 2.63Z'/%3e%3cpath fill-opacity='.15' d='m72.71 44.51-1.81.52-4.35-15.17-29.78 8.54-15.74 4.51a5.27 5.27 0 0 0-3.61 6.51L21.89 65l16.77 58.48 1.87 6.51c.8 2.79 3.71 4.41 6.5 3.61l3.89-1.12 19.24-5.51a29.706 29.706 0 0 1-14.43-10.61l-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c-.15-.24-.29-.48-.43-.73A29.64 29.64 0 0 1 50 98.82c0-.91.04-1.81.12-2.7l-9.96 2.86-.82-2.88 11.25-3.23c.79-3.88 2.34-7.48 4.48-10.65l-18.21 5.22-.83-2.88 22.34-6.41a29.14 29.14 0 0 1 6.07-4.82l4.89-17.04-38.26 10.97-.83-2.89 40.07-11.49 2.4-8.37ZM27.76 55.72l-.83-2.88L50 46.22l.83 2.89-23.07 6.61Z'/%3e%3cpath fill-opacity='.1' d='m108.2 131.79-17.97-5.15c2.76-1.04 5.32-2.48 7.61-4.25l10.36 9.4ZM135.84 58l-11.33-3.25 3.19-11.14 1.16-4.04-6.22-1.78-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-2.78 9.7-2.4 8.37-.98 3.41-4.89 17.04c4.47-2.69 9.7-4.24 15.29-4.24s11.22 1.66 15.79 4.55a28.65 28.65 0 0 1 4.74 3.68l23.71 6.8-.82 2.89-19.27-5.52c2.3 3.17 3.97 6.81 4.85 10.75l11.94 3.42-.83 2.88-10.55-3.03c.12 1.09.18 2.19.18 3.31 0 4.7-1.09 9.14-3.03 13.09-.22.45-.45.89-.7 1.32l.67.19 8.47 2.43-.83 2.88-6.55-1.88 10.53 9.55 1.87 1.69 1.27-4.45 16.88-58.86 1.63-5.68-3.84-1.1ZM82.85 38.89l.23-.82 23.07 6.62-.82 2.88-18.83-5.4-2.81-.81-1.43-.41.59-2.06Zm46.09 27.93L90.4 55.77l-9.63-2.76-1.82-.52.65-2.27.18-.62 9.64 2.77 40.34 11.57-.82 2.88Z'/%3e%3cpath fill-opacity='.35' d='m75.49 34.81-2.78 9.7-1.81.52-4.35-15.17 8.94 4.95Z'/%3e%3cpath fill-opacity='.3' d='m128.86 39.57-1.16 4.03v.01l-3.19 11.14L135.84 58l3.84 1.1-10.82-19.53Z'/%3e%3cpath fill-opacity='.35' d='m122.01 130.01-7.12 7.85-5.88-5.33-.81-.74-10.36-9.4c1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32l.79.71 1.75 1.59 10.53 9.55 1.87 1.69 2.11 1.92Z'/%3e%3cpath fill-opacity='.35' fill-rule='evenodd' d='M109.29 95.51c-.13-1.11-.31-2.2-.56-3.27-.88-3.94-2.55-7.58-4.85-10.75-1.07-1.51-2.28-2.9-3.62-4.17a28.65 28.65 0 0 0-4.74-3.68c-4.57-2.89-9.99-4.55-15.79-4.55-5.8 0-10.82 1.55-15.29 4.24a29.14 29.14 0 0 0-6.07 4.82 28.777 28.777 0 0 0-3.3 4.07 29.564 29.564 0 0 0-4.48 10.65 30.145 30.145 0 0 0-.59 5.95c0 5.13 1.3 9.96 3.59 14.17.14.26.28.5.43.74.51.91 1.09 1.79 1.71 2.63a29.706 29.706 0 0 0 14.43 10.61c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91 2.76-1.04 5.32-2.48 7.61-4.25 1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32.28-.43.54-.87.78-1.32.25-.43.48-.87.7-1.32 1.94-3.95 3.03-8.39 3.03-13.09 0-1.12-.06-2.22-.18-3.31Zm-4.98 8.78a24.97 24.97 0 0 1-4.91 10.24c-.31.4-.63.78-.97 1.15-.02.02-.04.05-.06.07-.27.3-.55.59-.83.87-.29.28-.58.56-.88.83-.59.55-1.21 1.06-1.86 1.54-.65.49-1.32.94-2.01 1.36l-.42.24s-.01.01-.02.01c-.55.33-1.12.63-1.7.91-1.1.53-2.25.98-3.43 1.35-2.01.62-4.14 1-6.33 1.1-.1.01-.19.01-.29.01-.29.02-.58.02-.87.02-2.61 0-5.12-.4-7.48-1.13a24.94 24.94 0 0 1-5.57-2.51c-.21-.13-.43-.27-.64-.4-.21-.13-.41-.27-.62-.42-.26-.17-.5-.35-.75-.54-.65-.48-1.27-.99-1.86-1.54-.84-.76-1.62-1.57-2.35-2.44-.69-.81-1.32-1.68-1.9-2.58a25.1 25.1 0 0 1-3.22-7.35c-.51-2-.78-4.1-.78-6.26 0-1.38.11-2.74.33-4.06.18-1.15.44-2.26.78-3.34 1.28-4.17 3.61-7.87 6.68-10.8.26-.26.52-.5.79-.71a24.966 24.966 0 0 1 16.59-6.26c1.39 0 2.74.11 4.07.33 4.28.69 8.2 2.47 11.46 5.04.85.65 1.66 1.37 2.42 2.14 2.63 2.68 4.68 5.95 5.9 9.6.38 1.09.68 2.21.89 3.37a25.259 25.259 0 0 1-.16 10.16Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.05' fill-rule='evenodd' d='M104.47 94.13c-.21-1.16-.51-2.28-.89-3.37a25.082 25.082 0 0 0-5.9-9.6c-.76-.77-1.57-1.49-2.42-2.14a24.907 24.907 0 0 0-11.46-5.04c-1.33-.22-2.68-.33-4.07-.33a24.966 24.966 0 0 0-16.59 6.26c-.27.21-.53.45-.79.71-3.07 2.93-5.4 6.63-6.68 10.8-.34 1.08-.6 2.19-.78 3.34-.22 1.32-.33 2.68-.33 4.06 0 2.16.27 4.26.78 6.26a25.1 25.1 0 0 0 3.22 7.35c.58.9 1.21 1.77 1.9 2.58.73.87 1.51 1.68 2.35 2.44.59.55 1.21 1.06 1.86 1.54.25.19.49.37.75.54.21.15.41.29.62.42.21.13.43.27.64.4a24.94 24.94 0 0 0 5.57 2.51c2.36.73 4.87 1.13 7.48 1.13.29 0 .58 0 .87-.02.1 0 .19 0 .29-.01 2.19-.1 4.32-.48 6.33-1.1 1.18-.37 2.33-.82 3.43-1.35.58-.28 1.15-.58 1.7-.91.01 0 .02 0 .02-.01l.42-.24c.69-.42 1.36-.87 2.01-1.36.65-.48 1.27-.99 1.86-1.54.3-.27.59-.55.88-.83.28-.28.56-.57.83-.87.02-.02.04-.05.06-.07.34-.37.66-.75.97-1.15.66-.82 1.27-1.68 1.83-2.59a25.174 25.174 0 0 0 3.68-13.12c0-1.6-.15-3.17-.44-4.69Zm-14.69 9.35h.01l2.41 2.42.14.14c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.5' fill-rule='evenodd' d='M92.34 106.04c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01l2.41 2.42.14.14h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.35' d='M124.81 134.66c.07 1.4-.42 2.77-1.36 3.81a5.29 5.29 0 0 1-3.67 1.73c-1.4.07-2.78-.42-3.82-1.36l-1.07-.98 7.12-7.84 1.07.97c1.04.94 1.66 2.26 1.73 3.67Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h160v160H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-
+/* ====== UI controls====== */
 
 /* ====== .dropdown 下拉 ====== */
 
@@ -5354,7 +5540,38 @@ select,
     cursor: pointer;
 }
 
-/* ====== 按钮 button====== */
+
+/*toggle switch*/
+
+/*toggle-track*/
+
+
+.checkbox-container {
+    background-color: var(--toggle-track-color);
+    box-shadow: var(--toggle-track-shadow);
+}
+
+.checkbox-container.is-enabled {
+    background-color: var(--toggle-track-enabled-color);
+}
+
+@media (hover: hover) {
+    .checkbox-container:hover {
+        box-shadow: var(--toggle-track-hovered-shadow);
+    }
+}
+
+/*toggle-thumb*/
+
+.checkbox-container:after {
+    background-color: var(--toggle-thumb-color);
+    box-shadow: var(--toggle-thumb-shadow);
+}
+
+.checkbox-container.is-enabled:after {
+    background-color: var(--toggle-thumb-enabled-color);
+    box-shadow: var(--toggle-thumb-enabled-shadow);
+}
 
 body {
     /* Buttons */
@@ -5363,6 +5580,26 @@ body {
 
 
 .theme-light {
+    --toggle-thumb-color: var(--toggle-thumb-color-light);
+    --toggle-thumb-enabled-color: var(--toggle-thumb-enabled-color-light);
+    --toggle-thumb-color-light: white;
+    --toggle-thumb-enabled-color-light: var(--background-primary);
+
+    --toggle-thumb-shadow: var(--toggle-thumb-shadow-light);
+    --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-light);
+    --toggle-thumb-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.08);
+    --toggle-thumb-enabled-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.08);
+
+    --toggle-track-color: var(--toggle-track-color-light);
+    --toggle-track-enabled-color: var(--toggle-track-enabled-color-light);
+    --toggle-track-color-light: var(--background-modifier-border-hover);
+    --toggle-track-enabled-color-light: var(--interactive-accent);
+
+    --toggle-track-shadow: var(--toggle-track-shadow-light);
+    --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-light);
+    --toggle-track-shadow-light: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21);
+    --toggle-track-hovered-shadow-light: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28);
+
     --interactive-normal: var(--interactive-normal-light);
     --interactive-hover: var(--interactive-hover-light);
 
@@ -5383,6 +5620,26 @@ body {
 }
 
 .theme-dark {
+    --toggle-thumb-color: var(--toggle-thumb-color-dark);
+    --toggle-thumb-enabled-color: var(--toggle-thumb-enabled-color-dark);
+    --toggle-thumb-color-dark: white;
+    --toggle-thumb-enabled-color-dark: var(--background-primary);
+
+    --toggle-thumb-shadow: var(--toggle-thumb-shadow-dark);
+    --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-dark);
+    --toggle-thumb-shadow-dark: 0 4px 4px rgba(0, 0, 0, 0.08);
+    --toggle-thumb-enabled-shadow-dark: 0 4px 4px rgba(0, 0, 0, 0.08);
+
+    --toggle-track-color: var(--toggle-track-color-dark);
+    --toggle-track-enabled-color: var(--toggle-track-enabled-color-dark);
+    --toggle-track-color-dark: var(--background-modifier-border-hover);
+    --toggle-track-enabled-color-dark: var(--interactive-accent);
+
+    --toggle-track-shadow: var(--toggle-track-shadow-dark);
+    --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-dark);
+    --toggle-track-shadow-dark: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21);
+    --toggle-track-hovered-shadow-dark: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28);
+
     --interactive-normal: var(--interactive-normal-dark);
     --interactive-hover: var(--interactive-hover-dark);
 
@@ -6531,22 +6788,6 @@ li[data-task="<"]>p>input:checked {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_å±‚_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,15.5H13.25c.83,0,1.5-.67,1.5-1.5V3.5c0-.83-.67-1.5-1.5-1.5h-1.5V.5h-1.5v1.5H5.75V.5h-1.5v1.5h-1.5c-.83,0-1.5,.67-1.5,1.5V14c0,.83,.67,1.5,1.5,1.5Zm0-11.25H13.25v1.5H2.75v-1.5Z"/></svg>');
 }
 
-/*toggle switch*/
-.checkbox-container.is-enabled {
-    background-color: var(--color-green);
-}
-
-.checkbox-container:after {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
-}
-
-.checkbox-container {
-    background-color: var(--interactive-hover);
-}
-
-.checkbox-container.is-enabled:after {
-    background-color: var(--background-primary);
-}
 
 /* ====== Callout ====== */
 body {
@@ -6669,7 +6910,40 @@ body {
 /*code*/
 
 body {
-    --code-background: var(--background-primary-alt);
+    --code-background: transparent;
+}
+
+kbd,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code,
+:not(pre)>code,
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.markdown-rendered pre {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.theme-dark kbd,
+.theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.theme-dark .cm-s-obsidian span.cm-inline-code,
+.theme-dark :not(pre)>code,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
+.theme-dark .markdown-rendered pre {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+.theme-dark .cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
+    background-image: unset;
+}
+
+@media (hover: hover) {
+    .markdown-rendered button.copy-code-button:hover {
+        background-color: var(--background-modifier-hover);
+    }
 }
 
 body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
@@ -6699,20 +6973,38 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
     border-right: 1px dashed var(--divider-color);
 }
 
-
-:not(pre)>code[class*="language-"],
-pre[class*="language-"] {
+.markdown-rendered pre {
     border: 1px dashed var(--divider-color);
 }
 
 /* ======table ====== */
 body {
-    --table-header-background: var(--background-tertiary);
-    --table-header-background-hover: var(--background-tertiary);
-    --table-row-background-hover: var(--background-primary-alt);
+    --table-header-background: transparent;
+    --table-header-background-hover: var(--line-active-bg);
+    --table-row-background-hover: var(--line-active-bg);
     --table-header-weight: var(--font-semibold);
     --table-header-color: var(--color-accent-3);
     --table-width: 88cqw;
+}
+
+.markdown-rendered thead tr {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+@media (hover: hover) {
+    .markdown-rendered thead tr:hover {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+}
+
+.theme-dark .markdown-rendered thead tr {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+@media (hover: hover) {
+    .theme-dark .markdown-rendered thead tr:hover {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
 }
 
 :is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,

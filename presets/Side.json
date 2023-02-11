@@ -11,5 +11,6 @@
   "Appearance-light@@on-border-light": "#666666",
   "Appearance-light@@background-underlying-select-light": "background-underlying-Color-light",
   "Appearance-light@@background-underlying-light": "#FBFBFB",
-  "Appearance-light@@card-shadow-light": "0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1), inset  0 0 0 1px #e2e2e2"
+  "Appearance-light@@card-shadow-light": "0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1), 0 0 0 1px #e2e2e2",
+  "Appearance-light@@shadow-activated-tab-header-light": "0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.2), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.1), 0 0 0 1px #e2e2e2"
 }

@@ -24,5 +24,13 @@
   "Appearance-light@@input-shadow-light": "inset 0 0 0 1px black",
   "Appearance-light@@input-shadow-hover-light": "inset 0 0 0 1px black",
   "Appearance-light@@interactive-normal-light": "white",
-  "Appearance-light@@interactive-hover-light": "WhiteSmoke"
+  "Appearance-light@@interactive-hover-light": "WhiteSmoke",
+  "Appearance-light@@toggle-thumb-color-light": "black",
+  "Appearance-light@@toggle-thumb-enabled-color-light": "white",
+  "Appearance-light@@toggle-thumb-shadow-light": "none",
+  "Appearance-light@@toggle-thumb-enabled-shadow-light": "none",
+  "Appearance-light@@toggle-track-color-light": "white",
+  "Appearance-light@@toggle-track-enabled-color-light": "black",
+  "Appearance-light@@toggle-track-shadow-light": "0px 0px 0px 1px #000000",
+  "Appearance-light@@toggle-track-hovered-shadow-light": "0px 0px 0px 1px #000000"
 }
