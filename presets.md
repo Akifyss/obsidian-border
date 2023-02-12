@@ -11,14 +11,20 @@
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
 ![screenshot](img/Fresh.png)
 
+  + [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
+  ![screenshot](img/Mint.png)
+
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
 ![screenshot](img/Paper-like.png)
 
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json)
 ![screenshot](img/Boundary.png)
 
-+ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
-![screenshot](img/Mint.png)
+  + [Silver](https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json)
+  ![screenshot](img/Silver.gif)
+
+  + [Wave](https://github.com/Akifyss/obsidian-border/blob/main/presets/Wave.json)
+  ![screenshot](img/Wave.gif)
 
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json)
 ![screenshot](img/Neumorphism.png)
@@ -32,13 +38,13 @@
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
 
-+ [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
-![screenshot](img/Lightup.png)
-
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glassmorphism.png)
 
 + [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json)
 ![screenshot](img/Sunset.png)
+
+  + [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
+  ![screenshot](img/Lightup.png)
 
 Updating...

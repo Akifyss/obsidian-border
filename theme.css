@@ -3894,13 +3894,25 @@ body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .w
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
     height: 40px;
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
+    transform: translateY(-24px);
+    opacity: 0;
+    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
@@ -3994,32 +4006,44 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container
 body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container-inner {
+    transform: translateY(-24px);
+    opacity: 0;
+    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container-inner {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).tab-autohide.mod-macos .mod-top-left-space .workspace-tab-header-container {
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing) !important;
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing) !important;
 }
 
 body:not(.is-mobile).tab-autohide.mod-macos:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top-left-space .workspace-tab-header-container {
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing) !important;
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing) !important;
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .titlebar-button-container,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mod-top .workspace-tab-header-container {
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 
@@ -4027,23 +4051,23 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mo
 body:not(.is-mobile).status-bar-autohide .status-bar {
     opacity: 0;
     height: 16px;
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .status-bar:hover {
     opacity: 1;
     height: 24px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
     padding-bottom: 16px;
-    transition: padding var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: padding-bottom var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
     padding-bottom: 24px;
-    transition: padding var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: padding-bottom var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
 /*ribbon autohide*/

@@ -64,6 +64,8 @@
 <img src="img/Lightup.png">
 <li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
 <img src="img/Mint.png">
+<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json">Silver</a> （亮色模式）</li>
+<img src="img/Silver.gif">
 <li>WIP...</li>
 </ul>
 </details>
