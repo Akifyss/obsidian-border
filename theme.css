@@ -190,7 +190,7 @@ settings:
     - 
         id: anim-duration
         title: Animation duration
-        title.zh: 动效时长
+        title.zh: 动效速度
         type: heading
         collapsed: true
         level: 3
@@ -1624,12 +1624,17 @@ name: Editor
 id: Editor
 settings:
     - 
-        id: Active line
-        title: Active line
-        title.zh: 行高亮
+        id: line-emphasis
+        title: Emphasis on line
+        title.zh: 行强调
         type: heading
         collapsed: true
         level: 3
+    - 
+        id: line-hover-indicator-disable
+        title: Disable hovered line indicator
+        title.zh: 禁用悬停行指示器
+        type: class-toggle
     - 
         id: line-active-disable
         title: Disable active line hightlight
@@ -2765,7 +2770,6 @@ body {
     --color-red: #fe7968;
     --color-green-rgb: 120, 186, 126;
     --color-green: #78BA7E;
-    --color-green-alt: #93c898;
     --color-orange-rgb: 243, 156, 18;
     --color-orange: #f39c12;
     --color-yellow-rgb: 229, 199, 0;
@@ -2774,7 +2778,6 @@ body {
     --color-cyan: #36d7b7;
     --color-blue-rgb: 3, 138, 255;
     --color-blue: #038aff;
-    --color-blue-alt: #35a1ff;
     --color-purple-rgb: 148, 85, 236;
     --color-purple: #9455ec;
     --color-pink-rgb: 242, 63, 165;
@@ -2872,7 +2875,6 @@ body {
     --color-red: #ff8a78;
     --color-green-rgb: 135, 211, 124;
     --color-green: #87d37c;
-    --color-green-alt: #9fdc96;
     --color-orange-rgb: 250, 190, 88;
     --color-orange: #fabe58;
     --color-yellow-rgb: 255, 236, 139;
@@ -2881,7 +2883,6 @@ body {
     --color-cyan: #86e2d5;
     --color-blue-rgb: 137, 196, 244;
     --color-blue: #89c4f4;
-    --color-blue-alt: #a1d0f6;
     --color-purple-rgb: 198, 158, 255;
     --color-purple: #c69eff;
     --color-pink-rgb: 242, 182, 193;
@@ -3904,7 +3905,7 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
-    transform: translateY(-24px);
+    transform: translateY(-22px);
     opacity: 0;
     transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
@@ -4016,7 +4017,7 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
 }
 
 body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container-inner {
-    transform: translateY(-24px);
+    transform: translateY(-22px);
     opacity: 0;
     transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
@@ -4794,7 +4795,7 @@ body.theme-light:not(.indicator-remove-light) .nav-file-title:not(.recent-files-
     border-radius: 10px;
     background: var(--color-accent);
     transform: translateY(0%);
-    transition: all 0.25s cubic-bezier(1, .1, .36, 1.22);
+    transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
 body.theme-light:not(.indicator-remove-light) .mk-tree-item.nav-folder-title.is-active:before,
@@ -4814,7 +4815,7 @@ body.theme-dark:not(.indicator-remove-dark) .nav-file-title:not(.recent-files-ti
     border-radius: 10px;
     background: var(--color-accent);
     transform: translateY(0%);
-    transition: all 0.25s cubic-bezier(1, .1, .36, 1.22);
+    transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
 body.theme-dark:not(.indicator-remove-dark) .mk-tree-item.nav-folder-title.is-active:before,
@@ -6393,7 +6394,7 @@ body {
     --link-decoration-hover: underline;
     --link-decoration-thickness: auto;
     --link-external-color: var(--color-blue);
-    --link-external-color-hover: var(--color-blue-alt);
+    --link-external-color-hover: var(--color-blue);
     --link-external-decoration: underline;
     --link-external-decoration-hover: underline;
     --link-external-filter: none;
@@ -6402,6 +6403,29 @@ body {
     --link-unresolved-filter: none;
     --link-unresolved-decoration-style: solid;
     --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
+}
+
+@media (hover: hover) {
+
+    .external-link:hover,
+    .cm-s-obsidian span.cm-link:hover,
+    .cm-s-obsidian span.cm-formatting-link.cm-url:hover,
+    .cm-s-obsidian span.cm-url:hover,
+    .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+    .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
+        filter: brightness(1.075);
+    }
+}
+
+@media (hover: hover) {
+
+    .external-link:hover,
+    .cm-s-obsidian span.cm-link:hover,
+    .cm-s-obsidian span.cm-url:hover {
+        border-radius: var(--radius-s);
+        background-color: var(--line-active-bg);
+        transition: background-color var(--anim-duration-moderate) var(--anim-motion-smooth);
+    }
 }
 
 /* ====== tag====== */
@@ -6455,6 +6479,32 @@ body:not(.line-active-disable).line-active-bg-color-customize .markdown-source-v
 body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
     padding-left: var(--size-4-1);
     padding-right: var(--size-4-1);
+}
+
+body:not(.line-hover-indicator-disable) .markdown-source-view .cm-scroller .cm-line:not(:has(.collapse-indicator)):hover::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    width: 3px;
+    height: calc(100% - 6px);
+    border-radius: 10px;
+    background: var(--color-accent);
+}
+
+body:not(.line-hover-indicator-disable) .markdown-preview-sizer>div {
+    position: relative;
+}
+
+body:not(.line-hover-indicator-disable) .markdown-preview-sizer>div:not(.mod-header):not(:has(.collapse-indicator)):hover::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    width: 3px;
+    height: calc(100% - 6px);
+    border-radius: 10px;
+    background: var(--color-accent);
 }
 
 /* ====== 光标颜色 ====== */
@@ -6575,11 +6625,17 @@ body {
     --checkbox-size: var(--font-text-size);
     --checkbox-marker-color: var(--background-primary);
     --checkbox-color: var(--color-green);
-    --checkbox-color-hover: var(--color-green-alt);
+    --checkbox-color-hover: var(--color-green);
     --checkbox-border-color: var(--text-faint);
     --checkbox-border-color-hover: var(--color-green);
     --checklist-done-decoration: line-through;
     --checklist-done-color: var(--text-faint);
+}
+
+@media (hover: hover) {
+    input[type=checkbox]:checked:hover {
+        filter: brightness(1.075);
+    }
 }
 
 input[type=checkbox] {
@@ -6966,6 +7022,12 @@ kbd,
 
 @media (hover: hover) {
     .markdown-rendered button.copy-code-button:hover {
+        background-color: var(--background-modifier-hover);
+    }
+}
+
+@media (hover: hover) {
+    .markdown-source-view.mod-cm6 .code-block-flair:hover {
         background-color: var(--background-modifier-hover);
     }
 }
