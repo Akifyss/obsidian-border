@@ -47,4 +47,7 @@
   + [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
   ![screenshot](img/Lightup.png)
 
+  + [Lightup-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup-alt.json)
+  ![screenshot](img/Lightup-alt.png)
+
 Updating...
