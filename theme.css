@@ -252,12 +252,19 @@ settings:
             -   label: colored
                 value: theme-light-background-adapt
     - 
+        id: Color-light
+        title: Color
+        title.zh: 色彩
+        type: heading
+        collapsed: true
+        level: 3
+    - 
         id: Accent-color-light
         title: Accent color
         title.zh: 强调色
         type: heading
         collapsed: true
-        level: 3
+        level: 4
     - 
         id: accent-color-custom-light
         title: Custom accent color(light mode)
@@ -289,6 +296,69 @@ settings:
         description.zh: 输入0% - 100%的值
         type: variable-text
         default: 64%
+    - 
+        id: Extended-colors-light
+        title: Extended colors
+        title.zh: 拓展色
+        type: heading
+        collapsed: true
+        level: 4
+	- 
+		id: color-red-rgb
+		title: Red
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#fe7968'
+		default-dark: '#ff8a78'
+	- 
+		id: color-orange-rgb
+		title: Orange
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#f39c12'
+		default-dark: '#fabe58'
+	- 
+		id: color-yellow-rgb
+		title: Yellow
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#e5c700'
+		default-dark: '#ffec8b'
+	- 
+		id: color-green-rgb
+		title: Green
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#78BA7E'
+		default-dark: '#87d37c'
+	- 
+		id: color-cyan-rgb
+		title: Cyan
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#36d7b7'
+		default-dark: '#86e2d5'
+	- 
+		id: color-blue-rgb
+		title: Blue
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#038aff'
+		default-dark: '#89c4f4'
+	- 
+		id: color-purple-rgb
+		title: Purple
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#9455ec'
+		default-dark: '#c69eff'
+	- 
+		id: color-pink-rgb
+		title: Pink
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#f23fa5'
+		default-dark: '#f2b6c1'
     - 
         id: Background-light
         title: Background
@@ -949,12 +1019,19 @@ settings:
             -   label: pure black
                 value: theme-dark-background-black
     - 
+        id: Color-dark
+        title: Color
+        title.zh: 色彩
+        type: heading
+        collapsed: true
+        level: 3
+    - 
         id: Accent-color-dark
         title: Accent color
         title.zh: 强调色
         type: heading
         collapsed: true
-        level: 3
+        level: 4
     - 
         id: accent-color-restore
         title: Restore accent color in dark mode
@@ -991,6 +1068,69 @@ settings:
         description.zh: 输入0% - 100%的值
         type: variable-text
         default: 64%
+    - 
+        id: Extended-colors-dark
+        title: Extended colors
+        title.zh: 拓展色
+        type: heading
+        collapsed: true
+        level: 4
+	- 
+		id: color-red-rgb
+		title: Red
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#fe7968'
+		default-dark: '#ff8a78'
+	- 
+		id: color-orange-rgb
+		title: Orange
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#f39c12'
+		default-dark: '#fabe58'
+	- 
+		id: color-yellow-rgb
+		title: Yellow
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#e5c700'
+		default-dark: '#ffec8b'
+	- 
+		id: color-green-rgb
+		title: Green
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#78BA7E'
+		default-dark: '#87d37c'
+	- 
+		id: color-cyan-rgb
+		title: Cyan
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#36d7b7'
+		default-dark: '#86e2d5'
+	- 
+		id: color-blue-rgb
+		title: Blue
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#038aff'
+		default-dark: '#89c4f4'
+	- 
+		id: color-purple-rgb
+		title: Purple
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#9455ec'
+		default-dark: '#c69eff'
+	- 
+		id: color-pink-rgb
+		title: Pink
+		type: variable-themed-color
+        format: 'rgb-values'
+		default-light: '#f23fa5'
+		default-dark: '#f2b6c1'
     - 
         id: Background-dark
         title: Background
@@ -2767,21 +2907,21 @@ body {
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
     --color-red-rgb: 254, 121, 104;
-    --color-red: #fe7968;
+    --color-red: rgb(var(--color-red-rgb));
     --color-green-rgb: 120, 186, 126;
-    --color-green: #78BA7E;
+    --color-green: rgb(var(--color-green-rgb));
     --color-orange-rgb: 243, 156, 18;
-    --color-orange: #f39c12;
+    --color-orange: rgb(var(--color-orange-rgb));
     --color-yellow-rgb: 229, 199, 0;
-    --color-yellow: #e5c700;
+    --color-yellow: rgb(var(--color-yellow-rgb));
     --color-cyan-rgb: 54, 215, 183;
-    --color-cyan: #36d7b7;
+    --color-cyan: rgb(var(--color-cyan-rgb));
     --color-blue-rgb: 3, 138, 255;
-    --color-blue: #038aff;
+    --color-blue: rgb(var(--color-blue-rgb));
     --color-purple-rgb: 148, 85, 236;
-    --color-purple: #9455ec;
+    --color-purple: rgb(var(--color-purple-rgb));
     --color-pink-rgb: 242, 63, 165;
-    --color-pink: #f23fa5;
+    --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
     --color-base-10: #fafafa;
@@ -2872,21 +3012,21 @@ body {
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
     --color-red-rgb: 255, 138, 120;
-    --color-red: #ff8a78;
+    --color-red: rgb(var(--color-red-rgb));
     --color-green-rgb: 135, 211, 124;
-    --color-green: #87d37c;
+    --color-green: rgb(var(--color-green-rgb));
     --color-orange-rgb: 250, 190, 88;
-    --color-orange: #fabe58;
+    --color-orange: rgb(var(--color-orange-rgb));
     --color-yellow-rgb: 255, 236, 139;
-    --color-yellow: #ffec8b;
+    --color-yellow: rgb(var(--color-yellow-rgb));
     --color-cyan-rgb: 134, 226, 213;
-    --color-cyan: #86e2d5;
+    --color-cyan: rgb(var(--color-cyan-rgb));
     --color-blue-rgb: 137, 196, 244;
-    --color-blue: #89c4f4;
+    --color-blue: rgb(var(--color-blue-rgb));
     --color-purple-rgb: 198, 158, 255;
-    --color-purple: #c69eff;
+    --color-purple: rgb(var(--color-purple-rgb));
     --color-pink-rgb: 242, 182, 193;
-    --color-pink: #f2b6c1;
+    --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #1e1e1e;
     --color-base-10: #242424;
     --color-base-15: #252525;
@@ -7652,6 +7792,9 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-left: var(--size-4-2);
 }
 
+
+.setting-item.style-settings-heading[data-id=Extended-colors-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
+.setting-item.style-settings-heading[data-id=Extended-colors-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light,
 .setting-item.style-settings-heading[data-id=Global-background-header-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
 .setting-item.style-settings-heading[data-id=Global-background-header-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light {
     display: none;
