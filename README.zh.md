@@ -76,6 +76,10 @@
 
 ![screenshot](img/Checkboxes.png)
 
-#### 多彩文件夹图标
+#### 新图标和插画
 
 ![screenshot](img/colorful-icon.png)
+
+#### 活动行高亮和悬停行指示器
+
+![screenshot](img/line.gif)

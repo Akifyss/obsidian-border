@@ -76,9 +76,13 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ![screenshot](img/Checkboxes.png)
 
-#### Colorful folder icon
+#### New icons and illustrations
 
 ![screenshot](img/colorful-icon.png)
+
+#### Active line highlight and hovered line indicator
+
+![screenshot](img/line.gif)
 
 ## Credits
 

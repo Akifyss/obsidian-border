@@ -6405,26 +6405,16 @@ body {
     --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
 }
 
-@media (hover: hover) {
-
-    .external-link:hover,
-    .cm-s-obsidian span.cm-link:hover,
-    .cm-s-obsidian span.cm-formatting-link.cm-url:hover,
-    .cm-s-obsidian span.cm-url:hover,
-    .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
-    .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
-        filter: brightness(1.075);
-    }
-}
 
 @media (hover: hover) {
 
+    a:hover,
+    .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-internal-link:hover,
     .external-link:hover,
-    .cm-s-obsidian span.cm-link:hover,
-    .cm-s-obsidian span.cm-url:hover {
+    .cm-s-obsidian .cm-line:not(.cm-active) span:is(.cm-link, .cm-url):hover {
         border-radius: var(--radius-s);
-        background-color: var(--line-active-bg);
-        transition: background-color var(--anim-duration-moderate) var(--anim-motion-smooth);
+        background-color: var(--background-modifier-hover);
+        transition: background-color var(--anim-duration-fast) var(--anim-motion-smooth);
     }
 }
 
@@ -6481,30 +6471,32 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
     padding-right: var(--size-4-1);
 }
 
-body:not(.line-hover-indicator-disable) .markdown-source-view .cm-scroller .cm-line:not(:has(.collapse-indicator)):hover::after {
-    content: "";
-    position: absolute;
-    left: -16px;
-    top: 3px;
-    width: 3px;
-    height: calc(100% - 6px);
-    border-radius: 10px;
-    background: var(--color-accent);
-}
-
-body:not(.line-hover-indicator-disable) .markdown-preview-sizer>div {
+/* ====== hover indicator ====== */
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div {
     position: relative;
 }
 
-body:not(.line-hover-indicator-disable) .markdown-preview-sizer>div:not(.mod-header):not(:has(.collapse-indicator)):hover::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.collapse-indicator))::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator))::after {
     content: "";
     position: absolute;
-    left: -16px;
+    left: -12px;
     top: 3px;
     width: 3px;
-    height: calc(100% - 6px);
+    height: 0;
     border-radius: 10px;
     background: var(--color-accent);
+    opacity: 1;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.collapse-indicator)):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator)):hover::after {
+    height: calc(100% - 6px);
 }
 
 /* ====== 光标颜色 ====== */
@@ -6639,7 +6631,7 @@ body {
 }
 
 input[type=checkbox] {
-    transition: box-shadow var(--anim-duration-moderate) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-duration-moderate) var(--anim-motion-swing), filter var(--anim-duration-moderate) var(--anim-motion-smooth);
     cursor: pointer;
 }
 
@@ -7066,8 +7058,8 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 /* ======table ====== */
 body {
     --table-header-background: transparent;
-    --table-header-background-hover: var(--line-active-bg);
-    --table-row-background-hover: var(--line-active-bg);
+    --table-header-background-hover: var(--background-modifier-hover);
+    --table-row-background-hover: var(--background-modifier-hover);
     --table-header-weight: var(--font-semibold);
     --table-header-color: var(--color-accent-3);
     --table-width: 88cqw;
