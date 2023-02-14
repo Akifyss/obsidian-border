@@ -1,9 +1,7 @@
 {
   "Appearance-light@@card-layout-open-light": true,
   "Appearance-light@@accent-color-custom-light": true,
-  "Appearance-light@@accent-h-light": 32,
-  "Appearance-light@@accent-s-light": "64%",
-  "Appearance-light@@accent-l-light": "50%",
+  "Appearance-light@@accent-light": "#d1852e",
   "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-transparent-light",
   "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-transparent-light",
   "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-transparent-light",

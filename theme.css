@@ -261,7 +261,7 @@ settings:
     - 
         id: Accent-color-light
         title: Accent color
-        title.zh: 强调色
+        title.zh: 主题色
         type: heading
         collapsed: true
         level: 4
@@ -273,29 +273,13 @@ settings:
         description.zh: 分开来设置亮色模式与暗色模式的强调色
         type: class-toggle
     - 
-        id: accent-h-light
-        title: Hue(light mode)
-        title.zh: 色调（亮色模式）
-        description: Input a value of 0 - 360
-        description.zh: 输入0 - 360的值
-        type: variable-number
-        default: 232
-    - 
-        id: accent-s-light
-        title: Saturation(light mode)
-        title.zh: 饱和度（亮色模式）
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 80%
-    - 
-        id: accent-l-light
-        title: Lightness(light mode)
-        title.zh: 亮度（亮色模式）
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 64%
+        id: accent-light
+        title: Accent color(light mode)
+        title.zh: 主题色（暗色模式）
+        type: variable-color
+        format: hsl-split
+        opacity: false
+        default: '#5a6ded'
     - 
         id: Extended-colors-light
         title: Extended colors
@@ -1028,14 +1012,16 @@ settings:
     - 
         id: Accent-color-dark
         title: Accent color
-        title.zh: 强调色
+        title.zh: 主题色
         type: heading
         collapsed: true
         level: 4
     - 
         id: accent-color-restore
         title: Restore accent color in dark mode
-        title.zh: 还原暗色模式下的强调色
+        title.zh: 还原暗色模式下的主题色
+        description: By default, accent color is optimized for dark mode, do you want to restore it to the original color?
+        description.zh: 默认情况下，主题色针对暗色模式做了优化，是否将其恢复至原本的颜色？
         type: class-toggle
     - 
         id: accent-color-custom-dark
@@ -1045,29 +1031,13 @@ settings:
         description.zh: 分开来设置亮色模式与暗色模式的强调色
         type: class-toggle
     - 
-        id: accent-h-dark
-        title: Hue(dark mode)
-        title.zh: 色调（暗色模式）
-        description: Input a value of 0 - 360
-        description.zh: 输入0 - 360的值
-        type: variable-number
-        default: 232
-    - 
-        id: accent-s-dark
-        title: Saturation(dark mode)
-        title.zh: 饱和度（暗色模式）
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 80%
-    - 
-        id: accent-l-dark
-        title: Lightness(dark mode)
-        title.zh: 亮度（暗色模式）
-        description: Input a value of 0% - 100%
-        description.zh: 输入0% - 100%的值
-        type: variable-text
-        default: 64%
+        id: accent-dark
+        title: Accent color(dark mode)
+        title.zh: 主题色（暗色模式）
+        type: variable-color
+        format: hsl-split
+        opacity: false
+        default: '#5a6ded'
     - 
         id: Extended-colors-dark
         title: Extended colors
@@ -2773,14 +2743,8 @@ body.activated-file-tab-style-dark .setting-item[data-id=border-radius-activated
 body.activated-file-tab-style-dark .setting-item[data-id=color-to-file-icon-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=background-activated-file-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-dark],
-body:not(.accent-color-custom-light) .setting-item[data-id=accent-color-light],
-body:not(.accent-color-custom-light) .setting-item[data-id=accent-h-light],
-body:not(.accent-color-custom-light) .setting-item[data-id=accent-s-light],
-body:not(.accent-color-custom-light) .setting-item[data-id=accent-l-light],
-body:not(.accent-color-custom-dark) .setting-item[data-id=accent-color-dark],
-body:not(.accent-color-custom-dark) .setting-item[data-id=accent-h-dark],
-body:not(.accent-color-custom-dark) .setting-item[data-id=accent-s-dark],
-body:not(.accent-color-custom-dark) .setting-item[data-id=accent-l-dark],
+body:not(.accent-color-custom-light) .setting-item[data-id=accent-light],
+body:not(.accent-color-custom-dark) .setting-item[data-id=accent-dark],
 body.table-width-default .setting-item[data-id=table-width],
 body.table-width-obsidian-default .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item[data-id=colorful-folder],
@@ -2864,41 +2828,25 @@ body {
     --status-bar-text-color: var(--on-border-dark);
 }
 
-/* color accent customize*/
-.theme-light {
-    --accent-h-light: 232;
-    --accent-s-light: 80%;
-    --accent-l-light: 64%;
-}
-
-.theme-dark {
-    --accent-h-dark: 232;
-    --accent-s-dark: 80%;
-    --accent-l-dark: 64%;
-}
-
 .theme-light.accent-color-custom-light {
-    --accent-h: var(--accent-h-light) !important;
-    --accent-s: var(--accent-s-light) !important;
-    --accent-l: var(--accent-l-light) !important;
+    --accent-h: var(--accent-light-h) !important;
+    --accent-s: var(--accent-light-s) !important;
+    --accent-l: var(--accent-light-l) !important;
 }
 
 .theme-dark.accent-color-custom-dark {
-    --accent-h: var(--accent-h-dark) !important;
-    --accent-s: var(--accent-s-dark) !important;
-    --accent-l: var(--accent-l-dark) !important;
-}
-
-.theme-dark:not(.accent-color-restore) {
-    --color-accent-hsl: var(--accent-h),
-        calc(var(--accent-s)*0.8),
-        calc(var(--accent-l) * 1.125);
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
+    --accent-h: var(--accent-dark-h) !important;
+    --accent-s: var(--accent-dark-s) !important;
+    --accent-l: var(--accent-dark-l) !important;
 }
 
 .theme-light {
+    --accent-h: 232;
+    --accent-s: 80%;
+    --accent-l: 64%;
+    --accent-light-h: 232;
+    --accent-light-s: 80%;
+    --accent-light-l: 64%;
     color-scheme: light;
     --text-normal: hsl(var(--accent-h), 12%, 12%);
     --text-muted: hsl(var(--accent-h), 9%, 36%);
@@ -3003,7 +2951,22 @@ body {
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
 }
 
+.theme-dark:not(.accent-color-restore) {
+    --color-accent-hsl: var(--accent-h),
+        calc(var(--accent-s)*0.8),
+        calc(var(--accent-l) * 1.125);
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
+}
+
 .theme-dark {
+    --accent-h: 232;
+    --accent-s: 80%;
+    --accent-l: 64%;
+    --accent-dark-h: 232;
+    --accent-dark-s: 80%;
+    --accent-dark-l: 64%;
     color-scheme: dark;
     --text-normal: hsl(var(--accent-h), 24%, 84%);
     --text-muted: hsl(var(--accent-h), 18%, 72%);
@@ -6612,13 +6575,13 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 }
 
 /* ====== hover indicator ====== */
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed),
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div {
     position: relative;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.collapse-indicator))::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):has(.cm-hmd-list-indent)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):not(:has(.collapse-indicator))::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator))::after {
     content: "";
@@ -6632,8 +6595,8 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     opacity: 1;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.collapse-indicator)):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):has(.cm-hmd-list-indent):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):not(:has(.collapse-indicator)):hover::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator)):hover::after {
     height: calc(100% - 6px);
@@ -7248,6 +7211,18 @@ body.table-width-customized :is(.markdown-rendered, .markdown-source-view.mod-cm
 /* ===== image ====== */
 /* image zoom */
 /* from https://github.com/kepano/obsidian-minimal, author:@kepano */
+
+.image-embed.is-loaded {
+    line-height: 0
+}
+
+.image-embed.is-loaded img {
+    background-color: transparent
+}
+
+.image-embed.is-loaded img:active {
+    background-color: transparent
+}
 
 body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
     max-width: 100%;

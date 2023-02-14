@@ -13,7 +13,7 @@
 ![screenshot](img/screenshot.gif)
 
 在[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件中启用。
-(此特性需要 [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) 或更高版本)
+(此特性需要 [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) 或更高版本，可能需要在[这里](https://obsidian.md/download)重新下载安装)
 
 ### 卡片式布局
 
@@ -83,3 +83,5 @@
 #### 活动行高亮和悬停行指示器
 
 ![screenshot](img/line.gif)
+
+(此特性需要 [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) 或更高版本，可能需要在[这里](https://obsidian.md/download)重新下载安装)

@@ -13,7 +13,7 @@ A clean and highly customisable theme for obsidian, recommended for use with [st
 ![screenshot](img/screenshot.gif)
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
-(This feature requires [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher)
+(This feature may require [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher, which may need to be **re-downloaded and installed** [here](https://obsidian.md/download).)
 
 ### Card layout
 
@@ -83,6 +83,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 #### Active line highlight and hovered line indicator
 
 ![screenshot](img/line.gif)
+
+(This feature may require [Obsidian 1.1.8 - Electron 21](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21) or higher, which may need to be **re-downloaded and installed** [here](https://obsidian.md/download).)
 
 ## Credits
 
