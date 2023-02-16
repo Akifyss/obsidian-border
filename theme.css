@@ -119,6 +119,69 @@ settings:
             -   label: autohide
                 value: tab-title-bar-autohide
     - 
+        id: Graph-view
+        title: Graph view
+        title.zh: 关系图谱
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: graph-text
+		title: graph-text color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-line
+		title: graph-line color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-node
+		title: graph-node color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-node-unresolved
+		title: graph-node-unresolved color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-node-focused
+		title: graph-node-focused color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-node-tag
+		title: graph-node-tag color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: graph-node-attachment
+		title: graph-node-attachment color
+		type: variable-themed-color
+		opacity: true
+        format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: Canvas
         title: Canvas
         title.zh: 白板
@@ -237,8 +300,8 @@ id: Appearance-light
 settings:
     - 
         id: Presets-info-light
-        description: "🎨 [Appearance presets (light mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode)"
-        description.zh: "🎨 [外观预设 （亮色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) "
+        description: "🎨 [Appearance presets (light mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) Before importing, it is recommended to reset this entry to default↗️"
+        description.zh: "🎨 [外观预设 （亮色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) 导入前，推荐先将此条目重设为默认↗️ "
         type: info-text
         markdown: true
     - 
@@ -984,8 +1047,8 @@ id: Appearance-dark
 settings:
     - 
         id: Presets-info-dark
-        description: "🎨 [Appearance presets (dark mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode)"
-        description.zh: "🎨 [外观预设 （暗色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) "
+        description: "🎨 [Appearance presets (dark mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) Before importing, it is recommended to reset this entry to default↗️"
+        description.zh: "🎨 [外观预设 （暗色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) 导入前，推荐先将此条目重设为默认↗️ "
         type: info-text
         markdown: true
     - 
@@ -5928,6 +5991,12 @@ body:not(.inline-title-divider-remove) .inline-title {
     margin-bottom: var(--size-4-3);
 }
 
+body:not(.inline-title-divider-remove) .mk-folder-header .inline-title,
+body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
+    border-bottom: unset;
+    margin-bottom: unset;
+}
+
 .embedded-backlinks {
     border-top: 1px solid var(--divider-color);
 }
@@ -6518,7 +6587,7 @@ body {
 
 @media (hover: hover) {
 
-    a:not(.tag):hover,
+    a:not(.tag):not(.raindrop-tag):hover,
     .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-internal-link:hover,
     .external-link:hover,
     .cm-s-obsidian .cm-line:not(.cm-active) span:is(.cm-link, .cm-url):hover {
@@ -6559,13 +6628,9 @@ body {
     --line-active-bg-customize: rgba(0, 0, 0, 0.035);
 }
 
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active {
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container)) {
     background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:has(.mk-floweditor-container) {
-    background-color: transparent;
 }
 
 body:not(.line-active-disable).line-active-bg-color-accent .markdown-source-view .cm-scroller .cm-line.cm-active {
@@ -6582,15 +6647,15 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 }
 
 /* ====== hover indicator ====== */
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed),
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image) {
     position: relative;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):not(:has(.collapse-indicator))::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image):not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator))::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -6602,10 +6667,10 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     opacity: 1;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:has(.cm-hmd-list-indent):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed):not(:has(.collapse-indicator)):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image):not(.mod-header):not(.mod-footer):not(:has(.collapse-indicator)):hover::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator)):hover::after {
     height: calc(100% - 6px);
 }
 
@@ -7219,7 +7284,8 @@ body.table-width-customized :is(.markdown-rendered, .markdown-source-view.mod-cm
 
 /*  image hover effect */
 @media (hover: hover) {
-    body .view-content div:not(.canvas-node-content) img:hover {
+
+    .workspace-leaf-content[data-type="markdown"] .view-content .image-embed img:hover {
         outline-offset: 1px;
         outline: 2px solid var(--background-modifier-border-hover);
         border-radius: var(--radius-s);
@@ -7539,6 +7605,11 @@ svg.pane-layout,
 .side-dock-ribbon-action svg.lucide-send {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M20.56,3.34c-.14-.1-.31-.16-.48-.17-.17-.01-.35,.02-.5,.09L2.57,11.26c-.17,.08-.32,.21-.42,.38-.1,.16-.15,.35-.15,.54,0,.19,.06,.38,.17,.54,.11,.16,.26,.29,.43,.36l5.4,2.36v6.72l5.84-4.17,4.76,2.08c.15,.06,.31,.09,.47,.08s.32-.06,.45-.14c.14-.08,.25-.2,.34-.34,.08-.14,.13-.29,.14-.45l1-15c.01-.17-.02-.35-.1-.5-.08-.16-.19-.29-.34-.39h0Zm-2.47,14.34l-5.27-2.31,3.17-6.21-7.65,4.25-2.93-1.28,13.47-6.34-.79,11.89h0Z"/></svg>');
+}
+
+.side-dock-ribbon-action svg.read-it-later {
+    background-color: currentColor;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="24" height="24"/><path d="M19,3c.53,0,1.04,.21,1.41,.59,.38,.38,.59,.88,.59,1.41v14c0,.53-.21,1.04-.59,1.41-.38,.38-.88,.59-1.41,.59H5c-.53,0-1.04-.21-1.41-.59-.38-.38-.59-.88-.59-1.41V5c0-.53,.21-1.04,.59-1.41,.38-.38,.88-.59,1.41-.59h4.18c.42-1.16,1.52-2,2.82-2s2.4,.84,2.82,2h4.18Zm-7,0c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29c.19-.19,.29-.44,.29-.71s-.11-.52-.29-.71c-.19-.19-.44-.29-.71-.29ZM7,7v-2h-2v14h14V5h-2v2H7Zm5,11l-5-5h3v-4h4v4h3l-5,5Z"/></svg>');
 }
 
 
