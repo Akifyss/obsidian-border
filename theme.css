@@ -4855,6 +4855,15 @@ body.canvas-card-menu-right .canvas-card-menu {
     border: 1px solid var(--background-modifier-border);
 }
 
+/* hover effect*/
+@media (hover: hover) {
+    .canvas-node:hover {
+        outline-offset: 4px;
+        outline: 4px solid var(--background-modifier-border-hover);
+        border-radius: var(--radius-m);
+    }
+}
+
 /* graph view*/
 .graph-controls {
     right: var(--size-4-2);
@@ -5679,7 +5688,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     background-color: var(--background-secondary);
 }
 
-/* ====== UI controls====== */
+/* ====== UI components====== */
 .theme-light {
     --toggle-thumb-color: var(--toggle-thumb-color-light);
     --toggle-thumb-enabled-color: var(--toggle-thumb-enabled-color-light);
@@ -5876,7 +5885,7 @@ body {
 }
 
 
-/* UI container */
+/* container */
 .modal.mod-canvas-help,
 .suggestion-container,
 .popover,
@@ -5910,6 +5919,29 @@ body {
 
 input.prompt-input {
     background-color: transparent !important;
+}
+
+/* notice */
+.notice-container {
+    top: 34px;
+    padding-right: 16px;
+}
+
+body.tab-autohide .notice-container {
+    top: 6px;
+}
+
+/* tooltip */
+
+.tooltip {
+    transition: none;
+    animation: none;
+}
+
+.tooltip.mod-left,
+.tooltip.mod-right {
+    transform: none;
+    animation: none
 }
 
 /* ====== editor ====== */
