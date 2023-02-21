@@ -8,7 +8,7 @@ A clean and highly customisable theme for obsidian, recommended for use with [st
 
 ## Feature
 
-> **⚠️ Note**: Many features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“
+> **⚠️ Note**: Some features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“
 > <img src="img/version-1.png">
 
 ### Auto hide
