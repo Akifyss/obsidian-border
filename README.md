@@ -90,6 +90,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ![screenshot](img/line.gif)
 
+Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+
 **Note**: This feature requires your **installer** version(not APP current version) > [v1.1.8](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21). If not, you can download and re-install obsidian [here](https://obsidian.md/download). Check **installer** version in "Settings-About-APP":
 
 <details>
