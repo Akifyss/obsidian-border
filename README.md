@@ -8,18 +8,16 @@ A clean and highly customisable theme for obsidian, recommended for use with [st
 
 ## Feature
 
+> **⚠️ Note**: Many features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“
+> <img src="img/version-1.png">
+
 ### Auto hide
 
 ![screenshot](img/screenshot.gif)
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-**Note**: This feature requires your **installer** version(not APP current version) > [v1.1.8](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21). If not, you can download and re-install obsidian [here](https://obsidian.md/download). Check **installer** version in "Settings-About-APP":
-
-<details>
-<summary></summary>
-<img src="img/version-1.png">
-</details>
+Require your **installer** version(not APP current version) > v1.1.8
 
 ### Card layout
 
@@ -92,12 +90,7 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-**Note**: This feature requires your **installer** version(not APP current version) > [v1.1.8](https://github.com/obsidianmd/obsidian-releases/releases/tag/v1.1.8-E21). If not, you can download and re-install obsidian [here](https://obsidian.md/download). Check **installer** version in "Settings-About-APP":
-
-<details>
-<summary></summary>
-<img src="img/version-1.png">
-</details>
+Require your **installer** version(not APP current version) > v1.1.8
 
 ## Credits
 

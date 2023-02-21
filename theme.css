@@ -1,5 +1,19 @@
 /* @settings
 
+name: Theme Info
+id: Info
+settings:
+    - 
+        id: Extras-info
+        description: "**⚠️ Note**: Many features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“ <br> <br> 🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 Submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
+        description.zh: "**⚠️ 注意**：此主题的许多功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本  <br> <br> 🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
+        type: info-text
+        markdown: true
+*/
+
+
+/* @settings
+
 name: Components
 id: Components
 settings:
@@ -2677,18 +2691,6 @@ settings:
 
 */
 
-/* @settings
-
-name: Extras
-id: Extras
-settings:
-    - 
-        id: Extras-info
-        description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 Submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github <br> <br> ⭐ [Star](https://github.com/Akifyss/obsidian-border)this theme on Github"
-        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions) <br> <br> ⭐ 在Github上 [Star](https://github.com/Akifyss/obsidian-border)这个主题"
-        type: info-text
-        markdown: true
-*/
 
 /*hide style setting option*/
 body.line-active-disable .setting-item[data-id=line-active-bg-color],
@@ -5032,6 +5034,10 @@ body:not(.new-tab-text-btn-restore) .empty-state-action-list {
     gap: 48px;
     position: absolute;
     bottom: 17.5%;
+}
+
+body:not(.new-tab-text-btn-restore) .workspace-split:not(.mod-root) .empty-state-action-list {
+    gap: 32px;
 }
 
 body:not(.new-tab-text-btn-restore) .empty-state-action {
@@ -8088,8 +8094,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-left: var(--size-4-2);
 }
 
-.setting-item.style-settings-heading[data-id=Extras] .style-settings-collapse-indicator::after {
-    content: "\1F308";
+.setting-item.style-settings-heading[data-id=Info] .style-settings-collapse-indicator::after {
+    content: "\2139";
     margin-left: var(--size-4-2);
 }
 
