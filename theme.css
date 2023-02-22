@@ -140,14 +140,21 @@ settings:
         collapsed: true
         level: 3
     - 
-        id: new-tab-text-btn-restore
-        title: restore text buttons in new tab
-        title.zh: 还原新标签页的文字按钮
-        type: class-toggle
+        id: new-tab-btn-select
+        title: New tab buttons
+        title.zh: 新标签页 按钮
+        type: class-select
+        allowEmpty: false
+        default: new-tab-btn-default
+        options:
+            -   label: text buttons (obsidian default)
+                value: new-tab-text-btn-restore
+            -   label: default
+                value: new-tab-btn-default
     - 
         id: new-tab-image-select
         title: New tab image
-        title.zh: 新标签页图像
+        title.zh: 新标签页 图像
         type: class-select
         allowEmpty: false
         default: new-tab-image-default
@@ -1035,7 +1042,7 @@ settings:
         description: background color of toggle thumb(enabled)
         description.zh: 开关滑块的背景色（开启时）
         type: variable-text
-        default: var(--background-primary)
+        default: white
     - 
         id: toggle-thumb-shadow-light
         title: toggle-thumb-shadow(light mode)
@@ -1043,7 +1050,7 @@ settings:
         description: shadow of toggle thumb
         description.zh: 开关滑块的阴影
         type: variable-text
-        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1)
     - 
         id: toggle-thumb-enabled-shadow-light
         title: toggle-thumb-enabled-shadow(light mode)
@@ -1051,7 +1058,7 @@ settings:
         description: background shadow of toggle thumb(enabled)
         description.zh: 开关滑块的阴影（开启时）
         type: variable-text
-        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1)
 
     - 
         id: toggle-track-color-light
@@ -1076,7 +1083,7 @@ settings:
         description: shadow of toggle track
         description.zh: 开关滑轨的阴影
         type: variable-text
-        default: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: toggle-track-hovered-shadow-light
         title: toggle-track-hovered-shadow(light mode)
@@ -1084,7 +1091,7 @@ settings:
         description: background shadow of toggle track(hovered)
         description.zh: 开关滑轨的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25)
 
 */
 
@@ -1793,7 +1800,7 @@ settings:
         description: background color of toggle thumb(enabled)
         description.zh: 开关滑块的背景色（开启时）
         type: variable-text
-        default: var(--background-primary)
+        default: white
     - 
         id: toggle-thumb-shadow-dark
         title: toggle-thumb-shadow(dark mode)
@@ -1801,7 +1808,7 @@ settings:
         description: shadow of toggle thumb
         description.zh: 开关滑块的阴影
         type: variable-text
-        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.2)
     - 
         id: toggle-thumb-enabled-shadow-dark
         title: toggle-thumb-enabled-shadow(dark mode)
@@ -1809,7 +1816,7 @@ settings:
         description: background shadow of toggle thumb(enabled)
         description.zh: 开关滑块的阴影（开启时）
         type: variable-text
-        default: 0 4px 4px rgba(0, 0, 0, 0.08)
+        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.2)
 
     - 
         id: toggle-track-color-dark
@@ -1834,7 +1841,7 @@ settings:
         description: shadow of toggle track
         description.zh: 开关滑轨的阴影
         type: variable-text
-        default: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21)
+        default: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border)
     - 
         id: toggle-track-hovered-shadow-dark
         title: toggle-track-hovered-shadow(dark mode)
@@ -1842,7 +1849,7 @@ settings:
         description: background shadow of toggle track(hovered)
         description.zh: 开关滑轨的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28)
+        default: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border)
 
 */
 
@@ -5031,14 +5038,18 @@ body.canvas-card-menu-right .canvas-card-menu {
 /*====== new tab ======*/
 body:not(.new-tab-text-btn-restore) .empty-state-action-list {
     display: flex;
-    gap: 48px;
-    position: absolute;
-    bottom: 23.5%;
-    transform: translateY(16px);
+    gap: 0px;
+    border-radius: var(--radius-s);
+    box-shadow: var(--input-shadow);
+    overflow: hidden;
 }
 
-body:not(.new-tab-text-btn-restore) .workspace-split:not(.mod-root) .empty-state-action-list {
-    gap: 32px;
+body:not(.new-tab-text-btn-restore).is-mobile.theme-light .empty-state-action-list {
+    box-shadow: var(--input-shadow-light);
+}
+
+body:not(.new-tab-text-btn-restore).is-mobile.theme-dark .empty-state-action-list {
+    box-shadow: var(--input-shadow-dark);
 }
 
 body:not(.new-tab-text-btn-restore) .empty-state-action {
@@ -5046,16 +5057,32 @@ body:not(.new-tab-text-btn-restore) .empty-state-action {
     background-color: transparent !important;
     color: var(--text-muted);
     cursor: var(--cursor);
-    height: 32px;
-    width: 32px;
-    padding: 6px;
-    box-shadow: unset !important;
-    border-radius: var(--radius-s);
+    height: 40px;
+    width: 44px;
+    padding: 10px 12px;
+    border-radius: 0;
+}
+
+body.is-mobile:not(.new-tab-text-btn-restore) .empty-state-action {
+    height: 44px;
+    width: 46px;
+    padding: 10px 12px;
+    margin: 0;
+}
+
+body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(1),
+body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(2) {
+    box-shadow: inset -1px 0px 0px var(--background-modifier-border);
 }
 
 body:not(.new-tab-text-btn-restore) .empty-state-action:hover {
     background-color: var(--background-modifier-hover) !important;
     color: var(--text-normal);
+}
+
+body.is-mobile:not(.new-tab-text-btn-restore) .empty-state-action:before {
+    height: 24px !important;
+    width: 24px !important;
 }
 
 body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(1):before {
@@ -5076,7 +5103,6 @@ body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(2):before {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:none;}</style></defs><g><path d="M17.26,5.66L12.67,1.08c-.16-.16-.37-.24-.59-.24H5c-1.38,0-2.5,1.12-2.5,2.5v2.5c0,.46,.37,.83,.83,.83s.83-.37,.83-.83V3.33c0-.46,.37-.83,.83-.83h5.83V6.67c0,.46,.37,.83,.83,.83h4.17v9.17c0,.46-.37,.83-.83,.83H3.33c-.46,0-.83,.37-.83,.83s.37,.83,.83,.83H15c1.38,0,2.5-1.12,2.5-2.5V6.25c0-.22-.09-.43-.24-.59Zm-4.76-2.4l2.57,2.57h-2.57V3.26Z"/><path d="M5.85,14.53l1.06,1.06c.16,.16,.38,.24,.59,.24s.43-.08,.59-.24c.33-.33,.33-.85,0-1.18l-1.06-1.06c.29-.5,.47-1.07,.47-1.68,0-1.84-1.5-3.33-3.33-3.33s-3.33,1.49-3.33,3.33,1.5,3.33,3.33,3.33c.62,0,1.19-.18,1.68-.47Zm-3.35-2.86c0-.92,.75-1.67,1.67-1.67s1.67,.75,1.67,1.67-.75,1.67-1.67,1.67-1.67-.75-1.67-1.67Z"/></g><rect class="cls-1" width="20" height="20"/></svg>');
 }
 
-
 body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(3) {
     display: none;
 }
@@ -5088,14 +5114,6 @@ body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(4):before {
     width: 20px;
     background-color: var(--color-accent-3);
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:none;}</style></defs><path d="M11.18,10l5.24-5.24c.33-.33,.33-.85,0-1.18s-.85-.33-1.18,0l-5.24,5.24L4.76,3.58c-.33-.33-.85-.33-1.18,0s-.33,.85,0,1.18l5.24,5.24L3.58,15.24c-.33,.33-.33,.85,0,1.18,.16,.16,.38,.24,.59,.24s.43-.08,.59-.24l5.24-5.24,5.24,5.24c.16,.16,.38,.24,.59,.24s.43-.08,.59-.24c.33-.33,.33-.85,0-1.18l-5.24-5.24Z"/><rect class="cls-1" width="20" height="20"/></svg>');
-}
-
-body:not(.new-tab-text-btn-restore) .empty-state-container {
-    margin: 0px;
-}
-
-body:not(.new-tab-text-btn-restore) .empty-state::before {
-    transform: translateY(-40%);
 }
 
 /*new tab image*/
@@ -5145,7 +5163,6 @@ body.new-tab-image-customize .empty-state::before {
     justify-content: center;
     flex-direction: column;
     max-height: 100%;
-    margin: 8px;
 }
 
 .empty-state-title {
@@ -5879,12 +5896,12 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-thumb-color: var(--toggle-thumb-color-light);
     --toggle-thumb-enabled-color: var(--toggle-thumb-enabled-color-light);
     --toggle-thumb-color-light: white;
-    --toggle-thumb-enabled-color-light: var(--background-primary);
+    --toggle-thumb-enabled-color-light: white;
 
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-light);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-light);
-    --toggle-thumb-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.08);
-    --toggle-thumb-enabled-shadow-light: 0 4px 4px rgba(0, 0, 0, 0.08);
+    --toggle-thumb-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+    --toggle-thumb-enabled-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
 
     --toggle-track-color: var(--toggle-track-color-light);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-light);
@@ -5893,8 +5910,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
     --toggle-track-shadow: var(--toggle-track-shadow-light);
     --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-light);
-    --toggle-track-shadow-light: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21);
-    --toggle-track-hovered-shadow-light: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28);
+    --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
 
     --interactive-normal: var(--interactive-normal-light);
     --interactive-hover: var(--interactive-hover-light);
@@ -5919,12 +5936,12 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-thumb-color: var(--toggle-thumb-color-dark);
     --toggle-thumb-enabled-color: var(--toggle-thumb-enabled-color-dark);
     --toggle-thumb-color-dark: white;
-    --toggle-thumb-enabled-color-dark: var(--background-primary);
+    --toggle-thumb-enabled-color-dark: white;
 
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-dark);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-dark);
-    --toggle-thumb-shadow-dark: 0 4px 4px rgba(0, 0, 0, 0.08);
-    --toggle-thumb-enabled-shadow-dark: 0 4px 4px rgba(0, 0, 0, 0.08);
+    --toggle-thumb-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.2);
+    --toggle-thumb-enabled-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.2);
 
     --toggle-track-color: var(--toggle-track-color-dark);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-dark);
@@ -5933,8 +5950,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
     --toggle-track-shadow: var(--toggle-track-shadow-dark);
     --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-dark);
-    --toggle-track-shadow-dark: inset 0 4px 10px rgba(0, 0, 0, 0.07), inset 0 0 1px rgba(0, 0, 0, 0.21);
-    --toggle-track-hovered-shadow-dark: inset 0 6px 20px rgba(0, 0, 0, 0.14), inset 0 0 1px rgba(0, 0, 0, 0.28);
+    --toggle-track-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
+    --toggle-track-hovered-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
 
     --interactive-normal: var(--interactive-normal-dark);
     --interactive-hover: var(--interactive-hover-dark);
@@ -5975,6 +5992,30 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 .theme-dark.is-mobile {
     --input-shadow: none;
     --input-shadow-hover: none;
+}
+
+/* Range slider */
+input[type='range']::-webkit-slider-thumb {
+    box-shadow: var(--toggle-thumb-shadow);
+    transition: none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: var(--toggle-thumb-shadow);
+    outline-offset: 2px;
+    outline: 2px solid var(--background-modifier-border-hover);
+    transition: none;
+    border-color: var(--slider-thumb-border-color);
+}
+
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
+body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
+    box-shadow: var(--toggle-thumb-shadow);
+    outline-offset: 2px;
+    outline: 2px solid var(--background-modifier-border-focus);
+    transition: none;
+    border-color: var(--slider-thumb-border-color);
 }
 
 /*input*/
