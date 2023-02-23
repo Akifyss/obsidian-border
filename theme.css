@@ -1058,7 +1058,7 @@ settings:
         description: background shadow of toggle thumb(enabled)
         description.zh: 开关滑块的阴影（开启时）
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1)
+        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3)
 
     - 
         id: toggle-track-color-light
@@ -1808,7 +1808,7 @@ settings:
         description: shadow of toggle thumb
         description.zh: 开关滑块的阴影
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.3), inset 0px 4px 4px #FFFFFF
+        default: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.25), inset 0px 4px 4px #FFFFFF
     - 
         id: toggle-thumb-enabled-shadow-dark
         title: toggle-thumb-enabled-shadow(dark mode)
@@ -1816,7 +1816,7 @@ settings:
         description: background shadow of toggle thumb(enabled)
         description.zh: 开关滑块的阴影（开启时）
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.3), inset 0px 4px 4px #FFFFFF
+        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5), inset 0px 4px 4px #FFFFFF
 
     - 
         id: toggle-track-color-dark
@@ -5825,7 +5825,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-light);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-light);
     --toggle-thumb-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
-    --toggle-thumb-enabled-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+    --toggle-thumb-enabled-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3);
 
     --toggle-track-color: var(--toggle-track-color-light);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-light);
@@ -5860,8 +5860,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-dark);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-dark);
-    --toggle-thumb-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.3), inset 0px 4px 4px #FFFFFF;
-    --toggle-thumb-enabled-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.3), inset 0px 4px 4px #FFFFFF;
+    --toggle-thumb-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.25), inset 0px 4px 4px #FFFFFF;
+    --toggle-thumb-enabled-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5), inset 0px 4px 4px #FFFFFF;
 
     --toggle-track-color: var(--toggle-track-color-dark);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-dark);
