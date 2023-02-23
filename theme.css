@@ -1011,7 +1011,7 @@ settings:
         description: background color of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的背景色
         type: variable-text
-        default: var(--color-base-15)
+        default: var(--color-base-05)
     - 
         id: interactive-hover-light
         title: interactive-hover(light mode)
@@ -1019,7 +1019,7 @@ settings:
         description: background color of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
         type: variable-text
-        default: var(--color-base-20)
+        default: var(--color-base-15)
     - 
         id: toggle-light
         title: toggle switch
@@ -1753,7 +1753,7 @@ settings:
         description: shadow of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的阴影
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
@@ -1761,7 +1761,7 @@ settings:
         description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: interactive-normal-dark
         title: interactive-normal(dark mode)
@@ -1777,7 +1777,7 @@ settings:
         description: background color of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
         type: variable-text
-        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 2.4))
+        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 2.7))
     - 
         id: toggle-dark
         title: toggle switch
@@ -3206,53 +3206,12 @@ body {
 
 
 .is-mobile {
-    --ribbon-width: 58px;
-    --view-header-height: 50px;
-    --mobile-toolbar-height: 40px;
-    --caret-color: var(--text-accent);
-    --font-ui-smaller: calc(var(--font-text-size) * 0.8);
-    --font-ui-small: calc(var(--font-text-size) * 0.937);
-    --font-ui-medium: var(--font-text-size);
-    --font-ui-large: calc(var(--font-text-size) * 1.2);
-    --icon-s: 18px;
-    --icon-m: 20px;
-    --icon-l: 24px;
-    --icon-l-stroke-width: 1.8px;
-    --icon-opacity: 1;
-    --input-height: 40px;
-    --input-shadow: none;
-    --input-shadow-hover: none;
-    --input-font-weight: var(--font-medium);
-    --input-border-width: 0px;
-    --interactive-normal: var(--background-secondary);
-    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.05);
-    --mobile-sidebar-width: 340px;
-    --mobile-sidebar-max-width: 500px;
-    --nav-item-padding: var(--size-2-3) var(--size-4-2);
-    --nav-item-color: var(--text-normal);
-    --search-clear-button-size: 16px;
-    --search-icon-size: 20px;
-    --settings-home-background: var(--background-secondary);
-    --slider-thumb-border-width: 0px;
-    --slider-thumb-height: 24px;
-    --slider-thumb-width: 24px;
-    --slider-thumb-y: -9px;
-    --slider-track-height: 6px;
-    --swatch-shadow: none;
-    --swatch-height: 40px;
-    --swatch-width: 40px;
-    --swatch-radius: 40px;
-    --toggle-width: 48px;
-    --toggle-radius: 26px;
-    --toggle-thumb-radius: 26px;
-    --toggle-thumb-height: 26px;
-    --toggle-thumb-width: 26px;
-    --file-margins: var(--size-4-2) var(--size-4-5);
-    --background-modifier-cover: rgba(0, 0, 0, 0.25);
     --background-modifier-form-field: var(--background-modifier-hover);
-    --keyboard-background: var(--background-primary);
-    --checkbox-size: 17px;
-    --search-result-background: var(--background-primary);
+}
+
+.is-mobile.theme-light {
+    --interactive-normal: rgba(var(--mono-rgb-100), 0.05);
+    --interactive-hover: rgba(var(--mono-rgb-100), 0.075);
 }
 
 .is-mobile.theme-dark {
@@ -3266,30 +3225,8 @@ body {
     --background-modifier-cover: rgba(0, 0, 0, 0.5);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.08);
     --settings-home-background: var(--background-primary);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 3));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 2.4));
-}
-
-.is-mobile.theme-dark.theme-dark-background-darker {
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 2.4));
-}
-
-.is-mobile.theme-dark.theme-dark-background-black {
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 4));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
 }
 
 .is-tablet {
@@ -3300,15 +3237,6 @@ body {
 .is-tablet.theme-dark {
     --titlebar-background: var(--background-primary);
     --titlebar-background-focused: var(--background-primary);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 3));
-}
-
-.is-tablet.theme-dark.theme-dark-background-darker {
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
 }
 
 .is-phone {
@@ -5960,8 +5888,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-shadow-hover: var(--input-shadow-hover-dark);
 
     --input-radius-dark: 5px;
-    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
-    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .theme-light.forced-modification-light {
