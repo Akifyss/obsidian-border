@@ -995,7 +995,7 @@ settings:
         description: shadow of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的阴影
         type: variable-text
-        default: inset 0 0 0 1px rgba(0, 0, 0, 0.12),inset 0 2px 0 rgb(255 255 255 / 20%),0 2px 3px 0 rgba(0, 0, 0, .025)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25)
     - 
         id: input-shadow-hover-light
         title: input-shadow-hover(light mode)
@@ -1003,7 +1003,7 @@ settings:
         description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0 0 0 1px rgba(0, 0, 0, 0.17),inset 0 2px 0 rgb(255 255 255 / 20%),0 2px 3px 0 rgba(0, 0, 0, .05)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25)
     - 
         id: interactive-normal-light
         title: interactive-normal(light mode)
@@ -1753,7 +1753,7 @@ settings:
         description: shadow of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的阴影
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
@@ -1761,7 +1761,7 @@ settings:
         description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: interactive-normal-dark
         title: interactive-normal(dark mode)
@@ -3036,7 +3036,7 @@ body {
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 4), 0.9);
     --interactive-normal: var(--color-base-00);
-    --interactive-hover: var(--color-base-15);
+    --interactive-hover: var(--color-base-10);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
 }
 
@@ -3045,8 +3045,8 @@ body {
         calc(var(--accent-s)*0.8),
         calc(var(--accent-l) * 1.125);
     --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) - 3.8%) * 1.125));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) + 3.8%) * 1.125));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) - 3.8%));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) + 3.8%));
 }
 
 .theme-dark {
@@ -3156,7 +3156,7 @@ body {
             calc(var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 2.4));
+            calc(var(--accent-l) / 2.7));
 }
 
 
@@ -3178,7 +3178,7 @@ body {
             calc(1.25*var(--accent-l) / 2.4));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 5.6),
-            calc(1.25*var(--accent-l) / 2));
+            calc(1.25*var(--accent-l) / 2.2));
 }
 
 
@@ -3194,7 +3194,7 @@ body {
             calc(var(--accent-l) / 4));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
+            calc(var(--accent-l) / 3.2));
     --background-table-rows: var(--color-base-00);
     --line-active-bg: rgba(255, 255, 255, 0.08);
     --line-active-bg-customize: rgba(255, 255, 255, 0.08);
@@ -5345,10 +5345,6 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     padding: var(--size-2-3);
 }
 
-body.theme-dark:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
-    --input-shadow: none;
-}
-
 
 body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
     background-color: var(--interactive-accent-hover);
@@ -5916,20 +5912,16 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --interactive-normal: var(--interactive-normal-light);
     --interactive-hover: var(--interactive-hover-light);
 
-    --interactive-normal-light: var(--color-base-15);
-    --interactive-hover-light: var(--color-base-20);
+    --interactive-normal-light: var(--color-base-05);
+    --interactive-hover-light: var(--color-base-15);
 
     --input-radius: var(--input-radius-light);
     --input-shadow: var(--input-shadow-light);
     --input-shadow-hover: var(--input-shadow-hover-light);
 
     --input-radius-light: 5px;
-    --input-shadow-light: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-        inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .025);
-    --input-shadow-hover-light: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-        inset 0 2px 0 rgb(255 255 255 / 20%),
-        0 2px 3px 0 rgba(0, 0, 0, .05);
+    --input-shadow-light: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    --input-shadow-hover-light: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
 }
 
 .theme-dark {
@@ -5961,15 +5953,15 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
             calc(1.25*var(--accent-l) / 3));
     --interactive-hover-dark: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 2.4));
+            calc(1.25*var(--accent-l) / 2.7));
 
     --input-radius: var(--input-radius-dark);
     --input-shadow: var(--input-shadow-dark);
     --input-shadow-hover: var(--input-shadow-hover-dark);
 
     --input-radius-dark: 5px;
-    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border);
-    --input-shadow-hover-dark: inset 0px 0px 0px 1px hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25);
+    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .theme-light.forced-modification-light {
