@@ -1,6 +1,6 @@
 # obsidian-border
 
-一个干净且高度可定制的obsidian主题, 推荐与[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件一起使用.
+一个干净且高度可定制的obsidian主题。
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Akifyss/obsidian-border?color=%23eac54f&style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/Akifyss/obsidian-border?color=%232da44e&style=flat-square) ![GitHub closed issues](https://img.shields.io/github/issues-closed/Akifyss/obsidian-border?color=%238250df&style=flat-square) ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/Akifyss/obsidian-border?style=flat-square)
 
@@ -10,6 +10,8 @@
 
 > **⚠️ 注意**：此主题的部分功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本
 > <img src="img/version-2.png">
+
+> 强烈推荐与[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件一起使用.
 
 ### 自动隐藏
 
