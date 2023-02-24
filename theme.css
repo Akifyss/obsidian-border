@@ -6082,6 +6082,44 @@ body.tab-autohide .notice-container {
     top: 6px;
 }
 
+.app-container::before {
+    content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification.";
+    position: absolute;
+    right: 16px;
+    top: 44px;
+    background-color: var(--background-modifier-message);
+    border-radius: var(--radius-m);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    color: #FAFAFA;
+    font-size: var(--font-ui-small);
+    line-height: var(--line-height-tight);
+    padding: 0.75em 1em 0.75em 1em;
+    max-width: 300px;
+    margin-bottom: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    cursor: var(--cursor);
+    z-index: var(--layer-notice);
+}
+
+body.tab-autohide .app-container::before {
+    top: 16px;
+}
+
+.app-container:has(.workspace):before {
+    display: none;
+}
+
+body:not(.css-settings-manager) .app-container::before {
+    content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification. ℹ️Highly recommended for use with style settings plugin.";
+}
+
+body:not(.css-settings-manager) .app-container:has(.workspace)::before {
+    content: "ℹ️Highly recommended for use with style settings plugin.";
+    display: unset;
+}
+
 /* tooltip */
 
 .tooltip {
