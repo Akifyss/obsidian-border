@@ -995,7 +995,7 @@ settings:
         description: shadow of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的阴影
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.04)
     - 
         id: input-shadow-hover-light
         title: input-shadow-hover(light mode)
@@ -1003,7 +1003,7 @@ settings:
         description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.05)
     - 
         id: interactive-normal-light
         title: interactive-normal(light mode)
@@ -1083,7 +1083,7 @@ settings:
         description: shadow of toggle track
         description.zh: 开关滑轨的阴影
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05)
     - 
         id: toggle-track-hovered-shadow-light
         title: toggle-track-hovered-shadow(light mode)
@@ -1091,7 +1091,7 @@ settings:
         description: background shadow of toggle track(hovered)
         description.zh: 开关滑轨的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05)
 
 */
 
@@ -1753,7 +1753,7 @@ settings:
         description: shadow of button,dropdown, etc.
         description.zh: 按钮，下拉菜单等的阴影
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
@@ -1761,7 +1761,7 @@ settings:
         description: shadow of button,dropdown, etc.(hovered)
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25)
     - 
         id: interactive-normal-dark
         title: interactive-normal(dark mode)
@@ -5102,6 +5102,10 @@ body.new-tab-image-customize .empty-state::before {
     margin-top: 0px;
 }
 
+.empty-state-container div:has(+ .empty-state-action-list) {
+    margin-bottom: 20px;
+}
+
 .is-mobile .empty-state-action {
     margin: 12px 0;
     padding: 4px 24px;
@@ -5834,8 +5838,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
     --toggle-track-shadow: var(--toggle-track-shadow-light);
     --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-light);
-    --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
-    --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05);
+    --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05);
 
     --interactive-normal: var(--interactive-normal-light);
     --interactive-hover: var(--interactive-hover-light);
@@ -5848,8 +5852,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-shadow-hover: var(--input-shadow-hover-light);
 
     --input-radius-light: 5px;
-    --input-shadow-light: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
-    --input-shadow-hover-light: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    --input-shadow-light: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.04);
+    --input-shadow-hover-light: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.05);
 }
 
 .theme-dark {
@@ -5888,8 +5892,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-shadow-hover: var(--input-shadow-hover-dark);
 
     --input-radius-dark: 5px;
-    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25);
-    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .theme-light.forced-modification-light {
@@ -6848,14 +6852,14 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 
 /* ====== hover indicator ====== */
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image) {
+body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator))::after {
+body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -6870,7 +6874,7 @@ body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] 
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
 body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator)):hover::after {
+body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }
 
