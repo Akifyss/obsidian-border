@@ -86,6 +86,10 @@
 
 ![screenshot](img/colorful-icon.png)
 
+#### 可自定义的新标签页
+
+![screenshot](img/new-tab.gif)
+
 #### 活动行高亮和悬停行指示器
 
 ![screenshot](img/line.gif)

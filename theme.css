@@ -46,6 +46,16 @@ settings:
         title.zh: 自动隐藏 底部状态栏
         type: class-toggle
     - 
+        id: nav-header-autohide
+        title: Auto hide header icons in sidepane
+        title.zh: 自动隐藏 侧边面板中的头部按钮
+        type: class-toggle
+    - 
+        id: tab-title-bar-fixed
+        title: Always display tab title bar
+        title.zh: 始终显示标签页标题栏
+        type: class-toggle
+    - 
         id: file-explorer
         title: File explorer
         title.zh: 文件列表
@@ -113,25 +123,6 @@ settings:
         title.zh: 启用 增强的大纲样式
         description: from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536
         type: class-toggle
-    - 
-        id: tab-title-bar
-        title: Tab title bar
-        title.zh: 标签页标题栏
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: tab-title-bar-select
-        title: tab title bar
-        title.zh: 标签页标题栏
-        type: class-select
-        allowEmpty: false
-        default: tab-title-bar-autohide
-        options:
-            -   label: fixed(obsidian default)
-                value: tab-title-bar-fixed
-            -   label: autohide
-                value: tab-title-bar-autohide
     - 
         id: New-tab
         title: New tab
@@ -477,15 +468,15 @@ settings:
         level: 3
     - 
         id: mod-left-split-background-header-light
-        title: Left sidebar background
-        title.zh: 左侧栏背景
+        title: Left sidepane background
+        title.zh: 左侧面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-left-split-background-select-light
-        title: Left sidebar background(light mode)
-        title.zh: 左侧栏背景（亮色模式）
+        title: Left sidepane background(light mode)
+        title.zh: 左侧面板背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-left-split-background-secondary-light
@@ -502,8 +493,8 @@ settings:
                 value: mod-left-split-background-CSS-light
     - 
 		id: background-mod-left-split-light
-		title: Customize left sidebar background color (light mode)
-        title.zh: 自定义 左侧栏 背景色（亮色模式）
+		title: Customize left sidepane background color (light mode)
+        title.zh: 自定义 左侧面板 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -514,39 +505,39 @@ settings:
         default: '#'
     - 
         id: background-mod-left-CSS-light
-        title: Left sidebar background (light mode)
-        title.zh: 左侧栏background（亮色模式）
+        title: Left sidepane background (light mode)
+        title.zh: 左侧面板background（亮色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-left-CSS-blend-mode-light
-        title: Left sidebar background-blend-mode (light mode)
-        title.zh: 左侧栏background-blend-mode（亮色模式）
+        title: Left sidepane background-blend-mode (light mode)
+        title.zh: 左侧面板background-blend-mode（亮色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-left-CSS-backdrop-filter-light
-        title: Left sidebar backdrop-filter (light mode)
-        title.zh: 左侧栏backdrop-filter（亮色模式）
+        title: Left sidepane backdrop-filter (light mode)
+        title.zh: 左侧面板backdrop-filter（亮色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: mod-right-split-background-header-light
-        title: Right sidebar background
-        title.zh: 右侧栏背景
+        title: Right sidepane background
+        title.zh: 右侧面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-right-split-background-select-light
-        title: Right sidebar background (light mode)
-        title.zh: 右侧栏背景（亮色模式）
+        title: Right sidepane background (light mode)
+        title.zh: 右侧面板背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-right-split-background-primary-light
@@ -563,8 +554,8 @@ settings:
                 value: mod-right-split-background-CSS-light
     - 
 		id: background-mod-right-split-light
-		title: Customize right sidebar background color(light mode)
-        title.zh: 自定义 右侧栏 背景色（亮色模式）
+		title: Customize right sidepane background color(light mode)
+        title.zh: 自定义 右侧面板 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -575,39 +566,39 @@ settings:
         default: '#'
     - 
         id: background-mod-right-CSS-light
-        title: Right sidebar background (light mode)
-        title.zh: 右侧栏background（亮色模式）
+        title: Right sidepane background (light mode)
+        title.zh: 右侧面板background（亮色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-right-CSS-blend-mode-light
-        title: Right sidebar background-blend-mode (light mode)
-        title.zh: 右侧栏background-blend-mode（亮色模式）
+        title: Right sidepane background-blend-mode (light mode)
+        title.zh: 右侧面板background-blend-mode（亮色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-right-CSS-backdrop-filter-light
-        title: Right sidebar backdrop-filter (light mode)
-        title.zh: 右侧栏backdrop-filter（亮色模式）
+        title: Right sidepane backdrop-filter (light mode)
+        title.zh: 右侧面板backdrop-filter（亮色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: mod-root-split-background-header-light
-        title: Middle space background
-        title.zh: 中间栏背景
+        title: Middle pane background
+        title.zh: 中间面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-root-split-background-select-light
-        title: Middle space background (light mode)
-        title.zh: 中间栏背景（亮色模式）
+        title: Middle pane background (light mode)
+        title.zh: 中间面板背景（亮色模式）
         type: class-select
         allowEmpty: false
         default: mod-root-split-background-primary-light
@@ -624,8 +615,8 @@ settings:
                 value: mod-root-split-background-CSS-light
     - 
 		id: background-mod-root-split-light
-		title: Customize middle space background color(light mode)
-        title.zh: 自定义 中间栏 背景色（亮色模式）
+		title: Customize Middle pane background color(light mode)
+        title.zh: 自定义 中间面板 背景色（亮色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -636,24 +627,24 @@ settings:
         default: '#'
     - 
         id: background-mod-root-CSS-light
-        title: middle space background (light mode)
-        title.zh: 中间栏background（亮色模式）
+        title: Middle pane background (light mode)
+        title.zh: 中间面板background（亮色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(255, 255, 255, 0.5);
     - 
         id: background-mod-root-CSS-blend-mode-light
-        title: middle space background-blend-mode (light mode)
-        title.zh: 中间栏background-blend-mode（亮色模式）
+        title: Middle pane background-blend-mode (light mode)
+        title.zh: 中间面板background-blend-mode（亮色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-root-CSS-backdrop-filter-light
-        title: middle space backdrop-filter (light mode)
-        title.zh: 中间栏backdrop-filter（亮色模式）
+        title: Middle pane backdrop-filter (light mode)
+        title.zh: 中间面板backdrop-filter（亮色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
@@ -1235,15 +1226,15 @@ settings:
         level: 3
     - 
         id: mod-left-split-background-header-dark
-        title: Left sidebar background
-        title.zh: 左侧栏背景
+        title: Left sidepane background
+        title.zh: 左侧面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-left-split-background-select-dark
-        title: Left sidebar background(dark mode)
-        title.zh: 左侧栏背景（暗色模式）
+        title: Left sidepane background(dark mode)
+        title.zh: 左侧面板背景（暗色模式）
         type: class-select
         allowEmpty: false
         default: mod-left-split-background-secondary-dark
@@ -1260,8 +1251,8 @@ settings:
                 value: mod-left-split-background-CSS-dark
     - 
 		id: background-mod-left-split-dark
-		title: Customize left sidebar background color (dark mode)
-        title.zh: 自定义 左侧栏 背景色（暗色模式）
+		title: Customize left sidepane background color (dark mode)
+        title.zh: 自定义 左侧面板 背景色（暗色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -1272,39 +1263,39 @@ settings:
         default: '#'
     - 
         id: background-mod-left-CSS-dark
-        title: Left sidebar background (dark mode)
-        title.zh: 左侧栏background（暗色模式）
+        title: Left sidepane background (dark mode)
+        title.zh: 左侧面板background（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-left-CSS-blend-mode-dark
-        title: Left sidebar background-blend-mode (dark mode)
-        title.zh: 左侧栏background-blend-mode（暗色模式）
+        title: Left sidepane background-blend-mode (dark mode)
+        title.zh: 左侧面板background-blend-mode（暗色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-left-CSS-backdrop-filter-dark
-        title: Left sidebar backdrop-filter (dark mode)
-        title.zh: 左侧栏backdrop-filter（暗色模式）
+        title: Left sidepane backdrop-filter (dark mode)
+        title.zh: 左侧面板backdrop-filter（暗色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: mod-right-split-background-header-dark
-        title: Right sidebar background
-        title.zh: 右侧栏背景
+        title: Right sidepane background
+        title.zh: 右侧面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-right-split-background-select-dark
-        title: Right sidebar background(dark mode)
-        title.zh: 右侧栏背景（暗色模式）
+        title: Right sidepane background(dark mode)
+        title.zh: 右侧面板背景（暗色模式）
         type: class-select
         allowEmpty: false
         default: mod-right-split-background-primary-dark
@@ -1321,8 +1312,8 @@ settings:
                 value: mod-right-split-background-CSS-dark
     - 
 		id: background-mod-right-split-dark
-		title: Customize right sidebar background color(dark mode)
-        title.zh: 自定义 右侧栏 背景色（暗色模式）
+		title: Customize right sidepane background color(dark mode)
+        title.zh: 自定义 右侧面板 背景色（暗色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -1333,39 +1324,39 @@ settings:
         default: '#'
     - 
         id: background-mod-right-CSS-dark
-        title: Right sidebar background (dark mode)
-        title.zh: 右侧栏background（暗色模式）
+        title: Right sidepane background (dark mode)
+        title.zh: 右侧面板background（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-right-CSS-blend-mode-dark
-        title: Right sidebar background-blend-mode (dark mode)
-        title.zh: 右侧栏background-blend-mode（暗色模式）
+        title: Right sidepane background-blend-mode (dark mode)
+        title.zh: 右侧面板background-blend-mode（暗色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-right-CSS-backdrop-filter-dark
-        title: Right sidebar backdrop-filter (dark mode)
-        title.zh: 右侧栏backdrop-filter（暗色模式）
+        title: Right sidepane backdrop-filter (dark mode)
+        title.zh: 右侧面板backdrop-filter（暗色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px);
     - 
         id: mod-root-split-background-header-dark
-        title: Middle space background
-        title.zh: 中间栏背景
+        title: Middle pane background
+        title.zh: 中间面板背景
         type: heading
         collapsed: ture
         level: 4
     - 
         id: mod-root-split-background-select-dark
-        title: Middle space background (dark mode)
-        title.zh: 中间栏背景（暗色模式）
+        title: Middle pane background (dark mode)
+        title.zh: 中间面板背景（暗色模式）
         type: class-select
         allowEmpty: false
         default: mod-root-split-background-primary-dark
@@ -1382,8 +1373,8 @@ settings:
                 value: mod-root-split-background-CSS-dark
     - 
 		id: background-mod-root-split-dark
-		title: Customize middle space background color (dark mode)
-        title.zh: 自定义 中间栏 背景色（暗色模式）
+		title: Customize Middle pane background color (dark mode)
+        title.zh: 自定义 中间面板 背景色（暗色模式）
 		type: variable-color
         opacity: ture
         format: hex
@@ -1394,24 +1385,24 @@ settings:
         default: '#'
     - 
         id: background-mod-root-CSS-dark
-        title: middle space background (dark mode)
-        title.zh: 中间栏background（暗色模式）
+        title: Middle pane background (dark mode)
+        title.zh: 中间面板background（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: rgba(0,0,0,0.5);
     - 
         id: background-mod-root-CSS-blend-mode-dark
-        title: middle space background-blend-mode (dark mode)
-        title.zh: 中间栏background-blend-mode（暗色模式）
+        title: Middle pane background-blend-mode (dark mode)
+        title.zh: 中间面板background-blend-mode（暗色模式）
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal;
     - 
         id: background-mod-root-CSS-backdrop-filter-dark
-        title: middle space backdrop-filter (dark mode)
-        title.zh: 中间栏backdrop-filter（暗色模式）
+        title: Middle pane backdrop-filter (dark mode)
+        title.zh: 中间面板backdrop-filter（暗色模式）
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
@@ -1866,16 +1857,25 @@ settings:
         collapsed: false
         level: 3
     - 
-        id: line-hover-indicator-enabled
-        title: Enable hovered line indicator
+        id: line-hover-indicator-disable
+        title: Disable hovered line indicator
         description: "Note: This feature requires your **installer** version(not APP current version) > v1.1.8. If not, you can download and re-install obsidian.Check **installer** version in “Settings-About-APP“"
         description.zh: "注意：此特性需要**安装程序**版本（不是指APP当前版本） > v1.1.8。如果不是，可以重新下载安装obsidian。可以在“设置-关于-APP”处查看**安装程序**版本"
-        title.zh: 启用 悬停行指示器
+        title.zh: 禁用 悬停行指示器
         type: class-toggle
+    - 
+		id: hover-indicator-color
+		title: Customize hovered line indicator color
+        title.zh: 自定义悬停行指示器颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
         id: line-active-disable
         title: Disable active line hightlight
-        title.zh: 禁用行高亮
+        title.zh: 禁用 行高亮
         type: class-toggle
     - 
         id: line-active-bg-color
@@ -2863,7 +2863,8 @@ body:not(.accent-color-custom-dark) .setting-item[data-id=accent-dark],
 body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item[data-id=colorful-folder],
 body.file-icon-remove .setting-item[data-id=file-icon-color-select],
-body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image] {
+body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
+body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color] {
     display: none;
 }
 
@@ -4625,6 +4626,35 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.works
     transition: width var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
+/*nav header autohide*/
+body:not(.is-mobile).nav-header-autohide .nav-header {
+    height: 16px;
+    opacity: 0;
+    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).nav-header-autohide .nav-header:hover,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .nav-header,
+body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content .nav-header {
+    height: 44px;
+    opacity: 1;
+    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).nav-header-autohide .nav-header .nav-buttons-container {
+    transform: translateY(-22px);
+    opacity: 0;
+    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+}
+
+body:not(.is-mobile).nav-header-autohide .nav-header:hover .nav-buttons-container,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .nav-header .nav-buttons-container,
+body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content .nav-header .nav-buttons-container {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+}
+
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container :is(.workspace-tab-header, .workspace-tab-header-inner, .view-header, .view-content) {
@@ -5126,15 +5156,6 @@ input.wb-search-bar {
 /* ====== workspace mod side====== */
 .nav-header {
     padding: var(--size-2-3);
-}
-
-.mod-left-split .workspace-leaf-content,
-.mod-right-split .workspace-leaf-content {
-    gap: var(--size-2-1);
-}
-
-.workspace-leaf-content[data-type="starred"] .item-list {
-    padding-top: 12px;
 }
 
 .nav-header~.search-input-container {
@@ -6960,15 +6981,19 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 }
 
 /* ====== hover indicator ====== */
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)) {
+body {
+    --hover-indicator-color: var(--color-accent);
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header))::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -6976,15 +7001,32 @@ body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] 
     width: 3px;
     height: 0;
     border-radius: 10px;
-    background: var(--color-accent);
+    background: var(--hover-indicator-color);
     opacity: 1;
 }
 
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-body.line-hover-indicator-enabled .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)):hover::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
+}
+
+body:not(.line-hover-indicator-disable) .cm-contentContainer,
+body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock-end {
+    counter-reset: code-line;
+}
+
+body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+    counter-increment: code-line;
+    content: counter(code-line) !important;
+    background: unset !important;
+    opacity: 0 !important;
+    color: var(--hover-indicator-color);
+}
+
+body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
+    opacity: 1 !important;
 }
 
 /* ====== cursor color ====== */
@@ -7600,10 +7642,14 @@ body.table-width-customized :is(.markdown-rendered, .markdown-source-view.mod-cm
 /* ===== image ====== */
 
 /*  image hover effect */
+.markdown-source-view.mod-cm6 .cm-content>.internal-embed {
+    contain: unset !important;
+}
+
 @media (hover: hover) {
 
     .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>img:hover,
-    .workspace-leaf-content[data-type="markdown"] .view-content .image-embed img:hover {
+    .workspace-leaf-content[data-type="markdown"] .view-content .cm-content .image-embed img:hover {
         outline-offset: 2px;
         outline: 2px solid var(--background-modifier-border-hover);
         border-radius: var(--radius-s);
