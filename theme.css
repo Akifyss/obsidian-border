@@ -6082,7 +6082,7 @@ body.tab-autohide .notice-container {
     top: 6px;
 }
 
-.app-container::before {
+body:not(.is-mobile) .app-container::before {
     content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification.";
     position: absolute;
     right: 16px;
@@ -6101,21 +6101,92 @@ body.tab-autohide .notice-container {
     word-break: break-word;
     cursor: var(--cursor);
     z-index: var(--layer-notice);
+    -webkit-animation: notice-slide-up 20s ease-in-out forwards;
+    animation: notice-slide-up 20s ease-in-out forwards;
 }
 
-body.tab-autohide .app-container::before {
+@-webkit-keyframes notice-slide-up {
+
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: var(--layer-notice);
+    }
+
+
+    98% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: var(--layer-notice);
+    }
+
+
+    99% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+        opacity: 0;
+        z-index: var(--layer-notice);
+    }
+
+    100% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+
+@keyframes notice-slide-up {
+
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: var(--layer-notice);
+    }
+
+
+    98% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: var(--layer-notice);
+    }
+
+
+    99% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+        opacity: 0;
+        z-index: var(--layer-notice);
+    }
+
+    100% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+body:not(.is-mobile).tab-autohide .app-container::before {
     top: 16px;
 }
 
-.app-container:has(.workspace):before {
+body:not(.is-mobile) .app-container:has(.workspace):before {
     display: none;
 }
 
-body:not(.css-settings-manager) .app-container::before {
+body:not(.is-mobile):not(.css-settings-manager) .app-container::before {
     content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification. ℹ️Highly recommended for use with style settings plugin.";
 }
 
-body:not(.css-settings-manager) .app-container:has(.workspace)::before {
+body:not(.is-mobile):not(.css-settings-manager) .app-container:has(.workspace)::before {
     content: "ℹ️Highly recommended for use with style settings plugin.";
     display: unset;
 }
