@@ -4627,29 +4627,29 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.works
 }
 
 /*nav header autohide*/
-body:not(.is-mobile).nav-header-autohide .nav-header {
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header {
     height: 16px;
     opacity: 0;
     transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).nav-header-autohide .nav-header:hover,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .nav-header,
-body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content .nav-header {
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header,
+body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header {
     height: 44px;
     opacity: 1;
     transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).nav-header-autohide .nav-header .nav-buttons-container {
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
     transform: translateY(-22px);
     opacity: 0;
     transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile).nav-header-autohide .nav-header:hover .nav-buttons-container,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .nav-header .nav-buttons-container,
-body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content .nav-header .nav-buttons-container {
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .nav-buttons-container,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container,
+body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
