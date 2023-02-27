@@ -1913,6 +1913,12 @@ settings:
         title.zh: 还原标题前的折叠图标
         type: class-toggle
     - 
+		id: heading-indicator-off
+		title: Remove headings indicator
+		title.zh: 移除标题左侧的指示器
+		type: class-toggle
+		default: false
+    - 
 		id: Inline-title
 		title: Inline Title
         title.zh: 页内标题
@@ -2630,6 +2636,29 @@ settings:
         title.zh: 关闭图像缩放
         description: from https://github.com/kepano/obsidian-minimal, author:@kepano
         type: class-toggle
+    - 
+        id: Code-heading
+        title: Code
+        title.zh: 代码
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: code-background-light
+        title: Customize code background (light mode)
+        title.zh: 自定义 代码块背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+    - 
+        id: code-background-dark
+        title: Customize code background (dark mode)
+        title.zh: 自定义 代码块背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
 
 */
 
@@ -6401,11 +6430,11 @@ body {
     --h1-indicator-color: var(--h1-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-1 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-1 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-1::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6423,8 +6452,8 @@ body {
     position: relative;
 }
 
-.markdown-rendered h1::before,
-.markdown-preview-view h1::before {
+body:not(.heading-indicator-off) .markdown-rendered h1::before,
+body:not(.heading-indicator-off) .markdown-preview-view h1::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -6485,11 +6514,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collap
     --h2-indicator-color: var(--h2-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-2 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-2 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-2::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6507,8 +6536,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collap
     position: relative;
 }
 
-.markdown-rendered h2::before,
-.markdown-preview-view h2::before {
+body:not(.heading-indicator-off) .markdown-rendered h2::before,
+body:not(.heading-indicator-off) .markdown-preview-view h2::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -6570,11 +6599,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collap
     --h3-indicator-color: var(--h3-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-3 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-3 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-3::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6592,8 +6621,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collap
     position: relative;
 }
 
-.markdown-rendered h3::before,
-.markdown-preview-view h3::before {
+body:not(.heading-indicator-off) .markdown-rendered h3::before,
+body:not(.heading-indicator-off) .markdown-preview-view h3::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -6653,11 +6682,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collap
     --h4-indicator-color: var(--h4-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-4 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-4 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-4::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6675,8 +6704,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collap
     position: relative;
 }
 
-.markdown-rendered h4::before,
-.markdown-preview-view h4::before {
+body:not(.heading-indicator-off) .markdown-rendered h4::before,
+body:not(.heading-indicator-off) .markdown-preview-view h4::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -6737,11 +6766,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collap
     --h5-indicator-color: var(--h5-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-5 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-5 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-5::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6760,8 +6789,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collap
     position: relative;
 }
 
-.markdown-rendered h5::before,
-.markdown-preview-view h5::before {
+body:not(.heading-indicator-off) .markdown-rendered h5::before,
+body:not(.heading-indicator-off) .markdown-preview-view h5::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -6823,11 +6852,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collap
     --h6-indicator-color: var(--h6-color);
 }
 
-.is-live-preview .HyperMD-header .cm-header.cm-header-6 {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-6 {
     padding-left: 6px;
 }
 
-.is-live-preview .HyperMD-header-6::before {
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
@@ -6845,8 +6874,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collap
     position: relative;
 }
 
-.markdown-rendered h6::before,
-.markdown-preview-view h6::before {
+body:not(.heading-indicator-off) .markdown-rendered h6::before,
+body:not(.heading-indicator-off) .markdown-preview-view h6::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
@@ -7022,6 +7051,14 @@ body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-co
     content: counter(code-line) !important;
     background: unset !important;
     opacity: 0 !important;
+    position: absolute !important;
+    left: -12px !important;
+    top: 0px !important;
+    height: 100% !important;
+    width: 3px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--hover-indicator-color);
 }
 
@@ -7516,17 +7553,19 @@ body {
 
 body {
     --code-background: transparent;
+    --code-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --code-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-kbd,
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code,
-:not(pre)>code,
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.cm-s-obsidian div.HyperMD-codeblock-bg,
-.markdown-rendered pre {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+.theme-light kbd,
+.theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.theme-light .cm-s-obsidian span.cm-inline-code,
+.theme-light :not(pre)>code,
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
+.theme-light .markdown-rendered pre {
+    background: var(--code-background-light);
 }
 
 .theme-dark kbd,
@@ -7537,12 +7576,12 @@ kbd,
 .theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
 .theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
 .theme-dark .markdown-rendered pre {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background: var(--code-background-dark);
 }
 
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
-.theme-dark .cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
-    background-image: unset;
+.theme-light .cm-s-obsidian span.cm-inline-code span.cm-inline-code.cm-hmd-indented-code,
+.theme-dark .cm-s-obsidian span.cm-inline-code span.cm-inline-code.cm-hmd-indented-code {
+    background: unset;
 }
 
 @media (hover: hover) {
