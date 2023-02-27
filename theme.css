@@ -2597,6 +2597,31 @@ settings:
         type: heading
         collapsed: true
         level: 3
+	- 
+		id: table-header-color
+		title: Customize table header color
+        title.zh: 自定义 表头颜色（亮色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: table-header-background-light
+        title: Customize table header background (light mode)
+        title.zh: 自定义 表头背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+    - 
+        id: table-header-background-dark
+        title: Customize table header background (dark mode)
+        title.zh: 自定义 表头背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
     - 
         id: table-width-select
         title: Table width
@@ -2655,6 +2680,29 @@ settings:
         id: code-background-dark
         title: Customize code background (dark mode)
         title.zh: 自定义 代码块背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+    - 
+        id: Blockquote-heading
+        title: Blockquote
+        title.zh: 块引用
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: blockquote-background-light
+        title: Customize blockquote background (light mode)
+        title.zh: 自定义 块引用背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+    - 
+        id: blockquote-background-dark
+        title: Customize blockquote background (dark mode)
+        title.zh: 自定义 块引用背景（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
@@ -7446,17 +7494,20 @@ body {
     --blockquote-font-style: normal;
     --blockquote-color: inherit;
     --blockquote-background-color: transparent;
+    --blockquote-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --blockquote-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-body .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
-.markdown-rendered blockquote {
+.theme-light .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
+.theme-light .markdown-rendered blockquote {
     border-radius: var(--radius-s);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background: var(--blockquote-background-light);
 }
 
-body.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
 .theme-dark .markdown-rendered blockquote {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    border-radius: var(--radius-s);
+    background: var(--blockquote-background-dark);
 }
 
 .markdown-rendered blockquote,
@@ -7630,6 +7681,8 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 /* ======table ====== */
 body {
     --table-header-background: transparent;
+    --table-header-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --table-header-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --table-header-background-hover: var(--background-modifier-hover);
     --table-row-background-hover: var(--background-modifier-hover);
     --table-header-weight: var(--font-semibold);
@@ -7637,23 +7690,23 @@ body {
     --table-width: 88cqw;
 }
 
-.markdown-rendered thead tr {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+.theme-light .markdown-rendered thead tr {
+    background: var(--table-header-background-light);
 }
 
 @media (hover: hover) {
-    .markdown-rendered thead tr:hover {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    .theme-light .markdown-rendered thead tr:hover {
+        background: var(--table-header-background-light);
     }
 }
 
 .theme-dark .markdown-rendered thead tr {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background: var(--table-header-background-dark);
 }
 
 @media (hover: hover) {
     .theme-dark .markdown-rendered thead tr:hover {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+        background: var(--table-header-background-dark);
     }
 }
 
@@ -7672,7 +7725,8 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
     container-type: inline-size;
 }
 
-body.table-width-customized :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) .el-table {
+body.table-width-customized .markdown-source-view.mod-cm6.is-live-preview .cm-content>div.cm-embed-block:has(>table),
+body.table-width-customized .markdown-rendered .markdown-preview-sizer>div:has(>table) {
     overflow: auto;
     width: var(--table-width) !important;
     margin-left: calc((var(--table-width) - 100%) / -2) !important;
