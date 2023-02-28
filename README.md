@@ -27,6 +27,14 @@ Require your **installer** version(not APP current version) > v1.1.8
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
+### Hovered line indicator
+
+![screenshot](img/line.gif)
+
+Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
+
+Require your **installer** version(not APP current version) > v1.1.8
+
 ### Highly customizable
 
 ![screenshot](img/screenshot-1.png)
@@ -89,14 +97,6 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 #### Customizable new tab
 
 ![screenshot](img/new-tab.gif)
-
-#### Active line highlight and hovered line indicator
-
-![screenshot](img/line.gif)
-
-Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
-
-Require your **installer** version(not APP current version) > v1.1.8
 
 ## Credits
 

@@ -27,6 +27,14 @@
 
 在[style settings](https://github.com/mgmeyers/obsidian-style-settings) 启用。
 
+### 悬停行指示器
+
+![screenshot](img/line.gif)
+
+在[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件中启用。
+
+需要**安装程序**版本（不是指APP当前版本） > v1.1.8
+
 ### 高度可定制
 
 ![screenshot](img/screenshot-2.png)
@@ -89,11 +97,3 @@
 #### 可自定义的新标签页
 
 ![screenshot](img/new-tab.gif)
-
-#### 活动行高亮和悬停行指示器
-
-![screenshot](img/line.gif)
-
-在[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件中启用。
-
-需要**安装程序**版本（不是指APP当前版本） > v1.1.8
