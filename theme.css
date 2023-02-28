@@ -1074,7 +1074,7 @@ settings:
         description: shadow of toggle track
         description.zh: 开关滑轨的阴影
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04)
     - 
         id: toggle-track-hovered-shadow-light
         title: toggle-track-hovered-shadow(light mode)
@@ -1082,7 +1082,7 @@ settings:
         description: background shadow of toggle track(hovered)
         description.zh: 开关滑轨的阴影（鼠标悬停时）
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05)
+        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04)
 
 */
 
@@ -5936,8 +5936,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
 
     --toggle-track-shadow: var(--toggle-track-shadow-light);
     --toggle-track-hovered-shadow: var(--toggle-track-hovered-shadow-light);
-    --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05);
-    --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px var(--background-primary), 0px 2px 2px rgba(0, 0, 0, 0.05);
+    --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04);
+    --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04);
 
     --interactive-normal: var(--interactive-normal-light);
     --interactive-hover: var(--interactive-hover-light);
@@ -6041,54 +6041,29 @@ body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
 }
 
 /* input */
-textarea,
-input[type='text'],
-input[type='search'],
-input[type='email'],
-input[type='password'],
-input[type='number'] {
-    border: var(--input-border-width) solid var(--divider-color);
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .04);
-}
-
-.theme-dark textarea,
-.theme-dark input[type='text'],
-.theme-dark input[type='search'],
-.theme-dark input[type='email'],
-.theme-dark input[type='password'],
-.theme-dark input[type='number'] {
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .16);
-}
 
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
-body:not(.is-mobile) input[type='text']:focus,
+body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus,
 body:not(.is-mobile) input[type='search']:focus,
 body:not(.is-mobile) input[type='email']:focus,
 body:not(.is-mobile) input[type='password']:focus,
 body:not(.is-mobile) input[type='number']:focus,
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
-body:not(.is-mobile) input[type='text']:focus-visible,
+body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus-visible,
 body:not(.is-mobile) input[type='search']:focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
 body:not(.is-mobile) input[type='password']:focus-visible,
 body:not(.is-mobile) input[type='number']:focus-visible {
     border: 1px solid var(--color-accent);
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .04), 0 0 0 4px var(--background-modifier-active-hover);
+    box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
 
-body:not(.is-mobile).theme-dark textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
-body:not(.is-mobile).theme-dark input[type='text']:focus,
-body:not(.is-mobile).theme-dark input[type='search']:focus,
-body:not(.is-mobile).theme-dark input[type='email']:focus,
-body:not(.is-mobile).theme-dark input[type='password']:focus,
-body:not(.is-mobile).theme-dark input[type='number']:focus,
-body:not(.is-mobile).theme-dark textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
-body:not(.is-mobile).theme-dark input[type='text']:focus-visible,
-body:not(.is-mobile).theme-dark input[type='search']:focus-visible,
-body:not(.is-mobile).theme-dark input[type='email']:focus-visible,
-body:not(.is-mobile).theme-dark input[type='password']:focus-visible,
-body:not(.is-mobile).theme-dark input[type='number']:focus-visible {
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .16), 0 0 0 4px var(--background-modifier-active-hover);
+body:not(.is-mobile) input[type='search'] {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 0 4px rgba(0, 0, 0, .025);
+}
+
+body:not(.is-mobile).theme-dark input[type='search'] {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .1);
 }
 
 .view-header input {
@@ -6099,8 +6074,8 @@ body:not(.is-mobile) input.prompt-input,
 body:not(.is-mobile) input.prompt-input:hover,
 body:not(.is-mobile) input.prompt-input:focus,
 body:not(.is-mobile) input.prompt-input:focus-visible {
-    border: none;
-    box-shadow: none;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 body:not(.is-phone) input.prompt-input,
@@ -7083,6 +7058,9 @@ body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
 }
 
 /* ====== hover indicator ====== */
+
+/*general*/
+
 body {
     --hover-indicator-color: var(--color-accent);
 }
@@ -7114,14 +7092,10 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     height: calc(100% - 6px);
 }
 
-body:not(.line-hover-indicator-disable) .cm-contentContainer,
-body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock-end {
-    counter-reset: code-line;
-}
+/* num */
 
-body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
-    counter-increment: code-line;
-    content: counter(code-line) !important;
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
     background: unset !important;
     opacity: 0 !important;
     position: absolute !important;
@@ -7132,12 +7106,66 @@ body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-co
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space:nowrap;
+    white-space: nowrap;
     color: var(--hover-indicator-color);
 }
 
-body:not(.line-hover-indicator-disable) .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
     opacity: 1 !important;
+}
+
+/* code */
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock-end {
+    counter-reset: code-line;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+    counter-increment: code-line;
+    content: counter(code-line) !important;
+}
+
+/* list */
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after {
+    content: "";
+    text-indent: 0px !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-2::after {
+    content: "2" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-3::after {
+    content: "3" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-4::after {
+    content: "4" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-5::after {
+    content: "5" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-6::after {
+    content: "6" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-7::after {
+    content: "7" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-8::after {
+    content: "8" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-9::after {
+    content: "9" !important;
+}
+
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-10::after {
+    content: "10" !important;
 }
 
 /* ====== cursor color ====== */
