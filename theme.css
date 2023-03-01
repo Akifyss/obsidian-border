@@ -34,6 +34,8 @@ settings:
         id: tab-autohide
         title: Auto hide tab bar
         title.zh: 自动隐藏 tab栏
+        description: Mac users can adjust the position of the traffic light using the 'Electron Window Tweaker' plugin
+        description.zh: Mac 用户可以使用 “Electron Window Tweaker” 插件来调整左上角红绿灯的位置
         type: class-toggle
     - 
         id: Ribbon-autohide
@@ -6045,12 +6047,14 @@ body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
 body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus,
 body:not(.is-mobile) input[type='search']:focus,
+body:not(.is-mobile).theme-dark input[type='search']:focus,
 body:not(.is-mobile) input[type='email']:focus,
 body:not(.is-mobile) input[type='password']:focus,
 body:not(.is-mobile) input[type='number']:focus,
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
 body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus-visible,
 body:not(.is-mobile) input[type='search']:focus-visible,
+body:not(.is-mobile).theme-dark input[type='search']:focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
 body:not(.is-mobile) input[type='password']:focus-visible,
 body:not(.is-mobile) input[type='number']:focus-visible {
@@ -6058,13 +6062,14 @@ body:not(.is-mobile) input[type='number']:focus-visible {
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
 
+/*
 body:not(.is-mobile) input[type='search'] {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 0 4px rgba(0, 0, 0, .025);
 }
 
 body:not(.is-mobile).theme-dark input[type='search'] {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .1);
-}
+}*/
 
 .view-header input {
     box-shadow: none !important;
