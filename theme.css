@@ -1911,7 +1911,7 @@ settings:
         level: 3
     - 
         id: collapse-icon-restore
-        title: Restore the collapse icon before header
+        title: Restore the collapse icon before headings
         title.zh: 还原标题前的折叠图标
         type: class-toggle
     - 
@@ -2431,44 +2431,59 @@ settings:
         type: heading
         collapsed: true
         level: 3
-    - 
-		id: links-internal
-		title: Internal links
-        title.zh: 内部链接
-		type: heading
-		level: 4
-		collapsed: true
 	- 
 		id: link-color
-		title: Internal link color
-        title.zh: 内部链接颜色
+		title: Link color
+        title.zh: 链接颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	- 
 		id: link-color-hover
-		title: Internal link color (hover)
-        title.zh: 内部链接颜色（鼠标悬停时）
+		title: Link color (hover)
+        title.zh: 链接颜色（鼠标悬停时）
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	- 
+		id: link-decoration
+		title: Link decoration
+        title.zh: 链接装饰
+        description: Accepts any CSS text-decoration-line value
+        description.zh: 接受任何 CSS text-decoration-line 值
+		type: variable-text
+		default: underline
+	- 
+		id: link-decoration-hover
+		title: Link decoration (hover)
+        title.zh: 链接装饰（鼠标悬停时）
+        description: Accepts any CSS text-decoration-line value
+        description.zh: 接受任何 CSS text-decoration-line 值
+		type: variable-text
+		default: underline
+	- 
+		id: link-decoration-thickness
+		title: Link decoration thickness
+        title.zh: 链接装饰厚度
+        description: Accepts any CSS text-decoration-thickness value
+        description.zh: 接受任何 CSS text-decoration-thickness 值
+		type: variable-text
+		default: auto
+    - 
+		id: link-unresolved
+		title: Unresolved link
+        title.zh: 未创建链接
+		type: heading
+		level: 4
+		collapsed: true
 	- 
 		id: link-unresolved-color
 		title: Unresolved link color
         title.zh: 未创建链接颜色
 		type: variable-themed-color
 		format: hex
-		default-light: '#'
-		default-dark: '#'
-	- 
-		id: link-unresolved-decoration-color
-		title: Unresolved link underline color
-        title.zh: 未创建链接下划线颜色
-		type: variable-themed-color
-		format: hex
-		opacity:  true
 		default-light: '#'
 		default-dark: '#'
     - 
@@ -2480,6 +2495,31 @@ settings:
 		min: 0.25
 		max: 1
 		step: 0.05
+	- 
+		id: link-unresolved-filter
+		title: Unresolved link filter
+        title.zh: 未创建链接 filter
+        description: Accepts any CSS filter value
+        description.zh: 接受任何 CSS filter 值
+		type: variable-text
+		default: none
+	- 
+		id: link-unresolved-decoration-style
+		title: Unresolved link decoration style
+        title.zh: 未创建链接装饰风格
+        description: Accepts any CSS text-decoration-style value
+        description.zh: 接受任何 CSS text-decoration-style 值
+		type: variable-text
+		default: solid
+	- 
+		id: link-unresolved-decoration-color
+		title: Unresolved link decoration color
+        title.zh: 未创建链接装饰颜色
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
     - 
 		id: links-external
 		title: External links
@@ -2504,6 +2544,30 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+		id: link-external-decoration
+		title: External link decoration
+        title.zh: 外部链接装饰
+        description: Accepts any CSS text-decoration-line value
+        description.zh: 接受任何 CSS text-decoration-line 值
+		type: variable-text
+		default: underline
+	- 
+		id: link-external-decoration-hover
+		title: External link decoration (hover)
+        title.zh: 外部链接装饰（鼠标悬停时）
+        description: Accepts any CSS text-decoration-line value
+        description.zh: 接受任何 CSS text-decoration-line 值
+		type: variable-text
+		default: underline
+	- 
+		id: link-external-filter
+		title: External link filter
+        title.zh: 外部链接 filter
+        description: Accepts any CSS filter value
+        description.zh: 接受任何 CSS filter 值
+		type: variable-text
+		default: none
+	- 
         id: Lists
         title: Lists
         title.zh: 列表
@@ -7011,21 +7075,8 @@ body:not(.collapse-icon-restore) .markdown-preview-view h6 .is-collapsed .collap
 /* ====== link ====== */
 body {
     /* Links */
-    --link-color: var(--text-accent);
-    --link-color-hover: var(--text-accent-hover);
-    --link-decoration: underline;
-    --link-decoration-hover: underline;
-    --link-decoration-thickness: auto;
     --link-external-color: var(--color-blue);
     --link-external-color-hover: var(--color-blue);
-    --link-external-decoration: underline;
-    --link-external-decoration-hover: underline;
-    --link-external-filter: none;
-    --link-unresolved-color: var(--text-accent);
-    --link-unresolved-opacity: 0.7;
-    --link-unresolved-filter: none;
-    --link-unresolved-decoration-style: solid;
-    --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
 }
 
 
