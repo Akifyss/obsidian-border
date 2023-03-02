@@ -985,34 +985,34 @@ settings:
         id: input-shadow-light
         title: input-shadow(light mode)
         title.zh: input-shadow（亮色模式）
-        description: shadow of button,dropdown, etc.
-        description.zh: 按钮，下拉菜单等的阴影
+        description: shadow of button,dropdown, etc. Accepts any CSS box-shadow value
+        description.zh: 按钮，下拉菜单等的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.04)
+        default: ''
     - 
         id: input-shadow-hover-light
         title: input-shadow-hover(light mode)
         title.zh: input-shadow-hover（亮色模式）
-        description: shadow of button,dropdown, etc.(hovered)
-        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
+        description: shadow of button,dropdown, etc.(hovered) Accepts any CSS box-shadow value
+        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.05)
+        default: ''
     - 
         id: interactive-normal-light
         title: interactive-normal(light mode)
         title.zh: interactive-normal（亮色模式）
-        description: background color of button,dropdown, etc.
-        description.zh: 按钮，下拉菜单等的背景色
+        description: background color of button,dropdown, etc. Accepts any CSS background-color value
+        description.zh: 按钮，下拉菜单等的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--color-base-05)
+        default: ''
     - 
         id: interactive-hover-light
         title: interactive-hover(light mode)
         title.zh: interactive-hover（亮色模式）
-        description: background color of button,dropdown, etc.(hovered)
-        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
+        description: background color of button,dropdown, etc.(hovered) Accepts any CSS background-color value
+        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时） 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--color-base-15)
+        default: ''
     - 
         id: toggle-light
         title: toggle switch
@@ -1024,67 +1024,67 @@ settings:
         id: toggle-thumb-color-light
         title: toggle-thumb-color(light mode)
         title.zh: toggle-thumb-color（亮色模式）
-        description: background color of toggle thumb
-        description.zh: 开关滑块的背景色
+        description: background color of toggle thumb Accepts any CSS background-color value
+        description.zh: 开关滑块的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: white
+        default: ''
     - 
         id: toggle-thumb-enabled-color-light
         title: toggle-thumb-enabled-color(light mode)
         title.zh: toggle-thumb-enabled-color（亮色模式）
-        description: background color of toggle thumb(enabled)
-        description.zh: 开关滑块的背景色（开启时）
+        description: background color of toggle thumb(enabled) Accepts any CSS background-color value
+        description.zh: 开关滑块的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
-        default: white
+        default: ''
     - 
         id: toggle-thumb-shadow-light
         title: toggle-thumb-shadow(light mode)
         title.zh: toggle-thumb-shadow（亮色模式）
-        description: shadow of toggle thumb
-        description.zh: 开关滑块的阴影
+        description: shadow of toggle thumb Accepts any CSS box-shadow value
+        description.zh: 开关滑块的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1)
+        default: ''
     - 
         id: toggle-thumb-enabled-shadow-light
         title: toggle-thumb-enabled-shadow(light mode)
         title.zh: toggle-thumb-enabled-shadow（亮色模式）
-        description: background shadow of toggle thumb(enabled)
-        description.zh: 开关滑块的阴影（开启时）
+        description: shadow of toggle thumb(enabled) Accepts any CSS box-shadow value
+        description.zh: 开关滑块的阴影（开启时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3)
+        default: ''
 
     - 
         id: toggle-track-color-light
         title: toggle-track-color(light mode)
         title.zh: toggle-track-color（亮色模式）
-        description: background color of toggle track
-        description.zh: 开关滑轨的背景色
+        description: background color of toggle track Accepts any CSS background-color value
+        description.zh: 开关滑轨的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--background-modifier-border-hover)
+        default: ''
     - 
         id: toggle-track-enabled-color-light
         title: toggle-track-enabled-color(light mode)
         title.zh: toggle-track-enabled-color（亮色模式）
-        description: background color of toggle track(enabled)
-        description.zh: 开关滑轨的背景色（开启时）
+        description: background color of toggle track(enabled) Accepts any CSS background-color value
+        description.zh: 开关滑轨的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--interactive-accent)
+        default: ''
     - 
         id: toggle-track-shadow-light
         title: toggle-track-shadow(light mode)
         title.zh: toggle-track-shadow（亮色模式）
-        description: shadow of toggle track
-        description.zh: 开关滑轨的阴影
+        description: shadow of toggle track Accepts any CSS box-shadow value
+        description.zh: 开关滑轨的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04)
+        default: ''
     - 
         id: toggle-track-hovered-shadow-light
         title: toggle-track-hovered-shadow(light mode)
         title.zh: toggle-track-hovered-shadow（亮色模式）
-        description: background shadow of toggle track(hovered)
-        description.zh: 开关滑轨的阴影（鼠标悬停时）
+        description: shadow of toggle track(hovered) Accepts any CSS box-shadow value
+        description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04)
+        default: ''
 
 */
 
@@ -1743,34 +1743,34 @@ settings:
         id: input-shadow-dark
         title: input-shadow(dark mode)
         title.zh: input-shadow（暗色模式）
-        description: shadow of button,dropdown, etc.
-        description.zh: 按钮，下拉菜单等的阴影
+        description: shadow of button,dropdown, etc. Accepts any CSS box-shadow value
+        description.zh: 按钮，下拉菜单等的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: ''
     - 
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
         title.zh: input-shadow-hover（暗色模式）
-        description: shadow of button,dropdown, etc.(hovered)
-        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时）
+        description: shadow of button,dropdown, etc.(hovered) Accepts any CSS box-shadow value
+        description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25)
+        default: ''
     - 
         id: interactive-normal-dark
         title: interactive-normal(dark mode)
         title.zh: interactive-normal（暗色模式）
-        description: background color of button,dropdown, etc.
-        description.zh: 按钮，下拉菜单等的背景色
+        description: background color of button,dropdown, etc. Accepts any CSS background-color value
+        description.zh: 按钮，下拉菜单等的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 3))
+        default: ''
     - 
         id: interactive-hover-dark
         title: interactive-hover(dark mode)
         title.zh: interactive-hover（暗色模式）
-        description: background color of button,dropdown, etc.(hovered)
-        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时）
+        description: background color of button,dropdown, etc.(hovered) Accepts any CSS background-color value
+        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时） 接受任意 CSS background-color 值
         type: variable-text
-        default: hsl(calc(var(--accent-h) + 8),calc(var(--accent-s) / 7),calc(1.25*var(--accent-l) / 2.7))
+        default: ''
     - 
         id: toggle-dark
         title: toggle switch
@@ -1782,67 +1782,67 @@ settings:
         id: toggle-thumb-color-dark
         title: toggle-thumb-color(dark mode)
         title.zh: toggle-thumb-color（暗色模式）
-        description: background color of toggle thumb
-        description.zh: 开关滑块的背景色
+        description: background color of toggle thumb Accepts any CSS background-color value
+        description.zh: 开关滑块的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: white
+        default: ''
     - 
         id: toggle-thumb-enabled-color-dark
         title: toggle-thumb-enabled-color(dark mode)
         title.zh: toggle-thumb-enabled-color（暗色模式）
-        description: background color of toggle thumb(enabled)
-        description.zh: 开关滑块的背景色（开启时）
+        description: background color of toggle thumb(enabled) Accepts any CSS background-color value
+        description.zh: 开关滑块的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
-        default: white
+        default: ''
     - 
         id: toggle-thumb-shadow-dark
         title: toggle-thumb-shadow(dark mode)
         title.zh: toggle-thumb-shadow（暗色模式）
-        description: shadow of toggle thumb
-        description.zh: 开关滑块的阴影
+        description: shadow of toggle thumb Accepts any CSS box-shadow value
+        description.zh: 开关滑块的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.25), inset 0px 4px 4px #FFFFFF
+        default: ''
     - 
         id: toggle-thumb-enabled-shadow-dark
         title: toggle-thumb-enabled-shadow(dark mode)
         title.zh: toggle-thumb-enabled-shadow（暗色模式）
-        description: background shadow of toggle thumb(enabled)
-        description.zh: 开关滑块的阴影（开启时）
+        description: shadow of toggle thumb(enabled) Accepts any CSS box-shadow value
+        description.zh: 开关滑块的阴影（开启时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5), inset 0px 4px 4px #FFFFFF
+        default: ''
 
     - 
         id: toggle-track-color-dark
         title: toggle-track-color(dark mode)
         title.zh: toggle-track-color（暗色模式）
-        description: background color of toggle track
-        description.zh: 开关滑轨的背景色
+        description: background color of toggle track Accepts any CSS background-color value
+        description.zh: 开关滑轨的背景色 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--background-modifier-border-hover)
+        default: ''
     - 
         id: toggle-track-enabled-color-dark
         title: toggle-track-enabled-color(dark mode)
         title.zh: toggle-track-enabled-color（暗色模式）
-        description: background color of toggle track(enabled)
-        description.zh: 开关滑轨的背景色（开启时）
+        description: background color of toggle track(enabled) Accepts any CSS background-color value
+        description.zh: 开关滑轨的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
-        default: var(--interactive-accent)
+        default: ''
     - 
         id: toggle-track-shadow-dark
         title: toggle-track-shadow(dark mode)
         title.zh: toggle-track-shadow（暗色模式）
-        description: shadow of toggle track
-        description.zh: 开关滑轨的阴影
+        description: shadow of toggle track Accepts any CSS box-shadow value
+        description.zh: 开关滑轨的阴影 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border)
+        default: ''
     - 
         id: toggle-track-hovered-shadow-dark
         title: toggle-track-hovered-shadow(dark mode)
         title.zh: toggle-track-hovered-shadow（暗色模式）
-        description: background shadow of toggle track(hovered)
-        description.zh: 开关滑轨的阴影（鼠标悬停时）
+        description: shadow of toggle track(hovered) Accepts any CSS box-shadow value
+        description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border)
+        default: ''
 
 */
 
@@ -2679,7 +2679,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
     - 
         id: table-header-background-dark
         title: Customize table header background (dark mode)
@@ -2687,7 +2687,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
     - 
         id: table-width-select
         title: Table width
@@ -2741,7 +2741,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
     - 
         id: code-background-dark
         title: Customize code background (dark mode)
@@ -2749,7 +2749,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
     - 
         id: Blockquote-heading
         title: Blockquote
@@ -2764,7 +2764,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
     - 
         id: blockquote-background-dark
         title: Customize blockquote background (dark mode)
@@ -2772,7 +2772,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")
+        default: ''
 
 */
 
@@ -2872,26 +2872,16 @@ settings:
 
 
 /*hide style setting option*/
-body.line-active-disable .setting-item[data-id=line-active-bg-color],
-body.line-active-disable .setting-item[data-id=line-active-bg-customize],
-body.line-active-bg-color-default .setting-item[data-id=line-active-bg-customize],
-body.line-active-bg-color-accent .setting-item[data-id=line-active-bg-customize],
-body.inline-title-color-default .setting-item[data-id=inline-title-color],
-body.inline-title-color-designated .setting-item[data-id=inline-title-color],
-body.h1-color-default .setting-item[data-id=h1-color],
-body.h1-color-designated .setting-item[data-id=h1-color],
-body.h2-color-default .setting-item[data-id=h2-color],
-body.h2-color-designated .setting-item[data-id=h2-color],
-body.h3-color-default .setting-item[data-id=h3-color],
-body.h3-color-designated .setting-item[data-id=h3-color],
-body.h4-color-default .setting-item[data-id=h4-color],
-body.h4-color-designated .setting-item[data-id=h4-color],
-body.h5-color-default .setting-item[data-id=h5-color],
-body.h5-color-designated .setting-item[data-id=h5-color],
-body.h6-color-default .setting-item[data-id=h6-color],
-body.h6-color-designated .setting-item[data-id=h6-color],
-body.file-icon-color-accent .setting-item[data-id=file-icon-color],
-body.file-icon-color-currentColor .setting-item[data-id=file-icon-color],
+body.line-active-disable .setting-item:is([data-id=line-active-bg-color], [data-id=line-active-bg-customize]),
+body:not(.line-active-bg-color-customize) .setting-item[data-id=line-active-bg-customize],
+body:not(.inline-title-color-customized) .setting-item[data-id=inline-title-color],
+body:not(.h1-color-customized) .setting-item[data-id=h1-color],
+body:not(.h2-color-customized) .setting-item[data-id=h2-color],
+body:not(.h3-color-customized) .setting-item[data-id=h3-color],
+body:not(.h4-color-customized) .setting-item[data-id=h4-color],
+body:not(.h5-color-customized) .setting-item[data-id=h5-color],
+body:not(.h6-color-customized) .setting-item[data-id=h6-color],
+body:not(.file-icon-color-customize) .setting-item[data-id=file-icon-color],
 body.background-underlying-defalut-light .setting-item[data-id=background-underlying-light],
 body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-light],
 body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-blend-mode-light],
@@ -3040,54 +3030,13 @@ body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color] {
     display: none;
 }
 
+/* color */
+
 body {
-    /*
-      List of variables is placed in body rather than :root so 
-      that we can	combine all property types including colors
-      and sort alphabetically to maximize readability in
-      the compiled app.css file.
-      ----------------------------------------------------- */
-    /* Cursor */
-    --cursor: pointer;
-    --cursor-link: pointer;
-    /* Color mappings ------------------------ */
     /* Accent HSL values */
     --accent-h: 232;
     --accent-s: 80%;
     --accent-l: 64%;
-    /* Backgrounds */
-    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
-    --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
-    --background-modifier-border: var(--color-base-30);
-    --background-modifier-border-hover: var(--color-base-35);
-    --background-modifier-border-focus: var(--color-base-40);
-    --background-modifier-error-rgb: var(--color-red-rgb);
-    --background-modifier-error: var(--color-red);
-    --background-modifier-error-hover: var(--color-red);
-    --background-modifier-success-rgb: var(--color-green-rgb);
-    --background-modifier-success: var(--color-green);
-    --background-modifier-message: rgba(0, 0, 0, 0.8);
-    /* Inputs */
-    --background-modifier-form-field: var(--color-base-00);
-    /* Text */
-    --text-normal: var(--color-base-100);
-    --text-muted: var(--color-base-70);
-    --text-faint: var(--color-base-50);
-    --text-on-accent: white;
-    --text-error: var(--color-red);
-    --text-success: var(--color-green);
-    --text-selection: hsla(var(--color-accent-hsl), 0.2);
-    --text-accent: var(--color-accent);
-    --text-accent-hover: var(--color-accent-2);
-    --interactive-normal: var(--color-base-00);
-    --interactive-hover: var(--color-base-10);
-    --interactive-accent-hsl: var(--color-accent-hsl);
-    --interactive-accent: var(--color-accent-1);
-    --interactive-accent-hover: var(--color-accent-2);
-    /* Prompts - e.g. quick switcher, command palette */
-    --prompt-border-color: var(--divider-color);
-    /* Modals - e.g. settings, community themes, community plugins */
-    --modal-border-color: var(--divider-color);
 }
 
 .theme-light.accent-color-custom-light {
@@ -3376,51 +3325,6 @@ body {
     --background-modifier-border-focus: var(--color-base-40);
     --background-modifier-hover: rgba(var(--mono-rgb-100), 0.15);
 }
-
-
-.is-mobile {
-    --background-modifier-form-field: var(--background-modifier-hover);
-}
-
-.is-mobile.theme-light {
-    --interactive-normal: rgba(var(--mono-rgb-100), 0.05);
-    --interactive-hover: rgba(var(--mono-rgb-100), 0.075);
-}
-
-.is-mobile.theme-dark {
-    --color-base-00: #000;
-    --color-base-10: #111;
-    --color-base-20: #1e1e1e;
-    --tag-background: hsla(var(--interactive-accent-hsl), 0.2);
-    --modal-background: var(--background-secondary);
-    --search-result-background: var(--background-tertiary);
-    --background-modifier-form-field: var(--background-modifier-hover);
-    --background-modifier-cover: rgba(0, 0, 0, 0.5);
-    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.08);
-    --settings-home-background: var(--background-primary);
-    --interactive-normal: var(--background-modifier-border);
-    --interactive-hover: var(--background-modifier-border-hover);
-}
-
-.is-tablet {
-    --nav-item-padding: var(--size-2-3) var(--size-4-3);
-    --tab-font-size: var(--font-ui-smaller);
-}
-
-.is-tablet.theme-dark {
-    --titlebar-background: var(--background-primary);
-    --titlebar-background-focused: var(--background-primary);
-}
-
-.is-phone {
-    --border-width: 0.5pt;
-    --divider-width: 0.5pt;
-    --tab-outline-width: 0.5pt;
-    --modal-header-height: 44px;
-    --modal-community-sidebar-width: 100%;
-    --nav-item-size: var(--font-ui-medium);
-}
-
 
 /*====== Animations ======*/
 body {
@@ -5097,15 +5001,6 @@ body.canvas-card-menu-right .canvas-card-menu {
     border: 1px solid var(--background-modifier-border);
 }
 
-.modal.mod-canvas-help .setting-hotkey {
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.theme-dark .modal.mod-canvas-help .setting-hotkey {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
-
 /* hover effect*/
 @media (hover: hover) {
     .canvas-node:hover {
@@ -5272,9 +5167,6 @@ body {
 }
 
 body.new-tab-image-customize .empty-state::before {
-    content: "";
-    width: 100%;
-    height: 30%;
     background-color: unset;
     background-size: contain;
     background-position: center;
@@ -5895,7 +5787,7 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     background-color: var(--file-icon-color);
 }
 
-/*tag pane*/
+/*file tag*/
 
 .nav-file-tag {
     background-color: transparent;
@@ -5906,6 +5798,11 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
 
 /*====== empty state ======*/
 
+body {
+    --empty-state-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' viewBox='0 0 160 160'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath fill-opacity='.25' d='M38.66 123.48C27.16 112.55 20 97.11 20 80c0-5.18.66-10.2 1.89-15l16.77 58.48Zm70.35 9.05C100.41 137.29 90.52 140 80 140c-10.52 0-20.47-2.73-29.08-7.52l19.24-5.51c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91l17.97 5.15.81.74Zm29.04-67.75-16.88 58.86C132.76 112.71 140 97.2 140 80c0-5.26-.68-10.36-1.95-15.22Zm-15.41-26.99-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-8.94-4.95-29.78 8.54C47.68 27.06 63.02 20 80 20c16.98 0 31.77 6.8 42.64 17.79Z'/%3e%3cpath fill-opacity='.05' d='m70.31 52.88-.98 3.41-38.26 10.97-.83-2.89 40.07-11.49ZM58.37 78.15a28.777 28.777 0 0 0-3.3 4.07l-18.21 5.22-.83-2.88 22.34-6.41Zm-7.78 14.72c-.21 1.06-.37 2.15-.47 3.25l-9.96 2.86-.82-2.88 11.25-3.23Zm.24-43.76-23.07 6.61-.83-2.88L50 46.22l.83 2.89Zm4.9 67.25-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c.51.91 1.09 1.79 1.71 2.63Z'/%3e%3cpath fill-opacity='.15' d='m72.71 44.51-1.81.52-4.35-15.17-29.78 8.54-15.74 4.51a5.27 5.27 0 0 0-3.61 6.51L21.89 65l16.77 58.48 1.87 6.51c.8 2.79 3.71 4.41 6.5 3.61l3.89-1.12 19.24-5.51a29.706 29.706 0 0 1-14.43-10.61l-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c-.15-.24-.29-.48-.43-.73A29.64 29.64 0 0 1 50 98.82c0-.91.04-1.81.12-2.7l-9.96 2.86-.82-2.88 11.25-3.23c.79-3.88 2.34-7.48 4.48-10.65l-18.21 5.22-.83-2.88 22.34-6.41a29.14 29.14 0 0 1 6.07-4.82l4.89-17.04-38.26 10.97-.83-2.89 40.07-11.49 2.4-8.37ZM27.76 55.72l-.83-2.88L50 46.22l.83 2.89-23.07 6.61Z'/%3e%3cpath fill-opacity='.1' d='m108.2 131.79-17.97-5.15c2.76-1.04 5.32-2.48 7.61-4.25l10.36 9.4ZM135.84 58l-11.33-3.25 3.19-11.14 1.16-4.04-6.22-1.78-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-2.78 9.7-2.4 8.37-.98 3.41-4.89 17.04c4.47-2.69 9.7-4.24 15.29-4.24s11.22 1.66 15.79 4.55a28.65 28.65 0 0 1 4.74 3.68l23.71 6.8-.82 2.89-19.27-5.52c2.3 3.17 3.97 6.81 4.85 10.75l11.94 3.42-.83 2.88-10.55-3.03c.12 1.09.18 2.19.18 3.31 0 4.7-1.09 9.14-3.03 13.09-.22.45-.45.89-.7 1.32l.67.19 8.47 2.43-.83 2.88-6.55-1.88 10.53 9.55 1.87 1.69 1.27-4.45 16.88-58.86 1.63-5.68-3.84-1.1ZM82.85 38.89l.23-.82 23.07 6.62-.82 2.88-18.83-5.4-2.81-.81-1.43-.41.59-2.06Zm46.09 27.93L90.4 55.77l-9.63-2.76-1.82-.52.65-2.27.18-.62 9.64 2.77 40.34 11.57-.82 2.88Z'/%3e%3cpath fill-opacity='.35' d='m75.49 34.81-2.78 9.7-1.81.52-4.35-15.17 8.94 4.95Z'/%3e%3cpath fill-opacity='.3' d='m128.86 39.57-1.16 4.03v.01l-3.19 11.14L135.84 58l3.84 1.1-10.82-19.53Z'/%3e%3cpath fill-opacity='.35' d='m122.01 130.01-7.12 7.85-5.88-5.33-.81-.74-10.36-9.4c1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32l.79.71 1.75 1.59 10.53 9.55 1.87 1.69 2.11 1.92Z'/%3e%3cpath fill-opacity='.35' fill-rule='evenodd' d='M109.29 95.51c-.13-1.11-.31-2.2-.56-3.27-.88-3.94-2.55-7.58-4.85-10.75-1.07-1.51-2.28-2.9-3.62-4.17a28.65 28.65 0 0 0-4.74-3.68c-4.57-2.89-9.99-4.55-15.79-4.55-5.8 0-10.82 1.55-15.29 4.24a29.14 29.14 0 0 0-6.07 4.82 28.777 28.777 0 0 0-3.3 4.07 29.564 29.564 0 0 0-4.48 10.65 30.145 30.145 0 0 0-.59 5.95c0 5.13 1.3 9.96 3.59 14.17.14.26.28.5.43.74.51.91 1.09 1.79 1.71 2.63a29.706 29.706 0 0 0 14.43 10.61c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91 2.76-1.04 5.32-2.48 7.61-4.25 1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32.28-.43.54-.87.78-1.32.25-.43.48-.87.7-1.32 1.94-3.95 3.03-8.39 3.03-13.09 0-1.12-.06-2.22-.18-3.31Zm-4.98 8.78a24.97 24.97 0 0 1-4.91 10.24c-.31.4-.63.78-.97 1.15-.02.02-.04.05-.06.07-.27.3-.55.59-.83.87-.29.28-.58.56-.88.83-.59.55-1.21 1.06-1.86 1.54-.65.49-1.32.94-2.01 1.36l-.42.24s-.01.01-.02.01c-.55.33-1.12.63-1.7.91-1.1.53-2.25.98-3.43 1.35-2.01.62-4.14 1-6.33 1.1-.1.01-.19.01-.29.01-.29.02-.58.02-.87.02-2.61 0-5.12-.4-7.48-1.13a24.94 24.94 0 0 1-5.57-2.51c-.21-.13-.43-.27-.64-.4-.21-.13-.41-.27-.62-.42-.26-.17-.5-.35-.75-.54-.65-.48-1.27-.99-1.86-1.54-.84-.76-1.62-1.57-2.35-2.44-.69-.81-1.32-1.68-1.9-2.58a25.1 25.1 0 0 1-3.22-7.35c-.51-2-.78-4.1-.78-6.26 0-1.38.11-2.74.33-4.06.18-1.15.44-2.26.78-3.34 1.28-4.17 3.61-7.87 6.68-10.8.26-.26.52-.5.79-.71a24.966 24.966 0 0 1 16.59-6.26c1.39 0 2.74.11 4.07.33 4.28.69 8.2 2.47 11.46 5.04.85.65 1.66 1.37 2.42 2.14 2.63 2.68 4.68 5.95 5.9 9.6.38 1.09.68 2.21.89 3.37a25.259 25.259 0 0 1-.16 10.16Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.05' fill-rule='evenodd' d='M104.47 94.13c-.21-1.16-.51-2.28-.89-3.37a25.082 25.082 0 0 0-5.9-9.6c-.76-.77-1.57-1.49-2.42-2.14a24.907 24.907 0 0 0-11.46-5.04c-1.33-.22-2.68-.33-4.07-.33a24.966 24.966 0 0 0-16.59 6.26c-.27.21-.53.45-.79.71-3.07 2.93-5.4 6.63-6.68 10.8-.34 1.08-.6 2.19-.78 3.34-.22 1.32-.33 2.68-.33 4.06 0 2.16.27 4.26.78 6.26a25.1 25.1 0 0 0 3.22 7.35c.58.9 1.21 1.77 1.9 2.58.73.87 1.51 1.68 2.35 2.44.59.55 1.21 1.06 1.86 1.54.25.19.49.37.75.54.21.15.41.29.62.42.21.13.43.27.64.4a24.94 24.94 0 0 0 5.57 2.51c2.36.73 4.87 1.13 7.48 1.13.29 0 .58 0 .87-.02.1 0 .19 0 .29-.01 2.19-.1 4.32-.48 6.33-1.1 1.18-.37 2.33-.82 3.43-1.35.58-.28 1.15-.58 1.7-.91.01 0 .02 0 .02-.01l.42-.24c.69-.42 1.36-.87 2.01-1.36.65-.48 1.27-.99 1.86-1.54.3-.27.59-.55.88-.83.28-.28.56-.57.83-.87.02-.02.04-.05.06-.07.34-.37.66-.75.97-1.15.66-.82 1.27-1.68 1.83-2.59a25.174 25.174 0 0 0 3.68-13.12c0-1.6-.15-3.17-.44-4.69Zm-14.69 9.35h.01l2.41 2.42.14.14c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.5' fill-rule='evenodd' d='M92.34 106.04c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01l2.41 2.42.14.14h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.35' d='M124.81 134.66c.07 1.4-.42 2.77-1.36 3.81a5.29 5.29 0 0 1-3.67 1.73c-1.4.07-2.78-.42-3.82-1.36l-1.07-.98 7.12-7.84 1.07.97c1.04.94 1.66 2.26 1.73 3.67Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h160v160H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.outline .pane-empty,
 .search-empty-state {
     display: flex;
     align-items: center;
@@ -5915,6 +5812,7 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     padding-left: 0px;
 }
 
+.outline .pane-empty::before,
 .search-empty-state::before {
     content: "";
     display: inline-block;
@@ -5924,31 +5822,16 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' viewBox='0 0 160 160'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath fill-opacity='.25' d='M38.66 123.48C27.16 112.55 20 97.11 20 80c0-5.18.66-10.2 1.89-15l16.77 58.48Zm70.35 9.05C100.41 137.29 90.52 140 80 140c-10.52 0-20.47-2.73-29.08-7.52l19.24-5.51c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91l17.97 5.15.81.74Zm29.04-67.75-16.88 58.86C132.76 112.71 140 97.2 140 80c0-5.26-.68-10.36-1.95-15.22Zm-15.41-26.99-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-8.94-4.95-29.78 8.54C47.68 27.06 63.02 20 80 20c16.98 0 31.77 6.8 42.64 17.79Z'/%3e%3cpath fill-opacity='.05' d='m70.31 52.88-.98 3.41-38.26 10.97-.83-2.89 40.07-11.49ZM58.37 78.15a28.777 28.777 0 0 0-3.3 4.07l-18.21 5.22-.83-2.88 22.34-6.41Zm-7.78 14.72c-.21 1.06-.37 2.15-.47 3.25l-9.96 2.86-.82-2.88 11.25-3.23Zm.24-43.76-23.07 6.61-.83-2.88L50 46.22l.83 2.89Zm4.9 67.25-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c.51.91 1.09 1.79 1.71 2.63Z'/%3e%3cpath fill-opacity='.15' d='m72.71 44.51-1.81.52-4.35-15.17-29.78 8.54-15.74 4.51a5.27 5.27 0 0 0-3.61 6.51L21.89 65l16.77 58.48 1.87 6.51c.8 2.79 3.71 4.41 6.5 3.61l3.89-1.12 19.24-5.51a29.706 29.706 0 0 1-14.43-10.61l-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c-.15-.24-.29-.48-.43-.73A29.64 29.64 0 0 1 50 98.82c0-.91.04-1.81.12-2.7l-9.96 2.86-.82-2.88 11.25-3.23c.79-3.88 2.34-7.48 4.48-10.65l-18.21 5.22-.83-2.88 22.34-6.41a29.14 29.14 0 0 1 6.07-4.82l4.89-17.04-38.26 10.97-.83-2.89 40.07-11.49 2.4-8.37ZM27.76 55.72l-.83-2.88L50 46.22l.83 2.89-23.07 6.61Z'/%3e%3cpath fill-opacity='.1' d='m108.2 131.79-17.97-5.15c2.76-1.04 5.32-2.48 7.61-4.25l10.36 9.4ZM135.84 58l-11.33-3.25 3.19-11.14 1.16-4.04-6.22-1.78-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-2.78 9.7-2.4 8.37-.98 3.41-4.89 17.04c4.47-2.69 9.7-4.24 15.29-4.24s11.22 1.66 15.79 4.55a28.65 28.65 0 0 1 4.74 3.68l23.71 6.8-.82 2.89-19.27-5.52c2.3 3.17 3.97 6.81 4.85 10.75l11.94 3.42-.83 2.88-10.55-3.03c.12 1.09.18 2.19.18 3.31 0 4.7-1.09 9.14-3.03 13.09-.22.45-.45.89-.7 1.32l.67.19 8.47 2.43-.83 2.88-6.55-1.88 10.53 9.55 1.87 1.69 1.27-4.45 16.88-58.86 1.63-5.68-3.84-1.1ZM82.85 38.89l.23-.82 23.07 6.62-.82 2.88-18.83-5.4-2.81-.81-1.43-.41.59-2.06Zm46.09 27.93L90.4 55.77l-9.63-2.76-1.82-.52.65-2.27.18-.62 9.64 2.77 40.34 11.57-.82 2.88Z'/%3e%3cpath fill-opacity='.35' d='m75.49 34.81-2.78 9.7-1.81.52-4.35-15.17 8.94 4.95Z'/%3e%3cpath fill-opacity='.3' d='m128.86 39.57-1.16 4.03v.01l-3.19 11.14L135.84 58l3.84 1.1-10.82-19.53Z'/%3e%3cpath fill-opacity='.35' d='m122.01 130.01-7.12 7.85-5.88-5.33-.81-.74-10.36-9.4c1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32l.79.71 1.75 1.59 10.53 9.55 1.87 1.69 2.11 1.92Z'/%3e%3cpath fill-opacity='.35' fill-rule='evenodd' d='M109.29 95.51c-.13-1.11-.31-2.2-.56-3.27-.88-3.94-2.55-7.58-4.85-10.75-1.07-1.51-2.28-2.9-3.62-4.17a28.65 28.65 0 0 0-4.74-3.68c-4.57-2.89-9.99-4.55-15.79-4.55-5.8 0-10.82 1.55-15.29 4.24a29.14 29.14 0 0 0-6.07 4.82 28.777 28.777 0 0 0-3.3 4.07 29.564 29.564 0 0 0-4.48 10.65 30.145 30.145 0 0 0-.59 5.95c0 5.13 1.3 9.96 3.59 14.17.14.26.28.5.43.74.51.91 1.09 1.79 1.71 2.63a29.706 29.706 0 0 0 14.43 10.61c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91 2.76-1.04 5.32-2.48 7.61-4.25 1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32.28-.43.54-.87.78-1.32.25-.43.48-.87.7-1.32 1.94-3.95 3.03-8.39 3.03-13.09 0-1.12-.06-2.22-.18-3.31Zm-4.98 8.78a24.97 24.97 0 0 1-4.91 10.24c-.31.4-.63.78-.97 1.15-.02.02-.04.05-.06.07-.27.3-.55.59-.83.87-.29.28-.58.56-.88.83-.59.55-1.21 1.06-1.86 1.54-.65.49-1.32.94-2.01 1.36l-.42.24s-.01.01-.02.01c-.55.33-1.12.63-1.7.91-1.1.53-2.25.98-3.43 1.35-2.01.62-4.14 1-6.33 1.1-.1.01-.19.01-.29.01-.29.02-.58.02-.87.02-2.61 0-5.12-.4-7.48-1.13a24.94 24.94 0 0 1-5.57-2.51c-.21-.13-.43-.27-.64-.4-.21-.13-.41-.27-.62-.42-.26-.17-.5-.35-.75-.54-.65-.48-1.27-.99-1.86-1.54-.84-.76-1.62-1.57-2.35-2.44-.69-.81-1.32-1.68-1.9-2.58a25.1 25.1 0 0 1-3.22-7.35c-.51-2-.78-4.1-.78-6.26 0-1.38.11-2.74.33-4.06.18-1.15.44-2.26.78-3.34 1.28-4.17 3.61-7.87 6.68-10.8.26-.26.52-.5.79-.71a24.966 24.966 0 0 1 16.59-6.26c1.39 0 2.74.11 4.07.33 4.28.69 8.2 2.47 11.46 5.04.85.65 1.66 1.37 2.42 2.14 2.63 2.68 4.68 5.95 5.9 9.6.38 1.09.68 2.21.89 3.37a25.259 25.259 0 0 1-.16 10.16Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.05' fill-rule='evenodd' d='M104.47 94.13c-.21-1.16-.51-2.28-.89-3.37a25.082 25.082 0 0 0-5.9-9.6c-.76-.77-1.57-1.49-2.42-2.14a24.907 24.907 0 0 0-11.46-5.04c-1.33-.22-2.68-.33-4.07-.33a24.966 24.966 0 0 0-16.59 6.26c-.27.21-.53.45-.79.71-3.07 2.93-5.4 6.63-6.68 10.8-.34 1.08-.6 2.19-.78 3.34-.22 1.32-.33 2.68-.33 4.06 0 2.16.27 4.26.78 6.26a25.1 25.1 0 0 0 3.22 7.35c.58.9 1.21 1.77 1.9 2.58.73.87 1.51 1.68 2.35 2.44.59.55 1.21 1.06 1.86 1.54.25.19.49.37.75.54.21.15.41.29.62.42.21.13.43.27.64.4a24.94 24.94 0 0 0 5.57 2.51c2.36.73 4.87 1.13 7.48 1.13.29 0 .58 0 .87-.02.1 0 .19 0 .29-.01 2.19-.1 4.32-.48 6.33-1.1 1.18-.37 2.33-.82 3.43-1.35.58-.28 1.15-.58 1.7-.91.01 0 .02 0 .02-.01l.42-.24c.69-.42 1.36-.87 2.01-1.36.65-.48 1.27-.99 1.86-1.54.3-.27.59-.55.88-.83.28-.28.56-.57.83-.87.02-.02.04-.05.06-.07.34-.37.66-.75.97-1.15.66-.82 1.27-1.68 1.83-2.59a25.174 25.174 0 0 0 3.68-13.12c0-1.6-.15-3.17-.44-4.69Zm-14.69 9.35h.01l2.41 2.42.14.14c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.5' fill-rule='evenodd' d='M92.34 106.04c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01l2.41 2.42.14.14h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.35' d='M124.81 134.66c.07 1.4-.42 2.77-1.36 3.81a5.29 5.29 0 0 1-3.67 1.73c-1.4.07-2.78-.42-3.82-1.36l-1.07-.98 7.12-7.84 1.07.97c1.04.94 1.66 2.26 1.73 3.67Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h160v160H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-}
-
-.outline .pane-empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.outline .pane-empty::before {
-    content: "";
-    display: inline-block;
-    width: 160px;
-    height: 160px;
-    background-color: var(--color-accent-3);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' viewBox='0 0 160 160'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath fill-opacity='.25' d='M38.66 123.48C27.16 112.55 20 97.11 20 80c0-5.18.66-10.2 1.89-15l16.77 58.48Zm70.35 9.05C100.41 137.29 90.52 140 80 140c-10.52 0-20.47-2.73-29.08-7.52l19.24-5.51c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91l17.97 5.15.81.74Zm29.04-67.75-16.88 58.86C132.76 112.71 140 97.2 140 80c0-5.26-.68-10.36-1.95-15.22Zm-15.41-26.99-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-8.94-4.95-29.78 8.54C47.68 27.06 63.02 20 80 20c16.98 0 31.77 6.8 42.64 17.79Z'/%3e%3cpath fill-opacity='.05' d='m70.31 52.88-.98 3.41-38.26 10.97-.83-2.89 40.07-11.49ZM58.37 78.15a28.777 28.777 0 0 0-3.3 4.07l-18.21 5.22-.83-2.88 22.34-6.41Zm-7.78 14.72c-.21 1.06-.37 2.15-.47 3.25l-9.96 2.86-.82-2.88 11.25-3.23Zm.24-43.76-23.07 6.61-.83-2.88L50 46.22l.83 2.89Zm4.9 67.25-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c.51.91 1.09 1.79 1.71 2.63Z'/%3e%3cpath fill-opacity='.15' d='m72.71 44.51-1.81.52-4.35-15.17-29.78 8.54-15.74 4.51a5.27 5.27 0 0 0-3.61 6.51L21.89 65l16.77 58.48 1.87 6.51c.8 2.79 3.71 4.41 6.5 3.61l3.89-1.12 19.24-5.51a29.706 29.706 0 0 1-14.43-10.61l-.06.02-9.72 2.79-.83-2.89 8.67-2.48.23-.07c-.15-.24-.29-.48-.43-.73A29.64 29.64 0 0 1 50 98.82c0-.91.04-1.81.12-2.7l-9.96 2.86-.82-2.88 11.25-3.23c.79-3.88 2.34-7.48 4.48-10.65l-18.21 5.22-.83-2.88 22.34-6.41a29.14 29.14 0 0 1 6.07-4.82l4.89-17.04-38.26 10.97-.83-2.89 40.07-11.49 2.4-8.37ZM27.76 55.72l-.83-2.88L50 46.22l.83 2.89-23.07 6.61Z'/%3e%3cpath fill-opacity='.1' d='m108.2 131.79-17.97-5.15c2.76-1.04 5.32-2.48 7.61-4.25l10.36 9.4ZM135.84 58l-11.33-3.25 3.19-11.14 1.16-4.04-6.22-1.78-39.3-11.27a5.27 5.27 0 0 0-6.51 3.61l-1.34 4.68-2.78 9.7-2.4 8.37-.98 3.41-4.89 17.04c4.47-2.69 9.7-4.24 15.29-4.24s11.22 1.66 15.79 4.55a28.65 28.65 0 0 1 4.74 3.68l23.71 6.8-.82 2.89-19.27-5.52c2.3 3.17 3.97 6.81 4.85 10.75l11.94 3.42-.83 2.88-10.55-3.03c.12 1.09.18 2.19.18 3.31 0 4.7-1.09 9.14-3.03 13.09-.22.45-.45.89-.7 1.32l.67.19 8.47 2.43-.83 2.88-6.55-1.88 10.53 9.55 1.87 1.69 1.27-4.45 16.88-58.86 1.63-5.68-3.84-1.1ZM82.85 38.89l.23-.82 23.07 6.62-.82 2.88-18.83-5.4-2.81-.81-1.43-.41.59-2.06Zm46.09 27.93L90.4 55.77l-9.63-2.76-1.82-.52.65-2.27.18-.62 9.64 2.77 40.34 11.57-.82 2.88Z'/%3e%3cpath fill-opacity='.35' d='m75.49 34.81-2.78 9.7-1.81.52-4.35-15.17 8.94 4.95Z'/%3e%3cpath fill-opacity='.3' d='m128.86 39.57-1.16 4.03v.01l-3.19 11.14L135.84 58l3.84 1.1-10.82-19.53Z'/%3e%3cpath fill-opacity='.35' d='m122.01 130.01-7.12 7.85-5.88-5.33-.81-.74-10.36-9.4c1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32l.79.71 1.75 1.59 10.53 9.55 1.87 1.69 2.11 1.92Z'/%3e%3cpath fill-opacity='.35' fill-rule='evenodd' d='M109.29 95.51c-.13-1.11-.31-2.2-.56-3.27-.88-3.94-2.55-7.58-4.85-10.75-1.07-1.51-2.28-2.9-3.62-4.17a28.65 28.65 0 0 0-4.74-3.68c-4.57-2.89-9.99-4.55-15.79-4.55-5.8 0-10.82 1.55-15.29 4.24a29.14 29.14 0 0 0-6.07 4.82 28.777 28.777 0 0 0-3.3 4.07 29.564 29.564 0 0 0-4.48 10.65 30.145 30.145 0 0 0-.59 5.95c0 5.13 1.3 9.96 3.59 14.17.14.26.28.5.43.74.51.91 1.09 1.79 1.71 2.63a29.706 29.706 0 0 0 14.43 10.61c3 1.03 6.22 1.58 9.57 1.58 3.7 0 7.24-.68 10.5-1.91 2.76-1.04 5.32-2.48 7.61-4.25 1.83-1.39 3.49-3 4.94-4.79.46-.56.9-1.13 1.3-1.73.32-.43.61-.87.88-1.32.28-.43.54-.87.78-1.32.25-.43.48-.87.7-1.32 1.94-3.95 3.03-8.39 3.03-13.09 0-1.12-.06-2.22-.18-3.31Zm-4.98 8.78a24.97 24.97 0 0 1-4.91 10.24c-.31.4-.63.78-.97 1.15-.02.02-.04.05-.06.07-.27.3-.55.59-.83.87-.29.28-.58.56-.88.83-.59.55-1.21 1.06-1.86 1.54-.65.49-1.32.94-2.01 1.36l-.42.24s-.01.01-.02.01c-.55.33-1.12.63-1.7.91-1.1.53-2.25.98-3.43 1.35-2.01.62-4.14 1-6.33 1.1-.1.01-.19.01-.29.01-.29.02-.58.02-.87.02-2.61 0-5.12-.4-7.48-1.13a24.94 24.94 0 0 1-5.57-2.51c-.21-.13-.43-.27-.64-.4-.21-.13-.41-.27-.62-.42-.26-.17-.5-.35-.75-.54-.65-.48-1.27-.99-1.86-1.54-.84-.76-1.62-1.57-2.35-2.44-.69-.81-1.32-1.68-1.9-2.58a25.1 25.1 0 0 1-3.22-7.35c-.51-2-.78-4.1-.78-6.26 0-1.38.11-2.74.33-4.06.18-1.15.44-2.26.78-3.34 1.28-4.17 3.61-7.87 6.68-10.8.26-.26.52-.5.79-.71a24.966 24.966 0 0 1 16.59-6.26c1.39 0 2.74.11 4.07.33 4.28.69 8.2 2.47 11.46 5.04.85.65 1.66 1.37 2.42 2.14 2.63 2.68 4.68 5.95 5.9 9.6.38 1.09.68 2.21.89 3.37a25.259 25.259 0 0 1-.16 10.16Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.05' fill-rule='evenodd' d='M104.47 94.13c-.21-1.16-.51-2.28-.89-3.37a25.082 25.082 0 0 0-5.9-9.6c-.76-.77-1.57-1.49-2.42-2.14a24.907 24.907 0 0 0-11.46-5.04c-1.33-.22-2.68-.33-4.07-.33a24.966 24.966 0 0 0-16.59 6.26c-.27.21-.53.45-.79.71-3.07 2.93-5.4 6.63-6.68 10.8-.34 1.08-.6 2.19-.78 3.34-.22 1.32-.33 2.68-.33 4.06 0 2.16.27 4.26.78 6.26a25.1 25.1 0 0 0 3.22 7.35c.58.9 1.21 1.77 1.9 2.58.73.87 1.51 1.68 2.35 2.44.59.55 1.21 1.06 1.86 1.54.25.19.49.37.75.54.21.15.41.29.62.42.21.13.43.27.64.4a24.94 24.94 0 0 0 5.57 2.51c2.36.73 4.87 1.13 7.48 1.13.29 0 .58 0 .87-.02.1 0 .19 0 .29-.01 2.19-.1 4.32-.48 6.33-1.1 1.18-.37 2.33-.82 3.43-1.35.58-.28 1.15-.58 1.7-.91.01 0 .02 0 .02-.01l.42-.24c.69-.42 1.36-.87 2.01-1.36.65-.48 1.27-.99 1.86-1.54.3-.27.59-.55.88-.83.28-.28.56-.57.83-.87.02-.02.04-.05.06-.07.34-.37.66-.75.97-1.15.66-.82 1.27-1.68 1.83-2.59a25.174 25.174 0 0 0 3.68-13.12c0-1.6-.15-3.17-.44-4.69Zm-14.69 9.35h.01l2.41 2.42.14.14c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.5' fill-rule='evenodd' d='M92.34 106.04c.64.72.98 1.65.95 2.61-.01.33-.06.65-.16.96-.17.6-.49 1.14-.94 1.59-.39.39-.86.69-1.37.87-.37.15-.77.23-1.18.24-.96.03-1.89-.3-2.61-.94l-.54-.54-2.56-2.56-1.83-1.82-2.29-2.29-1.27 1.27-1.78 1.78-.64.64-3.52 3.52c-.08.08-.16.16-.24.22-.3.27-.63.48-.99.64-.46.21-.96.32-1.46.32-.23 0-.46 0-.69-.06h-.02c-.26-.04-.51-.11-.76-.21a3.796 3.796 0 0 1-2.08-2.08c-.19-.48-.28-.97-.28-1.47.01-.51.12-1 .32-1.47.2-.46.5-.87.86-1.22l.56-.56 2.43-2.43 4.23-4.23-7.22-7.21c-.1-.1-.2-.2-.29-.31-.23-.28-.43-.58-.57-.91-.2-.47-.31-.96-.32-1.47 0-.17.01-.34.04-.5.03-.33.11-.66.24-.97.19-.47.47-.89.83-1.25.35-.36.78-.64 1.25-.83.46-.19.96-.28 1.47-.27.5 0 1 .11 1.46.31.46.21.88.5 1.23.87l.22.22 2.42 2.42 4.56 4.57 5-5 2.21-2.21c.08-.07.16-.14.24-.2.68-.56 1.53-.85 2.4-.83.99.01 1.92.41 2.62 1.1.4.41.7.89.88 1.42.13.38.21.79.21 1.2a3.7 3.7 0 0 1-1.03 2.64l-7.2 7.21 4.64 4.66h.01l2.41 2.42.14.14h.01Z' clip-rule='evenodd'/%3e%3cpath fill-opacity='.35' d='M124.81 134.66c.07 1.4-.42 2.77-1.36 3.81a5.29 5.29 0 0 1-3.67 1.73c-1.4.07-2.78-.42-3.82-1.36l-1.07-.98 7.12-7.84 1.07.97c1.04.94 1.66 2.26 1.73 3.67Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h160v160H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    -webkit-mask-image: var(--empty-state-image);
 }
 
 
-/*====== (setting) modal ======*/
+/*====== setting modal ======*/
+
+body {
+    --modal-border-color: var(--background-modifier-border);
+}
+
 .vertical-tab-header {
     background-color: var(--background-secondary);
 }
@@ -5993,10 +5876,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M13.249 7.111h-.36v-.267H9.88a1.636 1.636 0 0 1-1.436-2.448l.89-1.467A2.276 2.276 0 0 0 7.337.889a2.222 2.222 0 0 0-2.45 2.147h-3.11a.889.889 0 0 0-.89.888v3.632h1.25A1.391 1.391 0 0 1 3.556 8.75a1.333 1.333 0 0 1-.347 1.027 1.334 1.334 0 0 1-.987.444H.89v3.925a.889.889 0 0 0 .889.889H12a.889.889 0 0 0 .889-.89v-2.59h.444a2.223 2.223 0 0 0 2.223-2.45 2.29 2.29 0 0 0-2.307-1.995Z'/%3e%3cpath d='M11.933.507 9.391 4.889a.569.569 0 0 0 .489.889h5.089a.569.569 0 0 0 .489-.89L12.916.508a.57.57 0 0 0-.983 0Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.theme-dark .community-item {
-    background-color: var(--background-tertiary);
-}
-
+.theme-dark .community-item,
 .theme-dark.is-phone .community-modal-search-results-wrapper {
     background-color: var(--background-tertiary);
 }
@@ -6398,6 +6278,12 @@ body:not(.is-mobile):not(.css-settings-manager) .app-container:has(.workspace)::
 .tooltip.mod-right {
     transform: none;
     animation: none
+}
+
+/* Prompts */
+
+body {
+    --prompt-border-color: var(--background-modifier-border);
 }
 
 /* ====== editor ====== */
@@ -7253,7 +7139,15 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     content: "10" !important;
 }
 
-/* ====== cursor color ====== */
+/* Cursor */
+
+body {
+    --cursor: pointer;
+    --cursor-link: pointer;
+}
+
+/* caret */
+
 :is(.markdown-source-view.mod-cm6 .cm-content, .mod-cm6 .cm-line, .fancy-cursor input.prompt-input) {
     caret-color: var(--text-accent);
 }
@@ -7627,14 +7521,19 @@ body {
 
 /* ======Blockquotes ====== */
 body {
+    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body {
     /* Blockquotes */
     --blockquote-border-thickness: 3px;
     --blockquote-border-color: var(--interactive-accent);
     --blockquote-font-style: normal;
     --blockquote-color: inherit;
     --blockquote-background-color: transparent;
-    --blockquote-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --blockquote-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --blockquote-background-light: var(--background-alt-light);
+    --blockquote-background-dark: var(--background-alt-dark);
 }
 
 .theme-light .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
@@ -7743,8 +7642,8 @@ body {
 
 body {
     --code-background: transparent;
-    --code-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --code-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --code-background-light: var(--background-alt-light);
+    --code-background-dark: var(--background-alt-dark);
 }
 
 .theme-light kbd,
@@ -7820,8 +7719,8 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 /* ======table ====== */
 body {
     --table-header-background: transparent;
-    --table-header-background-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --table-header-background-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --table-header-background-light: var(--background-alt-light);
+    --table-header-background-dark: var(--background-alt-dark);
     --table-header-background-hover: var(--background-modifier-hover);
     --table-row-background-hover: var(--background-modifier-hover);
     --table-header-weight: var(--font-semibold);
@@ -8045,7 +7944,7 @@ body {
 }
 
 
-/* ====== 图标替换 ====== */
+/* ====== Icon replace ====== */
 .mod-macos svg.sidebar-right,
 svg.sidebar-right {
     background-color: currentColor;
@@ -8209,8 +8108,32 @@ svg.pane-layout,
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="24" height="24"/><path d="M19,3c.53,0,1.04,.21,1.41,.59,.38,.38,.59,.88,.59,1.41v14c0,.53-.21,1.04-.59,1.41-.38,.38-.88,.59-1.41,.59H5c-.53,0-1.04-.21-1.41-.59-.38-.38-.59-.88-.59-1.41V5c0-.53,.21-1.04,.59-1.41,.38-.38,.88-.59,1.41-.59h4.18c.42-1.16,1.52-2,2.82-2s2.4,.84,2.82,2h4.18Zm-7,0c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29c.19-.19,.29-.44,.29-.71s-.11-.52-.29-.71c-.19-.19-.44-.29-.71-.29ZM7,7v-2h-2v14h14V5h-2v2H7Zm5,11l-5-5h3v-4h4v4h3l-5,5Z"/></svg>');
 }
 
+.side-dock-ribbon-action svg.GENERATE_ICON {
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M3.75 4.5a.75.75 0 0 0 0 1.5h16.5a.75.75 0 1 0 0-1.5H3.75Zm2.91 14.152L7.314 18H3.75a.75.75 0 1 0 0 1.5h2.376c.108-.309.286-.6.534-.848Zm3.8-3.795A2.253 2.253 0 0 1 9.129 13.5H3.75a.75.75 0 1 0 0 1.5h6.567l.143-.143Zm.652-4.357.408-.051A.75.75 0 0 0 11.25 9h-7.5a.75.75 0 0 0 0 1.5h7.362Zm4.638-3a.75.75 0 0 1 .744.659l.135 1.1a3 3 0 0 0 2.611 2.61l1.102.136a.75.75 0 0 1 0 1.489l-1.101.135a3 3 0 0 0-2.61 2.612l-.136 1.1a.75.75 0 0 1-1.489 0l-.135-1.1a3 3 0 0 0-2.612-2.61l-1.1-.136a.75.75 0 0 1 0-1.489l1.1-.135a3 3 0 0 0 2.61-2.612l.136-1.1a.75.75 0 0 1 .745-.659Zm0 3.711c-.38.63-.909 1.16-1.539 1.539.63.38 1.16.909 1.539 1.539.38-.63.909-1.16 1.539-1.539a4.511 4.511 0 0 1-1.539-1.539Zm-2.469 4.01a.75.75 0 0 1 0 1.06l-4.5 4.494a.75.75 0 1 1-1.06-1.06l4.5-4.496a.75.75 0 0 1 1.06 0v.002Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
 
 /* ====== MOBILE ====== */
+
+.is-mobile {
+    --background-modifier-form-field: var(--background-modifier-hover);
+}
+
+.is-mobile.theme-light {
+    --interactive-normal: rgba(var(--mono-rgb-100), 0.05);
+    --interactive-hover: rgba(var(--mono-rgb-100), 0.075);
+}
+
+.is-mobile.theme-dark {
+    --search-result-background: var(--background-tertiary);
+    --background-modifier-form-field: var(--background-modifier-hover);
+    --background-modifier-hover: rgba(var(--mono-rgb-100), 0.08);
+    --interactive-normal: var(--background-modifier-border);
+    --interactive-hover: var(--background-modifier-border-hover);
+}
+
+
 .workspace-drawer-ribbon.mod-left,
 .workspace-drawer.mod-left .view-header,
 .workspace-drawer.mod-left .view-content,
@@ -8436,7 +8359,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     padding-bottom: 8px;
 }
 
-.setting-item.style-settings-heading[data-id=Info] .style-settings-collapse-indicator::after {
+.setting-item.style-settings-heading:is([data-id=Info], [data-id=Components], [data-id=Appearance-light], [data-id=Appearance-dark], [data-id=Editor], [data-id=Mobile], [data-id=Plugin]) .style-settings-collapse-indicator::after {
     content: "";
     margin-left: var(--size-4-2);
     display: inline-block;
@@ -8445,78 +8368,33 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     width: 18px;
     height: 18px;
     background-color: var(--text-muted);
+}
+
+.setting-item.style-settings-heading[data-id=Info] .style-settings-collapse-indicator::after {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='%2309244B' d='M9 1.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15ZM9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3Zm-.008 4.5c.419 0 .758.34.758.758V12.1a.75.75 0 0 1-.375 1.4h-.367a.757.757 0 0 1-.758-.758V9a.75.75 0 1 1 0-1.5h.742ZM9 5.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Components] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.125 6.375 6.75 9l-2.625 2.625L1.5 9l2.625-2.625ZM9 1.5l2.625 2.625L9 6.75 6.375 4.125 9 1.5Zm4.875 4.875L16.5 9l-2.625 2.625L11.25 9l2.625-2.625ZM9 11.25l2.625 2.625L9 16.5l-2.625-2.625L9 11.25Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Appearance-light] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M9 3a.726.726 0 0 1-.535-.216.723.723 0 0 1-.215-.534V1.5c0-.213.072-.391.216-.535A.723.723 0 0 1 9 .75a.73.73 0 0 1 .535.216.723.723 0 0 1 .215.534v.75c0 .212-.072.39-.216.534A.723.723 0 0 1 9 3Zm0 14.25a.726.726 0 0 1-.535-.216.723.723 0 0 1-.215-.534v-.75c0-.213.072-.391.216-.535A.723.723 0 0 1 9 15a.73.73 0 0 1 .535.216.723.723 0 0 1 .215.534v.75a.73.73 0 0 1-.216.535.723.723 0 0 1-.534.215Zm6.75-7.5a.726.726 0 0 1-.535-.216A.723.723 0 0 1 15 9c0-.213.072-.391.216-.535a.723.723 0 0 1 .534-.215h.75a.73.73 0 0 1 .535.216.723.723 0 0 1 .215.534c0 .212-.072.39-.216.534a.723.723 0 0 1-.534.216h-.75Zm-14.25 0a.726.726 0 0 1-.535-.216A.723.723 0 0 1 .75 9c0-.213.072-.391.216-.535A.723.723 0 0 1 1.5 8.25h.75a.73.73 0 0 1 .535.216A.723.723 0 0 1 3 9c0 .212-.072.39-.216.534a.723.723 0 0 1-.534.216H1.5Zm12-5.25a.688.688 0 0 1-.206-.507c0-.2.068-.38.206-.543l.262-.282a.68.68 0 0 1 .525-.225.74.74 0 0 1 .544.225.79.79 0 0 1 .235.554.638.638 0 0 1-.235.534l-.281.262a.699.699 0 0 1-.515.207.732.732 0 0 1-.535-.225ZM3.169 14.83a.784.784 0 0 1-.234-.553.645.645 0 0 1 .234-.535l.28-.262a.7.7 0 0 1 .517-.206.73.73 0 0 1 .534.225.7.7 0 0 1 .206.516.762.762 0 0 1-.206.534l-.263.281a.68.68 0 0 1-.525.225.74.74 0 0 1-.543-.225Zm10.575 0-.263-.281a.7.7 0 0 1-.206-.516.73.73 0 0 1 .225-.534.7.7 0 0 1 .516-.207c.206 0 .384.07.534.207l.281.262a.68.68 0 0 1 .225.525.74.74 0 0 1-.225.544.787.787 0 0 1-.553.235.641.641 0 0 1-.534-.235ZM3.45 4.5l-.281-.263a.68.68 0 0 1-.225-.525.74.74 0 0 1 .225-.544.787.787 0 0 1 .553-.234.638.638 0 0 1 .534.234l.263.282a.7.7 0 0 1 .206.516.728.728 0 0 1-.225.534.688.688 0 0 1-.506.206.821.821 0 0 1-.544-.206Zm5.55 9c-1.25 0-2.313-.438-3.188-1.313S4.5 10.25 4.5 9c0-1.25.437-2.313 1.312-3.188S7.75 4.5 9 4.5c1.25 0 2.312.437 3.187 1.312S13.5 7.75 13.5 9c0 1.25-.438 2.312-1.313 3.187S10.25 13.5 9 13.5ZM9 12c.837 0 1.547-.291 2.128-.873C11.71 10.546 12 9.837 12 9c0-.838-.29-1.547-.872-2.129C10.546 6.29 9.837 6 9 6c-.838 0-1.547.29-2.129.872C6.29 7.453 6 8.162 6 9c0 .837.29 1.547.872 2.128C7.454 11.71 8.162 12 9 12Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Appearance-dark] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='%2309244B' fill-rule='evenodd' d='M9.358 3.41a.758.758 0 0 1 .822-1.057A6.752 6.752 0 0 1 9 15.75a6.752 6.752 0 0 1-6.647-5.57.758.758 0 0 1 1.056-.822 4.5 4.5 0 0 0 5.949-5.949Zm1.803.803a6 6 0 0 1-6.947 6.947A5.252 5.252 0 0 0 14.25 9a5.252 5.252 0 0 0-3.09-4.787ZM4.174 5.787l.047.104c.205.423.527.779.929 1.023l.074.044a.05.05 0 0 1 0 .089l-.074.043c-.402.245-.724.6-.929 1.024l-.047.104a.053.053 0 0 1-.098 0l-.047-.104A2.445 2.445 0 0 0 3.1 7.09l-.074-.043a.05.05 0 0 1 0-.089l.074-.044c.402-.244.724-.6.929-1.023l.047-.104a.053.053 0 0 1 .098 0Zm2.123-3.644a.085.085 0 0 1 .155 0l.076.166c.326.674.84 1.24 1.478 1.629l.118.07a.081.081 0 0 1 0 .14l-.118.07a3.891 3.891 0 0 0-1.554 1.795.085.085 0 0 1-.155 0l-.076-.166a3.892 3.892 0 0 0-1.477-1.629l-.118-.07a.081.081 0 0 1 0-.14l.118-.07a3.892 3.892 0 0 0 1.477-1.629l.076-.166Z' clip-rule='evenodd'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Editor] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='%2309244B' d='M9.75 2.25a.75.75 0 0 1 .087 1.495l-.087.005h-6v10.5h10.5v-6a.75.75 0 0 1 1.495-.087l.005.087v6a1.5 1.5 0 0 1-1.388 1.496l-.112.004H3.75a1.5 1.5 0 0 1-1.496-1.388l-.004-.112V3.75a1.5 1.5 0 0 1 1.388-1.496l.112-.004h6Zm4.682.257a.75.75 0 0 1 1.123.99l-.062.071-7.425 7.425a.75.75 0 0 1-1.123-.99l.062-.07 7.425-7.425Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Mobile] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='%2309244B' d='M12.75 1.5a1.5 1.5 0 0 1 1.496 1.388L14.25 3v12a1.5 1.5 0 0 1-1.388 1.496l-.112.004h-7.5a1.5 1.5 0 0 1-1.496-1.388L3.75 15V3a1.5 1.5 0 0 1 1.388-1.496L5.25 1.5h7.5Zm0 1.5h-7.5v12h7.5V3Zm-3.375 9c.184 0 .337.133.369.308l.006.067v.75a.375.375 0 0 1-.308.369l-.067.006h-.75a.375.375 0 0 1-.369-.308l-.006-.067v-.75c0-.184.133-.337.308-.369L8.625 12h.75Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .setting-item.style-settings-heading[data-id=Plugin] .style-settings-collapse-indicator::after {
-    content: "";
-    margin-left: var(--size-4-2);
-    display: inline-block;
-    position: relative;
-    top: 4px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--text-muted);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-rule='evenodd' d='M7.875 3a1.104 1.104 0 0 0-.988 1.597l.122.244a.8.8 0 0 1-.717 1.158H3.75a.75.75 0 0 0-.75.75v.896c1.365-.082 2.625.998 2.625 2.48 0 1.48-1.26 2.56-2.625 2.479v1.645a.75.75 0 0 0 .75.75h1.645c-.081-1.365.999-2.625 2.48-2.625 1.481 0 2.561 1.26 2.48 2.625h.895a.75.75 0 0 0 .75-.75v-2.542a.801.801 0 0 1 1.159-.717l.243.122a1.105 1.105 0 1 0 0-1.975l-.243.122a.8.8 0 0 1-1.16-.717V6.749a.75.75 0 0 0-.75-.75H9.458a.801.801 0 0 1-.717-1.158l.123-.244a1.104 1.104 0 0 0-.988-1.598ZM5.298 4.5c-.237-1.513.922-3 2.577-3 1.654 0 2.814 1.487 2.577 3h.798a2.25 2.25 0 0 1 2.25 2.25v.797c1.513-.237 3 .923 3 2.577s-1.487 2.814-3 2.577v1.548a2.25 2.25 0 0 1-2.25 2.25H9.445a.794.794 0 0 1-.732-1.11l.063-.147a.981.981 0 1 0-1.803 0l.064.148a.796.796 0 0 1-.732 1.11H3.75a2.25 2.25 0 0 1-2.25-2.25v-2.556a.796.796 0 0 1 1.11-.732l.148.064a.982.982 0 0 0 1.25-1.367.981.981 0 0 0-1.25-.436l-.149.064a.796.796 0 0 1-1.11-.732V6.749A2.25 2.25 0 0 1 3.75 4.5h1.549Z' clip-rule='evenodd'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h18v18H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
