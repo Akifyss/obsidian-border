@@ -3023,8 +3023,7 @@ body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-d
 body:not(.accent-color-custom-light) .setting-item[data-id=accent-light],
 body:not(.accent-color-custom-dark) .setting-item[data-id=accent-dark],
 body:not(.table-width-customized) .setting-item[data-id=table-width],
-body.file-icon-remove .setting-item[data-id=colorful-folder],
-body.file-icon-remove .setting-item[data-id=file-icon-color-select],
+body.file-icon-remove .setting-item:is([data-id=colorful-folder], [data-id=file-icon-color-select]),
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
 body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color] {
     display: none;
@@ -7569,7 +7568,6 @@ body {
     border-left: none;
 }
 
-/*.markdown-source-view.mod-cm6 .cm-blockquote-border::before,*/
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
     content: "";
     width: var(--blockquote-border-thickness) !important;
@@ -7580,9 +7578,13 @@ body {
     border-top-right-radius: 0px;
     color: transparent;
     position: absolute;
-    left: 4px !important;
+    left: 0px !important;
     bottom: 4px !important;
     height: calc(100% - 4px);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-line {
+    border-left: 4px solid transparent;
 }
 
 .markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote::before,
