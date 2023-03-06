@@ -34,7 +34,7 @@
 
 ---
 
-+ [Rosé-Pine-Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
++ [Rosé Pine Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine-Dawn.png)
 
 ## Dark Mode
@@ -57,10 +57,10 @@
 
 ---
 
-+ [Rosé-Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
++ [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine.png)
 
-+ [Rosé-Pine-Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
++ [Rosé Pine Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine-Moon.png)
 
 Updating...

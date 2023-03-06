@@ -399,53 +399,6 @@ settings:
         opacity: false
         default: '#5a6ded'
     - 
-        id: interactive-color-light
-        title: Interactive color
-        title.zh: 交互色
-        type: heading
-        collapsed: ture
-        level: 4
-    - 
-        id: interactive-normal
-        title: interactive-normal(light mode)
-        title.zh: interactive-normal（亮色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-hover
-        title: interactive-hover(light mode)
-        title.zh: interactive-hover（亮色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent
-		title: interactive-accent(light mode)
-		title.zh: interactive-accent（亮色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent-hsl
-		title: interactive-accent-hsl(light mode)
-		title.zh: interactive-accent-hsl（亮色模式）
-		type: variable-themed-color
-		format: hsl-values
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent-hover
-		title: interactive-accent-hover(light mode)
-		title.zh: interactive-accent-hover（亮色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
         id: Extended-colors-light
         title: Extended colors
         title.zh: 拓展色
@@ -707,8 +660,8 @@ settings:
         level: 4
     - 
 		id: on-border-light
-        title: On Background (light mode)
-        title.zh: On Background（亮色模式）
+        title: underlying foreground(light mode)
+        title.zh: 底层前景（亮色模式）
         description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
         description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
 		type: variable-color
@@ -859,18 +812,19 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
-        id: on-background-header-light
-        title: On Background
-        title.zh: On Background
+        id: Foreground-header-light
+        title: Foreground
+        title.zh: 前景
         type: heading
         collapsed: ture
         level: 3
     - 
-        id: on-background-info
-        description: "color of elements(text&icon) displayed on background"
-        description.zh: "显示在背景上的元素(text&icon)颜色"
-        type: info-text
-        markdown: true
+        id: text-color-light
+        title: Text & icon color
+        title.zh: 文本 & 图标色
+        type: heading
+        collapsed: ture
+        level: 4
     - 
         id: text-normal
 		title: text-normal(light mode)
@@ -907,6 +861,53 @@ settings:
         id: text-accent-hover
 		title: text-accent-hover(light mode)
         title.zh: text-accent-hover（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-color-light
+        title: Interactive color
+        title.zh: 交互色
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: interactive-normal
+        title: interactive-normal(light mode)
+        title.zh: interactive-normal（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-hover
+        title: interactive-hover(light mode)
+        title.zh: interactive-hover（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent
+		title: interactive-accent(light mode)
+		title.zh: interactive-accent（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hsl
+		title: interactive-accent-hsl(light mode)
+		title.zh: interactive-accent-hsl（亮色模式）
+		type: variable-themed-color
+		format: hsl-values
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hover
+		title: interactive-accent-hover(light mode)
+		title.zh: interactive-accent-hover（亮色模式）
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -1129,7 +1130,6 @@ settings:
         description.zh: 开关滑块的阴影（开启时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-
     - 
         id: toggle-track-color-light
         title: toggle-track-color(light mode)
@@ -1233,53 +1233,6 @@ settings:
         format: hsl-split
         opacity: false
         default: '#5a6ded'
-    - 
-        id: interactive-color-dark
-        title: Interactive color
-        title.zh: 交互色
-        type: heading
-        collapsed: ture
-        level: 4
-    - 
-        id: interactive-normal
-        title: interactive-normal(dark mode)
-        title.zh: interactive-normal（暗色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-hover
-        title: interactive-hover(dark mode)
-        title.zh: interactive-hover（暗色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent
-		title: interactive-accent(dark mode)
-		title.zh: interactive-accent（暗色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent-hsl
-		title: interactive-accent-hsl(dark mode)
-		title.zh: interactive-accent-hsl（暗色模式）
-		type: variable-themed-color
-		format: hsl-values
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: interactive-accent-hover
-		title: interactive-accent-hover(dark mode)
-		title.zh: interactive-accent-hover（暗色模式）
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
     - 
         id: Extended-colors-dark
         title: Extended colors
@@ -1542,8 +1495,8 @@ settings:
         level: 4
     - 
 		id: on-border-dark
-        title: On Background (dark mode)
-        title.zh: On Background（暗色模式）
+        title: underlying foreground(dark mode)
+        title.zh: 底层前景（暗色模式）
         description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
         description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
 		type: variable-color
@@ -1694,18 +1647,19 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
-        id: on-background-header-dark
-        title: On Background
-        title.zh: On Background
+        id: Foreground-header-dark
+        title: Foreground
+        title.zh: 前景
         type: heading
         collapsed: ture
         level: 3
     - 
-        id: on-background-info
-        description: "color of elements(text&icon) displayed on background"
-        description.zh: "显示在背景上的元素(text&icon)颜色"
-        type: info-text
-        markdown: true
+        id: text-color-dark
+        title: Text & icon color
+        title.zh: 文本 & 图标色
+        type: heading
+        collapsed: ture
+        level: 4
     - 
         id: text-normal
 		title: text-normal(dark mode)
@@ -1742,6 +1696,53 @@ settings:
         id: text-accent-hover
 		title: text-accent-hover(dark mode)
         title.zh: text-accent-hover（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-color-dark
+        title: Interactive color
+        title.zh: 交互色
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: interactive-normal
+        title: interactive-normal(dark mode)
+        title.zh: interactive-normal（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-hover
+        title: interactive-hover(dark mode)
+        title.zh: interactive-hover（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent
+		title: interactive-accent(dark mode)
+		title.zh: interactive-accent（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hsl
+		title: interactive-accent-hsl(dark mode)
+		title.zh: interactive-accent-hsl（暗色模式）
+		type: variable-themed-color
+		format: hsl-values
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hover
+		title: interactive-accent-hover(dark mode)
+		title.zh: interactive-accent-hover（暗色模式）
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -3681,7 +3682,7 @@ body.theme-dark:not(.is-mobile).background-underlying-CSS-dark .app-container {
     background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
 }
 
-/* on-background - underlying */
+/* foreground - underlying */
 body {
     --on-border-light: var(--color-accent-3);
     --on-border-dark: var(--color-accent-3);
@@ -8445,8 +8446,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 
-.setting-item.style-settings-heading:is([data-id=Extended-colors-light], [data-id=Global-background-header-light], [data-id=on-background-header-light], [data-id=interactive-color-light])+.style-settings-container .setting-item .setting-item-control div.theme-dark,
-.setting-item.style-settings-heading:is([data-id=Extended-colors-dark], [data-id=Global-background-header-dark], [data-id=on-background-header-dark], [data-id=interactive-color-dark])+.style-settings-container .setting-item .setting-item-control div.theme-light {
+.setting-item.style-settings-heading:is([data-id=Extended-colors-light], [data-id=Global-background-header-light], [data-id=Foreground-header-light], [data-id=interactive-color-light])+.style-settings-container .setting-item .setting-item-control div.theme-dark,
+.setting-item.style-settings-heading:is([data-id=Extended-colors-dark], [data-id=Global-background-header-dark], [data-id=Foreground-header-dark], [data-id=interactive-color-dark])+.style-settings-container .setting-item .setting-item-control div.theme-light {
     display: none;
 }
 
