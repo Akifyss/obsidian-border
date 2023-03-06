@@ -32,6 +32,11 @@
 + [Side](https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json)
 ![screenshot](img/Side.png)
 
+---
+
++ [Rosé-Pine-Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine-Dawn.png)
+
 ## Dark Mode
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
@@ -49,6 +54,14 @@
 
   + [Lightup-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup-alt.json)
   ![screenshot](img/Lightup-alt.png)
+
+---
+
++ [Rosé-Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine.png)
+
++ [Rosé-Pine-Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé-Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine-Moon.png)
 
 Updating...
 

@@ -1,0 +1,10 @@
+{
+  "Appearance-light@@accent-color-custom-light": true,
+  "Appearance-light@@accent-light": "#D7827E",
+  "Appearance-light@@background-tertiary@@light": "#F2E9E1",
+  "Appearance-light@@background-primary@@light": "#FFFAF3",
+  "Appearance-light@@background-secondary@@light": "#FAF4ED",
+  "Appearance-light@@text-normal@@light": "#575279",
+  "Appearance-light@@text-muted@@light": "#797593",
+  "Appearance-light@@text-faint@@light": "#9893A5"
+}
