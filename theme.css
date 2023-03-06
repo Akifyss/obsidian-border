@@ -399,6 +399,53 @@ settings:
         opacity: false
         default: '#5a6ded'
     - 
+        id: interactive-color-light
+        title: Interactive color
+        title.zh: 交互色
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: interactive-normal
+        title: interactive-normal(light mode)
+        title.zh: interactive-normal（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-hover
+        title: interactive-hover(light mode)
+        title.zh: interactive-hover（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent
+		title: interactive-accent(light mode)
+		title.zh: interactive-accent（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hsl
+		title: interactive-accent-hsl(light mode)
+		title.zh: interactive-accent-hsl（亮色模式）
+		type: variable-themed-color
+		format: hsl-values
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hover
+		title: interactive-accent-hover(light mode)
+		title.zh: interactive-accent-hover（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: Extended-colors-light
         title: Extended colors
         title.zh: 拓展色
@@ -660,10 +707,10 @@ settings:
         level: 4
     - 
 		id: on-border-light
-		title: Customize the color of elements displayed directly on the underlying layer(light mode)
-        title.zh: 自定义 直接显示在底层背景上的元素颜色（亮色模式）
-        description: Includes top tab bar, ribbon menu and status bar
-        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+        title: On Background (light mode)
+        title.zh: On Background（亮色模式）
+        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
+        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
 		type: variable-color
         opacity: ture
         format: hex
@@ -705,7 +752,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: radial-gradient(100% 100% at 13% 50%, rgb(90, 109, 237) 0%, rgb(224, 218, 247) 100%), linear-gradient(6deg, rgb(235, 242, 252) 0%, rgb(90, 109, 237) 5%, rgb(166, 126, 241) 7%, rgb(224, 218, 247) 11%, rgb(90, 109, 237) 16%), radial-gradient(100% 100% at 60% 71%, rgb(224, 218, 247) 0%, rgb(219, 244, 255) 100%), linear-gradient(97deg, rgb(90, 109, 237) 0%, rgb(90, 109, 237) 23%, rgb(90, 109, 237) 53%), linear-gradient(351deg, rgb(235, 242, 252) 0%, rgb(219, 244, 255) 1%, rgb(235, 242, 252) 6%, rgb(224, 218, 247) 10%, rgb(166, 126, 241) 13%, rgb(235, 242, 252) 29%), radial-gradient(100% 100% at 10% 32%, rgb(90, 109, 237) 0%, rgb(219, 244, 255) 100%), radial-gradient(100% 100% at 35% 63%, rgb(224, 218, 247) 0%, rgb(224, 218, 247) 100%);
+        default: ''
     - 
         id: background-underlying-CSS-blend-mode-light
         title: underlying background-blend-mode (light mode)
@@ -713,7 +760,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: overlay, color-burn;
+        default: ''
     - 
         id: Global-background-header-light
         title: Global background
@@ -808,6 +855,59 @@ settings:
         title.zh: 自定义 background-modifier-border-focus（亮色模式）
 		type: variable-themed-color
 		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: on-background-header-light
+        title: On Background
+        title.zh: On Background
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: on-background-info
+        description: "color of elements(text&icon) displayed on background"
+        description.zh: "显示在背景上的元素(text&icon)颜色"
+        type: info-text
+        markdown: true
+    - 
+        id: text-normal
+		title: text-normal(light mode)
+        title.zh: text-normal（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-muted
+		title: text-muted(light mode)
+        title.zh: text-muted（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-faint
+		title: text-faint(light mode)
+        title.zh: text-faint（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-accent
+		title: text-accent(light mode)
+        title.zh: text-accent（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-accent-hover
+		title: text-accent-hover(light mode)
+        title.zh: text-accent-hover（亮色模式）
+		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
@@ -966,13 +1066,6 @@ settings:
         collapsed: ture
         level: 3
     - 
-        id: forced-modification-light
-        title: Enable forced modification
-        title.zh: 启用强制修改
-        description: Avoid some modifications not taking effect
-        description.zh: 避免某些修改不能生效
-        type: class-toggle
-    - 
         id: input-radius-light
         title: input-radius(light mode)
         title.zh: input-radius（亮色模式）
@@ -995,22 +1088,6 @@ settings:
         title.zh: input-shadow-hover（亮色模式）
         description: shadow of button,dropdown, etc.(hovered) Accepts any CSS box-shadow value
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
-        type: variable-text
-        default: ''
-    - 
-        id: interactive-normal-light
-        title: interactive-normal(light mode)
-        title.zh: interactive-normal（亮色模式）
-        description: background color of button,dropdown, etc. Accepts any CSS background-color value
-        description.zh: 按钮，下拉菜单等的背景色 接受任意 CSS background-color 值
-        type: variable-text
-        default: ''
-    - 
-        id: interactive-hover-light
-        title: interactive-hover(light mode)
-        title.zh: interactive-hover（亮色模式）
-        description: background color of button,dropdown, etc.(hovered) Accepts any CSS background-color value
-        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
     - 
@@ -1156,6 +1233,53 @@ settings:
         format: hsl-split
         opacity: false
         default: '#5a6ded'
+    - 
+        id: interactive-color-dark
+        title: Interactive color
+        title.zh: 交互色
+        type: heading
+        collapsed: ture
+        level: 4
+    - 
+        id: interactive-normal
+        title: interactive-normal(dark mode)
+        title.zh: interactive-normal（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-hover
+        title: interactive-hover(dark mode)
+        title.zh: interactive-hover（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent
+		title: interactive-accent(dark mode)
+		title.zh: interactive-accent（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hsl
+		title: interactive-accent-hsl(dark mode)
+		title.zh: interactive-accent-hsl（暗色模式）
+		type: variable-themed-color
+		format: hsl-values
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: interactive-accent-hover
+		title: interactive-accent-hover(dark mode)
+		title.zh: interactive-accent-hover（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
         id: Extended-colors-dark
         title: Extended colors
@@ -1418,10 +1542,10 @@ settings:
         level: 4
     - 
 		id: on-border-dark
-		title: Customize the color of elements displayed directly on the underlying layer(dark mode)
-        title.zh: 自定义 直接显示在底层背景上的元素颜色（暗色模式）
-        description: Includes top tab bar, ribbon menu and status bar
-        description.zh: 包括顶部标签栏、功能区菜单和状态栏
+        title: On Background (dark mode)
+        title.zh: On Background（暗色模式）
+        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
+        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
 		type: variable-color
         opacity: ture
         format: hex
@@ -1463,7 +1587,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: linear-gradient(317deg, rgb(112, 55, 205) 0%, rgb(29, 12, 32) 19%, rgb(101, 31, 113) 19%, rgb(101, 31, 113) 33%), radial-gradient(100% 100% at 90% 9%, rgb(29, 12, 32) 0%, rgb(29, 12, 32) 100%), linear-gradient(109deg, rgb(104, 178, 248) 0%, rgb(80, 110, 229) 15%, rgb(112, 55, 205) 34%, rgb(104, 178, 248) 54%, rgb(104, 178, 248) 65%), radial-gradient(100% 100% at 20% 45%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), radial-gradient(100% 100% at 90% 27%, rgb(80, 110, 229) 0%, rgb(101, 31, 113) 100%), linear-gradient(339deg, rgb(101, 31, 113) 0%, rgb(104, 178, 248) 12%, rgb(101, 31, 113) 14%, rgb(80, 110, 229) 19%, rgb(101, 31, 113) 20%, rgb(29, 12, 32) 30%);
+        default: ''
     - 
         id: background-underlying-CSS-blend-mode-dark
         title: underlying background-blend-mode (dark mode)
@@ -1471,7 +1595,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: soft-light, luminosity, hue, luminosity, hard-light;
+        default: ''
     - 
         id: Global-background-header-dark
         title: Global background
@@ -1566,6 +1690,59 @@ settings:
         title.zh: 自定义 background-modifier-border-focus（暗色模式）
 		type: variable-themed-color
 		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: on-background-header-dark
+        title: On Background
+        title.zh: On Background
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: on-background-info
+        description: "color of elements(text&icon) displayed on background"
+        description.zh: "显示在背景上的元素(text&icon)颜色"
+        type: info-text
+        markdown: true
+    - 
+        id: text-normal
+		title: text-normal(dark mode)
+        title.zh: text-normal（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-muted
+		title: text-muted(dark mode)
+        title.zh: text-muted（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-faint
+		title: text-faint(dark mode)
+        title.zh: text-faint（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-accent
+		title: text-accent(dark mode)
+        title.zh: text-accent（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-accent-hover
+		title: text-accent-hover(dark mode)
+        title.zh: text-accent-hover（暗色模式）
+		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
@@ -1724,13 +1901,6 @@ settings:
         collapsed: ture
         level: 3
     - 
-        id: forced-modification-dark
-        title: Enable forced modification
-        title.zh: 启用强制修改
-        description: Avoid some modifications not taking effect
-        description.zh: 避免某些修改不能生效
-        type: class-toggle
-    - 
         id: input-radius-dark
         title: input-radius(dark mode)
         title.zh: input-radius（暗色模式）
@@ -1753,22 +1923,6 @@ settings:
         title.zh: input-shadow-hover（暗色模式）
         description: shadow of button,dropdown, etc.(hovered) Accepts any CSS box-shadow value
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
-        type: variable-text
-        default: ''
-    - 
-        id: interactive-normal-dark
-        title: interactive-normal(dark mode)
-        title.zh: interactive-normal（暗色模式）
-        description: background color of button,dropdown, etc. Accepts any CSS background-color value
-        description.zh: 按钮，下拉菜单等的背景色 接受任意 CSS background-color 值
-        type: variable-text
-        default: ''
-    - 
-        id: interactive-hover-dark
-        title: interactive-hover(dark mode)
-        title.zh: interactive-hover（暗色模式）
-        description: background color of button,dropdown, etc.(hovered) Accepts any CSS background-color value
-        description.zh: 按钮，下拉菜单等的背景色（鼠标悬停时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
     - 
@@ -2396,30 +2550,6 @@ settings:
 		id: inline-code-normal
 		title: inline code text color
         title.zh: 内联代码颜色
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: text-normal
-		title: text-normal color
-        title.zh: text-normal 颜色
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: text-muted
-		title: text-muted color
-        title.zh: text-muted 颜色
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: text-faint
-		title: text-faint color
-        title.zh: text-faint 颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -3225,9 +3355,6 @@ body {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
-    /*--background-secondary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.4),
-            calc(1.25*var(--accent-l) / 3.6));*/
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3));
@@ -3260,9 +3387,6 @@ body {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 4));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
-    /*--background-secondary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4));*/
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 6),
             calc(var(--accent-l) / 3.6));
@@ -3450,8 +3574,6 @@ body:not(.is-phone) .modal.mod-community-modal {
 /*----------workspace----------*/
 /* ====== background ===== */
 body {
-    --on-border-light: var(--color-accent-3);
-    --on-border-dark: var(--color-accent-3);
     --background-underlying-light: var(--background-tertiary);
     --background-underlying-dark: var(--background-tertiary);
     --background-underlying: var(--background-tertiary);
@@ -3558,6 +3680,41 @@ body.theme-dark:not(.is-mobile).background-underlying-CSS-dark .app-container {
     background: var(--background-underlying-CSS-dark, --background-underlying) !important;
     background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
 }
+
+/* on-background - underlying */
+body {
+    --on-border-light: var(--color-accent-3);
+    --on-border-dark: var(--color-accent-3);
+}
+
+.titlebar,
+.status-bar,
+.workspace-ribbon,
+.workspace-tabs.mod-top .workspace-tab-header-container,
+body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
+    --text-muted: var(--on-border-light);
+    --text-faint: var(--on-border-light);
+
+    --titlebar-text-color: var(--text-muted);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --status-bar-text-color: var(--text-muted);
+    --icon-color: var(--text-muted);
+    --icon-color-hover: var(--text-muted);
+
+    --tab-text-color: var(--text-faint);
+}
+
+.theme-dark .titlebar,
+.theme-dark .status-bar,
+.theme-dark .workspace-ribbon,
+.theme-dark .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
+    --text-muted: var(--on-border-dark);
+    --text-faint: var(--on-border-dark);
+}
+
 
 /* background - mod-left */
 
@@ -4011,15 +4168,6 @@ body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs:not(.mod
     border-top: unset;
 }
 
-body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tab-header {
-    color: var(--on-border-light) !important;
-}
-
-body.theme-light:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
-    --icon-color: var(--on-border-light);
-    --icon-color-hover: var(--on-border-light);
-}
-
 /* card layout dark*/
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace::before {
     display: none;
@@ -4059,15 +4207,6 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-leaf-resize-han
 
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: unset;
-}
-
-body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tab-header {
-    color: var(--on-border-dark) !important;
-}
-
-body.theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
-    --icon-color: var(--on-border-dark);
-    --icon-color-hover: var(--on-border-dark);
 }
 
 /* scrollbar */
@@ -4213,14 +4352,6 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     display: none;
 }
 
-.theme-light .titlebar-button.mod-logo {
-    color: var(--on-border-light);
-}
-
-.theme-dark .titlebar-button.mod-logo {
-    color: var(--on-border-dark);
-}
-
 .theme-light .titlebar-button-container.mod-right .titlebar-button::after {
     content: '';
     background-color: var(--on-border-light);
@@ -4251,13 +4382,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 
 /* ====== status bar====== */
-.theme-light {
-    --status-bar-text-color: var(--on-border-light);
-}
 
-.theme-dark {
-    --status-bar-text-color: var(--on-border-dark);
-}
 
 .status-bar {
     border: none;
@@ -4281,13 +4406,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 /* tab */
 /* tab layout */
-.theme-light .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
-    color: var(--on-border-light) !important;
-}
 
-.theme-dark .workspace-tabs.mod-top:not(.mod-stacked) .workspace-tab-header {
-    color: var(--on-border-dark) !important;
-}
 
 .workspace-tab-header::before,
 .workspace-tab-header::after {
@@ -4373,10 +4492,6 @@ body {
             calc(var(--accent-l) * 0.15), 0.075);
 }
 
-body .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-    --icon-opacity: 1;
-    --icon-color: var(--text-normal);
-}
 
 body.theme-light.color-to-tab-icon-light .mod-root .workspace-tab-header.is-active svg,
 body.theme-light :is(.mod-left-split, .mod-right-split) .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
@@ -4784,12 +4899,7 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 }
 
 /* ====== view-header====== */
-.view-header {
-    --icon-color: var(--text-muted);
-    --icon-color-hover: var(--text-muted);
-    --icon-color-active: var(--text-accent);
-    --icon-color-focused: var(--text-normal);
-}
+
 
 body:not(.is-mobile) .view-header::after {
     width: 100%;
@@ -4966,13 +5076,6 @@ body {
 .canvas-node-container {
     border-width: var(--canvas-card-border-width);
     border-style: var(--canvas-card-border-style);
-}
-
-.canvas-menu {
-    --icon-color: var(--text-muted);
-    --icon-color-hover: var(--text-muted);
-    --icon-color-active: var(--text-accent);
-    --icon-color-focused: var(--text-normal);
 }
 
 
@@ -5835,10 +5938,6 @@ body {
     background-color: var(--background-secondary);
 }
 
-.vertical-tab-header-group-title {
-    color: var(--text-accent);
-}
-
 .settings-search-container.vertical-tab-header-group {
     padding-top: 2px;
 }
@@ -5913,11 +6012,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-track-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04);
     --toggle-track-hovered-shadow-light: inset 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px var(--background-primary), 0px 2px 4px rgba(0, 0, 0, 0.04);
 
-    --interactive-normal: var(--interactive-normal-light);
-    --interactive-hover: var(--interactive-hover-light);
-
-    --interactive-normal-light: var(--color-base-05);
-    --interactive-hover-light: var(--color-base-15);
+    --interactive-normal: var(--color-base-05);
+    --interactive-hover: var(--color-base-15);
 
     --input-radius: var(--input-radius-light);
     --input-shadow: var(--input-shadow-light);
@@ -5949,13 +6045,10 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-track-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
     --toggle-track-hovered-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
 
-    --interactive-normal: var(--interactive-normal-dark);
-    --interactive-hover: var(--interactive-hover-dark);
-
-    --interactive-normal-dark: hsl(calc(var(--accent-h) + 8),
+    --interactive-normal: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 3));
-    --interactive-hover-dark: hsl(calc(var(--accent-h) + 8),
+    --interactive-hover: hsl(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 2.7));
 
@@ -5966,22 +6059,6 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-radius-dark: 5px;
     --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
     --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-.theme-light.forced-modification-light {
-    --interactive-normal: var(--interactive-normal-light) !important;
-    --interactive-hover: var(--interactive-hover-light) !important;
-    --input-radius: var(--input-radius-light) !important;
-    --input-shadow: var(--input-shadow-light) !important;
-    --input-shadow-hover: var(--input-shadow-hover-light) !important;
-}
-
-.theme-dark.forced-modification-dark {
-    --interactive-normal: var(--interactive-normal-dark) !important;
-    --interactive-hover: var(--interactive-hover-dark) !important;
-    --input-radius: var(--input-radius-dark) !important;
-    --input-shadow: var(--input-shadow-dark) !important;
-    --input-shadow-hover: var(--input-shadow-hover-dark) !important;
 }
 
 .theme-light.is-mobile,
@@ -6018,30 +6095,19 @@ body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
 
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
 body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus,
-body:not(.is-mobile) input[type='search']:focus,
-body:not(.is-mobile).theme-dark input[type='search']:focus,
+body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):focus,
 body:not(.is-mobile) input[type='email']:focus,
 body:not(.is-mobile) input[type='password']:focus,
 body:not(.is-mobile) input[type='number']:focus,
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
 body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus-visible,
-body:not(.is-mobile) input[type='search']:focus-visible,
-body:not(.is-mobile).theme-dark input[type='search']:focus-visible,
+body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
 body:not(.is-mobile) input[type='password']:focus-visible,
 body:not(.is-mobile) input[type='number']:focus-visible {
     border: 1px solid var(--color-accent);
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
-
-/*
-body:not(.is-mobile) input[type='search'] {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 0 4px rgba(0, 0, 0, .025);
-}
-
-body:not(.is-mobile).theme-dark input[type='search'] {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .1);
-}*/
 
 .view-header input {
     box-shadow: none !important;
@@ -7145,11 +7211,6 @@ body {
     --cursor-link: pointer;
 }
 
-/* caret */
-
-:is(.markdown-source-view.mod-cm6 .cm-content, .mod-cm6 .cm-line, .fancy-cursor input.prompt-input) {
-    caret-color: var(--text-accent);
-}
 
 /* ====== Bold ====== */
 
@@ -7168,9 +7229,6 @@ body {
 body {
     --list-indent: 2em;
     --list-spacing: 0.075em;
-    --list-marker-color: var(--text-faint);
-    --list-marker-color-hover: var(--text-muted);
-    --list-marker-color-collapsed: var(--text-accent);
     --list-bullet-border: none;
     --list-bullet-radius: 50%;
     --list-bullet-size: 0.3em;
@@ -7926,25 +7984,16 @@ body {
     gap: var(--size-2-2);
 }
 
-.theme-light .workspace-ribbon,
-.theme-light .workspace-tabs.mod-top .workspace-tab-header-container,
-.theme-light .status-bar {
-    --icon-color: var(--on-border-light);
-    --icon-color-hover: var(--on-border-light);
-}
-
-.theme-dark .workspace-ribbon,
-.theme-dark .workspace-tabs.mod-top .workspace-tab-header-container,
-.theme-dark .status-bar {
-    --icon-color: var(--on-border-dark);
-    --icon-color-hover: var(--on-border-dark);
-}
-
 .workspace .mod-root .workspace-tab-header-inner-icon svg {
     width: 16px;
     height: 16px;
 }
 
+svg {
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}
 
 /* ====== Icon replace ====== */
 .mod-macos svg.sidebar-right,
@@ -8105,14 +8154,9 @@ svg.pane-layout,
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M20.56,3.34c-.14-.1-.31-.16-.48-.17-.17-.01-.35,.02-.5,.09L2.57,11.26c-.17,.08-.32,.21-.42,.38-.1,.16-.15,.35-.15,.54,0,.19,.06,.38,.17,.54,.11,.16,.26,.29,.43,.36l5.4,2.36v6.72l5.84-4.17,4.76,2.08c.15,.06,.31,.09,.47,.08s.32-.06,.45-.14c.14-.08,.25-.2,.34-.34,.08-.14,.13-.29,.14-.45l1-15c.01-.17-.02-.35-.1-.5-.08-.16-.19-.29-.34-.39h0Zm-2.47,14.34l-5.27-2.31,3.17-6.21-7.65,4.25-2.93-1.28,13.47-6.34-.79,11.89h0Z"/></svg>');
 }
 
-.side-dock-ribbon-action svg.read-it-later {
+.menu-item.is-warning:hover svg.lucide-trash-2 {
     background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="_灞俖1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="24" height="24"/><path d="M19,3c.53,0,1.04,.21,1.41,.59,.38,.38,.59,.88,.59,1.41v14c0,.53-.21,1.04-.59,1.41-.38,.38-.88,.59-1.41,.59H5c-.53,0-1.04-.21-1.41-.59-.38-.38-.59-.88-.59-1.41V5c0-.53,.21-1.04,.59-1.41,.38-.38,.88-.59,1.41-.59h4.18c.42-1.16,1.52-2,2.82-2s2.4,.84,2.82,2h4.18Zm-7,0c-.27,0-.52,.11-.71,.29-.19,.19-.29,.44-.29,.71s.11,.52,.29,.71c.19,.19,.44,.29,.71,.29s.52-.11,.71-.29c.19-.19,.29-.44,.29-.71s-.11-.52-.29-.71c-.19-.19-.44-.29-.71-.29ZM7,7v-2h-2v14h14V5h-2v2H7Zm5,11l-5-5h3v-4h4v4h3l-5,5Z"/></svg>');
-}
-
-.side-dock-ribbon-action svg.GENERATE_ICON {
-    background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' d='M3.75 4.5a.75.75 0 0 0 0 1.5h16.5a.75.75 0 1 0 0-1.5H3.75Zm2.91 14.152L7.314 18H3.75a.75.75 0 1 0 0 1.5h2.376c.108-.309.286-.6.534-.848Zm3.8-3.795A2.253 2.253 0 0 1 9.129 13.5H3.75a.75.75 0 1 0 0 1.5h6.567l.143-.143Zm.652-4.357.408-.051A.75.75 0 0 0 11.25 9h-7.5a.75.75 0 0 0 0 1.5h7.362Zm4.638-3a.75.75 0 0 1 .744.659l.135 1.1a3 3 0 0 0 2.611 2.61l1.102.136a.75.75 0 0 1 0 1.489l-1.101.135a3 3 0 0 0-2.61 2.612l-.136 1.1a.75.75 0 0 1-1.489 0l-.135-1.1a3 3 0 0 0-2.612-2.61l-1.1-.136a.75.75 0 0 1 0-1.489l1.1-.135a3 3 0 0 0 2.61-2.612l.136-1.1a.75.75 0 0 1 .745-.659Zm0 3.711c-.38.63-.909 1.16-1.539 1.539.63.38 1.16.909 1.539 1.539.38-.63.909-1.16 1.539-1.539a4.511 4.511 0 0 1-1.539-1.539Zm-2.469 4.01a.75.75 0 0 1 0 1.06l-4.5 4.494a.75.75 0 1 1-1.06-1.06l4.5-4.496a.75.75 0 0 1 1.06 0v.002Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5h18m-2 4v11c0 1-1 2-2 2H7c-1 0-2-1-2-2V9m3-4V3c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 6v6m4-6v6'/%3e%3c/svg%3e");
 }
 
 
@@ -8401,10 +8445,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 
-.setting-item.style-settings-heading[data-id=Extended-colors-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
-.setting-item.style-settings-heading[data-id=Extended-colors-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light,
-.setting-item.style-settings-heading[data-id=Global-background-header-light]+.style-settings-container .setting-item .setting-item-control div.theme-dark,
-.setting-item.style-settings-heading[data-id=Global-background-header-dark]+.style-settings-container .setting-item .setting-item-control div.theme-light {
+.setting-item.style-settings-heading:is([data-id=Extended-colors-light], [data-id=Global-background-header-light], [data-id=on-background-header-light], [data-id=interactive-color-light])+.style-settings-container .setting-item .setting-item-control div.theme-dark,
+.setting-item.style-settings-heading:is([data-id=Extended-colors-dark], [data-id=Global-background-header-dark], [data-id=on-background-header-dark], [data-id=interactive-color-dark])+.style-settings-container .setting-item .setting-item-control div.theme-light {
     display: none;
 }
 
@@ -8421,6 +8463,10 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 
 .reset-button.svelte-1vwr9dd.svelte-1vwr9dd {
     line-height: 16px;
+}
+
+.workspace-leaf-content[data-type=calendar] .view-content {
+    padding: 8px 0 0 0;
 }
 
 /*surfing*/
@@ -8528,4 +8574,9 @@ body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+8) .checkbox.
 
 .toggle.svelte-sx5ktw.svelte-sx5ktw:hover {
     opacity: 1 !important;
+}
+
+/* Text Generator */
+.modelTitle {
+    display: none;
 }
