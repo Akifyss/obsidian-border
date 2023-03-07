@@ -237,6 +237,11 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: immersive-canvas
+        title: immersive canvas
+        title.zh: 沉浸式白板
+        type: class-toggle
+    - 
 		id: canvas-background
 		title: Customize canvas background color
         title.zh: 自定义 canvas 背景色
@@ -3457,6 +3462,8 @@ body {
     --anim-duration-fast: 150ms;
     --anim-duration-moderate: 300ms;
     --anim-duration-slow: 600ms;
+    --anim-in: var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
 .document-search-container,
@@ -4563,71 +4570,72 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
 
 /*autohide transition*/
 body:not(.is-mobile) .workspace::before {
-    transition: width var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: width var(--anim-out), height var(--anim-out);
 }
 
 body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .status-bar:hover) .workspace::before {
-    transition: width var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: width var(--anim-out), height var(--anim-in);
 }
 
 body:not(.is-mobile):has(.workspace-ribbon.side-dock-ribbon:hover) .workspace::before {
-    transition: width var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: width var(--anim-in), height var(--anim-out);
 }
 
 /*tab autohide*/
 
 body:not(.is-mobile).tab-autohide .workspace-tabs {
     gap: 0px;
-    transition: gap var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: gap var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
     gap: 4px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: gap var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
     height: 40px;
     opacity: 1;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
+/*
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
     transform: translateY(-22px);
     opacity: 0;
-    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
-    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
+    transition: transform var(--anim-in), opacity var(--anim-in);
+}*/
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px var(--divider-color);
-    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px var(--divider-color);
-    transition: box-shadow var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: box-shadow var(--anim-in);
 }
 
 
@@ -4637,56 +4645,56 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical.mod-root>*>.work
 body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) + 24px);
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 16px);
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in);
 }
 
 /*---*/
 
 body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
     gap: 0px;
-    transition: gap var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: gap var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
-    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: gap var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top {
     gap: 4px;
-    transition: gap var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: gap var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide .workspace::before {
@@ -4701,36 +4709,37 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button-container
 body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     height: 16px;
     opacity: 0;
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
+/*
 body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container-inner {
     transform: translateY(-22px);
     opacity: 0;
-    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
-    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
+    transition: transform var(--anim-in), opacity var(--anim-in);
+}*/
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .titlebar-button-container,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mod-top .workspace-tab-header-container {
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
 
@@ -4738,44 +4747,44 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .mo
 body:not(.is-mobile).status-bar-autohide .status-bar {
     opacity: 0;
     height: 16px;
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).status-bar-autohide .status-bar:hover {
     opacity: 1;
     height: 24px;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
 body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
     padding-bottom: 16px;
-    transition: padding-bottom var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: padding-bottom var(--anim-out);
 }
 
 body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
     padding-bottom: 24px;
-    transition: padding-bottom var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: padding-bottom var(--anim-in);
 }
 
 /*ribbon autohide*/
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left {
     --ribbon-width: 16px;
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-out);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover {
     --ribbon-width: 44px;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: all var(--anim-in);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left>* {
     opacity: 0;
-    transition: all var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: all var(--anim-out);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
     opacity: 1;
-    transition: all var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: all var(--anim-in);
 }
 
 body:not(.is-mobile).Ribbon-autohide .workspace::before {
@@ -4798,30 +4807,30 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.works
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
 body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), padding-left var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out), padding-left var(--anim-out);
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.workspace-ribbon.side-dock-ribbon:hover) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), padding-left var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out), padding-left var(--anim-in);
 }
 
 body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), padding-left var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in), padding-left var(--anim-out);
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
-    transition: width var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: width var(--anim-out);
 }
 
 body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos:has(.workspace-ribbon.side-dock-ribbon:hover).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
-    transition: width var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: width var(--anim-in);
 }
 
 /*nav header autohide*/
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header {
     height: 16px;
     opacity: 0;
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover,
@@ -4829,13 +4838,14 @@ body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.
 body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header {
     height: 44px;
     opacity: 1;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), opacity var(--anim-in);
 }
 
+/*
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
     transform: translateY(-22px);
     opacity: 0;
-    transition: transform var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .nav-buttons-container,
@@ -4843,8 +4853,8 @@ body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.
 body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
     transform: translateY(0px);
     opacity: 1;
-    transition: transform var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
-}
+    transition: transform var(--anim-in), opacity var(--anim-in);
+}*/
 
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
@@ -4916,7 +4926,7 @@ body:not(.is-mobile) .view-header::after {
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header {
     height: 0;
     margin-top: -1px;
-    transition: height var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing), margin var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: height var(--anim-out), margin var(--anim-out);
 }
 
 body:not(.is-mobile) .mod-root .workspace-leaf .view-header:focus-within,
@@ -4924,14 +4934,14 @@ body:not(.is-mobile) .mod-root .workspace-leaf .view-header:hover,
 body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
     height: var(--header-height);
     margin-top: 0px;
-    transition: height var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing), margin var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: height var(--anim-in), margin var(--anim-in);
 }
 
 body:not(.is-mobile) .view-actions,
 body:not(.is-mobile) .view-header-nav-buttons,
 body:not(.is-mobile) .view-header-title-container {
     opacity: 0;
-    transition: opacity var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
+    transition: opacity var(--anim-out);
 }
 
 body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-actions,
@@ -4944,7 +4954,7 @@ body:not(.is-mobile) .view-header:hover .view-actions,
 body:not(.is-mobile) .view-header:hover .view-header-nav-buttons,
 body:not(.is-mobile) .view-header:hover .view-header-title-container {
     opacity: 1;
-    transition: opacity var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
+    transition: opacity var(--anim-in);
 }
 
 /*view-header fixed*/
@@ -5103,6 +5113,20 @@ body.canvas-card-menu-right .canvas-card-menu {
     background-color: transparent;
     border: 1px solid var(--background-modifier-border);
 }
+
+body.immersive-canvas .canvas-card-menu,
+body.immersive-canvas .canvas-controls {
+    opacity: 0;
+    transition: opacity var(--anim-out);
+}
+
+
+body.immersive-canvas .canvas-card-menu:hover,
+body.immersive-canvas .canvas-controls:hover {
+    opacity: 1;
+    transition: opacity var(--anim-in)
+}
+
 
 /* hover effect*/
 @media (hover: hover) {
