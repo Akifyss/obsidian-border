@@ -1352,7 +1352,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(0,0,0,0.5);
+        default: ''
     - 
         id: background-mod-left-CSS-blend-mode-dark
         title: Left sidepane background-blend-mode (dark mode)
@@ -2907,6 +2907,51 @@ settings:
         title.zh: 自定义 块引用背景（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
+        id: Embeds
+        title: Embeds
+        title.zh: 内嵌文档
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: seamless-embeds
+        title: seamless embeds
+        title.zh: 无缝嵌入
+        type: class-toggle
+    - 
+        id: embed-background
+        title: embed background
+        title.zh: 内嵌文档 背景
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: embed-padding
+        title: embed padding
+        title.zh: 内嵌文档 padding
+        description: Input any CSS padding value
+        description.zh: 输入任意 CSS padding 值
+        type: variable-text
+        default: ''
+    - 
+        id: embed-border-radius
+        title: embed border radius
+        title.zh: 内嵌文档 圆角半径
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: ''
+    - 
+        id: embed-font-style
+        title: embed font style
+        title.zh: 内嵌文档 字体风格
+        description: Input any CSS font-style value
+        description.zh: 输入任意 CSS font-style 值
         type: variable-text
         default: ''
 
@@ -7841,6 +7886,20 @@ body.table-width-customized .markdown-rendered .markdown-preview-sizer>div:has(>
     overflow: auto;
     width: var(--table-width) !important;
     margin-left: calc((var(--table-width) - 100%) / -2) !important;
+}
+
+/* ===== embeds ====== */
+body {
+    /* Embeds */
+    --embed-border-radius: 0px;
+}
+
+body.seamless-embeds {
+    --embed-border-left: none;
+}
+
+.markdown-embed {
+    border-radius: var(--embed-border-radius);
 }
 
 /* ===== image ====== */
