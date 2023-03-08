@@ -517,7 +517,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(255, 255, 255, 0.5);
+        default: ''
     - 
         id: background-mod-left-CSS-blend-mode-light
         title: Left sidepane background-blend-mode (light mode)
@@ -525,7 +525,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-left-CSS-backdrop-filter-light
         title: Left sidepane backdrop-filter (light mode)
@@ -533,7 +533,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: mod-right-split-background-header-light
         title: Right sidepane background
@@ -578,7 +578,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(255, 255, 255, 0.5);
+        default: ''
     - 
         id: background-mod-right-CSS-blend-mode-light
         title: Right sidepane background-blend-mode (light mode)
@@ -586,7 +586,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-right-CSS-backdrop-filter-light
         title: Right sidepane backdrop-filter (light mode)
@@ -594,7 +594,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: mod-root-split-background-header-light
         title: Middle pane background
@@ -639,7 +639,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(255, 255, 255, 0.5);
+        default: ''
     - 
         id: background-mod-root-CSS-blend-mode-light
         title: Middle pane background-blend-mode (light mode)
@@ -647,7 +647,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-root-CSS-backdrop-filter-light
         title: Middle pane backdrop-filter (light mode)
@@ -655,7 +655,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: underlying-background-header-light
         title: Underlying background
@@ -718,7 +718,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: ''
+        default: overlay, color-burn
     - 
         id: Global-background-header-light
         title: Global background
@@ -939,7 +939,7 @@ settings:
         description: Input your box-shadow value here
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
-        default: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2)
+        default: ''
     - 
         id: Active-states-light
         title: Active states
@@ -986,7 +986,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: var(--background-primary)
+        default: ''
     - 
         id: shadow-activated-tab-header-light
         title: activated Tab header shadow(light mode)
@@ -994,7 +994,7 @@ settings:
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
-        default: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2)
+        default: ''
     - 
         id: Active-states-file-explorer-light
         title: Active states(file explorer)
@@ -1055,7 +1055,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(0, 0, 0, 0.05)
+        default: ''
     - 
         id: shadow-activated-file-light
         title: Activated file shadow(light mode)
@@ -1063,7 +1063,7 @@ settings:
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0 0 0 1px rgba(0, 0, 0, 0.1)
+        default: ''
     - 
         id: UI-Controls-light
         title: UI Controls
@@ -1360,7 +1360,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-left-CSS-backdrop-filter-dark
         title: Left sidepane backdrop-filter (dark mode)
@@ -1368,7 +1368,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: mod-right-split-background-header-dark
         title: Right sidepane background
@@ -1413,7 +1413,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(0,0,0,0.5);
+        default: ''
     - 
         id: background-mod-right-CSS-blend-mode-dark
         title: Right sidepane background-blend-mode (dark mode)
@@ -1421,7 +1421,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-right-CSS-backdrop-filter-dark
         title: Right sidepane backdrop-filter (dark mode)
@@ -1429,7 +1429,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: mod-root-split-background-header-dark
         title: Middle pane background
@@ -1474,7 +1474,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(0,0,0,0.5);
+        default: ''
     - 
         id: background-mod-root-CSS-blend-mode-dark
         title: Middle pane background-blend-mode (dark mode)
@@ -1482,7 +1482,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: normal;
+        default: normal
     - 
         id: background-mod-root-CSS-backdrop-filter-dark
         title: Middle pane backdrop-filter (dark mode)
@@ -1490,7 +1490,7 @@ settings:
         description: Input any CSS backdrop-filter value
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
-        default: blur(32px);
+        default: blur(32px)
     - 
         id: underlying-background-header-dark
         title: Underlying background
@@ -1553,7 +1553,7 @@ settings:
         description: Input any CSS background-blend-mode value
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
-        default: ''
+        default: soft-light, luminosity, hue, luminosity, hard-light
     - 
         id: Global-background-header-dark
         title: Global background
@@ -1774,7 +1774,7 @@ settings:
         description: Input your box-shadow value here
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
-        default: 0px 0px 0px 1px var(--divider-color)
+        default: ''
     - 
         id: Active-states-dark
         title: Active states
@@ -1821,7 +1821,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: var(--background-modifier-active-hover)
+        default: ''
     - 
         id: shadow-activated-tab-header-dark
         title: activated Tab header shadow(dark mode)
@@ -1829,7 +1829,7 @@ settings:
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0 0 0 1px var(--divider-color)
+        default: ''
     - 
         id: Active-states-file-explorer-dark
         title: Active states(file explorer)
@@ -1890,7 +1890,7 @@ settings:
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
-        default: rgba(255, 255, 255, 0.075)
+        default: ''
     - 
         id: shadow-activated-file-dark
         title: Activated file shadow(dark mode)
@@ -1898,7 +1898,7 @@ settings:
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
-        default: inset 0 0 0 1px rgba(255, 255, 255, 0.15)
+        default: ''
     - 
         id: UI-Controls-dark
         title: UI Controls
@@ -4605,18 +4605,19 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-/*
+
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
     transform: translateY(-22px);
     opacity: 0;
     transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner {
+body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
-}*/
+}
 
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
@@ -4717,19 +4718,6 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
 }
-
-/*
-body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container-inner {
-    transform: translateY(-22px);
-    opacity: 0;
-    transition: transform var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container-inner {
-    transform: translateY(0px);
-    opacity: 1;
-    transition: transform var(--anim-in), opacity var(--anim-in);
-}*/
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
@@ -4841,7 +4829,7 @@ body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .wo
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-/*
+
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
     transform: translateY(-22px);
     opacity: 0;
@@ -4854,7 +4842,7 @@ body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .wo
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
-}*/
+}
 
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
