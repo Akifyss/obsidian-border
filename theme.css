@@ -65,9 +65,9 @@ settings:
         collapsed: true
         level: 3
     - 
-        id: CTA-BTN-disable
-        title: Disable bigger "New note" button
-        title.zh: 禁用 更大的“New Note”按钮
+        id: CTA-BTN-enable
+        title: Enable bigger "New note" button
+        title.zh: 启用 更大的“New Note”按钮
         type: class-toggle
     - 
         id: file-names-untrim
@@ -866,6 +866,22 @@ settings:
         id: text-accent-hover
 		title: text-accent-hover(light mode)
         title.zh: text-accent-hover（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-on-accent
+		title: text-on-accent(light mode)
+        title.zh: text-on-accent（亮色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-on-accent-inverted
+		title: text-on-accent-inverted(light mode)
+        title.zh: text-on-accent-inverted（亮色模式）
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -1701,6 +1717,22 @@ settings:
         id: text-accent-hover
 		title: text-accent-hover(dark mode)
         title.zh: text-accent-hover（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-on-accent
+		title: text-on-accent(dark mode)
+        title.zh: text-on-accent（暗色模式）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: text-on-accent-inverted
+		title: text-on-accent-inverted(dark mode)
+        title.zh: text-on-accent-inverted（暗色模式）
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -4061,7 +4093,7 @@ body:not(.is-mobile).theme-dark .workspace:not(.is-left-sidedock-open) .workspac
 
 body {
     --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
-    --card-shadow-dark: 0px 0px 0px 1px var(--divider-color);
+    --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
     --card-border-radius-light: 8px;
     --card-border-radius-dark: 8px;
     --card-shadow-border-radius-light: calc(var(--card-border-radius-light) - 1px);
@@ -4082,7 +4114,7 @@ body:not(.is-mobile) .workspace::before {
 
 body:not(.is-mobile).theme-dark .workspace::before {
     border-radius: var(--card-shadow-border-radius-dark, 7px);
-    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
+    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--background-modifier-border));
 }
 
 body:not(.is-mobile).is-popout-window .workspace::before {
@@ -4186,7 +4218,7 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-split.mod-verti
 body:not(.is-mobile).theme-dark.card-layout-open-dark .workspace-tab-container {
     border-radius: var(--card-border-radius-dark, 8px) !important;
     overflow: hidden !important;
-    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--divider-color));
+    box-shadow: var(--card-shadow-dark, 0px 0px 0px 1px var(--background-modifier-border));
 }
 
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs,
@@ -4465,21 +4497,9 @@ body {
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
     --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
-    --shadow-activated-tab-header-light-alt: var(--shadow-activated-tab-header-light), 0 0 0 1px var(--divider-color);
+    --shadow-activated-tab-header-light-alt: var(--shadow-activated-tab-header-light), 0 0 0 1px var(--background-modifier-border);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
-    --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--divider-color);
-}
-
-.theme-dark .workspace-tab-header-inner {
-    --background-modifier-active-hover: hsla(var(--accent-h),
-            calc(var(--accent-s) * 0.64),
-            calc(var(--accent-l) * 1.125), 0.15);
-}
-
-.theme-light .workspace-tab-header-inner {
-    --background-modifier-active-hover: hsla(var(--accent-h),
-            calc(var(--accent-s)),
-            calc(var(--accent-l) * 0.15), 0.075);
+    --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border);
 }
 
 
@@ -4531,8 +4551,8 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
 /* tab - mobile*/
 
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
-    background: var(--background-modifier-active-hover);
-    box-shadow: inset 0 0 0 1px var(--divider-color);
+    background: var(--background-modifier-hover);
+    box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
 /* ====== divider vertical height ===== */
@@ -5114,7 +5134,7 @@ body.immersive-canvas .canvas-controls:hover {
 }
 
 .graph-controls.is-close {
-    border: 1px solid var(--divider-color);
+    border: 1px solid var(--background-modifier-border);
     padding: 0px;
     border-radius: var(--radius-s);
 }
@@ -5194,7 +5214,7 @@ body.is-mobile:not(.new-tab-text-btn-restore) .empty-state-action {
 
 body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(1),
 body:not(.new-tab-text-btn-restore) .empty-state-action:nth-child(2) {
-    box-shadow: inset -1px 0px 0px var(--background-modifier-border);
+    box-shadow: inset -1px 0px 0px var(--divider-color);
 }
 
 body:not(.new-tab-text-btn-restore) .empty-state-action:hover {
@@ -5450,7 +5470,7 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
 
 /* ====== file pane====== */
 /*bigger cta*/
-body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
+body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type {
     background-color: var(--interactive-accent);
     color: var(--text-on-accent);
     box-shadow: var(--input-shadow);
@@ -5459,12 +5479,11 @@ body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="fi
     padding: var(--size-2-3);
 }
 
-
-body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
+body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type:hover {
     background-color: var(--interactive-accent-hover);
 }
 
-body:not(.is-mobile):not(.CTA-BTN-disable) .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
+body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-explorer"] .nav-header .nav-buttons-container .clickable-icon.nav-action-button:first-of-type::after {
     content: "New Note";
     font-size: var(--font-ui-small);
     margin-left: auto;
@@ -5984,7 +6003,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-light);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-light);
     --toggle-thumb-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
-    --toggle-thumb-enabled-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3);
+    --toggle-thumb-enabled-shadow-light: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 4px hsla(var(--interactive-accent-hsl), 0.3);
 
     --toggle-track-color: var(--toggle-track-color-light);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-light);
@@ -6017,7 +6036,7 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-thumb-shadow: var(--toggle-thumb-shadow-dark);
     --toggle-thumb-enabled-shadow: var(--toggle-thumb-enabled-shadow-dark);
     --toggle-thumb-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.6), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px rgba(0, 0, 0, 0.25), inset 0px 4px 4px #FFFFFF;
-    --toggle-thumb-enabled-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5), inset 0px 4px 4px #FFFFFF;
+    --toggle-thumb-enabled-shadow-dark: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.4), inset 0px -4px 6px hsla(var(--interactive-accent-hsl), 0.5), inset 0px 4px 4px #FFFFFF;
 
     --toggle-track-color: var(--toggle-track-color-dark);
     --toggle-track-enabled-color: var(--toggle-track-enabled-color-dark);
@@ -6089,7 +6108,7 @@ body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):focus-visible,
 body:not(.is-mobile) input[type='email']:focus-visible,
 body:not(.is-mobile) input[type='password']:focus-visible,
 body:not(.is-mobile) input[type='number']:focus-visible {
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--interactive-accent);
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
 
@@ -6190,7 +6209,7 @@ body {
 }
 
 .prompt-instructions {
-    border-top: 1px solid var(--background-modifier-border);
+    border-top: 1px solid var(--divider-color);
 }
 
 input.prompt-input {
@@ -6462,7 +6481,7 @@ body {
 
 
 body:not(.inline-title-divider-remove) .inline-title {
-    border-bottom: 1px solid var(--background-modifier-border);
+    border-bottom: 1px solid var(--divider-color);
     margin-bottom: var(--size-4-3);
 }
 
@@ -6473,7 +6492,7 @@ body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
 }
 
 .embedded-backlinks {
-    border-top: 1px solid var(--background-modifier-border);
+    border-top: 1px solid var(--divider-color);
 }
 
 /* h1 */
@@ -7725,20 +7744,20 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-    border-top: 1px dashed var(--divider-color);
+    border-top: 1px dashed var(--background-modifier-border);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-    border-bottom: 1px dashed var(--divider-color);
+    border-bottom: 1px dashed var(--background-modifier-border);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-bg {
-    border-left: 1px dashed var(--divider-color);
-    border-right: 1px dashed var(--divider-color);
+    border-left: 1px dashed var(--background-modifier-border);
+    border-right: 1px dashed var(--background-modifier-border);
 }
 
 .markdown-rendered pre {
-    border: 1px dashed var(--divider-color);
+    border: 1px dashed var(--background-modifier-border);
 }
 
 /* ======table ====== */
@@ -8193,15 +8212,15 @@ svg.pane-layout,
 }
 
 .theme-dark .mobile-navbar {
-    box-shadow: 0px -1px 0px var(--background-modifier-border);
+    box-shadow: 0px -1px 0px var(--divider-color);
 }
 
 .is-tablet .workspace-tab-container {
-    border-top: 1px solid var(--background-modifier-border);
+    border-top: 1px solid var(--divider-color);
 }
 
 .is-tablet .workspace-drawer-ribbon {
-    border-right: 1px solid var(--background-modifier-border);
+    border-right: 1px solid var(--divider-color);
 }
 
 .is-tablet .workspace-drawer {
@@ -8214,7 +8233,7 @@ svg.pane-layout,
 
 /* ====== mobile toolbar====== */
 .mobile-toolbar {
-    box-shadow: inset 0px 1px var(--background-modifier-border);
+    box-shadow: inset 0px 1px var(--divider-color);
 }
 
 
@@ -8263,7 +8282,7 @@ body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
-    box-shadow: 0px 0px 0px 1px var(--divider-color);
+    box-shadow: 0px 0px 0px 1px var(--background-modifier-border);
     border-radius: var(--card-border-radius-dark, 8px);
 }
 
@@ -8276,7 +8295,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
-    box-shadow: 0px 0px 0px 1px var(--divider-color);
+    box-shadow: 0px 0px 0px 1px var(--background-modifier-border);
     border-radius: var(--card-border-radius-dark, 8px) !important;
 }
 
@@ -8346,7 +8365,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 .style-settings-container {
     padding-left: var(--size-4-8);
     margin-left: var(--size-4-1);
-    border-left: 1px solid var(--background-modifier-border);
+    border-left: 1px solid var(--divider-color);
 }
 
 .style-settings-heading {
@@ -8370,7 +8389,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 .themed-color-wrapper>div {
-    box-shadow: 0px 0px 0px 1px var(--divider-color);
+    box-shadow: 0px 0px 0px 1px var(--background-modifier-border);
 }
 
 .themed-color-wrapper {

@@ -1,0 +1,23 @@
+{
+  "Appearance-dark@@accent-color-restore": true,
+  "Appearance-dark@@accent-color-custom-dark": true,
+  "Appearance-dark@@accent-dark": "#FF79C6",
+  "Appearance-dark@@color-red-rgb@@dark": "#FF5555",
+  "Appearance-dark@@color-orange-rgb@@dark": "#FFB86C",
+  "Appearance-dark@@color-yellow-rgb@@dark": "#F1FA8C",
+  "Appearance-dark@@color-green-rgb@@dark": "#50FA7B",
+  "Appearance-dark@@color-cyan-rgb@@dark": "#8BE9FD",
+  "Appearance-dark@@color-blue-rgb@@dark": "#6272A4",
+  "Appearance-dark@@color-purple-rgb@@dark": "#BD93F9",
+  "Appearance-dark@@color-pink-rgb@@dark": "#FF79C6",
+  "Appearance-dark@@background-primary@@dark": "#282A36",
+  "Appearance-dark@@background-secondary@@dark": "#21222C",
+  "Appearance-dark@@background-tertiary@@dark": "#343746",
+  "Appearance-dark@@text-normal@@dark": "#F8F8F2",
+  "Appearance-dark@@text-muted@@dark": "#949FBE",
+  "Appearance-dark@@text-faint@@dark": "#6272A4",
+  "Appearance-dark@@interactive-normal@@dark": "#424257",
+  "Appearance-dark@@interactive-hover@@dark": "#4b4b63",
+  "Editor@@link-external-color@@dark": "#50FA7B",
+  "Editor@@link-external-color-hover@@dark": "#50FA7B"
+}

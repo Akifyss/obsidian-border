@@ -63,6 +63,9 @@
 + [Rosé Pine Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine-Moon.png)
 
++ [Dracula](https://github.com/Akifyss/obsidian-border/blob/main/presets/Dracula.json) (Palette from [Dracula](https://github.com/dracula/dracula-theme))
+![screenshot](img/Dracula.png)
+
 Updating...
 
 # Create your own UI style
