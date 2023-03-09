@@ -2890,6 +2890,13 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: img-darken
+        title: darken image in dark mode
+        title.zh: 在暗黑模式下暗化图像
+        description: Hover to restore image
+        description.zh: 鼠标经过时还原
+        type: class-toggle
+    - 
         id: zoom-off
         title: Disable Image zoom
         title.zh: 关闭图像缩放
@@ -4296,8 +4303,7 @@ body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
     border-width: 0px 0px 0px 0px;
 }
 
-body:not(.native-scrollbars) .workspace-leaf-content[data-type="surfing-view"] ::-webkit-scrollbar,
-body:not(.native-scrollbars) .workspace-leaf-content[data-type="graph"] ::-webkit-scrollbar,
+body:not(.native-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
 body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
@@ -5147,7 +5153,7 @@ body.immersive-canvas .canvas-controls:hover {
     --icon-color: var(--text-normal);
 }
 
-.graph-controls-button.mod-open {
+.graph-controls-button.mod-animate {
     height: 33px;
 }
 
@@ -5169,8 +5175,8 @@ body.immersive-canvas .canvas-controls:hover {
     background-color: var(--interactive-hover);
 }
 
-.graph-controls-button.mod-open {
-    border-bottom: 1px solid var(--divider-color);
+.graph-controls-button.mod-animate {
+    border-top: 1px solid var(--divider-color);
 }
 
 .graph-controls-button.mod-animate {
@@ -7843,6 +7849,18 @@ body.seamless-embeds {
         outline: 2px solid var(--background-modifier-border-hover);
         border-radius: var(--radius-s);
     }
+}
+
+.theme-dark.img-darken .markdown-preview-view img,
+.theme-dark.img-darken .markdown-source-view img {
+    opacity: 0.75;
+    transition: opacity var(--anim-duration-fast) linear;
+}
+
+.theme-dark.img-darken .markdown-preview-view img:hover,
+.theme-dark.img-darken .markdown-source-view img:hover {
+    opacity: 1;
+    transition: opacity var(--anim-duration-fast) linear;
 }
 
 /* image zoom */
