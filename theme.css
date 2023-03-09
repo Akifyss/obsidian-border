@@ -2498,7 +2498,7 @@ settings:
         type: variable-number
         default: 1.5
 	- 
-		id: file-line-width-customize
+		id: file-line-width
 		title: Paragraph line width （Need to turn on “Readable line length”）
         title.zh:  段落行宽（需开启“缩减栏宽”）
 		type: variable-text
@@ -3289,7 +3289,6 @@ body {
     --background-secondary: hsl(var(--accent-h),
             calc((var(--accent-s) - 12%) / 6),
             calc(100% - (100% - var(--accent-l)) / 16));
-    /*--background-secondary: var(--color-base-15);*/
     --background-secondary-alt: var(--color-base-05);
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
@@ -3325,9 +3324,6 @@ body {
     --background-secondary: hsl(var(--accent-h),
             calc(var(--accent-s) / 2),
             calc(100% - (100% - var(--accent-l)) / 7.2));
-    /*--background-secondary: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 6));*/
     --background-secondary-alt: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) / 2),
             calc(100% - (100% - var(--accent-l)) / 5));
@@ -3704,10 +3700,11 @@ body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after {
 
 /* background - underlying */
 
-body.background-underlying-defalut-light.theme-light {
-    --background-underlying: var(--background-tertiary) !important;
+body:not(.is-mobile) .app-container {
+    background-color: var(--background-underlying);
 }
 
+body.background-underlying-defalut-light.theme-light,
 body.background-underlying-defalut-dark.theme-dark {
     --background-underlying: var(--background-tertiary) !important;
 }
@@ -3718,10 +3715,6 @@ body.background-underlying-Color-light.theme-light {
 
 body.background-underlying-Color-dark.theme-dark {
     --background-underlying: var(--background-underlying-dark) !important;
-}
-
-body:not(.is-mobile) .app-container {
-    background-color: var(--background-underlying);
 }
 
 body.theme-light:not(.is-mobile).background-underlying-CSS-light .app-container {
@@ -3771,36 +3764,21 @@ body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-heade
 
 /* background - mod-left */
 
-body.theme-light.mod-left-split-background-secondary-light {
+body.theme-light.mod-left-split-background-secondary-light,
+body.theme-dark.mod-left-split-background-secondary-dark,
+body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open-light),
+body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open-dark) {
     --background-mod-left-split: var(--background-secondary) !important;
 }
 
-body.theme-dark.mod-left-split-background-secondary-dark {
-    --background-mod-left-split: var(--background-secondary) !important;
-}
-
-body.theme-light.mod-left-split-background-primary-light {
-    --background-mod-left-split: var(--background-primary) !important;
-}
-
+body.theme-light.mod-left-split-background-primary-light,
 body.theme-dark.mod-left-split-background-primary-dark {
     --background-mod-left-split: var(--background-primary) !important;
 }
 
-body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light {
-    --background-mod-left-split: transparent !important;
-}
-
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light,
 body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-left-split: transparent !important;
-}
-
-body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open-light) {
-    --background-mod-left-split: var(--background-secondary) !important;
-}
-
-body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open-dark) {
-    --background-mod-left-split: var(--background-secondary) !important;
 }
 
 body.theme-light:not(.is-mobile).card-layout-open-light.mod-left-split-background-transparent-light .mod-left-split .workspace-tab-container {
@@ -3851,36 +3829,21 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-left-split-backg
 
 /* background - mod-right */
 
-body.theme-light.mod-right-split-background-primary-light {
+body.theme-light.mod-right-split-background-primary-light,
+body.theme-dark.mod-right-split-background-primary-dark,
+body.theme-light.mod-right-split-background-transparent-light:not(.card-layout-open-light),
+body.theme-dark.mod-right-split-background-transparent-dark:not(.card-layout-open-dark) {
     --background-mod-right-split: var(--background-primary) !important;
 }
 
-body.theme-dark.mod-right-split-background-primary-dark {
-    --background-mod-right-split: var(--background-primary) !important;
-}
-
-body.theme-light.mod-right-split-background-secondary-light {
-    --background-mod-right-split: var(--background-secondary) !important;
-}
-
+body.theme-light.mod-right-split-background-secondary-light,
 body.theme-dark.mod-right-split-background-secondary-dark {
     --background-mod-right-split: var(--background-secondary) !important;
 }
 
-body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light {
-    --background-mod-right-split: transparent !important;
-}
-
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light,
 body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-right-split: transparent !important;
-}
-
-body.theme-light.mod-right-split-background-transparent-light:not(.card-layout-open-light) {
-    --background-mod-right-split: var(--background-primary) !important;
-}
-
-body.theme-dark.mod-right-split-background-transparent-dark:not(.card-layout-open-dark) {
-    --background-mod-right-split: var(--background-primary) !important;
 }
 
 body.theme-light:not(.is-mobile).card-layout-open-light.mod-right-split-background-transparent-light .mod-right-split .workspace-tab-container {
@@ -3929,41 +3892,23 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-right-split-back
 
 /* background - mod-root */
 
-body.theme-light.mod-root-split-background-primary-light {
+body.theme-light.mod-root-split-background-primary-light,
+body.theme-dark.mod-root-split-background-primary-dark,
+body.theme-light.mod-root-split-background-transparent-light:not(.card-layout-open-light),
+body.theme-dark.mod-root-split-background-transparent-dark:not(.card-layout-open-dark),
+body.theme-light:is(.mod-root-split-background-transparent-light, .mod-root-split-background-CSS-light) .mod-stacked,
+body.theme-dark:is(.mod-root-split-background-transparent-dark, .mod-root-split-background-CSS-dark) .mod-stacked {
     --background-mod-root-split: var(--background-primary) !important;
 }
 
-body.theme-dark.mod-root-split-background-primary-dark {
-    --background-mod-root-split: var(--background-primary) !important;
-}
-
-body.theme-light.mod-root-split-background-secondary-light {
-    --background-mod-root-split: var(--background-secondary) !important;
-}
-
+body.theme-light.mod-root-split-background-secondary-light,
 body.theme-dark.mod-root-split-background-secondary-dark {
     --background-mod-root-split: var(--background-secondary) !important;
 }
 
-body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light {
-    --background-mod-root-split: transparent !important;
-}
-
+body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light,
 body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open-dark {
     --background-mod-root-split: transparent !important;
-}
-
-body.theme-light.mod-root-split-background-transparent-light:not(.card-layout-open-light) {
-    --background-mod-root-split: var(--background-primary) !important;
-}
-
-body.theme-dark.mod-root-split-background-transparent-dark:not(.card-layout-open-dark) {
-    --background-mod-root-split: var(--background-primary) !important;
-}
-
-body.theme-light:is(.mod-root-split-background-transparent-light, .mod-root-split-background-CSS-light) .mod-stacked,
-body.theme-dark:is(.mod-root-split-background-transparent-dark, .mod-root-split-background-CSS-dark) .mod-stacked {
-    --background-mod-root-split: var(--background-primary) !important;
 }
 
 body.theme-light:not(.is-mobile).card-layout-open-light.mod-root-split-background-transparent-light .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-container {
@@ -4405,7 +4350,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     display: none;
 }
 
-.theme-light .titlebar-button-container.mod-right .titlebar-button::after {
+.titlebar-button-container.mod-right .titlebar-button::after {
     content: '';
     background-color: var(--on-border-light);
     width: 16px;
@@ -4414,11 +4359,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 }
 
 .theme-dark .titlebar-button-container.mod-right .titlebar-button::after {
-    content: '';
     background-color: var(--on-border-dark);
-    width: 16px;
-    height: 16px;
-    margin: auto;
 }
 
 .titlebar-button-container.mod-right .titlebar-button.mod-close::after {
@@ -4445,11 +4386,7 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     min-height: 16px;
 }
 
-.theme-light .status-bar-item.mod-clickable:hover {
-    color: var(--status-bar-text-color);
-}
-
-.theme-dark .status-bar-item.mod-clickable:hover {
+.status-bar-item.mod-clickable:hover {
     color: var(--status-bar-text-color);
 }
 
@@ -5827,7 +5764,6 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M17.91 8.96c-.47-.61-1.19-.96-1.97-.96h-.48l-.17-.95A2.49 2.49 0 0 0 12.83 5H8.92c-.14 0-.26-.05-.36-.15L7.15 3.44C6.87 3.16 6.49 3 6.09 3H3.83c-.73 0-1.42.32-1.89.87-.48.56-.69 1.29-.58 2.01l1.39 9A2.487 2.487 0 0 0 5.22 17h9.72c1.15 0 2.15-.78 2.43-1.89l1-4c.19-.76.02-1.54-.46-2.15ZM3.62 13.98 2.35 5.73c-.06-.44.06-.87.35-1.21.28-.33.7-.52 1.13-.52h2.26c.13 0 .26.05.35.15l1.42 1.41c.28.28.66.44 1.06.44h3.91c.73 0 1.35.52 1.48 1.23l.14.77H7.07c-1.15 0-2.15.78-2.43 1.89l-1 4s-.01.06-.02.09Zm13.78-3.12-.82 3.27-.18.73c-.17.67-.77 1.14-1.46 1.14H6.07a1.497 1.497 0 0 1-1.46-1.86l1-4C5.78 9.47 6.38 9 7.07 9h8.87c.47 0 .9.21 1.18.58.29.36.39.83.28 1.28Z'/%3e%3cpath d='M14.45 8H7.07c-1.15 0-2.15.78-2.43 1.89l-1 4s-.01.06-.02.09L2.35 5.73c-.06-.44.06-.87.35-1.21.28-.33.7-.52 1.13-.52h2.26c.13 0 .26.05.35.15l1.42 1.41c.28.28.66.44 1.06.44h3.91c.73 0 1.35.52 1.48 1.23l.14.77Z' opacity='.35'/%3e%3cpath d='m17.4 10.86-.82 3.27-.18.73c-.17.67-.77 1.14-1.46 1.14H6.07a1.497 1.497 0 0 1-1.46-1.86l1-4C5.78 9.47 6.38 9 7.07 9h8.87c.47 0 .9.21 1.18.58.29.36.39.83.28 1.28Z' opacity='.1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-
 .workspace-leaf-content[data-type="file-explorer"] .is-collapsed .nav-folder-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M14.5 5h-3.59a.51.51 0 0 1-.35-.15L9.15 3.44A1.48 1.48 0 0 0 8.08 3H5.5A2.5 2.5 0 0 0 3 5.5v9A2.5 2.5 0 0 0 5.5 17h9a2.5 2.5 0 0 0 2.5-2.5v-7A2.5 2.5 0 0 0 14.5 5Zm1.5 9.5c0 .82-.67 1.5-1.5 1.5h-9c-.83 0-1.5-.68-1.5-1.5v-4C4 9.67 4.67 9 5.5 9h9c.83 0 1.5.67 1.5 1.5v4Zm0-6c-.42-.31-.94-.5-1.5-.5h-9c-.56 0-1.08.19-1.5.5v-3C4 4.67 4.67 4 5.5 4h2.58c.14 0 .27.05.36.14l1.41 1.42c.29.28.66.44 1.06.44h3.59c.83 0 1.5.67 1.5 1.5v1Z'/%3e%3cpath d='M16 7.5v1c-.42-.31-.94-.5-1.5-.5h-9c-.56 0-1.08.19-1.5.5v-3C4 4.67 4.67 4 5.5 4h2.58c.14 0 .27.05.36.14l1.41 1.42c.29.28.66.44 1.06.44h3.59c.83 0 1.5.67 1.5 1.5Z' opacity='.35'/%3e%3cpath d='M16 10.5v4c0 .82-.67 1.5-1.5 1.5h-9c-.83 0-1.5-.68-1.5-1.5v-4C4 9.67 4.67 9 5.5 9h9c.83 0 1.5.67 1.5 1.5Z' opacity='.1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
@@ -5856,8 +5792,7 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .is-unsupported[data-path$=".zip"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .is-unsupported[data-path$=".7z"]>.nav-file-title-content::before {
+.workspace-leaf-content[data-type="file-explorer"] .is-unsupported:is([data-path$=".zip"], [data-path$=".7z"])>.nav-file-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3cpath fill='black' d='M7 11v4.625c0 .208.167.375.375.375h2.25a.374.374 0 0 0 .375-.375V11H7Zm.75 2.75h1.5v1.5h-1.5v-1.5ZM8.5 3H7v1.5h1.5V3Zm0 1.5V6H10V4.5H8.5Zm0 1.5H7v1.5h1.5V6Zm0 1.5V9H10V7.5H8.5Zm0 1.5H7v1.499h1.5v-1.5Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
@@ -5865,12 +5800,7 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M11.5 2.5v3a1 1 0 0 0 1 1h3m-7.833 4h1.176c.18 0 .36-.042.521-.123L12.26 8.93a.167.167 0 0 1 .241.149v5.842c0 .124-.13.205-.241.15l-2.895-1.448a1.167 1.167 0 0 0-.521-.123H7.667a.167.167 0 0 1-.167-.167v-2.666c0-.092.075-.167.167-.167Zm1.833 0V14'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".svg"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".bmp"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".jpeg"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".jpg"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".png"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".gif"]>.nav-file-title-content::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])>.nav-file-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M16 4.5H4c-.83 0-1.5.67-1.5 1.5v8c0 .83.67 1.5 1.5 1.5h12c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5ZM5.25 6A1.23 1.23 0 0 1 6.5 7.25 1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6ZM4 12.4 6 10l2 1.07L12 7l4 3.27V14H4v-1.6Z' opacity='.1'/%3e%3cpath d='M16 4H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm1 10c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v8Z'/%3e%3cpath fill-opacity='.8' d='M16 10.27V14H4v-1.6L6 10l2 1.07L12 7l4 3.27ZM6.5 7.25A1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6 1.23 1.23 0 0 1 6.5 7.25Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
@@ -5882,19 +5812,15 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='m16.18 8.4-2.26-3.01c.05-.12.08-.25.08-.39V3c0-.56-.45-1-1-1H7c-.55 0-1 .44-1 1v2c0 .14.03.27.08.39L3.82 8.4c-.26.35-.27.83-.02 1.18l5.38 7.63c.19.26.5.42.82.42.32 0 .63-.16.82-.42l5.38-7.63c.25-.35.24-.83-.02-1.18ZM7 3h6v2H7V3Zm2 6c0-.56.45-1 1-1s1 .44 1 1-.45 1-1 1-1-.45-1-1Zm1.5 6.92v-4.99A1.996 1.996 0 0 0 10 7a1.996 1.996 0 0 0-.5 3.93v4.99L4.62 9l2.26-3.01h6.24L15.38 9l-4.88 6.92Z'/%3e%3cpath d='M13 3H7v2h6V3Z' opacity='.35'/%3e%3cpath d='M12 9a2 2 0 1 0-4 0c0 .93.64 1.71 1.5 1.93v4.99L4.62 9l2.26-3.01h6.24L15.38 9l-4.88 6.92v-4.99c.86-.22 1.5-1 1.5-1.93Z' opacity='.1'/%3e%3cpath d='M10 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z' opacity='.1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".canvas"]>.nav-file-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M14.5 4h-9C4.67 4 4 4.67 4 5.5v9c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5v-9c0-.83-.67-1.5-1.5-1.5ZM5 6c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V6Zm5 8c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1v-2c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v2Zm5 0c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v3Zm0-6c0 .55-.45 1-1 1h-3c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v2Z' opacity='.1'/%3e%3cpath d='M14.5 3h-9A2.5 2.5 0 0 0 3 5.5v9A2.5 2.5 0 0 0 5.5 17h9a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 14.5 3ZM16 14.5c0 .83-.67 1.5-1.5 1.5h-9c-.83 0-1.5-.67-1.5-1.5v-9C4 4.67 4.67 4 5.5 4h9c.83 0 1.5.67 1.5 1.5v9Z'/%3e%3cpath d='M8 5H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h2c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1ZM6 6h2v3H6V6Z'/%3e%3cpath d='M8 6H6v3h2V6Z' opacity='.35'/%3e%3cpath d='M14 10h-2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1Zm-2 1h2v3h-2v-3Z'/%3e%3cpath d='M14 11h-2v3h2v-3Z' opacity='.35'/%3e%3cpath d='M9 11H6c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-2c0-.55-.45-1-1-1Zm-3 1h3v2H6v-2Z'/%3e%3cpath d='M9 12H6v2h3v-2Z' opacity='.1'/%3e%3cpath d='M14 5h-3c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1Zm-3 1h3v2h-3V6Z'/%3e%3cpath d='M14 6h-3v2h3V6Z' opacity='.1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".docx"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".doc"]>.nav-file-title-content::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".docx"], [data-path$=".doc"])>.nav-file-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3cpath fill='black' d='M8.436 9.6c0 .16.304.392.416.64 0 0 .392.792.832 1.72l-.736 1.568-1.56-3.288c0-.256.28-.48.28-.64 0-.144-.072-.184-.28-.184H5.78c-.2 0-.28.04-.28.184 0 .16.304.392.416.64 0 0 1.96 4.008 2.096 4.52 0 0 .096.24.432.24.336 0 .424-.216.424-.216.072-.248.56-1.288 1.064-2.312.48 1.016.952 2.048 1.016 2.288 0 0 .096.24.432.24.336 0 .424-.216.424-.216.144-.528 2.168-4.544 2.168-4.544.12-.248.416-.48.416-.64 0-.144-.072-.184-.272-.184h-.68c-.2 0-.28.04-.28.184 0 .16.28.384.28.64l-1.552 3.288-1.56-3.288c0-.256.28-.48.28-.64 0-.144-.072-.184-.28-.184H8.716c-.2 0-.28.04-.28.184Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".key"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".pptx"]>.nav-file-title-content::before,
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".ppt"]>.nav-file-title-content::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".key"], [data-path$=".pptx"], [data-path$=".ppt"])>.nav-file-title-content::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3cmask id='b' fill='white'%3e%3crect width='8' height='6' x='6' y='8' rx='.5'/%3e%3c/mask%3e%3crect width='8' height='6' x='6' y='8' stroke='black' stroke-width='2' mask='url(%23b)' rx='.5'/%3e%3cg clip-path='url(%23c)'%3e%3cpath fill='black' d='M11.313 11a.189.189 0 0 1-.09.16l-1.688 1.03a.182.182 0 0 1-.189.004.185.185 0 0 1-.096-.163V9.97a.185.185 0 0 1 .096-.163.182.182 0 0 1 .189.003l1.687 1.03a.19.19 0 0 1 .09.161Z'/%3e%3c/g%3e%3cpath stroke='black' d='M10 14v1.5'/%3e%3cpath stroke='black' stroke-linecap='round' d='M12 15.5H8'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3cclipPath id='c'%3e%3cpath fill='white' d='M0 0h3v3H0z' transform='translate(8.5 9.5)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
@@ -6438,27 +6364,9 @@ body.paragraph-spacing-br :is(.markdown-preview-view, .markdown-rendered) p>br {
     display: block;
 }
 
-
 .markdown-source-view :is(.cm-line + .cm-line) {
     padding-top: calc(var(--paragraph-spacing-editing) / 2);
     padding-bottom: calc(var(--paragraph-spacing-editing) / 2);
-}
-
-/* line-width */
-body {
-    --file-line-width: 700px;
-    --file-line-width-customize: var(--file-line-width);
-}
-
-.document-search,
-.document-replace,
-.release-notes-view .is-readable-line-width,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
-.markdown-source-view.is-readable-line-width .CodeMirror {
-    max-width: var(--file-line-width-customize);
 }
 
 
@@ -6492,33 +6400,6 @@ body {
     --inline-title-style: var(--h1-style);
     --inline-title-variant: var(--h1-variant);
     --inline-title-weight: var(--h1-weight);
-}
-
-.inline-title-color-default {
-    --inline-title-color: var(--text-normal) !important;
-}
-
-.inline-title-color-designated {
-    --inline-title-color: var(--color-accent) !important;
-}
-
-
-body:not(.inline-title-divider-remove) .inline-title {
-    border-bottom: 1px solid var(--divider-color);
-    margin-bottom: var(--size-4-3);
-}
-
-body:not(.inline-title-divider-remove) .mk-folder-header .inline-title,
-body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
-    border-bottom: unset;
-    margin-bottom: unset;
-}
-
-.embedded-backlinks {
-    border-top: 1px solid var(--divider-color);
-}
-
-body {
     /* Headings */
     --heading-formatting: var(--text-faint);
     --h1-color: inherit;
@@ -6570,6 +6451,32 @@ body {
     --h5-weight: 600;
     --h6-weight: 575;
 }
+
+.inline-title-color-default {
+    --inline-title-color: var(--text-normal) !important;
+}
+
+.inline-title-color-designated {
+    --inline-title-color: var(--color-accent) !important;
+}
+
+
+body:not(.inline-title-divider-remove) .inline-title {
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: var(--size-4-3);
+}
+
+body:not(.inline-title-divider-remove) .mk-folder-header .inline-title,
+body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
+    border-bottom: unset;
+    margin-bottom: unset;
+}
+
+.embedded-backlinks {
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* h1 */
 
 .h1-color-default {
     --h1-color: var(--text-normal) !important;
@@ -8286,15 +8193,15 @@ svg.pane-layout,
 }
 
 .theme-dark .mobile-navbar {
-    box-shadow: 0px -1px 0px var(--divider-color);
+    box-shadow: 0px -1px 0px var(--background-modifier-border);
 }
 
 .is-tablet .workspace-tab-container {
-    border-top: 1px solid var(--divider-color);
+    border-top: 1px solid var(--background-modifier-border);
 }
 
 .is-tablet .workspace-drawer-ribbon {
-    border-right: 1px solid var(--divider-color);
+    border-right: 1px solid var(--background-modifier-border);
 }
 
 .is-tablet .workspace-drawer {
@@ -8307,7 +8214,7 @@ svg.pane-layout,
 
 /* ====== mobile toolbar====== */
 .mobile-toolbar {
-    box-shadow: inset 0px 1px var(--divider-color);
+    box-shadow: inset 0px 1px var(--background-modifier-border);
 }
 
 
