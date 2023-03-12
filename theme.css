@@ -311,38 +311,26 @@ settings:
         title.zh: 隐藏滚动条
         type: class-toggle
     - 
-        id: anim-duration
-        title: Animation duration
-        title.zh: 动效速度
+        id: animation
+        title: Animation
+        title.zh: 动效
         type: heading
         collapsed: true
         level: 3
     - 
-        id: anim-duration-info
-        description: "Border usually uses 'fast/moderate' value as animation duration and 'superfast/slow' as animation delay time."
-        description.zh: "Border一般将'fast/moderate'值用作动画的持续时间，'superfast/slow'值用作动画的延迟时间"
-        type: info-text
-        markdown: true
+        id: extra-anim-remove
+        title: Remove additional added animation
+        title.zh: 移除 额外增加的动效
+        type: class-toggle
     - 
-        id: anim-duration-superfast
-        title: anim-duration-superfast
-        type: variable-text
-        default: 75ms
-    - 
-        id: anim-duration-fast
-        title: anim-duration-fast
-        type: variable-text
-        default: 150ms
-    - 
-        id: anim-duration-moderate
-        title: anim-duration-moderate
-        type: variable-text
-        default: 300ms
-    - 
-        id: anim-duration-slow
-        title: anim-duration-slow
-        type: variable-text
-        default: 600ms
+        id: anim-speed
+        title: Animation speed
+        title.zh: 动效速度
+        type: variable-number-slider
+        default: 1
+        min: 0.5
+        max: 2
+        step: 0.1
 
 */
 
@@ -353,8 +341,8 @@ id: Appearance-light
 settings:
     - 
         id: Presets-info-light
-        description: "🎨 [Appearance presets (light mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) Before importing, it is recommended to reset this entry to default↗️"
-        description.zh: "🎨 [外观预设 （亮色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) 导入前，推荐先将此条目重设为默认↗️ "
+        description: "[Presets (light)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
+        description.zh: "[预设（亮色）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | 导入前，推荐先将此条目重设为默认 / 移除预设↗️ "
         type: info-text
         markdown: true
     - 
@@ -1193,8 +1181,8 @@ id: Appearance-dark
 settings:
     - 
         id: Presets-info-dark
-        description: "🎨 [Appearance presets (dark mode)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) Before importing, it is recommended to reset this entry to default↗️"
-        description.zh: "🎨 [外观预设 （暗色模式）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) 导入前，推荐先将此条目重设为默认↗️ "
+        description: "[Presets (dark)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
+        description.zh: "[预设（暗色）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) | 导入前，推荐先将此条目重设为默认 / 移除预设↗️ "
         type: info-text
         markdown: true
     - 
@@ -2045,27 +2033,38 @@ id: Editor
 settings:
     - 
         id: line-emphasis
-        title: Emphasis on line
-        title.zh: 行强调
+        title: Hover line indicator
+        title.zh: 悬停行指示器
         type: heading
         collapsed: false
         level: 3
     - 
+        id: line-hover-indicator-info
+        description: "**Note**: This feature requires your **installer** version(not APP current version) > v1.1.8. If not, you can download and re-install obsidian [here](https://obsidian.md/download).Check **installer** version in “Settings-About-APP“"
+        description.zh: "**注意**：此特性需要**安装程序**版本（不是指APP当前版本） > v1.1.8。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian。可以在“设置-关于-APP”处查看**安装程序**版本"
+        type: info-text
+        markdown: true
+    - 
         id: line-hover-indicator-disable
-        title: Disable hovered line indicator
-        description: "Note: This feature requires your **installer** version(not APP current version) > v1.1.8. If not, you can download and re-install obsidian.Check **installer** version in “Settings-About-APP“"
-        description.zh: "注意：此特性需要**安装程序**版本（不是指APP当前版本） > v1.1.8。如果不是，可以重新下载安装obsidian。可以在“设置-关于-APP”处查看**安装程序**版本"
+        title: Disable hover line indicator
         title.zh: 禁用 悬停行指示器
         type: class-toggle
     - 
 		id: hover-indicator-color
-		title: Customize hovered line indicator color
-        title.zh: 自定义悬停行指示器颜色
+		title: Customize indicator color
+        title.zh: 自定义指示器的颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+    - 
+        id: active-line-heading
+        title: Active line
+        title.zh: 行高亮
+        type: heading
+		collapsed: true
+        level: 3
     - 
         id: line-active-disable
         title: Disable active line hightlight
@@ -3538,21 +3537,22 @@ body {
 /*====== Animations ======*/
 body {
     /* Animations */
-    --anim-duration-superfast: 75ms;
-    --anim-duration-fast: 150ms;
-    --anim-duration-moderate: 300ms;
-    --anim-duration-slow: 600ms;
+    --anim-speed: 1;
+    --anim-duration-superfast: calc(75ms / var(--anim-speed));
+    --anim-duration-fast: calc(150ms / var(--anim-speed));
+    --anim-duration-moderate: calc(300ms / var(--anim-speed));
+    --anim-duration-slow: calc(600ms / var(--anim-speed));
     --anim-in: var(--anim-duration-fast) var(--anim-duration-superfast) var(--anim-motion-swing);
     --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-.document-search-container,
-.graph-controls:not(.is-close),
-body:not(.is-phone) .popover:not(.svelte-1xg3ic1),
-body:not(.is-phone) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
-body:not(.is-phone) .prompt,
-body:not(.is-phone) .modal:not(:has(.checkbox-container)),
-body:not(.is-phone) .suggestion-container:not([data-popper-placement="bottom-start"]) {
+body:not(.extra-anim-remove) .document-search-container,
+body:not(.extra-anim-remove) .graph-controls:not(.is-close),
+body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
+body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
+body:not(.is-phone, .extra-anim-remove) .prompt,
+body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
+body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]) {
     -webkit-animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
     animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
@@ -6082,8 +6082,7 @@ input[type='range']::-webkit-slider-thumb {
     transition: none;
 }
 
-input[type=range]::-webkit-slider-thumb:hover,
-input[type=range]::-webkit-slider-thumb:active {
+input[type=range]::-webkit-slider-thumb:is(:hover, :active) {
     box-shadow: var(--toggle-thumb-shadow);
     outline-offset: 2px;
     outline: 2px solid var(--background-modifier-border-hover);
@@ -6091,8 +6090,7 @@ input[type=range]::-webkit-slider-thumb:active {
     border-color: var(--slider-thumb-border-color);
 }
 
-body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb,
-body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
+body:not(.is-mobile) input[type=range]:is(:focus, :focus-visible)::-webkit-slider-thumb {
     box-shadow: var(--toggle-thumb-shadow);
     outline-offset: 2px;
     outline: 2px solid var(--background-modifier-border-focus);
@@ -6102,38 +6100,23 @@ body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb {
 
 /* input */
 
-body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus,
-body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus,
-body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):focus,
-body:not(.is-mobile) input[type='email']:focus,
-body:not(.is-mobile) input[type='password']:focus,
-body:not(.is-mobile) input[type='number']:focus,
-body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input):focus-visible,
-body:not(.is-mobile) input[type='text']:not(.mk-cell-text):focus-visible,
-body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):focus-visible,
-body:not(.is-mobile) input[type='email']:focus-visible,
-body:not(.is-mobile) input[type='password']:focus-visible,
-body:not(.is-mobile) input[type='number']:focus-visible {
+body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input, .sync-history-text):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='text']:not(.mk-cell-text):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='email']:is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='password']:is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='number']:is(:focus, :focus-visible) {
     border: 1px solid var(--interactive-accent);
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
 
-.view-header input {
-    box-shadow: none !important;
-}
-
-body:not(.is-mobile) input.prompt-input,
-body:not(.is-mobile) input.prompt-input:hover,
-body:not(.is-mobile) input.prompt-input:focus,
-body:not(.is-mobile) input.prompt-input:focus-visible {
+.view-header input,
+body:not(.is-mobile) input.prompt-input {
     border: none !important;
     box-shadow: none !important;
 }
 
-body:not(.is-phone) input.prompt-input,
-body:not(.is-phone) input.prompt-input:hover,
-body:not(.is-phone) input.prompt-input:focus,
-body:not(.is-phone) input.prompt-input:focus-visible {
+body:not(.is-phone) div:has(>input.prompt-input) {
     border-bottom: 2px solid var(--color-accent) !important;
 }
 
@@ -7562,7 +7545,6 @@ li[data-task="<"]>p>input:checked {
 /* ====== Callout ====== */
 body {
     --callout-border-width: 1px;
-    --callout-border-opacity: 0.25;
 }
 
 
@@ -8498,7 +8480,7 @@ body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"]
 
 /* make.md */
 .mk-blink-preview {
-    border-color: var(--background-modifier-border);
+    border-color: var(--divider-color);
 }
 
 .mk-blink-modal .mk-options-menu__search input {

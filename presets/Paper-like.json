@@ -7,5 +7,9 @@
   "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-transparent-light",
   "Appearance-light@@background-underlying-select-light": "background-underlying-CSS-light",
   "Appearance-light@@background-underlying-CSS-light": "url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
-  "Appearance-light@@background-underlying-CSS-blend-mode-light": "normal"
+  "Appearance-light@@background-underlying-CSS-blend-mode-light": "normal",
+  "Appearance-light@@card-border-radius-light": "0px",
+  "Appearance-light@@border-radius-activated-tab-header-light": "0px",
+  "Appearance-light@@background-activated-tab-header-light": "transparent",
+  "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--color-accent)"
 }

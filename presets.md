@@ -6,6 +6,16 @@
 
 ![screenshot](img/Usage.png)
 
+---
+
+**Removal**: Click one of the buttons, depending on which mode preset you are using. And maybe need to restart obsidian.
+
+**移除**： 点击其中一个按钮，取决于你正在使用的模式预设。 可能还需要重启obsidian。
+
+![screenshot](img/Removal.png)
+
+---
+
 ## Light Mode
 
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)

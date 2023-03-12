@@ -27,7 +27,7 @@ Require your **installer** version(not APP current version) > v1.1.8
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
-### Hovered line indicator
+### Hover line indicator
 
 ![screenshot](img/line.gif)
 
