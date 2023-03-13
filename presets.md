@@ -65,16 +65,16 @@
   + [Lightup-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup-alt.json)
   ![screenshot](img/Lightup-alt.png)
 
-+ [Lightdown-green](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-green.json) , [wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321)
++ [Lightdown-green](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-green.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
 ![screenshot](img/Lightdown-green.png)
 
-  + [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) , [wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321)
+  + [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
   ![screenshot](img/Lightdown-pink.png)
 
-  + [Lightdown-blue](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-blue.json) , [wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321)
+  + [Lightdown-blue](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-blue.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
   ![screenshot](img/Lightdown-blue.png)
 
-  + [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) , [wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321)
+  + [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
   ![screenshot](img/Lightdown-orange.png)
 
 ---
