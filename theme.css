@@ -666,6 +666,14 @@ settings:
                 format: rgb
         default: '#'
     - 
+        id: mix-blend-mode-on-border-light
+        title: mix blend mode of underlying foreground(light mode)
+        title.zh: 底层前景的混合模式（亮色模式）
+        description: Input any CSS mix-blend-mode value
+        description.zh: 输入任意 CSS mix-blend-mode 值
+        type: variable-text
+        default: normal
+    - 
         id: background-underlying-select-light
         title: underlying background(light mode)
         title.zh: 底层背景（亮色模式）
@@ -997,14 +1005,6 @@ settings:
         title.zh: 已激活Tab的标头阴影（亮色模式）
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
-        type: variable-text
-        default: ''
-    - 
-        id: mix-blend-mode-activated-tab-header-light
-        title: activated Tab header mix blend mode(light mode)
-        title.zh: 已激活Tab的标头混合模式（亮色模式）
-        description: Input any CSS mix-blend-mode value
-        description.zh: 输入任意 CSS mix-blend-mode 值
         type: variable-text
         default: ''
     - 
@@ -1525,6 +1525,14 @@ settings:
                 format: rgb
         default: '#'
     - 
+        id: mix-blend-mode-on-border-dark
+        title: mix blend mode of underlying foreground(dark mode)
+        title.zh: 底层前景的混合模式（暗色模式）
+        description: Input any CSS mix-blend-mode value
+        description.zh: 输入任意 CSS mix-blend-mode 值
+        type: variable-text
+        default: screen
+    - 
         id: background-underlying-select-dark
         title: underlying background(dark mode)
         title.zh: 底层背景（暗色模式）
@@ -1856,14 +1864,6 @@ settings:
         title.zh: 已激活Tab的标头阴影（暗色模式）
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
-        type: variable-text
-        default: ''
-    - 
-        id: mix-blend-mode-activated-tab-header-dark
-        title: activated Tab header mix blend mode(dark mode)
-        title.zh: 已激活Tab的标头混合模式（暗色模式）
-        description: Input any CSS mix-blend-mode value
-        description.zh: 输入任意 CSS mix-blend-mode 值
         type: variable-text
         default: ''
     - 
@@ -3786,6 +3786,8 @@ body.theme-dark:not(.is-mobile).background-underlying-CSS-dark .app-container {
 body {
     --on-border-light: var(--color-accent-3);
     --on-border-dark: var(--color-accent-3);
+    --mix-blend-mode-on-border-light: normal;
+    --mix-blend-mode-on-border-dark: screen;
 }
 
 .titlebar,
@@ -3805,6 +3807,8 @@ body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-heade
     --icon-color-hover: var(--text-muted);
 
     --tab-text-color: var(--text-faint);
+
+    mix-blend-mode: var(--mix-blend-mode-on-border-light);
 }
 
 .theme-dark .titlebar,
@@ -3814,6 +3818,8 @@ body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-heade
 .theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
     --text-muted: var(--on-border-dark);
     --text-faint: var(--on-border-dark);
+
+    mix-blend-mode: var(--mix-blend-mode-on-border-dark);
 }
 
 
@@ -4522,8 +4528,6 @@ body {
     --shadow-activated-tab-header-light-alt: var(--shadow-activated-tab-header-light), 0 0 0 1px var(--background-modifier-border);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border);
-    --mix-blend-mode-activated-tab-header-light: normal;
-    --mix-blend-mode-activated-tab-header-dark: normal;
 }
 
 
@@ -4553,7 +4557,6 @@ body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner
     background: var(--background-activated-tab-header-light);
     box-shadow: var(--shadow-activated-tab-header-light);
     border-radius: var(--border-radius-activated-tab-header-light);
-    mix-blend-mode: var(--mix-blend-mode-activated-tab-header-light);
 }
 
 body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
@@ -4568,7 +4571,6 @@ body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-h
     box-shadow: var(--shadow-activated-tab-header-dark);
     background: var(--background-activated-tab-header-dark);
     border-radius: var(--border-radius-activated-tab-header-dark);
-    mix-blend-mode: var(--mix-blend-mode-activated-tab-header-dark);
 }
 
 /* tab - mobile*/

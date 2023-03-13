@@ -16,6 +16,5 @@
   "Appearance-dark@@background-underlying-CSS-blend-mode-dark": "none",
   "Appearance-dark@@color-activated-tab-header-dark": "#FFFFFF",
   "Appearance-dark@@color-to-tab-icon-dark": true,
-  "Appearance-dark@@mix-blend-mode-activated-tab-header-dark": "color-dodge",
   "Appearance-dark@@Active-states-file-explorer-select-dark": "activated-file-tab-style-dark"
 }
