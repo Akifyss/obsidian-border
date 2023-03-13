@@ -56,12 +56,15 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json) (Light Mode)
 ![screenshot](img/Neumorphism.png)
 
++ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) (Dark Mode)
+![screenshot](img/Sunset.png)
+
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) (Dark Mode)
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
 
-+ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) (Dark Mode)
-![screenshot](img/Sunset.png)
++ [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) (Dark Mode)
+![screenshot](img/Lightdown-pink.png)
 
 #### [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
