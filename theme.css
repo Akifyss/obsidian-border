@@ -652,28 +652,6 @@ settings:
         collapsed: ture
         level: 4
     - 
-		id: on-border-light
-        title: underlying foreground(light mode)
-        title.zh: 底层前景（亮色模式）
-        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
-        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: mix-blend-mode-on-border-light
-        title: mix blend mode of underlying foreground(light mode)
-        title.zh: 底层前景的混合模式（亮色模式）
-        description: Input any CSS mix-blend-mode value
-        description.zh: 输入任意 CSS mix-blend-mode 值
-        type: variable-text
-        default: normal
-    - 
         id: background-underlying-select-light
         title: underlying background(light mode)
         title.zh: 底层背景（亮色模式）
@@ -715,6 +693,37 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: overlay, color-burn
+    - 
+        id: underlying-foreground-header-light
+        title: Underlying foreground
+        title.zh: 底层前景
+        description: Adjust foreground to fit the background
+        description.zh: 调整前景以适应背景
+        type: heading
+        collapsed: ture
+        level: 5
+    - 
+		id: on-border-light
+        title: underlying foreground color(light mode)
+        title.zh: 底层前景色（亮色模式）
+        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
+        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: mix-blend-mode-on-border-light
+        title: mix blend mode of underlying foreground(light mode)
+        title.zh: 底层前景的混合模式（亮色模式）
+        description: Input any CSS mix-blend-mode value
+        description.zh: 输入任意 CSS mix-blend-mode 值
+        type: variable-text
+        default: normal
     - 
         id: Global-background-header-light
         title: Global background
@@ -1511,28 +1520,6 @@ settings:
         collapsed: ture
         level: 4
     - 
-		id: on-border-dark
-        title: underlying foreground(dark mode)
-        title.zh: 底层前景（暗色模式）
-        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
-        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
-		type: variable-color
-        opacity: ture
-        format: hex
-        alt-format:
-            -
-                id: accent-rgb
-                format: rgb
-        default: '#'
-    - 
-        id: mix-blend-mode-on-border-dark
-        title: mix blend mode of underlying foreground(dark mode)
-        title.zh: 底层前景的混合模式（暗色模式）
-        description: Input any CSS mix-blend-mode value
-        description.zh: 输入任意 CSS mix-blend-mode 值
-        type: variable-text
-        default: screen
-    - 
         id: background-underlying-select-dark
         title: underlying background(dark mode)
         title.zh: 底层背景（暗色模式）
@@ -1574,6 +1561,37 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: soft-light, luminosity, hue, luminosity, hard-light
+    - 
+        id: underlying-foreground-header-dark
+        title: Underlying foreground
+        title.zh: 底层前景
+        description: Adjust foreground to fit the background
+        description.zh: 调整前景以适应背景
+        type: heading
+        collapsed: ture
+        level: 5
+    - 
+		id: on-border-dark
+        title: underlying foreground color(dark mode)
+        title.zh: 底层前景色（暗色模式）
+        description: Color of elements (text&icon) displayed on underlying background, including top tab bar, ribbon menu, and status bar
+        description.zh: 显示在底层背景上的元素(text&icon)颜色，包括顶部标签栏、功能区菜单和状态栏
+		type: variable-color
+        opacity: ture
+        format: hex
+        alt-format:
+            -
+                id: accent-rgb
+                format: rgb
+        default: '#'
+    - 
+        id: mix-blend-mode-on-border-dark
+        title: mix blend mode of underlying foreground(dark mode)
+        title.zh: 底层前景的混合模式（暗色模式）
+        description: Input any CSS mix-blend-mode value
+        description.zh: 输入任意 CSS mix-blend-mode 值
+        type: variable-text
+        default: screen
     - 
         id: Global-background-header-dark
         title: Global background
@@ -3790,11 +3808,11 @@ body {
     --mix-blend-mode-on-border-dark: screen;
 }
 
-.titlebar,
-.status-bar,
-.workspace-ribbon,
-.workspace-tabs.mod-top .workspace-tab-header-container,
-body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
+.theme-light .titlebar,
+.theme-light .status-bar,
+.theme-light .workspace-ribbon,
+.theme-light .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-light:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
     --text-muted: var(--on-border-light);
     --text-faint: var(--on-border-light);
 
@@ -3818,6 +3836,16 @@ body:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-heade
 .theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
     --text-muted: var(--on-border-dark);
     --text-faint: var(--on-border-dark);
+
+    --titlebar-text-color: var(--text-muted);
+    --tab-text-color-active: var(--text-muted);
+    --tab-text-color-focused: var(--text-muted);
+    --tab-text-color-focused-active: var(--text-muted);
+    --status-bar-text-color: var(--text-muted);
+    --icon-color: var(--text-muted);
+    --icon-color-hover: var(--text-muted);
+
+    --tab-text-color: var(--text-faint);
 
     mix-blend-mode: var(--mix-blend-mode-on-border-dark);
 }
