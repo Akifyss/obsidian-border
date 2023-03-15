@@ -1,4 +1,4 @@
-# Presets
+# Presets for [Border theme](https://github.com/Akifyss/obsidian-border)
 
 **Usage**: Copy code from link, paste it into style settings and restart obsidian.(Before importing, it is recommended to reset the **Appearance** settings to the default)
 
@@ -32,9 +32,6 @@
 
   + [Silver](https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json)
   ![screenshot](img/Silver.gif)
-
-  + [Wave](https://github.com/Akifyss/obsidian-border/blob/main/presets/Wave.json)
-  ![screenshot](img/Wave.gif)
 
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json)
 ![screenshot](img/Neumorphism.png)
