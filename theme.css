@@ -733,8 +733,8 @@ settings:
         level: 4
     - 
 		id: background-primary
-		title: Customize background-primary(light mode)
-        title.zh: 自定义 background-primary（亮色模式）
+		title: background-primary(light mode)
+        title.zh: background-primary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -742,8 +742,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-primary-alt
-		title: Customize background-primary-alt(light mode)
-        title.zh: 自定义 background-primary-alt（亮色模式）
+		title: background-primary-alt(light mode)
+        title.zh: background-primary-alt（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -751,8 +751,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary
-		title: Customize background-secondary(light mode)
-        title.zh: 自定义 background-secondary（亮色模式）
+		title: background-secondary(light mode)
+        title.zh: background-secondary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -760,8 +760,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary-alt
-		title: Customize background-secondary-alt(light mode)
-        title.zh: 自定义 background-secondary-alt（亮色模式）
+		title: background-secondary-alt(light mode)
+        title.zh: background-secondary-alt（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -769,17 +769,26 @@ settings:
 		default-dark: '#'
     - 
 		id: background-tertiary
-		title: Customize background-tertiary(light mode)
-        title.zh: 自定义 background-tertiary（亮色模式）
+		title: background-tertiary(light mode)
+        title.zh: background-tertiary（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
     - 
+		id: workspace-background-translucent
+		title: workspace-background-translucent(light mode)
+        title.zh: workspace-background-translucent（亮色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hsl
+		default-light: '#'
+		default-dark: '#'
+    - 
 		id: background-modifier-hover
-		title: Customize background-modifier-hover(light mode)
-        title.zh: 自定义 background-modifier-hover（亮色模式）
+		title: background-modifier-hover(light mode)
+        title.zh: background-modifier-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -787,8 +796,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-active-hover
-		title: Customize background-modifier-active-hover(light mode)
-        title.zh: 自定义 background-modifier-active-hover（亮色模式）
+		title: background-modifier-active-hover(light mode)
+        title.zh: background-modifier-active-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -796,8 +805,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border
-		title: Customize background-modifier-border(light mode)
-        title.zh: 自定义 background-modifier-border（亮色模式）
+		title: background-modifier-border(light mode)
+        title.zh: background-modifier-border（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -805,8 +814,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-hover
-		title: Customize background-modifier-border-hover(light mode)
-        title.zh: 自定义 background-modifier-border-hover（亮色模式）
+		title: background-modifier-border-hover(light mode)
+        title.zh: background-modifier-border-hover（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -814,8 +823,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-focus
-		title: Customize background-modifier-border-focus(light mode)
-        title.zh: 自定义 background-modifier-border-focus（亮色模式）
+		title: background-modifier-border-focus(light mode)
+        title.zh: background-modifier-border-focus（亮色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1601,8 +1610,8 @@ settings:
         level: 4
     - 
 		id: background-primary
-		title: Customize background-primary(dark mode)
-        title.zh: 自定义 background-primary（暗色模式）
+		title: background-primary(dark mode)
+        title.zh: background-primary（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1610,8 +1619,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-primary-alt
-		title: Customize background-primary-alt(dark mode)
-        title.zh: 自定义 background-primary-alt（暗色模式）
+		title: background-primary-alt(dark mode)
+        title.zh: background-primary-alt（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1619,8 +1628,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary
-		title: Customize background-secondary(dark mode)
-        title.zh: 自定义 background-secondary（暗色模式）
+		title: background-secondary(dark mode)
+        title.zh: background-secondary（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1628,8 +1637,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-secondary-alt
-		title: Customize background-secondary-alt(dark mode)
-        title.zh: 自定义 background-secondary-alt（暗色模式）
+		title: background-secondary-alt(dark mode)
+        title.zh: background-secondary-alt（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1637,17 +1646,26 @@ settings:
 		default-dark: '#'
     - 
 		id: background-tertiary
-		title: Customize background-tertiary(dark mode)
-        title.zh: 自定义 background-tertiary（暗色模式）
+		title: background-tertiary(dark mode)
+        title.zh: background-tertiary（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
     - 
+		id: workspace-background-translucent
+		title: workspace-background-translucent(dark mode)
+        title.zh: workspace-background-translucent（暗色模式）
+		type: variable-themed-color
+		opacity: true
+		format: hsl
+		default-light: '#'
+		default-dark: '#'
+    - 
 		id: background-modifier-hover
-		title: Customize background-modifier-hover(dark mode)
-        title.zh: 自定义 background-modifier-hover（暗色模式）
+		title: background-modifier-hover(dark mode)
+        title.zh: background-modifier-hover（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1655,8 +1673,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-active-hover
-		title: Customize background-modifier-active-hover(dark mode)
-        title.zh: 自定义 background-modifier-active-hover（暗色模式）
+		title: background-modifier-active-hover(dark mode)
+        title.zh: background-modifier-active-hover（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1664,8 +1682,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border
-		title: Customize background-modifier-border(dark mode)
-        title.zh: 自定义 background-modifier-border（暗色模式）
+		title: background-modifier-border(dark mode)
+        title.zh: background-modifier-border（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1673,8 +1691,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-hover
-		title: Customize background-modifier-border-hover(dark mode)
-        title.zh: 自定义 background-modifier-border-hover（暗色模式）
+		title: background-modifier-border-hover(dark mode)
+        title.zh: background-modifier-border-hover（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -1682,8 +1700,8 @@ settings:
 		default-dark: '#'
     - 
 		id: background-modifier-border-focus
-		title: Customize background-modifier-border-focus(dark mode)
-        title.zh: 自定义 background-modifier-border-focus（暗色模式）
+		title: background-modifier-border-focus(dark mode)
+        title.zh: background-modifier-border-focus（暗色模式）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -3365,10 +3383,7 @@ body {
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 8));
-    --workspace-background-translucent: hsla(calc(var(--accent-h)),
-            calc((var(--accent-s) - 12%) / 6),
-            calc(100% - (100% - var(--accent-l)) / 36), 0.8);
-    --blur-container: rgba(246, 246, 246, 0.8);
+    --workspace-background-translucent: rgba(246, 246, 246, 0.8);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -3402,9 +3417,6 @@ body {
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
             calc(100% - (100% - var(--accent-l)) / 4));
-    --workspace-background-translucent: hsla(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 4), 0.9);
     --interactive-normal: var(--color-base-00);
     --interactive-hover: var(--color-base-10);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
@@ -3483,7 +3495,6 @@ body {
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6), 0.6);
-    --blur-container: var(--workspace-background-translucent);
     --background-modifier-hover: hsla(var(--accent-h), 12%, 40%, 0.25);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -5034,7 +5045,7 @@ body:not(.is-mobile) .document-search-container {
 /*
 .mod-active .document-search-container,
 .document-search-container {
-    background-color: var(--blur-container);
+    background-color: var(--workspace-background-translucent);
     backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
     -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
 }*/
@@ -6225,7 +6236,7 @@ body {
 .prompt,
 .menu,
 .suggestion-container.mod-search-suggestion {
-    background-color: var(--blur-container);
+    background-color: var(--workspace-background-translucent);
     backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
     -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
 }
@@ -6237,7 +6248,7 @@ body {
 .theme-dark .prompt,
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
-    background-color: var(--blur-container);
+    background-color: var(--workspace-background-translucent);
     backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
     -webkit-backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
 }

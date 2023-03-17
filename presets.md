@@ -1,4 +1,4 @@
-# Presets for [Border theme](https://github.com/Akifyss/obsidian-border)
+# Presets for [Border theme](https://github.com/Akifyss/obsidian-border)（Updating）
 
 **Usage**: Copy code from link, paste it into style settings and restart obsidian.(Before importing, it is recommended to reset the **Appearance** settings to the default)
 
@@ -75,6 +75,9 @@
   ![screenshot](img/Lightdown-orange.png)
 
 ---
+
++ [Obsidian-default-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark.json)
+![screenshot](img/Obsidian-default-dark.png)
 
 + [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine.png)
