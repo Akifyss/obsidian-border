@@ -66,26 +66,7 @@
 + [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json)（暗色模式）
 ![screenshot](img/Lightdown-pink.png)
 
-#### [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
-
-<details>
-<summary></summary>
-<ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json">Side</a> （亮色模式）</li>
-<img src="img/Side.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json">Paper-like</a> （亮色模式）</li>
-<img src="img/Paper-like.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> （暗色模式）</li>
-<img src="img/Glassmorphism.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> （暗色模式）</li>
-<img src="img/Lightup.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> （亮色模式）</li>
-<img src="img/Mint.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json">Silver</a> （亮色模式）</li>
-<img src="img/Silver.gif">
-<li>WIP...</li>
-</ul>
-</details>
+#### ➡️ [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 ### 杂项
 

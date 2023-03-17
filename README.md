@@ -66,26 +66,7 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 + [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) (Dark Mode)
 ![screenshot](img/Lightdown-pink.png)
 
-#### [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
-
-<details>
-<summary></summary>
-<ul>
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json">Side</a> (Light Mode)</li>
-<img src="img/Side.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json">Paper-like</a> (Light Mode)</li>
-<img src="img/Paper-like.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json">Glassmorphism</a> (Dark Mode)</li>
-<img src="img/Glassmorphism.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json">Lightup</a> (Dark Mode)</li>
-<img src="img/Lightup.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json">Mint</a> (Light Mode)</li>
-<img src="img/Mint.png">
-<li><a href="https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json">Silver</a> (Light Mode)</li>
-<img src="img/Silver.gif">
-<li>WIP...</li>
-</ul>
-</details>
+#### ➡️ [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 ### Miscellaneous
 

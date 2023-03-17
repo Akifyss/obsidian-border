@@ -36,6 +36,9 @@
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json)
 ![screenshot](img/Neumorphism.png)
 
++ [Shore](https://github.com/Akifyss/obsidian-border/blob/main/presets/Shore.json)
+![screenshot](img/Shore.png)
+
 + [Side](https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json)
 ![screenshot](img/Side.png)
 
