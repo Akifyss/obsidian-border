@@ -8639,3 +8639,9 @@ body.colorful-checkbox li.svelte-sx5ktw.svelte-sx5ktw:nth-child(8n+8) .checkbox.
 .modelTitle {
     display: none;
 }
+
+/* callout manager */
+body:not(.is-mobile):not(.mod-macos):not(.mod-windows):not(.mod-linux) .workspace::before,
+body:not(.is-mobile):not(.mod-macos):not(.mod-windows):not(.mod-linux) .app-container::before {
+    display: none !important;
+}
