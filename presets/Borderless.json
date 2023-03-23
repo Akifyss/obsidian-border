@@ -1,0 +1,22 @@
+{
+  "Appearance-dark@@card-layout-open-dark": true,
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-brighter",
+  "Appearance-dark@@mod-left-split-background-select-dark": "mod-left-split-background-CSS-dark",
+  "Appearance-dark@@background-mod-left-CSS-dark": "radial-gradient(100% 50% at 100% 50%, rgba(90, 109, 237, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
+  "Appearance-dark@@background-mod-left-CSS-backdrop-filter-dark": "blur(0px)",
+  "Appearance-dark@@mod-right-split-background-select-dark": "mod-right-split-background-CSS-dark",
+  "Appearance-dark@@background-mod-right-CSS-dark": "radial-gradient(100% 50% at 0% 50%, rgba(90, 109, 237, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
+  "Appearance-dark@@background-mod-right-CSS-backdrop-filter-dark": "blur(0px)",
+  "Appearance-dark@@mod-root-split-background-select-dark": "mod-root-split-background-CSS-dark",
+  "Appearance-dark@@background-mod-root-CSS-dark": "transparent",
+  "Appearance-dark@@background-mod-root-CSS-backdrop-filter-dark": "blur(0px)",
+  "Appearance-dark@@background-underlying-select-dark": "background-underlying-CSS-dark",
+  "Appearance-dark@@background-underlying-CSS-dark": "linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)",
+  "Appearance-dark@@background-underlying-CSS-blend-mode-dark": "normal",
+  "Appearance-dark@@card-border-radius-dark": "0px",
+  "Appearance-dark@@card-shadow-dark": "none",
+  "Appearance-dark@@background-activated-tab-header-dark": "radial-gradient(50% 150% at 50% 150%, #8015A7 0%, rgba(97, 54, 144, 0) 100%)",
+  "Appearance-dark@@shadow-activated-tab-header-dark": "none",
+  "Appearance-dark@@indicator-remove-dark": true,
+  "Appearance-dark@@Active-states-file-explorer-select-dark": "activated-file-tab-style-dark"
+}

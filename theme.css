@@ -331,6 +331,20 @@ settings:
         min: 0.5
         max: 2
         step: 0.05
+    - 
+        id: Miscellaneous
+        title: Miscellaneous
+        title.zh: 杂项
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-highlight
+        title: Highlight active card
+        title.zh: 高亮当前活动卡片
+        description: Only applicable for card layout
+        description.zh: 仅限卡片式布局
+        type: class-toggle
 
 */
 
@@ -4083,6 +4097,15 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
 
 /* ====== Layout ===== */
 /* default Layout*/
+body {
+    --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
+    --card-border-radius-light: 8px;
+    --card-border-radius-dark: 8px;
+    --card-shadow-border-radius-light: calc(var(--card-border-radius-light) - 1px);
+    --card-shadow-border-radius-dark: calc(var(--card-border-radius-dark) - 1px);
+}
+
 body.is-frameless:not(.is-hidden-frameless).is-fullscreen {
     padding-top: 0;
 }
@@ -4125,12 +4148,14 @@ body:not(.is-mobile).theme-dark .mod-top-right-space .workspace-tab-container {
     border-top-right-radius: var(--card-border-radius-dark, 8px);
 }
 
-body:not(.is-mobile) .workspace-split.mod-left-split {
+body:not(.is-mobile) .workspace-split.mod-left-split,
+body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
     border-bottom-left-radius: var(--card-border-radius-light, 8px);
     overflow: hidden;
 }
 
-body:not(.is-mobile).theme-dark .workspace-split.mod-left-split {
+body:not(.is-mobile).theme-dark .workspace-split.mod-left-split,
+body:not(.is-mobile).theme-dark .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
     border-bottom-left-radius: var(--card-border-radius-dark, 8px);
 }
 
@@ -4145,28 +4170,11 @@ body:not(.is-mobile).theme-dark .workspace-split.mod-right-split {
     border-bottom-right-radius: var(--card-border-radius-dark, 8px);
 }
 
-body:not(.is-mobile) .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
-    border-bottom-left-radius: var(--card-border-radius-light, 8px);
-    overflow: hidden;
-}
-
-body:not(.is-mobile).theme-dark .workspace:not(.is-left-sidedock-open) .workspace-split.mod-root {
-    border-bottom-left-radius: var(--card-border-radius-dark, 8px);
-}
-
 .workspace-window .mod-top-left-space .workspace-tab-container,
 .workspace-window .mod-top-left-space .workspace-tab-container .workspace-leaf-content {
     border-top-left-radius: 0px !important;
 }
 
-body {
-    --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
-    --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
-    --card-border-radius-light: 8px;
-    --card-border-radius-dark: 8px;
-    --card-shadow-border-radius-light: calc(var(--card-border-radius-light) - 1px);
-    --card-shadow-border-radius-dark: calc(var(--card-border-radius-dark) - 1px);
-}
 
 body:not(.is-mobile) .workspace::before {
     content: " ";
@@ -4307,6 +4315,13 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-t
     border-top: unset;
 }
 
+/* card highlight */
+body:not(.is-mobile).card-highlight.card-layout-open-light.theme-light .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container,
+body:not(.is-mobile).card-highlight.card-layout-open-dark.theme-dark .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container {
+    outline-offset: -2px;
+    outline: 2px solid var(--color-accent-3);
+}
+
 /* scrollbar */
 body {
     /* Scrollbars */
@@ -4364,7 +4379,7 @@ body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
     border-width: 0px 0px 0px 0px;
 }
 
-body:not(.native-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
+body:not(.native-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"], [data-type="pdf"]) ::-webkit-scrollbar,
 body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
@@ -4563,8 +4578,7 @@ body {
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2);
-    --shadow-activated-tab-header-light-alt: var(--shadow-activated-tab-header-light), 0 0 0 1px var(--background-modifier-border);
+    --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border);
 }
@@ -4592,21 +4606,13 @@ body:not(.is-mobile).theme-dark .workspace-tab-header .workspace-tab-header-inne
     border-radius: var(--border-radius-activated-tab-header-dark);
 }
 
-body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     background: var(--background-activated-tab-header-light);
     box-shadow: var(--shadow-activated-tab-header-light);
     border-radius: var(--border-radius-activated-tab-header-light);
 }
 
-body:not(.is-mobile).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: var(--shadow-activated-tab-header-light-alt);
-}
-
-body:not(.is-mobile).theme-light.card-layout-open-light .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-    box-shadow: var(--shadow-activated-tab-header-light) !important;
-}
-
-body:not(.is-mobile).theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
     box-shadow: var(--shadow-activated-tab-header-dark);
     background: var(--background-activated-tab-header-dark);
     border-radius: var(--border-radius-activated-tab-header-dark);
@@ -5646,11 +5652,6 @@ body.activated-file-tab-style-dark.theme-dark {
     --shadow-activated-file-dark: var(--shadow-activated-tab-header-dark) !important;
 }
 
-body.activated-file-tab-style-light.theme-light.mod-right-split-background-primary-light .mod-right-split,
-body.activated-file-tab-style-light.theme-light.mod-left-split-background-primary-light .mod-left-split {
-    --shadow-activated-file-light: var(--shadow-activated-tab-header-light-alt) !important;
-}
-
 body.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file-light) !important;
 }
@@ -6089,8 +6090,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-shadow-hover: var(--input-shadow-hover-light);
 
     --input-radius-light: 5px;
-    --input-shadow-light: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 1px 2px rgba(0, 0, 0, 0.04), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.04);
-    --input-shadow-hover-light: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15), inset 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.05);
+    --input-shadow-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.24), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
+    --input-shadow-hover-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.24), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
 }
 
 .theme-dark {
@@ -6126,8 +6127,8 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --input-shadow-hover: var(--input-shadow-hover-dark);
 
     --input-radius-dark: 5px;
-    --input-shadow-dark: inset 0px 0px 0px 1px var(--background-modifier-border), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
-    --input-shadow-hover-dark: inset 0px 0px 0px 1px var(--background-modifier-border-hover), 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -4px 8px rgba(0, 0, 0, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.4), inset 0px 4px 8px rgba(255, 255, 255, 0.05), inset 0px -2px 2px rgba(0, 0, 0, 0.1), inset 0px 2px 2px rgba(255, 255, 255, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.25);
+    --input-shadow-dark: 0px 4px 8px -4px rgba(0, 0, 0, 0.32), 0px 1px 2px rgba(0, 0, 0, 0.32), 0px 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px 1px rgba(0, 0, 0, 0.12), inset 0px 1px 0.75px rgba(255, 255, 255, 0.16), inset 0px -2px 0.75px rgba(0, 0, 0, 0.16);
+    --input-shadow-hover-dark: 0px 4px 8px -4px rgba(0, 0, 0, 0.32), 0px 1px 2px rgba(0, 0, 0, 0.32), 0px 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 1px 1px rgba(0, 0, 0, 0.12), inset 0px 1px 0.75px rgba(255, 255, 255, 0.16), inset 0px -2px 0.75px rgba(0, 0, 0, 0.16);
 }
 
 .theme-light.is-mobile,

@@ -56,6 +56,9 @@
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)
 ![screenshot](img/Glassmorphism.png)
 
++ [Borderless](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless.json)
+![screenshot](img/Borderless.png)
+
 + [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json)
 ![screenshot](img/Sunset.png)
 
