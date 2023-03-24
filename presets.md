@@ -27,7 +27,7 @@
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
 ![screenshot](img/Paper-like.png)
 
-+ [Borderless-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless-light.json)(credit [@kneecaps](https://github.com/7368697661))
++ [Borderless-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless-light.json) (credit [@kneecaps](https://github.com/7368697661))
 ![screenshot](img/Borderless-light.png)
 
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json)

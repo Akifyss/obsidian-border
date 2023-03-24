@@ -331,20 +331,6 @@ settings:
         min: 0.5
         max: 2
         step: 0.05
-    - 
-        id: Miscellaneous
-        title: Miscellaneous
-        title.zh: 杂项
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: card-highlight
-        title: Highlight active card
-        title.zh: 高亮当前活动卡片
-        description: Only applicable for card layout
-        description.zh: 仅限卡片式布局
-        type: class-toggle
 
 */
 
@@ -1211,6 +1197,43 @@ settings:
         description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
+    - 
+        id: Miscellaneous-light
+        title: Miscellaneous
+        title.zh: 杂项
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-highlight-light
+        title: Highlight active card
+        title.zh: 高亮当前活动卡片
+        description: Only applicable for card layout
+        description.zh: 仅限卡片式布局
+        type: class-toggle
+    - 
+        id: workspace-divider-transparent-light
+        title: Visually remove divider effect in workspace
+        title.zh: 在视觉上移除工作区的分隔线效果
+        description: For default layout
+        description.zh: 针对默认布局
+        type: class-toggle
+	- 
+		id: link-external-color
+		title: External link color
+        title.zh: 外部链接颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-external-color-hover
+		title: External link color (hover)
+        title.zh: 外部链接颜色（鼠标悬停时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 
 */
 
@@ -2089,6 +2112,43 @@ settings:
         description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
+    - 
+        id: Miscellaneous-dark
+        title: Miscellaneous
+        title.zh: 杂项
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: card-highlight-dark
+        title: Highlight active card
+        title.zh: 高亮当前活动卡片
+        description: Only applicable for card layout
+        description.zh: 仅限卡片式布局
+        type: class-toggle
+    - 
+        id: workspace-divider-transparent-dark
+        title: Visually remove divider effect in workspace
+        title.zh: 在视觉上移除工作区的分隔线效果
+        description: For default layout
+        description.zh: 针对默认布局
+        type: class-toggle
+	- 
+		id: link-external-color
+		title: External link color
+        title.zh: 外部链接颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	- 
+		id: link-external-color-hover
+		title: External link color (hover)
+        title.zh: 外部链接颜色（鼠标悬停时）
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 
 */
 
@@ -4214,7 +4274,7 @@ body:not(.is-mobile) .workspace-ribbon {
 }
 
 .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px var(--divider-color);
+    box-shadow: inset 0px 1px 0px var(--workspace-divider-color);
 }
 
 body.theme-light.card-layout-open-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
@@ -4266,9 +4326,6 @@ body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tab-header-co
     background-color: transparent !important;
 }
 
-body:not(.is-mobile).card-layout-open-light.theme-light .workspace-leaf-resize-handle {
-    border-color: transparent;
-}
 
 body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: unset;
@@ -4307,17 +4364,13 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tab-header-cont
     background-color: transparent !important;
 }
 
-body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-leaf-resize-handle {
-    border-color: transparent;
-}
-
 body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
     border-top: unset;
 }
 
 /* card highlight */
-body:not(.is-mobile).card-highlight.card-layout-open-light.theme-light .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container,
-body:not(.is-mobile).card-highlight.card-layout-open-dark.theme-dark .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container {
+body:not(.is-mobile).card-highlight-light.card-layout-open-light.theme-light .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container,
+body:not(.is-mobile).card-highlight-dark.card-layout-open-dark.theme-dark .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container {
     outline-offset: -2px;
     outline: 2px solid var(--color-accent-3);
 }
@@ -4625,6 +4678,23 @@ body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab
     box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
+/* divider */
+body {
+    --workspace-divider-color: var(--divider-color);
+}
+
+body:not(.is-mobile).card-layout-open-light.theme-light,
+body:not(.is-mobile).card-layout-open-dark.theme-dark,
+body.workspace-divider-transparent-light.theme-light,
+body.workspace-divider-transparent-dark.theme-dark {
+    --workspace-divider-color: transparent;
+}
+
+.workspace-leaf-resize-handle {
+    border-color: var(--workspace-divider-color);
+}
+
+
 /* ====== divider vertical height ===== */
 .is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
 .is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
@@ -4677,7 +4747,6 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
     transform: translateY(-22px);
     opacity: 0;
@@ -4691,23 +4760,15 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
     transition: transform var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px transparent;
-    transition: box-shadow var(--anim-out);
-}
-
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px var(--divider-color);
-    transition: box-shadow var(--anim-in);
-}
-
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
     transition: box-shadow var(--anim-out);
 }
 
+body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf,
 body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.workspace-tab-header-container:hover) .workspace-tabs:not(.mod-top):hover .workspace-tab-container>.workspace-leaf {
-    box-shadow: inset 0px 1px 0px var(--divider-color);
+    box-shadow: inset 0px 1px 0px var(--workspace-divider-color);
     transition: box-shadow var(--anim-in);
 }
 
@@ -8505,8 +8566,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 
-.setting-item.style-settings-heading:is([data-id=Extended-colors-light], [data-id=Global-background-header-light], [data-id=Foreground-header-light], [data-id=interactive-color-light])+.style-settings-container .setting-item .setting-item-control div.theme-dark,
-.setting-item.style-settings-heading:is([data-id=Extended-colors-dark], [data-id=Global-background-header-dark], [data-id=Foreground-header-dark], [data-id=interactive-color-dark])+.style-settings-container .setting-item .setting-item-control div.theme-light {
+.setting-item.style-settings-heading:is([data-id=Extended-colors-light], [data-id=Global-background-header-light], [data-id=Foreground-header-light], [data-id=interactive-color-light], [data-id=Miscellaneous-light])+.style-settings-container .setting-item .setting-item-control div.theme-dark,
+.setting-item.style-settings-heading:is([data-id=Extended-colors-dark], [data-id=Global-background-header-dark], [data-id=Foreground-header-dark], [data-id=interactive-color-dark], [data-id=Miscellaneous-dark])+.style-settings-container .setting-item .setting-item-control div.theme-light {
     display: none;
 }
 

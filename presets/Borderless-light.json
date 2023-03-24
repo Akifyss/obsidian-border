@@ -1,5 +1,4 @@
 {
-    "Appearance-light@@card-layout-open-light": true,
     "Appearance-light@@theme-light-style-select": "theme-light-background-brighter",
     "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-CSS-light",
     "Appearance-light@@background-mod-left-CSS-light": "radial-gradient(100% 50% at 100% 50%, rgba(90, 109, 237, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
@@ -18,5 +17,6 @@
     "Appearance-light@@background-activated-tab-header-light": "radial-gradient(50% 150% at 50% 150%, #F8F9FF 0%, rgba(97, 54, 144, 0) 100%)",
     "Appearance-light@@shadow-activated-tab-header-light": "none",
     "Appearance-light@@indicator-remove-light": true,
-    "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-tab-style-light"
+    "Appearance-light@@Active-states-file-explorer-select-light": "activated-file-tab-style-light",
+    "Appearance-light@@workspace-divider-transparent-light": true
 }

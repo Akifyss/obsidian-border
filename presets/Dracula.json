@@ -18,6 +18,6 @@
   "Appearance-dark@@text-faint@@dark": "#6272A4",
   "Appearance-dark@@interactive-normal@@dark": "#424257",
   "Appearance-dark@@interactive-hover@@dark": "#4b4b63",
-  "Editor@@link-external-color@@dark": "#50FA7B",
-  "Editor@@link-external-color-hover@@dark": "#50FA7B"
+  "Appearance-dark@@link-external-color@@dark": "#50FA7B",
+  "Appearance-dark@@link-external-color-hover@@dark": "#50FA7B"
 }

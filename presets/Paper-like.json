@@ -1,15 +1,22 @@
 {
-  "Appearance-light@@card-layout-open-light": true,
   "Appearance-light@@accent-color-custom-light": true,
   "Appearance-light@@accent-light": "#d1852e",
-  "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-transparent-light",
-  "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-transparent-light",
-  "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-transparent-light",
+  "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-CSS-light",
+  "Appearance-light@@background-mod-left-CSS-light": "transparent",
+  "Appearance-light@@background-mod-left-CSS-backdrop-filter-light": "blur(0px)",
+  "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-CSS-light",
+  "Appearance-light@@background-mod-right-CSS-light": "transparent",
+  "Appearance-light@@background-mod-right-CSS-backdrop-filter-light": "blur(0px)",
+  "Appearance-light@@mod-root-split-background-select-light": "mod-root-split-background-CSS-light",
+  "Appearance-light@@background-mod-root-CSS-light": "blur(0px)",
+  "Appearance-light@@background-mod-root-CSS-backdrop-filter-light": "blur(0px)",
   "Appearance-light@@background-underlying-select-light": "background-underlying-CSS-light",
   "Appearance-light@@background-underlying-CSS-light": "url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
   "Appearance-light@@background-underlying-CSS-blend-mode-light": "normal",
   "Appearance-light@@card-border-radius-light": "0px",
+  "Appearance-light@@card-shadow-light": "none",
   "Appearance-light@@border-radius-activated-tab-header-light": "0px",
   "Appearance-light@@background-activated-tab-header-light": "transparent",
-  "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--color-accent)"
+  "Appearance-light@@shadow-activated-tab-header-light": "0px 2px 0px var(--color-accent)",
+  "Appearance-light@@workspace-divider-transparent-light": true
 }
