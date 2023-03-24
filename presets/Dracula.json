@@ -1,7 +1,8 @@
 {
-  "Appearance-dark@@accent-color-restore": true,
   "Appearance-dark@@accent-color-custom-dark": true,
-  "Appearance-dark@@accent-dark": "#FF79C6",
+  "Appearance-dark@@color-accent-dark": "#FF79C6",
+  "Appearance-dark@@color-accent-1-dark": "#FF67BE",
+  "Appearance-dark@@color-accent-2-dark": "#FF8ECF",
   "Appearance-dark@@color-red-rgb@@dark": "#FF5555",
   "Appearance-dark@@color-orange-rgb@@dark": "#FFB86C",
   "Appearance-dark@@color-yellow-rgb@@dark": "#F1FA8C",

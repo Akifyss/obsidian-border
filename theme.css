@@ -392,6 +392,53 @@ settings:
         opacity: false
         default: '#5a6ded'
     - 
+        id: accent-advanced-light
+        title: Advanced
+        title.zh: 高级
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+		id: color-accent-hsl-light
+		title: color-accent-hsl
+        title.zh: color-accent-hsl
+        type: variable-color
+		format: hsl-values
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-light
+		title: color-accent
+        title.zh: color-accent
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-1-light
+		title: color-accent-1
+        title.zh: color-accent-1
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-2-light
+		title: color-accent-2
+        title.zh: color-accent-2
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-3-light
+		title: color-accent-3
+        title.zh: color-accent-3
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
         id: Extended-colors-light
         title: Extended colors
         title.zh: 拓展色
@@ -1305,6 +1352,53 @@ settings:
         format: hsl-split
         opacity: false
         default: '#5a6ded'
+    - 
+        id: accent-advanced-dark
+        title: Advanced
+        title.zh: 高级
+        type: heading
+        collapsed: true
+        level: 5
+    - 
+		id: color-accent-hsl-dark
+		title: color-accent-hsl
+        title.zh: color-accent-hsl
+        type: variable-color
+		format: hsl-values
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-dark
+		title: color-accent
+        title.zh: color-accent
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-1-dark
+		title: color-accent-1
+        title.zh: color-accent-1
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-2-dark
+		title: color-accent-2
+        title.zh: color-accent-2
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
+    - 
+		id: color-accent-3-dark
+		title: color-accent-3
+        title.zh: color-accent-3
+        type: variable-color
+		format: hsl
+        opacity: false
+        default: '#'
     - 
         id: Extended-colors-dark
         title: Extended colors
@@ -3365,8 +3459,8 @@ body.activated-file-tab-style-dark .setting-item[data-id=border-radius-activated
 body.activated-file-tab-style-dark .setting-item[data-id=color-to-file-icon-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=background-activated-file-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-dark],
-body:not(.accent-color-custom-light) .setting-item[data-id=accent-light],
-body:not(.accent-color-custom-dark) .setting-item[data-id=accent-dark],
+body:not(.accent-color-custom-light) .setting-item:is([data-id=accent-light], [data-id=accent-advanced-light], [data-id=color-accent-hsl-light], [data-id=color-accent-light], [data-id=color-accent-1-light], [data-id=color-accent-2-light], [data-id=color-accent-3-light]),
+body:not(.accent-color-custom-dark) .setting-item:is([data-id=accent-dark], [data-id=accent-advanced-dark], [data-id=color-accent-hsl-dark], [data-id=color-accent-dark], [data-id=color-accent-1-dark], [data-id=color-accent-2-dark], [data-id=color-accent-3-dark]),
 body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item:is([data-id=colorful-folder], [data-id=file-icon-color-select]),
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
@@ -3381,18 +3475,6 @@ body {
     --accent-h: 232;
     --accent-s: 80%;
     --accent-l: 64%;
-}
-
-.theme-light.accent-color-custom-light {
-    --accent-h: var(--accent-light-h) !important;
-    --accent-s: var(--accent-light-s) !important;
-    --accent-l: var(--accent-light-l) !important;
-}
-
-.theme-dark.accent-color-custom-dark {
-    --accent-h: var(--accent-dark-h) !important;
-    --accent-s: var(--accent-dark-s) !important;
-    --accent-l: var(--accent-dark-l) !important;
 }
 
 .theme-light {
@@ -3445,6 +3527,13 @@ body {
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
     --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
+    --color-accent-hsl-light: var(--accent-h),
+        var(--accent-s),
+        var(--accent-l);
+    --color-accent-light: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --color-accent-1-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
+    --color-accent-2-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
+    --color-accent-3-light: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
     --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.25);
     --background-modifier-border-focus: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.3);
@@ -3474,6 +3563,17 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
+.theme-light.accent-color-custom-light {
+    --accent-h: var(--accent-light-h) !important;
+    --accent-s: var(--accent-light-s) !important;
+    --accent-l: var(--accent-light-l) !important;
+    --color-accent-hsl: var(--color-accent-hsl-light) !important;
+    --color-accent: var(--color-accent-light) !important;
+    --color-accent-1: var(--color-accent-1-light) !important;
+    --color-accent-2: var(--color-accent-2-light) !important;
+    --color-accent-3: var(--color-accent-3-light) !important;
+}
+
 .theme-light.theme-light-background-adapt {
     --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
     --background-primary: hsl(calc(var(--accent-h)),
@@ -3494,15 +3594,6 @@ body {
     --interactive-normal: var(--color-base-00);
     --interactive-hover: var(--color-base-10);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
-}
-
-.theme-dark:not(.accent-color-restore) {
-    --color-accent-hsl: var(--accent-h),
-        calc(var(--accent-s)*0.8),
-        calc(var(--accent-l) * 1.125);
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) - 3.8%));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) + 3.8%));
 }
 
 .theme-dark {
@@ -3554,6 +3645,13 @@ body {
     --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
     --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
     --color-accent-3: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
+    --color-accent-hsl-dark: var(--accent-h),
+        var(--accent-s),
+        var(--accent-l);
+    --color-accent-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --color-accent-1-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+    --color-accent-2-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+    --color-accent-3-dark: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.2);
     --background-modifier-border-hover: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.25);
     --background-modifier-border-focus: hsla(var(--accent-h), calc(0.3*var(--accent-s)), calc(1.1*var(--accent-l)), 0.3);
@@ -3586,6 +3684,25 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
+.theme-dark:not(.accent-color-restore) {
+    --color-accent-hsl: var(--accent-h),
+        calc(var(--accent-s)*0.8),
+        calc(var(--accent-l) * 1.125);
+    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
+    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) - 3.8%));
+    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) + 3.8%));
+}
+
+.theme-dark.accent-color-custom-dark {
+    --accent-h: var(--accent-dark-h) !important;
+    --accent-s: var(--accent-dark-s) !important;
+    --accent-l: var(--accent-dark-l) !important;
+    --color-accent-hsl: var(--color-accent-hsl-dark) !important;
+    --color-accent: var(--color-accent-dark) !important;
+    --color-accent-1: var(--color-accent-1-dark) !important;
+    --color-accent-2: var(--color-accent-2-dark) !important;
+    --color-accent-3: var(--color-accent-3-dark) !important;
+}
 
 .theme-dark.theme-dark-background-darker {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
@@ -4696,16 +4813,20 @@ body.workspace-divider-transparent-dark.theme-dark {
 
 
 /* ====== divider vertical height ===== */
-.is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 .is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
 }
 
-.workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
+}
+
+.workspace-split.mod-vertical:not(:has(.mod-top))>*>.workspace-leaf-resize-handle {
+    height: 100% !important;
 }
 
 /* ====== autohide ===== */
@@ -4775,40 +4896,40 @@ body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.w
 
 /*tab autohide mod-top*/
 
-body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) + 24px);
     transition: height var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     transition: height var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
     transition: height var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 16px);
     transition: height var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     transition: height var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical.mod-root>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
