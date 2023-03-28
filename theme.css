@@ -3830,7 +3830,7 @@ body:not(.is-phone) .modal.mod-community-modal {
 
 /*from https://github.com/hydescarf/Obsidian-Theme-Mado-Miniflow */
 
-.workspace-split .workspace-tabs:not(.mod-stacked) .workspace-leaf-content:not(:has(.surfing-settings-icon)) .view-content,
+.workspace-split .workspace-tabs:not(.mod-stacked) .workspace-leaf-content:not(:has(.surfing-settings-icon)) .view-content:not(.vignette-radial, .vignette-linear, .animate),
 .workspace-leaf-content:not(:has(.view-content)) {
     -webkit-animation: slide-up var(--anim-duration-fast) forwards;
     animation: slide-up var(--anim-duration-fast) forwards;
@@ -3939,8 +3939,8 @@ body {
 
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
-body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-header,
-body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content,
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-header:not(.animate),
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate),
 .sidebar-toggle-button,
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
@@ -5228,16 +5228,10 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 body:not(.is-mobile) .mod-active .document-search-container,
 body:not(.is-mobile) .document-search-container {
     background-color: var(--background-primary);
-}
-
-/*
-.mod-active .document-search-container,
-.document-search-container {
-    background-color: var(--workspace-background-translucent);
+    /*background-color: var(--workspace-background-translucent);
     backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
-    -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
-}*/
-
+    -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);*/
+}
 
 body:not(.is-mobile) .document-search-container {
     position: absolute;
@@ -5245,7 +5239,7 @@ body:not(.is-mobile) .document-search-container {
     border-radius: var(--size-4-2);
     padding: var(--size-4-2) 0;
     height: fit-content;
-    box-shadow: var(--shadow-s);
+    box-shadow: var(--shadow-l);
     margin: 0px;
     margin-left: calc((600px - 100%) / -2);
     max-width: 600px;
@@ -6345,7 +6339,7 @@ body:not(.is-mobile) input[type=range]:is(:focus, :focus-visible)::-webkit-slide
 
 body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input, .sync-history-text):is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='text']:not(.mk-cell-text):is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo, .svelte-1v6c0q):is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='email']:is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='password']:is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='number']:is(:focus, :focus-visible) {

@@ -17,13 +17,15 @@
   "Appearance-dark@@background-secondary-alt@@dark": "#363636",
   "Appearance-dark@@background-tertiary@@dark": "#363636",
   "Appearance-dark@@workspace-background-translucent@@dark": "#00000099",
-  "Appearance-dark@@background-modifier-hover@@dark": "#D9D9D913",
-  "Appearance-dark@@background-modifier-active-hover@@dark": "#7C5AED26",
+  "Appearance-dark@@background-modifier-hover@@dark": "#FFFFFF13",
+  "Appearance-dark@@background-modifier-border-hover@@dark": "#3f3f3f",
+  "Appearance-dark@@background-modifier-border-focus@@dark": "#555555",
   "Appearance-dark@@text-normal@@dark": "#DADADA",
   "Appearance-dark@@text-muted@@dark": "#BABABA",
   "Appearance-dark@@text-faint@@dark": "#BABABA",
   "Appearance-dark@@interactive-normal@@dark": "#363636",
   "Appearance-dark@@interactive-hover@@dark": "#3F3F3F",
-  "Appearance-dark@@background-activated-tab-header-dark": "rgba(var(--mono-rgb-100), 0.15)",
+  "Appearance-dark@@background-activated-tab-header-dark": "#FFFFFF13",
+  "Appearance-dark@@shadow-activated-tab-header-dark": "none",
   "Appearance-dark@@indicator-remove-dark": true
 }

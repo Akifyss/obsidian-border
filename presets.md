@@ -47,6 +47,9 @@
 
 ---
 
++ [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
+![screenshot](img/Obsidian-default-light.png)
+
 + [Rosé Pine Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine-Dawn.png)
 
