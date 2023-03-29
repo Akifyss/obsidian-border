@@ -5597,7 +5597,7 @@ input.wb-search-bar {
     justify-content: flex-start;
 }
 
-/*outline style*/
+/*outline pane*/
 /* from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536 */
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon {
@@ -5905,9 +5905,6 @@ body.theme-dark .nav-folder-title.is-active {
 
 /* file layout & style */
 
-.nav-folder-collapse-indicator {
-    display: none;
-}
 
 .nav-folder.mod-root .nav-folder>.nav-folder-children {
     margin: 0 0 0 var(--size-4-4);
@@ -6005,12 +6002,17 @@ body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-fo
     display: none;
 }
 
-body.file-icon-remove .nav-folder-collapse-indicator {
-    display: flex;
-}
-
 body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     margin: 0 0 0 var(--nav-item-children-margin-left);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator {
+    display: none;
+}
+
+body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator {
+    display: flex;
+    height: 20px;
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before {
@@ -6143,6 +6145,11 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     margin-left: 4px;
 }
 
+/*other pane*/
+.tag-container,
+.bookmarks-container {
+    padding: var(--size-4-1) var(--size-4-3) var(--size-4-8);
+}
 
 /*====== empty state ======*/
 
