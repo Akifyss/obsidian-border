@@ -3956,10 +3956,10 @@ body {
     --mix-blend-mode-on-border-dark: screen;
 }
 
-.theme-light .titlebar,
-.theme-light .status-bar,
-.theme-light .workspace-ribbon,
-.theme-light .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-light:not(.is-mobile) .titlebar,
+.theme-light:not(.is-mobile) .status-bar,
+.theme-light:not(.is-mobile) .workspace-ribbon,
+.theme-light:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container,
 .theme-light:not(.is-mobile).card-layout-open-light .workspace-tabs .workspace-tab-header-container {
     --text-muted: var(--on-border-light);
     --text-faint: var(--on-border-light);
@@ -3979,10 +3979,10 @@ body {
     mix-blend-mode: var(--mix-blend-mode-on-border-light);
 }
 
-.theme-dark .titlebar,
-.theme-dark .status-bar,
-.theme-dark .workspace-ribbon,
-.theme-dark .workspace-tabs.mod-top .workspace-tab-header-container,
+.theme-dark:not(.is-mobile) .titlebar,
+.theme-dark:not(.is-mobile) .status-bar,
+.theme-dark:not(.is-mobile) .workspace-ribbon,
+.theme-dark:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container,
 .theme-dark:not(.is-mobile).card-layout-open-dark .workspace-tabs .workspace-tab-header-container {
     --text-muted: var(--on-border-dark);
     --text-faint: var(--on-border-dark);
@@ -6116,7 +6116,6 @@ body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-fo
     margin-right: 4px;
     position: relative;
     content: " ";
-    display: inline-block;
     width: 20px;
     height: 20px;
     background-color: var(--file-icon-color);
