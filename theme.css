@@ -377,16 +377,11 @@ settings:
         collapsed: true
         level: 4
     - 
-        id: accent-color-custom-light
-        title: Custom accent color(light mode)
-        title.zh: 自定义主题色（亮色模式）
-        description: Set accent color for the light and dark modes separately
-        description.zh: 分开来设置亮色模式与暗色模式的强调色
-        type: class-toggle
-    - 
         id: accent-light
         title: Accent color(light mode)
-        title.zh: 主题色（暗色模式）
+        title.zh: 主题色（亮色模式）
+        description: Set accent color for the light and dark modes separately
+        description.zh: 分开来设置亮色模式与暗色模式的强调色
         type: variable-color
         format: hsl-split
         opacity: false
@@ -1331,27 +1326,15 @@ settings:
         collapsed: true
         level: 4
     - 
-        id: accent-color-restore
-        title: Restore accent color in dark mode
-        title.zh: 还原暗色模式下的主题色
-        description: By default, accent color is optimized for dark mode, do you want to restore it to the original color?
-        description.zh: 默认情况下，主题色针对暗色模式做了优化，是否将其恢复至原本的颜色？
-        type: class-toggle
-    - 
-        id: accent-color-custom-dark
-        title: Custom accent color(dark mode)
-        title.zh: 自定义主题色（暗色模式）
-        description: Set accent color for the light and dark modes separately
-        description.zh: 分开来设置亮色模式与暗色模式的强调色
-        type: class-toggle
-    - 
         id: accent-dark
         title: Accent color(dark mode)
         title.zh: 主题色（暗色模式）
+        description: Set accent color for the light and dark modes separately
+        description.zh: 分开来设置亮色模式与暗色模式的强调色
         type: variable-color
         format: hsl-split
         opacity: false
-        default: '#5a6ded'
+        default: '#8a96e5'
     - 
         id: accent-advanced-dark
         title: Advanced
@@ -3459,8 +3442,6 @@ body.activated-file-tab-style-dark .setting-item[data-id=border-radius-activated
 body.activated-file-tab-style-dark .setting-item[data-id=color-to-file-icon-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=background-activated-file-dark],
 body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-dark],
-body:not(.accent-color-custom-light) .setting-item:is([data-id=accent-light], [data-id=accent-advanced-light], [data-id=color-accent-hsl-light], [data-id=color-accent-light], [data-id=color-accent-1-light], [data-id=color-accent-2-light], [data-id=color-accent-3-light]),
-body:not(.accent-color-custom-dark) .setting-item:is([data-id=accent-dark], [data-id=accent-advanced-dark], [data-id=color-accent-hsl-dark], [data-id=color-accent-dark], [data-id=color-accent-1-dark], [data-id=color-accent-2-dark], [data-id=color-accent-3-dark]),
 body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item:is([data-id=colorful-folder], [data-id=file-icon-color-select]),
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
@@ -3478,12 +3459,6 @@ body {
 }
 
 .theme-light {
-    --accent-h: 232;
-    --accent-s: 80%;
-    --accent-l: 64%;
-    --accent-light-h: 232;
-    --accent-light-s: 80%;
-    --accent-light-l: 64%;
     color-scheme: light;
     --text-normal: hsl(var(--accent-h), 12%, 12%);
     --text-muted: hsl(var(--accent-h), 9%, 36%);
@@ -3520,13 +3495,17 @@ body {
     --color-base-60: #707070;
     --color-base-70: #5a5a5a;
     --color-base-100: #222222;
-    --color-accent-hsl: var(--accent-h),
-        var(--accent-s),
-        var(--accent-l);
-    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
-    --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
-    --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
+    --accent-h: var(--accent-light-h);
+    --accent-s: var(--accent-light-s);
+    --accent-l: var(--accent-light-l);
+    --accent-light-h: 232;
+    --accent-light-s: 80%;
+    --accent-light-l: 64%;
+    --color-accent-hsl: var(--color-accent-hsl-light);
+    --color-accent: var(--color-accent-light);
+    --color-accent-1: var(--color-accent-1-light);
+    --color-accent-2: var(--color-accent-2-light);
+    --color-accent-3: var(--color-accent-3-light);
     --color-accent-hsl-light: var(--accent-h),
         var(--accent-s),
         var(--accent-l);
@@ -3563,17 +3542,6 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
-.theme-light.accent-color-custom-light {
-    --accent-h: var(--accent-light-h) !important;
-    --accent-s: var(--accent-light-s) !important;
-    --accent-l: var(--accent-light-l) !important;
-    --color-accent-hsl: var(--color-accent-hsl-light) !important;
-    --color-accent: var(--color-accent-light) !important;
-    --color-accent-1: var(--color-accent-1-light) !important;
-    --color-accent-2: var(--color-accent-2-light) !important;
-    --color-accent-3: var(--color-accent-3-light) !important;
-}
-
 .theme-light.theme-light-background-adapt {
     --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
     --background-primary: hsl(calc(var(--accent-h)),
@@ -3597,12 +3565,6 @@ body {
 }
 
 .theme-dark {
-    --accent-h: 232;
-    --accent-s: 80%;
-    --accent-l: 64%;
-    --accent-dark-h: 232;
-    --accent-dark-s: 80%;
-    --accent-dark-l: 64%;
     color-scheme: dark;
     --text-normal: hsl(var(--accent-h), 24%, 84%);
     --text-muted: hsl(var(--accent-h), 18%, 72%);
@@ -3638,13 +3600,17 @@ body {
     --color-base-60: #999;
     --color-base-70: #bababa;
     --color-base-100: #dadada;
-    --color-accent-hsl: var(--accent-h),
-        var(--accent-s),
-        var(--accent-l);
-    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
-    --color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
-    --color-accent-3: hsla(var(--accent-h), calc(0.45*var(--accent-s)), calc(1.15*var(--accent-l)));
+    --accent-h: var(--accent-dark-h);
+    --accent-s: var(--accent-dark-s);
+    --accent-l: var(--accent-dark-l);
+    --accent-dark-h: 232;
+    --accent-dark-s: 64%;
+    --accent-dark-l: 72%;
+    --color-accent-hsl: var(--color-accent-hsl-dark);
+    --color-accent: var(--color-accent-dark);
+    --color-accent-1: var(--color-accent-1-dark);
+    --color-accent-2: var(--color-accent-2-dark);
+    --color-accent-3: var(--color-accent-3-dark);
     --color-accent-hsl-dark: var(--accent-h),
         var(--accent-s),
         var(--accent-l);
@@ -3682,26 +3648,6 @@ body {
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
         0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
         0px 30px 90px rgba(0, 0, 0, 0.2);
-}
-
-.theme-dark:not(.accent-color-restore) {
-    --color-accent-hsl: var(--accent-h),
-        calc(var(--accent-s)*0.8),
-        calc(var(--accent-l) * 1.125);
-    --color-accent: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc(var(--accent-l) * 1.125));
-    --color-accent-1: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) - 3.8%));
-    --color-accent-2: hsl(var(--accent-h), calc(var(--accent-s)*0.8), calc((var(--accent-l) * 1.125) + 3.8%));
-}
-
-.theme-dark.accent-color-custom-dark {
-    --accent-h: var(--accent-dark-h) !important;
-    --accent-s: var(--accent-dark-s) !important;
-    --accent-l: var(--accent-dark-l) !important;
-    --color-accent-hsl: var(--color-accent-hsl-dark) !important;
-    --color-accent: var(--color-accent-dark) !important;
-    --color-accent-1: var(--color-accent-1-dark) !important;
-    --color-accent-2: var(--color-accent-2-dark) !important;
-    --color-accent-3: var(--color-accent-3-dark) !important;
 }
 
 .theme-dark.theme-dark-background-darker {
@@ -6145,10 +6091,55 @@ body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-fo
     margin-left: 4px;
 }
 
+/*tag pane*/
+.tag-container .tree-item-icon.collapse-icon svg.svg-icon {
+    color: transparent;
+}
+
+.tag-container .tree-item-icon.collapse-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--file-icon-color);
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M13 17.5H5A1.5 1.5 0 0 1 3.5 16V7.5a1.5 1.5 0 0 1 .6-1.2l4.6-3.45a.5.5 0 0 1 .6 0l5 3.75a.5.5 0 0 1 .2.4v9a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M9 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'/%3e%3cpath stroke-linecap='round' d='M16.5 16V6a1 1 0 0 0-.4-.8L12 2.125'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.tag-container .is-collapsed .tree-item-icon.collapse-icon {
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M13 17.5H5A1.5 1.5 0 0 1 3.5 16V7.5a1.5 1.5 0 0 1 .6-1.2l4.6-3.45a.5.5 0 0 1 .6 0l5 3.75a.5.5 0 0 1 .2.4v9a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath fill='black' d='M9 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'/%3e%3cpath stroke-linecap='round' d='M16.5 16V6a1 1 0 0 0-.4-.8L12 2.125'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.tag-container .tag-pane-tag.tree-item-self:not(.mod-collapsible)::before {
+    margin-right: 4px;
+    position: relative;
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -5px;
+    background-color: var(--file-icon-color);
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V7.5a1.5 1.5 0 0 1 .6-1.2l4.6-3.45a.5.5 0 0 1 .6 0l5 3.75a.5.5 0 0 1 .2.4v9a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M10 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.tag-container .tree-item-self {
+    padding-left: var(--size-4-1);
+}
+
 /*other pane*/
 .tag-container,
 .bookmarks-container {
-    padding: var(--size-4-1) var(--size-4-3) var(--size-4-8);
+    padding: 0 var(--size-4-3) var(--size-4-8);
+}
+
+:is(.tag-container, .bookmarks-container, .search-result-container) .tree-item-self {
+    margin-bottom: var(--size-2-2);
+}
+
+:is(.tag-container, .bookmarks-container, .search-result-container) :is(.tree-item-flair, .tree-item-inner) {
+    line-height: 20px;
+}
+
+:is(.tag-container, .bookmarks-container, .search-result-container) .tree-item-icon {
+    height: 20px;
 }
 
 /*====== empty state ======*/
