@@ -1,5 +1,9 @@
 {
-  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-brighter",
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-default",
+  "Appearance-dark@@color-accent-hsl-dark": "#DB79FF",
+  "Appearance-dark@@color-accent-dark": "#db79ff",
+  "Appearance-dark@@color-accent-1-dark": "#d667ff",
+  "Appearance-dark@@color-accent-2-dark": "#e18eff",
   "Appearance-dark@@mod-left-split-background-select-dark": "mod-left-split-background-CSS-dark",
   "Appearance-dark@@background-mod-left-CSS-dark": "radial-gradient(100% 50% at 100% 50%, rgba(90, 109, 237, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
   "Appearance-dark@@background-mod-left-CSS-backdrop-filter-dark": "blur(0px)",

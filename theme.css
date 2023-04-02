@@ -5,8 +5,8 @@ id: Info
 settings:
     - 
         id: Extras-info
-        description: "**⚠️ Note**: Some features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“ <br> <br> 🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 If you have problems, please submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github"
-        description.zh: "**⚠️ 注意**：此主题的部分功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本  <br> <br> 🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 如果遇到问题，可以在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)"
+        description: "**ℹ️ Note**: Some features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“ <br> <br> 🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 If you have problems, please submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github<br> <br> 🔼 View recent updates: [Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
+        description.zh: "**ℹ️ 注意**：此主题的部分功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本  <br> <br> 🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 如果遇到问题，可以在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)<br> <br> 🔼 查看最近更新：[Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
         type: info-text
         markdown: true
 */
@@ -3728,13 +3728,13 @@ body {
     --anim-out: var(--anim-duration-moderate) var(--anim-duration-slow) var(--anim-motion-swing);
 }
 
-body:not(.is-mobile, .extra-anim-remove) .document-search-container,
-body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
+/*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
 body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
 body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
+body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
 body:not(.is-phone, .extra-anim-remove) .prompt,
-body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
-body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]) {
+body:not(.is-mobile, .extra-anim-remove) .document-search-container,
+body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)) {
     -webkit-animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
     animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
@@ -4438,7 +4438,7 @@ body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs:not(.mod-t
 /* card highlight */
 body:not(.is-mobile).card-highlight-light.card-layout-open-light.theme-light .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container,
 body:not(.is-mobile).card-highlight-dark.card-layout-open-dark.theme-dark .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container {
-    outline-offset: -2px;
+    outline-offset: 0px;
     outline: 2px solid var(--color-accent-3);
 }
 
@@ -5855,6 +5855,11 @@ body.theme-dark .nav-folder-title.is-active {
 
 /* file layout & style */
 
+body {
+    --vault-name-font-size: var(--nav-item-size);
+    --vault-name-font-weight: var(--nav-item-weight);
+    --vault-name-color: var(--nav-item-color);
+}
 
 .nav-folder.mod-root .nav-folder>.nav-folder-children {
     margin: 0 0 0 var(--size-4-4);
