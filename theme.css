@@ -7907,7 +7907,7 @@ body {
     --inline-code-normal: var(--color-pink);
 }
 
-.markdown-rendered code,
+.markdown-rendered :not(pre) > code,
 .cm-s-obsidian span.cm-inline-code {
     color: var(--inline-code-normal)
 }
