@@ -242,6 +242,11 @@ settings:
         title.zh: 沉浸式白板
         type: class-toggle
     - 
+        id: media-embed-card-border-off
+        title: Remove border effect of media card.
+        title.zh: 移除媒体卡片的边框效果
+        type: class-toggle
+    - 
 		id: canvas-background
 		title: Customize canvas background color
         title.zh: 自定义 canvas 背景色
@@ -5300,27 +5305,35 @@ body.canvas-card-menu-right .canvas-card-menu {
     border: 1px solid var(--background-modifier-border);
 }
 
-body.immersive-canvas .canvas-card-menu,
-body.immersive-canvas .canvas-controls {
+.immersive-canvas .canvas-card-menu,
+.immersive-canvas .canvas-controls {
     opacity: 0;
     transition: opacity var(--anim-out);
 }
 
 
-body.immersive-canvas .canvas-card-menu:hover,
-body.immersive-canvas .canvas-controls:hover {
+.immersive-canvas .canvas-card-menu:hover,
+.immersive-canvas .canvas-controls:hover {
     opacity: 1;
     transition: opacity var(--anim-in)
 }
 
 
-/* hover effect*/
+/* canvas hover effect*/
 @media (hover: hover) {
     .canvas-node:hover {
         outline-offset: 4px;
         outline: 4px solid var(--background-modifier-border-hover);
         border-radius: var(--radius-m);
     }
+}
+
+/* canvas hover effect*/
+
+.media-embed-card-border-off .canvas-node-container:has(> .media-embed) {
+    border-width: 0;
+    border-style: none;
+    box-shadow: none;
 }
 
 /* graph view*/
@@ -6347,7 +6360,7 @@ body:not(.is-mobile) input[type='text']:not(.mk-cell-text):is(:focus, :focus-vis
 body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo, .svelte-1v6c0q):is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='email']:is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='password']:is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='number']:is(:focus, :focus-visible) {
+body:not(.is-mobile) input[type='number']:not(.mk-cell-text):is(:focus, :focus-visible) {
     border: 1px solid var(--interactive-accent);
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
@@ -7907,7 +7920,7 @@ body {
     --inline-code-normal: var(--color-pink);
 }
 
-.markdown-rendered :not(pre) > code,
+.markdown-rendered :not(pre)>code,
 .cm-s-obsidian span.cm-inline-code {
     color: var(--inline-code-normal)
 }
