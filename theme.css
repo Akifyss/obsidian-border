@@ -3772,17 +3772,17 @@ body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)) {
     }
 }
 
-body:not(.is-phone) .modal:has(.checkbox-container),
-body:not(.is-phone) .modal.mod-settings,
-body:not(.is-phone) .modal.mod-community-modal {
+body:not(.is-phone, .extra-anim-remove) .modal:has(.checkbox-container),
+body:not(.is-phone, .extra-anim-remove) .modal.mod-settings,
+body:not(.is-phone, .extra-anim-remove) .modal.mod-community-modal {
     -webkit-animation: var(--anim-duration-fast) fadeIn both;
     animation: var(--anim-duration-fast) fadeIn both;
 }
 
 /*from https://github.com/hydescarf/Obsidian-Theme-Mado-Miniflow */
 
-.workspace-split .workspace-tabs:not(.mod-stacked) .workspace-leaf-content:not(:has(.surfing-settings-icon)) .view-content:not(.vignette-radial, .vignette-linear, .animate),
-.workspace-leaf-content:not(:has(.view-content)) {
+body:not(.extra-anim-remove) .workspace-split .workspace-tabs:not(.mod-stacked) .workspace-leaf-content:not(:has(.surfing-settings-icon)) .view-content:not(.vignette-radial, .vignette-linear, .animate),
+body:not(.extra-anim-remove) .workspace-leaf-content:not(:has(.view-content)) {
     -webkit-animation: slide-up var(--anim-duration-fast) forwards;
     animation: slide-up var(--anim-duration-fast) forwards;
 }
@@ -5315,7 +5315,7 @@ body.canvas-card-menu-right .canvas-card-menu {
 .immersive-canvas .canvas-card-menu:hover,
 .immersive-canvas .canvas-controls:hover {
     opacity: 1;
-    transition: opacity var(--anim-in)
+    transition: opacity var(--anim-in);
 }
 
 
@@ -6726,6 +6726,7 @@ body {
 
 body:not(.inline-title-divider-remove) .inline-title {
     border-bottom: 1px solid var(--divider-color);
+    padding-bottom: var(--size-4-3);
     margin-bottom: var(--size-4-3);
 }
 
