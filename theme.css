@@ -7478,7 +7478,7 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .list-bullet::after {
 }
 
 /* level 1 */
-body:not(.ul-marker-restore) .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-rendered .has-list-bullet .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
     --list-bullet-radius: 50%;
@@ -7489,7 +7489,7 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.Hy
 }
 
 /* level 2 */
-body:not(.ul-marker-restore) .has-list-bullet .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-rendered .has-list-bullet .has-list-bullet .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent~span.cm-formatting .list-bullet::after {
     --list-bullet-radius: 0;
@@ -7500,7 +7500,7 @@ body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.Hy
 }
 
 /* level 3 */
-body:not(.ul-marker-restore) .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+body:not(.ul-marker-restore) .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator~span.cm-formatting .list-bullet::after,
 body:not(.ul-marker-restore) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent~span.cm-formatting .list-bullet::after {
     --list-bullet-radius: 0;
