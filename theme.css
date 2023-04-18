@@ -1265,6 +1265,15 @@ settings:
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
+    - 
+		id: file-icon-color
+		title: Customize file and folder icon color in explorer
+        title.zh: 自定义 文件管理器前置图标色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	- 
 		id: link-external-color
 		title: External link color
@@ -2215,6 +2224,15 @@ settings:
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
+    - 
+		id: file-icon-color
+		title: Customize file and folder icon color in explorer
+        title.zh: 自定义 文件管理器前置图标色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	- 
 		id: link-external-color
 		title: External link color
@@ -5571,7 +5589,7 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
     content: "" !important;
 }
 
-body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item {
+body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item {
     position: relative;
 }
 
@@ -5615,7 +5633,7 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
     box-shadow: 0 0 0 4px var(--background-modifier-hover);
 }
 
-body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
+body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
     content: "";
     width: 2px;
     position: absolute;
@@ -5661,7 +5679,7 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
     background-color: transparent;
 }
 
-body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover>.tree-item-children>.tree-item:hover::before {
+body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover>.tree-item-children>.tree-item:hover::before {
     content: "";
     position: absolute;
     top: calc(var(--nav-item-size) * 1.8 / 2 * -1);
