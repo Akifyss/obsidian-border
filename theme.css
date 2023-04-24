@@ -392,6 +392,11 @@ settings:
         opacity: false
         default: '#5a6ded'
     - 
+        id: accent-color-override-light
+        title: Override accent color setting in "Settings-Appearance" menu(light mode)
+        title.zh: 覆写 "设置-外观 "菜单中的强调色设置（亮色模式）
+        type: class-toggle
+    - 
         id: accent-advanced-light
         title: Advanced
         title.zh: 高级
@@ -1265,15 +1270,6 @@ settings:
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
-    - 
-		id: file-icon-color
-		title: Customize file and folder icon color in explorer
-        title.zh: 自定义 文件管理器前置图标色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	- 
 		id: link-external-color
 		title: External link color
@@ -1349,6 +1345,11 @@ settings:
         format: hsl-split
         opacity: false
         default: '#8a96e5'
+    - 
+        id: accent-color-override-dark
+        title: Override accent color setting in "Settings-Appearance" menu(dark mode)
+        title.zh: 覆写 "设置-外观 "菜单中的强调色设置（暗色模式）
+        type: class-toggle
     - 
         id: accent-advanced-dark
         title: Advanced
@@ -2224,15 +2225,6 @@ settings:
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
-    - 
-		id: file-icon-color
-		title: Customize file and folder icon color in explorer
-        title.zh: 自定义 文件管理器前置图标色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
 	- 
 		id: link-external-color
 		title: External link color
@@ -3115,6 +3107,11 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: img-center-align
+        title: center-align the image
+        title.zh: 图像居中显示
+        type: class-toggle
+    - 
         id: img-darken
         title: darken image in dark mode
         title.zh: 在暗黑模式下暗化图像
@@ -3479,6 +3476,18 @@ body {
     --accent-h: 232;
     --accent-s: 80%;
     --accent-l: 64%;
+}
+
+.theme-light.accent-color-override-light {
+    --accent-h: var(--accent-light-h) !important;
+    --accent-s: var(--accent-light-s) !important;
+    --accent-l: var(--accent-light-l) !important;
+}
+
+.theme-dark.accent-color-override-dark {
+    --accent-h: var(--accent-dark-h) !important;
+    --accent-s: var(--accent-dark-s) !important;
+    --accent-l: var(--accent-dark-l) !important;
 }
 
 .theme-light {
@@ -5909,8 +5918,8 @@ body {
     border-radius: var(--border-radius-activated-file-dark);
 }
 
-body.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content,
-body.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content {
+.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content,
+.file-names-untrim .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content {
     white-space: normal;
 }
 
@@ -5972,23 +5981,29 @@ body {
     --file-icon-color: var(--color-accent);
 }
 
-body.file-icon-color-accent {
+.file-icon-color-accent {
     --file-icon-color: var(--color-accent) !important;
 }
 
-body.file-icon-color-currentColor {
+.file-icon-color-currentColor {
     --file-icon-color: currentColor !important;
 }
 
-body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
-    width: 0px;
-}
-
-body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before {
+.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before,
+.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
     display: none;
 }
 
-body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
+.file-icon-remove .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
+    padding-left: 12px;
+}
+
+.file-icon-remove.indicator-remove-light.theme-light .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title,
+.file-icon-remove.indicator-remove-dark.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
+    padding-left: 8px;
+}
+
+.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     margin: 0 0 0 var(--nav-item-children-margin-left);
 }
 
@@ -5996,7 +6011,7 @@ body.file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
     display: none;
 }
 
-body.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator {
+.file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-collapse-indicator {
     display: flex;
     height: 20px;
 }
@@ -8092,6 +8107,14 @@ body.seamless-embeds {
 
 /* ===== image ====== */
 
+/*  image center align */
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:not([class*="emoji"]),
+.img-center-align .view-content :not(.canvas-node-content)>img:not([class*="emoji"]) {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /*  image hover effect */
 .markdown-source-view.mod-cm6 .cm-content>.internal-embed {
     contain: unset !important;
@@ -8140,12 +8163,12 @@ body:not(.zoom-off) .view-content div:not(.canvas-node-content) img {
 }
 
 body:not(.zoom-off) .view-content img:active {
-    cursor: zoom-out
+    cursor: zoom-out;
 }
 
 body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active {
     background-color: var(--background-primary);
-    padding: 10px
+    padding: 10px;
 }
 
 body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active,
@@ -8165,7 +8188,7 @@ body:not(.zoom-off) .view-content .markdown-preview-view img[referrerpolicy=no-r
     padding: 0;
     left: 0;
     right: 0;
-    bottom: 0
+    bottom: 0;
 }
 
 body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active:after {
@@ -8177,7 +8200,7 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active:
     position: fixed;
     left: 0;
     right: 1px;
-    z-index: 0
+    z-index: 0;
 }
 
 body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active img {
@@ -8194,7 +8217,10 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active 
     right: 0;
     bottom: 0;
     position: absolute;
-    opacity: 1
+    opacity: 1;
+    outline: unset !important;
+    outline-offset: 0px !important;
+    border-radius: 0 !important;
 }
 
 /* ====== icon ====== */
