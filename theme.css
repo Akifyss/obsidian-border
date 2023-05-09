@@ -75,6 +75,11 @@ settings:
         title.zh: 不修剪文件名
         type: class-toggle
     - 
+        id: vault-name-fixed
+        title: Fix vault name position
+        title.zh: 固定仓库名位置
+        type: class-toggle
+    - 
         id: folder-font-bold
         title: Bold folder font
         title.zh: 加粗文件夹字体
@@ -5923,7 +5928,7 @@ body {
     white-space: normal;
 }
 
-body.folder-font-bold .nav-folder-title {
+.folder-font-bold .nav-folder-title {
     --nav-item-weight-hover: bold;
     --nav-item-weight-active: bold;
     --vault-name-font-weight: bold;
@@ -5939,8 +5944,18 @@ body.folder-font-bold .nav-folder-title {
     line-height: 20px;
 }
 
+/*fix vault name*/
+.vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
+    position: fixed;
+    transform: translateY(-32px);
+}
+
+.vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+    margin-top: 32px;
+}
+
 /* file indicator */
-body.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
+.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
     content: "";
     position: absolute;
     left: 4px;
@@ -5953,12 +5968,12 @@ body.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type=
     transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
-body.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
+.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
     height: 60%;
     transform: translateY(-50%);
 }
 
-body.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
+.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
     content: "";
     position: absolute;
     left: 4px;
@@ -5971,7 +5986,7 @@ body.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="f
     transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
-body.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
+.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
     height: 60%;
     transform: translateY(-50%);
 }
