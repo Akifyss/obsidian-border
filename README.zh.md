@@ -63,8 +63,8 @@
 (**额外步骤**: 在“设置-外观”中启用半透明效果)
 ![screenshot](img/Translucent.png)
 
-+ [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json)（暗色模式）
-![screenshot](img/Lightdown-pink.png)
++ [Borderless](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless.json)（暗色模式）
+![screenshot](img/Borderless.png)
 
 #### ➡️ [预设的完整列表](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 

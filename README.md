@@ -63,8 +63,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
 ![screenshot](img/Translucent.png)
 
-+ [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) (Dark Mode)
-![screenshot](img/Lightdown-pink.png)
++ [Borderless](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless.json) (Dark Mode)
+![screenshot](img/Borderless.png)
 
 #### ➡️ [Presets full list](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
