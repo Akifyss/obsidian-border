@@ -56,12 +56,12 @@
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json) （亮色模式）
 ![screenshot](img/Neumorphism.png)
 
-+ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) （暗色模式）
-![screenshot](img/Sunset.png)
-
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) （暗色模式）
 (**额外步骤**: 在“设置-外观”中启用半透明效果)
 ![screenshot](img/Translucent.png)
+
++ [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) （暗色模式）
+![screenshot](img/Sunset.png)
 
 + [Borderless](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless.json)（暗色模式）
 ![screenshot](img/Borderless.png)
