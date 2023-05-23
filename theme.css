@@ -4557,12 +4557,8 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 }
 
 /*off scrollbar space occupancy, from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536  */
-
+body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div),
 body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view:not(.checklist-plugin-main), .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
-    overflow-y: overlay !important;
-}
-
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div) {
     overflow-y: overlay !important;
 }
 
@@ -5617,10 +5613,12 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
     padding-left: 16px;
+    margin-left: -16px;
     overflow: hidden;
     text-overflow: ellipsis;
     height: calc(var(--nav-item-size) * 1.8);
     line-height: calc(var(--nav-item-size) * 1.8);
+    position: relative;
 }
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
@@ -5630,21 +5628,21 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
     border: 2px solid var(--color-accent);
     border-radius: 50%;
     position: absolute;
-    left: 7px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon~.tree-item-inner {
+/*body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon~.tree-item-inner {
     padding-left: 4px;
-}
+}*/
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon~.tree-item-inner::before {
     content: none;
 }
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
-    box-shadow: 0 0 0 4px var(--background-modifier-hover);
+    box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
 
 body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
@@ -5653,12 +5651,15 @@ body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outlin
     position: absolute;
     background-color: transparent;
     top: calc(var(--nav-item-size) * 1.8 / 2 * -1);
-    left: -10px;
+    left: -9px;
     height: calc(100% - var(--nav-item-size) * 1.8 + var(--size-4-8));
 }
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
     cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
 body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
@@ -5667,7 +5668,7 @@ body.outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .
     background-color: var(--color-accent);
     border-radius: 50%;
     position: absolute;
-    left: 7px;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -5697,7 +5698,7 @@ body.outline-enhanced:not(.is-grabbing) .workspace-leaf-content[data-type=outlin
     content: "";
     position: absolute;
     top: calc(var(--nav-item-size) * 1.8 / 2 * -1);
-    left: -10px;
+    left: -9px;
     bottom: calc(100% - (var(--nav-item-size) * 1.8 + var(--size-4-2)) / 2 - 1px);
     width: 16px;
     border-bottom-left-radius: var(--radius-m);
@@ -5912,10 +5913,14 @@ body {
 
 .nav-file-title:not(.mk-tree-item),
 .nav-folder-title:not(.mk-tree-item) {
-    padding-left: var(--size-4-2);
     margin-bottom: var(--size-2-2);
     position: relative;
     border-radius: var(--border-radius-activated-file-light);
+}
+
+body:not(.file-icon-remove) .nav-file-title:not(.mk-tree-item),
+body:not(.file-icon-remove) .nav-folder-title:not(.mk-tree-item) {
+    padding-left: var(--size-4-2);
 }
 
 .theme-dark .nav-file-title,
@@ -5935,7 +5940,7 @@ body {
     --nav-item-weight: bold;
 }
 
-.nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
+body:not(.file-icon-remove) .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
     padding-left: var(--size-4-2);
 }
 
@@ -6007,15 +6012,6 @@ body {
 .file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title-content::before,
 .file-icon-remove .workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
     display: none;
-}
-
-.file-icon-remove .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
-    padding-left: 12px;
-}
-
-.file-icon-remove.indicator-remove-light.theme-light .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title,
-.file-icon-remove.indicator-remove-dark.theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-file .nav-file-title {
-    padding-left: 8px;
 }
 
 .file-icon-remove .nav-folder.mod-root .nav-folder>.nav-folder-children {
@@ -6162,6 +6158,10 @@ body {
 }
 
 /*tag pane*/
+.tag-container .tree-item-self .tree-item-icon {
+    position: relative;
+}
+
 .tag-container .tree-item-icon.collapse-icon svg.svg-icon {
     color: transparent;
 }
@@ -6188,25 +6188,25 @@ body {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg stroke='black' clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V7.5a1.5 1.5 0 0 1 .6-1.2l4.6-3.45a.5.5 0 0 1 .6 0l5 3.75a.5.5 0 0 1 .2.4v9a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath d='M10 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.tag-container .tree-item-self {
+.tag-container .tree-item-self:not(.mod-collapsible) {
     padding-left: var(--size-4-1);
 }
 
 /*other pane*/
 .tag-container,
-.bookmarks-container {
+.workspace-leaf-content[data-type="bookmarks"] .view-content.node-insert-event {
     padding: 0 var(--size-4-3) var(--size-4-8);
 }
 
-:is(.tag-container, .bookmarks-container, .search-result-container) .tree-item-self {
+:is(.tag-container, .workspace-leaf-content[data-type="bookmarks"] .view-content.node-insert-event, .search-result-container) .tree-item-self {
     margin-bottom: var(--size-2-2);
 }
 
-:is(.tag-container, .bookmarks-container, .search-result-container) :is(.tree-item-flair, .tree-item-inner) {
+:is(.tag-container, .workspace-leaf-content[data-type="bookmarks"] .view-content.node-insert-event, .search-result-container) :is(.tree-item-flair, .tree-item-inner) {
     line-height: 20px;
 }
 
-:is(.tag-container, .bookmarks-container, .search-result-container) .tree-item-icon {
+:is(.tag-container, .workspace-leaf-content[data-type="bookmarks"] .view-content.node-insert-event, .search-result-container) .tree-item-icon {
     height: 20px;
 }
 
@@ -6664,7 +6664,8 @@ body {
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-view ol ol,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-view ol ul,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ol,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ul {
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view ul ul,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view li p {
     margin-block-start: 0em;
     margin-block-end: 0em
 }
@@ -6788,6 +6789,16 @@ body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
     border-top: 1px solid var(--divider-color);
 }
 
+body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator,
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indicator.collapse-icon {
+    transform: translateX(-8px);
+}
+
+body:not(.heading-indicator-off) .is-live-preview .HyperMD-header {
+    display: flex;
+    align-items: center;
+}
+
 /* h1 */
 
 .h1-color-default {
@@ -6804,15 +6815,10 @@ body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
     --h1-indicator-color: var(--h1-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-1 {
-    padding-left: 6px;
-}
-
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -6824,6 +6830,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
 .markdown-rendered h1,
 .markdown-preview-view h1 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h1::before,
@@ -6831,12 +6839,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h1::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.2em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h1-indicator-color);
 }
@@ -6853,23 +6858,15 @@ body.h1-divider-on :is(.markdown-preview-view h1, .markdown-rendered h1, .HyperM
     background-image: linear-gradient(to left, var(--h1-indicator-color) 30%, transparent 70%);
 }
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h1 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h1 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h1 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.18v3.43H3.53V1h1.18V9h-1.18v-3.43H1.18v3.43H0V1ZM6.47,9v-1.14h1.18V2.32l-1.47,.82V1.82l1.47-.82h1.18V7.86h1.18v1.14h-3.53Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h1 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h1 .collapse-indicator.collapse-icon svg {
     background-color: var(--h1-indicator-color);
     color: var(--h1-indicator-color);
 }
@@ -6888,15 +6885,10 @@ body:not(.collapse-icon-restore) .markdown-preview-view h1 .is-collapsed .collap
     --h2-indicator-color: var(--h2-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-2 {
-    padding-left: 6px;
-}
-
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -6908,6 +6900,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
 .markdown-rendered h2,
 .markdown-preview-view h2 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h2::before,
@@ -6915,12 +6909,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h2::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.2em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h2-indicator-color);
 }
@@ -6938,23 +6929,15 @@ body.h2-divider-on :is(.markdown-preview-view h2, .markdown-rendered h2, .HyperM
 }
 
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h2 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h2 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h2 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM10,9h-3.33c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81s.11-.57,.3-.78l2.71-2.99c.21-.21,.33-.49,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33s-.58,.12-.79,.33c-.21,.21-.33,.51-.33,.81h-1.11c0-.61,.23-1.19,.65-1.62,.42-.43,.98-.67,1.57-.67s1.15,.24,1.57,.67c.42,.43,.65,1.01,.65,1.62s-.25,1.2-.65,1.62l-2.68,2.95h3.33v1.14Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h2 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h2 .collapse-indicator.collapse-icon svg {
     background-color: var(--h2-indicator-color);
     color: var(--h2-indicator-color);
 }
@@ -6973,15 +6956,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h2 .is-collapsed .collap
     --h3-indicator-color: var(--h3-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-3 {
-    padding-left: 6px;
-}
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -6993,6 +6972,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
 .markdown-rendered h3,
 .markdown-preview-view h3 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h3::before,
@@ -7000,12 +6981,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h3::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.3em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h3-indicator-color);
 }
@@ -7021,23 +6999,15 @@ body.h3-divider-on :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperM
     background-image: linear-gradient(to left, var(--h3-indicator-color) 30%, transparent 70%);
 }
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h3 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h3 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h3 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81V7.86c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h2.22v-2.29h-2.22v-1.14h2.22V2.14h-2.22v.57h-1.11v-.57c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h3 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h3 .collapse-indicator.collapse-icon svg {
     background-color: var(--h3-indicator-color);
     color: var(--h3-indicator-color);
 }
@@ -7056,15 +7026,10 @@ body:not(.collapse-icon-restore) .markdown-preview-view h3 .is-collapsed .collap
     --h4-indicator-color: var(--h4-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-4 {
-    padding-left: 6px;
-}
-
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -7076,6 +7041,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
 .markdown-rendered h4,
 .markdown-preview-view h4 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h4::before,
@@ -7083,12 +7050,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h4::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.4em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h4-indicator-color);
 }
@@ -7105,23 +7069,15 @@ body.h4-divider-on :is(.markdown-rendered h4, .markdown-preview-view h4, .HyperM
     background-image: linear-gradient(to left, var(--h4-indicator-color) 30%, transparent 70%);
 }
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h4 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h4 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h4 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1ZM8.33,9v-2.86h-2.78v-1.14L8.33,1h1.11V5h.56v1.14h-.56v2.86h-1.11Zm0-4V2.95l-1.42,2.05h1.42Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h4 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h4 .collapse-indicator.collapse-icon svg {
     background-color: var(--h4-indicator-color);
     color: var(--h4-indicator-color);
 }
@@ -7140,15 +7096,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h4 .is-collapsed .collap
     --h5-indicator-color: var(--h5-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-5 {
-    padding-left: 6px;
-}
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -7161,6 +7113,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
 .markdown-rendered h5,
 .markdown-preview-view h5 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h5::before,
@@ -7168,12 +7122,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h5::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.5em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h5-indicator-color);
 }
@@ -7190,23 +7141,15 @@ body.h5-divider-on :is(.markdown-rendered h5, .markdown-preview-view h5, .HyperM
     background-image: linear-gradient(to left, var(--h5-indicator-color) 30%, transparent 70%);
 }
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h5 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h5 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h5 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.78v1.14h-2.78v2.29h1.11c.59,0,1.15,.24,1.57,.67,.42,.43,.65,1.01,.65,1.62s-.23,1.19-.65,1.62c-.42,.43-.98,.67-1.57,.67h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81v-.57h1.11v.57h1.11c.29,0,.58-.12,.79-.33,.21-.21,.33-.51,.33-.81s-.12-.59-.33-.81c-.21-.21-.49-.33-.79-.33h-1.11c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h5 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h5 .collapse-indicator.collapse-icon svg {
     background-color: var(--h5-indicator-color);
     color: var(--h5-indicator-color);
 }
@@ -7226,15 +7169,11 @@ body:not(.collapse-icon-restore) .markdown-preview-view h5 .is-collapsed .collap
     --h6-indicator-color: var(--h6-color);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .cm-header.cm-header-6 {
-    padding-left: 6px;
-}
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
     flex-shrink: 0;
     flex-grow: 0;
-    position: relative;
-    top: 4px;
+    margin-right: 6px;
     content: " ";
     display: inline-block;
     width: 3px;
@@ -7246,6 +7185,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
 .markdown-rendered h6,
 .markdown-preview-view h6 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h6::before,
@@ -7253,12 +7194,9 @@ body:not(.heading-indicator-off) .markdown-preview-view h6::before {
     flex-shrink: 0;
     flex-grow: 0;
     margin-right: 6px;
-    position: relative;
     content: " ";
-    display: inline-block;
     width: 3px;
     height: calc(1.5em - 8px);
-    top: 4px;
     border-radius: var(--radius-m);
     background-color: var(--h6-indicator-color);
 }
@@ -7277,23 +7215,15 @@ body.h6-divider-on :is(.markdown-rendered h6, .markdown-preview-view h6, .HyperM
 
 
 
-body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .collapse-indicator.collapse-icon svg {
-    transform: translateX(0px);
-    background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v.57h-1.11v-.57h-2.22v2.29h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v2.29c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Zm0,4.57v2.29h2.22v-2.29h-2.22Z"/></svg>')
-}
-
-
-body:not(.collapse-icon-restore) .markdown-rendered h6 .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h6 .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .collapse-indicator.collapse-icon svg,
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h6 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="10" height="10"/><path d="M0,1H1.11v3.43H3.33V1h1.11V9h-1.11v-3.43H1.11v3.43H0V1Zm6.67,0h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v.57h-1.11v-.57h-2.22v2.29h2.22c.29,0,.58,.12,.79,.33,.21,.21,.33,.51,.33,.81v2.29c0,.3-.12,.59-.33,.81-.21,.21-.49,.33-.79,.33h-2.22c-.29,0-.58-.12-.79-.33-.21-.21-.33-.51-.33-.81V2.14c0-.3,.12-.59,.33-.81,.21-.21,.49-.33,.79-.33Zm0,4.57v2.29h2.22v-2.29h-2.22Z"/></svg>')
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-rendered h6 .is-collapsed .collapse-indicator.collapse-icon svg,
-body:not(.collapse-icon-restore) .markdown-preview-view h6 .is-collapsed .collapse-indicator.collapse-icon svg {
+body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h6 .collapse-indicator.collapse-icon svg {
     background-color: var(--h6-indicator-color);
     color: var(--h6-indicator-color);
 }
