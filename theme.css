@@ -6789,14 +6789,17 @@ body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
     border-top: 1px solid var(--divider-color);
 }
 
-body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator,
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indicator.collapse-icon {
     transform: translateX(-8px);
 }
 
-body:not(.heading-indicator-off) .is-live-preview .HyperMD-header {
-    display: flex;
-    align-items: center;
+body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator {
+    transform: translateX(-4px);
+}
+
+body:not(.heading-indicator-off) :is(.markdown-rendered, .markdown-preview-view) :is(h1, h2, h3, h4, h5, h6) {
+    position: relative;
+    text-indent: 5px;
 }
 
 /* h1 */
@@ -6816,8 +6819,6 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header {
 }
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6825,25 +6826,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h1-indicator-color);
-}
-
-.markdown-rendered h1,
-.markdown-preview-view h1 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h1::before,
 body:not(.heading-indicator-off) .markdown-preview-view h1::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h1-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 
@@ -6886,8 +6883,6 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 }
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6895,25 +6890,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h2-indicator-color);
-}
-
-.markdown-rendered h2,
-.markdown-preview-view h2 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h2::before,
 body:not(.heading-indicator-off) .markdown-preview-view h2::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.2em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h2-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 
@@ -6958,8 +6949,6 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6967,25 +6956,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
     height: calc(1.3em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h3-indicator-color);
-}
-
-.markdown-rendered h3,
-.markdown-preview-view h3 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h3::before,
 body:not(.heading-indicator-off) .markdown-preview-view h3::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.3em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h3-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 body.h3-divider-on :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
@@ -7027,8 +7012,6 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 }
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -7036,25 +7019,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
     height: calc(1.4em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h4-indicator-color);
-}
-
-.markdown-rendered h4,
-.markdown-preview-view h4 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h4::before,
 body:not(.heading-indicator-off) .markdown-preview-view h4::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.4em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h4-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 
@@ -7098,8 +7077,6 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -7107,26 +7084,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h5-indicator-color);
-}
-
-
-.markdown-rendered h5,
-.markdown-preview-view h5 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h5::before,
 body:not(.heading-indicator-off) .markdown-preview-view h5::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h5-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 
@@ -7171,8 +7143,6 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
 
 
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -7180,25 +7150,21 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h6-indicator-color);
-}
-
-.markdown-rendered h6,
-.markdown-preview-view h6 {
-    position: relative;
-    display: flex;
-    align-items: center;
+    transform: translateY(4px);
 }
 
 body:not(.heading-indicator-off) .markdown-rendered h6::before,
 body:not(.heading-indicator-off) .markdown-preview-view h6::before {
-    flex-shrink: 0;
-    flex-grow: 0;
     margin-right: 6px;
     content: " ";
+    display: inline-block;
     width: 3px;
     height: calc(1.5em - 8px);
     border-radius: var(--radius-m);
     background-color: var(--h6-indicator-color);
+    position: absolute;
+    top: 4px;
+    left: 0px;
 }
 
 
