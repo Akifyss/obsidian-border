@@ -5222,12 +5222,16 @@ body:not(.is-mobile) .document-search-container {
     border-radius: var(--size-4-2);
     padding: var(--size-4-2) 0;
     height: fit-content;
-    box-shadow: var(--shadow-l);
+    box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.3);
     margin: 0px;
     margin-left: calc((600px - 100%) / -2);
     max-width: 600px;
     width: calc(100% - 8px);
     border: 1px solid var(--background-modifier-border);
+}
+
+body:not(.is-mobile).theme-dark .document-search-container {
+    box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 @container (max-width: 600px) {
@@ -7275,14 +7279,14 @@ body {
 }
 
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)) {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header))::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -7296,8 +7300,8 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
 
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)):hover::after {
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not(.el-embed-image, .mod-header, .mod-footer, :has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }
 
