@@ -5239,7 +5239,7 @@ body:not(.is-mobile) .document-search-container {
     -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);*/
 }
 
-body:not(.is-mobile) .document-search-container {
+body:not(.is-mobile) .workspace-leaf-content[data-type=markdown] .document-search-container {
     position: absolute;
     top: var(--size-4-4);
     border-radius: var(--size-4-2);
@@ -5253,12 +5253,12 @@ body:not(.is-mobile) .document-search-container {
     border: 1px solid var(--background-modifier-border);
 }
 
-body:not(.is-mobile).theme-dark .document-search-container {
+body:not(.is-mobile).theme-dark .workspace-leaf-content[data-type=markdown] .document-search-container {
     box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 @container (max-width: 600px) {
-    body:not(.is-mobile) .document-search-container {
+    body:not(.is-mobile) .workspace-leaf-content[data-type=markdown] .document-search-container {
         margin-left: 4px;
     }
 }
