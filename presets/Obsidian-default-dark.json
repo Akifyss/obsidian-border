@@ -1,5 +1,6 @@
 {
   "Appearance-dark@@accent-dark": "#8B6CEF",
+  "Appearance-dark@@accent-color-override-dark": true,
   "Appearance-dark@@color-red-rgb@@dark": "#FB464C",
   "Appearance-dark@@color-orange-rgb@@dark": "#E9973F",
   "Appearance-dark@@color-yellow-rgb@@dark": "#E0DE71",

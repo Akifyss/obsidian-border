@@ -1,6 +1,7 @@
 {
   "Appearance-dark@@accent-dark": "#c4a7e7",
-  "Appearance-light@@background-tertiary@@dark": "#393552",
+  "Appearance-dark@@accent-color-override-dark": true,
+  "Appearance-dark@@background-tertiary@@dark": "#393552",
   "Appearance-dark@@background-primary@@dark": "#2a273f",
   "Appearance-dark@@background-secondary@@dark": "#232136",
   "Appearance-dark@@text-normal@@dark": "#e0def4",

@@ -1,5 +1,6 @@
 {
   "Appearance-light@@accent-light": "#19C8BC",
+  "Appearance-light@@accent-color-override-light": true,
   "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-CSS-light",
   "Appearance-light@@background-mod-left-CSS-light": "rgba(255,255,255,0.72)",
   "Appearance-light@@background-mod-left-CSS-backdrop-filter-light": "blur(0px)",

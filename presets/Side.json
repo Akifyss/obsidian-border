@@ -1,6 +1,7 @@
 {
   "Appearance-light@@card-layout-open-light": true,
   "Appearance-light@@accent-light": "#808080",
+  "Appearance-light@@accent-color-override-light": true,
   "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-customize-light",
   "Appearance-light@@background-mod-left-split-light": "#FFFFFF",
   "Appearance-light@@mod-right-split-background-select-light": "mod-right-split-background-customize-light",

@@ -1,6 +1,7 @@
 {
   "Appearance-dark@@theme-dark-style-select": "theme-dark-background-default",
   "Appearance-dark@@accent-dark": "#c4a7e7",
+  "Appearance-dark@@accent-color-override-dark": true,
   "Appearance-dark@@mod-left-split-background-select-dark": "mod-left-split-background-CSS-dark",
   "Appearance-dark@@background-mod-left-CSS-dark": "radial-gradient(100% 50% at 100% 50%, rgba(90, 109, 237, 0.1) 0%, rgba(255, 255, 255, 0) 100%)",
   "Appearance-dark@@background-mod-left-CSS-backdrop-filter-dark": "blur(0px)",

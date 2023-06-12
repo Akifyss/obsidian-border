@@ -1,6 +1,7 @@
 {
   "Appearance-light@@card-layout-open-light": false,
   "Appearance-light@@accent-light": "#000000",
+  "Appearance-light@@accent-color-override-light": true,
   "Appearance-light@@background-underlying-select-light": "background-underlying-CSS-light",
   "Appearance-light@@background-underlying-light": "#FFFFFF",
   "Appearance-light@@background-underlying-CSS-light": "url(\"https://media0.giphy.com/media/26BRvIYDe4ILO60Ni/giphy.gif?cid=ecf05e47f6xk3h6wxwjmb22keeypfj48yj1rsxipqussdskg&rid=giphy.gif&ct=g\") center center/cover no-repeat fixed",

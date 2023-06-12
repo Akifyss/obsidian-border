@@ -1,7 +1,8 @@
 {
   "Appearance-dark@@theme-dark-style-select": "theme-dark-background-darker",
   "Appearance-dark@@accent-dark": "#c4a7e7",
-  "Appearance-light@@background-tertiary@@dark": "#26233a",
+  "Appearance-dark@@accent-color-override-dark": true,
+  "Appearance-dark@@background-tertiary@@dark": "#26233a",
   "Appearance-dark@@background-primary@@dark": "#1f1d2e",
   "Appearance-dark@@background-secondary@@dark": "#191724",
   "Appearance-dark@@text-normal@@dark": "#e0def4",

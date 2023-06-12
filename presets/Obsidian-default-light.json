@@ -1,5 +1,6 @@
 {
   "Appearance-light@@accent-light": "#8B6CEF",
+  "Appearance-light@@accent-color-override-light": true,
   "Appearance-light@@color-red-rgb@@light": "#E93147",
   "Appearance-light@@color-orange-rgb@@light": "#ec7500",
   "Appearance-light@@color-yellow-rgb@@light": "#e0ac00",

@@ -1,5 +1,6 @@
 {
   "Appearance-light@@accent-light": "#d1852e",
+  "Appearance-light@@accent-color-override-light": true,
   "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-CSS-light",
   "Appearance-light@@background-mod-left-CSS-light": "transparent",
   "Appearance-light@@background-mod-left-CSS-backdrop-filter-light": "blur(0px)",
