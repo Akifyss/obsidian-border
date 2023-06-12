@@ -533,11 +533,11 @@ settings:
         title.zh: 左侧面板背景（亮色模式）
         type: class-select
         allowEmpty: false
-        default: mod-left-split-background-secondary-light
+        default: mod-left-split-background-primary-light
         options:
-            -   label: background-primary
+            -   label: background-primary (default)
                 value: mod-left-split-background-primary-light
-            -   label: background-secondary (default)
+            -   label: background-secondary
                 value: mod-left-split-background-secondary-light
             -   label: transparent (card layout only)
                 value: mod-left-split-background-transparent-light
@@ -1487,11 +1487,11 @@ settings:
         title.zh: 左侧面板背景（暗色模式）
         type: class-select
         allowEmpty: false
-        default: mod-left-split-background-secondary-dark
+        default: mod-left-split-background-primary-dark
         options:
-            -   label: background-primary
+            -   label: background-primary (default)
                 value: mod-left-split-background-primary-dark
-            -   label: background-secondary (default)
+            -   label: background-secondary
                 value: mod-left-split-background-secondary-dark
             -   label: transparent (card layout only)
                 value: mod-left-split-background-transparent-dark
@@ -3476,6 +3476,27 @@ body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color] {
     display: none;
 }
 
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color],
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
+    position: relative;
+    visibility: hidden;
+}
+
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before,
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
+    content: "Overridden by Style Settings";
+    font-family: var(--font-interface);
+    position: absolute;
+    width: auto;
+    left: calc((var(--swatch-width) + var(--size-4-12) * 2 + 120%) * -1);
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: visible;
+    pointer-events: none;
+}
+
 /* color */
 
 body {
@@ -3886,9 +3907,9 @@ body {
     --background-underlying-light: var(--background-tertiary);
     --background-underlying-dark: var(--background-tertiary);
     --background-underlying: var(--background-tertiary);
-    --background-mod-left-split-light: var(--background-secondary);
-    --background-mod-left-split-dark: var(--background-secondary);
-    --background-mod-left-split: var(--background-secondary);
+    --background-mod-left-split-light: var(--background-primary);
+    --background-mod-left-split-dark: var(--background-primary);
+    --background-mod-left-split: var(--background-primary);
     --background-mod-right-split-light: var(--background-primary);
     --background-mod-right-split-dark: var(--background-primary);
     --background-mod-right-split: var(--background-primary);
@@ -4044,16 +4065,16 @@ body {
 
 /* background - mod-left */
 
-body.theme-light.mod-left-split-background-secondary-light,
-body.theme-dark.mod-left-split-background-secondary-dark,
+body.theme-light.mod-left-split-background-primary-light,
+body.theme-dark.mod-left-split-background-primary-dark,
 body.theme-light.mod-left-split-background-transparent-light:not(.card-layout-open-light),
 body.theme-dark.mod-left-split-background-transparent-dark:not(.card-layout-open-dark) {
-    --background-mod-left-split: var(--background-secondary) !important;
+    --background-mod-left-split: var(--background-primary) !important;
 }
 
-body.theme-light.mod-left-split-background-primary-light,
-body.theme-dark.mod-left-split-background-primary-dark {
-    --background-mod-left-split: var(--background-primary) !important;
+body.theme-light.mod-left-split-background-secondary-light,
+body.theme-dark.mod-left-split-background-secondary-dark {
+    --background-mod-left-split: var(--background-secondary) !important;
 }
 
 body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light,
@@ -5315,12 +5336,12 @@ body {
 }
 
 
-body.canvas-card-menu-left .canvas-card-menu {
+.canvas-card-menu-left .canvas-card-menu {
     left: var(--size-4-4);
     transform: translatex(0%);
 }
 
-body.canvas-card-menu-right .canvas-card-menu {
+.canvas-card-menu-right .canvas-card-menu {
     right: var(--size-4-4);
     left: unset;
     transform: translatex(0%);
