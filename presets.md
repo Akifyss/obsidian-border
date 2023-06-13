@@ -18,6 +18,12 @@
 
 ## Light Mode
 
++ [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
+![screenshot](img/Obsidian-default-light.png)
+
++ [Rosé Pine Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine-Dawn.png)
+
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
 ![screenshot](img/Fresh.png)
 
@@ -45,15 +51,19 @@
 + [Side](https://github.com/Akifyss/obsidian-border/blob/main/presets/Side.json)
 ![screenshot](img/Side.png)
 
----
-
-+ [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
-![screenshot](img/Obsidian-default-light.png)
-
-+ [Rosé Pine Dawn](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Dawn.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
-![screenshot](img/Rosé-Pine-Dawn.png)
-
 ## Dark Mode
+
++ [Obsidian-default-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark.json)
+![screenshot](img/Obsidian-default-dark.png)
+
++ [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine.png)
+
++ [Rosé Pine Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
+![screenshot](img/Rosé-Pine-Moon.png)
+
++ [Dracula](https://github.com/Akifyss/obsidian-border/blob/main/presets/Dracula.json) (Palette from [Dracula](https://github.com/dracula/dracula-theme))
+![screenshot](img/Dracula.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
 (**Extra step**: Enable "translucent window" in Setting-Appearance)
@@ -85,20 +95,6 @@
 
   + [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
   ![screenshot](img/Lightdown-orange.png)
-
----
-
-+ [Obsidian-default-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark.json)
-![screenshot](img/Obsidian-default-dark.png)
-
-+ [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
-![screenshot](img/Rosé-Pine.png)
-
-+ [Rosé Pine Moon](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine-Moon.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
-![screenshot](img/Rosé-Pine-Moon.png)
-
-+ [Dracula](https://github.com/Akifyss/obsidian-border/blob/main/presets/Dracula.json) (Palette from [Dracula](https://github.com/dracula/dracula-theme))
-![screenshot](img/Dracula.png)
 
 Updating...
 
