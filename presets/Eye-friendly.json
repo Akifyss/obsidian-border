@@ -1,0 +1,14 @@
+{
+  "Appearance-light@@theme-light-style-select": "theme-light-background-adapt",
+  "Appearance-light@@accent-light": "#006E1B",
+  "Appearance-light@@accent-color-override-light": true,
+  "Appearance-light@@background-underlying-light": "#FCFDF6",
+  "Appearance-light@@on-border-light": "#006E1B",
+  "Appearance-light@@background-primary@@light": "#FCFDF6",
+  "Appearance-light@@background-secondary@@light": "#FCFDF6",
+  "Appearance-light@@background-tertiary@@light": "#FCFDF6",
+  "Appearance-light@@card-shadow-light": "0px 0px 0px 1px var(--background-modifier-border)",
+  "Appearance-light@@color-activated-tab-header-light": "#006E1B",
+  "Appearance-light@@border-radius-activated-tab-header-light": "0px",
+  "Appearance-light@@shadow-activated-tab-header-light": "0px 2px 0px var(--background-primary),0px 5px 0px var(--color-accent)"
+}
