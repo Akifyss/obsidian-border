@@ -53,6 +53,11 @@ settings:
         title.zh: 自动隐藏 侧边面板中的头部按钮
         type: class-toggle
     - 
+        id: icon-autohide
+        title: Auto hide 'Help' & 'open another vault' icon in Ribbon
+        title.zh: 自动隐藏 功能区菜单中的的“帮助”&“打开其他仓库”图标
+        type: class-toggle
+    - 
         id: tab-title-bar-fixed
         title: Always display tab title bar
         title.zh: 始终显示 标签页标题栏
@@ -3474,7 +3479,8 @@ body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-d
 body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item:is([data-id=colorful-folder], [data-id=file-icon-color-select]),
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
-body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color] {
+body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color],
+body.Ribbon-autohide .setting-item[data-id=icon-autohide] {
     display: none;
 }
 
@@ -5111,6 +5117,21 @@ body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .wo
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
 }
+
+/*icon autohide*/
+body:not(.is-mobile):not(.Ribbon-autohide).icon-autohide .side-dock-settings .side-dock-ribbon-action:nth-child(1),
+body:not(.is-mobile):not(.Ribbon-autohide).icon-autohide .side-dock-settings .side-dock-ribbon-action:nth-child(2) {
+    opacity: 0;
+    transition: opacity var(--anim-in);
+}
+
+
+body:not(.is-mobile):not(.Ribbon-autohide).icon-autohide .side-dock-settings .side-dock-ribbon-action:nth-child(1):hover,
+body:not(.is-mobile):not(.Ribbon-autohide).icon-autohide .side-dock-settings .side-dock-ribbon-action:nth-child(2):hover {
+    opacity: 1;
+    transition: opacity var(--anim-in);
+}
+
 
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
@@ -8400,7 +8421,13 @@ body:not(.is-mobile) .workspace-tab-header-tab-list .clickable-icon .svg-icon {
     --icon-size: var(--icon-s);
 }
 
-/* ====== Icon replace ====== */
+/* ====== Icon ====== */
+
+body {
+    --clickable-icon-radius: 6px;
+}
+
+
 svg {
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
