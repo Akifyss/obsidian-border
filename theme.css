@@ -4573,7 +4573,7 @@ body.is-mobile:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
     border-width: 0px 0px 0px 0px;
 }
 
-body:not(.native-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"], [data-type="pdf"]) ::-webkit-scrollbar,
+body:not(.native-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
 body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
@@ -4595,7 +4595,7 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 
 /*off scrollbar space occupancy, from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536  */
 body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div),
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view:not(.checklist-plugin-main), .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items) {
+body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view:not(.checklist-plugin-main), .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items, .workspace-leaf-content[data-type="pdf"] .pdf-viewer-container, .workspace-leaf-content[data-type="pdf"] .pdf-thumbnail-view) {
     overflow-y: overlay !important;
 }
 
@@ -8354,6 +8354,13 @@ body:not(.zoom-off) .view-content .image-embed:not(.canvas-node-content):active 
     outline: unset !important;
     outline-offset: 0px !important;
     border-radius: 0 !important;
+}
+
+/* ====== pdf ====== */
+.pdf-toolbar,
+.pdf-container,
+.pdf-sidebar-container {
+    background-color: transparent;
 }
 
 /* ====== icon ====== */
