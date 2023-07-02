@@ -14,7 +14,7 @@
   "Appearance-dark@@background-underlying-select-dark": "background-underlying-CSS-dark",
   "Appearance-dark@@background-underlying-CSS-dark": "linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)",
   "Appearance-dark@@background-underlying-CSS-blend-mode-dark": "normal",
-  "Appearance-light@@background-tertiary@@dark": "#393552",
+  "Appearance-dark@@background-tertiary@@dark": "#393552",
   "Appearance-dark@@background-primary@@dark": "#2a273f",
   "Appearance-dark@@background-secondary@@dark": "#232136",
   "Appearance-dark@@text-normal@@dark": "#e0def4",
