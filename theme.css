@@ -3950,23 +3950,31 @@ body {
 }
 
 /* background - transparent */
+body {
+    --tab-background-active: transparent;
+    --tab-container-background: transparent;
+}
+
+.sidebar-toggle-button,
+.workspace-tabs.mod-top,
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    --tab-container-background: transparent;
+}
 
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-header:not(.animate),
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate),
-.sidebar-toggle-button,
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
 body:not(.is-mobile) .workspace-tab-header-container,
-.workspace>.workspace-split,
-.workspace-tabs.mod-top {
+.workspace>.workspace-split {
     background-color: transparent !important;
 }
 
 body:not(.is-mobile) .workspace,
-.workspace-ribbon.mod-left:before,
-body:not(.is-translucent):not(.is-mobile) .sidebar-toggle-button.mod-left {
+.workspace-ribbon.mod-left:before {
     background-color: transparent;
 }
 
@@ -4643,10 +4651,13 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
 
 /* ====== status bar====== */
 
+body {
+    --status-bar-background: transparent;
+    --status-bar-border-color: transparent;
+    --status-bar-border-width: 0;
+}
 
 .status-bar {
-    border: none;
-    background-color: transparent;
     padding: 0 16px 0 0;
     width: calc(100% - 44px);
     min-height: 16px;
