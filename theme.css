@@ -3953,6 +3953,8 @@ body {
 body {
     --tab-background-active: transparent;
     --tab-container-background: transparent;
+    --titlebar-background: transparent;
+    --titlebar-background-focused: transparent;
 }
 
 .sidebar-toggle-button,
@@ -3973,6 +3975,7 @@ body:not(.is-mobile) .workspace-tab-header-container,
     background-color: transparent !important;
 }
 
+body:not(.is-mobile) .app-container,
 body:not(.is-mobile) .workspace,
 .workspace-ribbon.mod-left:before {
     background-color: transparent;
@@ -3996,10 +3999,20 @@ body:not(.is-mobile) .view-header-title-container:not(.mod-at-end):after {
 }
 
 /* background - underlying */
-
-body:not(.is-mobile) .app-container {
-    background-color: var(--background-underlying);
+body:not(.is-mobile) {
+    background: var(--background-underlying);
 }
+
+body.theme-light:not(.is-mobile).background-underlying-CSS-light {
+    background: var(--background-underlying-CSS-light, --background-underlying) !important;
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-light) !important;
+}
+
+body.theme-dark:not(.is-mobile).background-underlying-CSS-dark {
+    background: var(--background-underlying-CSS-dark, --background-underlying) !important;
+    background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
+}
+
 
 body.background-underlying-defalut-light.theme-light,
 body.background-underlying-defalut-dark.theme-dark {
@@ -4014,15 +4027,6 @@ body.background-underlying-Color-dark.theme-dark {
     --background-underlying: var(--background-underlying-dark) !important;
 }
 
-body.theme-light:not(.is-mobile).background-underlying-CSS-light .app-container {
-    background: var(--background-underlying-CSS-light, --background-underlying) !important;
-    background-blend-mode: var(--background-underlying-CSS-blend-mode-light) !important;
-}
-
-body.theme-dark:not(.is-mobile).background-underlying-CSS-dark .app-container {
-    background: var(--background-underlying-CSS-dark, --background-underlying) !important;
-    background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
-}
 
 /* foreground - underlying */
 body {
@@ -4041,6 +4045,7 @@ body {
     --text-faint: var(--on-border-light);
 
     --titlebar-text-color: var(--text-muted);
+    --titlebar-text-color-focused: var(--text-muted);
     --tab-text-color-active: var(--text-muted);
     --tab-text-color-focused: var(--text-muted);
     --tab-text-color-focused-active: var(--text-muted);
@@ -4064,6 +4069,7 @@ body {
     --text-faint: var(--on-border-dark);
 
     --titlebar-text-color: var(--text-muted);
+    --titlebar-text-color-focused: var(--text-muted);
     --tab-text-color-active: var(--text-muted);
     --tab-text-color-focused: var(--text-muted);
     --tab-text-color-focused-active: var(--text-muted);
@@ -4278,6 +4284,8 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
     --divider-color: var(--background-modifier-border);
 }
 
+.is-translucent:not(.is-fullscreen) .titlebar,
+.is-translucent:not(.is-fullscreen) .app-container,
 .is-translucent .workspace-ribbon::after,
 .is-translucent:not(.is-fullscreen) .workspace-tabs.mod-top,
 .is-translucent .workspace-split.mod-horizontal.mod-left-split,
@@ -4286,7 +4294,7 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
     background-color: transparent !important;
 }
 
-.is-translucent:not(.is-fullscreen) .app-container {
+.is-translucent:not(.is-fullscreen) {
     background-color: var(--workspace-background-translucent) !important;
 }
 
@@ -4571,7 +4579,6 @@ body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .v
 
 /* ====== titlebar ===== */
 body:not(.is-translucent) .titlebar-text {
-    background-color: var(--background-underlying);
     opacity: 1;
 }
 
@@ -4611,7 +4618,6 @@ body.mod-windows .titlebar .titlebar-button.mod-close:focus {
     background-color: var(--background-modifier-hover);
 }
 
-
 .titlebar-button-container.mod-right .titlebar-button:last-of-type {
     margin-right: 0px;
 }
@@ -4648,6 +4654,11 @@ body.is-hidden-frameless .titlebar-button-container.mod-right {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}.cls-2{fill-rule:evenodd;}</style></defs><path class="cls-2" d="M4,11c0-.55,.45-1,1-1h6c.55,0,1,.45,1,1s-.45,1-1,1H5c-.55,0-1-.45-1-1Z"/><rect class="cls-1" width="16" height="16"/></svg>');
 }
 
+@media (hover: hover) {
+    .titlebar-button:hover {
+        background-color: transparent;
+    }
+}
 
 /* ====== status bar====== */
 
