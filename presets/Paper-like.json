@@ -11,7 +11,7 @@
   "Appearance-light@@background-mod-root-CSS-light": "blur(0px)",
   "Appearance-light@@background-mod-root-CSS-backdrop-filter-light": "blur(0px)",
   "Appearance-light@@background-underlying-select-light": "background-underlying-CSS-light",
-  "Appearance-light@@background-underlying-CSS-light": "url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
+  "Appearance-light@@background-underlying-CSS-light": "#ffffff url(\"https://www.transparenttextures.com/patterns/cream-paper.png\")",
   "Appearance-light@@background-underlying-CSS-blend-mode-light": "normal",
   "Appearance-light@@card-border-radius-light": "0px",
   "Appearance-light@@card-shadow-light": "none",
