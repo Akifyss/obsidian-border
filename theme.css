@@ -4685,7 +4685,12 @@ body {
 }
 
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
-    padding-right: 16px;
+    padding-right: 0px;
+    position: unset;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+    padding-right: 0px;
 }
 
 body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod-right {
