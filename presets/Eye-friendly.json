@@ -9,6 +9,6 @@
   "Appearance-light@@background-tertiary@@light": "#FCFDF6",
   "Appearance-light@@card-shadow-light": "0px 0px 0px 1px var(--background-modifier-border)",
   "Appearance-light@@color-activated-tab-header-light": "#006E1B",
-  "Appearance-light@@border-radius-activated-tab-header-light": "0px",
-  "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--background-primary),0px 6px 0px var(--color-accent)"
+  "Appearance-light@@border-radius-activated-tab-header-light": "6px",
+  "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--background-primary),0px 12px 0px -6px var(--color-accent)"
 }
