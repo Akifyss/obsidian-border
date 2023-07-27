@@ -6299,6 +6299,10 @@ body {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20stroke%3D%22%23000%22%20clip-path%3D%22url(%23a)%22%3E%3Cpath%20d%3D%22M13%2017.5H5A1.5%201.5%200%200%201%203.5%2016V7.5a1.5%201.5%200%200%201%20.6-1.2l4.6-3.45a.5.5%200%200%201%20.6%200l5%203.75a.5.5%200%200%201%20.2.4v9a1.5%201.5%200%200%201-1.5%201.5Z%22%2F%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M9%2010.5a1.5%201.5%200%201%200%200-3%201.5%201.5%200%200%200%200%203Z%22%2F%3E%3Cpath%20stroke-linecap%3D%22round%22%20d%3D%22M16.5%2016V6a1%201%200%200%200-.4-.8L12%202.125%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h20v20H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
 }
 
+.tag-container .tag-pane-tag.tree-item-self {
+    align-items: unset;
+}
+
 .tag-container .tag-pane-tag.tree-item-self:not(.mod-collapsible)::before {
     margin-right: 4px;
     position: relative;
@@ -6614,12 +6618,12 @@ body:not(.is-mobile) input[type=range]:is(:focus, :focus-visible)::-webkit-slide
 
 /* input */
 
-body:not(.is-mobile) textarea:not(.kanban-plugin__item-input, .kanban-plugin__lane-input, .sync-history-text):is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='text']:not(.mk-cell-text):is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='search']:not(.svelte-bi6cvo, .svelte-1v6c0q):is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='email']:is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='password']:is(:focus, :focus-visible),
-body:not(.is-mobile) input[type='number']:not(.mk-cell-text):is(:focus, :focus-visible) {
+body:not(.is-mobile) textarea:not([class]):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='text']:not([class]):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='search']:not([class]):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='email']:not([class]):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='password']:not([class]):is(:focus, :focus-visible),
+body:not(.is-mobile) input[type='number']:not([class]):is(:focus, :focus-visible) {
     border: 1px solid var(--interactive-accent);
     box-shadow: 0 0 0 4px var(--background-modifier-active-hover);
 }
@@ -8456,7 +8460,8 @@ svg.spreadsheet {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><path d="M6.71,20.28c-.21,0-.41-.06-.59-.19-.31-.22-.46-.6-.4-.98l.92-5.37-3.9-3.8c-.27-.27-.37-.66-.25-1.02,.12-.36,.43-.63,.81-.68l5.39-.78,2.41-4.89c.17-.34,.52-.56,.9-.56h0c.38,0,.73,.22,.9,.56l2.41,4.89,5.39,.78c.38,.05,.69,.32,.81,.68,.12,.36,.02,.76-.25,1.02l-3.9,3.81,.92,5.37c.06,.38-.09,.75-.4,.98-.31,.22-.72,.25-1.05,.08l-4.82-2.54-4.82,2.54c-.15,.08-.31,.12-.47,.12Zm-1.12-10.36l2.83,2.76c.24,.23,.34,.56,.29,.88l-.67,3.89,3.5-1.84c.29-.15,.64-.15,.93,0l3.5,1.84-.67-3.89c-.06-.32,.05-.66,.29-.88l2.83-2.76-3.91-.57c-.33-.05-.61-.25-.75-.55l-1.75-3.54-1.75,3.54c-.15,.29-.43,.5-.75,.55l-3.91,.57Z"/><rect class="b" width="24" height="24"/></svg>');
 }
 
-.workspace-tab-header-container svg.lucide-hash {
+.workspace-tab-header-container svg.lucide-hash,
+.workspace-tab-header-container svg.lucide-tags {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><g><circle cx="8.5" cy="8.5" r="2"/><path d="M21.77,12.98c-.15-.37-.37-.7-.66-.98L13,3.89c-.57-.57-1.33-.88-2.14-.89h-3.86c-1.05,0-2.08,.43-2.83,1.17-.74,.74-1.17,1.77-1.17,2.83v3.86c0,.81,.31,1.57,.89,2.14l8.11,8.11c.28,.28,.61,.5,.98,.66,.37,.15,.76,.23,1.16,.23s.79-.08,1.16-.23c.37-.15,.7-.38,.98-.66l4.83-4.83c.28-.28,.51-.61,.66-.98,.15-.37,.23-.76,.23-1.16s-.08-.79-.23-1.16Zm-1.85,1.55c-.05,.12-.12,.24-.22,.33l-4.84,4.84c-.09,.09-.21,.17-.33,.22-.25,.11-.54,.1-.79,0-.12-.05-.24-.13-.33-.22L5.3,11.58c-.19-.19-.3-.45-.3-.72v-3.86c0-.53,.21-1.04,.58-1.41s.89-.59,1.42-.59h3.86c.28,0,.53,.11,.73,.3l8.12,8.12c.1,.1,.17,.21,.22,.33,.05,.13,.08,.26,.08,.39s-.03,.27-.08,.39Z"/></g></svg>')
 }

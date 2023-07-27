@@ -43,7 +43,7 @@ Require your **installer** version(not APP current version) > v1.1.8
 
 Create your own UI style using [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin. Here are some presets:
 
-#### Presets
+#### [Presets](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 (**Presets Usage**: Copy code from link, paste it into style settings and restart obsidian.)
 

@@ -43,7 +43,7 @@
 
 用[style settings](https://github.com/mgmeyers/obsidian-style-settings) 插件创建你自己的UI风格。以下是一些预设:
 
-#### 预设
+#### [预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)
 
 （**预设用法**: 复制链接中的代码, 粘贴进style settings中，然后重启obsidian。）
 
