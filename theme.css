@@ -725,6 +725,10 @@ settings:
         allowEmpty: false
         default: background-underlying-defalut-light
         options:
+            -   label: background-primary
+                value: background-underlying-primary-light
+            -   label: background-secondary
+                value: background-underlying-secondary-light
             -   label: adapt to accent color(defalut)
                 value: background-underlying-defalut-light
             -   label: customize color
@@ -1679,6 +1683,10 @@ settings:
         allowEmpty: false
         default: background-underlying-defalut-dark
         options:
+            -   label: background-primary
+                value: background-underlying-primary-dark
+            -   label: background-secondary
+                value: background-underlying-secondary-dark
             -   label: adapt to accent color(defalut)
                 value: background-underlying-defalut-dark
             -   label: customize color
@@ -3332,18 +3340,10 @@ body:not(.h4-color-customized) .setting-item[data-id=h4-color],
 body:not(.h5-color-customized) .setting-item[data-id=h5-color],
 body:not(.h6-color-customized) .setting-item[data-id=h6-color],
 body:not(.file-icon-color-customize) .setting-item[data-id=file-icon-color],
-body.background-underlying-defalut-light .setting-item[data-id=background-underlying-light],
-body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-light],
-body.background-underlying-defalut-light .setting-item[data-id=background-underlying-CSS-blend-mode-light],
-body.background-underlying-Color-light .setting-item[data-id=background-underlying-CSS-light],
-body.background-underlying-Color-light .setting-item[data-id=background-underlying-CSS-blend-mode-light],
-body.background-underlying-CSS-light .setting-item[data-id=background-underlying-light],
-body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-dark],
-body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-CSS-dark],
-body.background-underlying-defalut-dark .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
-body.background-underlying-Color-dark .setting-item[data-id=background-underlying-CSS-dark],
-body.background-underlying-Color-dark .setting-item[data-id=background-underlying-CSS-blend-mode-dark],
-body.background-underlying-CSS-dark .setting-item[data-id=background-underlying-dark],
+body:not(.background-underlying-Color-light) .setting-item[data-id=background-underlying-light],
+body:not(.background-underlying-CSS-light) .setting-item:is([data-id=background-underlying-CSS-light], [data-id=background-underlying-CSS-blend-mode-light]),
+body:not(.background-underlying-Color-dark) .setting-item[data-id=background-underlying-dark],
+body:not(.background-underlying-CSS-dark) .setting-item:is([data-id=background-underlying-CSS-dark], [data-id=background-underlying-CSS-blend-mode-dark]),
 body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-split-light],
 body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-CSS-light],
 body.mod-root-split-background-primary-light .setting-item[data-id=background-mod-root-CSS-blend-mode-light],
@@ -4013,6 +4013,15 @@ body.theme-dark:not(.is-mobile).background-underlying-CSS-dark {
     background-blend-mode: var(--background-underlying-CSS-blend-mode-dark) !important;
 }
 
+body.background-underlying-primary-light.theme-light,
+body.background-underlying-primary-dark.theme-dark {
+    --background-underlying: var(--background-primary) !important;
+}
+
+body.background-underlying-secondary-light.theme-light,
+body.background-underlying-secondary-dark.theme-dark {
+    --background-underlying: var(--background-secondary) !important;
+}
 
 body.background-underlying-defalut-light.theme-light,
 body.background-underlying-defalut-dark.theme-dark {
@@ -4777,10 +4786,18 @@ body.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-titl
     --icon-opacity: 1;
 }
 
+body:not(.is-mobile) .clickable-icon.side-dock-ribbon-action,
+body:not(.is-mobile) .sidebar-toggle-button .clickable-icon,
+body:not(.is-mobile) .workspace-tab-header-tab-list .clickable-icon,
+body:not(.is-mobile) .workspace-tab-header-new-tab .clickable-icon,
 body:not(.is-mobile) .workspace-tab-header .workspace-tab-header-inner {
     border-radius: var(--border-radius-activated-tab-header-light);
 }
 
+body:not(.is-mobile).theme-dark .clickable-icon.side-dock-ribbon-action,
+body:not(.is-mobile).theme-dark .sidebar-toggle-button .clickable-icon,
+body:not(.is-mobile).theme-dark .workspace-tab-header-tab-list .clickable-icon,
+body:not(.is-mobile).theme-dark .workspace-tab-header-new-tab .clickable-icon,
 body:not(.is-mobile).theme-dark .workspace-tab-header .workspace-tab-header-inner {
     border-radius: var(--border-radius-activated-tab-header-dark);
 }
