@@ -20,6 +20,8 @@
 
 + [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
 ![screenshot](img/Obsidian-default-light.png)
+  + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
+![screenshot](img/Obsidian-default-light-alt.png)
 
 + [Eye-friendly](https://github.com/Akifyss/obsidian-border/blob/main/presets/Eye-friendly.json)
 ![screenshot](img/Eye-friendly.png)
@@ -58,6 +60,8 @@
 
 + [Obsidian-default-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark.json)
 ![screenshot](img/Obsidian-default-dark.png)
+  + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
+![screenshot](img/Obsidian-default-dark-alt.png)
 
 + [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine.png)
