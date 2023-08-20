@@ -91,8 +91,8 @@ settings:
         type: class-toggle
     - 
         id: file-icon-remove
-        title: remove file and folder icon
-        title.zh: 移除文件和文件夹图标
+        title: remove custom icon
+        title.zh: 移除 自定义图标
         type: class-toggle
     - 
         id: colorful-folder
@@ -1043,14 +1043,14 @@ settings:
     - 
         id: Active-states-light
         title: Active states
-        title.zh: 激活状态
+        title.zh: 激活态
         type: heading
         collapsed: true
         level: 3
     - 
         id: Active-states-Tabs-light
         title: Active states(Tabs)
-        title.zh: 激活状态（Tabs）
+        title.zh: 激活态（Tabs）
         type: heading
         collapsed: true
         level: 4
@@ -1098,7 +1098,7 @@ settings:
     - 
         id: Active-states-file-explorer-light
         title: Active states(file explorer)
-        title.zh: 激活状态（文件列表）
+        title.zh: 激活态（文件列表）
         type: heading
         collapsed: true
         level: 4
@@ -2001,14 +2001,14 @@ settings:
     - 
         id: Active-states-dark
         title: Active states
-        title.zh: 激活状态
+        title.zh: 激活态
         type: heading
         collapsed: true
         level: 3
     - 
         id: Active-states-Tabs-dark
         title: Active states(Tabs)
-        title.zh: 激活状态（Tabs）
+        title.zh: 激活态（Tabs）
         type: heading
         collapsed: true
         level: 4
@@ -2056,7 +2056,7 @@ settings:
     - 
         id: Active-states-file-explorer-dark
         title: Active states(file explorer)
-        title.zh: 激活状态（文件列表）
+        title.zh: 激活态（文件列表）
         type: heading
         collapsed: true
         level: 4
@@ -5811,170 +5811,162 @@ body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-expl
 }
 
 /* file active states */
-body.theme-light {
+.theme-light {
     --border-radius-activated-file-light: var(--radius-s);
     --color-activated-file-light: var(--nav-item-color-active);
     --background-activated-file-light: var(--nav-item-background-active);
     --shadow-activated-file-light: none;
 }
 
-body.theme-dark {
+.theme-dark {
     --border-radius-activated-file-dark: var(--radius-s);
     --color-activated-file-dark: var(--nav-item-color-active);
     --background-activated-file-dark: var(--nav-item-background-active);
     --shadow-activated-file-dark: none;
 }
 
-body.activated-file-default-light.theme-light {
+.activated-file-default-light.theme-light {
     --border-radius-activated-file-light: var(--radius-s) !important;
     --color-activated-file-light: var(--nav-item-color-active) !important;
     --background-activated-file-light: var(--nav-item-background-active) !important;
     --shadow-activated-file-light: none !important;
 }
 
-body.activated-file-default-dark.theme-dark {
+.activated-file-default-dark.theme-dark {
     --border-radius-activated-file-dark: var(--radius-s) !important;
     --color-activated-file-dark: var(--nav-item-color-active) !important;
     --background-activated-file-dark: var(--nav-item-background-active) !important;
     --shadow-activated-file-dark: none !important;
 }
 
-body.activated-file-accent-light.theme-light {
+.activated-file-accent-light.theme-light {
     --border-radius-activated-file-light: var(--radius-s) !important;
     --color-activated-file-light: var(--text-on-accent) !important;
     --background-activated-file-light: var(--color-accent) !important;
     --shadow-activated-file-light: none !important;
 }
 
-body.activated-file-accent-dark.theme-dark {
+.activated-file-accent-dark.theme-dark {
     --border-radius-activated-file-dark: var(--radius-s) !important;
-    --color-activated-file-light: var(--text-on-accent) !important;
+    --color-activated-file-dark: var(--text-on-accent) !important;
     --background-activated-file-dark: var(--color-accent) !important;
     --shadow-activated-file-dark: none !important;
 }
 
-body.activated-file-accent-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
+.activated-file-accent-light.theme-light .tree-item-self.bookmark.is-active .tree-item-icon svg,
+.activated-file-accent-dark.theme-dark .tree-item-self.bookmark.is-active .tree-item-icon svg,
+.activated-file-accent-light.theme-light .nav-file-title.is-active .nav-file-title-content::before,
+.activated-file-accent-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--text-on-accent) !important;
 }
 
-body.activated-file-accent-light.theme-light .nav-file-title.is-active .nav-file-tag {
+.activated-file-accent-light.theme-light .nav-file-title.is-active .nav-file-tag,
+.activated-file-accent-dark.theme-dark .nav-file-title.is-active .nav-file-tag,
+.activated-file-accent-light.theme-light .nav-folder-title.is-active svg,
+.activated-file-accent-dark.theme-dark .nav-folder-title.is-active svg,
+.activated-file-accent-light.theme-light .nav-file-title.is-active svg,
+.activated-file-accent-dark.theme-dark .nav-file-title.is-active svg {
     color: var(--text-on-accent) !important;
 }
 
-body.activated-file-accent-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
-    --file-icon-color: var(--text-on-accent) !important;
-}
-
-body.activated-file-accent-dark.theme-dark .nav-file-title.is-active .nav-file-tag {
-    color: var(--text-on-accent) !important;
-}
-
-body.activated-file-accent-light.theme-light .nav-folder-title.is-active svg,
-body.activated-file-accent-light.theme-light .nav-file-title.is-active svg {
-    color: var(--text-on-accent) !important;
-}
-
-body.activated-file-accent-dark.theme-dark .nav-folder-title.is-active svg,
-body.activated-file-accent-dark.theme-dark .nav-file-title.is-active svg {
-    color: var(--text-on-accent) !important;
-}
-
-body.activated-file-accent-light.theme-light .nav-file-title:not(.recent-files-title):before {
+.activated-file-accent-light.theme-light .nav-file-title:not(.recent-files-title):before,
+.activated-file-accent-dark.theme-dark .nav-file-title:not(.recent-files-title):before {
     display: none;
 }
 
-body.activated-file-accent-dark.theme-dark .nav-file-title:not(.recent-files-title):before {
-    display: none;
-}
-
-body.activated-file-tab-style-light.theme-light {
+.activated-file-tab-style-light.theme-light {
     --border-radius-activated-file-light: var(--border-radius-activated-tab-header-light) !important;
     --color-activated-file-light: var(--color-activated-tab-header-light) !important;
     --background-activated-file-light: var(--background-activated-tab-header-light) !important;
     --shadow-activated-file-light: var(--shadow-activated-tab-header-light) !important;
 }
 
-body.activated-file-tab-style-dark.theme-dark {
+.activated-file-tab-style-dark.theme-dark {
     --border-radius-activated-file-dark: var(--border-radius-activated-tab-header-dark) !important;
     --color-activated-file-dark: var(--color-activated-tab-header-dark) !important;
     --background-activated-file-dark: var(--background-activated-tab-header-dark) !important;
     --shadow-activated-file-dark: var(--shadow-activated-tab-header-dark) !important;
 }
 
-body.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
+.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file-light) !important;
 }
 
-body.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
+.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file-dark) !important;
 }
 
-body.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-folder-title.is-active svg,
-body.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-file-title.is-active svg {
+.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-folder-title.is-active svg,
+.activated-file-tab-style-light.color-to-tab-icon-light.theme-light .nav-file-title.is-active svg {
     color: var(--color-activated-file-light) !important;
 }
 
-body.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-folder-title.is-active svg,
-body.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-file-title.is-active svg {
+.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-folder-title.is-active svg,
+.activated-file-tab-style-dark.color-to-tab-icon-dark.theme-dark .nav-file-title.is-active svg {
     color: var(--color-activated-file-dark) !important;
 }
 
-body.activated-file-customize-light {
+.activated-file-customize-light {
     --border-radius-activated-file-light: 4px;
     --color-activated-file-light: var(--nav-item-color-active);
     --background-activated-file-light: rgba(0, 0, 0, 0.05);
     --shadow-activated-file-light: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-body.activated-file-customize-dark {
+.activated-file-customize-dark {
     --border-radius-activated-file-dark: 4px;
     --color-activated-file-light: var(--nav-item-color-active);
     --background-activated-file-dark: rgba(255, 255, 255, 0.075);
     --shadow-activated-file-dark: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-body.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
+.activated-file-customize-light.color-to-file-icon-light.theme-light .tree-item-self.bookmark.is-active .tree-item-icon,
+.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file-light) !important;
 }
 
-body.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
+.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .tree-item-self.bookmark.is-active .tree-item-icon,
+.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-file-title.is-active .nav-file-title-content::before {
     --file-icon-color: var(--color-activated-file-dark) !important;
 }
 
-body.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-folder-title.is-active svg,
-body.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-file-title.is-active svg {
+.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-folder-title.is-active svg,
+.activated-file-customize-light.color-to-file-icon-light.theme-light .nav-file-title.is-active svg {
     color: var(--color-activated-file-light) !important;
 }
 
-body.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-folder-title.is-active svg,
-body.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-file-title.is-active svg {
+.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-folder-title.is-active svg,
+.activated-file-customize-dark.color-to-file-icon-dark.theme-dark .nav-file-title.is-active svg {
     color: var(--color-activated-file-dark) !important;
 }
 
-body.theme-light .mk-tree-item.nav-folder-title.is-active.is-selected,
-body.theme-light .mk-tree-item.nav-file-title.is-active.is-selected,
-body.theme-light:not(.is-grabbing) .nav-file-title.is-active:hover,
-body.theme-light:not(.is-grabbing) .nav-folder-title.is-active:hover,
-body.theme-light .nav-file-title.is-active,
-body.theme-light .nav-folder-title.is-active {
+.theme-light:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active:hover,
+.theme-light .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active,
+.theme-light .mk-tree-item.nav-folder-title.is-active.is-selected,
+.theme-light .mk-tree-item.nav-file-title.is-active.is-selected,
+.theme-light:not(.is-grabbing) .nav-file-title.is-active:hover,
+.theme-light:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.theme-light .nav-file-title.is-active,
+.theme-light .nav-folder-title.is-active {
+    --nav-item-color-active: var(--color-activated-file-light);
     border-radius: var(--border-radius-activated-file-light);
-    color: var(--color-activated-file-light);
     background: var(--background-activated-file-light) !important;
     box-shadow: var(--shadow-activated-file-light);
 }
 
-body.theme-dark .mk-tree-item.nav-folder-title.is-active.is-selected,
-body.theme-dark .mk-tree-item.nav-file-title.is-active.is-selected,
-body.theme-dark:not(.is-grabbing) .nav-file-title.is-active:hover,
-body.theme-dark:not(.is-grabbing) .nav-folder-title.is-active:hover,
-body.theme-dark .nav-file-title.is-active,
-body.theme-dark .nav-folder-title.is-active {
+.theme-dark:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active:hover,
+.theme-dark .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active,
+.theme-dark .mk-tree-item.nav-folder-title.is-active.is-selected,
+.theme-dark .mk-tree-item.nav-file-title.is-active.is-selected,
+.theme-dark:not(.is-grabbing) .nav-file-title.is-active:hover,
+.theme-dark:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active {
+    --nav-item-color-active: var(--color-activated-file-dark);
     border-radius: var(--border-radius-activated-file-dark);
-    color: var(--color-activated-file-dark);
     background: var(--background-activated-file-dark) !important;
     box-shadow: var(--shadow-activated-file-dark);
 }
-
 
 /* file layout & style */
 
@@ -6036,7 +6028,8 @@ body:not(.file-icon-remove) .nav-folder.mod-root>.nav-folder-children>.nav-file 
     margin-top: 32px;
 }
 
-/* file indicator */
+/*file & bookmark indicator */
+.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.bookmark:before,
 .theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
     content: "";
     position: absolute;
@@ -6050,11 +6043,13 @@ body:not(.file-icon-remove) .nav-folder.mod-root>.nav-folder-children>.nav-file 
     transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
+.theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.bookmark.is-active::before,
 .theme-light:not(.indicator-remove-light) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
     height: 60%;
     transform: translateY(-50%);
 }
 
+.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.bookmark:before,
 .theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:before {
     content: "";
     position: absolute;
@@ -6068,6 +6063,7 @@ body:not(.file-icon-remove) .nav-folder.mod-root>.nav-folder-children>.nav-file 
     transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
+.theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.bookmark.is-active::before,
 .theme-dark:not(.indicator-remove-dark) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active::before {
     height: 60%;
     transform: translateY(-50%);
@@ -6360,19 +6356,22 @@ body {
 /*bookmark pane*/
 
 .workspace-leaf-content[data-type="bookmarks"] .tree-item-inner {
-    margin-left: 4px;
+    padding-left: 8px;
+}
+
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-self .tree-item-icon {
+    color: var(--file-icon-color);
+    margin-left: calc(-1 * var(--size-4-4));
+}
+
+.workspace-leaf-content[data-type="bookmarks"] .tree-item-self .tree-item-icon svg {
+    color: var(--file-icon-color);
+    background-color: var(--file-icon-color);
 }
 
 .workspace-leaf-content[data-type="bookmarks"] .tree-item-self .tree-item-icon .svg-icon:not(.right-triangle) {
     --icon-size: 20px;
 }
-
-
-.workspace-leaf-content[data-type="bookmarks"] .tree-item svg {
-    color: var(--file-icon-color);
-    background-color: var(--file-icon-color);
-}
-
 
 .workspace-leaf-content[data-type="bookmarks"] svg.lucide-file {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20stroke%3D%22%23000%22%20clip-path%3D%22url(%23a)%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-opacity%3D%22.1%22%20d%3D%22M14%2017.5H6A1.5%201.5%200%200%201%204.5%2016V4A1.5%201.5%200%200%201%206%202.5h5.086a.5.5%200%200%201%20.353.146l3.915%203.915a.5.5%200%200%201%20.146.353V16a1.5%201.5%200%200%201-1.5%201.5Z%22%2F%3E%3Cpath%20d%3D%22M11.5%202.5v3a1%201%200%200%200%201%201h3%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h20v20H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
@@ -7459,7 +7458,7 @@ body {
     --line-active-bg-customize: rgba(0, 0, 0, 0.035);
 }
 
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container),.HyperMD-header) {
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container), .HyperMD-header) {
     background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
 }
