@@ -58,9 +58,9 @@ settings:
         title.zh: 自动隐藏 功能区菜单中的的“帮助”&“打开其他仓库”图标
         type: class-toggle
     - 
-        id: tab-title-bar-fixed
-        title: Always display tab title bar
-        title.zh: 始终显示 标签页标题栏
+        id: tab-title-bar-autohide
+        title: Auto hide tab title bar
+        title.zh: 自动隐藏 标签页标题栏
         type: class-toggle
     - 
         id: file-explorer
@@ -5120,7 +5120,7 @@ body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-cont
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover,
 body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header,
-body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header {
+body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header {
     height: 44px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
@@ -5135,7 +5135,7 @@ body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-cont
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .nav-buttons-container,
 body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container,
-body:not(.is-mobile):not(.tab-title-bar-fixed).nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
+body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
@@ -5155,6 +5155,57 @@ body:not(.is-mobile):not(.Ribbon-autohide).icon-autohide .side-dock-settings .si
     transition: opacity var(--anim-in);
 }
 
+
+/*view-header autohide */
+
+body:not(.is-mobile).tab-title-bar-autohide .view-header::after {
+    width: 100%;
+    content: " ";
+    background-color: transparent;
+    height: var(--size-4-4);
+    position: absolute;
+    z-index: -9;
+    top: 1px;
+    right: 0;
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .mod-root .workspace-leaf .view-header {
+    height: 0;
+    margin-top: -1px;
+    transition: height var(--anim-out), margin var(--anim-out);
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .mod-root .workspace-leaf .view-header:focus-within,
+body:not(.is-mobile).tab-title-bar-autohide .mod-root .workspace-leaf .view-header:hover,
+body:not(.is-mobile).tab-title-bar-autohide .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
+    height: var(--header-height);
+    margin-top: 0px;
+    transition: height var(--anim-in), margin var(--anim-in);
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .view-actions,
+body:not(.is-mobile).tab-title-bar-autohide .view-header-nav-buttons,
+body:not(.is-mobile).tab-title-bar-autohide .view-header-title-container {
+    opacity: 0;
+    transition: opacity var(--anim-out);
+}
+
+body:not(.is-mobile).tab-title-bar-autohide .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header :is(.view-actions, .view-header-nav-buttons, .view-header-title-container),
+body:not(.is-mobile).tab-title-bar-autohide .view-header:focus-within :is(.view-actions, .view-header-nav-buttons, .view-header-title-container),
+body:not(.is-mobile).tab-title-bar-autohide .view-header:hover :is(.view-actions, .view-header-nav-buttons, .view-header-title-container) {
+    opacity: 1;
+    transition: opacity var(--anim-in);
+}
+
+/*view-header surfing*/
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-header {
+    margin-top: 0px !important;
+    height: var(--header-height) !important;
+}
+
+body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) :is(.view-actions, .view-header-nav-buttons, .view-header-title-container) {
+    opacity: 1;
+}
 
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
@@ -5209,70 +5260,6 @@ body:not(.native-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
     border-left: none;
 }
 
-/* ====== view-header====== */
-
-
-body:not(.is-mobile) .view-header::after {
-    width: 100%;
-    content: " ";
-    background-color: transparent;
-    height: var(--size-4-4);
-    position: absolute;
-    z-index: -9;
-    top: 1px;
-    right: 0;
-}
-
-body:not(.is-mobile) .mod-root .workspace-leaf .view-header {
-    height: 0;
-    margin-top: -1px;
-    transition: height var(--anim-out), margin var(--anim-out);
-}
-
-body:not(.is-mobile) .mod-root .workspace-leaf .view-header:focus-within,
-body:not(.is-mobile) .mod-root .workspace-leaf .view-header:hover,
-body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header {
-    height: var(--header-height);
-    margin-top: 0px;
-    transition: height var(--anim-in), margin var(--anim-in);
-}
-
-body:not(.is-mobile) .view-actions,
-body:not(.is-mobile) .view-header-nav-buttons,
-body:not(.is-mobile) .view-header-title-container {
-    opacity: 0;
-    transition: opacity var(--anim-out);
-}
-
-body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-actions,
-body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-header-nav-buttons,
-body:not(.is-mobile) .mod-root .workspace-tab-header-container:hover~.workspace-tab-container .view-header .view-header-title-container,
-body:not(.is-mobile) .view-header:focus-within .view-actions,
-body:not(.is-mobile) .view-header:focus-within .view-header-nav-buttons,
-body:not(.is-mobile) .view-header:focus-within .view-header-title-container,
-body:not(.is-mobile) .view-header:hover .view-actions,
-body:not(.is-mobile) .view-header:hover .view-header-nav-buttons,
-body:not(.is-mobile) .view-header:hover .view-header-title-container {
-    opacity: 1;
-    transition: opacity var(--anim-in);
-}
-
-/*view-header fixed*/
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-header,
-body:not(.is-mobile).tab-title-bar-fixed .mod-root .workspace-leaf .view-header {
-    margin-top: 0px !important;
-    height: var(--header-height) !important;
-}
-
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-actions,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-header-nav-buttons,
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-header-title-container,
-body:not(.is-mobile).tab-title-bar-fixed .view-actions,
-body:not(.is-mobile).tab-title-bar-fixed .view-header-nav-buttons,
-body:not(.is-mobile).tab-title-bar-fixed .view-header-title-container {
-    opacity: 1;
-}
-
 /* embedded backlinks */
 body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
     margin: 15px 0 0 0;
@@ -5286,9 +5273,6 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 body:not(.is-mobile) .mod-active .document-search-container,
 body:not(.is-mobile) .document-search-container {
     background-color: var(--background-primary);
-    /*background-color: var(--workspace-background-translucent);
-    backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
-    -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);*/
 }
 
 body:not(.is-mobile) .workspace-leaf-content[data-type=markdown] .document-search-container {
@@ -8469,7 +8453,7 @@ svg.spreadsheet {
 
 .workspace-tab-header-container svg.lucide-folder-closed {
     background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><path d="M21.5,5.91c-.33-.34-.79-.54-1.25-.54h-7.9l-2.53-2c-.3-.24-.68-.37-1.07-.37H3.75c-.47,0-.93,.2-1.25,.54-.32,.34-.5,.78-.5,1.25v13.42c0,.47,.18,.91,.49,1.25,.33,.35,.79,.54,1.26,.54H20.25c.47,0,.93-.2,1.25-.54,.32-.34,.5-.78,.5-1.25V7.16c0-.47-.18-.91-.5-1.25ZM4,5h4.65l1.74,1.37-1.74,1.37H4v-2.74Zm16,13H4V9.74h4.75c.38,0,.75-.13,1.06-.37l2.53-2h7.65v10.63Z"/></svg>');
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cg stroke='black' stroke-width='2' clip-path='url(%23a)'%3e%3cpath d='M18 10.5H6a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5.5a2 2 0 0 0-2-2Z'/%3e%3cpath d='M20 18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3.72a1 1 0 0 1 .73.316l1.754 1.868a1 1 0 0 0 .729.316H18a2 2 0 0 1 2 2V18Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .workspace-tab-header-container svg.lucide-search,
@@ -8498,7 +8482,6 @@ svg.spreadsheet {
     background-color: currentColor;
     -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="24" height="24"/><path d="M9.5,21H4.5c-.83,0-1.5-.67-1.5-1.5v-5c0-.83,.67-1.5,1.5-1.5h5c.83,0,1.5,.67,1.5,1.5v5c0,.83-.67,1.5-1.5,1.5Zm-4.5-2h4v-4H5v4Z"/><path d="M9.5,11H4.5c-.83,0-1.5-.67-1.5-1.5V4.5c0-.83,.67-1.5,1.5-1.5h5c.83,0,1.5,.67,1.5,1.5v5c0,.83-.67,1.5-1.5,1.5Zm-4.5-2h4V5H5v4Z"/><path d="M19.5,11h-5c-.83,0-1.5-.67-1.5-1.5V4.5c0-.83,.67-1.5,1.5-1.5h5c.83,0,1.5,.67,1.5,1.5v5c0,.83-.67,1.5-1.5,1.5Zm-4.5-2h4V5h-4v4Z"/><path d="M19.5,21h-5c-.83,0-1.5-.67-1.5-1.5v-5c0-.83,.67-1.5,1.5-1.5h5c.83,0,1.5,.67,1.5,1.5v5c0,.83-.67,1.5-1.5,1.5Zm-4.5-2h4v-4h-4v4Z"/></svg>')
 }
-
 
 .workspace-tab-header-container svg.lucide-file {
     background-color: currentColor;
@@ -8586,7 +8569,7 @@ svg.pane-layout,
 
 .side-dock-ribbon-action svg.lucide-file-search {
     background-color: currentColor;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.b{fill:none;}</style></defs><rect class="b" width="24" height="24"/><g><path d="M12.88,20H6l-.03-16h12.03v6.58c0,.55,.45,1,1,1s1-.45,1-1V3.9c0-.5-.19-.98-.54-1.33-.35-.36-.84-.57-1.34-.57H5.88c-.5,0-.99,.21-1.34,.57-.35,.36-.54,.83-.54,1.33V20.1c0,.5,.19,.98,.54,1.33,.35,.36,.84,.57,1.34,.57h7c.55,0,1-.45,1-1s-.45-1-1-1Z"/><path d="M17,9.5v-3c0-.83-.67-1.5-1.5-1.5h-7c-.83,0-1.5,.67-1.5,1.5v3c0,.83,.67,1.5,1.5,1.5h7c.83,0,1.5-.67,1.5-1.5Zm-2-.5h-6v-2h6v2Z"/><path d="M11,13h-3c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1s-.45-1-1-1Z"/><path d="M21.71,20.29l-1.55-1.54c.27-.49,.43-1.05,.43-1.65,0-1.93-1.57-3.5-3.5-3.5s-3.5,1.57-3.5,3.5,1.57,3.5,3.5,3.5c.6,0,1.16-.17,1.65-.43l1.55,1.54c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29c.39-.39,.39-1.02,0-1.41Zm-6.11-3.2c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5-.67,1.5-1.5,1.5-1.5-.67-1.5-1.5Z"/><path d="M11,16h-3c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1s-.45-1-1-1Z"/></g></svg>');
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(%23a)'%3e%3cpath d='M15 3v4a1 1 0 0 0 1 1h4'/%3e%3cpath d='M6 6V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H6'/%3e%3cpath d='M7 16a3 3 0 1 0 0-5.999A3 3 0 0 0 7 16Zm4 1-1.5-1.5'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .side-dock-ribbon-action svg.lucide-binary {
