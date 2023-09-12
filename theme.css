@@ -80,15 +80,24 @@ settings:
         title.zh: 不修剪文件名
         type: class-toggle
     - 
-        id: vault-name-fixed
-        title: Fix vault name position
-        title.zh: 固定仓库名位置
-        type: class-toggle
-    - 
         id: folder-font-bold
         title: Bold folder font
         title.zh: 加粗文件夹字体
         type: class-toggle
+    - 
+        id: vault-name-display-select
+        title: Vault name display
+        title.zh: 仓库名显示
+        type: class-select
+        allowEmpty: false
+        default: vault-name-default
+        options:
+            -   label: default
+                value: vault-name-default
+            -   label: fixed
+                value: vault-name-fixed
+            -   label: hide
+                value: vault-name-hide
     - 
         id: file-explorer-icon
         title: icon
@@ -3495,16 +3504,16 @@ body.Ribbon-autohide .setting-item[data-id=icon-autohide] {
     display: none;
 }
 
-.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
-.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
-.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color],
-.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color],
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
     position: relative;
     visibility: hidden;
 }
 
-.accent-color-override-light.theme-light .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before,
-.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before,
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
     content: "Overridden by Style Settings";
     font-family: var(--font-interface);
     font-size: var(--font-ui-smaller);
@@ -3517,8 +3526,8 @@ body.Ribbon-autohide .setting-item[data-id=icon-autohide] {
     pointer-events: none;
 }
 
-.accent-color-override-light.theme-light.is-mobile .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before,
-.accent-color-override-dark.theme-dark.is-mobile .mod-settings .vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
+.accent-color-override-light.theme-light.is-mobile .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before,
+.accent-color-override-dark.theme-dark.is-mobile .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color]::before {
     width: auto;
 }
 
@@ -5998,7 +6007,7 @@ body {
     --nav-item-weight: bold;
 }
 
-/*fix vault name*/
+/*vault name*/
 .vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
     position: fixed;
     transform: translateY(-32px);
@@ -6006,6 +6015,10 @@ body {
 
 .vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
     margin-top: 32px;
+}
+
+.vault-name-hide .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
+    display: none;
 }
 
 /*file tag*/
@@ -8075,7 +8088,6 @@ body {
     --table-header-background-hover: var(--background-modifier-hover);
     --table-row-background-hover: var(--background-modifier-hover);
     --table-header-weight: var(--font-semibold);
-    --table-header-color: var(--color-accent-3);
     --table-width: 88cqw;
 }
 
