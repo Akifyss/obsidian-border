@@ -6067,7 +6067,6 @@ body {
 /*icons in pane*/
 body:not(.file-icon-remove) {
     --file-icon-color: currentColor;
-    --nav-item-children-margin-left: var(--size-4-4);
 }
 
 body:not(.file-icon-remove).file-icon-color-accent {
@@ -6076,6 +6075,10 @@ body:not(.file-icon-remove).file-icon-color-accent {
 
 body:not(.file-icon-remove).file-icon-color-currentColor {
     --file-icon-color: currentColor !important;
+}
+
+body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"], [data-type="tag"]) {
+    --nav-item-children-margin-left: var(--size-4-4);
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"], [data-type="tag"]) .tree-item-self {
