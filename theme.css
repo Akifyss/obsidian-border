@@ -5,8 +5,8 @@ id: Info
 settings:
     - 
         id: Extras-info
-        description: "**ℹ️ Note**: Some features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“ <br> <br> 🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 If you have problems, please submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github<br> <br> 🔼 View recent updates: [Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
-        description.zh: "**ℹ️ 注意**：此主题的部分功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本  <br> <br> 🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 如果遇到问题，可以在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)<br> <br> 🔼 查看最近更新：[Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
+        description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 If you have problems, please submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github<br> <br> 🔼 View recent updates: [Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
+        description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 如果遇到问题，可以在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)<br> <br> 🔼 查看最近更新：[Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
         type: info-text
         markdown: true
 */
@@ -22,14 +22,8 @@ settings:
         title: Auto hide
         title.zh: 自动隐藏
         type: heading
-        collapsed: false
+        collapsed: ture
         level: 3
-    - 
-        id: autohide-info
-        description: "**Note**: This feature requires your **installer** version(not APP current version) > v1.1.8. If not, you can download and re-install obsidian [here](https://obsidian.md/download).Check **installer** version in “Settings-About-APP“"
-        description.zh: "**注意**：此特性需要**安装程序**版本（不是指APP当前版本） > v1.1.8。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian。可以在“设置-关于-APP”处查看**安装程序**版本"
-        type: info-text
-        markdown: true
     - 
         id: tab-autohide
         title: Auto hide tab bar
@@ -326,36 +320,6 @@ settings:
             -   label: right
                 value: canvas-card-menu-right
     - 
-        id: Setting-modal
-        title: Setting modal
-        title.zh: 设置界面
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: setting-item-title-icon-remove
-        title: Remove setting item title icon
-        title.zh: 移除 设置项标题图标
-        type: class-toggle
-    - 
-        id: Scrollbar
-        title: Scrollbar
-        title.zh: 滚动条
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: scrollbar-space-occupation-off
-        title: Eliminate the space occupied by scrollbar
-        description: from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536
-        title.zh: 取消 滚动条的空间占用
-        type: class-toggle
-    - 
-        id: scrollbar-hide
-        title: Hide scrollbar
-        title.zh: 隐藏滚动条
-        type: class-toggle
-    - 
         id: animation
         title: Animation
         title.zh: 动效
@@ -376,6 +340,23 @@ settings:
         min: 0.5
         max: 2
         step: 0.05
+    - 
+        id: Miscellaneous
+        title: Miscellaneous
+        title.zh: 杂项
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: scrollbar-hide
+        title: Hide scrollbar
+        title.zh: 隐藏滚动条
+        type: class-toggle
+    - 
+        id: setting-item-title-icon-remove
+        title: Remove setting item title icon
+        title.zh: 移除 设置项标题图标
+        type: class-toggle
 
 */
 
@@ -2302,14 +2283,8 @@ settings:
         title: Hover line indicator
         title.zh: 悬停行指示器
         type: heading
-        collapsed: false
+        collapsed: ture
         level: 3
-    - 
-        id: line-hover-indicator-info
-        description: "**Note**: This feature requires your **installer** version(not APP current version) > v1.1.8. If not, you can download and re-install obsidian [here](https://obsidian.md/download).Check **installer** version in “Settings-About-APP“"
-        description.zh: "**注意**：此特性需要**安装程序**版本（不是指APP当前版本） > v1.1.8。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian。可以在“设置-关于-APP”处查看**安装程序**版本"
-        type: info-text
-        markdown: true
     - 
         id: line-hover-indicator-disable
         title: Disable hover line indicator
@@ -4605,13 +4580,6 @@ body:not(.native-scrollbars).scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
 
-
-/*off scrollbar space occupancy, from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536  */
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.mk-file-tree>div>div),
-body:not(.is-mobile).scrollbar-space-occupation-off :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper, .community-modal-info, .modal:not(.mod-settings, .mod-community-theme, .mod-community-plugin), .tag-container, .backlink-pane, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view:not(.checklist-plugin-main), .workspace-leaf-content[data-type=calendar] .view-content, .janitor-scan-results, .excalidraw-wrapper :is(.App-mobile-menu, .App-menu .Stack .Island.App-menu__left, .scrollbar), .excalidraw-contextMenuContainer .popover, .kanban-plugin__board, .kanban-plugin__lane-items, .workspace-leaf-content[data-type="pdf"] .pdf-viewer-container, .workspace-leaf-content[data-type="pdf"] .pdf-thumbnail-view) {
-    overflow-y: overlay !important;
-}
-
 /* ====== titlebar ===== */
 body:not(.is-translucent) .titlebar-text {
     opacity: 1;
@@ -6672,130 +6640,8 @@ input.prompt-input {
     padding-right: 16px;
 }
 
-body.tab-autohide .notice-container {
+.tab-autohide .notice-container {
     top: 6px;
-}
-
-body:not(.is-mobile) .app-container::before {
-    content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification.";
-    position: absolute;
-    right: 16px;
-    top: 44px;
-    background-color: var(--background-modifier-message);
-    border-radius: var(--radius-m);
-    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
-    color: #FAFAFA;
-    font-size: var(--font-ui-small);
-    line-height: var(--line-height-tight);
-    padding: 0.75em 1em 0.75em 1em;
-    max-width: 300px;
-    margin-bottom: 14px;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    cursor: var(--cursor);
-    z-index: var(--layer-notice);
-    -webkit-animation: notice-slide-up 20s ease-in-out forwards;
-    animation: notice-slide-up 20s ease-in-out forwards;
-}
-
-@-webkit-keyframes notice-slide-up {
-
-    0% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-        z-index: var(--layer-notice);
-    }
-
-
-    98% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-        z-index: var(--layer-notice);
-    }
-
-
-    99% {
-        -webkit-transform: translateY(-200px);
-        transform: translateY(-200px);
-        opacity: 0;
-        z-index: var(--layer-notice);
-    }
-
-    100% {
-        -webkit-transform: translateY(-200px);
-        transform: translateY(-200px);
-        opacity: 0;
-        z-index: 0;
-    }
-}
-
-
-
-@keyframes notice-slide-up {
-
-    0% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-        z-index: var(--layer-notice);
-    }
-
-
-    98% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        opacity: 1;
-        z-index: var(--layer-notice);
-    }
-
-
-    99% {
-        -webkit-transform: translateY(-200px);
-        transform: translateY(-200px);
-        opacity: 0;
-        z-index: var(--layer-notice);
-    }
-
-    100% {
-        -webkit-transform: translateY(-200px);
-        transform: translateY(-200px);
-        opacity: 0;
-        z-index: 0;
-    }
-}
-
-
-body:not(.is-mobile).tab-autohide .app-container::before {
-    top: 16px;
-}
-
-body:not(.is-mobile) .app-container:has(.workspace):before {
-    display: none;
-}
-
-body:not(.is-mobile):not(.css-settings-manager) .app-container::before {
-    content: "ℹ️Manually re-install obsidian to update your installer version and remove this notification. ℹ️Highly recommended for use with style settings plugin.";
-}
-
-body:not(.is-mobile):not(.css-settings-manager) .app-container:has(.workspace)::before {
-    content: "ℹ️Highly recommended for use with style settings plugin.";
-    display: unset;
-}
-
-/* tooltip */
-
-.tooltip {
-    transition: none;
-    animation: none;
-}
-
-.tooltip.mod-left,
-.tooltip.mod-right {
-    transform: none;
-    animation: none
 }
 
 /* Prompts */
