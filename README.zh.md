@@ -8,9 +8,6 @@
 
 ## 特性
 
-> **⚠️ 注意**：此主题的部分功能需要**安装程序**版本（不是指APP当前版本） > v1.1.8 才能正常工作。如果不是，可以在[这里](https://obsidian.md/download)重新下载安装obsidian来升级**安装程序**版本。可以在“设置-关于-APP”处查看**安装程序**版本
-> <img src="img/version-2.png">
-
 > 强烈推荐与[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件一起使用.
 
 ### 自动隐藏
@@ -18,8 +15,6 @@
 ![screenshot](img/screenshot.gif)
 
 在[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件中启用。
-
-需要**安装程序**版本（不是指APP当前版本） > v1.1.8
 
 ### 卡片式布局
 
@@ -32,8 +27,6 @@
 ![screenshot](img/line.gif)
 
 在[style settings](https://github.com/mgmeyers/obsidian-style-settings)插件中启用。
-
-需要**安装程序**版本（不是指APP当前版本） > v1.1.8
 
 ### 高度可定制
 

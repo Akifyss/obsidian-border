@@ -8,9 +8,6 @@ A clean and highly customisable theme for obsidian.
 
 ## Feature
 
-> **⚠️ Note**: Some features of this theme require your **installer** version(not APP current version) > v1.1.8 to work correctly. If not, you can download and re-install obsidian [here](https://obsidian.md/download) to upgrade your **installer** version. Check your **installer** version in “Settings-About-APP“
-> <img src="img/version-1.png">
-
 > Highly recommended for use with [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 
 ### Auto hide
@@ -18,8 +15,6 @@ A clean and highly customisable theme for obsidian.
 ![screenshot](img/screenshot.gif)
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
-
-Require your **installer** version(not APP current version) > v1.1.8
 
 ### Card layout
 
@@ -32,8 +27,6 @@ Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) 
 ![screenshot](img/line.gif)
 
 Enable in [style settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
-
-Require your **installer** version(not APP current version) > v1.1.8
 
 ### Highly customizable
 
