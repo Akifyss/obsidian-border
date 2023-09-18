@@ -4517,8 +4517,8 @@ body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active 
     background-color: var(--scrollbar-active-thumb-bg) !important;
 }
 
-body:not(.restored-scrollbars) .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
-body:not(.restored-scrollbars).scrollbar-hide ::-webkit-scrollbar {
+.workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
+.scrollbar-hide ::-webkit-scrollbar {
     display: none;
 }
 
@@ -4862,40 +4862,40 @@ body:not(.is-mobile).tab-autohide .workspace-split.mod-vertical>*>.workspace-lea
 body:not(.is-mobile).tab-autohide .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) + 24px);
-    transition: height var(--anim-out);
+    transition: height var(--anim-out), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-in);
+    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
-    transition: height var(--anim-in);
+    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 16px);
-    transition: height var(--anim-out);
+    transition: height var(--anim-out), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-    transition: height var(--anim-in);
+    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
-    transition: height var(--anim-in);
+    transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 /*---*/
@@ -5939,12 +5939,8 @@ body {
 }
 
 /*file & bookmark indicator */
-.workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item {
-    position: relative;
-}
-
-.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:before,
-.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:before {
+.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self:after,
+.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self:after {
     content: "";
     position: absolute;
     left: 4px;
@@ -5957,14 +5953,14 @@ body {
     transition: all var(--anim-duration-moderate) cubic-bezier(1, .1, .36, 1.22);
 }
 
-.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:has(>.is-active)::before,
-.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:has(>.is-active)::before {
+.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self.is-active:after,
+.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self.is-active:after {
     height: 60%;
     transform: translateY(-50%);
 }
 
-.activated-file-accent-light.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:before,
-.activated-file-accent-dark.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item:before {
+.activated-file-accent-light.theme-light.active-indicator-light .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self:after,
+.activated-file-accent-dark.theme-dark.active-indicator-dark .workspace-leaf-content:is([data-type="bookmarks"], [data-type="file-explorer"]) .tree-item-self:after {
     display: none;
 }
 
