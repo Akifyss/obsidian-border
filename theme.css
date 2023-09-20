@@ -6726,8 +6726,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-1::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h1::before,
-body:not(.heading-indicator-off) .markdown-preview-view h1::before {
+body:not(.heading-indicator-off) .markdown-rendered>h1::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h1::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6741,7 +6741,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h1::before {
 }
 
 
-body.h1-divider-on :is(.markdown-preview-view h1, .markdown-rendered h1, .HyperMD-header-1)::after {
+body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -6790,8 +6790,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-2::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h2::before,
-body:not(.heading-indicator-off) .markdown-preview-view h2::before {
+body:not(.heading-indicator-off) .markdown-rendered>h2::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h2::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6805,7 +6805,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h2::before {
 }
 
 
-body.h2-divider-on :is(.markdown-preview-view h2, .markdown-rendered h2, .HyperMD-header-2)::after {
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -6856,8 +6856,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-3::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h3::before,
-body:not(.heading-indicator-off) .markdown-preview-view h3::before {
+body:not(.heading-indicator-off) .markdown-rendered>h3::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h3::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6870,7 +6870,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h3::before {
     left: 0px;
 }
 
-body.h3-divider-on :is(.markdown-preview-view h3, .markdown-rendered h3, .HyperMD-header-3)::after {
+body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -6919,8 +6919,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-4::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h4::before,
-body:not(.heading-indicator-off) .markdown-preview-view h4::before {
+body:not(.heading-indicator-off) .markdown-rendered>h4::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h4::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6934,7 +6934,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h4::before {
 }
 
 
-body.h4-divider-on :is(.markdown-rendered h4, .markdown-preview-view h4, .HyperMD-header-4)::after {
+body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .HyperMD-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -6984,8 +6984,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-5::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h5::before,
-body:not(.heading-indicator-off) .markdown-preview-view h5::before {
+body:not(.heading-indicator-off) .markdown-rendered>h5::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h5::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -6999,7 +6999,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h5::before {
 }
 
 
-body.h5-divider-on :is(.markdown-rendered h5, .markdown-preview-view h5, .HyperMD-header-5)::after {
+body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .HyperMD-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7050,8 +7050,8 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header-6::before {
     transform: translateY(4px);
 }
 
-body:not(.heading-indicator-off) .markdown-rendered h6::before,
-body:not(.heading-indicator-off) .markdown-preview-view h6::before {
+body:not(.heading-indicator-off) .markdown-rendered>h6::before,
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>h6::before {
     margin-right: 6px;
     content: " ";
     display: inline-block;
@@ -7065,7 +7065,7 @@ body:not(.heading-indicator-off) .markdown-preview-view h6::before {
 }
 
 
-body.h6-divider-on :is(.markdown-rendered h6, .markdown-preview-view h6, .HyperMD-header-6)::after {
+body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .HyperMD-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7891,8 +7891,8 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
     container-type: inline-size;
 }
 
-body.table-width-customized .markdown-source-view.mod-cm6.is-live-preview .cm-content>div.cm-embed-block:has(>table),
-body.table-width-customized .markdown-rendered .markdown-preview-sizer>div:has(>table) {
+.table-width-customized .markdown-source-view.mod-cm6.is-live-preview .cm-content>.cm-table-widget,
+.table-width-customized .markdown-rendered .markdown-preview-sizer>div:has(>table) {
     overflow: auto;
     width: var(--table-width) !important;
     margin-left: calc((var(--table-width) - 100%) / -2) !important;
