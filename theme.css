@@ -153,7 +153,7 @@ settings:
         level: 3
     - 
         id: outline-enhanced
-        title: Enable enhanced outline  style
+        title: Enable enhanced outline style
         title.zh: 启用 增强的大纲样式
         description: from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536
         type: class-toggle
@@ -2380,7 +2380,7 @@ settings:
 		title: inline title size
         title.zh: 页内标题 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.5em
 	- 
@@ -2437,7 +2437,7 @@ settings:
 		title: H1 font size
         title.zh: H1 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.5em
 	- 
@@ -2494,7 +2494,7 @@ settings:
 		title: H2 font size
         title.zh: H2 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.425em
 	- 
@@ -2551,7 +2551,7 @@ settings:
 		title: H3 font size
         title.zh: H3 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.35em
 	- 
@@ -2608,7 +2608,7 @@ settings:
 		title: H4 font size
         title.zh: H4 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.275em
 	- 
@@ -2665,7 +2665,7 @@ settings:
 		title: H5 font size
         title.zh: H5 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.2em
 	- 
@@ -2722,7 +2722,7 @@ settings:
 		title: H6 font size
         title.zh: H6 字体大小
         description: Accepts any CSS font-size value
-        description.zh: 接受任何 CSS 字体大小值
+        description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.125em
 	- 
@@ -3190,6 +3190,96 @@ settings:
         title.zh: 自定义 块引用背景（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
+        id: Callouts
+        title: Callouts
+        title.zh: 标注
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+		id: callout-border-width
+		title: callout border width
+        title.zh: 标注边框大小
+        type: variable-text
+        description: Input any CSS border-width value
+        description.zh: 输入任意 CSS border-width 值
+        default: 0px
+    - 
+        id: callout-border-opacity
+        title: callout border opacity
+        title.zh: 标注边框透明度
+        type: variable-number-slider
+        default: 0.25
+        min: 0
+        max: 1
+        step: 0.05
+    - 
+		id: callout-padding
+		title: callout padding
+        title.zh: 标注边距
+        description: Accepts any CSS padding value
+        description.zh: 接受任何 CSS padding 值
+		type: variable-text
+		default: ''
+    - 
+        id: callout-radius
+        title: callout radius
+        title.zh: 标注圆角
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
+        type: variable-text
+        default: ''
+	- 
+		id: callout-title-color
+		title: callout title color
+        title.zh: 标注标题颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: callout-title-padding
+		title: callout title padding
+        title.zh: 标注标题边距
+        description: Accepts any CSS padding value
+        description.zh: 接受任何 CSS padding 值
+		type: variable-text
+		default: ''
+    - 
+		id: callout-title-size
+		title: callout title size
+        title.zh: 标注标题大小
+        description: Accepts any CSS font-size value
+        description.zh: 接受任何 CSS font-size 值
+		type: variable-text
+		default: ''
+    - 
+		id: callout-content-padding
+		title: callout content padding
+        title.zh: 标注内容边距
+        description: Accepts any CSS padding value
+        description.zh: 接受任何 CSS padding 值
+		type: variable-text
+		default: ''
+    - 
+		id: callout-content-background
+		title: callout content background
+        title.zh: 标注内容背景
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: callout-content-radius
+        title: callout content radius
+        title.zh: 标注内容圆角
+        description: Input your border-radius value here
+        description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: ''
     - 
@@ -7641,9 +7731,12 @@ li[data-task="<"]>p>input:checked {
 
 /* ====== Callout ====== */
 body {
-    --callout-border-width: 1px;
+    --callout-content-radius: 0px;
 }
 
+.callout-content {
+    border-radius: var(--callout-content-radius);
+}
 
 /* ======Blockquotes ====== */
 body {
