@@ -1,0 +1,9 @@
+{
+  "Editor@@callout-border-width": "0 0 0 4px",
+  "Editor@@callout-border-opacity": 1,
+  "Editor@@callout-padding": "0",
+  "Editor@@callout-title-padding": "8px 16px",
+  "Editor@@callout-content-padding": "0px 16px",
+  "Editor@@callout-content-background@@dark": "#00000040",
+  "Editor@@callout-content-background@@light": "#FFFFFFBF"
+}

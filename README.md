@@ -67,9 +67,11 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ![screenshot](img/Checkboxes.png)
 
-#### New icons and illustrations
+#### Alternate callout style
 
-![screenshot](img/colorful-icon.png)
+![screenshot](img/Callout-alt.png)
+
+[import](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style)
 
 #### Customizable new tab
 

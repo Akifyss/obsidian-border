@@ -67,9 +67,11 @@
 
 ![screenshot](img/Checkboxes.png)
 
-#### 新图标和插画
+#### 可选替代的标注样式
 
-![screenshot](img/colorful-icon.png)
+![screenshot](img/Callout-alt.png)
+
+[导入](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style)
 
 #### 可自定义的新标签页
 
