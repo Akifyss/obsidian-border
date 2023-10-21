@@ -3145,6 +3145,12 @@ settings:
         collapsed: true
         level: 3
     - 
+        id: Callouts-info
+        description: "[Presets](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style) | Before importing, it is recommended to reset this entry to default / Remove preset↘"
+        description.zh: "[预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style) | 导入前，推荐先将此条目重设为默认 / 移除预设↘ "
+        type: info-text
+        markdown: true
+    - 
 		id: callout-border-width
 		title: callout border width
         title.zh: 标注边框大小
