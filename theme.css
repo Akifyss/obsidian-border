@@ -7483,8 +7483,8 @@ body {
 
 /* ======Blockquotes ====== */
 body {
-    --background-alt-light: radial-gradient(rgba(0, 0, 0, 0.16) .5px, transparent .5px) 0 0 / 2px 2px;
-    --background-alt-dark: radial-gradient(rgba(255, 255, 255, 0.16) .5px, transparent .5px) 0 0 / 2px 2px;
+    --background-alt-light: radial-gradient(rgba(0, 0, 0, 0.1) .5px, transparent .5px) 0 0 / 2px 2px;
+    --background-alt-dark: radial-gradient(rgba(255, 255, 255, 0.1) .5px, transparent .5px) 0 0 / 2px 2px;
 }
 
 body {
