@@ -4661,6 +4661,12 @@ body {
     height: 24px;
 }
 
+body.is-frameless.is-hidden-frameless:not(.qe-hide-breadcrumbs) .status-bar,
+body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
+    position: var(--status-bar-position);
+}
+
+
 /* tab */
 /* tab layout */
 
@@ -5373,12 +5379,8 @@ body {
 
 
 /* canvas hover effect*/
-@media (hover: hover) {
-    .canvas-node:hover {
-        outline-offset: 4px;
-        outline: 4px solid var(--background-modifier-border-hover);
-        border-radius: var(--radius-m);
-    }
+.canvas-node-container:hover {
+    border-color: var(--color-accent);
 }
 
 /* canvas hover effect*/
