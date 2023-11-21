@@ -2236,49 +2236,14 @@ settings:
         collapsed: ture
         level: 3
     - 
-        id: line-hover-indicator-disable
-        title: Disable hover line indicator
-        title.zh: 禁用 悬停行指示器
+        id: line-hover-indicator
+        title: Enable hover line indicator
+        title.zh: 启用 悬停行指示器
         type: class-toggle
     - 
 		id: hover-indicator-color
 		title: Customize indicator color
         title.zh: 自定义指示器的颜色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    - 
-        id: active-line-heading
-        title: Active line
-        title.zh: 行高亮
-        type: heading
-		collapsed: true
-        level: 3
-    - 
-        id: line-active-disable
-        title: Disable active line hightlight
-        title.zh: 禁用 行高亮
-        type: class-toggle
-    - 
-        id: line-active-bg-color
-        title: Active line background color
-        title.zh: 行高亮背景颜色
-        type: class-select
-        allowEmpty: false
-        default: line-active-bg-color-default
-        options:
-            -   label: default
-                value: line-active-bg-color-default
-            -   label: adapt to accent color
-                value: line-active-bg-color-accent
-            -   label:  customize
-                value: line-active-bg-color-customize
-    - 
-		id: line-active-bg-customize
-		title: Customize Active line background color
-        title.zh: 自定义行高亮背景颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -3513,7 +3478,7 @@ body.activated-file-tab-style-dark .setting-item[data-id=shadow-activated-file-d
 body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item[data-id=colorful-folder],
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
-body.line-hover-indicator-disable .setting-item[data-id=hover-indicator-color],
+body:not(.line-hover-indicator) .setting-item[data-id=hover-indicator-color],
 body.Ribbon-autohide .setting-item[data-id=icon-autohide] {
     display: none;
 }
@@ -6969,7 +6934,7 @@ body {
 
 /* ====== line emphasis ====== */
 /* ====== highlight ====== */
-
+/*
 .theme-dark {
     --line-active-bg: rgba(255, 255, 255, 0.04);
     --line-active-bg-customize: rgba(255, 255, 255, 0.04);
@@ -6980,23 +6945,31 @@ body {
     --line-active-bg-customize: rgba(0, 0, 0, 0.035);
 }
 
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container), .HyperMD-header) {
+body:not(.line-active-disable) .cm-lineWrapping>.cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container), .HyperMD-header) {
     background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
 }
 
-body:not(.line-active-disable).line-active-bg-color-accent .markdown-source-view .cm-scroller .cm-line.cm-active {
+body:not(.line-active-disable).line-active-bg-color-accent .cm-lineWrapping>.cm-line.cm-active {
     --line-active-bg: hsla(var(--interactive-accent-hsl), 0.08);
 }
 
-body:not(.line-active-disable).line-active-bg-color-customize .markdown-source-view .cm-scroller .cm-line.cm-active {
+body:not(.line-active-disable).line-active-bg-color-customize .cm-lineWrapping>.cm-line.cm-active {
     --line-active-bg: var(--line-active-bg-customize);
 }
 
-body .markdown-source-view .cm-scroller .cm-line:not(.HyperMD-codeblock) {
+.cm-lineWrapping>.cm-line:not(.HyperMD-codeblock) {
     padding-left: var(--size-4-1);
     padding-right: var(--size-4-1);
 }
+
+.cm-lineWrapping>.cm-table-widget .cm-line {
+    background-color: unset !important;
+    border-radius: unset !important;
+    padding-left: unset !important;
+    padding-right: unset !important;
+}
+*/
 
 /* ====== hover indicator ====== */
 
@@ -7006,15 +6979,15 @@ body {
     --hover-indicator-color: var(--color-accent);
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer)),
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -7026,17 +6999,17 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     opacity: 1;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"]:not(:has(.document-search-container)) .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }
 
 /* num */
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
     background: unset !important;
     opacity: 0 !important;
     position: absolute !important;
@@ -7051,61 +7024,61 @@ body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markd
     color: var(--hover-indicator-color);
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):hover::after,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):hover::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
     opacity: 1 !important;
 }
 
 /* code */
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer,
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock-end {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock-end {
     counter-reset: code-line;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
     counter-increment: code-line;
     content: counter(code-line) !important;
 }
 
 /* list */
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):after {
     content: "";
     text-indent: 0px !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-2::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-2::after {
     content: "2" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-3::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-3::after {
     content: "3" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-4::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-4::after {
     content: "4" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-5::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-5::after {
     content: "5" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-6::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-6::after {
     content: "6" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-7::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-7::after {
     content: "7" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-8::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-8::after {
     content: "8" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-9::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-9::after {
     content: "9" !important;
 }
 
-body:not(.line-hover-indicator-disable) .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-10::after {
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-10::after {
     content: "10" !important;
 }
 
@@ -7685,12 +7658,8 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 
 /* ======table ====== */
 body {
-    --table-header-background: transparent;
     --table-header-background-light: var(--background-alt-light);
     --table-header-background-dark: var(--background-alt-dark);
-    --table-header-background-hover: var(--background-modifier-hover);
-    --table-row-background-hover: var(--background-modifier-hover);
-    --table-header-weight: var(--font-semibold);
     --table-width: 88cqw;
 }
 
@@ -7698,26 +7667,8 @@ body {
     background: var(--table-header-background-light);
 }
 
-@media (hover: hover) {
-    .theme-light .markdown-rendered thead tr:hover {
-        background: var(--table-header-background-light);
-    }
-}
-
 .theme-dark .markdown-rendered thead tr {
     background: var(--table-header-background-dark);
-}
-
-@media (hover: hover) {
-    .theme-dark .markdown-rendered thead tr:hover {
-        background: var(--table-header-background-dark);
-    }
-}
-
-:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,
-:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):hover {
-    overflow: hidden;
-    resize: both !important;
 }
 
 body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source-view.mod-cm6.is-live-preview) table {
