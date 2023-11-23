@@ -6552,7 +6552,7 @@ body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h1-indicator-color) 30%, transparent 70%);
 }
 
@@ -6616,7 +6616,7 @@ body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h2-indicator-color) 30%, transparent 70%);
 }
 
@@ -6681,7 +6681,7 @@ body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h3-indicator-color) 30%, transparent 70%);
 }
 
@@ -6745,7 +6745,7 @@ body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h4-indicator-color) 30%, transparent 70%);
 }
 
@@ -6810,7 +6810,7 @@ body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h5-indicator-color) 30%, transparent 70%);
 }
 
@@ -6876,7 +6876,7 @@ body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .H
     width: 100%;
     right: 0px;
     opacity: 0.5;
-    bottom: calc(var(--font-text-size) * var(--line-height-normal) * 0.2 - var(--size-2-1));
+    bottom: 0;
     background-image: linear-gradient(to left, var(--h6-indicator-color) 30%, transparent 70%);
 }
 
@@ -7853,6 +7853,10 @@ body {
     padding: 7px;
     height: 32px;
     width: 32px;
+}
+
+.workspace-leaf.has-pane-relief-label .view-header .view-header-nav-buttons .clickable-icon {
+    width: unset;
 }
 
 .mod-left-split .workspace-tab-header .workspace-tab-header-inner,
