@@ -20,7 +20,8 @@
 
 + [Obsidian-default-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light.json)
 ![screenshot](img/Obsidian-default-light.png)
-  + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
+
++ [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
 ![screenshot](img/Obsidian-default-light-alt.png)
 
 + [Eye-friendly](https://github.com/Akifyss/obsidian-border/blob/main/presets/Eye-friendly.json)
@@ -32,8 +33,8 @@
 + [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json)
 ![screenshot](img/Fresh.png)
 
-  + [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
-  ![screenshot](img/Mint.png)
++ [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
+![screenshot](img/Mint.png)
 
 + [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
 ![screenshot](img/Paper-like.png)
@@ -44,8 +45,8 @@
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json)
 ![screenshot](img/Boundary.png)
 
-  + [Silver](https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json)
-  ![screenshot](img/Silver.gif)
++ [Silver](https://github.com/Akifyss/obsidian-border/blob/main/presets/Silver.json)
+![screenshot](img/Silver.gif)
 
 + [Neumorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Neumorphism.json)
 ![screenshot](img/Neumorphism.png)
@@ -60,7 +61,8 @@
 
 + [Obsidian-default-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark.json)
 ![screenshot](img/Obsidian-default-dark.png)
-  + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
+
++ [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
 ![screenshot](img/Obsidian-default-dark-alt.png)
 
 + [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
@@ -85,25 +87,25 @@
 + [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json)
 ![screenshot](img/Sunset.png)
 
-  + [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
-  ![screenshot](img/Lightup.png)
++ [Lightup](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup.json)
+![screenshot](img/Lightup.png)
 
-  + [Lightup-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup-alt.json)
-  ![screenshot](img/Lightup-alt.png)
++ [Lightup-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightup-alt.json)
+![screenshot](img/Lightup-alt.png)
 
 + [Lightdown-green](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-green.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
 ![screenshot](img/Lightdown-green.png)
 
-  + [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
-  ![screenshot](img/Lightdown-pink.png)
++ [Lightdown-pink](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-pink.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
+![screenshot](img/Lightdown-pink.png)
 
-  + [Lightdown-blue](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-blue.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
-  ![screenshot](img/Lightdown-blue.png)
++ [Lightdown-blue](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-blue.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
+![screenshot](img/Lightdown-blue.png)
 
-  + [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
-  ![screenshot](img/Lightdown-orange.png)
++ [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
+![screenshot](img/Lightdown-orange.png)
 
-  + [Justblack](https://github.com/Akifyss/obsidian-border/blob/main/presets/Justblack.json) ![screenshot](img/JustBlack.png)
++ [Justblack](https://github.com/Akifyss/obsidian-border/blob/main/presets/Justblack.json) ![screenshot](img/JustBlack.png)
 
 ## Callout style
 
