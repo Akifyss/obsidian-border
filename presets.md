@@ -103,6 +103,8 @@
   + [Lightdown-orange](https://github.com/Akifyss/obsidian-border/blob/main/presets/Lightdown-orange.json) ([wallpaper source](https://twitter.com/JimDesignsCo/status/1634618698353848321))
   ![screenshot](img/Lightdown-orange.png)
 
+  + [Justblack](https://github.com/Akifyss/obsidian-border/blob/main/presets/Justblack.json) ![screenshot](img/Justblack.png)
+
 ## Callout style
 
 + [Callout-alt-1](https://github.com/Akifyss/obsidian-border/blob/main/presets/Callout/Callout-alt-1.json)<br>
