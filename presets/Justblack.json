@@ -14,7 +14,7 @@
     "Appearance-dark@@background-secondary@@dark": "#000000",
     "Appearance-dark@@background-tertiary@@dark": "#000000",
     "Appearance-dark@@text-normal@@dark": "#FFFFFF",
-    "Appearance-dark@@text-muted@@dark": "#9F9F9F",
+    "Appearance-dark@@text-muted@@dark": "#FFFFFF",
     "Appearance-dark@@text-faint@@dark": "#808080",
     "Appearance-dark@@interactive-normal@@dark": "#454545",
     "Appearance-dark@@interactive-hover@@dark": "#4D4D4D",
