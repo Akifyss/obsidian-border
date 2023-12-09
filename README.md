@@ -40,8 +40,8 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 (**Presets Usage**: Copy code from link, paste it into style settings and restart obsidian.)
 
-+ [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json) (Light Mode)
-![screenshot](img/Fresh.png)
++ [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json) (Light Mode)
+![screenshot](img/Obsidian-default-light-alt.png)
 
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json) (Light Mode)
 ![screenshot](img/Boundary.png)

@@ -4700,6 +4700,10 @@ body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod
     cursor: var(--cursor);
 }
 
+:is(.theme-dark.mod-left-split-background-transparent-dark, .theme-light.mod-left-split-background-transparent-light) .is-sidedock-collapsed .mod-top-left-space .workspace-tab-header-container {
+    visibility: hidden;
+}
+
 /* tab style */
 body {
     --border-radius-activated-tab-header-light: 6px;

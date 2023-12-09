@@ -40,8 +40,8 @@
 
 （**预设用法**: 复制链接中的代码, 粘贴进style settings中，然后重启obsidian。）
 
-+ [Fresh](https://github.com/Akifyss/obsidian-border/blob/main/presets/Fresh.json) （亮色模式）
-![screenshot](img/Fresh.png)
++ [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json) （亮色模式）
+![screenshot](img/Obsidian-default-light-alt.png)
 
 + [Boundary](https://github.com/Akifyss/obsidian-border/blob/main/presets/Boundary.json) （亮色模式）
 ![screenshot](img/Boundary.png)
