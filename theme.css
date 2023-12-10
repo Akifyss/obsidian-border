@@ -4635,6 +4635,10 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 /* tab */
 /* tab layout */
 
+.mod-windows,
+.mod-linux {
+    --frame-right-space: 110px;
+}
 
 .workspace-tab-header::before,
 .workspace-tab-header::after {
