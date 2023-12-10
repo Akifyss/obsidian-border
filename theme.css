@@ -4364,7 +4364,7 @@ body:not(.is-mobile).is-popout-window .workspace::before {
 }
 
 body:not(.is-mobile) .workspace-ribbon {
-    padding: 6px 4px 0px;
+    padding: 10px 4px 0px;
 }
 
 .workspace-tabs {
