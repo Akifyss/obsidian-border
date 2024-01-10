@@ -1,0 +1,19 @@
+{
+  "Appearance-dark@@card-layout-open-dark": true,
+  "Appearance-dark@@accent-dark": "#8aa2e5",
+  "Appearance-dark@@accent-color-override-dark": true,
+  "Appearance-dark@@mod-left-split-background-select-dark": "mod-left-split-background-customize-dark",
+  "Appearance-dark@@background-mod-left-split-dark": "#3f4350",
+  "Appearance-dark@@mod-right-split-background-select-dark": "mod-right-split-background-customize-dark",
+  "Appearance-dark@@background-mod-right-split-dark": "#3f4350",
+  "Appearance-dark@@mod-root-split-background-select-dark": "mod-root-split-background-customize-dark",
+  "Appearance-dark@@background-mod-root-split-dark": "#3f4350",
+  "Appearance-dark@@background-underlying-select-dark": "background-underlying-Color-dark",
+  "Appearance-dark@@background-underlying-dark": "#3f4350",
+  "Appearance-dark@@card-shadow-dark": "4px 4px 6px 0px rgba(41, 43, 53, .5) inset, -4px -4px 6px 0px rgba(255,255,255,.05) inset",
+  "Appearance-dark@@background-activated-tab-header-dark": "#3f4350",
+  "Appearance-dark@@shadow-activated-tab-header-dark": "4px 4px 6px 0px rgba(41, 43, 53, .5) inset, -4px -4px 6px 0px rgba(255,255,255,.05) inset",
+  "Appearance-dark@@indicator-remove-dark": true,
+  "Appearance-dark@@Active-states-file-explorer-select-dark": "activated-file-tab-style-dark",
+  "Appearance-dark@@mix-blend-mode-on-border-dark": "\"\""
+}

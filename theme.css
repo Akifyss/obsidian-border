@@ -8218,7 +8218,11 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 .workspace-leaf-content[data-type=calendar] .view-content {
-    padding: 8px 0 0 0;
+    padding: 8px 0 0;
+}
+
+#calendar-container {
+    padding: 0 var(--size-4-4);
 }
 
 /*surfing*/
