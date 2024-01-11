@@ -4658,8 +4658,8 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
     padding-right: 0px;
 }
 
-body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod-right,
-body:not(.is-hidden-frameless):not(.is-popout-window).hider-sidebar-buttons .mod-root .workspace-tab-header-tab-list {
+body:not(.is-hidden-frameless):not(.is-popout-window):not(.is-mobile) .sidebar-toggle-button.mod-right,
+body:not(.is-hidden-frameless):not(.is-popout-window):not(.is-mobile).hider-sidebar-buttons .mod-root .workspace-tab-header-tab-list {
     margin-right: -8px;
 }
 
