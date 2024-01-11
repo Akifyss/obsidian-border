@@ -4658,7 +4658,8 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
     padding-right: 0px;
 }
 
-body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod-right {
+body:not(.is-hidden-frameless):not(.is-popout-window) .sidebar-toggle-button.mod-right,
+body:not(.is-hidden-frameless):not(.is-popout-window).hider-sidebar-buttons .mod-root .workspace-tab-header-tab-list {
     margin-right: -8px;
 }
 
@@ -5038,6 +5039,15 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-
 body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
 body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
     transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
+}
+
+/* hider plugin*/
+.hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left {
+    display: unset;
+}
+
+.hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left>.clickable-icon {
+    display: none;
 }
 
 /*nav header autohide*/
