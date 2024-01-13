@@ -2742,6 +2742,22 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: inline-code-background-light
+        title: Customize inline code background (light mode)
+        title.zh: 自定义 内联代码背景（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
+        id: inline-code-background-dark
+        title: Customize inline code background (dark mode)
+        title.zh: 自定义 内联代码背景（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
         id: Links
         title: Links
         title.zh: 链接
@@ -3058,11 +3074,23 @@ settings:
         type: class-toggle
     - 
         id: Code-heading
-        title: Code
-        title.zh: 代码
+        title: Codeblock
+        title.zh: 代码块
         type: heading
         collapsed: true
         level: 3
+    - 
+        id: codeblock-style-select
+        title: Codeblock theme
+        title.zh: 代码块主题
+        type: class-select
+        allowEmpty: false
+        default: codeblock-style-customize
+        options:
+            -   label: Customize
+                value: codeblock-style-customize
+            -   label: Dracula
+                value: codeblock-style-dracula
     - 
         id: code-background-light
         title: Customize code background (light mode)
@@ -3079,6 +3107,105 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
+    - 
+		id: code-normal
+		title: code-normal
+        title.zh: code-normal
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: code-comment
+		title: code-comment
+        title.zh: code-comment
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-function
+		title: code-function
+        title.zh: code-function
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-important
+		title: code-important
+        title.zh: code-important
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-keyword
+		title: code-keyword
+        title.zh: code-keyword
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-operator
+		title: code-operator
+        title.zh: code-operator
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-property
+		title: code-property
+        title.zh: code-property
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-punctuation
+		title: code-punctuation
+        title.zh: code-punctuation
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-string
+		title: code-string
+        title.zh: code-string
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-tag
+		title: code-tag
+        title.zh: code-tag
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: code-value
+		title: code-value
+        title.zh: code-value
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
     - 
         id: Blockquote-heading
         title: Blockquote
@@ -3479,7 +3606,8 @@ body:not(.table-width-customized) .setting-item[data-id=table-width],
 body.file-icon-remove .setting-item[data-id=colorful-folder],
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
 body:not(.line-hover-indicator) .setting-item[data-id=hover-indicator-color],
-body.Ribbon-autohide .setting-item[data-id=icon-autohide] {
+body.Ribbon-autohide .setting-item[data-id=icon-autohide],
+body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]) {
     display: none;
 }
 
@@ -5925,17 +6053,21 @@ body {
     color: var(--nav-item-color);
 }
 
-.vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
+.vault-name-fixed:not(.hider-vault) .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
     position: fixed;
     transform: translateY(-32px);
 }
 
-.vault-name-fixed .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+.vault-name-fixed:not(.hider-vault) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
     margin-top: 32px;
 }
 
 .vault-name-hide .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
     display: none;
+}
+
+.hider-vault .nav-folder.mod-root>.nav-folder-title::before {
+    display: none !important;
 }
 
 /*file tag*/
@@ -7585,9 +7717,17 @@ body {
     border-bottom-right-radius: 0 !important;
 }
 
+/*kbd*/
+kbd {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-muted);
+}
+
 /*inline code*/
 body {
     --inline-code-normal: var(--color-pink);
+    --inline-code-background-light: var(--background-alt-light);
+    --inline-code-background-dark: var(--background-alt-dark);
 }
 
 .markdown-rendered :not(pre)>code,
@@ -7595,34 +7735,16 @@ body {
     color: var(--inline-code-normal)
 }
 
-/*code*/
-
-body {
-    --code-background: #ffffff00;
-    --code-background-light: var(--background-alt-light);
-    --code-background-dark: var(--background-alt-dark);
-}
-
-.theme-light kbd,
 .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .theme-light .cm-s-obsidian span.cm-inline-code,
-.theme-light :not(pre)>code,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-light .markdown-rendered pre {
-    background: var(--code-background-light);
+.theme-light :not(pre)>code {
+    background: var(--inline-code-background-light);
 }
 
-.theme-dark kbd,
 .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .theme-dark .cm-s-obsidian span.cm-inline-code,
-.theme-dark :not(pre)>code,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-dark .markdown-rendered pre {
-    background: var(--code-background-dark);
+.theme-dark :not(pre)>code {
+    background: var(--inline-code-background-dark);
 }
 
 .theme-light .cm-s-obsidian span.cm-inline-code span.cm-inline-code.cm-hmd-indented-code,
@@ -7630,18 +7752,64 @@ body {
     background: unset;
 }
 
-@media (hover: hover) {
-    .markdown-rendered button.copy-code-button:hover {
-        background-color: var(--background-modifier-hover);
-    }
+/*codeblock*/
+body {
+    /* Code */
+    --code-white-space: pre-wrap;
+    --code-radius: var(--radius-s);
+    --code-size: var(--font-smaller);
+    --code-background: #ffffff00;
+    --code-background-light: var(--background-alt-light);
+    --code-background-dark: var(--background-alt-dark);
+    --code-normal: var(--text-muted);
+    --code-comment: var(--text-faint);
+    --code-function: var(--color-yellow);
+    --code-important: var(--color-orange);
+    --code-keyword: var(--color-pink);
+    --code-operator: var(--color-red);
+    --code-property: var(--color-cyan);
+    --code-punctuation: var(--text-muted);
+    --code-string: var(--color-green);
+    --code-tag: var(--color-red);
+    --code-value: var(--color-purple);
 }
 
-@media (hover: hover) {
-    .markdown-source-view.mod-cm6 .code-block-flair:hover {
-        background-color: var(--background-modifier-hover);
-    }
+.codeblock-style-dracula {
+    --code-background-light: #282A36;
+    --code-background-dark: #282A36;
+    --code-normal: #f8f8f2;
+    --code-comment: #6272a4;
+    --code-function: #f1fa8c;
+    --code-important: #ffb86c;
+    --code-keyword: #ff79c6;
+    --code-operator: #ff5555;
+    --code-property: #8be9fd;
+    --code-punctuation: #f8f8f2;
+    --code-string: #50fa7b;
+    --code-tag: #ff5555;
+    --code-value: #bd93f9;
 }
 
+.markdown-source-view.mod-cm6 .code-block-flair,
+.markdown-rendered button.copy-code-button {
+    color: var(--code-normal);
+}
+
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
+.theme-light .markdown-rendered pre {
+    background: var(--code-background-light);
+}
+
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
+.theme-dark .markdown-rendered pre {
+    background: var(--code-background-dark);
+}
+
+/*
 body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
     border-radius: 0px;
 }
@@ -7672,6 +7840,7 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 .markdown-rendered pre {
     border: 1px dashed var(--background-modifier-border);
 }
+*/
 
 /* ======table ====== */
 body {
