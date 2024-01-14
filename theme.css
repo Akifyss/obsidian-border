@@ -3,7 +3,7 @@
 name: Theme Info
 id: Info
 settings:
-    - 
+    -
         id: Extras-info
         description: "🎨 Appearance presets: [get presets here](https://github.com/Akifyss/obsidian-border/blob/main/presets.md), click on “Import” in the top right corner and restart obsidian. <br> <br> 📭 If you have problems, please submit [issues](https://github.com/Akifyss/obsidian-border/issues) or [discuss](https://github.com/Akifyss/obsidian-border/discussions) on Github<br> <br> 🔼 View recent updates: [Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
         description.zh: "🎨 外观预设：[在此获取预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md)，点击右上角“Import”导入预设，重启obsidian来生效. <br> <br> 📭 如果遇到问题，可以在Github上 [提交issues](https://github.com/Akifyss/obsidian-border/issues) 或[讨论](https://github.com/Akifyss/obsidian-border/discussions)<br> <br> 🔼 查看最近更新：[Github Commit History](https://github.com/Akifyss/obsidian-border/commits/main)"
@@ -17,68 +17,68 @@ settings:
 name: Components
 id: Components
 settings:
-    - 
+    -
         id: autohide
         title: Auto hide
         title.zh: 自动隐藏
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: tab-autohide
         title: Auto hide tab bar
         title.zh: 自动隐藏 tab栏
         description: Mac users can adjust the position of the traffic light using the 'Electron Window Tweaker' plugin
         description.zh: Mac 用户可以使用 “Electron Window Tweaker” 插件来调整左上角红绿灯的位置
         type: class-toggle
-    - 
+    -
         id: status-bar-autohide
         title: Auto hide bottom status bar
         title.zh: 自动隐藏 底部状态栏
         type: class-toggle
-    - 
+    -
         id: Ribbon-autohide
         title: Auto hide left ribbon menu
         title.zh: 自动隐藏 左侧功能区菜单
         type: class-toggle
-    - 
+    -
         id: icon-autohide
         title: Auto hide 'help' & 'open another vault' icons in left ribbon menu
         title.zh: 自动隐藏 左侧功能区菜单中的“帮助”&“打开其他仓库”图标
         type: class-toggle
-    - 
+    -
         id: nav-header-autohide
         title: Auto hide header icons in sidepane
         title.zh: 自动隐藏 侧边面板中的头部按钮
         type: class-toggle
-    - 
+    -
         id: tab-title-bar-autohide
         title: Auto hide tab title bar
         title.zh: 自动隐藏 标签页标题栏
         type: class-toggle
-    - 
+    -
         id: file-explorer
         title: File explorer
         title.zh: 文件列表
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: CTA-BTN-enable
         title: Enable bigger "New note" button
         title.zh: 启用 更大的“New Note”按钮
         type: class-toggle
-    - 
+    -
         id: file-names-untrim
         title: Untrim file names
         title.zh: 不修剪文件名
         type: class-toggle
-    - 
+    -
         id: folder-font-bold
         title: Bold folder font
         title.zh: 加粗文件夹字体
         type: class-toggle
-    - 
+    -
         id: vault-name-display-select
         title: Vault name display
         title.zh: 仓库名显示
@@ -92,44 +92,44 @@ settings:
                 value: vault-name-fixed
             -   label: hide
                 value: vault-name-hide
-    - 
+    -
         id: file-explorer-icon
         title: icon
         title.zh: 图标
         type: heading
         collapsed: false
         level: 4
-    - 
+    -
         id: file-icon-remove
         title: Remove custom icon
         title.zh: 移除 自定义图标
         type: class-toggle
-    - 
+    -
         id: colorful-folder
         title: Enable colorful folder icon
         title.zh: 启用 多彩文件夹图标
         type: class-toggle
-    - 
+    -
         id: outline-panel
         title: Outline Panel
         title.zh: 大纲面板
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: outline-enhanced
         title: Enable enhanced outline style
         title.zh: 启用 增强的大纲样式
         description: from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536
         type: class-toggle
-    - 
+    -
         id: New-tab
         title: New tab
         title.zh: 新标签页
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: new-tab-btn-select
         title: New tab buttons
         title.zh: 新标签页 按钮
@@ -141,7 +141,7 @@ settings:
                 value: new-tab-text-btn-restore
             -   label: default
                 value: new-tab-btn-default
-    - 
+    -
         id: new-tab-image-select
         title: New tab image
         title.zh: 新标签页 图像
@@ -157,7 +157,7 @@ settings:
                 value: new-tab-image-old
             -   label: customize image
                 value: new-tab-image-customize
-    - 
+    -
         id: new-tab-image
         title: customize new tab image
         title.zh: 自定义新标签页图像
@@ -165,14 +165,14 @@ settings:
         description: Enter the url of the image into quotes
         description.zh: 向引号内输入图像的url
         default: url(" ")
-    - 
+    -
         id: Graph-view
         title: Graph view
         title.zh: 关系图谱
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
 		id: graph-text
 		title: graph-text color
 		type: variable-themed-color
@@ -180,7 +180,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-line
 		title: graph-line color
 		type: variable-themed-color
@@ -188,7 +188,7 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-node
 		title: graph-node color
 		type: variable-themed-color
@@ -196,7 +196,7 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-node-unresolved
 		title: graph-node-unresolved color
 		type: variable-themed-color
@@ -204,7 +204,7 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-node-focused
 		title: graph-node-focused color
 		type: variable-themed-color
@@ -212,7 +212,7 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-node-tag
 		title: graph-node-tag color
 		type: variable-themed-color
@@ -220,7 +220,7 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: graph-node-attachment
 		title: graph-node-attachment color
 		type: variable-themed-color
@@ -228,24 +228,24 @@ settings:
         format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Canvas
         title: Canvas
         title.zh: 白板
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: immersive-canvas
         title: immersive canvas
         title.zh: 沉浸式白板
         type: class-toggle
-    - 
+    -
         id: media-embed-card-border-off
         title: Remove border effect of media card.
         title.zh: 移除媒体卡片的边框效果
         type: class-toggle
-    - 
+    -
 		id: canvas-background
 		title: Customize canvas background color
         title.zh: 自定义 canvas 背景色
@@ -254,7 +254,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: canvas-card-border-width
 		title: canvas card border width
         title.zh: canvas 卡片边框大小
@@ -262,7 +262,7 @@ settings:
         description: Input any CSS border-width value
         description.zh: 输入任意 CSS border-width 值
         default: 2px
-    - 
+    -
 		id: canvas-card-border-style
 		title: canvas card border style
         title.zh: canvas 卡片边框风格
@@ -270,7 +270,7 @@ settings:
         description: Input any CSS border-style value
         description.zh: 输入任意 CSS border-style 值
         default: solid
-    - 
+    -
         id: canvas-card-menu
         title: canvas card menu position
         title.zh: canvas 卡片菜单位置
@@ -284,19 +284,19 @@ settings:
                 value: canvas-card-menu-left
             -   label: right
                 value: canvas-card-menu-right
-    - 
+    -
         id: animation
         title: Animation
         title.zh: 动效
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: extra-anim-remove
         title: Remove additional added animation
         title.zh: 移除 额外增加的动效
         type: class-toggle
-    - 
+    -
         id: anim-speed
         title: Animation speed
         title.zh: 动效速度
@@ -305,24 +305,24 @@ settings:
         min: 0.5
         max: 2
         step: 0.05
-    - 
+    -
         id: Miscellaneous
         title: Miscellaneous
         title.zh: 杂项
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: setting-item-title-icon-remove
         title: Remove setting item title icon
         title.zh: 移除 设置项标题图标
         type: class-toggle
-    - 
+    -
         id: scrollbar-hide
         title: Hide scrollbar
         title.zh: 隐藏 滚动条
         type: class-toggle
-    - 
+    -
         id: restored-scrollbars
         title: Restore scrollbar style
         title.zh: 还原 滚动条的样式
@@ -335,18 +335,18 @@ settings:
 name: Appearance (light mode)
 id: Appearance-light
 settings:
-    - 
+    -
         id: Presets-info-light
         description: "[Presets (light)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
         description.zh: "[预设（亮色）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | 导入前，推荐先将此条目重设为默认 / 移除预设↗️ "
         type: info-text
         markdown: true
-    - 
+    -
         id: card-layout-open-light
         title: Enable card layout(light mode)
         title.zh: 启用 卡片式布局（亮色模式）
         type: class-toggle
-    - 
+    -
         id: theme-light-style-select
         title: Light mode style
         title.zh: 亮色模式风格
@@ -358,21 +358,21 @@ settings:
                 value: theme-light-background-default
             -   label: colored
                 value: theme-light-background-adapt
-    - 
+    -
         id: Color-light
         title: Color
         title.zh: 色彩
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Accent-color-light
         title: Accent color
         title.zh: 主题色
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
         id: accent-light
         title: Accent color(light mode)
         title.zh: 主题色（亮色模式）
@@ -382,19 +382,19 @@ settings:
         format: hsl-split
         opacity: false
         default: '#5a6ded'
-    - 
+    -
         id: accent-color-override-light
         title: Override accent color setting in "Settings-Appearance" menu(light mode)
         title.zh: 覆写 "设置-外观 "菜单中的强调色设置（亮色模式）
         type: class-toggle
-    - 
+    -
         id: accent-advanced-light
         title: Advanced
         title.zh: 高级
         type: heading
         collapsed: true
         level: 5
-    - 
+    -
 		id: color-accent-hsl-light
 		title: color-accent-hsl
         title.zh: color-accent-hsl
@@ -402,7 +402,7 @@ settings:
 		format: hsl-values
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-light
 		title: color-accent
         title.zh: color-accent
@@ -410,7 +410,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-1-light
 		title: color-accent-1
         title.zh: color-accent-1
@@ -418,7 +418,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-2-light
 		title: color-accent-2
         title.zh: color-accent-2
@@ -426,7 +426,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-3-light
 		title: color-accent-3
         title.zh: color-accent-3
@@ -434,84 +434,84 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
         id: Extended-colors-light
         title: Extended colors
         title.zh: 拓展色
         type: heading
         collapsed: true
         level: 4
-	- 
+	-
 		id: color-red-rgb
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#fe7968'
 		default-dark: '#ff8a78'
-	- 
+	-
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#f39c12'
 		default-dark: '#fabe58'
-	- 
+	-
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#e5c700'
 		default-dark: '#ffec8b'
-	- 
+	-
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#78BA7E'
 		default-dark: '#87d37c'
-	- 
+	-
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#36d7b7'
 		default-dark: '#86e2d5'
-	- 
+	-
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#038aff'
 		default-dark: '#89c4f4'
-	- 
+	-
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#9455ec'
 		default-dark: '#c69eff'
-	- 
+	-
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#f23fa5'
 		default-dark: '#f2b6c1'
-    - 
+    -
         id: Background-light
         title: Background
         title.zh: 背景
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: mod-left-split-background-header-light
         title: Left sidepane background
         title.zh: 左侧面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-left-split-background-select-light
         title: Left sidepane background(light mode)
         title.zh: 左侧面板背景（亮色模式）
@@ -529,7 +529,7 @@ settings:
                 value: mod-left-split-background-customize-light
             -   label: customize CSS
                 value: mod-left-split-background-CSS-light
-    - 
+    -
 		id: background-mod-left-split-light
 		title: Customize left sidepane background color (light mode)
         title.zh: 自定义 左侧面板 背景色（亮色模式）
@@ -541,7 +541,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-left-CSS-light
         title: Left sidepane background (light mode)
         title.zh: 左侧面板background（亮色模式）
@@ -549,7 +549,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-left-CSS-blend-mode-light
         title: Left sidepane background-blend-mode (light mode)
         title.zh: 左侧面板background-blend-mode（亮色模式）
@@ -557,7 +557,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-left-CSS-backdrop-filter-light
         title: Left sidepane backdrop-filter (light mode)
         title.zh: 左侧面板backdrop-filter（亮色模式）
@@ -565,14 +565,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: mod-right-split-background-header-light
         title: Right sidepane background
         title.zh: 右侧面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-right-split-background-select-light
         title: Right sidepane background (light mode)
         title.zh: 右侧面板背景（亮色模式）
@@ -590,7 +590,7 @@ settings:
                 value: mod-right-split-background-customize-light
             -   label: customize CSS
                 value: mod-right-split-background-CSS-light
-    - 
+    -
 		id: background-mod-right-split-light
 		title: Customize right sidepane background color(light mode)
         title.zh: 自定义 右侧面板 背景色（亮色模式）
@@ -602,7 +602,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-right-CSS-light
         title: Right sidepane background (light mode)
         title.zh: 右侧面板background（亮色模式）
@@ -610,7 +610,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-right-CSS-blend-mode-light
         title: Right sidepane background-blend-mode (light mode)
         title.zh: 右侧面板background-blend-mode（亮色模式）
@@ -618,7 +618,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-right-CSS-backdrop-filter-light
         title: Right sidepane backdrop-filter (light mode)
         title.zh: 右侧面板backdrop-filter（亮色模式）
@@ -626,14 +626,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: mod-root-split-background-header-light
         title: Middle pane background
         title.zh: 中间面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-root-split-background-select-light
         title: Middle pane background (light mode)
         title.zh: 中间面板背景（亮色模式）
@@ -651,7 +651,7 @@ settings:
                 value: mod-root-split-background-customize-light
             -   label: customize CSS
                 value: mod-root-split-background-CSS-light
-    - 
+    -
 		id: background-mod-root-split-light
 		title: Customize Middle pane background color(light mode)
         title.zh: 自定义 中间面板 背景色（亮色模式）
@@ -663,7 +663,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-root-CSS-light
         title: Middle pane background (light mode)
         title.zh: 中间面板background（亮色模式）
@@ -671,7 +671,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-root-CSS-blend-mode-light
         title: Middle pane background-blend-mode (light mode)
         title.zh: 中间面板background-blend-mode（亮色模式）
@@ -679,7 +679,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-root-CSS-backdrop-filter-light
         title: Middle pane backdrop-filter (light mode)
         title.zh: 中间面板backdrop-filter（亮色模式）
@@ -687,14 +687,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: underlying-background-header-light
         title: Underlying background
         title.zh: 底层背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: background-underlying-select-light
         title: underlying background(light mode)
         title.zh: 底层背景（亮色模式）
@@ -712,7 +712,7 @@ settings:
                 value: background-underlying-Color-light
             -   label: customize CSS
                 value: background-underlying-CSS-light
-    - 
+    -
 		id: background-underlying-light
 		title: Customize underlying background color(light mode)
         title.zh: 自定义 底层背景色（亮色模式）
@@ -724,7 +724,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-underlying-CSS-light
         title: underlying background (light mode)
         title.zh: 底层background（亮色模式）
@@ -732,7 +732,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-underlying-CSS-blend-mode-light
         title: underlying background-blend-mode (light mode)
         title.zh: 底层background-blend-mode（亮色模式）
@@ -740,7 +740,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: overlay, color-burn
-    - 
+    -
         id: underlying-foreground-header-light
         title: Underlying foreground
         title.zh: 底层前景
@@ -749,7 +749,7 @@ settings:
         type: heading
         collapsed: ture
         level: 5
-    - 
+    -
 		id: on-border-light
         title: underlying foreground color(light mode)
         title.zh: 底层前景色（亮色模式）
@@ -763,7 +763,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: mix-blend-mode-on-border-light
         title: mix blend mode of underlying foreground(light mode)
         title.zh: 底层前景的混合模式（亮色模式）
@@ -771,14 +771,14 @@ settings:
         description.zh: 输入任意 CSS mix-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: Global-background-header-light
         title: Global background
         title.zh: 全局背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
 		id: background-primary
 		title: background-primary(light mode)
         title.zh: background-primary（亮色模式）
@@ -787,7 +787,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-primary-alt
 		title: background-primary-alt(light mode)
         title.zh: background-primary-alt（亮色模式）
@@ -796,7 +796,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-secondary
 		title: background-secondary(light mode)
         title.zh: background-secondary（亮色模式）
@@ -805,7 +805,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-secondary-alt
 		title: background-secondary-alt(light mode)
         title.zh: background-secondary-alt（亮色模式）
@@ -814,7 +814,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-tertiary
 		title: background-tertiary(light mode)
         title.zh: background-tertiary（亮色模式）
@@ -823,7 +823,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: workspace-background-translucent
 		title: workspace-background-translucent(light mode)
         title.zh: workspace-background-translucent（亮色模式）
@@ -832,7 +832,7 @@ settings:
 		format: hsl
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-hover
 		title: background-modifier-hover(light mode)
         title.zh: background-modifier-hover（亮色模式）
@@ -841,7 +841,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-active-hover
 		title: background-modifier-active-hover(light mode)
         title.zh: background-modifier-active-hover（亮色模式）
@@ -850,7 +850,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border
 		title: background-modifier-border(light mode)
         title.zh: background-modifier-border（亮色模式）
@@ -859,7 +859,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border-hover
 		title: background-modifier-border-hover(light mode)
         title.zh: background-modifier-border-hover（亮色模式）
@@ -868,7 +868,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border-focus
 		title: background-modifier-border-focus(light mode)
         title.zh: background-modifier-border-focus（亮色模式）
@@ -877,21 +877,21 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Foreground-header-light
         title: Foreground
         title.zh: 前景
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: text-color-light
         title: Text & icon color
         title.zh: 文本 & 图标色
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: text-normal
 		title: text-normal(light mode)
         title.zh: text-normal（亮色模式）
@@ -899,7 +899,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-muted
 		title: text-muted(light mode)
         title.zh: text-muted（亮色模式）
@@ -907,7 +907,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-faint
 		title: text-faint(light mode)
         title.zh: text-faint（亮色模式）
@@ -915,7 +915,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-accent
 		title: text-accent(light mode)
         title.zh: text-accent（亮色模式）
@@ -923,7 +923,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-accent-hover
 		title: text-accent-hover(light mode)
         title.zh: text-accent-hover（亮色模式）
@@ -931,7 +931,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-on-accent
 		title: text-on-accent(light mode)
         title.zh: text-on-accent（亮色模式）
@@ -939,7 +939,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-on-accent-inverted
 		title: text-on-accent-inverted(light mode)
         title.zh: text-on-accent-inverted（亮色模式）
@@ -947,14 +947,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-color-light
         title: Interactive color
         title.zh: 交互色
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: interactive-normal
         title: interactive-normal(light mode)
         title.zh: interactive-normal（亮色模式）
@@ -962,7 +962,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-hover
         title: interactive-hover(light mode)
         title.zh: interactive-hover（亮色模式）
@@ -970,7 +970,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent
 		title: interactive-accent(light mode)
 		title.zh: interactive-accent（亮色模式）
@@ -978,7 +978,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent-hsl
 		title: interactive-accent-hsl(light mode)
 		title.zh: interactive-accent-hsl（亮色模式）
@@ -986,7 +986,7 @@ settings:
 		format: hsl-values
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent-hover
 		title: interactive-accent-hover(light mode)
 		title.zh: interactive-accent-hover（亮色模式）
@@ -994,14 +994,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Card-light
         title: Card
         title.zh: 卡片
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: card-border-radius-light
         title: Custom card border radius (light mode)
         title.zh: 自定义 卡片的圆角大小（亮色模式）
@@ -1009,7 +1009,7 @@ settings:
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: 8px
-    - 
+    -
         id: card-shadow-light
         title: Custom card shadow (light mode)
         title.zh: 自定义 卡片阴影（亮色模式）
@@ -1017,21 +1017,21 @@ settings:
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Active-states-light
         title: Active states
         title.zh: 激活态
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Active-states-Tabs-light
         title: Active states(Tabs)
         title.zh: 激活态（Tabs）
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
 		id: color-activated-tab-header-light
 		title: activated Tab header color(light mode)
         title.zh: 已激活Tab的标头颜色（亮色模式）
@@ -1043,12 +1043,12 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: color-to-tab-icon-light
         title: Apply custom color to the "close" icon(light mode)
         title.zh: 将自定义颜色应用于“关闭”图标（亮色模式）
         type: class-toggle
-    - 
+    -
         id: border-radius-activated-tab-header-light
         title: activated Tab header border radius(light mode)
         title.zh: 已激活Tab的标头圆角大小（亮色模式）
@@ -1056,7 +1056,7 @@ settings:
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
         default: 6px
-    - 
+    -
         id: background-activated-tab-header-light
         title: activated Tab header background(light mode)
         title.zh: 已激活Tab的标头背景（亮色模式）
@@ -1064,7 +1064,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: shadow-activated-tab-header-light
         title: activated Tab header shadow(light mode)
         title.zh: 已激活Tab的标头阴影（亮色模式）
@@ -1072,14 +1072,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Active-states-file-explorer-light
         title: Active states(file explorer)
         title.zh: 激活态（文件列表）
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
         id: Active-states-file-explorer-select-light
         title: Activated file style(light mode)
         title.zh: 已激活文件 风格（亮色模式）
@@ -1095,7 +1095,7 @@ settings:
                 value: activated-file-tab-style-light
             -   label: customize
                 value: activated-file-customize-light
-    - 
+    -
 		id: color-activated-file-light
 		title: Activated file color(light mode)
         title.zh: 已激活文件的颜色（亮色模式）
@@ -1107,7 +1107,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: border-radius-activated-file-light
         title: Activated file border radius(light mode)
         title.zh: 已激活文件的圆角大小（亮色模式）
@@ -1115,7 +1115,7 @@ settings:
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
         default: 4px
-    - 
+    -
         id: background-activated-file-light
         title: Activated file background(light mode)
         title.zh: 已激活文件的背景（亮色模式）
@@ -1123,7 +1123,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: shadow-activated-file-light
         title: Activated file shadow(light mode)
         title.zh: 已激活文件的阴影（亮色模式）
@@ -1131,14 +1131,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: UI-Controls-light
         title: UI Controls
         title.zh: UI 控件
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: input-radius-light
         title: input-radius(light mode)
         title.zh: input-radius（亮色模式）
@@ -1147,7 +1147,7 @@ settings:
         type: variable-number
         default: 5
         format: px
-    - 
+    -
         id: input-shadow-light
         title: input-shadow(light mode)
         title.zh: input-shadow（亮色模式）
@@ -1155,7 +1155,7 @@ settings:
         description.zh: 按钮，下拉菜单等的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: input-shadow-hover-light
         title: input-shadow-hover(light mode)
         title.zh: input-shadow-hover（亮色模式）
@@ -1163,14 +1163,14 @@ settings:
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-light
         title: toggle switch
         title.zh: 滑动开关
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: toggle-thumb-color-light
         title: toggle-thumb-color(light mode)
         title.zh: toggle-thumb-color（亮色模式）
@@ -1178,7 +1178,7 @@ settings:
         description.zh: 开关滑块的背景色 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-enabled-color-light
         title: toggle-thumb-enabled-color(light mode)
         title.zh: toggle-thumb-enabled-color（亮色模式）
@@ -1186,7 +1186,7 @@ settings:
         description.zh: 开关滑块的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-shadow-light
         title: toggle-thumb-shadow(light mode)
         title.zh: toggle-thumb-shadow（亮色模式）
@@ -1194,7 +1194,7 @@ settings:
         description.zh: 开关滑块的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-enabled-shadow-light
         title: toggle-thumb-enabled-shadow(light mode)
         title.zh: toggle-thumb-enabled-shadow（亮色模式）
@@ -1202,7 +1202,7 @@ settings:
         description.zh: 开关滑块的阴影（开启时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-color-light
         title: toggle-track-color(light mode)
         title.zh: toggle-track-color（亮色模式）
@@ -1210,7 +1210,7 @@ settings:
         description.zh: 开关滑轨的背景色 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-enabled-color-light
         title: toggle-track-enabled-color(light mode)
         title.zh: toggle-track-enabled-color（亮色模式）
@@ -1218,7 +1218,7 @@ settings:
         description.zh: 开关滑轨的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-shadow-light
         title: toggle-track-shadow(light mode)
         title.zh: toggle-track-shadow（亮色模式）
@@ -1226,7 +1226,7 @@ settings:
         description.zh: 开关滑轨的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-hovered-shadow-light
         title: toggle-track-hovered-shadow(light mode)
         title.zh: toggle-track-hovered-shadow（亮色模式）
@@ -1234,28 +1234,28 @@ settings:
         description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Miscellaneous-light
         title: Miscellaneous
         title.zh: 杂项
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: card-highlight-light
         title: Highlight active card
         title.zh: 高亮当前活动卡片
         description: Only applicable for card layout
         description.zh: 仅限卡片式布局
         type: class-toggle
-    - 
+    -
         id: workspace-divider-transparent-light
         title: Visually remove divider effect in workspace
         title.zh: 在视觉上移除工作区的分隔线效果
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
-	- 
+	-
 		id: link-external-color
 		title: External link color
         title.zh: 外部链接颜色
@@ -1263,7 +1263,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: link-external-color-hover
 		title: External link color (hover)
         title.zh: 外部链接颜色（鼠标悬停时）
@@ -1279,18 +1279,18 @@ settings:
 name: Appearance (dark mode)
 id: Appearance-dark
 settings:
-    - 
+    -
         id: Presets-info-dark
         description: "[Presets (dark)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
         description.zh: "[预设（暗色）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) | 导入前，推荐先将此条目重设为默认 / 移除预设↗️ "
         type: info-text
         markdown: true
-    - 
+    -
         id: card-layout-open-dark
         title: Enable card layout(dark mode)
         title.zh: 启用 卡片式布局（暗色模式）
         type: class-toggle
-    - 
+    -
         id: theme-dark-style-select
         title: Dark mode style
         title.zh: 暗色模式风格
@@ -1306,21 +1306,21 @@ settings:
                 value: theme-dark-background-darker
             -   label: pure black
                 value: theme-dark-background-black
-    - 
+    -
         id: Color-dark
         title: Color
         title.zh: 色彩
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Accent-color-dark
         title: Accent color
         title.zh: 主题色
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
         id: accent-dark
         title: Accent color(dark mode)
         title.zh: 主题色（暗色模式）
@@ -1330,19 +1330,19 @@ settings:
         format: hsl-split
         opacity: false
         default: '#8a96e5'
-    - 
+    -
         id: accent-color-override-dark
         title: Override accent color setting in "Settings-Appearance" menu(dark mode)
         title.zh: 覆写 "设置-外观 "菜单中的强调色设置（暗色模式）
         type: class-toggle
-    - 
+    -
         id: accent-advanced-dark
         title: Advanced
         title.zh: 高级
         type: heading
         collapsed: true
         level: 5
-    - 
+    -
 		id: color-accent-hsl-dark
 		title: color-accent-hsl
         title.zh: color-accent-hsl
@@ -1350,7 +1350,7 @@ settings:
 		format: hsl-values
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-dark
 		title: color-accent
         title.zh: color-accent
@@ -1358,7 +1358,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-1-dark
 		title: color-accent-1
         title.zh: color-accent-1
@@ -1366,7 +1366,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-2-dark
 		title: color-accent-2
         title.zh: color-accent-2
@@ -1374,7 +1374,7 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
 		id: color-accent-3-dark
 		title: color-accent-3
         title.zh: color-accent-3
@@ -1382,84 +1382,84 @@ settings:
 		format: hsl
         opacity: false
         default: '#'
-    - 
+    -
         id: Extended-colors-dark
         title: Extended colors
         title.zh: 拓展色
         type: heading
         collapsed: true
         level: 4
-	- 
+	-
 		id: color-red-rgb
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#fe7968'
 		default-dark: '#ff8a78'
-	- 
+	-
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#f39c12'
 		default-dark: '#fabe58'
-	- 
+	-
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#e5c700'
 		default-dark: '#ffec8b'
-	- 
+	-
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#78BA7E'
 		default-dark: '#87d37c'
-	- 
+	-
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#36d7b7'
 		default-dark: '#86e2d5'
-	- 
+	-
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#038aff'
 		default-dark: '#89c4f4'
-	- 
+	-
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#9455ec'
 		default-dark: '#c69eff'
-	- 
+	-
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
 		default-light: '#f23fa5'
 		default-dark: '#f2b6c1'
-    - 
+    -
         id: Background-dark
         title: Background
         title.zh: 背景
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: mod-left-split-background-header-dark
         title: Left sidepane background
         title.zh: 左侧面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-left-split-background-select-dark
         title: Left sidepane background(dark mode)
         title.zh: 左侧面板背景（暗色模式）
@@ -1477,7 +1477,7 @@ settings:
                 value: mod-left-split-background-customize-dark
             -   label: customize CSS
                 value: mod-left-split-background-CSS-dark
-    - 
+    -
 		id: background-mod-left-split-dark
 		title: Customize left sidepane background color (dark mode)
         title.zh: 自定义 左侧面板 背景色（暗色模式）
@@ -1489,7 +1489,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-left-CSS-dark
         title: Left sidepane background (dark mode)
         title.zh: 左侧面板background（暗色模式）
@@ -1497,7 +1497,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-left-CSS-blend-mode-dark
         title: Left sidepane background-blend-mode (dark mode)
         title.zh: 左侧面板background-blend-mode（暗色模式）
@@ -1505,7 +1505,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-left-CSS-backdrop-filter-dark
         title: Left sidepane backdrop-filter (dark mode)
         title.zh: 左侧面板backdrop-filter（暗色模式）
@@ -1513,14 +1513,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: mod-right-split-background-header-dark
         title: Right sidepane background
         title.zh: 右侧面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-right-split-background-select-dark
         title: Right sidepane background(dark mode)
         title.zh: 右侧面板背景（暗色模式）
@@ -1538,7 +1538,7 @@ settings:
                 value: mod-right-split-background-customize-dark
             -   label: customize CSS
                 value: mod-right-split-background-CSS-dark
-    - 
+    -
 		id: background-mod-right-split-dark
 		title: Customize right sidepane background color(dark mode)
         title.zh: 自定义 右侧面板 背景色（暗色模式）
@@ -1550,7 +1550,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-right-CSS-dark
         title: Right sidepane background (dark mode)
         title.zh: 右侧面板background（暗色模式）
@@ -1558,7 +1558,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-right-CSS-blend-mode-dark
         title: Right sidepane background-blend-mode (dark mode)
         title.zh: 右侧面板background-blend-mode（暗色模式）
@@ -1566,7 +1566,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-right-CSS-backdrop-filter-dark
         title: Right sidepane backdrop-filter (dark mode)
         title.zh: 右侧面板backdrop-filter（暗色模式）
@@ -1574,14 +1574,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: mod-root-split-background-header-dark
         title: Middle pane background
         title.zh: 中间面板背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: mod-root-split-background-select-dark
         title: Middle pane background (dark mode)
         title.zh: 中间面板背景（暗色模式）
@@ -1599,7 +1599,7 @@ settings:
                 value: mod-root-split-background-customize-dark
             -   label: customize CSS
                 value: mod-root-split-background-CSS-dark
-    - 
+    -
 		id: background-mod-root-split-dark
 		title: Customize Middle pane background color (dark mode)
         title.zh: 自定义 中间面板 背景色（暗色模式）
@@ -1611,7 +1611,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-mod-root-CSS-dark
         title: Middle pane background (dark mode)
         title.zh: 中间面板background（暗色模式）
@@ -1619,7 +1619,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-mod-root-CSS-blend-mode-dark
         title: Middle pane background-blend-mode (dark mode)
         title.zh: 中间面板background-blend-mode（暗色模式）
@@ -1627,7 +1627,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: normal
-    - 
+    -
         id: background-mod-root-CSS-backdrop-filter-dark
         title: Middle pane backdrop-filter (dark mode)
         title.zh: 中间面板backdrop-filter（暗色模式）
@@ -1635,14 +1635,14 @@ settings:
         description.zh: 输入任意 CSS backdrop-filter 值
         type: variable-text
         default: blur(32px)
-    - 
+    -
         id: underlying-background-header-dark
         title: Underlying background
         title.zh: 底层背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: background-underlying-select-dark
         title: underlying background(dark mode)
         title.zh: 底层背景（暗色模式）
@@ -1660,7 +1660,7 @@ settings:
                 value: background-underlying-Color-dark
             -   label: customize CSS
                 value: background-underlying-CSS-dark
-    - 
+    -
 		id: background-underlying-dark
 		title: Customize underlying background color(dark mode)
         title.zh: 自定义 底层背景色（暗色模式）
@@ -1672,7 +1672,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: background-underlying-CSS-dark
         title: underlying background (dark mode)
         title.zh: 底层background（暗色模式）
@@ -1680,7 +1680,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: background-underlying-CSS-blend-mode-dark
         title: underlying background-blend-mode (dark mode)
         title.zh: 底层background-blend-mode（暗色模式）
@@ -1688,7 +1688,7 @@ settings:
         description.zh: 输入任意 CSS background-blend-mode 值
         type: variable-text
         default: soft-light, luminosity, hue, luminosity, hard-light
-    - 
+    -
         id: underlying-foreground-header-dark
         title: Underlying foreground
         title.zh: 底层前景
@@ -1697,7 +1697,7 @@ settings:
         type: heading
         collapsed: ture
         level: 5
-    - 
+    -
 		id: on-border-dark
         title: underlying foreground color(dark mode)
         title.zh: 底层前景色（暗色模式）
@@ -1711,7 +1711,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: mix-blend-mode-on-border-dark
         title: mix blend mode of underlying foreground(dark mode)
         title.zh: 底层前景的混合模式（暗色模式）
@@ -1719,14 +1719,14 @@ settings:
         description.zh: 输入任意 CSS mix-blend-mode 值
         type: variable-text
         default: screen
-    - 
+    -
         id: Global-background-header-dark
         title: Global background
         title.zh: 全局背景
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
 		id: background-primary
 		title: background-primary(dark mode)
         title.zh: background-primary（暗色模式）
@@ -1735,7 +1735,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-primary-alt
 		title: background-primary-alt(dark mode)
         title.zh: background-primary-alt（暗色模式）
@@ -1744,7 +1744,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-secondary
 		title: background-secondary(dark mode)
         title.zh: background-secondary（暗色模式）
@@ -1753,7 +1753,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-secondary-alt
 		title: background-secondary-alt(dark mode)
         title.zh: background-secondary-alt（暗色模式）
@@ -1762,7 +1762,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-tertiary
 		title: background-tertiary(dark mode)
         title.zh: background-tertiary（暗色模式）
@@ -1771,7 +1771,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: workspace-background-translucent
 		title: workspace-background-translucent(dark mode)
         title.zh: workspace-background-translucent（暗色模式）
@@ -1780,7 +1780,7 @@ settings:
 		format: hsl
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-hover
 		title: background-modifier-hover(dark mode)
         title.zh: background-modifier-hover（暗色模式）
@@ -1789,7 +1789,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-active-hover
 		title: background-modifier-active-hover(dark mode)
         title.zh: background-modifier-active-hover（暗色模式）
@@ -1798,7 +1798,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border
 		title: background-modifier-border(dark mode)
         title.zh: background-modifier-border（暗色模式）
@@ -1807,7 +1807,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border-hover
 		title: background-modifier-border-hover(dark mode)
         title.zh: background-modifier-border-hover（暗色模式）
@@ -1816,7 +1816,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: background-modifier-border-focus
 		title: background-modifier-border-focus(dark mode)
         title.zh: background-modifier-border-focus（暗色模式）
@@ -1825,21 +1825,21 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Foreground-header-dark
         title: Foreground
         title.zh: 前景
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: text-color-dark
         title: Text & icon color
         title.zh: 文本 & 图标色
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: text-normal
 		title: text-normal(dark mode)
         title.zh: text-normal（暗色模式）
@@ -1847,7 +1847,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-muted
 		title: text-muted(dark mode)
         title.zh: text-muted（暗色模式）
@@ -1855,7 +1855,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-faint
 		title: text-faint(dark mode)
         title.zh: text-faint（暗色模式）
@@ -1863,7 +1863,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-accent
 		title: text-accent(dark mode)
         title.zh: text-accent（暗色模式）
@@ -1871,7 +1871,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-accent-hover
 		title: text-accent-hover(dark mode)
         title.zh: text-accent-hover（暗色模式）
@@ -1879,7 +1879,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-on-accent
 		title: text-on-accent(dark mode)
         title.zh: text-on-accent（暗色模式）
@@ -1887,7 +1887,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-on-accent-inverted
 		title: text-on-accent-inverted(dark mode)
         title.zh: text-on-accent-inverted（暗色模式）
@@ -1895,14 +1895,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-color-dark
         title: Interactive color
         title.zh: 交互色
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: interactive-normal
         title: interactive-normal(dark mode)
         title.zh: interactive-normal（暗色模式）
@@ -1910,7 +1910,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-hover
         title: interactive-hover(dark mode)
         title.zh: interactive-hover（暗色模式）
@@ -1918,7 +1918,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent
 		title: interactive-accent(dark mode)
 		title.zh: interactive-accent（暗色模式）
@@ -1926,7 +1926,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent-hsl
 		title: interactive-accent-hsl(dark mode)
 		title.zh: interactive-accent-hsl（暗色模式）
@@ -1934,7 +1934,7 @@ settings:
 		format: hsl-values
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: interactive-accent-hover
 		title: interactive-accent-hover(dark mode)
 		title.zh: interactive-accent-hover（暗色模式）
@@ -1942,14 +1942,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Card-dark
         title: Card
         title.zh: 卡片
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: card-border-radius-dark
         title: Custom card border radius (dark mode)
         title.zh: 自定义 卡片的圆角大小（暗色模式）
@@ -1957,7 +1957,7 @@ settings:
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: 8px
-    - 
+    -
         id: card-shadow-dark
         title: Custom card shadow (dark mode)
         title.zh: 自定义 卡片阴影（暗色模式）
@@ -1965,21 +1965,21 @@ settings:
         description.zh: 在这里输入你的 box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Active-states-dark
         title: Active states
         title.zh: 激活态
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Active-states-Tabs-dark
         title: Active states(Tabs)
         title.zh: 激活态（Tabs）
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
 		id: color-activated-tab-header-dark
 		title: activated Tab header color(dark mode)
         title.zh: 已激活Tab的标头颜色（暗色模式）
@@ -1991,12 +1991,12 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: color-to-tab-icon-dark
         title: Apply custom color to the "close" icon(dark mode)
         title.zh: 将自定义颜色应用于“关闭”图标（暗色模式）
         type: class-toggle
-    - 
+    -
         id: border-radius-activated-tab-header-dark
         title: activated Tab header border radius(dark mode)
         title.zh: 已激活Tab的标头圆角大小（暗色模式）
@@ -2004,7 +2004,7 @@ settings:
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
         default: 6px
-    - 
+    -
         id: background-activated-tab-header-dark
         title: activated Tab header background(dark mode)
         title.zh: 已激活Tab的标头背景（暗色模式）
@@ -2012,7 +2012,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: shadow-activated-tab-header-dark
         title: activated Tab header shadow(dark mode)
         title.zh: 已激活Tab的标头阴影（暗色模式）
@@ -2020,14 +2020,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Active-states-file-explorer-dark
         title: Active states(file explorer)
         title.zh: 激活态（文件列表）
         type: heading
         collapsed: true
         level: 4
-    - 
+    -
         id: Active-states-file-explorer-select-dark
         title: Activated file style(dark mode)
         title.zh: 已激活文件 风格（暗色模式）
@@ -2043,7 +2043,7 @@ settings:
                 value: activated-file-tab-style-dark
             -   label: customize
                 value: activated-file-customize-dark
-    - 
+    -
 		id: color-activated-file-dark
 		title: Activated file color(dark mode)
         title.zh: 已激活文件的颜色（暗色模式）
@@ -2055,7 +2055,7 @@ settings:
                 id: accent-rgb
                 format: rgb
         default: '#'
-    - 
+    -
         id: border-radius-activated-file-dark
         title: Activated file border radius(dark mode)
         title.zh: 已激活文件的圆角大小（暗色模式）
@@ -2063,7 +2063,7 @@ settings:
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
         default: 4px
-    - 
+    -
         id: background-activated-file-dark
         title: Activated file background(dark mode)
         title.zh: 已激活文件的背景（暗色模式）
@@ -2071,7 +2071,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: shadow-activated-file-dark
         title: Activated file shadow(dark mode)
         title.zh: 已激活文件的阴影（暗色模式）
@@ -2079,14 +2079,14 @@ settings:
         description.zh: 输入任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: UI-Controls-dark
         title: UI Controls
         title.zh: UI 控件
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: input-radius-dark
         title: input-radius(dark mode)
         title.zh: input-radius（暗色模式）
@@ -2095,7 +2095,7 @@ settings:
         type: variable-number
         default: 5
         format: px
-    - 
+    -
         id: input-shadow-dark
         title: input-shadow(dark mode)
         title.zh: input-shadow（暗色模式）
@@ -2103,7 +2103,7 @@ settings:
         description.zh: 按钮，下拉菜单等的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: input-shadow-hover-dark
         title: input-shadow-hover(dark mode)
         title.zh: input-shadow-hover（暗色模式）
@@ -2111,14 +2111,14 @@ settings:
         description.zh: 按钮，下拉菜单等的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-dark
         title: toggle switch
         title.zh: 滑动开关
         type: heading
         collapsed: ture
         level: 4
-    - 
+    -
         id: toggle-thumb-color-dark
         title: toggle-thumb-color(dark mode)
         title.zh: toggle-thumb-color（暗色模式）
@@ -2126,7 +2126,7 @@ settings:
         description.zh: 开关滑块的背景色 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-enabled-color-dark
         title: toggle-thumb-enabled-color(dark mode)
         title.zh: toggle-thumb-enabled-color（暗色模式）
@@ -2134,7 +2134,7 @@ settings:
         description.zh: 开关滑块的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-shadow-dark
         title: toggle-thumb-shadow(dark mode)
         title.zh: toggle-thumb-shadow（暗色模式）
@@ -2142,7 +2142,7 @@ settings:
         description.zh: 开关滑块的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-thumb-enabled-shadow-dark
         title: toggle-thumb-enabled-shadow(dark mode)
         title.zh: toggle-thumb-enabled-shadow（暗色模式）
@@ -2151,7 +2151,7 @@ settings:
         type: variable-text
         default: ''
 
-    - 
+    -
         id: toggle-track-color-dark
         title: toggle-track-color(dark mode)
         title.zh: toggle-track-color（暗色模式）
@@ -2159,7 +2159,7 @@ settings:
         description.zh: 开关滑轨的背景色 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-enabled-color-dark
         title: toggle-track-enabled-color(dark mode)
         title.zh: toggle-track-enabled-color（暗色模式）
@@ -2167,7 +2167,7 @@ settings:
         description.zh: 开关滑轨的背景色（开启时） 接受任意 CSS background-color 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-shadow-dark
         title: toggle-track-shadow(dark mode)
         title.zh: toggle-track-shadow（暗色模式）
@@ -2175,7 +2175,7 @@ settings:
         description.zh: 开关滑轨的阴影 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: toggle-track-hovered-shadow-dark
         title: toggle-track-hovered-shadow(dark mode)
         title.zh: toggle-track-hovered-shadow（暗色模式）
@@ -2183,28 +2183,28 @@ settings:
         description.zh: 开关滑轨的阴影（鼠标悬停时） 接受任意 CSS box-shadow 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Miscellaneous-dark
         title: Miscellaneous
         title.zh: 杂项
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: card-highlight-dark
         title: Highlight active card
         title.zh: 高亮当前活动卡片
         description: Only applicable for card layout
         description.zh: 仅限卡片式布局
         type: class-toggle
-    - 
+    -
         id: workspace-divider-transparent-dark
         title: Visually remove divider effect in workspace
         title.zh: 在视觉上移除工作区的分隔线效果
         description: For default layout
         description.zh: 针对默认布局
         type: class-toggle
-	- 
+	-
 		id: link-external-color
 		title: External link color
         title.zh: 外部链接颜色
@@ -2212,7 +2212,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: link-external-color-hover
 		title: External link color (hover)
         title.zh: 外部链接颜色（鼠标悬停时）
@@ -2228,19 +2228,19 @@ settings:
 name: Editor
 id: Editor
 settings:
-    - 
+    -
         id: line-emphasis
         title: Hover line indicator
         title.zh: 悬停行指示器
         type: heading
         collapsed: ture
         level: 3
-    - 
+    -
         id: line-hover-indicator
         title: Enable hover line indicator
         title.zh: 启用 悬停行指示器
         type: class-toggle
-    - 
+    -
 		id: hover-indicator-color
 		title: Customize indicator color
         title.zh: 自定义指示器的颜色
@@ -2249,43 +2249,43 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Headings
         title: Headings
         title.zh: 标题
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: collapse-icon-restore
         title: Restore the collapse icon before headings
         title.zh: 还原标题前的折叠图标
         type: class-toggle
-    - 
+    -
 		id: heading-indicator-off
 		title: Remove headings indicator
 		title.zh: 移除标题左侧的指示器
 		type: class-toggle
 		default: false
-    - 
+    -
 		id: Inline-title
 		title: Inline Title
         title.zh: 页内标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
         id: inline-title-divider-remove
         title: Remove inline title divider
         title.zh: 移除页内标题分隔线
         type: class-toggle
-    - 
+    -
 		id: inline-title-font
 		title: inline title font
         title.zh: 页内标题 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: inline-title-size
 		title: inline title size
         title.zh: 页内标题 字体大小
@@ -2293,7 +2293,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.5em
-	- 
+	-
         id: inline-title-weight
         title: inline title weight
         title.zh: 页内标题 字重
@@ -2301,7 +2301,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 700
-    - 
+    -
         id: inline-title-color-select
         title: inline title text color
         title.zh: 页内标题 文本颜色
@@ -2315,7 +2315,7 @@ settings:
                 value: inline-title-color-designated
             -   label: Customized color
                 value: inline-title-color-customized
-	- 
+	-
 		id: inline-title-color
 		title: Customize inline title text color
         title.zh: 自定义 页内标题 文本颜色
@@ -2323,26 +2323,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-1-headings
 		title: Level 1 Headings
         title.zh: 一级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h1-divider-on
 		title: Enable H1 divider
 		title.zh: 启用H1分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h1-font
 		title: H1 font
         title.zh: H1 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h1-size
 		title: H1 font size
         title.zh: H1 字体大小
@@ -2350,7 +2350,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.5em
-	- 
+	-
         id: h1-weight
         title: H1 font weight
         title.zh: H1 字重
@@ -2358,7 +2358,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 700
-    - 
+    -
         id: h1-color-select
         title: H1 text color
         title.zh: H1 文本颜色
@@ -2372,7 +2372,7 @@ settings:
                 value: h1-color-designated
             -   label: Customized color
                 value: h1-color-customized
-	- 
+	-
 		id: h1-color
 		title: Customize H1 text color
         title.zh: 自定义 H1 文本颜色
@@ -2380,26 +2380,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-2-headings
 		title: Level 2 Headings
         title.zh: 二级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h2-divider-on
 		title: Enable H2 divider
 		title.zh: 启用H2分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h2-font
 		title: H2 font
         title.zh: H2 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h2-size
 		title: H2 font size
         title.zh: H2 字体大小
@@ -2407,7 +2407,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.425em
-	- 
+	-
         id: h2-weight
         title: H2 font weight
         title.zh: H2 字重
@@ -2415,7 +2415,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 675
-    - 
+    -
         id: h2-color-select
         title: H2 text color
         title.zh: H2 文本颜色
@@ -2429,7 +2429,7 @@ settings:
                 value: h2-color-designated
             -   label: Customized color
                 value: h2-color-customized
-	- 
+	-
 		id: h2-color
 		title: Customize H2 text color
         title.zh: 自定义 H2 文本颜色
@@ -2437,26 +2437,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-3-headings
 		title: Level 3 Headings
         title.zh: 三级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h3-divider-on
 		title: Enable H3 divider
 		title.zh: 启用H3分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h3-font
 		title: H3 font
         title.zh: H3 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h3-size
 		title: H3 font size
         title.zh: H3 字体大小
@@ -2464,7 +2464,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.35em
-	- 
+	-
         id: h3-weight
         title: H3 font weight
         title.zh: H3 字重
@@ -2472,7 +2472,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 650
-    - 
+    -
         id: h3-color-select
         title: H3 text color
         title.zh: H3 文本颜色
@@ -2486,7 +2486,7 @@ settings:
                 value: h3-color-designated
             -   label: Customized color
                 value: h3-color-customized
-	- 
+	-
 		id: h3-color
 		title: Customize H3 text color
         title.zh: 自定义 H3 文本颜色
@@ -2494,26 +2494,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-4-headings
 		title: Level 4 Headings
         title.zh: 四级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h4-divider-on
 		title: Enable H4 divider
 		title.zh: 启用H4分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h4-font
 		title: H4 font
         title.zh: H4 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h4-size
 		title: H4 font size
         title.zh: H4 字体大小
@@ -2521,7 +2521,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.275em
-	- 
+	-
         id: h4-weight
         title: H4 font weight
         title.zh: H4 字重
@@ -2529,7 +2529,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 625
-    - 
+    -
         id: h4-color-select
         title: H4 text color
         title.zh: H4 文本颜色
@@ -2543,7 +2543,7 @@ settings:
                 value: h4-color-designated
             -   label: Customized color
                 value: h4-color-customized
-	- 
+	-
 		id: h4-color
 		title: Customize H4 text color
         title.zh: 自定义 H4 文本颜色
@@ -2551,26 +2551,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-5-headings
 		title: Level 5 Headings
         title.zh: 五级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h5-divider-on
 		title: Enable H5 divider
 		title.zh: 启用H5分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h5-font
 		title: H5 font
         title.zh: H5 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h5-size
 		title: H5 font size
         title.zh: H5 字体大小
@@ -2578,7 +2578,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.2em
-	- 
+	-
         id: h5-weight
         title: H5 font weight
         title.zh: H5 字重
@@ -2586,7 +2586,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 600
-    - 
+    -
         id: h5-color-select
         title: H5 text color
         title.zh: H5 文本颜色
@@ -2600,7 +2600,7 @@ settings:
                 value: h5-color-designated
             -   label: Customized color
                 value: h5-color-customized
-	- 
+	-
 		id: h5-color
 		title: Customize H5 text color
         title.zh: 自定义 H5 文本颜色
@@ -2608,26 +2608,26 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: level-6-headings
 		title: Level 6 Headings
         title.zh: 六级标题
 		type: heading
 		level: 4
 		collapsed: true
-    - 
+    -
 		id: h6-divider-on
 		title: Enable H6 divider
 		title.zh: 启用H6分隔线
 		type: class-toggle
 		default: false
-	- 
+	-
 		id: h6-font
 		title: H6 font
         title.zh: H6 字体
 		type: variable-text
 		default: ''
-	- 
+	-
 		id: h6-size
 		title: H6 font size
         title.zh: H6 字体大小
@@ -2635,7 +2635,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: 1.125em
-	- 
+	-
         id: h6-weight
         title: H6 font weight
         title.zh: H6 字重
@@ -2643,7 +2643,7 @@ settings:
         description.zh: 接受 100-900 的值
         type: variable-number
         default: 575
-    - 
+    -
         id: h6-color-select
         title: H6 text color
         title.zh: H6 文本颜色
@@ -2657,7 +2657,7 @@ settings:
                 value: h6-color-designated
             -   label: Customized color
                 value: h6-color-customized
-	- 
+	-
 		id: h6-color
 		title: Customize H6 text color
         title.zh: 自定义 H6 文本颜色
@@ -2665,51 +2665,51 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Paragraph
         title: Paragraph
         title.zh: 段落
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
 		id: text-align-justify
 		title: Justify paragraph text
 		title.zh: 段落两端对齐
 		type: class-toggle
 		default: false
-	- 
+	-
         id: line-height-customize
         title: Paragraph line height
         title.zh: 段落行高
         type: variable-number
         default: 1.5
-	- 
+	-
 		id: file-line-width
 		title: Paragraph line width （Need to turn on “Readable line length”）
         title.zh:  段落行宽（需开启“缩减栏宽”）
 		type: variable-text
 		default: 700px
-    - 
+    -
 		id: p-spacing
 		title: Paragraph spacing (Reading mode)
         title.zh:  段落间距（阅读模式）
 		type: variable-text
 		default: 1em
-    - 
+    -
 		id: p-spacing-br
 		title: Paragraph spacing also takes effect after a line break (Reading mode)
 		title.zh: 段间距也对换行后的内容生效（阅读模式）
 		type: class-toggle
 		default: false
-    - 
+    -
         id: Text
         title: Text
         title.zh: 文本
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: bold-color
 		title: Bold text color
         title.zh: 粗体颜色
@@ -2717,7 +2717,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: italic-color
 		title: Italic text color
         title.zh: 斜体颜色
@@ -2725,7 +2725,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: text-highlight-bg
 		title: text highlight bg color
         title.zh: 文本高亮背景颜色
@@ -2733,7 +2733,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: inline-code-normal
 		title: inline code text color
         title.zh: 内联代码颜色
@@ -2741,7 +2741,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: inline-code-background-light
         title: Customize inline code background (light mode)
         title.zh: 自定义 内联代码背景（亮色模式）
@@ -2749,7 +2749,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: inline-code-background-dark
         title: Customize inline code background (dark mode)
         title.zh: 自定义 内联代码背景（暗色模式）
@@ -2757,14 +2757,14 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Links
         title: Links
         title.zh: 链接
         type: heading
         collapsed: true
         level: 3
-	- 
+	-
 		id: link-color
 		title: Link color
         title.zh: 链接颜色
@@ -2772,7 +2772,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: link-color-hover
 		title: Link color (hover)
         title.zh: 链接颜色（鼠标悬停时）
@@ -2780,7 +2780,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: link-decoration
 		title: Link decoration
         title.zh: 链接装饰
@@ -2788,7 +2788,7 @@ settings:
         description.zh: 接受任何 CSS text-decoration-line 值
 		type: variable-text
 		default: underline
-	- 
+	-
 		id: link-decoration-hover
 		title: Link decoration (hover)
         title.zh: 链接装饰（鼠标悬停时）
@@ -2796,7 +2796,7 @@ settings:
         description.zh: 接受任何 CSS text-decoration-line 值
 		type: variable-text
 		default: underline
-	- 
+	-
 		id: link-decoration-thickness
 		title: Link decoration thickness
         title.zh: 链接装饰厚度
@@ -2804,14 +2804,14 @@ settings:
         description.zh: 接受任何 CSS text-decoration-thickness 值
 		type: variable-text
 		default: auto
-    - 
+    -
 		id: link-unresolved
 		title: Unresolved link
         title.zh: 未创建链接
 		type: heading
 		level: 4
 		collapsed: true
-	- 
+	-
 		id: link-unresolved-color
 		title: Unresolved link color
         title.zh: 未创建链接颜色
@@ -2819,7 +2819,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: link-unresolved-opacity
 		title: Unresolved link opacity
         title.zh: 未创建链接透明度
@@ -2828,7 +2828,7 @@ settings:
 		min: 0.25
 		max: 1
 		step: 0.05
-	- 
+	-
 		id: link-unresolved-filter
 		title: Unresolved link filter
         title.zh: 未创建链接 filter
@@ -2836,7 +2836,7 @@ settings:
         description.zh: 接受任何 CSS filter 值
 		type: variable-text
 		default: none
-	- 
+	-
 		id: link-unresolved-decoration-style
 		title: Unresolved link decoration style
         title.zh: 未创建链接装饰风格
@@ -2844,7 +2844,7 @@ settings:
         description.zh: 接受任何 CSS text-decoration-style 值
 		type: variable-text
 		default: solid
-	- 
+	-
 		id: link-unresolved-decoration-color
 		title: Unresolved link decoration color
         title.zh: 未创建链接装饰颜色
@@ -2853,14 +2853,14 @@ settings:
 		opacity:  true
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: links-external
 		title: External links
         title.zh: 外部链接
 		type: heading
 		level: 4
 		collapsed: true
-	- 
+	-
 		id: link-external-color
 		title: External link color
         title.zh: 外部链接颜色
@@ -2868,7 +2868,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: link-external-color-hover
 		title: External link color (hover)
         title.zh: 外部链接颜色（鼠标悬停时）
@@ -2876,7 +2876,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: link-external-decoration
 		title: External link decoration
         title.zh: 外部链接装饰
@@ -2884,7 +2884,7 @@ settings:
         description.zh: 接受任何 CSS text-decoration-line 值
 		type: variable-text
 		default: underline
-	- 
+	-
 		id: link-external-decoration-hover
 		title: External link decoration (hover)
         title.zh: 外部链接装饰（鼠标悬停时）
@@ -2892,7 +2892,7 @@ settings:
         description.zh: 接受任何 CSS text-decoration-line 值
 		type: variable-text
 		default: underline
-	- 
+	-
 		id: link-external-filter
 		title: External link filter
         title.zh: 外部链接 filter
@@ -2900,32 +2900,32 @@ settings:
         description.zh: 接受任何 CSS filter 值
 		type: variable-text
 		default: none
-	- 
+	-
         id: Lists
         title: Lists
         title.zh: 列表
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
 		id: list-indent
 		title: list indent
         title.zh:  列表缩进
 		type: variable-text
 		default: 2em
-    - 
+    -
 		id: list-spacing
 		title: list indent
         title.zh:  列表间距
 		type: variable-text
 		default: 0.075em
-    - 
+    -
 		id: list-bullet-size
 		title: list marker size
         title.zh: 列表标记大小
 		type: variable-text
 		default: 0.3em
-	- 
+	-
 		id: list-marker-color
 		title: list marker color
         title.zh: 列表标记颜色
@@ -2933,7 +2933,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: list-marker-color-hover
 		title: list marker color (hover)
         title.zh: 列表标记颜色（鼠标悬停时）
@@ -2941,7 +2941,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: list-marker-color-collapsed
 		title: list marker color (collapsed)
         title.zh: 列表标记颜色（折叠时）
@@ -2949,20 +2949,20 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: ul-marker-restore
 		title: Restore default style of unordered list
         title.zh: 恢复无序列表的默认样式
 		type: class-toggle
 		default: false
-    - 
+    -
         id: Tags
         title: Tags
         title.zh: 标签
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
 		id: tag-color
 		title: Tag text color
         title.zh: 标签文本颜色
@@ -2971,7 +2971,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: tag-background
 		title: Tag background color
         title.zh: 标签背景颜色
@@ -2980,7 +2980,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	- 
+	-
 		id: tag-background-hover
 		title: Tag background color (hover)
         title.zh: 标签背景颜色（鼠标悬停时）
@@ -2989,14 +2989,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Table
         title: Table
         title.zh: 表格
         type: heading
         collapsed: true
         level: 3
-	- 
+	-
 		id: table-header-color
 		title: Customize table header color
         title.zh: 自定义 表头颜色（亮色模式）
@@ -3005,7 +3005,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: table-header-background-light
         title: Customize table header background (light mode)
         title.zh: 自定义 表头背景（亮色模式）
@@ -3013,7 +3013,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: table-header-background-dark
         title: Customize table header background (dark mode)
         title.zh: 自定义 表头背景（暗色模式）
@@ -3021,7 +3021,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: table-width-select
         title: Table width
         title.zh: 表格宽度
@@ -3035,7 +3035,7 @@ settings:
                 value: table-width-obsidian-default
             -   label: Customize table width
                 value: table-width-customized
-    - 
+    -
         id: table-width
         title: customize table width
         title.zh: 自定义表格宽度
@@ -3047,39 +3047,39 @@ settings:
         max: 100
         step: 1
         format: cqw
-    - 
+    -
         id: Image
         title: Image
         title.zh: 图片
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: img-center-align
         title: center-align the image
         title.zh: 图像居中显示
         type: class-toggle
-    - 
+    -
         id: img-darken
         title: darken image in dark mode
         title.zh: 在暗黑模式下暗化图像
         description: Hover to restore image
         description.zh: 鼠标经过时还原
         type: class-toggle
-    - 
+    -
         id: zoom-off
         title: Disable Image zoom
         title.zh: 关闭图像缩放
         description: from https://github.com/kepano/obsidian-minimal, author:@kepano
         type: class-toggle
-    - 
+    -
         id: Code-heading
         title: Codeblock
         title.zh: 代码块
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: codeblock-style-select
         title: Codeblock theme
         title.zh: 代码块主题
@@ -3095,7 +3095,7 @@ settings:
                 value: codeblock-style-solarized-light
             -   label: Solarized dark
                 value: codeblock-style-solarized-dark
-    - 
+    -
         id: code-background-light
         title: Customize code background (light mode)
         title.zh: 自定义 代码块背景（亮色模式）
@@ -3103,7 +3103,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: code-background-dark
         title: Customize code background (dark mode)
         title.zh: 自定义 代码块背景（暗色模式）
@@ -3111,7 +3111,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
 		id: code-normal
 		title: code-normal
         title.zh: code-normal
@@ -3120,7 +3120,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: code-comment
 		title: code-comment
         title.zh: code-comment
@@ -3129,7 +3129,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-function
 		title: code-function
         title.zh: code-function
@@ -3138,7 +3138,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-important
 		title: code-important
         title.zh: code-important
@@ -3147,7 +3147,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-keyword
 		title: code-keyword
         title.zh: code-keyword
@@ -3156,7 +3156,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-operator
 		title: code-operator
         title.zh: code-operator
@@ -3165,7 +3165,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-property
 		title: code-property
         title.zh: code-property
@@ -3174,7 +3174,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-punctuation
 		title: code-punctuation
         title.zh: code-punctuation
@@ -3183,7 +3183,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-string
 		title: code-string
         title.zh: code-string
@@ -3192,7 +3192,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-tag
 		title: code-tag
         title.zh: code-tag
@@ -3201,7 +3201,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: code-value
 		title: code-value
         title.zh: code-value
@@ -3210,14 +3210,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: Blockquote-heading
         title: Blockquote
         title.zh: 块引用
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: blockquote-background-light
         title: Customize blockquote background (light mode)
         title.zh: 自定义 块引用背景（亮色模式）
@@ -3225,7 +3225,7 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: blockquote-background-dark
         title: Customize blockquote background (dark mode)
         title.zh: 自定义 块引用背景（暗色模式）
@@ -3233,14 +3233,14 @@ settings:
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Callouts
         title: Callouts
         title.zh: 标注
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: callout-style-select
         title: callout style
         title.zh: 标注风格
@@ -3258,7 +3258,7 @@ settings:
                 value: callout-style-3
             -   label: style 4
                 value: callout-style-4
-    - 
+    -
 		id: callout-border-width
 		title: callout border width
         title.zh: 标注边框大小
@@ -3266,7 +3266,7 @@ settings:
         description: Input any CSS border-width value
         description.zh: 输入任意 CSS border-width 值
         default: 0px
-    - 
+    -
         id: callout-border-opacity
         title: callout border opacity
         title.zh: 标注边框透明度
@@ -3275,7 +3275,7 @@ settings:
         min: 0
         max: 1
         step: 0.05
-    - 
+    -
 		id: callout-padding
 		title: callout padding
         title.zh: 标注边距
@@ -3283,7 +3283,7 @@ settings:
         description.zh: 接受任何 CSS padding 值
 		type: variable-text
 		default: ''
-    - 
+    -
         id: callout-radius
         title: callout radius
         title.zh: 标注圆角
@@ -3291,7 +3291,7 @@ settings:
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: ''
-	- 
+	-
 		id: callout-title-color
 		title: callout title color
         title.zh: 标注标题颜色
@@ -3300,7 +3300,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
 		id: callout-title-padding
 		title: callout title padding
         title.zh: 标注标题边距
@@ -3308,7 +3308,7 @@ settings:
         description.zh: 接受任何 CSS padding 值
 		type: variable-text
 		default: ''
-    - 
+    -
 		id: callout-title-size
 		title: callout title size
         title.zh: 标注标题大小
@@ -3316,7 +3316,7 @@ settings:
         description.zh: 接受任何 CSS font-size 值
 		type: variable-text
 		default: ''
-    - 
+    -
 		id: callout-content-padding
 		title: callout content padding
         title.zh: 标注内容边距
@@ -3324,7 +3324,7 @@ settings:
         description.zh: 接受任何 CSS padding 值
 		type: variable-text
 		default: ''
-    - 
+    -
 		id: callout-content-background
 		title: callout content background
         title.zh: 标注内容背景
@@ -3333,7 +3333,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: callout-content-radius
         title: callout content radius
         title.zh: 标注内容圆角
@@ -3341,19 +3341,19 @@ settings:
         description.zh: 在这里输入你的 border-radius 值
         type: variable-text
         default: ''
-    - 
+    -
         id: Embeds
         title: Embeds
         title.zh: 内嵌文档
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: seamless-embeds
         title: seamless embeds
         title.zh: 无缝嵌入
         type: class-toggle
-    - 
+    -
         id: embed-background
         title: embed background
         title.zh: 内嵌文档 背景
@@ -3362,7 +3362,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    - 
+    -
         id: embed-padding
         title: embed padding
         title.zh: 内嵌文档 padding
@@ -3370,7 +3370,7 @@ settings:
         description.zh: 输入任意 CSS padding 值
         type: variable-text
         default: ''
-    - 
+    -
         id: embed-border-radius
         title: embed border radius
         title.zh: 内嵌文档 圆角半径
@@ -3378,7 +3378,7 @@ settings:
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
         default: ''
-    - 
+    -
         id: embed-font-style
         title: embed font style
         title.zh: 内嵌文档 字体风格
@@ -3394,12 +3394,12 @@ settings:
 name: Mobile
 id: Mobile
 settings:
-    - 
+    -
         id: card-layout-pad-open
         title: Enable card layout (pad only)
         title.zh: 开启卡片式布局（平板端）
         type: class-toggle
-    - 
+    -
         id: drawer-phone-full-width
         title: Side drawer full screen (phone only)
         title.zh: 侧边抽屉全屏（手机端）
@@ -3412,18 +3412,18 @@ settings:
 name: Plugin
 id: Plugin
 settings:
-    - 
+    -
         id: DB Folder
         title: DB Folder
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: DB-table-full-width-off
         title: Disable full width table
         title.zh: 关闭 全宽表格
         type: class-toggle
-    - 
+    -
         id: DB-table-bg-color
         title: background color
         title.zh: 背景颜色
@@ -3437,13 +3437,13 @@ settings:
                 value: DB-table-bg-color-adapt
             -   label: Unify background color
                 value: DB-table-bg-color-unify
-    - 
+    -
         id: Projects
         title: Projects
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Projects-bg-color
         title: background color
         title.zh: 背景颜色
@@ -3457,24 +3457,24 @@ settings:
                 value: Projects-bg-color-adapt
             -   label: Unify background color
                 value: Projects-bg-color-unify
-    - 
+    -
         id: Surfing
         title: Surfing
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: Surfing-bookmark-bar-hide
         title: Hide bookmark bar when browsing web
         title.zh: 浏览网页时隐藏书签栏
         type: class-toggle
-    - 
+    -
         id: Checklist
         title: Checklist
         type: heading
         collapsed: true
         level: 3
-    - 
+    -
         id: colorful-checkbox
         title: colorful checkbox
         title.zh: 多彩选框
@@ -3725,8 +3725,8 @@ body {
     --color-accent-2: var(--color-accent-2-light);
     --color-accent-3: var(--color-accent-3-light);
     --color-accent-hsl-light: var(--accent-h),
-        var(--accent-s),
-        var(--accent-l);
+    var(--accent-s),
+    var(--accent-l);
     --color-accent-light: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
     --color-accent-2-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
@@ -3737,12 +3737,12 @@ body {
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
     --background-secondary: hsl(var(--accent-h),
-            calc((var(--accent-s) - 12%) / 6),
-            calc(100% - (100% - var(--accent-l)) / 16));
+    calc((var(--accent-s) - 12%) / 6),
+    calc(100% - (100% - var(--accent-l)) / 16));
     --background-secondary-alt: var(--color-base-05);
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 8));
+    calc(var(--accent-s) - 4%),
+    calc(100% - (100% - var(--accent-l)) / 8));
     --workspace-background-translucent: rgba(246, 246, 246, 0.8);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
@@ -3753,30 +3753,30 @@ body {
     --text-highlight-bg: rgba(255, 208, 0, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-        0px 3.4px 6.7px rgba(0, 0, 0, .042),
-        0px 15px 30px rgba(0, 0, 0, .07);
+    0px 3.4px 6.7px rgba(0, 0, 0, .042),
+    0px 15px 30px rgba(0, 0, 0, .07);
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
-        0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
-        0px 30px 90px rgba(0, 0, 0, 0.2);
+    0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+    0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
 .theme-light.theme-light-background-adapt {
     --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
     --background-primary: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 12));
+    calc(var(--accent-s) / 2),
+    calc(100% - (100% - var(--accent-l)) / 12));
     --background-primary-alt: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 8));
+    calc(var(--accent-s) / 2),
+    calc(100% - (100% - var(--accent-l)) / 8));
     --background-secondary: hsl(var(--accent-h),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 7.2));
+    calc(var(--accent-s) / 2),
+    calc(100% - (100% - var(--accent-l)) / 7.2));
     --background-secondary-alt: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 5));
+    calc(var(--accent-s) / 2),
+    calc(100% - (100% - var(--accent-l)) / 5));
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 4));
+    calc(var(--accent-s) - 4%),
+    calc(100% - (100% - var(--accent-l)) / 4));
     --interactive-normal: var(--color-base-00);
     --interactive-hover: var(--color-base-10);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
@@ -3830,8 +3830,8 @@ body {
     --color-accent-2: var(--color-accent-2-dark);
     --color-accent-3: var(--color-accent-3-dark);
     --color-accent-hsl-dark: var(--accent-h),
-        var(--accent-s),
-        var(--accent-l);
+    var(--accent-s),
+    var(--accent-l);
     --color-accent-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --color-accent-1-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
     --color-accent-2-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
@@ -3843,14 +3843,14 @@ body {
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.4),
-            calc(1.25*var(--accent-l) / 3));
+    calc(var(--accent-s) / 5.4),
+    calc(1.25*var(--accent-l) / 3));
     --background-tertiary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.4),
-            calc(1.25*var(--accent-l) / 3.6));
+    calc(var(--accent-s) / 5.4),
+    calc(1.25*var(--accent-l) / 3.6));
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.4),
-            calc(1.25*var(--accent-l) / 3.6), 0.6);
+    calc(var(--accent-s) / 5.4),
+    calc(1.25*var(--accent-l) / 3.6), 0.6);
     --background-modifier-hover: hsla(var(--accent-h), 12%, 40%, 0.25);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -3861,11 +3861,11 @@ body {
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121),
-        0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
-        0px 15px 30px rgba(0, 0, 0, 0.3);
+    0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
+    0px 15px 30px rgba(0, 0, 0, 0.3);
     --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
-        0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
-        0px 30px 90px rgba(0, 0, 0, 0.2);
+    0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+    0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
 .theme-dark.theme-dark-background-darker {
@@ -3873,20 +3873,20 @@ body {
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 4));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 3.6));
+    calc(var(--accent-s) / 6),
+    calc(var(--accent-l) / 3.6));
     --background-tertiary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4));
+    calc(var(--accent-s) / 6),
+    calc(var(--accent-l) / 4));
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 6),
-            calc(var(--accent-l) / 4), 0.6);
+    calc(var(--accent-s) / 6),
+    calc(var(--accent-l) / 4), 0.6);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3));
+    calc(var(--accent-s) / 7),
+    calc(var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 2.7));
+    calc(var(--accent-s) / 7),
+    calc(var(--accent-l) / 2.7));
 }
 
 
@@ -3895,20 +3895,20 @@ body {
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 3.1));
     --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 4));
     --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 4.2),
-            calc(1.25*var(--accent-l) / 3.7));
+    calc(var(--accent-s) / 4.2),
+    calc(1.25*var(--accent-l) / 3.7));
     --background-tertiary: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 4.8),
-            calc(1.25*var(--accent-l) / 3));
+    calc(var(--accent-s) / 4.8),
+    calc(1.25*var(--accent-l) / 3));
     --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 4.8),
-            calc(1.25*var(--accent-l) / 3), 0.6);
+    calc(var(--accent-s) / 4.8),
+    calc(1.25*var(--accent-l) / 3), 0.6);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.6),
-            calc(1.25*var(--accent-l) / 2.4));
+    calc(var(--accent-s) / 5.6),
+    calc(1.25*var(--accent-l) / 2.4));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 5.6),
-            calc(1.25*var(--accent-l) / 2.2));
+    calc(var(--accent-s) / 5.6),
+    calc(1.25*var(--accent-l) / 2.2));
 }
 
 
@@ -3920,11 +3920,11 @@ body {
     --background-tertiary: black;
     --workspace-background-translucent: rgba(0, 0, 0, 0.6);
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 4));
+    calc(var(--accent-s) / 7),
+    calc(var(--accent-l) / 4));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(var(--accent-l) / 3.2));
+    calc(var(--accent-s) / 7),
+    calc(var(--accent-l) / 3.2));
     --background-table-rows: var(--color-base-00);
     --line-active-bg: rgba(255, 255, 255, 0.08);
     --line-active-bg-customize: rgba(255, 255, 255, 0.08);
@@ -6065,6 +6065,29 @@ body {
     --nav-item-weight: bold;
 }
 
+/*pane fade*/
+.workspace-leaf-content[data-type="file-explorer"]::before,
+.workspace-leaf-content[data-type="file-explorer"]::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, var(--background-underlying), transparent);
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-files-container .tree-item-children .tree-item{
+    position: relative;
+    z-index: -1;
+}
+
+.workspace-leaf-content[data-type="file-explorer"]::after {
+    bottom: 0;
+    height: 45px;
+    background: linear-gradient(to bottom, transparent, var(--background-underlying));
+}
+
 /*vault name*/
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-title {
     color: var(--nav-item-color);
@@ -6370,11 +6393,11 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-track-hovered-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
 
     --interactive-normal: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 3));
+    calc(var(--accent-s) / 7),
+    calc(1.25*var(--accent-l) / 3));
     --interactive-hover: hsl(calc(var(--accent-h) + 8),
-            calc(var(--accent-s) / 7),
-            calc(1.25*var(--accent-l) / 2.7));
+    calc(var(--accent-s) / 7),
+    calc(1.25*var(--accent-l) / 2.7));
 
     --input-radius: var(--input-radius-dark);
     --input-shadow: var(--input-shadow-dark);
