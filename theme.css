@@ -5756,6 +5756,8 @@ input.wb-search-bar {
 .nav-buttons-container {
     display: flex;
     justify-content: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
 /*outline pane*/
@@ -6073,13 +6075,14 @@ body {
     left: 0;
     right: 0;
     height: 50px;
+    z-index: 1;
     pointer-events: none;
     background: linear-gradient(to bottom, var(--background-underlying), transparent);
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-files-container .tree-item-children .tree-item{
+.workspace-leaf-content[data-type="file-explorer"] .nav-files-container .nav-folder-title[data-path="/"] {
     position: relative;
-    z-index: -1;
+    z-index: 2;
 }
 
 .workspace-leaf-content[data-type="file-explorer"]::after {
