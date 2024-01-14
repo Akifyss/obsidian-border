@@ -71,7 +71,13 @@
 
 ![screenshot](img/Callout-alt.png)
 
-[导入](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style)
+#### 可选替代的代码块主题
+
+![screenshot](img/Codeblock-alt.png)
+
+#### 卡片式布局 （平板端）
+
+![screenshot](img/iPad.png)
 
 #### 可自定义的新标签页
 

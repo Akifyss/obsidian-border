@@ -105,20 +105,6 @@
 
   + [Justblack](https://github.com/Akifyss/obsidian-border/blob/main/presets/Justblack.json) ![screenshot](img/JustBlack.png)
 
-## Callout style
-
-+ [Callout-alt-1](https://github.com/Akifyss/obsidian-border/blob/main/presets/Callout/Callout-alt-1.json)<br>
-![screenshot](img/Callout-alt-1.png)
-
-+ [Callout-alt-2](https://github.com/Akifyss/obsidian-border/blob/main/presets/Callout/Callout-alt-2.json)<br>
-![screenshot](img/Callout-alt-2.png)
-
-+ [Callout-alt-3](https://github.com/Akifyss/obsidian-border/blob/main/presets/Callout/Callout-alt-3.json)<br>
-![screenshot](img/Callout-alt-3.png)
-
-+ [Callout-alt-4](https://github.com/Akifyss/obsidian-border/blob/main/presets/Callout/Callout-alt-4.json)<br>
-![screenshot](img/Callout-alt-4.png)
-
 Updating...
 
 # Create your own UI style

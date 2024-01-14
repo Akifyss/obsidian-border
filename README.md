@@ -71,7 +71,13 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 
 ![screenshot](img/Callout-alt.png)
 
-[import](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style)
+#### Alternate codeblock theme
+
+![screenshot](img/Codeblock-alt.png)
+
+#### Card layout (Pad)
+
+![screenshot](img/iPad.png)
 
 #### Customizable new tab
 
