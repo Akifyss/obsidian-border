@@ -3091,6 +3091,10 @@ settings:
                 value: codeblock-style-customize
             -   label: Dracula
                 value: codeblock-style-dracula
+            -   label: Solarized light
+                value: codeblock-style-solarized-light
+            -   label: Solarized dark
+                value: codeblock-style-solarized-dark
     - 
         id: code-background-light
         title: Customize code background (light mode)
@@ -3237,11 +3241,23 @@ settings:
         collapsed: true
         level: 3
     - 
-        id: Callouts-info
-        description: "[Presets](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style) | Before importing, it is recommended to reset this entry to default / Remove preset↘"
-        description.zh: "[预设](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#callout-style) | 导入前，推荐先将此条目重设为默认 / 移除预设↘ "
-        type: info-text
-        markdown: true
+        id: callout-style-select
+        title: callout style
+        title.zh: 标注风格
+        type: class-select
+        allowEmpty: false
+        default: callout-style-customize
+        options:
+            -   label: Customize
+                value: callout-style-customize
+            -   label: style 1
+                value: callout-style-1
+            -   label: style 2
+                value: callout-style-2
+            -   label: style 3
+                value: callout-style-3
+            -   label: style 4
+                value: callout-style-4
     - 
 		id: callout-border-width
 		title: callout border width
@@ -3607,7 +3623,8 @@ body.file-icon-remove .setting-item[data-id=colorful-folder],
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
 body:not(.line-hover-indicator) .setting-item[data-id=hover-indicator-color],
 body.Ribbon-autohide .setting-item[data-id=icon-autohide],
-body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]) {
+body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]),
+body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-width], [data-id=callout-border-opacity], [data-id=callout-padding], [data-id=callout-radius], [data-id=callout-title-color], [data-id=callout-title-padding], [data-id=callout-title-padding], [data-id=callout-title-size], [data-id=callout-content-padding], [data-id=callout-content-background], [data-id=callout-content-radius]) {
     display: none;
 }
 
@@ -7598,6 +7615,107 @@ li[data-task="<"]>p>input:checked {
 
 /* ====== Callout ====== */
 body {
+    /* Callouts */
+    --callout-border-width: 0px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 0;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0;
+    --callout-content-background: transparent;
+    --callout-content-radius: 0px;
+}
+
+.callout-style-1.theme-light {
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: 0;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #FFFFFFBF;
+    --callout-content-radius: 0px;
+}
+
+.callout-style-1.theme-dark {
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: 0;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #00000040;
+    --callout-content-radius: 0px;
+}
+
+.callout-style-2.theme-light {
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: 0 6px 6px;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #FFFFFFBF;
+    --callout-content-radius: 4px;
+}
+
+.callout-style-2.theme-dark {
+    --callout-border-width: 1px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: 0 6px 6px;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #00000040;
+    --callout-content-radius: 4px;
+}
+
+.callout-style-3:is(.theme-light, .theme-dark) {
+    --callout-border-width: 0 0 0 4px;
+    --callout-border-opacity: 1;
+    --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 0;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0;
+    --callout-content-background: transparent;
+    --callout-content-radius: 0px;
+}
+
+.callout-style-4.theme-light {
+    --callout-border-width: 0 0 0 4px;
+    --callout-border-opacity: 1;
+    --callout-padding: 0;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #FFFFFFBF;
+    --callout-content-radius: 0px;
+}
+
+.callout-style-4.theme-dark {
+    --callout-border-width: 0 0 0 4px;
+    --callout-border-opacity: 1;
+    --callout-padding: 0;
+    --callout-radius: var(--radius-s);
+    --callout-title-color: inherit;
+    --callout-title-padding: 8px 16px;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0px 16px;
+    --callout-content-background: #00000040;
     --callout-content-radius: 0px;
 }
 
@@ -7788,6 +7906,38 @@ body {
     --code-string: #50fa7b;
     --code-tag: #ff5555;
     --code-value: #bd93f9;
+}
+
+.codeblock-style-solarized-light {
+    --code-background-light: #fdf6e3;
+    --code-background-dark: #fdf6e3;
+    --code-normal: #657b83;
+    --code-comment: #93a1a1;
+    --code-function: #b58900;
+    --code-important: #cb4b16;
+    --code-keyword: #d33682;
+    --code-operator: #dc322f;
+    --code-property: #2aa198;
+    --code-punctuation: #657b83;
+    --code-string: #859900;
+    --code-tag: #dc322f;
+    --code-value: #6c71c4;
+}
+
+.codeblock-style-solarized-dark {
+    --code-background-light: #002b36;
+    --code-background-dark: #002b36;
+    --code-normal: #839496;
+    --code-comment: #586e75;
+    --code-function: #b58900;
+    --code-important: #cb4b16;
+    --code-keyword: #d33682;
+    --code-operator: #dc322f;
+    --code-property: #2aa198;
+    --code-punctuation: #839496;
+    --code-string: #859900;
+    --code-tag: #dc322f;
+    --code-value: #6c71c4;
 }
 
 .markdown-source-view.mod-cm6 .code-block-flair,
