@@ -6640,16 +6640,10 @@ body {
 }
 
 
-body:not(.inline-title-divider-remove) .inline-title {
+body:not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
     border-bottom: 1px solid var(--divider-color);
     padding-bottom: var(--size-4-3);
     margin-bottom: var(--size-4-3);
-}
-
-body:not(.inline-title-divider-remove) .mk-folder-header .inline-title,
-body:not(.inline-title-divider-remove) .mk-file-icon+.inline-title {
-    border-bottom: unset;
-    margin-bottom: unset;
 }
 
 .embedded-backlinks {
@@ -7959,21 +7953,6 @@ body {
     background: var(--code-background-dark);
 }
 
-/*
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
-    border-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
     border-top: 1px dashed var(--background-modifier-border);
 }
@@ -7990,7 +7969,21 @@ body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-ac
 .markdown-rendered pre {
     border: 1px dashed var(--background-modifier-border);
 }
-*/
+
+/*
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+    border-radius: 0px;
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}*/
 
 /* ======table ====== */
 body {
