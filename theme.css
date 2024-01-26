@@ -4785,6 +4785,15 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
     --frame-right-space: 110px;
 }
 
+.workspace-tab-header-container {
+    padding-right: var(--size-2-3);
+}
+
+body:not(.is-hidden-frameless):not(.is-mobile) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container,
+.mod-macos.is-hidden-frameless .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+    padding-right: 0px !important;
+}
+
 .workspace-tab-header::before,
 .workspace-tab-header::after {
     display: none;
@@ -4799,13 +4808,12 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
     position: unset;
 }
 
-.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
-    padding-right: 0px;
+.workspace-tab-header-tab-list {
+    margin-right: 0;
 }
 
-body:not(.is-hidden-frameless):not(.is-popout-window):not(.is-mobile) .sidebar-toggle-button.mod-right,
-body:not(.is-hidden-frameless):not(.is-popout-window):not(.is-mobile).hider-sidebar-buttons .mod-root .workspace-tab-header-tab-list {
-    margin-right: -8px;
+body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-toggle-button.mod-right) {
+    margin-right: var(--size-4-1);
 }
 
 .workspace-tab-header-inner {
@@ -5189,6 +5197,7 @@ body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-fra
 /* hider plugin*/
 .hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left {
     display: unset;
+    -webkit-app-region: drag;
 }
 
 .hider-sidebar-buttons.mod-macos .sidebar-toggle-button.mod-left>.clickable-icon {
