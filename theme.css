@@ -2915,7 +2915,7 @@ settings:
 		default: 2em
     - 
 		id: list-spacing
-		title: list indent
+		title: list spacing
         title.zh:  列表间距
 		type: variable-text
 		default: 0.075em
