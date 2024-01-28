@@ -3095,6 +3095,8 @@ settings:
                 value: codeblock-style-solarized-light
             -   label: Solarized dark
                 value: codeblock-style-solarized-dark
+            -   label: One dark
+                value: codeblock-style-one-dark
     - 
         id: code-background-light
         title: Customize code background (light mode)
@@ -7941,6 +7943,22 @@ body {
     --code-string: #859900;
     --code-tag: #dc322f;
     --code-value: #6c71c4;
+}
+
+.codeblock-style-one-dark {
+    --code-background-light: #282C34;
+    --code-background-dark: #282C34;
+    --code-normal: #ABB2BF;
+    --code-comment: #5C6370;
+    --code-function: #E5C07B;
+    --code-important: #D19A66;
+    --code-keyword: #E06C75;
+    --code-operator: #BE5046;
+    --code-property: #56B6C2;
+    --code-punctuation: #ABB2BF;
+    --code-string: #98C379;
+    --code-tag: #BE5046;
+    --code-value: #C678DD;
 }
 
 .markdown-source-view.mod-cm6 .code-block-flair,
