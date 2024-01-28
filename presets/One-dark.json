@@ -1,0 +1,21 @@
+{
+  "Appearance-dark@@accent-dark": "#528BFF",
+  "Appearance-dark@@accent-color-override-dark": true,
+  "Appearance-dark@@color-red-rgb@@dark": "#BE5046",
+  "Appearance-dark@@color-orange-rgb@@dark": "#D19A66",
+  "Appearance-dark@@color-yellow-rgb@@dark": "#E5C07B",
+  "Appearance-dark@@color-green-rgb@@dark": "#98C379",
+  "Appearance-dark@@color-cyan-rgb@@dark": "#56B6C2",
+  "Appearance-dark@@color-blue-rgb@@dark": "#61AFEF",
+  "Appearance-dark@@color-purple-rgb@@dark": "#C678DD",
+  "Appearance-dark@@color-pink-rgb@@dark": "#E06C75",
+  "Appearance-dark@@on-border-dark": "#ABB2BF",
+  "Appearance-dark@@mix-blend-mode-on-border-dark": "\"\"",
+  "Appearance-dark@@background-primary@@dark": "#282C34",
+  "Appearance-dark@@background-secondary@@dark": "#21252B",
+  "Appearance-dark@@background-tertiary@@dark": "#333842",
+  "Appearance-dark@@text-normal@@dark": "#ABB2BF",
+  "Appearance-dark@@text-muted@@dark": "#7F848E",
+  "Appearance-dark@@text-faint@@dark": "#5C6370",
+  "Appearance-dark@@background-activated-tab-header-dark": "#404754"
+}
