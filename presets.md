@@ -63,6 +63,9 @@
   + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
 ![screenshot](img/Obsidian-default-dark-alt.png)
 
++ [One dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/One-dark.json)
+![screenshot](img/One-dark.png)
+
 + [Rosé Pine](https://github.com/Akifyss/obsidian-border/blob/main/presets/Rosé-Pine.json) (Palette from [Rosé Pine](https://rosepinetheme.com/palette))
 ![screenshot](img/Rosé-Pine.png)
 
