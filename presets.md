@@ -23,6 +23,9 @@
   + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
 ![screenshot](img/Obsidian-default-light-alt.png)
 
++ [Github-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-light.json)
+![screenshot](img/Github-light.png)
+
 + [Eye-friendly](https://github.com/Akifyss/obsidian-border/blob/main/presets/Eye-friendly.json)
 ![screenshot](img/Eye-friendly.png)
 
