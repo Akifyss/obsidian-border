@@ -66,6 +66,9 @@
   + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
 ![screenshot](img/Obsidian-default-dark-alt.png)
 
++ [Github-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-dark.json)
+![screenshot](img/Github-dark.png)
+
 + [One dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/One-dark.json)
 ![screenshot](img/One-dark.png)
 
