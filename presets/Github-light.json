@@ -27,6 +27,6 @@
   "Appearance-light@@background-activated-tab-header-light": "var(--background-tertiary)",
   "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--background-tertiary),0px 12px 0px -6px #fd8c73",
   "Appearance-light@@input-radius-light": 6,
-  "Appearance-light@@input-shadow-light": "rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset ,rgba(27, 31, 35, 0.15) 0 0 0 1px",
-  "Appearance-light@@input-shadow-hover-light": "rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset ,rgba(27, 31, 35, 0.15) 0 0 0 1px"
+  "Appearance-light@@input-shadow-light": "rgba(31, 35, 40, 0.04) 0px 1px 0px 0px, inset 0 0 0 1px rgba(31, 35, 40, 0.15)",
+  "Appearance-light@@input-shadow-hover-light": "rgba(31, 35, 40, 0.04) 0px 1px 0px 0px, inset 0 0 0 1px rgba(31, 35, 40, 0.15)"
 }
