@@ -7797,6 +7797,10 @@ body {
     border-left: 4px solid transparent;
 }
 
+.cm-s-obsidian span.cm-formatting-quote{
+    padding-left: 4px;
+}
+
 .markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote::before,
 .markdown-source-view.mod-cm6 .cm-content :first-child:is(.HyperMD-quote)::before {
     top: 4px !important;
