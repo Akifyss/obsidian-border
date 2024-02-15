@@ -7730,8 +7730,8 @@ body {
 
 /* ======Blockquotes ====== */
 body {
-    --background-alt-light: radial-gradient(rgba(0, 0, 0, 0.1) .5px, transparent .5px) 0 0 / 2px 2px;
-    --background-alt-dark: radial-gradient(rgba(255, 255, 255, 0.1) .5px, transparent .5px) 0 0 / 2px 2px;
+    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 body {
@@ -7797,7 +7797,7 @@ body {
     border-left: 4px solid transparent;
 }
 
-.cm-s-obsidian span.cm-formatting-quote{
+.cm-s-obsidian span.cm-formatting-quote {
     padding-left: 4px;
 }
 
