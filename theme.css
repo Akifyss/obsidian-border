@@ -7798,7 +7798,8 @@ body {
 }
 
 .cm-s-obsidian span.cm-formatting-quote {
-    padding-left: 3px;
+    position: relative;
+    left: 3px;
 }
 
 .markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote::before,
