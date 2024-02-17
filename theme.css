@@ -2229,12 +2229,54 @@ name: Editor
 id: Editor
 settings:
     - 
+        id: border-focus-mode-heading
+        title: Focus mode
+        title.zh: 专注模式
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: border-focus-mode-info
+        description: "Highlight active line"
+        description.zh: "突出显示当前活动行"
+        type: info-text
+        markdown: true
+    - 
+        id: border-focus-mode
+        title: Enable focus mode
+        title.zh: 启用 专注模式
+        type: class-toggle
+    - 
+		id: line-active-bg
+		title: Active line background color
+        title.zh: 活动行背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: line-normal-opacity
+        title: Normal line opacity
+        title.zh: 普通行透明度
+        type: variable-number-slider
+        default: 0.5
+        min: 0.05
+        max: 1
+        step: 0.05
+    - 
         id: line-emphasis
         title: Hover line indicator
         title.zh: 悬停行指示器
         type: heading
         collapsed: ture
         level: 3
+    - 
+        id: line-hover-indicator-info
+        description: "Display a vertical line indicator before hovered line"
+        description.zh: "在鼠标悬停行前显示一个竖线指示器"
+        type: info-text
+        markdown: true
     - 
         id: line-hover-indicator
         title: Enable hover line indicator
@@ -3487,8 +3529,7 @@ settings:
 
 
 /*hide style setting option*/
-body.line-active-disable .setting-item:is([data-id=line-active-bg-color], [data-id=line-active-bg-customize]),
-body:not(.line-active-bg-color-customize) .setting-item[data-id=line-active-bg-customize],
+body:not(.border-focus-mode) .setting-item:is([data-id=line-active-bg], [data-id=line-normal-opacity]),
 body:not(.inline-title-color-customized) .setting-item[data-id=inline-title-color],
 body:not(.h1-color-customized) .setting-item[data-id=h1-color],
 body:not(.h2-color-customized) .setting-item[data-id=h2-color],
@@ -3928,8 +3969,6 @@ body {
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3.2));
     --background-table-rows: var(--color-base-00);
-    --line-active-bg: rgba(255, 255, 255, 0.08);
-    --line-active-bg-customize: rgba(255, 255, 255, 0.08);
     --background-modifier-border: var(--color-base-30);
     --background-modifier-border-hover: var(--color-base-35);
     --background-modifier-border-focus: var(--color-base-40);
@@ -7105,42 +7144,42 @@ body {
 
 /* ====== line emphasis ====== */
 /* ====== highlight ====== */
-/*
-.theme-dark {
-    --line-active-bg: rgba(255, 255, 255, 0.04);
-    --line-active-bg-customize: rgba(255, 255, 255, 0.04);
+body {
+    --line-normal-opacity: 0.5;
 }
 
-.theme-light {
-    --line-active-bg: rgba(0, 0, 0, 0.035);
-    --line-active-bg-customize: rgba(0, 0, 0, 0.035);
-}
-
-body:not(.line-active-disable) .cm-lineWrapping>.cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container), .HyperMD-header) {
+.border-focus-mode .cm-lineWrapping>.cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container)) {
     background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
+    opacity: 1;
 }
 
-body:not(.line-active-disable).line-active-bg-color-accent .cm-lineWrapping>.cm-line.cm-active {
-    --line-active-bg: hsla(var(--interactive-accent-hsl), 0.08);
-}
-
-body:not(.line-active-disable).line-active-bg-color-customize .cm-lineWrapping>.cm-line.cm-active {
-    --line-active-bg: var(--line-active-bg-customize);
-}
-
-.cm-lineWrapping>.cm-line:not(.HyperMD-codeblock) {
+.border-focus-mode .cm-lineWrapping>.cm-line {
     padding-left: var(--size-4-1);
     padding-right: var(--size-4-1);
+    opacity: var(--line-normal-opacity);
 }
 
-.cm-lineWrapping>.cm-table-widget .cm-line {
+.border-focus-mode .cm-lineWrapping>.cm-table-widget .cm-line {
     background-color: unset !important;
     border-radius: unset !important;
     padding-left: unset !important;
     padding-right: unset !important;
 }
-*/
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+    border-radius: 0px;
+}
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
 
 /* ====== hover indicator ====== */
 
@@ -8001,21 +8040,6 @@ body {
 .markdown-rendered pre {
     border: 1px dashed var(--background-modifier-border);
 }
-
-/*
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
-    border-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}*/
 
 /* ======table ====== */
 body {
