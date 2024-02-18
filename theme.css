@@ -3989,11 +3989,11 @@ body {
 
 /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
 body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
+body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
 body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
 body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
 body:not(.is-phone, .extra-anim-remove) .prompt,
-body:not(.is-mobile, .extra-anim-remove) .document-search-container,
-body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)) {
+body:not(.is-mobile, .extra-anim-remove) .document-search-container {
     -webkit-animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
     animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
@@ -4442,7 +4442,7 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
 /* ====== Layout ===== */
 /* default Layout*/
 body {
-    --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    --card-shadow-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
     --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
     --card-border-radius-light: 8px;
     --card-border-radius-dark: 8px;
@@ -6252,15 +6252,15 @@ body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+2) {
 }
 
 body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+3) {
-    --colorful-folder-color: var(--color-green);
-}
-
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+4) {
     --colorful-folder-color: var(--color-orange);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+5) {
+body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+4) {
     --colorful-folder-color: var(--color-yellow);
+}
+
+body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+5) {
+    --colorful-folder-color: var(--color-green);
 }
 
 body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+6) {
