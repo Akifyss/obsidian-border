@@ -446,57 +446,57 @@ settings:
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#fe7968'
-		default-dark: '#ff8a78'
+		default-light: '#dd2c38'
+		default-dark: '#ff7881'
 	- 
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f39c12'
-		default-dark: '#fabe58'
+		default-light: '#de7417'
+		default-dark: '#fbbb83'
 	- 
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#e5c700'
-		default-dark: '#ffec8b'
+		default-light: '#c09c0c'
+		default-dark: '#ffe88b'
 	- 
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#78BA7E'
-		default-dark: '#87d37c'
+		default-light: '#1da51d'
+		default-dark: '#7cd37c'
 	- 
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#36d7b7'
-		default-dark: '#86e2d5'
+		default-light: '#16a6ab'
+		default-dark: '#86dfe2'
 	- 
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#038aff'
-		default-dark: '#89c4f4'
+		default-light: '#1775d9'
+		default-dark: '#89bdf4'
 	- 
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#9455ec'
-		default-dark: '#c69eff'
+		default-light: '#8f47e1'
+		default-dark: '#cb9eff'
 	- 
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f23fa5'
-		default-dark: '#f2b6c1'
+		default-light: '#dd1399'
+		default-dark: '#f2b6de'
     - 
         id: Background-light
         title: Background
@@ -1394,57 +1394,57 @@ settings:
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#fe7968'
-		default-dark: '#ff8a78'
+		default-light: '#dd2c38'
+		default-dark: '#ff7881'
 	- 
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f39c12'
-		default-dark: '#fabe58'
+		default-light: '#de7417'
+		default-dark: '#fbbb83'
 	- 
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#e5c700'
-		default-dark: '#ffec8b'
+		default-light: '#c09c0c'
+		default-dark: '#ffe88b'
 	- 
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#78BA7E'
-		default-dark: '#87d37c'
+		default-light: '#1da51d'
+		default-dark: '#7cd37c'
 	- 
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#36d7b7'
-		default-dark: '#86e2d5'
+		default-light: '#16a6ab'
+		default-dark: '#86dfe2'
 	- 
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#038aff'
-		default-dark: '#89c4f4'
+		default-light: '#1775d9'
+		default-dark: '#89bdf4'
 	- 
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#9455ec'
-		default-dark: '#c69eff'
+		default-light: '#8f47e1'
+		default-dark: '#cb9eff'
 	- 
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f23fa5'
-		default-dark: '#f2b6c1'
+		default-light: '#dd1399'
+		default-dark: '#f2b6de'
     - 
         id: Background-dark
         title: Background
@@ -2229,12 +2229,54 @@ name: Editor
 id: Editor
 settings:
     - 
+        id: border-focus-mode-heading
+        title: Focus mode
+        title.zh: 专注模式
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: border-focus-mode-info
+        description: "Highlight active line"
+        description.zh: "突出显示当前活动行"
+        type: info-text
+        markdown: true
+    - 
+        id: border-focus-mode
+        title: Enable focus mode
+        title.zh: 启用 专注模式
+        type: class-toggle
+    - 
+		id: line-active-bg
+		title: Active line background color
+        title.zh: 活动行背景色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: line-normal-opacity
+        title: Normal line opacity
+        title.zh: 普通行透明度
+        type: variable-number-slider
+        default: 0.5
+        min: 0.05
+        max: 1
+        step: 0.05
+    - 
         id: line-emphasis
         title: Hover line indicator
         title.zh: 悬停行指示器
         type: heading
         collapsed: ture
         level: 3
+    - 
+        id: line-hover-indicator-info
+        description: "Display a vertical line indicator before hovered line"
+        description.zh: "在鼠标悬停行前显示一个竖线指示器"
+        type: info-text
+        markdown: true
     - 
         id: line-hover-indicator
         title: Enable hover line indicator
@@ -3487,8 +3529,7 @@ settings:
 
 
 /*hide style setting option*/
-body.line-active-disable .setting-item:is([data-id=line-active-bg-color], [data-id=line-active-bg-customize]),
-body:not(.line-active-bg-color-customize) .setting-item[data-id=line-active-bg-customize],
+body:not(.border-focus-mode) .setting-item:is([data-id=line-active-bg], [data-id=line-normal-opacity]),
 body:not(.inline-title-color-customized) .setting-item[data-id=inline-title-color],
 body:not(.h1-color-customized) .setting-item[data-id=h1-color],
 body:not(.h2-color-customized) .setting-item[data-id=h2-color],
@@ -3686,21 +3727,21 @@ body {
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
-    --color-red-rgb: 254, 121, 104;
+    --color-red-rgb: 221, 44, 56;
     --color-red: rgb(var(--color-red-rgb));
-    --color-green-rgb: 120, 186, 126;
+    --color-green-rgb: 29, 165, 29;
     --color-green: rgb(var(--color-green-rgb));
-    --color-orange-rgb: 243, 156, 18;
+    --color-orange-rgb: 222, 116, 23;
     --color-orange: rgb(var(--color-orange-rgb));
-    --color-yellow-rgb: 229, 199, 0;
+    --color-yellow-rgb: 192, 156, 12;
     --color-yellow: rgb(var(--color-yellow-rgb));
-    --color-cyan-rgb: 54, 215, 183;
+    --color-cyan-rgb: 22, 166, 171;
     --color-cyan: rgb(var(--color-cyan-rgb));
-    --color-blue-rgb: 3, 138, 255;
+    --color-blue-rgb: 23, 117, 217;
     --color-blue: rgb(var(--color-blue-rgb));
-    --color-purple-rgb: 148, 85, 236;
+    --color-purple-rgb: 143, 71, 225;
     --color-purple: rgb(var(--color-purple-rgb));
-    --color-pink-rgb: 242, 63, 165;
+    --color-pink-rgb: 221, 19, 153;
     --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
@@ -3792,21 +3833,21 @@ body {
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
-    --color-red-rgb: 255, 138, 120;
+    --color-red-rgb: 255, 120, 129;
     --color-red: rgb(var(--color-red-rgb));
-    --color-green-rgb: 135, 211, 124;
+    --color-green-rgb: 124, 211, 124;
     --color-green: rgb(var(--color-green-rgb));
-    --color-orange-rgb: 250, 190, 88;
+    --color-orange-rgb: 251, 187, 131;
     --color-orange: rgb(var(--color-orange-rgb));
-    --color-yellow-rgb: 255, 236, 139;
+    --color-yellow-rgb: 255, 232, 139;
     --color-yellow: rgb(var(--color-yellow-rgb));
-    --color-cyan-rgb: 134, 226, 213;
+    --color-cyan-rgb: 134, 223, 226;
     --color-cyan: rgb(var(--color-cyan-rgb));
-    --color-blue-rgb: 137, 196, 244;
+    --color-blue-rgb: 137, 189, 244;
     --color-blue: rgb(var(--color-blue-rgb));
-    --color-purple-rgb: 198, 158, 255;
+    --color-purple-rgb: 203, 158, 255;
     --color-purple: rgb(var(--color-purple-rgb));
-    --color-pink-rgb: 242, 182, 193;
+    --color-pink-rgb: 242, 182, 222;
     --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #1e1e1e;
     --color-base-10: #242424;
@@ -3928,8 +3969,6 @@ body {
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3.2));
     --background-table-rows: var(--color-base-00);
-    --line-active-bg: rgba(255, 255, 255, 0.08);
-    --line-active-bg-customize: rgba(255, 255, 255, 0.08);
     --background-modifier-border: var(--color-base-30);
     --background-modifier-border-hover: var(--color-base-35);
     --background-modifier-border-focus: var(--color-base-40);
@@ -3950,11 +3989,11 @@ body {
 
 /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
 body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
+body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
 body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
 body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
 body:not(.is-phone, .extra-anim-remove) .prompt,
-body:not(.is-mobile, .extra-anim-remove) .document-search-container,
-body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)) {
+body:not(.is-mobile, .extra-anim-remove) .document-search-container {
     -webkit-animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
     animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
@@ -4403,7 +4442,7 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
 /* ====== Layout ===== */
 /* default Layout*/
 body {
-    --card-shadow-light: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    --card-shadow-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
     --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
     --card-border-radius-light: 8px;
     --card-border-radius-dark: 8px;
@@ -4487,7 +4526,7 @@ body:not(.is-mobile) .workspace::before {
     height: calc(100% - 44px);
     border-radius: var(--card-shadow-border-radius-light, 7px);
     background-color: transparent;
-    box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
+    box-shadow: var(--card-shadow-light);
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -4558,7 +4597,7 @@ body:not(.is-mobile).card-layout-open-light.theme-light .workspace-split.mod-ver
 body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tab-container {
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
-    box-shadow: var(--card-shadow-light, 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2));
+    box-shadow: var(--card-shadow-light);
 }
 
 body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs,
@@ -6213,15 +6252,15 @@ body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+2) {
 }
 
 body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+3) {
-    --colorful-folder-color: var(--color-green);
-}
-
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+4) {
     --colorful-folder-color: var(--color-orange);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+5) {
+body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+4) {
     --colorful-folder-color: var(--color-yellow);
+}
+
+body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+5) {
+    --colorful-folder-color: var(--color-green);
 }
 
 body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+6) {
@@ -7105,42 +7144,42 @@ body {
 
 /* ====== line emphasis ====== */
 /* ====== highlight ====== */
-/*
-.theme-dark {
-    --line-active-bg: rgba(255, 255, 255, 0.04);
-    --line-active-bg-customize: rgba(255, 255, 255, 0.04);
+body {
+    --line-normal-opacity: 0.5;
 }
 
-.theme-light {
-    --line-active-bg: rgba(0, 0, 0, 0.035);
-    --line-active-bg-customize: rgba(0, 0, 0, 0.035);
-}
-
-body:not(.line-active-disable) .cm-lineWrapping>.cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container), .HyperMD-header) {
+.border-focus-mode .cm-lineWrapping>.cm-line.cm-active:not(:has(.mk-note-footer, .mk-floweditor-container)) {
     background-color: var(--line-active-bg);
     border-radius: var(--radius-s);
+    opacity: 1;
 }
 
-body:not(.line-active-disable).line-active-bg-color-accent .cm-lineWrapping>.cm-line.cm-active {
-    --line-active-bg: hsla(var(--interactive-accent-hsl), 0.08);
-}
-
-body:not(.line-active-disable).line-active-bg-color-customize .cm-lineWrapping>.cm-line.cm-active {
-    --line-active-bg: var(--line-active-bg-customize);
-}
-
-.cm-lineWrapping>.cm-line:not(.HyperMD-codeblock) {
+.border-focus-mode .cm-lineWrapping>.cm-line {
     padding-left: var(--size-4-1);
     padding-right: var(--size-4-1);
+    opacity: var(--line-normal-opacity);
 }
 
-.cm-lineWrapping>.cm-table-widget .cm-line {
+.border-focus-mode .cm-lineWrapping>.cm-table-widget .cm-line {
     background-color: unset !important;
     border-radius: unset !important;
     padding-left: unset !important;
     padding-right: unset !important;
 }
-*/
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+    border-radius: 0px;
+}
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
 
 /* ====== hover indicator ====== */
 
@@ -7730,8 +7769,8 @@ body {
 
 /* ======Blockquotes ====== */
 body {
-    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 body {
@@ -8001,21 +8040,6 @@ body {
 .markdown-rendered pre {
     border: 1px dashed var(--background-modifier-border);
 }
-
-/*
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
-    border-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-begin-bg {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-body:not(.line-active-disable) .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-end-bg {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}*/
 
 /* ======table ====== */
 body {
@@ -8391,7 +8415,7 @@ body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
-    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
@@ -8404,7 +8428,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-left: none;
     border-radius: var(--card-border-radius-light, 8px) !important;
     margin: 0px;
-    box-shadow: 0px 0px 8px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.2);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
