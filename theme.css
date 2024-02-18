@@ -446,57 +446,57 @@ settings:
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#fe7968'
-		default-dark: '#ff8a78'
+		default-light: '#dd2c38'
+		default-dark: '#ff7881'
 	- 
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f39c12'
-		default-dark: '#fabe58'
+		default-light: '#de7417'
+		default-dark: '#fbbb83'
 	- 
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#e5c700'
-		default-dark: '#ffec8b'
+		default-light: '#c09c0c'
+		default-dark: '#ffe88b'
 	- 
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#78BA7E'
-		default-dark: '#87d37c'
+		default-light: '#1da51d'
+		default-dark: '#7cd37c'
 	- 
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#36d7b7'
-		default-dark: '#86e2d5'
+		default-light: '#16a6ab'
+		default-dark: '#86dfe2'
 	- 
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#038aff'
-		default-dark: '#89c4f4'
+		default-light: '#1775d9'
+		default-dark: '#89bdf4'
 	- 
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#9455ec'
-		default-dark: '#c69eff'
+		default-light: '#8f47e1'
+		default-dark: '#cb9eff'
 	- 
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f23fa5'
-		default-dark: '#f2b6c1'
+		default-light: '#dd1399'
+		default-dark: '#f2b6de'
     - 
         id: Background-light
         title: Background
@@ -1394,57 +1394,57 @@ settings:
 		title: Red
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#fe7968'
-		default-dark: '#ff8a78'
+		default-light: '#dd2c38'
+		default-dark: '#ff7881'
 	- 
 		id: color-orange-rgb
 		title: Orange
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f39c12'
-		default-dark: '#fabe58'
+		default-light: '#de7417'
+		default-dark: '#fbbb83'
 	- 
 		id: color-yellow-rgb
 		title: Yellow
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#e5c700'
-		default-dark: '#ffec8b'
+		default-light: '#c09c0c'
+		default-dark: '#ffe88b'
 	- 
 		id: color-green-rgb
 		title: Green
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#78BA7E'
-		default-dark: '#87d37c'
+		default-light: '#1da51d'
+		default-dark: '#7cd37c'
 	- 
 		id: color-cyan-rgb
 		title: Cyan
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#36d7b7'
-		default-dark: '#86e2d5'
+		default-light: '#16a6ab'
+		default-dark: '#86dfe2'
 	- 
 		id: color-blue-rgb
 		title: Blue
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#038aff'
-		default-dark: '#89c4f4'
+		default-light: '#1775d9'
+		default-dark: '#89bdf4'
 	- 
 		id: color-purple-rgb
 		title: Purple
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#9455ec'
-		default-dark: '#c69eff'
+		default-light: '#8f47e1'
+		default-dark: '#cb9eff'
 	- 
 		id: color-pink-rgb
 		title: Pink
 		type: variable-themed-color
         format: 'rgb-values'
-		default-light: '#f23fa5'
-		default-dark: '#f2b6c1'
+		default-light: '#dd1399'
+		default-dark: '#f2b6de'
     - 
         id: Background-dark
         title: Background
@@ -3727,21 +3727,21 @@ body {
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
-    --color-red-rgb: 254, 121, 104;
+    --color-red-rgb: 221, 44, 56;
     --color-red: rgb(var(--color-red-rgb));
-    --color-green-rgb: 120, 186, 126;
+    --color-green-rgb: 29, 165, 29;
     --color-green: rgb(var(--color-green-rgb));
-    --color-orange-rgb: 243, 156, 18;
+    --color-orange-rgb: 222, 116, 23;
     --color-orange: rgb(var(--color-orange-rgb));
-    --color-yellow-rgb: 229, 199, 0;
+    --color-yellow-rgb: 192, 156, 12;
     --color-yellow: rgb(var(--color-yellow-rgb));
-    --color-cyan-rgb: 54, 215, 183;
+    --color-cyan-rgb: 22, 166, 171;
     --color-cyan: rgb(var(--color-cyan-rgb));
-    --color-blue-rgb: 3, 138, 255;
+    --color-blue-rgb: 23, 117, 217;
     --color-blue: rgb(var(--color-blue-rgb));
-    --color-purple-rgb: 148, 85, 236;
+    --color-purple-rgb: 143, 71, 225;
     --color-purple: rgb(var(--color-purple-rgb));
-    --color-pink-rgb: 242, 63, 165;
+    --color-pink-rgb: 221, 19, 153;
     --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #ffffff;
     --color-base-05: #fcfcfc;
@@ -3833,21 +3833,21 @@ body {
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
-    --color-red-rgb: 255, 138, 120;
+    --color-red-rgb: 255, 120, 129;
     --color-red: rgb(var(--color-red-rgb));
-    --color-green-rgb: 135, 211, 124;
+    --color-green-rgb: 124, 211, 124;
     --color-green: rgb(var(--color-green-rgb));
-    --color-orange-rgb: 250, 190, 88;
+    --color-orange-rgb: 251, 187, 131;
     --color-orange: rgb(var(--color-orange-rgb));
-    --color-yellow-rgb: 255, 236, 139;
+    --color-yellow-rgb: 255, 232, 139;
     --color-yellow: rgb(var(--color-yellow-rgb));
-    --color-cyan-rgb: 134, 226, 213;
+    --color-cyan-rgb: 134, 223, 226;
     --color-cyan: rgb(var(--color-cyan-rgb));
-    --color-blue-rgb: 137, 196, 244;
+    --color-blue-rgb: 137, 189, 244;
     --color-blue: rgb(var(--color-blue-rgb));
-    --color-purple-rgb: 198, 158, 255;
+    --color-purple-rgb: 203, 158, 255;
     --color-purple: rgb(var(--color-purple-rgb));
-    --color-pink-rgb: 242, 182, 193;
+    --color-pink-rgb: 242, 182, 222;
     --color-pink: rgb(var(--color-pink-rgb));
     --color-base-00: #1e1e1e;
     --color-base-10: #242424;
@@ -7769,8 +7769,8 @@ body {
 
 /* ======Blockquotes ====== */
 body {
-    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.16' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    --background-alt-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.12' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 body {
