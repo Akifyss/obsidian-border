@@ -6710,7 +6710,7 @@ body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indica
 
 body:not(.heading-indicator-off) :is(.markdown-rendered, .markdown-preview-view) :is(h1, h2, h3, h4, h5, h6) {
     position: relative;
-    text-indent: 5px;
+    text-indent: 9px;
 }
 
 /* h1 */
