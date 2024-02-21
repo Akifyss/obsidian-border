@@ -7936,6 +7936,10 @@ body {
     --code-value: var(--color-purple);
 }
 
+.cm-s-obsidian .HyperMD-codeblock {
+    caret-color: auto;
+}
+
 .codeblock-style-dracula {
     --code-background-light: #282A36;
     --code-background-dark: #282A36;
