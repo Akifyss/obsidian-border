@@ -6671,15 +6671,13 @@ body:not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
     border-top: 1px solid var(--divider-color);
 }
 
+body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator,
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indicator.collapse-icon {
     transform: translateX(-8px);
 }
 
-body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator {
-    transform: translateX(-4px);
-}
-
-body:not(.heading-indicator-off) :is(.markdown-rendered, .markdown-preview-view) :is(h1, h2, h3, h4, h5, h6) {
+body:not(.heading-indicator-off) .markdown-rendered>:is(h1, h2, h3, h4, h5, h6),
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>:is(h1, h2, h3, h4, h5, h6) {
     position: relative;
     text-indent: 9px;
 }
