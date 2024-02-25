@@ -5312,6 +5312,14 @@ body:not(.is-mobile).tab-title-bar-autohide .view-header:hover :is(.view-actions
 }
 
 /*view-header*/
+.view-actions,
+.view-header-nav-buttons {
+    gap: var(--size-2-1);
+}
+
+.view-actions:has(>.cmdr-page-header) {
+    gap: unset;
+}
 
 body:not(.is-mobile) .view-header {
     padding: 0 6px;
