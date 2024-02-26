@@ -24,7 +24,7 @@
   "Appearance-light@@interactive-normal@@light": "#F6F8FA",
   "Appearance-light@@interactive-hover@@light": "#F3F4F6",
   "Appearance-light@@card-shadow-light": "0px 0px 0px 1px var(--background-modifier-border)",
-  "Appearance-light@@background-activated-tab-header-light": "var(--background-tertiary)",
+  "Appearance-light@@background-activated-tab-header-light": "transparent",
   "Appearance-light@@shadow-activated-tab-header-light": "0px 3px 0px var(--background-tertiary),0px 12px 0px -6px #fd8c73",
   "Appearance-light@@input-radius-light": 6,
   "Appearance-light@@input-shadow-light": "rgba(31, 35, 40, 0.04) 0px 1px 0px 0px, inset 0 0 0 1px rgba(31, 35, 40, 0.15)",

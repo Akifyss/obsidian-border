@@ -25,7 +25,7 @@
   "Appearance-dark@@interactive-normal@@dark": "#373E47",
   "Appearance-dark@@interactive-hover@@dark": "#444C56",
   "Appearance-dark@@card-shadow-dark": "0px 0px 0px 1px var(--background-modifier-border)",
-  "Appearance-dark@@background-activated-tab-header-dark": "var(--background-tertiary)",
+  "Appearance-dark@@background-activated-tab-header-dark": "transparent",
   "Appearance-dark@@shadow-activated-tab-header-dark": "0px 3px 0px var(--background-tertiary),0px 12px 0px -6px #ec775c",
   "Appearance-dark@@input-radius-dark": 6,
   "Appearance-dark@@input-shadow-dark": "inset 0 0 0 1px rgba(205, 217, 229, 0.1)",
