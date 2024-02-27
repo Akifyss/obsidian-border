@@ -2363,6 +2363,14 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
+	- 
+		id: inline-title-capitalization
+		title: inline title text capitalization
+		title.zh: 页内标题 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
     - 
 		id: level-1-headings
 		title: Level 1 Headings
@@ -2419,6 +2427,14 @@ settings:
             -   label: Accent color
                 value: h1-color-designated
     - 
+		id: h1-capitalization
+		title: H1 text capitalization
+		title.zh: H1 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
+    - 
 		id: level-2-headings
 		title: Level 2 Headings
         title.zh: 二级标题
@@ -2473,6 +2489,14 @@ settings:
                 value: h2-color-default
             -   label: Accent color
                 value: h2-color-designated
+    - 
+		id: h2-capitalization
+		title: H2 text capitalization
+		title.zh: H2 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
     - 
 		id: level-3-headings
 		title: Level 3 Headings
@@ -2529,6 +2553,14 @@ settings:
             -   label: Accent color
                 value: h3-color-designated
     - 
+		id: h3-capitalization
+		title: H3 text capitalization
+		title.zh: H3 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
+    - 
 		id: level-4-headings
 		title: Level 4 Headings
         title.zh: 四级标题
@@ -2584,6 +2616,14 @@ settings:
             -   label: Accent color
                 value: h4-color-designated
     - 
+		id: h4-capitalization
+		title: H4 text capitalization
+    	title.zh: H4 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
+    - 
 		id: level-5-headings
 		title: Level 5 Headings
         title.zh: 五级标题
@@ -2638,6 +2678,14 @@ settings:
                 value: h5-color-default
             -   label: Accent color
                 value: h5-color-designated
+    - 
+		id: h5-capitalization
+		title: H5 text capitalization
+		title.zh: H5 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
 	- 
 		id: level-6-headings
 		title: Level 6 Headings
@@ -2693,6 +2741,14 @@ settings:
                 value: h6-color-default
             -   label: Accent color
                 value: h6-color-designated
+    - 
+		id: h6-capitalization
+		title: H6 text capitalization
+		title.zh: H6 文本大小写
+		description: Input any CSS text-transform value
+		description.zh: 输入任意 CSS text-transform 值
+		type: variable-text
+		default: ''
     - 
         id: Paragraph
         title: Paragraph
@@ -6667,6 +6723,10 @@ body:not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
     margin-bottom: var(--size-4-3);
 }
 
+.inline-title {
+    text-transform: var(--inline-title-capitalization);
+}
+
 .embedded-backlinks {
     border-top: 1px solid var(--divider-color);
 }
@@ -6737,6 +6797,10 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
     color: var(--h1-accent-color);
 }
 
+.HyperMD-header-1 .cm-header-1, .markdown-rendered h1 {
+    text-transform: var(--h1-capitalization);
+}
+
 .h2-color-designated {
     --h2-color: var(--h2-accent-color) !important;
 }
@@ -6792,6 +6856,10 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
     color: var(--h2-accent-color);
 }
 
+.HyperMD-header-2 .cm-header-2, .markdown-rendered h2 {
+    text-transform: var(--h2-capitalization);
+}
+
 .h3-color-designated {
     --h3-color: var(--h3-accent-color) !important;
 }
@@ -6843,6 +6911,10 @@ body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .is-collapse
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h3 .collapse-indicator.collapse-icon svg {
     background-color: var(--h3-accent-color);
     color: var(--h3-accent-color);
+}
+
+.HyperMD-header-3 .cm-header-3, .markdown-rendered h3 {
+    text-transform: var(--h3-capitalization);
 }
 
 .h4-color-designated {
@@ -6899,6 +6971,10 @@ body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view)
     color: var(--h4-accent-color);
 }
 
+.HyperMD-header-4 .cm-header-4, .markdown-rendered h4 {
+    text-transform: var(--h4-capitalization);
+}
+
 .h5-color-designated {
     --h5-color: var(--h5-accent-color) !important;
 }
@@ -6951,6 +7027,10 @@ body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .is-collapse
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h5 .collapse-indicator.collapse-icon svg {
     background-color: var(--h5-accent-color);
     color: var(--h5-accent-color);
+}
+
+.HyperMD-header-5 .cm-header-5, .markdown-rendered h5 {
+    text-transform: var(--h5-capitalization);
 }
 
 .h6-color-designated {
@@ -7007,6 +7087,10 @@ body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .is-collapse
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) .is-collapsed h6 .collapse-indicator.collapse-icon svg {
     background-color: var(--h6-accent-color);
     color: var(--h6-accent-color);
+}
+
+.HyperMD-header-6 .cm-header-6, .markdown-rendered h6 {
+    text-transform: var(--h6-capitalization);
 }
 
 
