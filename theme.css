@@ -7331,9 +7331,17 @@ body {
     --bold-color: var(--color-red);
 }
 
+.cm-s-obsidian span.cm-quote.cm-strong{
+    color: var(--bold-color);
+}
+
 /* Italic */
 body {
     --italic-color: var(--color-orange);
+}
+
+.cm-s-obsidian span.cm-quote.cm-em{
+    color: var(--italic-color);
 }
 
 /* Lists */
