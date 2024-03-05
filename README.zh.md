@@ -50,7 +50,7 @@
 ![screenshot](img/Neumorphism.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) （暗色模式）
-(**额外步骤**: 在“设置-外观”中启用半透明效果)
+(**额外步骤**: 在“设置-外观”中启用半透明效果) (在Windows和Linux中不受支持)
 ![screenshot](img/Translucent.png)
 
 + [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) （暗色模式）

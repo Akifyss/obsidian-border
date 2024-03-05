@@ -50,7 +50,7 @@ Create your own UI style using [style settings](https://github.com/mgmeyers/obsi
 ![screenshot](img/Neumorphism.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json) (Dark Mode)
-(**Extra step**: Enable "translucent window" in Setting-Appearance)(Not supported in Windows and Linux)
+(**Extra step**: Enable "translucent window" in Setting-Appearance) (Not supported in Windows and Linux)
 ![screenshot](img/Translucent.png)
 
 + [Sunset](https://github.com/Akifyss/obsidian-border/blob/main/presets/Sunset.json) (Dark Mode)
