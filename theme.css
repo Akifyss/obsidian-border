@@ -3739,7 +3739,7 @@ body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-widt
 body {
     /* Accent HSL values */
     --accent-h: 232;
-    --accent-s: 80%;
+    --accent-s: 76%;
     --accent-l: 64%;
 }
 
@@ -3796,7 +3796,7 @@ body {
     --accent-s: var(--accent-light-s);
     --accent-l: var(--accent-light-l);
     --accent-light-h: 232;
-    --accent-light-s: 80%;
+    --accent-light-s: 76%;
     --accent-light-l: 64%;
     --color-accent-hsl: var(--color-accent-hsl-light);
     --color-accent: var(--color-accent-light);
@@ -3816,12 +3816,12 @@ body {
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
     --background-secondary: hsl(var(--accent-h),
-            calc((var(--accent-s) - 12%) / 6),
+            calc((var(--accent-s)) / 6),
             calc(100% - (100% - var(--accent-l)) / 16));
     --background-secondary-alt: var(--color-base-05);
-    --background-tertiary: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 8));
+    --background-tertiary: hsl(var(--accent-h),
+            calc((var(--accent-s)) / 2),
+            calc(100% - (100% - var(--accent-l)) / 12));
     --workspace-background-translucent: rgba(246, 246, 246, 0.8);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
@@ -7331,7 +7331,7 @@ body {
     --bold-color: var(--color-red);
 }
 
-.cm-s-obsidian span.cm-quote.cm-strong{
+.cm-s-obsidian span.cm-quote.cm-strong {
     color: var(--bold-color);
 }
 
@@ -7340,7 +7340,7 @@ body {
     --italic-color: var(--color-orange);
 }
 
-.cm-s-obsidian span.cm-quote.cm-em{
+.cm-s-obsidian span.cm-quote.cm-em {
     color: var(--italic-color);
 }
 
