@@ -82,7 +82,7 @@
 ![screenshot](img/Dracula.png)
 
 + [Translucent](https://github.com/Akifyss/obsidian-border/blob/main/presets/Translucent.json)
-(**Extra step**: Enable "translucent window" in Setting-Appearance)
+(**Extra step**: Enable "translucent window" in Setting-Appearance) (Not supported in Windows and Linux)
 ![screenshot](img/Translucent.png)
 
 + [Glassmorphism](https://github.com/Akifyss/obsidian-border/blob/main/presets/Glassmorphism.json)

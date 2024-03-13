@@ -700,14 +700,14 @@ settings:
         title.zh: 底层背景（亮色模式）
         type: class-select
         allowEmpty: false
-        default: background-underlying-defalut-light
+        default: background-underlying-default-light
         options:
             -   label: background-primary
                 value: background-underlying-primary-light
             -   label: background-secondary
                 value: background-underlying-secondary-light
-            -   label: adapt to accent color(defalut)
-                value: background-underlying-defalut-light
+            -   label: adapt to accent color(default)
+                value: background-underlying-default-light
             -   label: customize color
                 value: background-underlying-Color-light
             -   label: customize CSS
@@ -1648,14 +1648,14 @@ settings:
         title.zh: 底层背景（暗色模式）
         type: class-select
         allowEmpty: false
-        default: background-underlying-defalut-dark
+        default: background-underlying-default-dark
         options:
             -   label: background-primary
                 value: background-underlying-primary-dark
             -   label: background-secondary
                 value: background-underlying-secondary-dark
-            -   label: adapt to accent color(defalut)
-                value: background-underlying-defalut-dark
+            -   label: adapt to accent color(default)
+                value: background-underlying-default-dark
             -   label: customize color
                 value: background-underlying-Color-dark
             -   label: customize CSS
@@ -4183,8 +4183,8 @@ body.background-underlying-secondary-dark.theme-dark {
     --background-underlying: var(--background-secondary) !important;
 }
 
-body.background-underlying-defalut-light.theme-light,
-body.background-underlying-defalut-dark.theme-dark {
+body.background-underlying-default-light.theme-light,
+body.background-underlying-default-dark.theme-dark {
     --background-underlying: var(--background-tertiary) !important;
 }
 
@@ -7331,9 +7331,17 @@ body {
     --bold-color: var(--color-red);
 }
 
+.cm-s-obsidian span.cm-quote.cm-strong{
+    color: var(--bold-color);
+}
+
 /* Italic */
 body {
     --italic-color: var(--color-orange);
+}
+
+.cm-s-obsidian span.cm-quote.cm-em{
+    color: var(--italic-color);
 }
 
 /* Lists */
