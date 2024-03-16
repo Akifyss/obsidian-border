@@ -348,14 +348,16 @@ settings:
         type: class-toggle
     - 
         id: theme-light-style-select
-        title: Light mode style
-        title.zh: 亮色模式风格
+        title: Base style (light mode)
+        title.zh: 基础风格（亮色模式）
         type: class-select
         allowEmpty: false
         default: theme-light-background-default
         options:
             -   label: default
                 value: theme-light-background-default
+            -   label: old default
+                value: theme-light-background-old-default
             -   label: colored
                 value: theme-light-background-adapt
     - 
@@ -1292,8 +1294,8 @@ settings:
         type: class-toggle
     - 
         id: theme-dark-style-select
-        title: Dark mode style
-        title.zh: 暗色模式风格
+        title: Base style (dark mode)
+        title.zh: 基础风格（暗色模式）
         type: class-select
         allowEmpty: false
         default: theme-dark-background-default
@@ -3839,23 +3841,35 @@ body {
         0px 30px 90px rgba(0, 0, 0, 0.2);
 }
 
-.theme-light.theme-light-background-adapt {
-    --color-accent-3: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
-    --background-primary: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 12));
-    --background-primary-alt: hsl(calc(var(--accent-h)),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 8));
+.theme-light-background-old-default {
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-10);
     --background-secondary: hsl(var(--accent-h),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 7.2));
-    --background-secondary-alt: hsl(calc(var(--accent-h) - 18),
-            calc(var(--accent-s) / 2),
-            calc(100% - (100% - var(--accent-l)) / 5));
+            calc((var(--accent-s) - 12%) / 6),
+            calc(100% - (100% - var(--accent-l)) / 16));
+    --background-secondary-alt: var(--color-base-05);
     --background-tertiary: hsl(calc(var(--accent-h) - 18),
             calc(var(--accent-s) - 4%),
-            calc(100% - (100% - var(--accent-l)) / 4));
+            calc(100% - (100% - var(--accent-l)) / 8));
+}
+
+.theme-light.theme-light-background-adapt {
+    --color-accent-3-light: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.81*var(--accent-l)));
+    --background-primary: hsl(var(--accent-h),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 12));
+    --background-primary-alt: hsl(var(--accent-h),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 10));
+    --background-secondary: hsl(var(--accent-h),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 8));
+    --background-secondary-alt: hsl(var(--accent-h),
+            calc(var(--accent-s) / 2),
+            calc(100% - (100% - var(--accent-l)) / 7));
+    --background-tertiary: hsl(var(--accent-h),
+            calc(var(--accent-s)),
+            calc(100% - (100% - var(--accent-l)) / 6));
     --interactive-normal: var(--color-base-00);
     --interactive-hover: var(--color-base-10);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.225);
