@@ -7331,7 +7331,7 @@ body {
     --bold-color: var(--color-red);
 }
 
-.cm-s-obsidian span.cm-quote.cm-strong{
+.cm-s-obsidian span.cm-quote.cm-strong {
     color: var(--bold-color);
 }
 
@@ -7340,7 +7340,7 @@ body {
     --italic-color: var(--color-orange);
 }
 
-.cm-s-obsidian span.cm-quote.cm-em{
+.cm-s-obsidian span.cm-quote.cm-em {
     color: var(--italic-color);
 }
 
@@ -7987,6 +7987,10 @@ body {
     --code-value: #bd93f9;
 }
 
+.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock span::selection {
+    background-color: hsl(from var(--code-normal) h s l / 20%);
+}
+
 .codeblock-style-solarized-light {
     --code-background-light: #fdf6e3;
     --code-background-dark: #fdf6e3;
@@ -8001,6 +8005,10 @@ body {
     --code-string: #859900;
     --code-tag: #dc322f;
     --code-value: #6c71c4;
+}
+
+.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock span::selection {
+    background-color: hsl(from var(--code-normal) h s l / 15%);
 }
 
 .codeblock-style-solarized-dark {
@@ -8019,6 +8027,10 @@ body {
     --code-value: #6c71c4;
 }
 
+.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+    background-color: hsl(from var(--code-normal) h s l / 30%);
+}
+
 .codeblock-style-one-dark {
     --code-background-light: #282C34;
     --code-background-dark: #282C34;
@@ -8033,6 +8045,10 @@ body {
     --code-string: #98C379;
     --code-tag: #BE5046;
     --code-value: #C678DD;
+}
+
+.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+    background-color: hsl(from var(--code-normal) h s l / 25%);
 }
 
 .markdown-source-view.mod-cm6 .code-block-flair,
