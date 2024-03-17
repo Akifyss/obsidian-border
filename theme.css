@@ -3934,14 +3934,14 @@ body {
     --background-modifier-border-focus: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.3);
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 3.9));
-    --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
-    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+    --background-secondary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(1.25*var(--accent-l) / 4.9));
+    --background-secondary-alt: hsl(var(--accent-h),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3));
-    --background-tertiary: hsl(calc(var(--accent-h) + 8),
+    --background-tertiary: hsl(var(--accent-h),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6));
-    --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
+    --workspace-background-translucent: hsla(var(--accent-h),
             calc(var(--accent-s) / 5.4),
             calc(1.25*var(--accent-l) / 3.6), 0.6);
     --background-modifier-hover: hsla(var(--accent-h), 12%, 40%, 0.25);
@@ -3964,20 +3964,20 @@ body {
 .theme-dark.theme-dark-background-darker {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4), calc(var(--accent-l) / 4));
-    --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
-    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+    --background-secondary: hsl(var(--accent-h), calc(var(--accent-s) / 5), calc(var(--accent-l) / 6));
+    --background-secondary-alt: hsl(var(--accent-h),
             calc(var(--accent-s) / 6),
             calc(var(--accent-l) / 3.6));
-    --background-tertiary: hsl(calc(var(--accent-h) + 8),
+    --background-tertiary: hsl(var(--accent-h),
             calc(var(--accent-s) / 6),
             calc(var(--accent-l) / 4));
-    --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
+    --workspace-background-translucent: hsla(var(--accent-h),
             calc(var(--accent-s) / 6),
             calc(var(--accent-l) / 4), 0.6);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+    --interactive-normal: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+    --interactive-hover: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 2.7));
 }
@@ -3986,20 +3986,20 @@ body {
 .theme-dark.theme-dark-background-brighter {
     --background-primary: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 3.5));
     --background-primary-alt: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 3.1));
-    --background-secondary: hsl(calc(var(--accent-h) + 4), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 4));
-    --background-secondary-alt: hsl(calc(var(--accent-h) + 8),
+    --background-secondary: hsl(var(--accent-h), calc(var(--accent-s) / 4.2), calc(1.25*var(--accent-l) / 4));
+    --background-secondary-alt: hsl(var(--accent-h),
             calc(var(--accent-s) / 4.2),
             calc(1.25*var(--accent-l) / 3.7));
-    --background-tertiary: hsl(calc(var(--accent-h) + 8),
+    --background-tertiary: hsl(var(--accent-h),
             calc(var(--accent-s) / 4.8),
             calc(1.25*var(--accent-l) / 3));
-    --workspace-background-translucent: hsla(calc(var(--accent-h) + 8),
+    --workspace-background-translucent: hsla(var(--accent-h),
             calc(var(--accent-s) / 4.8),
             calc(1.25*var(--accent-l) / 3), 0.6);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+    --interactive-normal: hsl(var(--accent-h),
             calc(var(--accent-s) / 5.6),
             calc(1.25*var(--accent-l) / 2.4));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+    --interactive-hover: hsl(var(--accent-h),
             calc(var(--accent-s) / 5.6),
             calc(1.25*var(--accent-l) / 2.2));
 }
@@ -4012,10 +4012,10 @@ body {
     --background-secondary-alt: black;
     --background-tertiary: black;
     --workspace-background-translucent: rgba(0, 0, 0, 0.6);
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+    --interactive-normal: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 4));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+    --interactive-hover: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(var(--accent-l) / 3.2));
     --background-table-rows: var(--color-base-00);
@@ -6469,10 +6469,10 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     --toggle-track-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
     --toggle-track-hovered-shadow-dark: inset 0px -1px 2px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 0px 0px 1px var(--background-modifier-border);
 
-    --interactive-normal: hsl(calc(var(--accent-h) + 8),
+    --interactive-normal: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 3));
-    --interactive-hover: hsl(calc(var(--accent-h) + 8),
+    --interactive-hover: hsl(var(--accent-h),
             calc(var(--accent-s) / 7),
             calc(1.25*var(--accent-l) / 2.7));
 
