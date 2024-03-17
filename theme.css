@@ -3812,9 +3812,9 @@ body {
     --color-accent-1-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
     --color-accent-2-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
     --color-accent-3-light: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)));
-    --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.25);
-    --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.3);
-    --background-modifier-border-focus: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.35);
+    --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.2);
+    --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.25);
+    --background-modifier-border-focus: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.3);
     --background-primary: var(--color-base-00);
     --background-primary-alt: var(--color-base-10);
     --background-secondary: hsl(var(--accent-h),
@@ -4492,7 +4492,7 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
 /* ====== Layout ===== */
 /* default Layout*/
 body {
-    --card-shadow-light: 0 0 0 1px var(--background-modifier-border);
+    --card-shadow-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
     --card-shadow-dark: 0px 0px 0px 1px var(--background-modifier-border);
     --card-border-radius-light: 8px;
     --card-border-radius-dark: 8px;
@@ -4960,7 +4960,7 @@ body {
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0 0 0 1px var(--background-modifier-border);
+    --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border);
 }
@@ -8475,7 +8475,7 @@ body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
-    box-shadow: 0 0 0 1px var(--background-modifier-border);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
@@ -8488,7 +8488,7 @@ body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-left: none;
     border-radius: var(--card-border-radius-light, 8px) !important;
     margin: 0px;
-    box-shadow: 0 0 0 1px var(--background-modifier-border);
+    box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
 body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
