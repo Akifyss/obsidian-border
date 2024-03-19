@@ -8001,7 +8001,8 @@ body {
     --code-value: #bd93f9;
 }
 
-.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-dracula .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 20%);
 }
 
@@ -8021,7 +8022,8 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-solarized-light .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 15%);
 }
 
@@ -8041,7 +8043,8 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-solarized-dark .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 30%);
 }
 
@@ -8061,7 +8064,8 @@ body {
     --code-value: #C678DD;
 }
 
-.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock span::selection {
+.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
+.codeblock-style-one-dark .markdown-rendered pre ::selection {
     background-color: hsl(from var(--code-normal) h s l / 25%);
 }
 
