@@ -3741,7 +3741,7 @@ body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-widt
 body {
     /* Accent HSL values */
     --accent-h: 232;
-    --accent-s: 76%;
+    --accent-s: 80%;
     --accent-l: 64%;
 }
 
@@ -3798,7 +3798,7 @@ body {
     --accent-s: var(--accent-light-s);
     --accent-l: var(--accent-light-l);
     --accent-light-h: 232;
-    --accent-light-s: 76%;
+    --accent-light-s: 80%;
     --accent-light-l: 64%;
     --color-accent-hsl: var(--color-accent-hsl-light);
     --color-accent: var(--color-accent-light);
