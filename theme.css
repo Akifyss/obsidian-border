@@ -7138,6 +7138,10 @@ body {
     --link-external-color-hover: var(--color-blue);
 }
 
+.cm-s-obsidian span.cm-link a {
+    color: var(--link-external-color);
+}
+
 a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-internal-link:hover,
 .external-link:not(:has(img:not(.link-favicon))):hover,
