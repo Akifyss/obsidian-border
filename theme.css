@@ -7138,7 +7138,7 @@ body {
     --link-external-color-hover: var(--color-blue);
 }
 
-.cm-s-obsidian span.cm-link a {
+.cm-s-obsidian span:is(.cm-link, .cm-url) a {
     color: var(--link-external-color);
 }
 
@@ -7955,7 +7955,6 @@ body {
     --code-white-space: pre-wrap;
     --code-radius: var(--radius-s);
     --code-size: var(--font-smaller);
-    --code-background: #ffffff00;
     --code-background-light: var(--background-alt-light);
     --code-background-dark: var(--background-alt-dark);
     --code-normal: var(--text-muted);
@@ -7969,6 +7968,21 @@ body {
     --code-string: var(--color-green);
     --code-tag: var(--color-red);
     --code-value: var(--color-purple);
+}
+
+.theme-light {
+    --code-background: var(--code-background-light);
+}
+
+.theme-dark {
+    --code-background: var(--code-background-dark);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg,
+.cm-s-obsidian div.HyperMD-codeblock-bg,
+.markdown-rendered pre {
+    background: var(--code-background);
 }
 
 .cm-s-obsidian .HyperMD-codeblock {
@@ -8062,20 +8076,6 @@ body {
 .markdown-source-view.mod-cm6 .code-block-flair,
 .markdown-rendered button.copy-code-button {
     color: var(--code-normal);
-}
-
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-light .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-light .markdown-rendered pre {
-    background: var(--code-background-light);
-}
-
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg,
-.theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg,
-.theme-dark .markdown-rendered pre {
-    background: var(--code-background-dark);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
