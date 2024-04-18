@@ -7362,6 +7362,13 @@ body {
     color: var(--italic-color);
 }
 
+/* --- */
+
+font[color] {
+    --italic-color: inhert;
+    --bold-color: inhert;
+}
+
 /* Lists */
 body {
     --list-indent: 2em;
