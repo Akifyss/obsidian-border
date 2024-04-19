@@ -3185,18 +3185,34 @@ settings:
                 value: codeblock-style-one-dark
     - 
         id: code-background-light
-        title: Customize code background (light mode)
+        title: Customize codeblock background (light mode)
         title.zh: 自定义 代码块背景（亮色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
     - 
+        id: code-border-light
+        title: Customize codeblock border (light mode)
+        title.zh: 自定义 代码块边框（亮色模式）
+        description: Input any CSS border value
+        description.zh: 输入任意 CSS border 值
+        type: variable-text
+        default: ''
+    - 
         id: code-background-dark
-        title: Customize code background (dark mode)
+        title: Customize codeblock background (dark mode)
         title.zh: 自定义 代码块背景（暗色模式）
         description: Input any CSS background value
         description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
+        id: code-border-dark
+        title: Customize codeblock border (dark mode)
+        title.zh: 自定义 代码块边框（暗色模式）
+        description: Input any CSS border value
+        description.zh: 输入任意 CSS border 值
         type: variable-text
         default: ''
     - 
@@ -3704,7 +3720,7 @@ body.file-icon-remove .setting-item[data-id=colorful-folder],
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
 body:not(.line-hover-indicator) .setting-item[data-id=hover-indicator-color],
 body.Ribbon-autohide .setting-item[data-id=icon-autohide],
-body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]),
+body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-border-light], [data-id=code-border-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]),
 body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-width], [data-id=callout-border-opacity], [data-id=callout-padding], [data-id=callout-radius], [data-id=callout-title-color], [data-id=callout-title-padding], [data-id=callout-title-padding], [data-id=callout-title-size], [data-id=callout-content-padding], [data-id=callout-content-background], [data-id=callout-content-radius]) {
     display: none;
 }
@@ -7978,6 +7994,8 @@ body {
     --code-size: var(--font-smaller);
     --code-background-light: var(--background-alt-light);
     --code-background-dark: var(--background-alt-dark);
+    --code-border-light: 1px dashed var(--background-modifier-border);
+    --code-border-dark: 1px dashed var(--background-modifier-border);
     --code-normal: var(--text-muted);
     --code-comment: var(--text-faint);
     --code-function: var(--color-yellow);
@@ -7993,10 +8011,12 @@ body {
 
 .theme-light {
     --code-background: var(--code-background-light);
+    --code-border: var(--code-border-light);
 }
 
 .theme-dark {
     --code-background: var(--code-background-dark);
+    --code-border: var(--code-border-dark);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
@@ -8006,6 +8026,23 @@ body {
     background: var(--code-background);
 }
 
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+    border-top: var(--code-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+    border-bottom: var(--code-border);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+    border-left: var(--code-border);
+    border-right: var(--code-border);
+}
+
+.markdown-rendered pre {
+    border: var(--code-border);
+}
+
 .cm-s-obsidian .HyperMD-codeblock {
     caret-color: auto;
 }
@@ -8013,6 +8050,8 @@ body {
 .codeblock-style-dracula {
     --code-background-light: #282A36;
     --code-background-dark: #282A36;
+    --code-border-light: none;
+    --code-border-dark: none;
     --code-normal: #f8f8f2;
     --code-comment: #6272a4;
     --code-function: #f1fa8c;
@@ -8026,14 +8065,11 @@ body {
     --code-value: #bd93f9;
 }
 
-.codeblock-style-dracula .cm-s-obsidian .HyperMD-codeblock ::selection,
-.codeblock-style-dracula .markdown-rendered pre ::selection {
-    background-color: hsl(from var(--code-normal) h s l / 20%);
-}
-
 .codeblock-style-solarized-light {
     --code-background-light: #fdf6e3;
     --code-background-dark: #fdf6e3;
+    --code-border-light: none;
+    --code-border-dark: none;
     --code-normal: #657b83;
     --code-comment: #93a1a1;
     --code-function: #b58900;
@@ -8047,14 +8083,11 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-light .cm-s-obsidian .HyperMD-codeblock ::selection,
-.codeblock-style-solarized-light .markdown-rendered pre ::selection {
-    background-color: hsl(from var(--code-normal) h s l / 15%);
-}
-
 .codeblock-style-solarized-dark {
     --code-background-light: #002b36;
     --code-background-dark: #002b36;
+    --code-border-light: none;
+    --code-border-dark: none;
     --code-normal: #839496;
     --code-comment: #586e75;
     --code-function: #b58900;
@@ -8068,14 +8101,11 @@ body {
     --code-value: #6c71c4;
 }
 
-.codeblock-style-solarized-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
-.codeblock-style-solarized-dark .markdown-rendered pre ::selection {
-    background-color: hsl(from var(--code-normal) h s l / 30%);
-}
-
 .codeblock-style-one-dark {
     --code-background-light: #282C34;
     --code-background-dark: #282C34;
+    --code-border-light: none;
+    --code-border-dark: none;
     --code-normal: #ABB2BF;
     --code-comment: #5C6370;
     --code-function: #E5C07B;
@@ -8089,31 +8119,16 @@ body {
     --code-value: #C678DD;
 }
 
-.codeblock-style-one-dark .cm-s-obsidian .HyperMD-codeblock ::selection,
-.codeblock-style-one-dark .markdown-rendered pre ::selection {
-    background-color: hsl(from var(--code-normal) h s l / 25%);
+.css-settings-manager:not(.codeblock-style-customize) .cm-s-obsidian .HyperMD-codeblock ::selection,
+.css-settings-manager:not(.codeblock-style-customize) .markdown-rendered pre ::selection,
+.css-settings-manager:not(.codeblock-style-customize) .markdown-source-view.mod-cm6 .code-block-flair:hover,
+.css-settings-manager:not(.codeblock-style-customize) .markdown-rendered button.copy-code-button:hover {
+    background-color: hsl(from var(--code-normal) h s l / 20%);
 }
 
 .markdown-source-view.mod-cm6 .code-block-flair,
 .markdown-rendered button.copy-code-button {
     color: var(--code-normal);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-    border-top: 1px dashed var(--background-modifier-border);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-end-bg {
-    border-bottom: 1px dashed var(--background-modifier-border);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-bg {
-    border-left: 1px dashed var(--background-modifier-border);
-    border-right: 1px dashed var(--background-modifier-border);
-}
-
-.markdown-rendered pre {
-    border: 1px dashed var(--background-modifier-border);
 }
 
 /* ======table ====== */
