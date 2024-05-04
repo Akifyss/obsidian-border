@@ -7750,6 +7750,7 @@ body {
     --callout-content-radius: 0px;
 }
 
+.theme-light .callout:is([data-callout-metadata*="style-1"], [data-callout*=style-1]),
 .callout-style-1.theme-light {
     --callout-border-width: 1px;
     --callout-border-opacity: 0.25;
@@ -7763,6 +7764,7 @@ body {
     --callout-content-radius: 0px;
 }
 
+.theme-dark .callout:is([data-callout-metadata*="style-1"], [data-callout*=style-1]),
 .callout-style-1.theme-dark {
     --callout-border-width: 1px;
     --callout-border-opacity: 0.25;
@@ -7776,6 +7778,7 @@ body {
     --callout-content-radius: 0px;
 }
 
+.theme-light .callout:is([data-callout-metadata*="style-2"], [data-callout*=style-2]),
 .callout-style-2.theme-light {
     --callout-border-width: 1px;
     --callout-border-opacity: 0.25;
@@ -7789,6 +7792,7 @@ body {
     --callout-content-radius: 4px;
 }
 
+.theme-dark .callout:is([data-callout-metadata*="style-2"], [data-callout*=style-2]),
 .callout-style-2.theme-dark {
     --callout-border-width: 1px;
     --callout-border-opacity: 0.25;
@@ -7802,6 +7806,7 @@ body {
     --callout-content-radius: 4px;
 }
 
+body:is(.theme-light, .theme-dark) .callout:is([data-callout-metadata*="style-3"], [data-callout*=style-3]),
 .callout-style-3:is(.theme-light, .theme-dark) {
     --callout-border-width: 0 0 0 4px;
     --callout-border-opacity: 1;
@@ -7815,6 +7820,7 @@ body {
     --callout-content-radius: 0px;
 }
 
+.theme-light .callout:is([data-callout-metadata*="style-4"], [data-callout*=style-4]),
 .callout-style-4.theme-light {
     --callout-border-width: 0 0 0 4px;
     --callout-border-opacity: 1;
@@ -7828,6 +7834,7 @@ body {
     --callout-content-radius: 0px;
 }
 
+.theme-dark .callout:is([data-callout-metadata*="style-4"], [data-callout*=style-4]),
 .callout-style-4.theme-dark {
     --callout-border-width: 0 0 0 4px;
     --callout-border-opacity: 1;
