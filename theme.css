@@ -5509,6 +5509,7 @@ body:not(.is-mobile).sidepane-autohide .workspace-split.mod-left-split.is-sidedo
     width: 0 !important;
     height: calc(100% - 44px) !important;
     border-radius: var(--radius-m);
+    border: 1px solid var(--background-modifier-border);
     background-color: var(--background-primary) !important;
     transition: width var(--anim-out);
 
