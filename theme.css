@@ -1075,6 +1075,14 @@ settings:
         type: variable-text
         default: ''
     - 
+		id: color-activated-tab-header-underline-light
+		title: activated Tab header underline color(light mode)
+        title.zh: 已激活Tab的标头下划线颜色（亮色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
+        type: variable-text
+        default: ''
+    - 
         id: Active-states-file-explorer-light
         title: Active states(file explorer)
         title.zh: 激活态（文件列表）
@@ -2020,6 +2028,14 @@ settings:
         title.zh: 已激活Tab的标头阴影（暗色模式）
         description: Input any CSS box-shadow value
         description.zh: 输入任意 CSS box-shadow 值
+        type: variable-text
+        default: ''
+    - 
+		id: color-activated-tab-header-underline-dark
+		title: activated Tab header underline color(dark mode)
+        title.zh: 已激活Tab的标头下划线颜色（暗色模式）
+        description: Input any CSS background value
+        description.zh: 输入任意 CSS background 值
         type: variable-text
         default: ''
     - 
@@ -5022,6 +5038,26 @@ body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab
     box-shadow: var(--shadow-activated-tab-header-dark);
     background: var(--background-activated-tab-header-dark);
     border-radius: var(--border-radius-activated-tab-header-dark);
+}
+
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+    content: "";
+    width: calc(100% - 6px);
+    height: 3px;
+    background-color: var(--color-activated-tab-header-underline-light);
+    position: absolute;
+    top: 35px;
+    left: 3px;
+}
+
+body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+    content: "";
+    width: calc(100% - 6px);
+    height: 3px;
+    background-color: var(--color-activated-tab-header-underline-dark);
+    position: absolute;
+    top: 35px;
+    left: 3px;
 }
 
 /* tab - mobile*/
