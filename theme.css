@@ -57,6 +57,11 @@ settings:
         title.zh: 自动隐藏 标签页标题栏
         type: class-toggle
     - 
+        id: sidepane-autohide
+        title: Auto hide sidepane
+        title.zh: 自动隐藏 侧边面板
+        type: class-toggle
+    - 
         id: file-explorer
         title: File explorer
         title.zh: 文件列表
@@ -5493,6 +5498,28 @@ body:not(.is-mobile).tab-title-bar-autohide .view-header:hover :is(.view-actions
     opacity: 1;
     transition: opacity var(--anim-in);
 }
+
+/*sidepane autohide */
+body:not(.is-mobile).sidepane-autohide .workspace-split.mod-left-split.is-sidedock-collapsed {
+    display: flex !important;
+    position: absolute;
+    left: 44px;
+    top: 44px;
+    z-index: 1;
+    width: 0 !important;
+    height: calc(100% - 44px) !important;
+    border-radius: var(--card-border-radius-light);
+    background-color: var(--background-primary) !important;
+    transition: width var(--anim-out);
+
+}
+
+body:not(.is-mobile).sidepane-autohide:has(.sidebar-toggle-button.mod-left:hover, .workspace-split.mod-left-split.is-sidedock-collapsed:hover) .workspace-split.mod-left-split.is-sidedock-collapsed {
+    width: 240px !important;
+    transition: width var(--anim-in);
+}
+
+
 
 /*view-header*/
 
