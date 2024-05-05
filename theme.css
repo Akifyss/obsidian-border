@@ -5508,7 +5508,7 @@ body:not(.is-mobile).sidepane-autohide .workspace-split.mod-left-split.is-sidedo
     z-index: 1;
     width: 0 !important;
     height: calc(100% - 44px) !important;
-    border-radius: var(--card-border-radius-light);
+    border-radius: var(--radius-m);
     background-color: var(--background-primary) !important;
     transition: width var(--anim-out);
 
