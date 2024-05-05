@@ -3506,6 +3506,67 @@ settings:
         description.zh: 输入任意 CSS font-style 值
         type: variable-text
         default: ''
+    - 
+        id: Checkbox
+        title: Checkbox
+        title.zh: 复选框
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: checkbox-radius
+        title: checkbox radius
+        title.zh: 复选框 圆角半径
+        description: Input any CSS border-radius value
+        description.zh: 输入任意 CSS border-radius 值
+        type: variable-text
+        default: ''
+    - 
+		id: checkbox-marker-color
+		title: checkbox marker color
+        title.zh: 复选框标记颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: checkbox-color
+		title: checkbox color
+        title.zh: 复选框颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: checkbox-color-hover
+		title: checkbox color (hover)
+        title.zh: 复选框颜色（鼠标悬停时）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: checkbox-border-color
+		title: checkbox border color
+        title.zh: 复选框边框颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+		id: checkbox-border-color-hover
+		title: checkbox border color (hover)
+        title.zh: 复选框边框颜色（鼠标悬停时）
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+
 
 */
 
