@@ -5503,9 +5503,9 @@ body:not(.is-mobile).tab-title-bar-autohide .view-header:hover :is(.view-actions
 body:not(.is-mobile).sidepane-autohide .workspace-split.mod-left-split.is-sidedock-collapsed {
     display: flex !important;
     position: absolute;
-    left: -288px;
+    left: -240px;
     top: 44px;
-    z-index: 1;
+    z-index: 11;
     width: 240px !important;
     height: calc(100% - 44px) !important;
     border-radius: var(--radius-m);
@@ -5516,7 +5516,7 @@ body:not(.is-mobile).sidepane-autohide .workspace-split.mod-left-split.is-sidedo
 }
 
 body:not(.is-mobile).sidepane-autohide:has(.sidebar-toggle-button.mod-left:hover, .workspace-split.mod-left-split.is-sidedock-collapsed:hover) .workspace-split.mod-left-split.is-sidedock-collapsed {
-    left: 44px !important;
+    left: 0px !important;
     transition: left var(--anim-in);
 }
 
@@ -5525,6 +5525,10 @@ body:not(.is-mobile).sidepane-autohide.is-hidden-frameless:not(.is-fullscreen).m
     padding-left: 0px;
 }
 
+
+body:not(.is-mobile).sidepane-autohide:not(.is-popout-window).Ribbon-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-split.mod-left-split.is-sidedock-collapsed .mod-top-left-space .workspace-tab-header-container{
+    transform: translateX(-28px);
+}
 
 /*view-header*/
 
