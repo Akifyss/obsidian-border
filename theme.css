@@ -5520,6 +5520,9 @@ body:not(.is-mobile).sidepane-autohide:has(.sidebar-toggle-button.mod-left:hover
     transition: left var(--anim-in);
 }
 
+body:not(.is-mobile).sidepane-autohide:has(.sidebar-toggle-button.mod-left:hover, .workspace-split.mod-left-split.is-sidedock-collapsed:hover) .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tab-header-container {
+    transition: none;
+}
 
 body:not(.is-mobile).sidepane-autohide.is-hidden-frameless:not(.is-fullscreen).mod-macos .workspace-split.mod-left-split.is-sidedock-collapsed .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
     padding-left: 0px;
