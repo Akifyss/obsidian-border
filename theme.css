@@ -6869,6 +6869,11 @@ body:not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
     border-top: 1px solid var(--divider-color);
 }
 
+.markdown-rendered>:is(h1, h2, h3, h4, h5, h6),
+.markdown-preview-sizer>div>:is(h1, h2, h3, h4, h5, h6) {
+    position: relative;
+}
+
 body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator,
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indicator.collapse-icon {
     transform: translateX(-8px);
@@ -6876,7 +6881,6 @@ body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indi
 
 body:not(.heading-indicator-off) .markdown-rendered>:is(h1, h2, h3, h4, h5, h6),
 body:not(.heading-indicator-off) .markdown-preview-sizer>div>:is(h1, h2, h3, h4, h5, h6) {
-    position: relative;
     text-indent: 9px;
 }
 
@@ -8293,6 +8297,14 @@ body.seamless-embeds {
 .img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:not([class]),
 .img-center-align .markdown-preview-view img:not([class]),
 .img-center-align .markdown-source-view img:not([class]) {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize),
+.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize),
+.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize) {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
