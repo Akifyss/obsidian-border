@@ -8298,6 +8298,14 @@ body.seamless-embeds {
     margin-right: auto !important;
 }
 
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""],.image-ready-resize),
+.img-center-align .markdown-preview-view img:is([class=""],.image-ready-resize),
+.img-center-align .markdown-source-view img:is([class=""],.image-ready-resize) {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /*  image hover effect */
 .markdown-source-view.mod-cm6 .cm-content>.internal-embed {
     contain: unset !important;
