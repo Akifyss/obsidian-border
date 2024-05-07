@@ -5579,6 +5579,10 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* document search replace */
+#cMenuToolbarModalBar.top{
+    z-index: var(--layer-status-bar);
+}
+
 body:not(.is-mobile) .mod-active .document-search-container,
 body:not(.is-mobile) .document-search-container {
     background-color: var(--background-primary);
