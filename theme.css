@@ -5579,7 +5579,7 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* document search replace */
-#cMenuToolbarModalBar.top{
+#cMenuToolbarModalBar.top {
     z-index: var(--layer-status-bar);
 }
 
@@ -8306,9 +8306,9 @@ body.seamless-embeds {
     margin-right: auto !important;
 }
 
-.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize),
-.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize),
-.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize) {
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize, .image-ready-click-view) {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
