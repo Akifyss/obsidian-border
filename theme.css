@@ -5579,7 +5579,7 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* document search replace */
-#cMenuToolbarModalBar.top{
+#cMenuToolbarModalBar.top {
     z-index: var(--layer-status-bar);
 }
 
@@ -6414,35 +6414,35 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="bookmarks"] svg.l
 
 /*colorful folder icon*/
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+2) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+2) {
     --colorful-folder-color: var(--color-red);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+3) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+3) {
     --colorful-folder-color: var(--color-orange);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+4) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+4) {
     --colorful-folder-color: var(--color-yellow);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+5) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+5) {
     --colorful-folder-color: var(--color-green);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+6) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+6) {
     --colorful-folder-color: var(--color-cyan);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+7) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+7) {
     --colorful-folder-color: var(--color-blue);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+8) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+8) {
     --colorful-folder-color: var(--color-purple);
 }
 
-body:not(.file-icon-remove) .nav-folder-children>.nav-folder:nth-child(8n+9) {
+body:not(.file-icon-remove) .nav-folder:nth-child(8n+9) {
     --colorful-folder-color: var(--color-pink);
 }
 
@@ -8306,9 +8306,9 @@ body.seamless-embeds {
     margin-right: auto !important;
 }
 
-.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize),
-.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize),
-.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize) {
+.img-center-align .print :is(.markdown-preview-view, .markdown-rendered) img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-preview-view img:is([class=""], .image-ready-resize, .image-ready-click-view),
+.img-center-align .markdown-source-view img:is([class=""], .image-ready-resize, .image-ready-click-view) {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
