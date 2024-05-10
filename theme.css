@@ -4970,7 +4970,12 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 
 .workspace-tab-header-container {
+    padding-left: 0px;
     padding-right: var(--size-2-3);
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+    padding-left: calc(0 + var(--frame-left-space));
 }
 
 body:not(.is-hidden-frameless):not(.is-mobile) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container,
@@ -6452,6 +6457,34 @@ body:not(.file-icon-remove).colorful-folder .workspace-leaf-content[data-type="f
 
 body:not(.file-icon-remove).colorful-folder .nav-folder.mod-root>.nav-folder-title::before {
     background-color: currentColor;
+}
+
+
+/* vault profile */
+
+body:not(.is-mobile) .workspace-split.mod-left-split{
+    position: relative;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container{
+    padding-bottom: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    padding:6px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    height: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher{
+    height: 32px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions{
+    gap: var(--size-2-1);
 }
 
 /*====== empty state ======*/
@@ -8444,6 +8477,7 @@ body {
     padding-top: 6px;
 }
 
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon,
 .mod-left-split .workspace-tab-header .workspace-tab-header-inner,
 .mod-right-split .workspace-tab-header .workspace-tab-header-inner,
 .clickable-icon.nav-action-button,
