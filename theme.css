@@ -4975,7 +4975,7 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-    padding-left: calc(0 + var(--frame-left-space));
+    padding-left: calc(0px + var(--frame-left-space));
 }
 
 body:not(.is-hidden-frameless):not(.is-mobile) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container,
