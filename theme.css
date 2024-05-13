@@ -4963,6 +4963,9 @@ body:not(.is-mobile):not(.show-ribbon) .workspace::before {
     width: 100%;
 }
 
+.mod-macos:not(.show-ribbon) {
+    --frame-left-space: calc(80px - 16px);
+}
 
 /* tab */
 /* tab layout */
