@@ -3796,8 +3796,8 @@ body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-widt
     display: none;
 }
 
-.accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
-.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.setting-editor-extra-setting-button:has(+ input[type=color]),
+.accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.extra-setting-button:has(+ input[type=color]),
+.accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>.clickable-icon.extra-setting-button:has(+ input[type=color]),
 .accent-color-override-light.theme-light .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color],
 .accent-color-override-dark.theme-dark .mod-settings .vertical-tab-content-container>.vertical-tab-content>.setting-item:nth-child(2)>.setting-item-control>input[type=color] {
     position: relative;
