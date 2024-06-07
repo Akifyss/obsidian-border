@@ -4835,36 +4835,29 @@ body:not(.is-translucent) .titlebar-text {
     opacity: 1;
 }
 
-body.is-hidden-frameless .titlebar .titlebar-button-container {
+.is-hidden-frameless .titlebar .titlebar-button-container {
     background-color: transparent !important;
 }
 
-.titlebar .titlebar-button-container.mod-right {
-    margin-right: 16px;
-}
-
-body.mod-windows .titlebar .titlebar-button.mod-close:hover,
-body.mod-windows .titlebar .titlebar-button.mod-close:focus {
+.mod-windows .titlebar .titlebar-button.mod-close:hover,
+.mod-windows .titlebar .titlebar-button.mod-close:focus {
     background-color: var(--background-modifier-error) !important;
 }
 
-body.mod-windows .titlebar .titlebar-button.mod-close:hover::after,
-body.mod-windows .titlebar .titlebar-button.mod-close:focus::after {
+.mod-windows .titlebar .titlebar-button.mod-close:hover::after,
+.mod-windows .titlebar .titlebar-button.mod-close:focus::after {
     background-color: var(--text-on-accent) !important;
 }
 
-body.mod-windows .titlebar .titlebar-button.mod-close:hover,
-body.mod-windows .titlebar .titlebar-button.mod-close:focus {
+.mod-windows .titlebar .titlebar-button.mod-close:hover,
+.mod-windows .titlebar .titlebar-button.mod-close:focus {
     color: var(--text-on-accent) !important;
 }
 
-.titlebar-button-container.mod-right .titlebar-button {
-    height: 24px;
-    width: 24px;
-    border-radius: 12px;
+.is-hidden-frameless .titlebar-button-container.mod-right .titlebar-button {
+    height: 44px;
+    width: 44px;
     padding: 0;
-    margin: auto 8px;
-    background-color: transparent;
 }
 
 .titlebar-button-container.mod-right .titlebar-button:hover {
@@ -4875,7 +4868,7 @@ body.mod-windows .titlebar .titlebar-button.mod-close:focus {
     margin-right: 0px;
 }
 
-body.is-hidden-frameless .titlebar-button-container.mod-right {
+.is-hidden-frameless .titlebar-button-container.mod-right {
     height: 44px;
 }
 
