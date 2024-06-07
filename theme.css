@@ -6457,7 +6457,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split {
     position: relative;
 }
 
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
     padding-bottom: 44px;
 }
 
