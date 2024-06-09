@@ -8504,17 +8504,6 @@ svg.sidebar-left {
     --interactive-hover: var(--background-modifier-border-hover);
 }
 
-
-.workspace-drawer-ribbon.mod-left,
-.workspace-drawer.mod-left .view-header,
-.workspace-drawer.mod-left .view-content,
-.workspace-drawer.mod-left,
-.workspace-drawer.mod-left .workspace-drawer-inner,
-.workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container,
-.workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container .workspace-leaf-content {
-    background-color: var(--background-secondary);
-}
-
 .is-tablet.theme-dark .vertical-tab-content,
 .is-tablet .workspace-tab-header-container,
 .is-mobile .workspace-split.mod-root .view-header,
