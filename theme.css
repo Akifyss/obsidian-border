@@ -7277,6 +7277,19 @@ body {
     --tag-radius: 2em;
 }
 
+@media (hover: hover) {
+
+    .cm-hashtag-end:hover,
+    .cm-hashtag-begin:has(+.cm-hashtag-end:hover),
+    .cm-hashtag-begin:hover,
+    .cm-hashtag-begin:hover+.cm-hashtag-end {
+        background-color: var(--tag-background-hover);
+        border: var(--tag-border-width) solid var(--tag-border-color-hover);
+        color: var(--tag-color-hover);
+        text-decoration: var(--tag-decoration-hover);
+    }
+}
+
 
 /* ====== line emphasis ====== */
 /* ====== highlight ====== */
