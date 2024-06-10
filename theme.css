@@ -5032,7 +5032,8 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
     cursor: var(--cursor);
 }
 
-:is(.theme-dark.mod-left-split-background-transparent-dark, .theme-light.mod-left-split-background-transparent-light) .is-sidedock-collapsed .mod-top-left-space .workspace-tab-header-container {
+:is(.theme-dark.card-layout-open-dark.mod-root-split-background-transparent-dark, .theme-light.card-layout-open-light.mod-root-split-background-transparent-light) .is-sidedock-collapsed,
+:is(.theme-dark.card-layout-open-dark, .theme-light.card-layout-open-light) .is-sidedock-collapsed :is(.mod-top-left-space .workspace-tab-header-container, .workspace-sidedock-vault-profile) {
     visibility: hidden;
 }
 
