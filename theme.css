@@ -5474,10 +5474,12 @@ body:not(.is-mobile).tab-title-bar-autohide .view-header:hover :is(.view-actions
 
 body:not(.is-mobile) .view-header {
     padding: 0 6px;
+    border: 0;
 }
 
 body:not(.is-mobile) .view-header>* {
-    margin-top: 6px;
+    padding-top: var(--size-2-3);
+    padding-bottom:  var(--size-2-1);
     --icon-size: var(--icon-m);
     --icon-stroke: var(--icon-m-stroke-width);
 }
@@ -5938,7 +5940,7 @@ input.wb-search-bar {
 
 /* ====== workspace mod side====== */
 .nav-header {
-    padding: var(--size-2-3);
+    padding: var(--size-2-3) var(--size-2-3) var(--size-2-1);
 }
 
 .nav-header~.search-input-container {
@@ -6259,7 +6261,7 @@ body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-expl
 
 /*other pane*/
 .workspace-leaf-content .nav-header~.node-insert-event {
-    padding-top: 0;
+    padding-top: var(--size-4-1);
 }
 
 /*icons in pane*/
