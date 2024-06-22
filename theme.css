@@ -8374,6 +8374,8 @@ body {
     padding-top: 6px;
 }
 
+.clickable-icon.document-search-button,
+.clickable-icon.document-search-close-button,
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon,
 .mod-left-split .workspace-tab-header .workspace-tab-header-inner,
 .mod-right-split .workspace-tab-header .workspace-tab-header-inner,
