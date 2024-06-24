@@ -4214,7 +4214,7 @@ body.is-focused .workspace-tabs.mod-top {
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
 body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-header:not(.animate),
-body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate),
+body:not(.is-mobile) .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate, .ptm-fullscreen-writing-focus-element),
 .mod-left-split .workspace-tab-header.has-active-menu,
 .mod-right-split .workspace-tab-header.has-active-menu,
 body:not(.is-mobile) .workspace-tab-header-container,
