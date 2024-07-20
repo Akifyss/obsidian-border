@@ -5479,7 +5479,7 @@ body:not(.is-mobile) .view-header {
 
 body:not(.is-mobile) .view-header>* {
     padding-top: var(--size-2-3);
-    padding-bottom:  var(--size-2-1);
+    padding-bottom: var(--size-2-1);
     --icon-size: var(--icon-m);
     --icon-stroke: var(--icon-m-stroke-width);
 }
@@ -6805,6 +6805,16 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>:is(h1, h2, h3, h4,
     text-indent: 9px;
 }
 
+@media print {
+    :is(h1, h2, h3, h4, h5, h6) {
+        position: relative;
+    }
+
+    body:not(.heading-indicator-off) :is(h1, h2, h3, h4, h5, h6) {
+        text-indent: 9px;
+    }
+}
+
 /* h1 */
 h1,
 .markdown-rendered h1,
@@ -6853,6 +6863,32 @@ body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .H
     opacity: 0.5;
     bottom: 0;
     background-image: linear-gradient(to left, var(--h1-accent-color) 30%, transparent 70%);
+}
+
+@media print {
+    body:not(.heading-indicator-off) h1::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h1-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    body.h1-divider-on h1::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h1-accent-color) 30%, transparent 70%);
+    }
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-1 .collapse-indicator.collapse-icon svg,
@@ -6917,6 +6953,31 @@ body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .H
     background-image: linear-gradient(to left, var(--h2-accent-color) 30%, transparent 70%);
 }
 
+@media print {
+    body:not(.heading-indicator-off) h2::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h2-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    body.h2-divider-on h2::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h2-accent-color) 30%, transparent 70%);
+    }
+}
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-2 .collapse-indicator.collapse-icon svg,
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h2 .collapse-indicator.collapse-icon svg {
@@ -6977,6 +7038,32 @@ body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .H
     opacity: 0.5;
     bottom: 0;
     background-image: linear-gradient(to left, var(--h3-accent-color) 30%, transparent 70%);
+}
+
+@media print {
+    body:not(.heading-indicator-off) h3::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h3-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    body.h3-divider-on h3::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h3-accent-color) 30%, transparent 70%);
+    }
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-3 .collapse-indicator.collapse-icon svg,
@@ -7041,6 +7128,32 @@ body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .H
     background-image: linear-gradient(to left, var(--h4-accent-color) 30%, transparent 70%);
 }
 
+@media print {
+    body:not(.heading-indicator-off) h4::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h4-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    body.h4-divider-on h4::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h4-accent-color) 30%, transparent 70%);
+    }
+}
+
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-4 .collapse-indicator.collapse-icon svg,
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h4 .collapse-indicator.collapse-icon svg {
     transform: translateX(0px);
@@ -7101,6 +7214,32 @@ body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .H
     opacity: 0.5;
     bottom: 0;
     background-image: linear-gradient(to left, var(--h5-accent-color) 30%, transparent 70%);
+}
+
+@media print {
+    body:not(.heading-indicator-off) h5::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h5-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
+
+    body.h5-divider-on h5::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h5-accent-color) 30%, transparent 70%);
+    }
 }
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-5 .collapse-indicator.collapse-icon svg,
@@ -7165,7 +7304,31 @@ body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .H
     background-image: linear-gradient(to left, var(--h6-accent-color) 30%, transparent 70%);
 }
 
+@media print {
+    body:not(.heading-indicator-off) h6::before {
+        margin-right: 6px;
+        content: " ";
+        display: inline-block;
+        width: 3px;
+        height: calc(1.2em - 8px);
+        border-radius: var(--radius-m);
+        background-color: var(--h6-accent-color);
+        position: absolute;
+        top: 4px;
+        left: 0px;
+    }
 
+    body.h6-divider-on h6::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        right: 0px;
+        opacity: 0.5;
+        bottom: 0;
+        background-image: linear-gradient(to left, var(--h6-accent-color) 30%, transparent 70%);
+    }
+}
 
 body:not(.collapse-icon-restore) .is-live-preview .HyperMD-header-6 .collapse-indicator.collapse-icon svg,
 body:not(.collapse-icon-restore) :is(.markdown-rendered, .markdown-preview-view) h6 .collapse-indicator.collapse-icon svg {
