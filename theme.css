@@ -4121,6 +4121,19 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
     animation: scale-up var(--anim-duration-fast) cubic-bezier(0.175, 0.885, 0.320, 1.095) both;
 }
 
+@media (prefers-reduced-motion) {
+    /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
+    body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
+    body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
+    body:not(.is-phone, .extra-anim-remove) .menu:not(.mk-style-menu, .svelte-1xg3ic1),
+    body:not(.is-phone, .extra-anim-remove) .suggestion-container:not([data-popper-placement="bottom-start"]),*/
+    body:not(.is-phone, .extra-anim-remove) .prompt,
+    body:not(.is-mobile, .extra-anim-remove) .document-search-container {
+        -webkit-animation: unset;
+        animation: unset;
+    }
+    }
+
 @-webkit-keyframes scale-up {
     0% {
         -webkit-transform: scale(0.75);
