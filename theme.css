@@ -4122,6 +4122,7 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
 }
 
 @media (prefers-reduced-motion) {
+
     /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
     body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
     body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
@@ -4132,7 +4133,7 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
         -webkit-animation: unset;
         animation: unset;
     }
-    }
+}
 
 @-webkit-keyframes scale-up {
     0% {
@@ -6422,6 +6423,10 @@ body {
 
 body {
     --modal-border-color: var(--background-modifier-border);
+}
+
+.modal-sidebar {
+    --background-modifier-form-field: transparent;
 }
 
 .settings-search-container.vertical-tab-header-group {
