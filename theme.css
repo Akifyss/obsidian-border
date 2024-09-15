@@ -7450,8 +7450,6 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
     transition: background-color var(--anim-duration-fast) var(--anim-motion-smooth);
 }
 
-
-
 /* ====== tag====== */
 body {
     /* Tags */
