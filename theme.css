@@ -52,6 +52,11 @@ settings:
         title.zh: 自动隐藏 标签页标题栏
         type: class-toggle
     - 
+        id: vault-profile-autohide
+        title: Auto hide vault profile
+        title.zh: 自动隐藏 vault 配置栏
+        type: class-toggle
+    - 
         id: file-explorer
         title: File explorer
         title.zh: 文件列表
@@ -5516,6 +5521,61 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark
     opacity: 1;
 }
 
+
+/* vault profile */
+
+body:not(.is-mobile) .workspace-split.mod-left-split {
+    position: relative;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    padding: 6px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    height: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+    height: 32px;
+    cursor: pointer;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+    gap: var(--size-2-1);
+}
+
+
+/* vault profile autohide*/
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    height: 16px;
+    border-top: 0 solid transparent;
+    opacity: 0;
+    transition: height var(--anim-out), border-top var(--anim-out), opacity var(--anim-out);
+}
+
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile:hover {
+    height: 44px;
+    border-top: var(--tab-outline-width) solid var(--tab-outline-color);
+    opacity: 1;
+    transition: height var(--anim-in), border-top var(--anim-in), opacity var(--anim-in);
+}
+
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 0px;
+    transition: padding-bottom var(--anim-out);
+}
+
+body:not(.is-mobile).vault-profile-autohide:has(.workspace-sidedock-vault-profile:hover) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 44px;
+    transition: padding-bottom var(--anim-in);
+}
+
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container :is(.workspace-tab-header, .workspace-tab-header-inner, .view-header, .view-content) {
@@ -6369,34 +6429,6 @@ body:not(.file-icon-remove).colorful-folder .workspace-leaf-content[data-type="f
 
 body:not(.file-icon-remove).colorful-folder .nav-folder.mod-root>.nav-folder-title::before {
     background-color: currentColor;
-}
-
-
-/* vault profile */
-
-body:not(.is-mobile) .workspace-split.mod-left-split {
-    position: relative;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
-    padding-bottom: 44px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    padding: 6px;
-    background-color: transparent;
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    height: 44px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
-    height: 32px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
-    gap: var(--size-2-1);
 }
 
 /*====== empty state ======*/
