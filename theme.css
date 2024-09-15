@@ -52,6 +52,11 @@ settings:
         title.zh: 自动隐藏 标签页标题栏
         type: class-toggle
     - 
+        id: vault-profile-autohide
+        title: Auto hide vault profile
+        title.zh: 自动隐藏 vault 配置栏
+        type: class-toggle
+    - 
         id: file-explorer
         title: File explorer
         title.zh: 文件列表
@@ -2995,7 +3000,7 @@ settings:
 		title: list indent
         title.zh:  列表缩进
 		type: variable-text
-		default: 2em
+		default: 2.25em
     - 
 		id: list-spacing
 		title: list spacing
@@ -3485,6 +3490,14 @@ settings:
         title.zh: 内嵌文档 字体风格
         description: Input any CSS font-style value
         description.zh: 输入任意 CSS font-style 值
+        type: variable-text
+        default: ''
+    - 
+        id: embed-max-height
+        title: embed max height
+        title.zh: 内嵌文档 最大高度
+        description: Input any CSS height value
+        description.zh: 输入任意 CSS height 值
         type: variable-text
         default: ''
     - 
@@ -4122,6 +4135,7 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
 }
 
 @media (prefers-reduced-motion) {
+
     /*body:not(.is-phone, .extra-anim-remove) .graph-controls:not(.is-close),
     body:not(.is-phone, .extra-anim-remove) .popover:not(.svelte-1xg3ic1),
     body:not(.is-phone, .extra-anim-remove) .modal:not(:has(.checkbox-container)),
@@ -4132,7 +4146,7 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
         -webkit-animation: unset;
         animation: unset;
     }
-    }
+}
 
 @-webkit-keyframes scale-up {
     0% {
@@ -5507,6 +5521,61 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark
     opacity: 1;
 }
 
+
+/* vault profile */
+
+body:not(.is-mobile) .workspace-split.mod-left-split {
+    position: relative;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    padding: 6px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    height: 44px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+    height: 32px;
+    cursor: pointer;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+    gap: var(--size-2-1);
+}
+
+
+/* vault profile autohide*/
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    height: 16px;
+    border-top: 0 solid transparent;
+    opacity: 0;
+    transition: height var(--anim-out), border-top var(--anim-out), opacity var(--anim-out);
+}
+
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-sidedock-vault-profile:hover {
+    height: 44px;
+    border-top: var(--tab-outline-width) solid var(--tab-outline-color);
+    opacity: 1;
+    transition: height var(--anim-in), border-top var(--anim-in), opacity var(--anim-in);
+}
+
+body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 0px;
+    transition: padding-bottom var(--anim-out);
+}
+
+body:not(.is-mobile).vault-profile-autohide:has(.workspace-sidedock-vault-profile:hover) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+    padding-bottom: 44px;
+    transition: padding-bottom var(--anim-in);
+}
+
 /* ====== workspace mod root====== */
 /* ====== stack mod===== */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container :is(.workspace-tab-header, .workspace-tab-header-inner, .view-header, .view-content) {
@@ -5909,6 +5978,12 @@ input.wb-search-bar {
 
 /*outline pane*/
 /* from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536 */
+
+.outline-enhanced .workspace-leaf-content[data-type=outline] .tree-item-inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 .outline-enhanced .workspace-leaf-content[data-type=outline] .view-content .collapse-icon {
     padding-inline-end: var(--size-2-3);
@@ -6356,34 +6431,6 @@ body:not(.file-icon-remove).colorful-folder .nav-folder.mod-root>.nav-folder-tit
     background-color: currentColor;
 }
 
-
-/* vault profile */
-
-body:not(.is-mobile) .workspace-split.mod-left-split {
-    position: relative;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
-    padding-bottom: 44px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    padding: 6px;
-    background-color: transparent;
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    height: 44px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
-    height: 32px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
-    gap: var(--size-2-1);
-}
-
 /*====== empty state ======*/
 
 body {
@@ -6422,6 +6469,10 @@ body {
 
 body {
     --modal-border-color: var(--background-modifier-border);
+}
+
+.modal-sidebar {
+    --background-modifier-form-field: transparent;
 }
 
 .settings-search-container.vertical-tab-header-group {
@@ -6561,6 +6612,26 @@ body:not(.is-mobile) input[type=range]:is(:focus, :focus-visible)::-webkit-slide
 }
 
 /* input */
+textarea,
+input.metadata-input-text,
+input[type='date'],
+input[type='datetime-local'],
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    border-color: var(--background-modifier-border-focus);
+}
+
+body:not(.is-mobile).theme-light textarea:not([class]),
+body:not(.is-mobile).theme-light input[type='text']:not([class]),
+body:not(.is-mobile).theme-light input[type='search']:not([class]),
+body:not(.is-mobile).theme-light input[type='email']:not([class]),
+body:not(.is-mobile).theme-light input[type='password']:not([class]),
+body:not(.is-mobile).theme-light input[type='number']:not([class]) {
+    box-shadow: 0 1px 2px 0px hsla(var(--accent-h), 18%, 80%, 0.2);
+}
 
 body:not(.is-mobile) textarea:not([class]):is(:focus, :focus-visible),
 body:not(.is-mobile) input[type='text']:not([class]):is(:focus, :focus-visible),
@@ -8393,8 +8464,12 @@ body {
     --embed-border-radius: 0px;
 }
 
-body.seamless-embeds {
+.seamless-embeds {
     --embed-border-left: none;
+}
+
+.seamless-embeds .markdown-embed {
+    --embed-border-start: none;
 }
 
 .markdown-embed {
