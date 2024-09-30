@@ -2296,6 +2296,35 @@ settings:
 		default-light: '#'
 		default-dark: '#'
     - 
+        id: Editor-background-pattern
+        title: Editor background pattern
+        title.zh: 编辑器背景图案
+        type: heading
+        collapsed: true
+        level: 3
+    - 
+        id: editor-grid-background-pattren
+        title: Enable grid background pattern
+        title.zh: 启用 网格背景图案
+        type: class-toggle
+    - 
+		id: grid-background-pattern-color
+		title: Customize grid background pattern color
+        title.zh: 自定义网格背景图案颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
+        id: grid-background-pattern-size
+        title: Custom grid background pattern size
+        title.zh: 自定义 网格背景图案尺寸
+        description: Accepts any CSS background-size value
+        description.zh: 接受任何 CSS background-size 值
+        type: variable-text
+        default: 36px
+    - 
         id: Headings
         title: Headings
         title.zh: 标题
@@ -3791,7 +3820,8 @@ body.file-icon-remove .setting-item[data-id=colorful-folder],
 body:not(.new-tab-image-customize) .setting-item[data-id=new-tab-image],
 body:not(.line-hover-indicator) .setting-item[data-id=hover-indicator-color],
 body:not(.codeblock-style-customize) .setting-item:is([data-id=code-background-light], [data-id=code-background-dark], [data-id=code-border-light], [data-id=code-border-dark], [data-id=code-normal], [data-id=code-comment], [data-id=code-function], [data-id=code-important], [data-id=code-keyword], [data-id=code-operator], [data-id=code-property], [data-id=code-punctuation], [data-id=code-string], [data-id=code-tag], [data-id=code-value]),
-body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-width], [data-id=callout-border-opacity], [data-id=callout-padding], [data-id=callout-radius], [data-id=callout-title-color], [data-id=callout-title-padding], [data-id=callout-title-padding], [data-id=callout-title-size], [data-id=callout-content-padding], [data-id=callout-content-background], [data-id=callout-content-radius]) {
+body:not(.callout-style-customize) .setting-item:is([data-id=callout-border-width], [data-id=callout-border-opacity], [data-id=callout-padding], [data-id=callout-radius], [data-id=callout-title-color], [data-id=callout-title-padding], [data-id=callout-title-padding], [data-id=callout-title-size], [data-id=callout-content-padding], [data-id=callout-content-background], [data-id=callout-content-radius]),
+body:not(.editor-grid-background-pattren) .setting-item:is([data-id=grid-background-pattern-color], [data-id=grid-background-pattern-size]) {
     display: none;
 }
 
@@ -6511,6 +6541,11 @@ body:not(.setting-item-title-icon-remove):not(.is-phone) .vertical-tab-header-gr
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M13.249 7.111h-.36v-.267H9.88a1.636 1.636 0 0 1-1.436-2.448l.89-1.467A2.276 2.276 0 0 0 7.337.889a2.222 2.222 0 0 0-2.45 2.147h-3.11a.889.889 0 0 0-.89.888v3.632h1.25A1.391 1.391 0 0 1 3.556 8.75a1.333 1.333 0 0 1-.347 1.027 1.334 1.334 0 0 1-.987.444H.89v3.925a.889.889 0 0 0 .889.889H12a.889.889 0 0 0 .889-.89v-2.59h.444a2.223 2.223 0 0 0 2.223-2.45 2.29 2.29 0 0 0-2.307-1.995Z'/%3e%3cpath d='M11.933.507 9.391 4.889a.569.569 0 0 0 .489.889h5.089a.569.569 0 0 0 .489-.89L12.916.508a.57.57 0 0 0-.983 0Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
+body:not(.is-phone) .horizontal-tab-nav-item.is-active,
+body:not(.is-phone) .vertical-tab-nav-item.is-active {
+    color: var(--nav-item-color-active);
+    background-color: var(--nav-item-background-active);
+}
 
 /* ====== UI Components====== */
 .theme-light {
@@ -6755,6 +6790,19 @@ body {
 }
 
 /* ====== editor ====== */
+/* background pattern */
+body {
+    --grid-background-pattern-size: 36px;
+    --grid-background-pattern-color: var(--background-modifier-border);
+}
+
+.editor-grid-background-pattren .workspace-leaf-content[data-type="markdown"] {
+    background-image: linear-gradient(to right, var(--grid-background-pattern-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-background-pattern-color) 1px, transparent 1px);
+    background-size: var(--grid-background-pattern-size) var(--grid-background-pattern-size);
+}
+
+
 /* Paragraphs */
 
 body.p-spacing-br :is(.markdown-preview-view, .markdown-rendered) p>br {
