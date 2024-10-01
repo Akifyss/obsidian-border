@@ -2310,7 +2310,7 @@ settings:
     - 
 		id: grid-background-pattern-color
 		title: Customize grid background pattern color
-        title.zh: 自定义网格背景图案颜色
+        title.zh: 自定义 网格背景图案颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
