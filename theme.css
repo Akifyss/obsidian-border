@@ -8744,6 +8744,9 @@ svg.sidebar-left {
 }
 
 /* ====== MOBILE ====== */
+.is-phone{
+    --file-margins: var(--size-4-2) var(--size-4-3);
+}
 
 .is-mobile {
     --background-modifier-form-field: var(--background-modifier-hover);
@@ -8803,12 +8806,6 @@ svg.sidebar-left {
 .is-mobile.theme-light .mk-flow-bar button {
     background-color: var(--background-modifier-form-field);
 }
-
-/* ====== mobile toolbar====== */
-.mobile-toolbar {
-    box-shadow: inset 0px 1px var(--divider-color);
-}
-
 
 /* tablet card layout */
 body.card-layout-pad-open.is-tablet {
