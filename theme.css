@@ -6912,7 +6912,7 @@ body {
     text-transform: var(--inline-title-text-transform);
 }
 
-body:not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
+body:not(.is-phone):not(.inline-title-divider-remove) .inline-title:not(.mk-inline-title) {
     border-bottom: 1px solid var(--divider-color);
     padding-bottom: var(--size-4-3);
     margin-bottom: var(--size-4-3);
@@ -8745,7 +8745,7 @@ svg.sidebar-left {
 
 /* ====== MOBILE ====== */
 .is-phone{
-    --file-margins: var(--size-4-2) var(--size-4-3);
+    --file-margins: var(--size-4-2) var(--size-4-4);
 }
 
 .is-mobile {
@@ -8767,6 +8767,10 @@ svg.sidebar-left {
 
 .is-mobile .workspace-drawer.mod-right {
     --mobile-sidebar-background: var(--background-primary);
+}
+
+.is-phone .menu-scroll{
+    background-color:transparent;
 }
 
 .is-tablet.theme-dark .vertical-tab-content,
