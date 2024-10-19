@@ -3543,7 +3543,7 @@ settings:
         description: Input any CSS border-radius value
         description.zh: 输入任意 CSS border-radius 值
         type: variable-text
-        default: ''
+        default: '6px'
     - 
 		id: checkbox-marker-color
 		title: checkbox marker color
@@ -6659,6 +6659,7 @@ input[type='number'] {
     border-color: var(--background-modifier-border-focus);
 }
 
+.theme-light input[type=checkbox],
 body:not(.is-mobile).theme-light textarea:not([class]),
 body:not(.is-mobile).theme-light input[type='text']:not([class]),
 body:not(.is-mobile).theme-light input[type='search']:not([class]),
@@ -7808,7 +7809,7 @@ ul>li.is-collapsed::marker,
 /* ======checkboxes ====== */
 body {
     /* Checkboxes */
-    --checkbox-radius: var(--radius-l);
+    --checkbox-radius: 6px;
     --checkbox-size: var(--font-text-size);
     --checkbox-marker-color: var(--background-primary);
     --checkbox-color: var(--color-green);
