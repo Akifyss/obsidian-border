@@ -6818,7 +6818,8 @@ body {
     --grid-background-pattern-color: var(--background-modifier-border);
 }
 
-.editor-grid-background-pattren .workspace-leaf-content[data-type="markdown"] {
+.editor-grid-background-pattren .workspace-leaf-content[data-type="markdown"],
+.export-image-preview-container.markdown-rendered { /*Adaptive to the Export Image Plugin*/
     background-image: linear-gradient(to right, var(--grid-background-pattern-color) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid-background-pattern-color) 1px, transparent 1px);
     background-size: var(--grid-background-pattern-size) var(--grid-background-pattern-size);
