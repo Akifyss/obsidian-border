@@ -5477,6 +5477,17 @@ body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .works
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
+body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="all-properties"]>.nav-header:has(.nav-action-button.is-active:last-child):hover,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="all-properties"]>.nav-header:has(.nav-action-button.is-active:last-child),
+body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="outline"]>.nav-header:has(.nav-action-button.is-active:first-child):hover,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="outline"]>.nav-header:has(.nav-action-button.is-active:first-child),
+body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="backlink"] .view-content>.nav-header:has(.nav-action-button.is-active:last-child):hover,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="backlink"] .view-content>.nav-header:has(.nav-action-button.is-active:last-child),
+body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header:has(.nav-action-button.is-active:last-child) {
+    height: 80px;
+    opacity: 1;
+    transition: height var(--anim-in), opacity var(--anim-in);
+}
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
     transform: translateY(-22px);
@@ -6006,6 +6017,10 @@ input.wb-search-bar {
     width: calc(100% - var(--size-4-6));
 }
 
+.nav-header .search-input-container {
+    margin: 6px auto 4px;
+}
+
 /*nav-buttons left align*/
 .nav-buttons-container {
     display: flex;
@@ -6475,7 +6490,7 @@ body {
 
 .tag-pane-empty,
 .bookmarks-pane-empty,
-.workspace-leaf-content[data-type=outline] .pane-empty,
+.pane-empty,
 .search-empty-state {
     display: flex;
     align-items: center;
@@ -6487,7 +6502,7 @@ body {
 
 .tag-pane-empty::before,
 .bookmarks-pane-empty::before,
-.workspace-leaf-content[data-type=outline] .pane-empty::before,
+.pane-empty::before,
 .search-empty-state::before {
     content: "";
     display: inline-block;
