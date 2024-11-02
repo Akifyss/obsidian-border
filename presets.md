@@ -23,6 +23,9 @@
   + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
 ![screenshot](img/Obsidian-default-light-alt.png)
 
++ [flexoki-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-light.json)
+![screenshot](img/flexoki-light.png)
+
 + [Github-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-light.json)
 ![screenshot](img/Github-light.png)
 
@@ -65,6 +68,9 @@
 ![screenshot](img/Obsidian-default-dark.png)
   + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
 ![screenshot](img/Obsidian-default-dark-alt.png)
+
++ [flexoki-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-dark.json)
+![screenshot](img/flexoki-dark.png)
 
 + [Github-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-dark.json)
 ![screenshot](img/Github-dark.png)
