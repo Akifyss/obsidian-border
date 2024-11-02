@@ -11,6 +11,7 @@
   "Appearance-dark@@color-pink-rgb@@dark": "#CE5D97",
   "Appearance-dark@@background-underlying-select-dark": "background-underlying-secondary-dark",
   "Appearance-dark@@on-border-dark": "#878580",
+  "Appearance-dark@@mix-blend-mode-on-border-dark": "normal",
   "Appearance-dark@@background-primary@@dark": "#100F0F",
   "Appearance-dark@@background-primary-alt@@dark": "#1C1B1A",
   "Appearance-dark@@background-secondary@@dark": "#1C1B1A",
