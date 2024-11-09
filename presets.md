@@ -23,7 +23,7 @@
   + [Obsidian-default-light-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-light-alt.json)
 ![screenshot](img/Obsidian-default-light-alt.png)
 
-+ [flexoki-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-light.json)
++ [flexoki-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-light.json)(Palette from [flexoki](https://stephango.com/flexoki))
 ![screenshot](img/flexoki-light.png)
 
 + [Github-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-light.json)
@@ -41,7 +41,7 @@
   + [Mint](https://github.com/Akifyss/obsidian-border/blob/main/presets/Mint.json)
   ![screenshot](img/Mint.png)
 
-+ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)
++ [Paper-like](https://github.com/Akifyss/obsidian-border/blob/main/presets/Paper-like.json)(Palette from [flexoki](https://stephango.com/flexoki))
 ![screenshot](img/Paper-like.png)
 
 + [Borderless-light](https://github.com/Akifyss/obsidian-border/blob/main/presets/Borderless-light.json) (credit [@kneecaps](https://github.com/7368697661))
@@ -69,7 +69,7 @@
   + [Obsidian-default-dark-alt](https://github.com/Akifyss/obsidian-border/blob/main/presets/Obsidian-default-dark-alt.json)
 ![screenshot](img/Obsidian-default-dark-alt.png)
 
-+ [flexoki-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-dark.json)
++ [flexoki-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/flexoki-dark.json)(Palette from [flexoki](https://stephango.com/flexoki))
 ![screenshot](img/flexoki-dark.png)
 
 + [Github-dark](https://github.com/Akifyss/obsidian-border/blob/main/presets/Github-dark.json)
