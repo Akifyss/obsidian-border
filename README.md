@@ -1,4 +1,4 @@
-# obsidian-border
+# Obsidian Border Theme
 
 A clean and highly customisable theme for obsidian.
 
