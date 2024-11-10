@@ -1,4 +1,4 @@
-# obsidian-border
+# Obsidian Border Theme
 
 一个干净且高度可定制的obsidian主题。
 
