@@ -21,5 +21,8 @@
   "Appearance-dark@@interactive-normal@@dark": "#424257",
   "Appearance-dark@@interactive-hover@@dark": "#4b4b63",
   "Appearance-dark@@link-external-color@@dark": "#50FA7B",
-  "Appearance-dark@@link-external-color-hover@@dark": "#50FA7B"
+  "Appearance-dark@@link-external-color-hover@@dark": "#50FA7B",
+  "Appearance-dark@@background-activated-tab-header-dark": "none",
+  "Appearance-dark@@shadow-activated-tab-header-dark": "none",
+  "Appearance-dark@@color-activated-tab-header-underline-dark": "var(--color-accent)"
 }
