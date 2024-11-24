@@ -5461,44 +5461,35 @@ body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-fra
 }
 
 /*nav header autohide*/
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header {
-    height: 16px;
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
+    height: 8px;
     opacity: 0;
     transition: height var(--anim-out), opacity var(--anim-out);
-}
-
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header,
-body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header {
-    height: 44px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="all-properties"]>.nav-header:has(.nav-action-button.is-active:last-child):hover,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="all-properties"]>.nav-header:has(.nav-action-button.is-active:last-child),
-body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="outline"]>.nav-header:has(.nav-action-button.is-active:first-child):hover,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="outline"]>.nav-header:has(.nav-action-button.is-active:first-child),
-body:not(.is-mobile).nav-header-autohide .workspace-leaf-content[data-type="backlink"] .view-content>.nav-header:has(.nav-action-button.is-active:last-child):hover,
-body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container .workspace-leaf-content[data-type="backlink"] .view-content>.nav-header:has(.nav-action-button.is-active:last-child),
-body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header:has(.nav-action-button.is-active:last-child) {
-    height: 80px;
-    opacity: 1;
-    transition: height var(--anim-in), opacity var(--anim-in);
-}
-
-body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container {
-    transform: translateY(-22px);
-    opacity: 0;
-    transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .nav-buttons-container,
 body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .nav-buttons-container,
 body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .nav-buttons-container {
-    transform: translateY(0px);
+    height: 32px;
     opacity: 1;
-    transition: transform var(--anim-in), opacity var(--anim-in);
+    transition: height var(--anim-in), opacity var(--anim-in);
+}
+
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container {
+    height: 0px;
+    opacity: 0;
+    margin: 0px auto 0px;
+    transition: height var(--anim-out), opacity var(--anim-out), margin var(--anim-out);
+}
+
+body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header:hover .search-input-container,
+body:not(.is-mobile).nav-header-autohide .workspace-tab-header-container:hover~.workspace-tab-container :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container,
+body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .workspace-leaf-content[data-type="backlink"] .view-header:hover~.view-content>.nav-header .search-input-container {
+    height: 30px;
+    opacity: 1;
+    margin: 6px auto 4px;
+    transition: height var(--anim-in), opacity var(--anim-in), margin var(--anim-in);
+    ;
 }
 
 /*view-header autohide */
