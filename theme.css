@@ -6955,7 +6955,10 @@ body:not(.is-phone):not(.inline-title-divider-remove) .inline-title:not(.mk-inli
     position: relative;
 }
 
-body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator,
+body:not(.heading-indicator-off) .markdown-preview-view .heading-collapse-indicator {
+    transform: translateX(-16px);
+}
+
 body:not(.heading-indicator-off) .is-live-preview .HyperMD-header .collapse-indicator.collapse-icon {
     transform: translateX(-8px);
 }
