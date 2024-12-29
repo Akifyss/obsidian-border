@@ -6861,8 +6861,8 @@ body {
 }
 
 /* justify text */
-body.text-align-justify .markdown-source-view.mod-cm6 .cm-line,
-body.text-align-justify .markdown-preview-view p {
+.text-align-justify .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock),
+.text-align-justify .markdown-preview-view p {
     text-align: justify;
     text-justify: auto;
 }
@@ -8854,43 +8854,47 @@ svg.sidebar-left {
     border-top: 1px solid var(--divider-color);
 }
 
-.is-tablet .workspace-drawer-ribbon {
-    border-right: 1px solid var(--divider-color);
-}
-
-.is-tablet .workspace-drawer {
-    padding-top: 0;
-}
-
 .is-mobile.theme-light .mk-flow-bar button {
     background-color: var(--background-modifier-form-field);
 }
 
+.is-tablet .workspace-drawer .nav-header {
+    border-top: var(--border-width) solid transparent;
+}
+
 /* tablet card layout */
-body.card-layout-pad-open.is-tablet {
+.card-layout-pad-open.is-tablet .workspace-drawer {
+    padding-top: 0;
+}
+
+.card-layout-pad-open.is-tablet .workspace-drawer-ribbon {
+    border-right: 1px solid var(--divider-color);
+}
+
+.card-layout-pad-open.is-tablet {
     --titlebar-background: var(--background-underlying);
     --titlebar-background-focused: var(--background-underlying);
 }
 
-body.card-layout-pad-open.is-tablet,
-body.card-layout-pad-open.is-tablet .app-container,
-body.card-layout-pad-open.is-tablet .workspace,
-body.card-layout-pad-open.is-tablet .horizontal-main-container {
+.card-layout-pad-open.is-tablet,
+.card-layout-pad-open.is-tablet .app-container,
+.card-layout-pad-open.is-tablet .workspace,
+.card-layout-pad-open.is-tablet .horizontal-main-container {
     background-color: var(--background-underlying) !important;
 }
 
-body.card-layout-pad-open.is-tablet .workspace {
+.card-layout-pad-open.is-tablet .workspace {
     gap: 16px;
     padding: 16px;
     padding-bottom: 24px;
     padding-top: 8px;
 }
 
-body.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
+.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
     padding-bottom: 8px;
 }
 
-body.card-layout-pad-open.is-tablet .workspace-drawer {
+.card-layout-pad-open.is-tablet .workspace-drawer {
     background-color: var(--background-primary);
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
@@ -8899,23 +8903,23 @@ body.card-layout-pad-open.is-tablet .workspace-drawer {
     margin-top: 32px;
 }
 
-body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer {
+.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer {
     border-radius: var(--card-border-radius-dark, 8px) !important;
 }
 
-body.card-layout-pad-open.is-tablet .workspace-split.mod-root {
+.card-layout-pad-open.is-tablet .workspace-split.mod-root {
     border-radius: var(--card-border-radius-light, 8px) !important;
     overflow: hidden !important;
     background-color: var(--background-primary) !important;
     box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
-body.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
+.card-layout-pad-open.is-tablet.theme-dark .workspace-split.mod-root {
     box-shadow: 0px 0px 0px 1px var(--background-modifier-border);
     border-radius: var(--card-border-radius-dark, 8px);
 }
 
-body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
+.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     border-right: none;
     border-left: none;
     border-radius: var(--card-border-radius-light, 8px) !important;
@@ -8923,19 +8927,19 @@ body.card-layout-pad-open.is-tablet .workspace-drawer.is-pinned {
     box-shadow: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
 }
 
-body.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
+.card-layout-pad-open.is-tablet.theme-dark .workspace-drawer.is-pinned {
     box-shadow: 0px 0px 0px 1px var(--background-modifier-border);
     border-radius: var(--card-border-radius-dark, 8px) !important;
 }
 
-body.card-layout-pad-open.is-tablet .workspace-drawer-inner {
+.card-layout-pad-open.is-tablet .workspace-drawer-inner {
     padding-top: 8px;
 }
 
 
 /* drawer-phone-full-width */
 
-body.is-phone.drawer-phone-full-width .workspace-drawer {
+.is-phone.drawer-phone-full-width .workspace-drawer {
     width: 100vw;
     border-radius: 0px;
 }
