@@ -7609,10 +7609,6 @@ body {
 
 /*general*/
 
-body {
-    --hover-indicator-color: var(--color-accent);
-}
-
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
@@ -7629,6 +7625,7 @@ body {
     height: 0;
     border-radius: 10px;
     background: var(--hover-indicator-color);
+    --hover-indicator-color: var(--text-faint);
     opacity: 1;
 }
 
@@ -7660,6 +7657,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
     opacity: 1 !important;
+    --hover-indicator-color: var(--text-faint);
 }
 
 /* code */
@@ -7714,6 +7712,28 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-10::after {
     content: "10" !important;
 }
+
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    width: 3px;
+    height: calc(100% - 6px);
+    border-radius: 10px;
+    background: var(--hover-indicator-color);
+    --hover-indicator-color: var(--color-accent)!important;
+    opacity: 1;
+}
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):after {
+    opacity: 1 !important;
+    --hover-indicator-color: var(--color-accent)!important;
+}
+
 
 /* Cursor */
 
