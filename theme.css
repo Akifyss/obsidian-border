@@ -2233,6 +2233,33 @@ name: Editor
 id: Editor
 settings:
     - 
+        id: line-emphasis
+        title: Focus indicator
+        title.zh: 焦点指示器
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: line-hover-indicator-info
+        description: "Display a vertical line indicator before focus line"
+        description.zh: "在焦点行前显示一个竖线指示器"
+        type: info-text
+        markdown: true
+    - 
+        id: line-hover-indicator
+        title: Enable Focus indicator
+        title.zh: 启用 焦点指示器
+        type: class-toggle
+    - 
+		id: hover-indicator-color
+		title: Customize indicator color
+        title.zh: 自定义指示器的颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: border-focus-mode-heading
         title: Focus mode
         title.zh: 专注模式
@@ -2268,33 +2295,6 @@ settings:
         min: 0.05
         max: 1
         step: 0.05
-    - 
-        id: line-emphasis
-        title: Hover line indicator
-        title.zh: 悬停行指示器
-        type: heading
-        collapsed: ture
-        level: 3
-    - 
-        id: line-hover-indicator-info
-        description: "Display a vertical line indicator before hovered line"
-        description.zh: "在鼠标悬停行前显示一个竖线指示器"
-        type: info-text
-        markdown: true
-    - 
-        id: line-hover-indicator
-        title: Enable hover line indicator
-        title.zh: 启用 悬停行指示器
-        type: class-toggle
-    - 
-		id: hover-indicator-color
-		title: Customize indicator color
-        title.zh: 自定义指示器的颜色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
     - 
         id: Editor-background-pattern
         title: Editor background pattern
