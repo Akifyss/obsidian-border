@@ -21,6 +21,8 @@
   "Appearance-dark@@background-tertiary@@dark": "#262626",
   "Appearance-dark@@workspace-background-translucent@@dark": "#00000099",
   "Appearance-dark@@background-modifier-hover@@dark": "#FFFFFF13",
+  "Appearance-dark@@background-modifier-active-hover@@dark": "#8A5CF526",
+  "Appearance-dark@@background-modifier-border@@dark": "#363636",
   "Appearance-dark@@background-modifier-border-hover@@dark": "#3f3f3f",
   "Appearance-dark@@background-modifier-border-focus@@dark": "#555555",
   "Appearance-dark@@text-normal@@dark": "#DADADA",

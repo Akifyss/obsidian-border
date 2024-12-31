@@ -2233,6 +2233,33 @@ name: Editor
 id: Editor
 settings:
     - 
+        id: line-emphasis
+        title: Focus indicator
+        title.zh: 焦点指示器
+        type: heading
+        collapsed: ture
+        level: 3
+    - 
+        id: line-hover-indicator-info
+        description: "Display a vertical line indicator before focus line"
+        description.zh: "在焦点行前显示一个竖线指示器"
+        type: info-text
+        markdown: true
+    - 
+        id: line-hover-indicator
+        title: Enable Focus indicator
+        title.zh: 启用 焦点指示器
+        type: class-toggle
+    - 
+		id: hover-indicator-color
+		title: Customize indicator color
+        title.zh: 自定义指示器的颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    - 
         id: border-focus-mode-heading
         title: Focus mode
         title.zh: 专注模式
@@ -2268,33 +2295,6 @@ settings:
         min: 0.05
         max: 1
         step: 0.05
-    - 
-        id: line-emphasis
-        title: Hover line indicator
-        title.zh: 悬停行指示器
-        type: heading
-        collapsed: ture
-        level: 3
-    - 
-        id: line-hover-indicator-info
-        description: "Display a vertical line indicator before hovered line"
-        description.zh: "在鼠标悬停行前显示一个竖线指示器"
-        type: info-text
-        markdown: true
-    - 
-        id: line-hover-indicator
-        title: Enable hover line indicator
-        title.zh: 启用 悬停行指示器
-        type: class-toggle
-    - 
-		id: hover-indicator-color
-		title: Customize indicator color
-        title.zh: 自定义指示器的颜色
-		type: variable-themed-color
-		opacity: true
-		format: hex
-		default-light: '#'
-		default-dark: '#'
     - 
         id: Editor-background-pattern
         title: Editor background pattern
@@ -5696,6 +5696,12 @@ body:not(.is-mobile).theme-dark .workspace-leaf-content[data-type=markdown] .doc
     }
 }
 
+
+/*webviewer*/
+.webviewer-content {
+    border-top: 0px solid var(--divider-color);
+}
+
 /* canvas  */
 body {
     --canvas-dot-pattern: var(--color-base-30);
@@ -7609,18 +7615,14 @@ body {
 
 /*general*/
 
-body {
-    --hover-indicator-color: var(--color-accent);
-}
-
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -7629,13 +7631,14 @@ body {
     height: 0;
     border-radius: 10px;
     background: var(--hover-indicator-color);
+    --hover-indicator-color: var(--text-faint);
     opacity: 1;
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }
 
@@ -7660,6 +7663,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line:not(.HyperMD-list-line-1):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):hover:after {
     opacity: 1 !important;
+    --hover-indicator-color: var(--text-faint);
 }
 
 /* code */
@@ -7714,6 +7718,28 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-line.HyperMD-list-line.HyperMD-list-line-10::after {
     content: "10" !important;
 }
+
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    width: 3px;
+    height: calc(100% - 6px);
+    border-radius: 10px;
+    background: var(--hover-indicator-color);
+    --hover-indicator-color: var(--color-accent) !important;
+    opacity: 1;
+}
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):after {
+    opacity: 1 !important;
+    --hover-indicator-color: var(--color-accent) !important;
+}
+
 
 /* Cursor */
 
