@@ -17,6 +17,8 @@
   "Appearance-light@@background-tertiary@@light": "#f6f6f6",
   "Appearance-light@@workspace-background-translucent@@light": "#FFFFFF99",
   "Appearance-light@@background-modifier-hover@@light": "#00000013",
+  "Appearance-light@@background-modifier-active-hover@@light": "#8A5CF526",
+  "Appearance-light@@background-modifier-border@@light": "#e0e0e0",
   "Appearance-light@@background-modifier-border-hover@@light": "#d4d4d4",
   "Appearance-light@@background-modifier-border-focus@@light": "#bdbdbd",
   "Appearance-light@@text-normal@@light": "#222222",

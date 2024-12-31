@@ -5696,6 +5696,12 @@ body:not(.is-mobile).theme-dark .workspace-leaf-content[data-type=markdown] .doc
     }
 }
 
+
+/*webviewer*/
+.webviewer-content {
+    border-top: 0px solid var(--divider-color);
+}
+
 /* canvas  */
 body {
     --canvas-dot-pattern: var(--color-base-30);
@@ -7609,14 +7615,14 @@ body {
 
 /*general*/
 
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -7631,8 +7637,8 @@ body {
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
 }
 
@@ -7724,14 +7730,14 @@ body {
     height: calc(100% - 6px);
     border-radius: 10px;
     background: var(--hover-indicator-color);
-    --hover-indicator-color: var(--color-accent)!important;
+    --hover-indicator-color: var(--color-accent) !important;
     opacity: 1;
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):after {
     opacity: 1 !important;
-    --hover-indicator-color: var(--color-accent)!important;
+    --hover-indicator-color: var(--color-accent) !important;
 }
 
 
