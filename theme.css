@@ -7625,14 +7625,14 @@ body {
 
 /*general*/
 
-.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)) {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)) {
     position: relative;
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header))::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header))::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -7647,31 +7647,9 @@ body {
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)):hover::after {
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
+.line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:not(:has(.collapse-indicator, .mk-header)):hover::after {
     height: calc(100% - 6px);
-}
-
-/* active line */
-
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after {
-    content: "";
-    position: absolute;
-    left: -12px;
-    top: 3px;
-    width: 3px;
-    height: calc(100% - 6px);
-    border-radius: 10px;
-    background: var(--hover-indicator-color);
-    --hover-indicator-color: var(--color-accent) !important;
-    opacity: 1;
-}
-
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
-.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):after {
-    opacity: 1 !important;
-    --hover-indicator-color: var(--color-accent) !important;
 }
 
 /* num */
@@ -7751,6 +7729,27 @@ body {
     content: "10" !important;
 }
 
+/* active line */
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    width: 3px;
+    height: calc(100% - 6px);
+    border-radius: 10px;
+    background: var(--hover-indicator-color);
+    --hover-indicator-color: var(--color-accent) !important;
+    opacity: 1;
+}
+
+.line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
+.line-hover-indicator.focus-indicator-codeblock-line-number .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end):after {
+    opacity: 1 !important;
+    --hover-indicator-color: var(--color-accent) !important;
+}
 
 /* Cursor */
 
