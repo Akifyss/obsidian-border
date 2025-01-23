@@ -6792,8 +6792,8 @@ body {
 .menu,
 .suggestion-container.mod-search-suggestion {
     background-color: var(--workspace-background-translucent);
-    backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
-    -webkit-backdrop-filter: blur(12px) saturate(190%) contrast(50%) brightness(130%);
+    backdrop-filter: blur(16px) saturate(190%) contrast(50%) brightness(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(190%) contrast(50%) brightness(130%);
 }
 
 .theme-dark .modal.mod-canvas-help,
@@ -6804,8 +6804,8 @@ body {
 .theme-dark .menu,
 .theme-dark .suggestion-container.mod-search-suggestion {
     background-color: var(--workspace-background-translucent);
-    backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
-    -webkit-backdrop-filter: blur(10px) saturate(190%) contrast(70%) brightness(80%);
+    backdrop-filter: blur(16px) saturate(190%) contrast(70%) brightness(80%);
+    -webkit-backdrop-filter: blur(16px) saturate(190%) contrast(70%) brightness(80%);
 }
 
 .suggestion-container.mod-search-suggestion .suggestion {
