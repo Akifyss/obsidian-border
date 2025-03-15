@@ -5877,6 +5877,8 @@ body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .
 body.is-mobile:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action:before {
     height: 24px !important;
     width: 24px !important;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
 }
 
 body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(1):before {
