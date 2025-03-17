@@ -5673,7 +5673,7 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* document search replace */
-#cMenuToolbarModalBar.top {
+#editingToolbarModalBar.top {
     z-index: var(--layer-status-bar);
 }
 
