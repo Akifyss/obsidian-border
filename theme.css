@@ -8901,6 +8901,11 @@ svg.sidebar-left {
     border-top: var(--border-width) solid transparent;
 }
 
+.is-phone .mod-root .view-header .view-header-title-container {
+    flex: 10;
+    justify-content: flex-start;
+}
+
 /* tablet card layout */
 .card-layout-pad-open.is-tablet .workspace-drawer {
     padding-top: 0;
