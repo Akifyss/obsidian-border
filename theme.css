@@ -5673,7 +5673,7 @@ body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
 }
 
 /* document search replace */
-#cMenuToolbarModalBar.top {
+#editingToolbarModalBar.top {
     z-index: var(--layer-status-bar);
 }
 
@@ -5877,6 +5877,8 @@ body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .
 body.is-mobile:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action:before {
     height: 24px !important;
     width: 24px !important;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
 }
 
 body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(1):before {
@@ -8897,6 +8899,11 @@ svg.sidebar-left {
 
 .is-tablet .workspace-drawer .nav-header {
     border-top: var(--border-width) solid transparent;
+}
+
+.is-phone .mod-root .view-header .view-header-title-container {
+    flex: 10;
+    justify-content: flex-start;
 }
 
 /* tablet card layout */
