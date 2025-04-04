@@ -5109,13 +5109,18 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
 }
 
 /* tab style */
+
+.workspace-tab-header:has(+.workspace-tab-header.is-active) .workspace-tab-header-inner::after {
+    opacity: 0;
+}
+
 body {
     --border-radius-activated-tab-header-light: 6px;
     --border-radius-activated-tab-header-dark: 6px;
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border);
+    --shadow-activated-tab-header-light: 0px 0px 6px hsla(var(--accent-h), 18%, 80%, 0.4), 0px 0px 2px hsla(var(--accent-h), 18%, 80%, 0.2), 0 0 0 1px var(--background-modifier-border), 0px 4px 8px -4px hsla(var(--accent-h), 18%, 80%, 0.2), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 2px 0.75px rgba(255, 255, 255, 0.4), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border);
 }
@@ -6610,8 +6615,8 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
     --input-shadow-hover: var(--input-shadow-hover-light);
 
     --input-radius-light: 5px;
-    --input-shadow-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.24), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
-    --input-shadow-hover-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.24), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
+    --input-shadow-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.4), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
+    --input-shadow-hover-light: 0px 4px 8px -4px rgba(0, 0, 0, 0.16), inset 0px -1px 0px rgba(0, 0, 0, 0.04), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12), inset 0px 2px 0.75px rgba(255, 255, 255, 0.4), inset 0px -3px 0.75px rgba(0, 0, 0, 0.04);
 }
 
 .theme-dark {
@@ -8899,6 +8904,10 @@ svg.sidebar-left {
 
 .is-tablet .workspace-drawer .nav-header {
     border-top: var(--border-width) solid transparent;
+}
+
+.is-phone .mod-root .view-header {
+    gap: 4px;
 }
 
 .is-phone .mod-root .view-header .view-header-title-container {
