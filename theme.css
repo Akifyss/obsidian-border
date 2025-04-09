@@ -369,7 +369,7 @@ settings:
         type: variable-color
         format: hsl-split
         opacity: false
-        default: '#5a6ded'
+        default: '#3751fb'
     - 
         id: accent-color-override-light
         title: Override accent color setting in "Settings-Appearance" menu(light mode)
@@ -3871,8 +3871,8 @@ body:not(.editor-grid-background-pattren) .setting-item:is([data-id=grid-backgro
 body {
     /* Accent HSL values */
     --accent-h: 232;
-    --accent-s: 80%;
-    --accent-l: 64%;
+    --accent-s: 96%;
+    --accent-l: 60%;
 }
 
 .theme-light.accent-color-override-light {
@@ -3928,8 +3928,8 @@ body {
     --accent-s: var(--accent-light-s);
     --accent-l: var(--accent-light-l);
     --accent-light-h: 232;
-    --accent-light-s: 80%;
-    --accent-light-l: 64%;
+    --accent-light-s: 96%;
+    --accent-light-l: 60%;
     --color-accent-hsl: var(--color-accent-hsl-light);
     --color-accent: var(--color-accent-light);
     --color-accent-1: var(--color-accent-1-light);
@@ -5123,7 +5123,7 @@ body {
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border), 0px 4px 8px -6px var(--background-modifier-border), inset 0px -1px 0px var(--background-tertiary), inset 0 -2px 2px 0 var(--background-tertiary);
+    --shadow-activated-tab-header-light: 0 -1px 0 0 rgba(255, 255, 255, .4), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border), 0px 4px 8px -6px var(--background-modifier-border), inset 0px -1px 0px var(--background-tertiary), inset 0 -2px 2px 0 var(--background-tertiary);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border), inset 0 4px 4px 0 var(--background-modifier-border), inset 0 1px 1px 1px var(--background-modifier-border);
 }
@@ -6589,7 +6589,7 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 .theme-dark .community-item,
-.theme-dark .setting-hotkey{
+.theme-dark .setting-hotkey {
     box-shadow: inset 0 1px 0 0 var(--background-modifier-border-focus);
 }
 
