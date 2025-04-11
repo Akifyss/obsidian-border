@@ -4639,7 +4639,7 @@ body:not(.is-mobile).theme-dark:not(.card-layout-open-dark).mod-root-split-backg
 /* ====== Layout ===== */
 /* default Layout*/
 body {
-    --card-shadow-light: 0 -1px 0 0 rgba(255, 255, 255, .4), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border);
+    --card-shadow-light: 0 -1px 0 0 rgba(255, 255, 255, .24), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border);
     --card-shadow-dark: 0 -1px 0 0 var(--background-modifier-border), 0 0 0 1px var(--background-modifier-border);
     --card-border-radius-light: 8px;
     --card-border-radius-dark: 8px;
@@ -5113,17 +5113,13 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
 
 /* tab style */
 
-.workspace-tab-header:has(+.workspace-tab-header.is-active) .workspace-tab-header-inner::after {
-    opacity: 0;
-}
-
 body {
     --border-radius-activated-tab-header-light: 6px;
     --border-radius-activated-tab-header-dark: 6px;
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0 -1px 0 0 rgba(255, 255, 255, .4), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border), 0px 4px 8px -6px var(--background-modifier-border), inset 0px -1px 0px var(--background-tertiary), inset 0 -2px 2px 0 var(--background-tertiary);
+    --shadow-activated-tab-header-light: 0 -1px 0 0 rgba(255, 255, 255, .24), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border), 0px 4px 8px -6px var(--background-modifier-border), inset 0px -1px 0px var(--background-tertiary), inset 0 -2px 2px 0 var(--background-tertiary);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border), inset 0 4px 4px 0 var(--background-modifier-border), inset 0 1px 1px 1px var(--background-modifier-border);
 }
