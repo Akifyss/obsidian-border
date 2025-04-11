@@ -5113,10 +5113,6 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
 
 /* tab style */
 
-.workspace-tab-header:has(+.workspace-tab-header.is-active) .workspace-tab-header-inner::after {
-    opacity: 0;
-}
-
 body {
     --border-radius-activated-tab-header-light: 6px;
     --border-radius-activated-tab-header-dark: 6px;
