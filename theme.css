@@ -1325,7 +1325,7 @@ settings:
         type: variable-color
         format: hsl-split
         opacity: false
-        default: '#7e88c8'
+        default: '#707bc2'
     - 
         id: accent-color-override-dark
         title: Override accent color setting in "Settings-Appearance" menu(dark mode)
@@ -3892,6 +3892,8 @@ body {
     --text-normal: hsl(var(--accent-h), 6%, 12%);
     --text-muted: hsl(var(--accent-h), 9%, 36%);
     --text-faint: hsl(var(--accent-h), 12%, 64%);
+    --text-accent: var(--color-accent-1);
+    --text-accent-hover: var(--color-accent-2);
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
@@ -3939,8 +3941,8 @@ body {
         var(--accent-s),
         var(--accent-l);
     --color-accent-light: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --color-accent-1-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 2.5%));
-    --color-accent-2-light: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%));
+    --color-accent-1-light: hsl(calc(var(--accent-h) - 1), calc(var(--accent-s) * 1.01), calc(var(--accent-l) * 1.075));
+    --color-accent-2-light: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
     --color-accent-3-light: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.2);
     --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(var(--accent-l)), 0.25);
@@ -4010,6 +4012,8 @@ body {
     --text-normal: hsl(var(--accent-h), 10%, 85%);
     --text-muted: hsl(var(--accent-h), 15%, 75%);
     --text-faint: hsl(var(--accent-h), 20%, 45%);
+    --text-accent: var(--color-accent-1);
+    --text-accent-hover: var(--color-accent-2);
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
@@ -4046,7 +4050,7 @@ body {
     --accent-l: var(--accent-dark-l);
     --accent-dark-h: 232;
     --accent-dark-s: 40%;
-    --accent-dark-l: 64%;
+    --accent-dark-l: 60%;
     --color-accent-hsl: var(--color-accent-hsl-dark);
     --color-accent: var(--color-accent-dark);
     --color-accent-1: var(--color-accent-1-dark);
@@ -4056,8 +4060,8 @@ body {
         var(--accent-s),
         var(--accent-l);
     --color-accent-dark: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --color-accent-1-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
-    --color-accent-2-dark: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+    --color-accent-1-dark: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15));
+    --color-accent-2-dark: hsl(calc(var(--accent-h) - 5), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29));
     --color-accent-3-dark: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)));
     --background-modifier-border: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.2);
     --background-modifier-border-hover: hsla(var(--accent-h), calc(0.4*var(--accent-s)), calc(0.9*var(--accent-l)), 0.25);
@@ -7575,8 +7579,8 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 body {
     /* Tags */
     --tag-size: var(--font-smaller);
-    --tag-color: var(--color-accent-2);
-    --tag-color-hover: var(--color-accent-2);
+    --tag-color: var(--text-accent);
+    --tag-color-hover: var(--text-accent);
     --tag-decoration: none;
     --tag-decoration-hover: none;
     --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
@@ -8786,10 +8790,6 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] 
 
 /* ====== icon ====== */
 body {
-    --icon-color: var(--text-muted);
-    --icon-color-hover: var(--text-muted);
-    --icon-color-active: var(--color-accent-2);
-    --icon-color-focused: var(--text-normal);
     --clickable-icon-radius: 6px;
 }
 
