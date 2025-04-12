@@ -1325,7 +1325,7 @@ settings:
         type: variable-color
         format: hsl-split
         opacity: false
-        default: '#8a96e5'
+        default: '#7e88c8'
     - 
         id: accent-color-override-dark
         title: Override accent color setting in "Settings-Appearance" menu(dark mode)
@@ -3889,9 +3889,9 @@ body {
 
 .theme-light {
     color-scheme: light;
-    --text-normal: hsl(var(--accent-h), 12%, 12%);
+    --text-normal: hsl(var(--accent-h), 6%, 12%);
     --text-muted: hsl(var(--accent-h), 9%, 36%);
-    --text-faint: hsl(var(--accent-h), 6%, 64%);
+    --text-faint: hsl(var(--accent-h), 12%, 64%);
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
     --mono-rgb-100: 0, 0, 0;
@@ -4007,9 +4007,9 @@ body {
 
 .theme-dark {
     color-scheme: dark;
-    --text-normal: hsl(var(--accent-h), 24%, 84%);
-    --text-muted: hsl(var(--accent-h), 18%, 72%);
-    --text-faint: hsl(var(--accent-h), 12%, 44%);
+    --text-normal: hsl(var(--accent-h), 10%, 85%);
+    --text-muted: hsl(var(--accent-h), 15%, 75%);
+    --text-faint: hsl(var(--accent-h), 20%, 45%);
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
@@ -4045,8 +4045,8 @@ body {
     --accent-s: var(--accent-dark-s);
     --accent-l: var(--accent-dark-l);
     --accent-dark-h: 232;
-    --accent-dark-s: 64%;
-    --accent-dark-l: 72%;
+    --accent-dark-s: 40%;
+    --accent-dark-l: 64%;
     --color-accent-hsl: var(--color-accent-hsl-dark);
     --color-accent: var(--color-accent-dark);
     --color-accent-1: var(--color-accent-1-dark);
@@ -7575,8 +7575,8 @@ a:not(.tag, .raindrop-tag, .clickable-icon, :has(img:not(.link-favicon))):hover,
 body {
     /* Tags */
     --tag-size: var(--font-smaller);
-    --tag-color: var(--text-accent);
-    --tag-color-hover: var(--text-accent);
+    --tag-color: var(--color-accent-2);
+    --tag-color-hover: var(--color-accent-2);
     --tag-decoration: none;
     --tag-decoration-hover: none;
     --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
@@ -8786,6 +8786,10 @@ body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] 
 
 /* ====== icon ====== */
 body {
+    --icon-color: var(--text-muted);
+    --icon-color-hover: var(--text-muted);
+    --icon-color-active: var(--color-accent-2);
+    --icon-color-focused: var(--text-normal);
     --clickable-icon-radius: 6px;
 }
 
@@ -8949,6 +8953,11 @@ svg.sidebar-left {
 .is-phone .mod-root .view-header .view-header-title-container {
     flex: 10;
     justify-content: flex-start;
+}
+
+.is-phone .prompt {
+    border: 1px solid var(--background-modifier-border-focus);
+    border-bottom: none;
 }
 
 /* tablet card layout */
