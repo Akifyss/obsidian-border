@@ -4009,9 +4009,9 @@ body {
 
 .theme-dark {
     color-scheme: dark;
-    --text-normal: hsl(var(--accent-h), 10%, 85%);
-    --text-muted: hsl(var(--accent-h), 15%, 75%);
-    --text-faint: hsl(var(--accent-h), 20%, 45%);
+    --text-normal: hsl(var(--accent-h), 9%, 85%);
+    --text-muted: hsl(var(--accent-h), 12%, 75%);
+    --text-faint: hsl(var(--accent-h), 15%, 50%);
     --text-accent: var(--color-accent-1);
     --text-accent-hover: var(--color-accent-2);
     --highlight-mix-blend-mode: lighten;
@@ -4859,6 +4859,21 @@ body:not(.is-mobile).card-highlight-dark.card-layout-open-dark.theme-dark .mod-r
     outline-offset: 0px;
     outline: 2px solid var(--color-accent-3);
 }
+
+/* card layout scrolling fix */
+body:not(.is-mobile).card-layout-open-light.theme-light .workspace-tabs.mod-stacked .workspace-tab-container,
+body:not(.is-mobile).card-layout-open-dark.theme-dark .workspace-tabs.mod-stacked .workspace-tab-container {
+    overflow-x: auto !important;
+
+    &::-webkit-scrollbar-button {
+        width: 2px !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        display: none;
+    }
+}
+
 
 /* scrollbar */
 body {
