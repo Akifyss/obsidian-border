@@ -4009,9 +4009,9 @@ body {
 
 .theme-dark {
     color-scheme: dark;
-    --text-normal: hsl(var(--accent-h), 9%, 85%);
+    --text-normal: hsl(var(--accent-h), 15%, 85%);
     --text-muted: hsl(var(--accent-h), 12%, 75%);
-    --text-faint: hsl(var(--accent-h), 15%, 50%);
+    --text-faint: hsl(var(--accent-h), 9%, 50%);
     --text-accent: var(--color-accent-1);
     --text-accent-hover: var(--color-accent-2);
     --highlight-mix-blend-mode: lighten;
@@ -6868,6 +6868,10 @@ input.prompt-input {
 
 .tab-autohide .notice-container {
     top: 6px;
+}
+
+.notice {
+    box-shadow: inset 0 1px 0 0 hsla(0, 100%, 100%, 0.24);
 }
 
 /* Prompts */
