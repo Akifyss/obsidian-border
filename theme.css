@@ -6541,8 +6541,8 @@ body {
 .search-empty-state::before {
     content: "";
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     background-color: var(--icon-color);
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
