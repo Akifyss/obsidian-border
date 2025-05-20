@@ -8837,7 +8837,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .sidebar-toggle-button .clickable-icon,
 .workspace-tab-header-new-tab .clickable-icon,
 .workspace-tab-header-tab-list .clickable-icon,
-.view-header .clickable-icon:not([aria-label="Accept changes"], [aria-label="Reject changes"]) {
+.view-header .clickable-icon:not([aria-label="Accept changes"], [aria-label="Cancel apply"]) {
     padding: 7px;
     height: 32px;
     width: 32px;
