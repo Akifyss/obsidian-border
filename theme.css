@@ -5311,6 +5311,13 @@ body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark :has(.w
     transition: box-shadow var(--anim-in);
 }
 
+body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
+    height: 100%;
+}
+
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .titlebar-button {
+    height: 44px;
+}
 
 /*tab autohide mod-top*/
 
