@@ -6445,6 +6445,10 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667v4.666c0 .369.298.667.667.667H6a.667.667 0 0 0 .667-.667V2.667A.667.667 0 0 0 6 2Zm7.333 0H10a.667.667 0 0 0-.667.667v2c0 .368.299.666.667.666h3.333A.667.667 0 0 0 14 4.667v-2A.667.667 0 0 0 13.333 2Zm0 6H10a.667.667 0 0 0-.667.667v4.666c0 .368.299.667.667.667h3.333a.667.667 0 0 0 .667-.667V8.667A.667.667 0 0 0 13.333 8ZM6 10.667H2.667a.667.667 0 0 0-.667.666v2c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667v-2A.667.667 0 0 0 6 10.667Z'/%3e%3c/svg%3e");
 }
 
+body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .nav-file-title[data-path$=".base"]::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' d='M6 2H2.667A.667.667 0 0 0 2 2.667V6c0 .368.298.667.667.667H6A.667.667 0 0 0 6.667 6V2.667A.667.667 0 0 0 6 2Zm0 7.333H2.667A.667.667 0 0 0 2 10v3.333c0 .368.298.667.667.667H6a.667.667 0 0 0 .667-.667V10A.667.667 0 0 0 6 9.333Zm3.333-6.666H14M9.333 6H14m-4.667 4H14m-4.667 3.333H14'/%3e%3c/svg%3e");
+}
+
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .is-unsupported.nav-file-title::before {
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M9.667 1.333H4a1.333 1.333 0 0 0-1.333 1.334v10.666A1.333 1.333 0 0 0 4 14.667h8a1.333 1.333 0 0 0 1.333-1.334V5L9.667 1.333Z'/%3e%3cpath d='M6.667 6.867c.133-.267.333-.534.6-.667A1.4 1.4 0 0 1 9 6.467c.2.266.333.533.333.866C9.333 8.2 8 8.667 8 8.667m0 2.666h.007'/%3e%3c/g%3e%3c/svg%3e");
 }
@@ -6787,6 +6791,12 @@ body:not(.is-phone) div:has(>input.prompt-input) {
     --background-modifier-form-field: transparent;
 }
 
+.combobox .search-input-container input[type=search] {
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
 /* dropdown  */
 
 select,
@@ -6865,6 +6875,10 @@ body {
 
 input.prompt-input {
     background-color: transparent !important;
+}
+
+.base-toolbar-sort-item {
+    background-color: transparent;
 }
 
 /* notice */
@@ -8802,15 +8816,6 @@ body {
 .workspace-tab-header-tab-list,
 .workspace-tab-header-new-tab {
     padding-top: 6px;
-}
-
-.theme-light .clickable-icon.is-active {
-    background: linear-gradient(hsla(var(--interactive-accent-hsl), 0.05) 0%, hsla(var(--interactive-accent-hsl), 0.2) 100%);
-    box-shadow: inset 0 0 1px 1px hsla(0, 100%, 100%, 0.5), 0 0 0 1px var(--background-modifier-active-hover);
-}
-
-.theme-dark .clickable-icon.is-active {
-    box-shadow: inset 0 0 0 1px var(--background-modifier-active-hover), inset 0 2px 4px 0 var(--background-modifier-active-hover), inset 0 1px 1px 1px var(--background-modifier-active-hover);
 }
 
 .clickable-icon.document-search-button,
