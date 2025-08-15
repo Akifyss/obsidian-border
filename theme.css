@@ -6791,6 +6791,12 @@ body:not(.is-phone) div:has(>input.prompt-input) {
     --background-modifier-form-field: transparent;
 }
 
+.combobox .search-input-container input[type=search] {
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
 /* dropdown  */
 
 select,
@@ -6869,6 +6875,10 @@ body {
 
 input.prompt-input {
     background-color: transparent !important;
+}
+
+.base-toolbar-sort-item {
+    background-color: transparent;
 }
 
 /* notice */
