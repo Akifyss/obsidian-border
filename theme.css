@@ -4982,15 +4982,19 @@ body:not(.is-translucent) .titlebar-text {
 }
 
 .titlebar-button-container.mod-right .titlebar-button.mod-close::after {
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath stroke='black' stroke-width='2' d='m3.757 12.243 8.486-8.486m0 8.486L3.757 3.757'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h8v8H0z' transform='translate(4 4)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg clip-path='url(%23a)'%3e%3cpath stroke='black' stroke-width='1.5' d='m3.47 12.47 9-9m0 9.06-9-9'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h8v8H0z' transform='translate(4 4)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .titlebar-button-container.mod-right .titlebar-button.mod-maximize::after {
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='2' d='M5 5h6v6H5z'/%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='1.5' d='M4.75 4.75h6.5v6.5h-6.5z'/%3e%3c/svg%3e");
+}
+
+.titlebar-button-container.mod-right .titlebar-button.mod-maximize[aria-label="Restore down"]::after {
+    -webkit-mask-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-width='1.5'%3e%3cpath d='M4.75 5.75h5.5v5.5h-5.5z'/%3e%3cpath d='M10 9h3V3H7v3'/%3e%3c/g%3e%3c/svg%3e");
 }
 
 .titlebar-button-container.mod-right .titlebar-button.mod-minimize::after {
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='2' d='M4 11h8'/%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='1.5' d='M4 8h8'/%3e%3c/svg%3e");
 }
 
 @media (hover: hover) {
