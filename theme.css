@@ -7713,6 +7713,11 @@ body {
     opacity: 1;
 }
 
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    left: calc(-12px - var(--blockquote-padding));
+}
+
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
 .line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
@@ -7811,6 +7816,11 @@ body {
     background: var(--hover-indicator-color);
     --hover-indicator-color: var(--color-accent) !important;
     opacity: 1;
+}
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    left: calc(-12px - var(--blockquote-padding));
 }
 
 .line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
@@ -8356,6 +8366,7 @@ body {
     --blockquote-background-color: transparent;
     --blockquote-background-light: var(--background-alt-light);
     --blockquote-background-dark: var(--background-alt-dark);
+    --blockquote-padding: 8px;
 }
 
 .theme-light .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
@@ -8374,8 +8385,8 @@ body {
     position: relative;
     border-radius: var(--radius-s);
     border-inline-start: none;
-    padding-inline: calc(24px + var(--blockquote-border-thickness)) 8px;
-    padding-block: 8px;
+    padding-inline: calc(16px + var(--blockquote-border-thickness) + var(--blockquote-padding)) var(--blockquote-padding);
+    padding-block: var(--blockquote-padding);
 }
 
 .markdown-rendered blockquote>blockquote {
@@ -8391,9 +8402,9 @@ body {
 
 .markdown-rendered blockquote::before {
     position: absolute;
-    top: 8px;
-    bottom: 8px;
-    inset-inline-start: 8px;
+    top: var(--blockquote-padding);
+    bottom: var(--blockquote-padding);
+    inset-inline-start: var(--blockquote-padding);
     border-radius: var(--radius-s);
     background-color: var(--blockquote-border-color);
     width: var(--blockquote-border-thickness);
@@ -8403,7 +8414,7 @@ body {
 
 .HyperMD-quote {
     border: solid var(--blockquote-background-color);
-    border-width: 0 8px 0 8px;
+    border-width: 0 var(--blockquote-padding) 0 var(--blockquote-padding);
     background-color: var(--blockquote-background-color);
 }
 
@@ -8413,7 +8424,7 @@ body {
 
 .HyperMD-quote:first-child,
 .cm-sizer>div>div>*:not(.HyperMD-quote)+.HyperMD-quote {
-    border-top-width: 8px;
+    border-top-width: var(--blockquote-padding);
     border-start-start-radius: var(--radius-s);
     border-start-end-radius: var(--radius-s);
 }
@@ -8426,7 +8437,7 @@ body {
 
 .HyperMD-quote:last-child,
 .cm-sizer>div>div>.HyperMD-quote:has(+ *:not(.HyperMD-quote)) {
-    border-bottom-width: 8px;
+    border-bottom-width: var(--blockquote-padding);
     border-end-start-radius: var(--radius-s);
     border-end-end-radius: var(--radius-s);
 }
