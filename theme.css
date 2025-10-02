@@ -7713,6 +7713,11 @@ body {
     opacity: 1;
 }
 
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    left: calc(-12px - var(--blockquote-padding));
+}
+
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
 .line-hover-indicator .workspace-leaf-content:is([data-type="markdown"], [data-type="webviewer"]):not(:has(.document-search-container)) .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
@@ -7811,6 +7816,11 @@ body {
     background: var(--hover-indicator-color);
     --hover-indicator-color: var(--color-accent) !important;
     opacity: 1;
+}
+
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote:not(.image-embed, .mk-header, .HyperMD-header, :has(.mk-note-footer, .collapse-indicator))::after {
+    left: calc(-12px - var(--blockquote-padding));
 }
 
 .line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line:not(.HyperMD-list-line-1)::after,
@@ -8356,6 +8366,7 @@ body {
     --blockquote-background-color: transparent;
     --blockquote-background-light: var(--background-alt-light);
     --blockquote-background-dark: var(--background-alt-dark);
+    --blockquote-padding: 8px;
 }
 
 .theme-light .markdown-source-view .cm-scroller .cm-line.HyperMD-quote,
@@ -8370,87 +8381,71 @@ body {
     background: var(--blockquote-background-dark);
 }
 
-.markdown-rendered blockquote,
-.markdown-preview-view blockquote {
-    position: relative;
-}
-
-.markdown-rendered blockquote::before,
-.markdown-preview-view blockquote::before {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    height: calc(100% - 8px);
-    width: var(--blockquote-border-thickness);
-    background-color: var(--blockquote-border-color);
-    border-radius: 24px;
-}
-
 .markdown-rendered blockquote {
-    border-left: none;
+    position: relative;
+    border-radius: var(--radius-s);
+    border-inline-start: none;
+    padding-inline: calc(16px + var(--blockquote-border-thickness) + var(--blockquote-padding)) var(--blockquote-padding);
+    padding-block: var(--blockquote-padding);
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before {
-    content: "";
-    width: var(--blockquote-border-thickness) !important;
-    border-left: none !important;
-    background-color: var(--blockquote-border-color);
-    border-radius: 24px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    color: transparent;
+.markdown-rendered blockquote>blockquote {
+    padding-inline-start: calc(16px + var(--blockquote-border-thickness));
+    padding-block: 0 !important;
+}
+
+.markdown-rendered blockquote>blockquote::before {
+    top: 0;
+    bottom: 0;
+    inset-inline-start: 0;
+}
+
+.markdown-rendered blockquote::before {
     position: absolute;
-    left: 0px !important;
-    bottom: 4px !important;
-    height: calc(100% - 4px);
+    top: var(--blockquote-padding);
+    bottom: var(--blockquote-padding);
+    inset-inline-start: var(--blockquote-padding);
+    border-radius: var(--radius-s);
+    background-color: var(--blockquote-border-color);
+    width: var(--blockquote-border-thickness);
+    pointer-events: none;
+    content: "";
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-line {
-    border-left: 4px solid transparent;
+.HyperMD-quote {
+    border: solid var(--blockquote-background-color);
+    border-width: 0 var(--blockquote-padding) 0 var(--blockquote-padding);
+    background-color: var(--blockquote-background-color);
 }
 
-.markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote::before,
-.markdown-source-view.mod-cm6 .cm-content :first-child:is(.HyperMD-quote)::before {
-    top: 4px !important;
-    height: calc(100% - 4px);
-    border-radius: 24px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+.HyperMD-quote::before {
+    width: 0 !important;
 }
 
-.markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote:not(:has(+ .HyperMD-quote))::before,
-.markdown-source-view.mod-cm6 .cm-content :first-child:is(.HyperMD-quote):not(:has(+ .HyperMD-quote))::before {
-    bottom: 4px !important;
-    top: 4px !important;
-    height: calc(100% - 8px);
-    border-radius: 24px;
+.HyperMD-quote:first-child,
+.cm-sizer>div>div>*:not(.HyperMD-quote)+.HyperMD-quote {
+    border-top-width: var(--blockquote-padding);
+    border-start-start-radius: var(--radius-s);
+    border-start-end-radius: var(--radius-s);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-quote:has(+ .HyperMD-quote)::before {
-    bottom: 0px !important;
-    height: 100%;
-    border-radius: 0px;
+.HyperMD-quote:first-child::before,
+.cm-sizer>div>div>*:not(.HyperMD-quote)+.HyperMD-quote::before {
+    border-start-start-radius: var(--radius-s);
+    border-start-end-radius: var(--radius-s);
 }
 
-/*---*/
-
-.markdown-source-view.mod-cm6 .HyperMD-quote {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-left-radius: var(--radius-s) !important;
-    border-bottom-right-radius: var(--radius-s) !important;
+.HyperMD-quote:last-child,
+.cm-sizer>div>div>.HyperMD-quote:has(+ *:not(.HyperMD-quote)) {
+    border-bottom-width: var(--blockquote-padding);
+    border-end-start-radius: var(--radius-s);
+    border-end-end-radius: var(--radius-s);
 }
 
-.markdown-source-view.mod-cm6 div:not(.HyperMD-quote)+.HyperMD-quote,
-.markdown-source-view.mod-cm6 .cm-content :first-child:is(.HyperMD-quote) {
-    border-top-left-radius: var(--radius-s) !important;
-    border-top-right-radius: var(--radius-s) !important;
-}
-
-.markdown-source-view.mod-cm6 .HyperMD-quote:has(+ .HyperMD-quote) {
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+.HyperMD-quote:last-child::before,
+.cm-sizer>div>div>.HyperMD-quote:has(+ *:not(.HyperMD-quote))::before {
+    border-end-start-radius: var(--radius-s);
+    border-end-end-radius: var(--radius-s);
 }
 
 /*kbd*/
