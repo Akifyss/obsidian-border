@@ -8415,7 +8415,7 @@ body {
 }
 
 .HyperMD-quote {
-    border: solid var(--blockquote-background-color);
+    border: solid transparent;
     border-width: 0 var(--blockquote-padding) 0 var(--blockquote-padding);
     background-color: var(--blockquote-background-color);
 }
