@@ -3956,7 +3956,7 @@ body {
     --background-secondary-alt: var(--color-base-05);
     --background-tertiary: hsl(var(--accent-h),
             calc((var(--accent-s)) / 1.5),
-            calc(100% - (100% - var(--accent-l)) / 12));
+            calc(100% - (100% - var(--accent-l)) / 10));
     --workspace-background-translucent: rgba(246, 246, 246, 0.8);
     --background-modifier-hover: hsla(var(--accent-h), 6%, 64%, 0.15);
     --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
