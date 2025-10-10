@@ -8700,7 +8700,7 @@ body {
 }
 
 /*  image hover effect */
-.markdown-source-view.mod-cm6 .cm-content>.internal-embed {
+.markdown-source-view.mod-cm6 .cm-content>.image-embed {
     contain: unset !important;
 }
 
