@@ -369,7 +369,7 @@ settings:
         type: variable-color
         format: hsl-split
         opacity: false
-        default: '#3751fb'
+        default: '#4b63fb'
     - 
         id: accent-color-override-light
         title: Override accent color setting in "Settings-Appearance" menu(light mode)
@@ -3872,7 +3872,7 @@ body {
     /* Accent HSL values */
     --accent-h: 232;
     --accent-s: 96%;
-    --accent-l: 60%;
+    --accent-l: 64%;
 }
 
 .theme-light.accent-color-override-light {
@@ -3931,7 +3931,7 @@ body {
     --accent-l: var(--accent-light-l);
     --accent-light-h: 232;
     --accent-light-s: 96%;
-    --accent-light-l: 60%;
+    --accent-light-l: 64%;
     --color-accent-hsl: var(--color-accent-hsl-light);
     --color-accent: var(--color-accent-light);
     --color-accent-1: var(--color-accent-1-light);
