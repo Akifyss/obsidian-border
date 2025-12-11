@@ -6693,9 +6693,18 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 /* Range slider */
+body {
+    --slider-thumb-border-width: 0;
+}
+
 input[type='range']::-webkit-slider-thumb {
     box-shadow: var(--toggle-thumb-shadow);
+    cursor: grab;
     transition: none;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    cursor: grabbing;
 }
 
 input[type=range]::-webkit-slider-thumb:is(:hover, :active) {
