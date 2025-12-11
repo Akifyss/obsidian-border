@@ -9071,6 +9071,14 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     padding: 12px !important;
 }
 
+.setting-item.setting-item-heading.style-settings-heading {
+	border: 0;
+	padding: 8px 0 4px;
+	margin-bottom: 0;
+    margin-top:8px;
+	border-radius: 0
+}
+
 .style-settings-container {
     padding-left: var(--size-4-8);
     margin-left: var(--size-4-1);
@@ -9082,8 +9090,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-bottom: 12px;
 }
 
-.style-settings-heading.is-collapsed[data-level="0"] {
-    margin-bottom: 0;
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+    margin-left: unset;
 }
 
 .setting-item+div>.setting-item-heading,
