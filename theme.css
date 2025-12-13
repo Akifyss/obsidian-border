@@ -7697,7 +7697,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div::after {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -20px;
     top: 3px;
     width: 3px;
     height: 0;
@@ -7708,7 +7708,7 @@ body {
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote::after {
-    left: calc(-24px - var(--blockquote-padding));
+    left: calc(-20px - var(--blockquote-padding));
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:hover::after {
@@ -7722,7 +7722,7 @@ body {
     background: unset !important;
     opacity: 0 !important;
     position: absolute !important;
-    left: -24px !important;
+    left: -20px !important;
     top: 0px !important;
     height: 100% !important;
     width: 3px !important;
@@ -7801,7 +7801,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active::after {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -20px;
     top: 3px;
     width: 3px;
     height: calc(100% - 6px);
@@ -7812,7 +7812,7 @@ body {
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote::after {
-    left: calc(-24px - var(--blockquote-padding));
+    left: calc(-20px - var(--blockquote-padding));
 }
 
 .line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line::after,
