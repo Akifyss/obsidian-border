@@ -6703,9 +6703,18 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 /* Range slider */
+body {
+    --slider-thumb-border-width: 0;
+}
+
 input[type='range']::-webkit-slider-thumb {
     box-shadow: var(--toggle-thumb-shadow);
+    cursor: grab;
     transition: none;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    cursor: grabbing;
 }
 
 input[type=range]::-webkit-slider-thumb:is(:hover, :active) {
@@ -7109,7 +7118,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h1::before {
 }
 
 
-body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
+body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1>.cm-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7197,7 +7206,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h2::before {
 }
 
 
-body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2>.cm-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7284,7 +7293,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h3::before {
     left: 0px;
 }
 
-body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3)::after {
+body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3>.cm-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7372,7 +7381,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h4::before {
 }
 
 
-body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .HyperMD-header-4)::after {
+body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .HyperMD-header-4>.cm-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7460,7 +7469,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h5::before {
 }
 
 
-body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .HyperMD-header-5)::after {
+body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .HyperMD-header-5>.cm-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7548,7 +7557,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h6::before {
 }
 
 
-body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .HyperMD-header-6)::after {
+body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .HyperMD-header-6>.cm-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -9081,6 +9090,14 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     padding: 12px !important;
 }
 
+.setting-item.setting-item-heading.style-settings-heading {
+	border: 0;
+	padding: 8px 0 4px;
+	margin-bottom: 0;
+    margin-top:8px;
+	border-radius: 0
+}
+
 .style-settings-container {
     padding-left: var(--size-4-8);
     margin-left: var(--size-4-1);
@@ -9092,8 +9109,8 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-bottom: 12px;
 }
 
-.style-settings-heading.is-collapsed[data-level="0"] {
-    margin-bottom: 0;
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+    margin-left: unset;
 }
 
 .setting-item+div>.setting-item-heading,
