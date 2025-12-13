@@ -7108,7 +7108,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h1::before {
 }
 
 
-body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
+body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1>.cm-header-1)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7196,7 +7196,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h2::before {
 }
 
 
-body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2>.cm-header-2)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7283,7 +7283,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h3::before {
     left: 0px;
 }
 
-body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3)::after {
+body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3>.cm-header-3)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7371,7 +7371,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h4::before {
 }
 
 
-body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .HyperMD-header-4)::after {
+body.h4-divider-on :is(.markdown-rendered>h4, .markdown-preview-sizer>div>h4, .HyperMD-header-4>.cm-header-4)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7459,7 +7459,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h5::before {
 }
 
 
-body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .HyperMD-header-5)::after {
+body.h5-divider-on :is(.markdown-rendered>h5, .markdown-preview-sizer>div>h5, .HyperMD-header-5>.cm-header-5)::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -7547,7 +7547,7 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h6::before {
 }
 
 
-body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .HyperMD-header-6)::after {
+body.h6-divider-on :is(.markdown-rendered>h6, .markdown-preview-sizer>div>h6, .HyperMD-header-6>.cm-header-6)::after {
     content: "";
     position: absolute;
     height: 1px;
