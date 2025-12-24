@@ -5115,8 +5115,8 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
     height: calc(var(--header-height) + 4px);
 }
 
-.mod-left-split .workspace-tab-header-container-inner,
-.mod-right-split .workspace-tab-header-container-inner {
+.mod-left-split .workspace-tab-header-container .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container .workspace-tab-header-container-inner {
     padding: 6px;
     margin: 0px;
     gap: 2px;
@@ -5144,7 +5144,7 @@ body {
     --color-activated-tab-header-light: var(--text-normal);
     --color-activated-tab-header-dark: var(--text-normal);
     --background-activated-tab-header-light: var(--background-primary);
-    --shadow-activated-tab-header-light: 0 -1px 0 0 rgba(255, 255, 255, .24), 0 0 0 1px var(--background-modifier-border), 0 0 4px var(--background-modifier-border), 0px 2px 6px -4px var(--background-modifier-border-muted), inset 0px -1px 0px var(--background-tertiary), inset 0 -2px 4px 0 var(--background-tertiary);
+    --shadow-activated-tab-header-light: 0 -1px 0 0 rgba(255, 255, 255, .24), 0 0 0 1px var(--background-modifier-border), 0 0 4px var(--background-modifier-border), 0px 2px 6px -4px var(--background-modifier-border-muted), inset 0 -1px 3px 0 var(--background-tertiary);
     --background-activated-tab-header-dark: var(--background-modifier-active-hover);
     --shadow-activated-tab-header-dark: inset 0 0 0 1px var(--background-modifier-border), inset 0 2px 4px 0 var(--background-modifier-border-muted), inset 0 1px 1px 1px var(--background-modifier-border);
 }
@@ -6480,7 +6480,7 @@ body:not(.file-icon-remove) .workspace-leaf-content[data-type="file-explorer"] .
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item:not(:hover) .tree-item-icon.collapse-icon {
-    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333'%3e%3cpath d='M6 3.333H1.333V8l4.194 4.193a1.617 1.617 0 0 0 2.28 0l2.386-2.386a1.617 1.617 0 0 0 0-2.28L6 3.333ZM4 6.007V6'/%3e%3cpath d='m10 3.333 4.2 4.2a1.6 1.6 0 0 1 0 2.267l-2.867 2.867'/%3e%3c/g%3e%3c/svg%3e");
+    -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cg stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.333' clip-path='url(%23a)'%3e%3cpath d='M8.781 1.333c.354 0 .693.14.943.391l4.473 4.473a1.6 1.6 0 0 1 0 2.272l-3.061 3.062a1.6 1.6 0 0 1-2.272 0L4.391 7.057A1.329 1.329 0 0 1 4 6.115V2a.667.667 0 0 1 .667-.667H8.78ZM1.333 4.667V8.78c0 .354.14.693.391.943l4.473 4.473a1.6 1.6 0 0 0 2.128.129'/%3e%3cpath d='M7 4.667A.333.333 0 1 0 7 4a.333.333 0 0 0 0 .667Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h16v16H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 body:not(.file-icon-remove) .workspace-leaf-content[data-type="tag"] .tree-item-self:not(:has(>.tree-item-icon.collapse-icon))::before {
@@ -7707,7 +7707,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div::after {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -20px;
     top: 3px;
     width: 3px;
     height: 0;
@@ -7718,7 +7718,7 @@ body {
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.HyperMD-quote::after {
-    left: calc(-24px - var(--blockquote-padding));
+    left: calc(-20px - var(--blockquote-padding));
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:hover::after {
@@ -7732,7 +7732,7 @@ body {
     background: unset !important;
     opacity: 0 !important;
     position: absolute !important;
-    left: -24px !important;
+    left: -20px !important;
     top: 0px !important;
     height: 100% !important;
     width: 3px !important;
@@ -7811,7 +7811,7 @@ body {
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active::after {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -20px;
     top: 3px;
     width: 3px;
     height: calc(100% - 6px);
@@ -7822,7 +7822,7 @@ body {
 }
 
 .line-hover-indicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>.cm-active.HyperMD-quote::after {
-    left: calc(-24px - var(--blockquote-padding));
+    left: calc(-20px - var(--blockquote-padding));
 }
 
 .line-hover-indicator.focus-indicator-list-level .workspace-leaf-content[data-type="markdown"] .cm-contentContainer .cm-active.HyperMD-list-line::after,
@@ -9091,11 +9091,11 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 }
 
 .setting-item.setting-item-heading.style-settings-heading {
-	border: 0;
-	padding: 8px 0 4px;
-	margin-bottom: 0;
-    margin-top:8px;
-	border-radius: 0
+    border: 0;
+    padding: 8px 0 4px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    border-radius: 0
 }
 
 .style-settings-container {
@@ -9109,7 +9109,7 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
     margin-bottom: 12px;
 }
 
-.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+.style-settings-heading[data-level="0"]+.style-settings-container .style-settings-collapse-indicator {
     margin-left: unset;
 }
 
