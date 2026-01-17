@@ -5216,7 +5216,6 @@ body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-stacked) .workspace-tab
 
 .is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
     background: var(--background-modifier-hover);
-    box-shadow: inset 0 0 0 1px var(--background-modifier-border);
 }
 
 /* divider */
@@ -6060,7 +6059,7 @@ input.wb-search-bar {
 }
 
 /*nav-buttons left align*/
-.nav-buttons-container {
+body:not(.is-mobile) .nav-buttons-container {
     display: flex;
     justify-content: flex-start;
 }
@@ -6845,6 +6844,10 @@ body {
     --button-radius: var(--input-radius);
 }
 
+.is-mobile{
+    --input-radius-light:var(--touch-radius-m);
+    --input-radius-dark:var(--touch-radius-m);
+}
 
 /* container */
 .modal.mod-canvas-help,
@@ -8819,7 +8822,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .sidebar-toggle-button .clickable-icon,
 .workspace-tab-header-new-tab .clickable-icon,
 .workspace-tab-header-tab-list .clickable-icon,
-.view-header .clickable-icon:not([aria-label="Accept changes"], [aria-label="Cancel apply"]) {
+body:not(.is-mobile) .view-header .clickable-icon:not([aria-label="Accept changes"], [aria-label="Cancel apply"]) {
     padding: 7px;
     height: 32px;
     width: 32px;
@@ -8871,7 +8874,8 @@ svg {
 
 /* ====== MOBILE ====== */
 .is-phone {
-    --file-margins: var(--size-4-2) var(--size-4-4);
+    --file-margins-x: var(--size-4-2);
+    --file-margins-y: var(--size-4-4);
 }
 
 .is-mobile {
@@ -8946,6 +8950,26 @@ svg {
     border: 1px solid var(--background-modifier-border-focus);
     border-bottom: none;
 }
+
+.workspace-drawer-tab-select .workspace-tab-header-inner,
+.workspace-drawer-tab-options-list {
+    background-color: var(--background-secondary);
+}
+
+.workspace-drawer .nav-buttons-container .nav-action-button {
+    background: var(--raised-background);
+    backdrop-filter: var(--raised-blur);
+    box-shadow: var(--raised-shadow);
+    background-clip: padding-box;
+    border: var(--raised-mask-border-width) solid transparent;
+}
+
+
+.is-mobile .metadata-content{
+    width: calc(100% + var(--file-margins-x) * 2);
+    transform: translateX(calc(-1 * var(--file-margins-x)));
+}
+
 
 /* tablet card layout */
 .card-layout-pad-open.is-tablet .workspace-drawer {
