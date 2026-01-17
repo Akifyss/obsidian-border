@@ -8964,6 +8964,13 @@ svg {
     border: var(--raised-mask-border-width) solid transparent;
 }
 
+
+.is-mobile .metadata-content{
+    width: calc(100% + var(--file-margins-x) * 2);
+    transform: translateX(calc(-1 * var(--file-margins-x)));
+}
+
+
 /* tablet card layout */
 .card-layout-pad-open.is-tablet .workspace-drawer {
     padding-top: 0;
