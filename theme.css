@@ -8873,10 +8873,6 @@ svg {
 }
 
 /* ====== MOBILE ====== */
-.is-phone {
-    --file-margins-x: var(--size-4-2);
-    --file-margins-y: var(--size-4-4);
-}
 
 .is-mobile {
     --background-modifier-form-field: var(--background-modifier-hover);
@@ -8905,7 +8901,6 @@ svg {
 
 .is-tablet.theme-dark .vertical-tab-content,
 .is-tablet .workspace-tab-header-container,
-.is-mobile .workspace-split.mod-root .view-header,
 .is-mobile .workspace-split.mod-root .view-content,
 .workspace-drawer.mod-right .workspace-drawer-header,
 .workspace-drawer.mod-right .view-header,
@@ -8962,12 +8957,6 @@ svg {
     box-shadow: var(--raised-shadow);
     background-clip: padding-box;
     border: var(--raised-mask-border-width) solid transparent;
-}
-
-
-.is-mobile .metadata-content{
-    width: calc(100% + var(--file-margins-x) * 2);
-    transform: translateX(calc(-1 * var(--file-margins-x)));
 }
 
 
