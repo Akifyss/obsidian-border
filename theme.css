@@ -5881,7 +5881,7 @@ body.is-mobile:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type=
 body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action {
     font-size: 0;
     background-color: transparent !important;
-    color: var(--text-muted);
+    color: var(--icon-color);
     cursor: var(--cursor);
     height: 40px;
     width: 44px;
