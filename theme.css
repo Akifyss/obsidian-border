@@ -5905,9 +5905,9 @@ body.is-mobile:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type=
     border: var(--raised-mask-border-width) solid transparent;
 }
 
-body:not(.new-tab-text-btn-restore,.is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(1),
-body:not(.new-tab-text-btn-restore,.is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(2),
-body:not(.new-tab-text-btn-restore,.is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(3):not(:last-child) {
+body:not(.new-tab-text-btn-restore, .is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(1),
+body:not(.new-tab-text-btn-restore, .is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(2),
+body:not(.new-tab-text-btn-restore, .is-mobile) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(3):not(:last-child) {
     box-shadow: inset -1px 0px 0px var(--divider-color);
 }
 
@@ -6850,9 +6850,9 @@ body {
     --button-radius: var(--input-radius);
 }
 
-.is-mobile{
-    --input-radius-light:var(--touch-radius-m);
-    --input-radius-dark:var(--touch-radius-m);
+.is-mobile {
+    --input-radius-light: var(--touch-radius-m);
+    --input-radius-dark: var(--touch-radius-m);
 }
 
 /* container */
