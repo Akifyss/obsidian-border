@@ -5640,7 +5640,7 @@ body:not(.is-mobile).vault-profile-autohide .workspace-split.mod-left-split .wor
     transition: padding-bottom var(--anim-out);
 }
 
-body:not(.is-mobile).vault-profile-autohide:has(.workspace-sidedock-vault-profile:hover) .workspace-split.mod-left-split .workspace-tabs:last-of-type .workspace-tab-container {
+body:not(.is-mobile).vault-profile-autohide .workspace-sidedock-vault-profile:hover~.workspace-tabs:last-of-type .workspace-tab-container {
     padding-bottom: 44px;
     transition: padding-bottom var(--anim-in);
 }
