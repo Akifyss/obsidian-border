@@ -5259,7 +5259,7 @@ body:not(.is-mobile) .workspace::before {
     transition: width var(--anim-out), height var(--anim-out);
 }
 
-body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover, .status-bar:hover) .workspace::before {
+body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover, .status-bar:hover) .workspace::before {
     transition: width var(--anim-out), height var(--anim-in);
 }
 
@@ -5298,7 +5298,7 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container-inner {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-top .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
@@ -5320,7 +5320,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
     height: 100%;
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .titlebar-button {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .titlebar-button {
     height: 44px;
 }
 
@@ -5339,9 +5339,9 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .wo
     transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
     transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
@@ -5359,9 +5359,9 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover).is-
     transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
-body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - var(--header-height) - 4px);
     transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
@@ -5377,7 +5377,7 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .wo
     transition: gap var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace-tabs.mod-top {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-tabs.mod-top {
     gap: 4px;
     transition: gap var(--anim-in);
 }
@@ -5386,7 +5386,7 @@ body:not(.is-mobile).tab-autohide .workspace::before {
     height: calc(100% - 16px);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace::before {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace::before {
     height: calc(100% - 44px);
 }
 
@@ -5397,13 +5397,13 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     transition: height var(--anim-out), opacity var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-top .workspace-tab-header-container {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover).is-hidden-frameless .titlebar-button-container {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
@@ -5490,8 +5490,8 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-maco
     transition: height var(--anim-out), opacity var(--anim-out), margin-left var(--anim-in);
 }
 
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar-button-container:hover) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).tab-autohide.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
     transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
 }
 
