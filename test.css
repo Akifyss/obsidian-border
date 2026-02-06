@@ -7,3 +7,9 @@ body:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-l
 body:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
     transition: height var(--anim-in), opacity var(--anim-in), margin-left var(--anim-out);
 }
+
+
+
+
+
+body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover, .status-bar:hover) .workspace::before
