@@ -5265,7 +5265,7 @@ body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(> 
     transition: width var(--anim-out), height var(--anim-in);
 }
 
-body:not(.is-mobile) .workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before {
+body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before {
     transition: width var(--anim-in), height var(--anim-out);
 }
 
