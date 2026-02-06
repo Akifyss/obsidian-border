@@ -5261,7 +5261,7 @@ body:not(.is-mobile) .workspace::before {
 
 body:not(.is-mobile)>.titlebar:hover~.app-container>.horizontal-main-container>.workspace::before,
 body:not(.is-mobile)>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace::before,
-body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover) .workspace::before {
+body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)::before {
     transition: width var(--anim-out), height var(--anim-in);
 }
 
