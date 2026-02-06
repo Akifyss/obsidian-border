@@ -5263,7 +5263,7 @@ body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titleb
     transition: width var(--anim-out), height var(--anim-in);
 }
 
-body:not(.is-mobile):has(.workspace-ribbon.side-dock-ribbon:hover) .workspace::before {
+body:not(.is-mobile) .workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)::before  {
     transition: width var(--anim-in), height var(--anim-out);
 }
 
