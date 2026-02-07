@@ -5276,7 +5276,7 @@ body:not(.is-mobile).tab-autohide .workspace-tabs {
     transition: gap var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide :has(.workspace-tab-header-container:hover) .workspace-tabs:hover {
+body:not(.is-mobile).tab-autohide .workspace-tabs:has(> .workspace-tab-header-container:hover) {
     gap: 4px;
     transition: gap var(--anim-in);
 }
