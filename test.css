@@ -12,4 +12,4 @@ body:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .works
 
 
 
-body:not(.is-mobile):has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover, .status-bar:hover) .workspace::before
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-top .workspace-tab-header-container-inner
