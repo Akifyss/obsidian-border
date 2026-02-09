@@ -5476,8 +5476,8 @@ body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-maco
     margin-left: 28px;
 }
 
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.workspace-ribbon.side-dock-ribbon:hover) .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):has(.workspace-ribbon.side-dock-ribbon:hover) .workspace:not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover)>.mod-left-split .mod-top-left-space .workspace-tab-header-container,
+body:not(.is-mobile):not(.is-popout-window).Ribbon-autohide.show-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen)>.app-container>.horizontal-main-container>.workspace:has(>.workspace-ribbon.side-dock-ribbon:hover):not(.is-left-sidedock-open) .sidebar-toggle-button.mod-left {
     margin-left: 0px;
 }
 
