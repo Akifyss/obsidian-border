@@ -5323,7 +5323,8 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
     height: 100%;
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .titlebar-button {
+body:not(.is-mobile).tab-autohide>.titlebar:hover .titlebar-button,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .titlebar-button {
     height: 44px;
 }
 
