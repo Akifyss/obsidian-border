@@ -1277,7 +1277,7 @@ id: Appearance-dark
 settings:
     - 
         id: Presets-info-dark
-        description: "[Presets (dark)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#light-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
+        description: "[Presets (dark)](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) | Before importing, it is recommended to reset this entry to default / Remove preset↗️"
         description.zh: "[预设（暗色）](https://github.com/Akifyss/obsidian-border/blob/main/presets.md#dark-mode) | 导入前，推荐先将此条目重设为默认 / 移除预设↗️ "
         type: info-text
         markdown: true
