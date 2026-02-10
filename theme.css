@@ -5408,7 +5408,7 @@ body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:h
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.titlebar:hover).is-hidden-frameless .titlebar-button-container,
+body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.titlebar:hover) .titlebar-button-container,
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
