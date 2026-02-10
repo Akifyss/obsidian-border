@@ -5375,7 +5375,7 @@ body:not(.is-mobile).tab-autohide .workspace-tabs.mod-top {
     transition: gap var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .workspace-tabs.mod-top {
+body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .workspace-tabs.mod-top {
     transition: gap var(--anim-in);
 }
 
