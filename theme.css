@@ -5415,7 +5415,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-ta
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide.status-bar-autohide.is-hidden-frameless:has(.status-bar:hover) .titlebar-button-container,
+body:not(.is-mobile).tab-autohide.status-bar-autohide.is-hidden-frameless>.titlebar:has(~ .app-container > .status-bar:hover) .titlebar-button-container,
 body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover)>.workspace .mod-top .workspace-tab-header-container {
     transition: height var(--anim-in), opacity var(--anim-in);
 }
