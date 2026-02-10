@@ -5342,8 +5342,7 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .wo
 }
 
 body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-split:is(.mod-left-split, .mod-right-split)>.workspace-leaf-resize-handle {
     height: calc(var(--divider-vertical-height) - 4px);
     transition: height var(--anim-in), background-color 200ms ease-in-out, border-color 200ms ease-in-out, opacity 200ms ease-in-out;
 }
