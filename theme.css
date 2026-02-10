@@ -5324,7 +5324,7 @@ body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
 }
 
 body:not(.is-mobile).tab-autohide>.titlebar:hover .titlebar-button,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .titlebar-button {
+body:not(.is-mobile).tab-autohide>.titlebar:has(~ .app-container > .horizontal-main-container > .workspace > .workspace-split .mod-top > .workspace-tab-header-container:hover) .titlebar-button {
     height: 44px;
 }
 
