@@ -5409,7 +5409,7 @@ body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.wor
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:hover .titlebar-button-container,
-body:not(.is-mobile).tab-autohide.is-hidden-frameless:has(.mod-top>.workspace-tab-header-container:hover) .titlebar-button-container {
+body:not(.is-mobile).tab-autohide.is-hidden-frameless>.titlebar:has(~ .app-container > .horizontal-main-container > .workspace > .workspace-split .mod-top > .workspace-tab-header-container:hover) .titlebar-button-container {
     height: 44px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
