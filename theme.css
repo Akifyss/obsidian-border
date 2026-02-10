@@ -5379,7 +5379,8 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide:has(.status-bar:hover) .wo
     transition: gap var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace-tabs.mod-top {
+body:not(.is-mobile).tab-autohide:has(.titlebar:hover) .workspace-tabs.mod-top,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .workspace-tabs.mod-top {
     gap: 4px;
     transition: gap var(--anim-in);
 }
@@ -5388,7 +5389,8 @@ body:not(.is-mobile).tab-autohide .workspace::before {
     height: calc(100% - 16px);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .workspace::before {
+body:not(.is-mobile).tab-autohide:has(.titlebar:hover) .workspace::before,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .workspace::before {
     height: calc(100% - 44px);
 }
 
@@ -5399,13 +5401,15 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
     transition: height var(--anim-out), opacity var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover) .mod-top .workspace-tab-header-container {
+body:not(.is-mobile).tab-autohide:has(.titlebar:hover) .mod-top .workspace-tab-header-container,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover, .titlebar:hover).is-hidden-frameless .titlebar-button-container {
+body:not(.is-mobile).tab-autohide:has(.titlebar:hover).is-hidden-frameless .titlebar-button-container,
+body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover).is-hidden-frameless .titlebar-button-container {
     height: 44px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
