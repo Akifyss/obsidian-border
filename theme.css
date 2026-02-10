@@ -5380,7 +5380,7 @@ body:not(.is-mobile).tab-autohide.status-bar-autohide>.app-container>.horizontal
 }
 
 body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .workspace-tabs.mod-top,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .workspace-tabs.mod-top {
+body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .workspace-tabs.mod-top {
     gap: 4px;
     transition: gap var(--anim-in);
 }
@@ -5390,7 +5390,7 @@ body:not(.is-mobile).tab-autohide .workspace::before {
 }
 
 body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace::before,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .workspace::before {
+body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover)::before {
     height: calc(100% - 44px);
 }
 
@@ -5402,7 +5402,7 @@ body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container {
 }
 
 body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container,
-body:not(.is-mobile).tab-autohide:has(.mod-top>.workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container {
+body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container {
     height: 40px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
