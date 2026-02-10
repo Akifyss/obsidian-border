@@ -5439,7 +5439,7 @@ body:not(.is-mobile).status-bar-autohide .horizontal-main-container {
     transition: padding-bottom var(--anim-out);
 }
 
-body:not(.is-mobile).status-bar-autohide:has(.status-bar:hover) .horizontal-main-container {
+body:not(.is-mobile).status-bar-autohide>.app-container>.horizontal-main-container:has(~.status-bar:hover) {
     padding-bottom: 24px;
     transition: padding-bottom var(--anim-in);
 }
