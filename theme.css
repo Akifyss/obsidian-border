@@ -5300,7 +5300,7 @@ body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
 }
 
 body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container .mod-top .workspace-tab-header-container-inner,
+body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container-inner,
 body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
