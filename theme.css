@@ -6333,8 +6333,8 @@ body:not(.is-mobile).CTA-BTN-enable .workspace-leaf-content[data-type="file-expl
 .theme-light .mk-tree-item.nav-file-title.is-active.is-selected,
 .theme-light:not(.is-grabbing) .nav-file-title.is-active:hover,
 .theme-light:not(.is-grabbing) .nav-folder-title.is-active:hover,
-.theme-light .nav-file-title.is-active,
-.theme-light .nav-folder-title.is-active {
+.theme-light .nav-file-title.is-active:not(.is-being-dragged),
+.theme-light .nav-folder-title.is-active:not(.is-being-dragged) {
     --nav-item-color-active: var(--color-activated-file-light);
     --nav-item-color-selected: var(--color-activated-file-light);
     border-radius: var(--border-radius-activated-file-light);
