@@ -3678,17 +3678,6 @@ settings:
             -   label: Unify background color
                 value: Projects-bg-color-unify
     - 
-        id: Surfing
-        title: Surfing
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: Surfing-bookmark-bar-hide
-        title: Hide bookmark bar when browsing web
-        title.zh: 浏览网页时隐藏书签栏
-        type: class-toggle
-    - 
         id: Checklist
         title: Checklist
         type: heading
@@ -4227,13 +4216,6 @@ body:not(.is-mobile, .extra-anim-remove) .document-search-container {
         transform: scale(1);
         opacity: 1;
     }
-}
-
-body:not(.is-phone, .extra-anim-remove) .modal:has(.checkbox-container),
-body:not(.is-phone, .extra-anim-remove) .modal.mod-settings,
-body:not(.is-phone, .extra-anim-remove) .modal.mod-community-modal {
-    -webkit-animation: var(--anim-duration-fast) fadeIn both;
-    animation: var(--anim-duration-fast) fadeIn both;
 }
 
 /*----------workspace----------*/
@@ -5588,15 +5570,6 @@ body:not(.is-mobile) .view-header>* {
     --icon-stroke: var(--icon-m-stroke-width);
 }
 
-/*view-header surfing*/
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) .view-header {
-    margin-top: 0px !important;
-    height: var(--header-height) !important;
-}
-
-body:not(.is-mobile) .workspace-leaf-content[data-type="empty"]:has(.wb-bookmark-bar) :is(.view-actions, .view-header-nav-buttons, .view-header-title-container) {
-    opacity: 1;
-}
 
 
 /* vault profile */
@@ -6040,24 +6013,6 @@ body {
     padding: 4px 24px;
 }
 
-/*surfing plugin*/
-
-.empty-state:has(.wb-search-bar-container)::before,
-.empty-state:has(.wb-search-bar-container) .empty-state-container {
-    display: none;
-}
-
-.surfing-settings-icon {
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    right: 20px;
-    margin-top: var(--size-4-4);
-}
-
-input.wb-search-bar {
-    --background-modifier-form-field: transparent;
-}
 
 /* ====== workspace mod side====== */
 .nav-header {
@@ -8992,7 +8947,7 @@ svg {
     padding-top: 8px;
 }
 
-.card-layout-pad-open.is-tablet .app-container:has(.mobile-toolbar) .workspace {
+.card-layout-pad-open.is-tablet .app-container:has(>.mobile-toolbar) .workspace {
     padding-bottom: 8px;
 }
 
@@ -9207,16 +9162,6 @@ body:not(.is-mobile) .workspace-leaf-content[data-type="style-settings"] .view-c
 
 #calendar-container {
     padding: 0 var(--size-4-4);
-}
-
-/*surfing*/
-
-body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"] .wb-bookmark-bar {
-    display: none;
-}
-
-body.Surfing-bookmark-bar-hide .workspace-leaf-content[data-type="surfing-view"] .wb-view-content:has(.wb-bookmark-bar) .wb-frame {
-    height: calc(100%);
 }
 
 
