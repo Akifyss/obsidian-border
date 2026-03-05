@@ -6819,6 +6819,20 @@ body {
 }
 
 /* container */
+.theme-light .modal-bg{
+    background-color: transparent !important;
+    background-image: radial-gradient(transparent 1px, #fff 1px) !important;
+    background-size: 4px 4px !important;
+    backdrop-filter: brightness(1) blur(10px);
+}
+
+.theme-dark .modal-bg{
+    background-color: transparent !important;
+    background-image: radial-gradient(transparent 1px, #000 1px) !important;
+    background-size: 4px 4px !important;
+    backdrop-filter: brightness(1) blur(10px);
+}
+
 .modal.mod-canvas-help,
 .suggestion-container,
 .popover,
