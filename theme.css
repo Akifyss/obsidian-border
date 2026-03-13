@@ -3194,12 +3194,6 @@ settings:
         description.zh: 鼠标经过时还原
         type: class-toggle
     - 
-        id: zoom-off
-        title: Disable Image zoom
-        title.zh: 关闭图像缩放
-        description: from https://github.com/kepano/obsidian-minimal, author:@kepano
-        type: class-toggle
-    - 
         id: Code-heading
         title: Codeblock
         title.zh: 代码块
@@ -8688,76 +8682,6 @@ body {
     transition: opacity var(--anim-duration-fast) linear;
 }
 
-/* image zoom */
-/* from https://github.com/kepano/obsidian-minimal, author:@kepano */
-
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content div:not(.canvas-node-content) img {
-    cursor: zoom-in
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content img:active {
-    cursor: zoom-out;
-    max-width: 100%;
-    z-index: 900
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content>img[contenteditable=false]:active {
-    background-color: var(--background-primary)
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active,
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-preview-view img[referrerpolicy=no-referrer]:active,
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content>img[contenteditable=false]:active {
-    aspect-ratio: unset;
-    cursor: zoom-out;
-    display: block;
-    z-index: 200;
-    position: fixed;
-    max-height: calc(100% + 1px);
-    max-width: 100%;
-    height: calc(100% + 1px);
-    width: 100%;
-    object-fit: contain;
-    margin: -.5px auto 0 !important;
-    text-align: center;
-    padding: 0;
-    left: 0;
-    right: 0;
-    bottom: 0
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active:after {
-    background-color: var(--background-primary);
-    opacity: .9;
-    content: " ";
-    height: calc(100% + 1px);
-    width: 100%;
-    position: fixed;
-    left: 0;
-    right: 1px;
-    z-index: 0
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .image-embed:not(.canvas-node-content):active img {
-    aspect-ratio: unset;
-    z-index: 99;
-    padding: 0;
-    margin: 0 auto;
-    width: calc(100% - 20px);
-    max-height: 95vh;
-    object-fit: contain;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    opacity: 1
-}
-
-body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content .markdown-source-view.mod-cm6 .cm-content>.cm-callout[contenteditable=false]:active {
-    contain: unset !important
-}
 
 /* ====== pdf ====== */
 .pdf-toolbar,
