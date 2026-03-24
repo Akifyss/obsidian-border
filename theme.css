@@ -6532,7 +6532,7 @@ body {
 
 body:not(.is-mobile) .modal.mod-settings .vertical-tab-header{
     border-inline-end: 0;
-    padding: var(--size-4-2);
+    padding: var(--size-4-2) calc(var(--size-4-2) + var(--size-4-2)) var(--size-4-2) var(--size-4-2);
 }
 
 body:not(.is-mobile) .modal.mod-settings{
