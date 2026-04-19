@@ -8679,19 +8679,6 @@ body {
 }
 
 /*  image hover effect */
-.markdown-source-view.mod-cm6 .cm-content>.image-embed {
-    contain: unset !important;
-}
-
-@media (hover: hover) {
-
-    .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>img:hover,
-    .workspace-leaf-content[data-type="markdown"] .view-content .cm-content .image-embed img:hover {
-        outline-offset: 2px;
-        outline: 2px solid var(--background-modifier-border-hover);
-        border-radius: var(--radius-s);
-    }
-}
 
 .theme-dark.img-darken .markdown-preview-view img,
 .theme-dark.img-darken .markdown-source-view img {
