@@ -4872,7 +4872,7 @@ body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollb
     background-clip: padding-box;
     border-radius: 20px;
     border: 3px solid transparent;
-    border-width: 3px 3px 3px 3px;
+    border-width: 3px;
     min-height: 45px
 }
 
@@ -5507,7 +5507,7 @@ body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .works
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container {
     height: 0px;
     opacity: 0;
-    margin: 0px auto 0px;
+    margin: 0px auto;
     transition: height var(--anim-out), opacity var(--anim-out), margin var(--anim-out);
 }
 
@@ -5675,11 +5675,11 @@ body:not(.restored-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 /* embedded backlinks */
 body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
 }
 
 .is-mobile .embedded-backlinks .nav-header~.search-input-container {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
 }
 
 /* document search replace */
