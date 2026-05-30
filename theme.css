@@ -4872,7 +4872,7 @@ body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollb
     background-clip: padding-box;
     border-radius: 20px;
     border: 3px solid transparent;
-    border-width: 3px 3px 3px 3px;
+    border-width: 3px;
     min-height: 45px
 }
 
@@ -4925,7 +4925,7 @@ body:not(.is-translucent) .titlebar-text {
     color: var(--text-on-accent) !important;
 }
 
-.is-hidden-frameless .titlebar-button-container.mod-right .titlebar-button {
+.is-hidden-frameless .titlebar:not(:has(+.modal)) .titlebar-button-container.mod-right .titlebar-button {
     height: 44px;
     width: 44px;
     padding: 0;
@@ -4939,7 +4939,7 @@ body:not(.is-translucent) .titlebar-text {
     margin-right: 0px;
 }
 
-.is-hidden-frameless .titlebar-button-container.mod-right {
+.is-hidden-frameless .titlebar:not(:has(+.modal)) .titlebar-button-container.mod-right {
     height: 44px;
 }
 
@@ -5507,7 +5507,7 @@ body:not(.is-mobile).tab-title-bar-autohide.nav-header-autohide .mod-root .works
 body:not(.is-mobile).nav-header-autohide :is(.workspace-leaf-content, .view-content)>.nav-header .search-input-container {
     height: 0px;
     opacity: 0;
-    margin: 0px auto 0px;
+    margin: 0px auto;
     transition: height var(--anim-out), opacity var(--anim-out), margin var(--anim-out);
 }
 
@@ -5675,11 +5675,11 @@ body:not(.restored-scrollbars) .mod-stacked ::-webkit-scrollbar-track {
 
 /* embedded backlinks */
 body:not(.is-mobile) .embedded-backlinks .nav-header~.search-input-container {
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
 }
 
 .is-mobile .embedded-backlinks .nav-header~.search-input-container {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
 }
 
 /* document search replace */
@@ -6530,25 +6530,6 @@ body {
     --background-modifier-form-field: transparent;
 }
 
-body:not(.is-mobile) .modal.mod-settings .vertical-tab-header{
-    border-inline-end: 0;
-    padding: var(--size-4-2) calc(var(--size-4-2) + var(--size-4-2)) var(--size-4-2) var(--size-4-2);
-}
-
-body:not(.is-mobile) .modal.mod-settings{
-    padding: var(--size-4-2);
-    background-color: var(--background-secondary);
-}
-
-body:not(.is-mobile) .modal.mod-settings .vertical-tab-content {
-    border-radius: var(--size-4-2);
-}
-
-body:not(.is-mobile) .modal-close-button{
-    top: var(--size-4-4);
-    right: var(--size-4-4);
-}
-
 .settings-search-container.vertical-tab-header-group {
     padding-top: 2px;
 }
@@ -6597,7 +6578,7 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 /* ====== UI Components====== */
-body{
+body {
     --input-height: 32px;
     --input-radius: 6px;
 }
