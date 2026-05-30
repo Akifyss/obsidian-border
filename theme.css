@@ -4925,7 +4925,7 @@ body:not(.is-translucent) .titlebar-text {
     color: var(--text-on-accent) !important;
 }
 
-.is-hidden-frameless .titlebar-button-container.mod-right .titlebar-button {
+.is-hidden-frameless .titlebar:not(:has(+.modal)) .titlebar-button-container.mod-right .titlebar-button {
     height: 44px;
     width: 44px;
     padding: 0;
@@ -4939,7 +4939,7 @@ body:not(.is-translucent) .titlebar-text {
     margin-right: 0px;
 }
 
-.is-hidden-frameless .titlebar-button-container.mod-right {
+.is-hidden-frameless .titlebar:not(:has(+.modal)) .titlebar-button-container.mod-right {
     height: 44px;
 }
 
@@ -6530,25 +6530,6 @@ body {
     --background-modifier-form-field: transparent;
 }
 
-body:not(.is-mobile) .modal.mod-settings .vertical-tab-header{
-    border-inline-end: 0;
-    padding: var(--size-4-2) calc(var(--size-4-2) + var(--size-4-2)) var(--size-4-2) var(--size-4-2);
-}
-
-body:not(.is-mobile) .modal.mod-settings{
-    padding: var(--size-4-2);
-    background-color: var(--background-secondary);
-}
-
-body:not(.is-mobile) .modal.mod-settings .vertical-tab-content {
-    border-radius: var(--size-4-2);
-}
-
-body:not(.is-mobile) .modal-close-button{
-    top: var(--size-4-4);
-    right: var(--size-4-4);
-}
-
 .settings-search-container.vertical-tab-header-group {
     padding-top: 2px;
 }
@@ -6597,7 +6578,7 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 /* ====== UI Components====== */
-body{
+body {
     --input-height: 32px;
     --input-radius: 6px;
 }
