@@ -4287,12 +4287,14 @@ body:not(.is-mobile) .workspace-tab-header-container,
 
 body:not(.is-mobile) .app-container,
 body:not(.is-mobile) .workspace,
-.workspace-ribbon.mod-left:before {
+.workspace-ribbon.mod-left:before,
+.workspace-ribbon.mod-primary:before {
     background-color: transparent;
 }
 
 .workspace-ribbon,
-.workspace-ribbon.mod-left.is-collapsed {
+.workspace-ribbon.mod-left.is-collapsed,
+.workspace-ribbon.mod-primary.is-collapsed {
     border-right: none;
     background-color: transparent;
 }
@@ -4731,7 +4733,8 @@ body:not(.is-mobile).is-popout-window .workspace::before {
 
 .workspace-tab-header-container,
 .workspace-tabs.mod-top .workspace-tab-header-container,
-.workspace-ribbon.mod-left:before {
+.workspace-ribbon.mod-left:before,
+.workspace-ribbon.mod-primary:before {
     border-bottom: 1px solid transparent;
 }
 
@@ -5442,22 +5445,22 @@ body:not(.is-mobile).status-bar-autohide>.app-container>.horizontal-main-contain
 }
 
 /*ribbon autohide*/
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
+body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon {
     --ribbon-width: 16px;
     transition: all var(--anim-out);
 }
 
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover {
+body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon:hover {
     --ribbon-width: 44px;
     transition: all var(--anim-in);
 }
 
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left>* {
+body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon>* {
     opacity: 0;
     transition: all var(--anim-out);
 }
 
-body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:hover>* {
+body:not(.is-mobile).Ribbon-autohide.show-ribbon .workspace-ribbon.side-dock-ribbon:hover>* {
     opacity: 1;
     transition: all var(--anim-in);
 }
@@ -8710,6 +8713,8 @@ body {
 .workspace-tab-header-inner-icon {
     align-items: center;
     justify-content: center;
+    width: 18px;
+    height: 18px;
 }
 
 .workspace-tab-header-tab-list,
