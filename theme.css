@@ -26,10 +26,17 @@ settings:
         level: 3
     - 
         id: tab-autohide
-        title: Auto hide tab bar
-        title.zh: 自动隐藏 tab栏
-        description: Mac users can adjust the position of the traffic light using the 'Electron Window Tweaker' plugin
-        description.zh: Mac 用户可以使用 “Electron Window Tweaker” 插件来调整左上角红绿灯的位置
+        title: Auto hide main tab bar
+        title.zh: 自动隐藏 主 tab栏
+        description: Hides the tab bar of the editor area. Mac users can adjust the position of the traffic light using the 'Electron Window Tweaker' plugin
+        description.zh: 隐藏编辑区的 tab 栏。Mac 用户可以使用 “Electron Window Tweaker” 插件来调整左上角红绿灯的位置
+        type: class-toggle
+    - 
+        id: sidebar-tab-autohide
+        title: Auto hide sidebar tab bar
+        title.zh: 自动隐藏 侧边栏 tab栏
+        description: Hides the tab bar of the left and right side panes
+        description.zh: 隐藏左右侧边面板的 tab 栏
         type: class-toggle
     - 
         id: status-bar-autohide
@@ -4748,12 +4755,12 @@ body.theme-dark.card-layout-open-dark .workspace-tabs:not(.mod-top) .workspace-t
     box-shadow: inset 0px 1px 0px transparent;
 }
 
-body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light.tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open-dark.tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+body.theme-light.mod-left-split-background-transparent-light.card-layout-open-light.sidebar-tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-left-split-background-transparent-dark.card-layout-open-dark.sidebar-tab-autohide .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-light.mod-right-split-background-transparent-light.card-layout-open-light.sidebar-tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-right-split-background-transparent-dark.card-layout-open-dark.sidebar-tab-autohide .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-light.mod-root-split-background-transparent-light.card-layout-open-light.sidebar-tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body.theme-dark.mod-root-split-background-transparent-dark.card-layout-open-dark.sidebar-tab-autohide .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px var(--divider-color);
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
@@ -5248,54 +5255,68 @@ body:not(.is-mobile)>.app-container>.horizontal-main-container>.workspace:has(>.
     transition: width var(--anim-in), height var(--anim-out);
 }
 
-/*tab autohide*/
+/*sidebar tab autohide*/
 
-body:not(.is-mobile).tab-autohide .workspace-tabs {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top) {
     gap: 0px;
     transition: gap var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tabs:has(> .workspace-tab-header-container:hover) {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover) {
     gap: 4px;
     transition: gap var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top)>.workspace-tab-header-container {
     height: 16px;
     opacity: 0;
     transition: height var(--anim-out), opacity var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top)>.workspace-tab-header-container:hover {
     height: 40px;
     opacity: 1;
     transition: height var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container-inner {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top)>.workspace-tab-header-container .workspace-tab-header-container-inner {
     transform: translateY(-22px);
     opacity: 0;
     transition: transform var(--anim-out), opacity var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide .workspace-tab-header-container:hover .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container-inner,
-body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container-inner {
+body:not(.is-mobile).sidebar-tab-autohide .workspace-tabs:not(.mod-top)>.workspace-tab-header-container:hover .workspace-tab-header-container-inner {
     transform: translateY(0px);
     opacity: 1;
     transition: transform var(--anim-in), opacity var(--anim-in);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
+body:not(.is-mobile).sidebar-tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf,
+body:not(.is-mobile).sidebar-tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px transparent;
     transition: box-shadow var(--anim-out);
 }
 
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf,
-body:not(.is-mobile).tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf {
+body:not(.is-mobile).sidebar-tab-autohide:not(.card-layout-open-light).theme-light .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf,
+body:not(.is-mobile).sidebar-tab-autohide:not(.card-layout-open-dark).theme-dark .workspace-tabs:not(.mod-top):has(> .workspace-tab-header-container:hover)>.workspace-tab-container>.workspace-leaf {
     box-shadow: inset 0px 1px 0px var(--workspace-divider-color);
     transition: box-shadow var(--anim-in);
+}
+
+/*main tab autohide*/
+
+body:not(.is-mobile).tab-autohide .mod-top .workspace-tab-header-container-inner {
+    transform: translateY(-22px);
+    opacity: 0;
+    transition: transform var(--anim-out), opacity var(--anim-out);
+}
+
+body:not(.is-mobile).tab-autohide .mod-top>.workspace-tab-header-container:hover .workspace-tab-header-container-inner,
+body:not(.is-mobile).tab-autohide>.titlebar:hover~.app-container>.horizontal-main-container>.workspace .mod-top .workspace-tab-header-container-inner,
+body:not(.is-mobile).tab-autohide>.app-container>.horizontal-main-container>.workspace:has(> .workspace-split .mod-top > .workspace-tab-header-container:hover) .mod-top .workspace-tab-header-container-inner {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform var(--anim-in), opacity var(--anim-in);
 }
 
 body:not(.is-mobile).tab-autohide.is-hidden-frameless .titlebar-button {
