@@ -5115,6 +5115,19 @@ body:not(.hider-sidebar-buttons) .workspace-tab-header-tab-list:has(+.sidebar-to
     visibility: hidden;
 }
 
+@media (hover: hover) {
+    .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover {
+        box-shadow: 0 0 0 var(--tab-outline-width) var(--tab-outline-color-hover), inset 0 calc(var(--tab-outline-width) * -1) var(--tab-outline-width) 0 transparent;
+    }
+}
+
+.workspace-tab-header-new-tab {
+    margin-inline-end: var(--size-4-3);
+    margin-inline-start: -4px;
+}
+
+
+
 /* tab style */
 
 body {
@@ -5844,7 +5857,7 @@ body {
 
 /*====== new tab ======*/
 body:not(.new-tab-text-btn-restore) .workspace-leaf-content[data-type="empty"] .empty-state-action-list {
-    flex-direction:row;
+    flex-direction: row;
     gap: 0px;
     border-radius: var(--radius-s);
     box-shadow: var(--input-shadow);
