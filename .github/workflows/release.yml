@@ -1,0 +1,36 @@
+name: Release Obsidian theme
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Validate release version
+        shell: bash
+        run: |
+          version="$(node -p "require('./manifest.json').version")"
+          if [[ "$GITHUB_REF_NAME" != "$version" ]]; then
+            echo "Tag '$GITHUB_REF_NAME' must exactly match manifest.json version '$version' (no v prefix)."
+            exit 1
+          fi
+          test -s theme.css
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --verify-tag \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes \
+            --draft \
+            manifest.json theme.css
