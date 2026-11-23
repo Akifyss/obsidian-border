@@ -5055,6 +5055,11 @@ body:not(.is-hidden-frameless):not(.is-mobile) .workspace .workspace-tabs.mod-to
     padding-top: 6px;
 }
 
+.mod-root .sidebar-toggle-button {
+    padding-inline-end: 0px;
+}
+
+
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
     padding-right: 0px;
     position: unset;
